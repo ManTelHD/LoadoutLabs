@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" role="img" aria-label="MPC-25 weapon card">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#201915"/>
+      <stop offset="1" stop-color="#090a0a"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" x2="1">
+      <stop offset="0" stop-color="#f0ad37"/>
+      <stop offset=".5" stop-color="#b8b4aa"/>
+      <stop offset="1" stop-color="#5fc7c8"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="300" rx="22" fill="url(#bg)"/>
+  <rect x="430" y="-20" width="130" height="360" fill="#f0ad37" opacity=".06" transform="rotate(18 495 150)"/>
+  <g transform="translate(78 132)" fill="url(#metal)">
+    <rect x="108" y="17" width="226" height="34" rx="9"/>
+    <rect x="332" y="27" width="82" height="12" rx="4"/>
+    <rect x="58" y="28" width="60" height="20" rx="5"/>
+    <path d="M132 50h72l-7 75h-45z"/>
+    <path d="M232 50h49l18 72h-44z"/>
+    <path d="M50 44L9 82h69l34-38z"/>
+    <rect x="172" y="0" width="62" height="15" rx="6"/>
+  </g>
+  <text x="36" y="56" fill="#f5f2e9" font-family="Rajdhani, Arial" font-size="38" font-weight="700">MPC-25</text>
+  <text x="38" y="86" fill="#f0ad37" font-family="Inter, Arial" font-size="15" font-weight="800">HIGH TTK SMG</text>
+</svg>

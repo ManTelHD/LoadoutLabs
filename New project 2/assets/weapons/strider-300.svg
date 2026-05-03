@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" role="img" aria-label="Strider 300 weapon card">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#171c1a"/>
+      <stop offset="1" stop-color="#090a0a"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" x2="1">
+      <stop offset="0" stop-color="#aeb8b1"/>
+      <stop offset=".6" stop-color="#f0ad37"/>
+      <stop offset="1" stop-color="#f5f2e9"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="300" rx="22" fill="url(#bg)"/>
+  <path d="M70 240 L600 72" stroke="#f0ad37" stroke-width="2" opacity=".12"/>
+  <path d="M80 82 L600 222" stroke="#5fc7c8" stroke-width="2" opacity=".1"/>
+  <g transform="translate(48 132)" fill="url(#metal)">
+    <rect x="116" y="21" width="318" height="24" rx="8"/>
+    <rect x="432" y="28" width="142" height="9" rx="3"/>
+    <rect x="48" y="28" width="76" height="17" rx="4"/>
+    <rect x="238" y="-10" width="98" height="17" rx="7"/>
+    <rect x="266" y="-34" width="44" height="24" rx="8"/>
+    <path d="M142 45h103l-23 52h-70z"/>
+    <path d="M292 45h46l16 72h-46z"/>
+    <path d="M42 42L0 88h82l42-46z"/>
+  </g>
+  <text x="36" y="56" fill="#f5f2e9" font-family="Rajdhani, Arial" font-size="38" font-weight="700">STRIDER 300</text>
+  <text x="38" y="86" fill="#f0ad37" font-family="Inter, Arial" font-size="15" font-weight="800">SNIPER RIFLE</text>
+</svg>

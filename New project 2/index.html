@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Loadout Lab | COD Meta, Infos & Loadouts</title>
+    <meta
+      name="description"
+      content="Loadout Lab ist ein fan-made Call of Duty Hub mit Meta-Loadouts, Attachments, Karteninfos und Update-Notizen."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Loadout Lab Startseite">
+        <span class="brand-mark">LL</span>
+        <span>Loadout Lab</span>
+      </a>
+      <nav class="top-nav" aria-label="Hauptnavigation">
+        <a href="#loadouts">Tierlist</a>
+        <a href="#intel">Intel</a>
+        <a href="#updates">Updates</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section id="loadouts" class="section loadout-section tier-first">
+        <div class="section-heading">
+          <p class="eyebrow">Meta Tierlist</p>
+          <h1 id="tierTitle">Warzone Ranked Meta Tierlist</h1>
+          <p id="tierDescription">
+            Suche nach BO7-Waffen, Klasse oder Rolle. Die Liste gruppiert Builds
+            nach Meta-Stufe und zeigt Pick-Rate, Handhabung, Code und Aufsätze.
+          </p>
+          <p class="updated-note">Aktualisiert: 3. Mai 2026</p>
+        </div>
+
+        <div class="today-strip" aria-label="Heute wichtig">
+          <article>
+            <span>Heute wichtig</span>
+            <strong>Season 03 Reloaded</strong>
+            <p>Patchnotes, Reloaded-Maps, Warzone-Spikes und Endgame-Inhalte stehen im Fokus.</p>
+          </article>
+          <article>
+            <span>Meta bewegt sich</span>
+            <strong>Buffs & Nerfs</strong>
+            <p>MK.78 ist laut WZStats #1 Langstrecke, Kogot-7 #1 Kurzstrecke und DS20 Mirage #2 Langstrecke. MXR-17 ist aktuell A-Tier.</p>
+          </article>
+          <article>
+            <span>Weiter grinden</span>
+            <strong>Camos & Challenges</strong>
+            <p>Tarnungen sind nach Modus und Kategorie getrennt, inklusive Herausforderung.</p>
+          </article>
+        </div>
+
+        <div class="mode-switch primary-mode-switch" aria-label="Hauptansicht auswählen">
+          <button class="mode-button update-mode-button" data-mode="updates" type="button">Updates</button>
+          <button class="mode-button mw4-mode-button" data-mode="mw4-info" type="button">MW4 Infos & Gerüchte</button>
+        </div>
+
+        <div class="mode-switch secondary-mode-switch" aria-label="Metaansicht auswählen">
+          <button class="mode-button active" data-mode="warzone-ranked" type="button">Warzone Meta</button>
+          <button class="mode-button" data-mode="bo7-ranked" type="button">Black Ops 7 Meta</button>
+          <button class="mode-button camo-mode-button" data-mode="camos" type="button">Tarnungen</button>
+        </div>
+
+        <div class="content-tabs" id="contentTabs" aria-label="Ansicht auswählen">
+          <button class="content-tab active" data-tab="weapons" type="button">Meta Waffen</button>
+          <button class="content-tab" data-tab="maps" type="button">Maps</button>
+        </div>
+
+        <div class="tab-panel active" data-panel="weapons">
+          <div class="weapon-dashboard">
+            <div class="controls" aria-label="Loadout Werkzeuge">
+              <label class="search-box">
+                <span>Suche</span>
+                <input id="loadoutSearch" type="search" placeholder="z. B. AK-27, Kogot-7, Ranked">
+              </label>
+              <label class="select-box">
+                <span>Sortieren</span>
+                <select id="sortSelect">
+                  <option value="score">Meta Score</option>
+                  <option value="pick">Pick-Rate</option>
+                  <option value="name">Name</option>
+                  <option value="range">Reichweite</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="toolbar" id="filterToolbar" aria-label="Loadout Filter"></div>
+
+            <div class="meta-patch-summary" id="metaPatchSummary"></div>
+            <div class="weapon-compare-panel" id="weaponComparePanel" aria-label="Meta Vergleich"></div>
+            <p class="result-count" id="resultCount" aria-live="polite"></p>
+            <div class="loadout-grid" id="loadoutGrid"></div>
+          </div>
+        </div>
+
+        <div id="maps" class="tab-panel maps-section" data-panel="maps" hidden>
+          <div class="map-panel">
+            <p class="eyebrow">Map Control</p>
+            <h2 id="mapsTitle">Ranked Maps</h2>
+            <p id="mapsDescription"></p>
+            <ul class="callout-list" id="mapNotes"></ul>
+            <div class="map-insight">
+              <div>
+                <span>Top Landing Spots</span>
+                <ol id="hotspotRank"></ol>
+              </div>
+              <div>
+                <span>Heatmap</span>
+                <div class="heat-legend" aria-label="Heatmap Legende">
+                  <i></i>
+                  <p>Je größer und heller der Spot, desto höher der Landing-Anteil.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="map-board">
+            <div class="map-board-header">
+              <span id="mapsKicker">Rotation</span>
+              <strong id="mapsSummary">0 Maps</strong>
+            </div>
+            <div class="map-tabs" id="mapTabs" aria-label="Warzone Ranked Map auswählen"></div>
+            <div class="map-mode-grid" id="mapModeGrid"></div>
+            <ul class="source-list">
+              <li>
+                <a href="https://www.callofduty.com/patchnotes/2026/04/call-of-duty-bo7-warzone-season-03-patch-notes?pubDate=20260402" target="_blank" rel="noreferrer">Warzone Ranked Patch Notes</a>
+              </li>
+              <li>
+                <a href="https://support.activision.com/black-ops-7/articles/black-ops-7-ranked-play" target="_blank" rel="noreferrer">BO7 Ranked Play Support</a>
+              </li>
+              <li>
+                <a href="https://dotesports.com/call-of-duty/news/black-ops-7-ranked-play-maps-and-modes" target="_blank" rel="noreferrer">BO7 Season 3 Map Pool</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tab-panel camos-section" data-panel="camos" hidden>
+          <div class="camo-header">
+            <div>
+              <p class="eyebrow">Camo Board</p>
+              <h2>Tarnungen & Mastery</h2>
+              <p>
+                Übersicht für besondere BO7- und Warzone-Tarnungen, inklusive Kategorie,
+                Status und Challenge-Hinweis zum Freischalten.
+              </p>
+            </div>
+            <div class="camo-summary">
+              <span id="camoCount">0</span>
+              <p>Tarnungen</p>
+            </div>
+          </div>
+          <div class="camo-progress-strip" aria-label="Tarnungsfortschritt">
+            <article><span>Basis</span><strong>Kill-Meilensteine</strong><p>Erst Basis-Tarnungen einer Waffe abschließen.</p></article>
+            <article><span>Spezial</span><strong>Mini-Challenges</strong><p>Danach waffenspezifische Aufgaben erledigen.</p></article>
+            <article><span>Mastery</span><strong>Langzeit-Grind</strong><p>Finale Camos über vollständige Kategorien freischalten.</p></article>
+          </div>
+          <div class="camo-filter" id="camoFilter" aria-label="Tarnungen filtern">
+            <button class="filter-button active" data-camo="Warzone" type="button">Warzone</button>
+            <button class="filter-button" data-camo="Multiplayer" type="button">Multiplayer</button>
+            <button class="filter-button" data-camo="Zombies" type="button">Zombies</button>
+            <button class="filter-button" data-camo="Endgame" type="button">Endgame</button>
+          </div>
+          <div class="camo-filter camo-category-filter" id="camoCategoryFilter" aria-label="Tarnungs-Kategorie filtern">
+            <button class="filter-button active" data-camo-category="Military" type="button">Basis Tarnungen</button>
+            <button class="filter-button" data-camo-category="Special" type="button">Spezial Tarnungen</button>
+            <button class="filter-button" data-camo-category="Mastery" type="button">Mastery Tarnungen</button>
+          </div>
+          <div class="camo-grid" id="camoGrid"></div>
+        </div>
+
+        <div class="tab-panel mode-info-section" data-panel="mode-info" hidden>
+          <div class="mode-info-hero">
+            <div>
+              <p class="eyebrow">Spielmodi</p>
+              <h2 id="modeInfoTitle">Multiplayer</h2>
+              <p id="modeInfoDescription"></p>
+            </div>
+            <span id="modeInfoKicker">BO7</span>
+          </div>
+          <div class="mode-info-tabs" id="modeInfoTabs" aria-label="Spielmodus auswählen" hidden>
+            <button class="filter-button active" data-mode-info="multiplayer" type="button">Multiplayer</button>
+            <button class="filter-button" data-mode-info="warzone" type="button">Warzone</button>
+            <button class="filter-button" data-mode-info="zombies" type="button">Zombies</button>
+            <button class="filter-button" data-mode-info="endgame" type="button">Endgame</button>
+          </div>
+          <div class="mode-info-layout">
+            <article class="mode-info-main">
+              <img id="modeInfoImage" src="https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blog/seasons/blackops7/season-03/maps/mp/BO7_S3_Maps_Plaza.webp" alt="Black Ops 7 Multiplayer Map Plaza" loading="lazy">
+              <div class="mode-info-body">
+                <div class="mode-info-stat-grid" id="modeInfoStats"></div>
+                <section class="mode-update-box" aria-label="Nächstes Update">
+                  <div>
+                    <span>Nächstes Update</span>
+                    <strong id="modeInfoUpdateTime"></strong>
+                  </div>
+                  <p id="modeInfoUpdateSummary"></p>
+                </section>
+                <div class="mode-info-card-grid" id="modeInfoCards"></div>
+                <div class="mode-image-gallery" id="modeInfoGallery"></div>
+              </div>
+            </article>
+            <aside class="mode-info-side">
+              <h3>Einordnung</h3>
+              <ul class="callout-list" id="modeInfoTips"></ul>
+              <div class="official-note">
+                <strong>Hinweis:</strong>
+                Infos sind für Loadout Lab zusammengefasst und werden mit offiziellen Season- und Patch-Updates abgeglichen.
+              </div>
+            </aside>
+          </div>
+        </div>
+
+        <div class="tab-panel updates-section" data-panel="updates" hidden>
+          <div class="updates-hero">
+            <div>
+              <p class="eyebrow">Update Radar</p>
+              <h2>Offizielle Call of Duty Updates</h2>
+              <p>
+                Nur bestätigte Meldungen aus offiziellen Call-of-Duty-Quellen. Klicke eine Karte an, um die kompakte Zusammenfassung zu öffnen.
+              </p>
+            </div>
+            <span>Stand: 3. Mai 2026</span>
+          </div>
+          <div class="update-priority-grid" aria-label="Schnelle Update Übersicht">
+            <article><span>Aktuell</span><strong>Reloaded Patchnotes</strong><p>BO7 und Warzone wurden am 29. April aktualisiert.</p></article>
+            <article><span>Geprüft</span><strong>Season 03 Reloaded</strong><p>Live seit 30. April 2026, 18:00 Uhr MESZ.</p></article>
+            <article><span>Meta</span><strong>MK.78 & Kogot-7</strong><p>WZStats: MK.78 #1 Langstrecke, Kogot-7 #1 Kurzstrecke, DS20 #2 Langstrecke.</p></article>
+          </div>
+          <div class="mode-info-tabs update-mode-tabs" id="updateModeTabs" aria-label="Update-Kategorie auswählen">
+            <button class="filter-button active" data-update-view="all" type="button">Alle Updates</button>
+            <button class="filter-button" data-update-view="warzone" type="button">Warzone</button>
+            <button class="filter-button" data-update-view="multiplayer" type="button">Multiplayer</button>
+            <button class="filter-button" data-update-view="zombies" type="button">Zombies</button>
+            <button class="filter-button" data-update-view="endgame" type="button">Endgame</button>
+          </div>
+          <div class="update-mode-panel" id="updateModePanel" hidden>
+            <div class="mode-info-hero">
+              <div>
+                <p class="eyebrow">Modus Update</p>
+                <h2 id="updateModeTitle"></h2>
+                <p id="updateModeDescription"></p>
+              </div>
+              <span id="updateModeKicker"></span>
+            </div>
+            <div class="mode-info-layout">
+              <article class="mode-info-main">
+                <img id="updateModeImage" src="https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/wz/s03/Big-Map-Rotation.jpg" alt="Warzone Big Map Rotation" loading="lazy">
+                <div class="mode-info-body">
+                  <div class="mode-info-stat-grid" id="updateModeStats"></div>
+                  <section class="mode-update-box" aria-label="Nächstes Update">
+                    <div>
+                      <span>Nächstes Update</span>
+                      <strong id="updateModeUpdateTime"></strong>
+                    </div>
+                    <p id="updateModeUpdateSummary"></p>
+                  </section>
+                  <div class="mode-info-card-grid" id="updateModeCards"></div>
+                  <div class="mode-image-gallery" id="updateModeGallery"></div>
+                </div>
+              </article>
+              <aside class="mode-info-side">
+                <h3>Einordnung</h3>
+                <ul class="callout-list" id="updateModeTips"></ul>
+              </aside>
+            </div>
+          </div>
+          <div class="update-board">
+            <a class="update-card official" href="update-season-03-reloaded.html">
+                <img src="https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blog/body/bo7/bo7-s03-reloaded/BO7-S03-RELOADED-ANNOUNCEMENT-TOUT.jpg" alt="Season 03 Reloaded Key Art" loading="lazy">
+              <div class="update-card-content">
+                <span class="status-pill">Offiziell · heute</span>
+                <time datetime="2026-04-30">30. April 2026</time>
+                <h3>Season 03 Reloaded</h3>
+              <div class="update-detail">
+                <p>
+                  Call of Duty bestätigt Season 03 Reloaded für Black Ops 7 und Warzone. Dazu gehören Hot Pursuit in Warzone,
+                  Prop Hunt Royale auf Rebirth Island, Freerun im Multiplayer, die Zombies-Map Totenreich und Operation Broken Mirror im Endgame.
+                </p>
+                <strong>Bericht lesen</strong>
+              </div>
+              </div>
+            </a>
+            <a class="update-card official" href="update-bo7-season-03-reloaded-patch.html">
+                <img src="https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/mp/season-03/BO7-S03_PATCHNOTES-BO7.jpg" alt="BO7 Season 03 Reloaded Patch Notes" loading="lazy">
+              <div class="update-card-content">
+                <span class="status-pill">Offiziell · neu</span>
+                <time datetime="2026-04-29">29. April 2026</time>
+                <h3>BO7 Season 03 Reloaded Patch Notes</h3>
+              <div class="update-detail">
+                <p>
+                  Neue Reloaded-Patchnotes mit X9 Maverick Javelin Assembly, Carbon 57/VST-Magazinänderungen, 1911-Tuning,
+                  Season 3 Reloaded Moshpit, Prestige-Master-Challenges, Zombies- und Endgame-Fixes.
+                </p>
+                <strong>Bericht lesen</strong>
+              </div>
+              </div>
+            </a>
+            <a class="update-card official" href="update-warzone-season-03-reloaded-patch.html">
+                <img src="https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/wz/s03r/BO7-S03R_PATCHNOTES-WZ.jpg" alt="Warzone Season 03 Reloaded Patch Notes" loading="lazy">
+              <div class="update-card-content">
+                <span class="status-pill">Offiziell · neu</span>
+                <time datetime="2026-04-29">29. April 2026</time>
+                <h3>Warzone Reloaded Patch Notes</h3>
+              <div class="update-detail">
+                <p>
+                  Raven Software ergänzt Personal Bests, Warzone Ranked Series, Spikes, Loot- und Economy-Anpassungen,
+                  neue Equipment-Rotation, Smoke-Screen-Buff und neue Waffen/Aufsätze.
+                </p>
+                <strong>Bericht lesen</strong>
+              </div>
+              </div>
+            </a>
+            <a class="update-card official" href="update-bo7-season-03-patch.html">
+                <img src="https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/mp/season-03/BO7-S03_PATCHNOTES-BO7.jpg" alt="Black Ops 7 Season 03 Patch Notes" loading="lazy">
+              <div class="update-card-content">
+                <span class="status-pill">Offiziell</span>
+                <time datetime="2026-04-21">21. April 2026</time>
+                <h3>BO7 Season 03 Patch Notes</h3>
+              <div class="update-detail">
+                <p>
+                  Das offizielle BO7-Update enthält Anpassungen für Multiplayer, Waffen und Season-03-Inhalte. Besonders relevant für die Website:
+                  Tuning rund um MK35 ISR, VST, Strider 300 und neue Attachments.
+                </p>
+                <strong>Bericht lesen</strong>
+              </div>
+              </div>
+            </a>
+            <a class="update-card official" href="update-warzone-season-03-patch.html">
+                <img src="https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/wz/s03/BO7-S03_PATCHNOTES-WZ.jpg" alt="Warzone Season 03 Patch Notes" loading="lazy">
+              <div class="update-card-content">
+                <span class="status-pill">Offiziell</span>
+                <time datetime="2026-04-21">21. April 2026</time>
+                <h3>Warzone Season 03 Patch Notes</h3>
+              <div class="update-detail">
+                <p>
+                  Raven Software aktualisiert Warzone mit Loot- und Economy-Anpassungen. Im Fokus stehen neue Exotic Weapons in Black Ops Royale:
+                  Ghostmind VS Recon, Killswitch AK-27 und Barrage Razor 9mm.
+                </p>
+                <strong>Bericht lesen</strong>
+              </div>
+              </div>
+            </a>
+            <a class="update-card official" href="update-season-03-content-drop.html">
+                <img src="https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blog/seasons/blackops7/season-03/trailers/mpflythrough/S03__MP-Map-Vignette_16x9_EN.webp" alt="Black Ops 7 Season 03 Übersicht" loading="lazy">
+              <div class="update-card-content">
+                <span class="status-pill">Offiziell</span>
+                <time datetime="2026-04-02">2. April 2026</time>
+                <h3>Season 03 Content Drop</h3>
+              <div class="update-detail">
+                <p>
+                  Der offizielle Season-03-Content-Drop bringt neue Multiplayer-Maps, Modes, Zombies-Inhalte, Endgame-Operationen,
+                  Warzone-Updates, Events und neue Waffen wie MK35 ISR und VST.
+                </p>
+                <strong>Bericht lesen</strong>
+              </div>
+              </div>
+            </a>
+          </div>
+          <div class="official-note">
+            <strong>MW4 / Call of Duty 2026:</strong>
+            Es gibt aktuell keinen offiziellen Call-of-Duty-Artikel, der MW4 mit Namen, Release-Datum oder Features bestätigt.
+            Deshalb erscheint MW4 hier nicht als offizielles Update.
+          </div>
+        </div>
+      </section>
+
+      <section id="intel" class="intel-band">
+        <div class="section-heading compact">
+          <p class="eyebrow">Aktuelle Einschätzung</p>
+          <h2>Was sich nach Reloaded verschoben hat</h2>
+        </div>
+        <div class="intel-grid">
+          <article>
+            <span class="tag">Buff</span>
+            <h3>MK.78 & Kogot-7 führen</h3>
+            <p>
+              WZStats führt MK.78 als #1 Langstrecke und Kogot-7 als #1
+              Kurzstrecke. DS20 Mirage bleibt als #2 Langstrecke stark; MXR-17 steht aktuell nur im A-Tier.
+            </p>
+          </article>
+          <article>
+            <span class="tag">Nerf</span>
+            <h3>MK35 & Razor verlieren Druck</h3>
+            <p>
+              MK35 ISR verliert Range-Schaden und Suppressor-Werte. Razor 9mm
+              wird langsamer, unruhiger und verliert Close-Range-Schaden.
+            </p>
+          </article>
+          <article>
+            <span class="tag">Ranked</span>
+            <h3>Restrictions beachten</h3>
+            <p>
+              In Warzone Ranked sind Spikes, Hades LMG-SMG Conversion Kit und
+              XR-3 Ion Sniper Rifle eingeschränkt. Builds sollten das sichtbar
+              berücksichtigen.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="updates" class="updates">
+        <div class="section-heading compact">
+          <p class="eyebrow">Patch Notes</p>
+          <h2>Update Tracker</h2>
+        </div>
+        <div class="timeline">
+          <article>
+            <time datetime="2026-04-29">29. Apr. 2026</time>
+            <h3>Reloaded Patch Notes</h3>
+            <p>BO7 und Warzone erhalten neue Balance-Änderungen, Ranked Series, Spikes, neue Attachments und Fixes.</p>
+          </article>
+          <article>
+            <time datetime="2026-04-30">30. Apr. 2026</time>
+            <h3>Season 03 Reloaded</h3>
+            <p>Hot Pursuit, Prop Hunt Royale, Freerun, Totenreich und Operation Broken Mirror kommen ins Spiel.</p>
+          </article>
+          <article>
+            <time datetime="2026-04-21">21. Apr. 2026</time>
+            <h3>BO7 & Warzone Patch</h3>
+            <p>Season-03-Tuning, Exotic-Weapon-Rotation und weitere Gameplay-Anpassungen.</p>
+          </article>
+          <article>
+            <time datetime="2026-05-03">Stand: 3. Mai 2026</time>
+            <h3>MW4 Status</h3>
+            <p>Kein offizielles Call-of-Duty-Update bestätigt bisher MW4, Release-Datum oder Features.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        Loadout Lab ist ein fan-made COD Info Hub. Nicht offiziell mit Activision oder Call of Duty verbunden.
+      </p>
+      <a href="#top">Zurück nach oben</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
