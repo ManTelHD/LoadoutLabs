@@ -54,6 +54,7 @@
   function ensureNextStyles() {
     ensureStylesheet("meta-next.css");
     ensureStylesheet("meta-growth.css");
+    ensureStylesheet("meta-ui.css");
   }
 
   function applyHeading(data) {
