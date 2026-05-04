@@ -33,6 +33,14 @@
     return activeMode?.dataset.mode || "warzone-ranked";
   }
 
+  function ensureNextStyles() {
+    if (document.querySelector('link[href="meta-next.css"]')) return;
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "meta-next.css";
+    document.head.appendChild(link);
+  }
+
   function applyHeading(data) {
     const title = document.querySelector("#tierTitle");
     const description = document.querySelector("#tierDescription");
@@ -102,6 +110,29 @@
     trust.insertAdjacentElement("afterend", actions);
   }
 
+  function renderProSnapshot() {
+    const section = document.querySelector("#loadouts");
+    const actions = section?.querySelector(".quick-actions");
+    if (!section || !actions || section.querySelector(".pro-snapshot")) return;
+
+    const snapshot = document.createElement("section");
+    snapshot.className = "pro-snapshot";
+    snapshot.setAttribute("aria-label", "Meta Snapshot");
+    snapshot.innerHTML = `
+      <div class="snapshot-main">
+        <span>Heute starten</span>
+        <strong>Erst Loadout waehlen, dann Rolle checken.</strong>
+        <p>Die Seite fuehrt neue Besucher direkt zu den wichtigsten Picks: Long Range, Close Range, Sniper und A-Tier sind getrennt, damit niemand falsche Waffen vergleicht.</p>
+      </div>
+      <div class="snapshot-grid">
+        <article><span>01</span><strong>Pflichtpick</strong><p>MK.78 und Kogot-7 klar sichtbar.</p></article>
+        <article><span>02</span><strong>Naechstes</strong><p>Season 4 Update bleibt im Radar.</p></article>
+        <article><span>03</span><strong>Grind</strong><p>Tarnungen als eigener Einstieg.</p></article>
+      </div>
+    `;
+    actions.insertAdjacentElement("afterend", snapshot);
+  }
+
   function renderRolePicks() {
     const panel = document.querySelector("#weaponComparePanel");
     if (!panel || panel.dataset.rolePicks === "true") return;
@@ -153,8 +184,10 @@
 
   function scheduleRender() {
     requestAnimationFrame(() => {
+      ensureNextStyles();
       enhanceHeader();
       renderProfessionalHero();
+      renderProSnapshot();
       renderRolePicks();
       updateStaticCopy();
       bindQuickActions();
