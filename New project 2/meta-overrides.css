@@ -1,0 +1,144 @@
+/* Compact meta cards: make priority visible before details. */
+.loadout-grid {
+  gap: 0.95rem;
+}
+
+.tier-group {
+  gap: 0.65rem;
+}
+
+.tier-header h3 {
+  font-size: clamp(1.9rem, 3vw, 2.65rem);
+}
+
+.loadout-card {
+  border-left: 0.42rem solid var(--tier-color, var(--amber));
+  padding: 0.85rem;
+}
+
+.loadout-card::before {
+  position: absolute;
+  top: 0.82rem;
+  left: 0.85rem;
+  z-index: 2;
+  border: 1px solid color-mix(in srgb, var(--tier-color, var(--amber)) 45%, transparent);
+  border-radius: 999px;
+  background: rgba(3, 5, 4, 0.78);
+  color: var(--tier-color, var(--amber));
+  font-size: 0.72rem;
+  font-weight: 950;
+  padding: 0.24rem 0.55rem;
+  text-transform: uppercase;
+}
+
+.tier-absolute-meta .loadout-card::before {
+  content: "Absolute Meta - Pflichtpick";
+}
+
+.tier-meta .loadout-card::before {
+  content: "Sehr stark - Top Alternative";
+}
+
+.tier-contender .loadout-card::before {
+  content: "Situativ - spielbar";
+}
+
+.weapon-thumb {
+  height: 6.4rem;
+  margin-top: 1.85rem;
+}
+
+.card-top {
+  align-items: flex-start;
+  margin-bottom: 0.55rem;
+  padding-right: 4.8rem;
+}
+
+.weapon-name {
+  margin-bottom: 0;
+  font-size: clamp(1.65rem, 2.6vw, 2.15rem);
+}
+
+.loadout-card:not(.expanded) .role {
+  display: none;
+}
+
+.loadout-card:not(.expanded) .patch-impact {
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  margin-top: 0.15rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.loadout-card:not(.expanded) .patch-impact p {
+  display: none;
+}
+
+.loadout-card:not(.expanded) .patch-impact span {
+  border: 1px solid currentColor;
+  background: rgba(3, 5, 4, 0.38);
+}
+
+.stat-strip {
+  margin: 0.55rem 0 0.25rem;
+}
+
+.stat-strip span {
+  padding: 0.48rem 0.55rem;
+}
+
+.stat-strip i {
+  display: none;
+}
+
+.stat-strip strong {
+  font-size: 1.55rem;
+  line-height: 1;
+}
+
+.tag-row {
+  margin-top: 0.55rem;
+}
+
+.tag-row span {
+  font-size: 0.72rem;
+  padding: 0.2rem 0.45rem;
+}
+
+.tag-row span:nth-child(n + 4) {
+  display: none;
+}
+
+.card-footer {
+  padding-top: 0.62rem;
+}
+
+.expand-button {
+  min-height: 2.55rem;
+  padding-inline: 0.82rem;
+}
+
+.copy-button {
+  min-height: 2.55rem;
+}
+
+@media (max-width: 720px) {
+  .loadout-card::before {
+    position: static;
+    justify-self: start;
+    grid-column: 1 / -1;
+  }
+
+  .weapon-thumb {
+    width: 100%;
+    height: 8rem;
+    margin-top: 0;
+  }
+
+  .card-top {
+    padding-right: 0;
+  }
+}
