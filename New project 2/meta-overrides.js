@@ -40,6 +40,22 @@
     if (description) description.textContent = data.description;
   }
 
+  function enhanceHeader() {
+    const header = document.querySelector(".site-header");
+    const nav = document.querySelector(".top-nav");
+    if (!header || !nav || header.querySelector(".header-cta")) return;
+
+    nav.querySelector('a[href="#loadouts"]')?.replaceChildren(document.createTextNode("Meta"));
+    nav.querySelector('a[href="#intel"]')?.replaceChildren(document.createTextNode("Analyse"));
+    nav.querySelector('a[href="#updates"]')?.replaceChildren(document.createTextNode("Season 4"));
+
+    const cta = document.createElement("a");
+    cta.className = "header-cta";
+    cta.href = "#loadouts";
+    cta.textContent = "Top Picks";
+    nav.appendChild(cta);
+  }
+
   function renderProfessionalHero() {
     const section = document.querySelector("#loadouts");
     const heading = section?.querySelector(".section-heading");
@@ -75,6 +91,15 @@
       <span><strong>Season 4</strong> Watchlist</span>
     `;
     panel.insertAdjacentElement("afterend", trust);
+
+    const actions = document.createElement("div");
+    actions.className = "quick-actions";
+    actions.innerHTML = `
+      <a class="quick-action primary" href="#loadoutGrid"><span>Start</span><strong>Meta Builds ansehen</strong></a>
+      <button class="quick-action" type="button" data-action-mode="updates"><span>Radar</span><strong>Season 4 verfolgen</strong></button>
+      <button class="quick-action" type="button" data-action-mode="camos"><span>Grind</span><strong>Tarnungen checken</strong></button>
+    `;
+    trust.insertAdjacentElement("afterend", actions);
   }
 
   function renderRolePicks() {
@@ -113,11 +138,26 @@
     });
   }
 
+  function activateMode(mode) {
+    const button = document.querySelector(`[data-mode="${mode}"]`);
+    if (button) button.click();
+  }
+
+  function bindQuickActions() {
+    document.querySelectorAll("[data-action-mode]").forEach((button) => {
+      if (button.dataset.bound === "true") return;
+      button.dataset.bound = "true";
+      button.addEventListener("click", () => activateMode(button.dataset.actionMode));
+    });
+  }
+
   function scheduleRender() {
     requestAnimationFrame(() => {
+      enhanceHeader();
       renderProfessionalHero();
       renderRolePicks();
       updateStaticCopy();
+      bindQuickActions();
     });
   }
 
