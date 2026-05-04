@@ -43,12 +43,17 @@
     return activeMode?.dataset.mode || "warzone-ranked";
   }
 
-  function ensureNextStyles() {
-    if (document.querySelector('link[href="meta-next.css"]')) return;
+  function ensureStylesheet(href) {
+    if (document.querySelector(`link[href="${href}"]`)) return;
     const link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = "meta-next.css";
+    link.href = href;
     document.head.appendChild(link);
+  }
+
+  function ensureNextStyles() {
+    ensureStylesheet("meta-next.css");
+    ensureStylesheet("meta-growth.css");
   }
 
   function applyHeading(data) {
@@ -143,6 +148,34 @@
     actions.insertAdjacentElement("afterend", snapshot);
   }
 
+  function renderEditorialSignals() {
+    const snapshot = document.querySelector(".pro-snapshot");
+    const section = document.querySelector("#loadouts");
+    if (!snapshot || !section || section.querySelector(".editorial-strip")) return;
+
+    const strip = document.createElement("aside");
+    strip.className = "editorial-strip";
+    strip.setAttribute("aria-label", "Redaktionelle Hinweise");
+    strip.innerHTML = `
+      <div>
+        <span>Einordnung</span>
+        <strong>Keine Hype-Liste</strong>
+        <p>Loadout Lab trennt Picks nach Rolle, Patch-Status und Spielbarkeit.</p>
+      </div>
+      <div>
+        <span>Quelle</span>
+        <strong>Patchnotes + Stats</strong>
+        <p>Meta-Hinweise werden mit offiziellen Updates und WZStats abgeglichen.</p>
+      </div>
+      <div>
+        <span>Naechstes Ziel</span>
+        <strong>Season 4 Hub</strong>
+        <p>Release, neue Waffen und Nerfs sollen direkt als eigener Bereich landen.</p>
+      </div>
+    `;
+    snapshot.insertAdjacentElement("afterend", strip);
+  }
+
   function renderRolePicks() {
     const panel = document.querySelector("#weaponComparePanel");
     if (!panel || panel.dataset.rolePicks === "true") return;
@@ -206,6 +239,31 @@
     compare.insertAdjacentElement("afterend", deck);
   }
 
+  function renderGrowthPanel() {
+    const loadouts = document.querySelector("#loadouts");
+    const intel = document.querySelector("#intel");
+    if (!loadouts || loadouts.querySelector(".growth-panel")) return;
+
+    const panel = document.createElement("section");
+    panel.className = "growth-panel";
+    panel.setAttribute("aria-label", "Loadout Lab Ausbau");
+    panel.innerHTML = `
+      <div class="growth-copy">
+        <span>Ausbau geplant</span>
+        <strong>Bereit fuer Community, Favoriten und Partner-Bereiche.</strong>
+        <p>Die Seite bleibt jetzt bewusst schnell und kostenlos. Spaeter koennen Accounts, gespeicherte Builds und Monetarisierung sauber als eigene Funktionen dazukommen.</p>
+      </div>
+      <div class="growth-grid">
+        <article><span>01</span><strong>Favoriten</strong><p>Builds merken, wenn ein Backend aktiv ist.</p></article>
+        <article><span>02</span><strong>Season Hub</strong><p>Season 4 als eigener Update-Einstieg.</p></article>
+        <article><span>03</span><strong>Partner</strong><p>Platz fuer faire Empfehlungen ohne die Meta zu stoeren.</p></article>
+      </div>
+    `;
+
+    if (intel) loadouts.insertBefore(panel, intel);
+    else loadouts.appendChild(panel);
+  }
+
   function updateStaticCopy() {
     document.querySelectorAll(".timeline article").forEach((article) => {
       const title = article.querySelector("h3");
@@ -236,8 +294,10 @@
       enhanceHeader();
       renderProfessionalHero();
       renderProSnapshot();
+      renderEditorialSignals();
       renderRolePicks();
       renderDecisionDeck();
+      renderGrowthPanel();
       updateStaticCopy();
       bindQuickActions();
     });
