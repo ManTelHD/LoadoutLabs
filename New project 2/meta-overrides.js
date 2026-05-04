@@ -58,13 +58,23 @@
         <strong>Season 4 Update</strong>
         <p>Naechster Fokus: Release-Termin, neue Waffen, Maps, Buffs und Nerfs sofort einordnen.</p>
       </article>
-      <article class="pro-hero-card">
+      <article class="pro-hero-card pro-hero-card-pro">
         <span>Demnaechst</span>
         <strong>Favoriten & Accounts</strong>
         <p>Vorbereitet fuer gespeicherte Loadouts, wenn das Backend spaeter kommt.</p>
       </article>
     `;
     heading.insertAdjacentElement("afterend", panel);
+
+    const trust = document.createElement("div");
+    trust.className = "trust-strip";
+    trust.innerHTML = `
+      <span><strong>12</strong> Builds</span>
+      <span><strong>4</strong> Rollen</span>
+      <span><strong>WZStats</strong> geprueft</span>
+      <span><strong>Season 4</strong> Watchlist</span>
+    `;
+    panel.insertAdjacentElement("afterend", trust);
   }
 
   function renderRolePicks() {
