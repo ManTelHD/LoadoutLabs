@@ -1,4 +1,15 @@
 /* Product polish for Loadout Lab GitHub Pages. */
+.site-header {
+  min-height: 4rem;
+}
+
+.header-cta {
+  border-color: rgba(240, 173, 55, 0.36) !important;
+  background: linear-gradient(135deg, var(--amber), var(--cyan));
+  color: #101211 !important;
+  font-weight: 950;
+}
+
 .section.tier-first {
   padding-top: clamp(1.25rem, 2.5vw, 2.25rem);
 }
@@ -123,12 +134,16 @@
   line-height: 1.45;
 }
 
-.trust-strip {
+.trust-strip,
+.quick-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.45rem;
   max-width: 76rem;
-  margin: 0 0 0.85rem;
+}
+
+.trust-strip {
+  margin: 0 0 0.65rem;
 }
 
 .trust-strip span {
@@ -143,6 +158,46 @@
 
 .trust-strip strong {
   color: var(--text);
+}
+
+.quick-actions {
+  margin: 0 0 0.85rem;
+}
+
+.quick-action {
+  display: inline-flex;
+  min-height: 3rem;
+  align-items: center;
+  gap: 0.7rem;
+  border: 1px solid rgba(245, 242, 233, 0.13);
+  border-radius: 0.45rem;
+  background: rgba(245, 242, 233, 0.045);
+  color: var(--text);
+  cursor: pointer;
+  padding: 0.55rem 0.8rem;
+  text-align: left;
+}
+
+.quick-action.primary {
+  border-color: rgba(240, 173, 55, 0.38);
+  background: rgba(240, 173, 55, 0.11);
+}
+
+.quick-action span {
+  display: grid;
+  min-width: 2.25rem;
+  min-height: 2.25rem;
+  place-items: center;
+  border-radius: 0.32rem;
+  background: rgba(240, 173, 55, 0.16);
+  color: var(--amber);
+  font-size: 0.68rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.quick-action strong {
+  font-size: 0.9rem;
 }
 
 .primary-mode-switch {
@@ -400,7 +455,8 @@
   }
 
   .primary-mode-switch,
-  .secondary-mode-switch {
+  .secondary-mode-switch,
+  .quick-actions {
     display: grid;
     grid-template-columns: 1fr;
     width: 100%;
