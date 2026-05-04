@@ -1,4 +1,5 @@
 [build]
+  command = "node netlify-inject-meta-overrides.js"
   publish = "New project 2"
 
 [[headers]]
