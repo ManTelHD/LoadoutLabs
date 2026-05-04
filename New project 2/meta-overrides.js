@@ -1,6 +1,8 @@
 (function () {
   const rolePicks = {
     "warzone-ranked": {
+      heading: "Warzone Meta",
+      description: "Sofort sehen, was Pflichtpick ist und welche Waffe zu welcher Rolle passt.",
       kicker: "Top Picks nach Rolle",
       title: "Long Range und Close Range getrennt",
       note: "MK.78 und Kogot-7 sind keine direkten Konkurrenten. Eine ist dein Long-Range-Pick, die andere dein Close-Range-Pairing.",
@@ -12,6 +14,8 @@
       ],
     },
     "bo7-ranked": {
+      heading: "Black Ops 7 Meta",
+      description: "Ranked-Picks nach Aufgabe: AR, SMG und Flex werden getrennt bewertet.",
       kicker: "Top Picks nach Rolle",
       title: "AR und SMG getrennt",
       note: "Ranked-Picks werden nach Aufgabe bewertet: Anchor-AR, Entry-SMG und Flex-Waffen haben unterschiedliche Rollen.",
@@ -29,11 +33,19 @@
     return activeMode?.dataset.mode || "warzone-ranked";
   }
 
+  function applyHeading(data) {
+    const title = document.querySelector("#tierTitle");
+    const description = document.querySelector("#tierDescription");
+    if (title) title.textContent = data.heading;
+    if (description) description.textContent = data.description;
+  }
+
   function renderRolePicks() {
     const panel = document.querySelector("#weaponComparePanel");
     if (!panel || panel.dataset.rolePicks === "true") return;
 
     const data = rolePicks[getMode()] || rolePicks["warzone-ranked"];
+    applyHeading(data);
     panel.dataset.rolePicks = "true";
     panel.innerHTML = `
       <div class="weapon-compare-copy">
