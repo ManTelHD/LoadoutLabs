@@ -1,17 +1,22 @@
 /* Compact meta cards: make priority visible before details. */
 .section.tier-first {
-  padding-top: clamp(1.1rem, 2.4vw, 2rem);
+  padding-top: clamp(1rem, 2.2vw, 1.75rem);
 }
 
 .tier-first .section-heading {
-  max-width: 58rem;
-  margin-bottom: 0.65rem;
+  max-width: 46rem;
+  margin-bottom: 0.55rem;
+}
+
+.tier-first .eyebrow {
+  margin-bottom: 0.45rem;
+  font-size: 0.78rem;
 }
 
 .tier-first h1 {
-  max-width: 48rem;
+  max-width: 40rem;
   margin-bottom: 0.45rem;
-  font-size: clamp(2.35rem, 4.2vw, 4.15rem);
+  font-size: clamp(2.25rem, 3.7vw, 3.7rem);
 }
 
 .tier-first .section-heading > p:not(.eyebrow):not(.updated-note),
@@ -21,24 +26,78 @@
 }
 
 .updated-note {
+  display: inline-flex;
+  width: fit-content;
+  min-height: 2rem;
+  align-items: center;
   margin-bottom: 0;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.8rem;
 }
 
-.primary-mode-switch,
+.primary-mode-switch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  max-width: none;
+  margin: 0.75rem 0 0.35rem;
+}
+
+.primary-mode-switch .mode-button {
+  flex: 0 0 auto;
+  min-height: 2.15rem;
+  border-color: transparent;
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.82rem;
+  padding: 0.35rem 0.65rem;
+}
+
+.primary-mode-switch .mode-button:hover,
+.primary-mode-switch .mode-button:focus-visible {
+  border-color: var(--line);
+  color: var(--text);
+}
+
 .secondary-mode-switch {
-  max-width: 44rem;
-  margin-top: 0.55rem;
-  margin-bottom: 0.45rem;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0;
+  max-width: none;
+  margin: 0.15rem 0 0.6rem;
+  border: 1px solid rgba(245, 242, 233, 0.14);
+  border-radius: 999px;
+  background: rgba(245, 242, 233, 0.045);
+  padding: 0.25rem;
 }
 
-.primary-mode-switch .mode-button,
 .secondary-mode-switch .mode-button {
-  min-height: 2.55rem;
+  flex: 0 0 auto;
+  min-height: 2.35rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.86rem;
+  padding: 0.45rem 0.9rem;
+}
+
+.secondary-mode-switch .mode-button.active {
+  background: linear-gradient(135deg, var(--amber), var(--cyan));
+  color: #111;
 }
 
 .content-tabs {
-  margin-top: 0.55rem;
-  margin-bottom: 0.45rem;
+  display: inline-flex;
+  width: auto;
+  margin-top: 0;
+  margin-bottom: 0.55rem;
+  border-radius: 999px;
+}
+
+.content-tab {
+  min-height: 2.2rem;
+  padding: 0.35rem 0.8rem;
 }
 
 .weapon-dashboard {
@@ -200,9 +259,15 @@
     font-size: clamp(2.05rem, 12vw, 3.2rem);
   }
 
-  .primary-mode-switch,
   .secondary-mode-switch {
-    max-width: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    border-radius: 0.65rem;
+  }
+
+  .content-tabs {
+    width: 100%;
   }
 
   .loadout-card::before {
