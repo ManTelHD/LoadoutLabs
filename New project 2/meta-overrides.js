@@ -12,6 +12,11 @@
         ["Sniper", "Strider 300", "Situativ", "Pairing: Carbon 57"],
         ["A-Tier", "MXR-17", "Spielbar", "Nicht absolute Meta"],
       ],
+      decisions: [
+        ["Sicherer Start", "MK.78 + Kogot-7", "Beste Kombination, wenn du ohne langes Testen direkt ranked spielen willst."],
+        ["Long Range", "DS20 als Backup", "Nimm DS20 Mirage, wenn dir die MK.78 zu schwerfaellig wirkt."],
+        ["Nicht verwechseln", "MXR-17 ist A-Tier", "Spielbar, aber aktuell nicht als absolute Meta behandeln."],
+      ],
     },
     "bo7-ranked": {
       heading: "Black Ops 7 Meta",
@@ -24,6 +29,11 @@
         ["Main SMG", "Dravec 45", "Pflichtpick", "Entry und Tempo"],
         ["Flex", "Peacekeeper MK1", "Sehr stark", "Hybrid-Rolle"],
         ["AR Alternative", "MXR-17", "Sehr stark", "Stabiler Anchor"],
+      ],
+      decisions: [
+        ["Sicherer Start", "M15 + Dravec", "Stabile Standard-Kombi fuer Ranked: AR haelt Linien, SMG macht Tempo."],
+        ["Flex Pick", "Peacekeeper MK1", "Gut, wenn du zwischen Kontrolle und Entry wechseln musst."],
+        ["Alternative", "MXR-17", "Starker Anchor, aber nicht fuer jede Map der klare Pflichtpick."],
       ],
     },
   };
@@ -158,6 +168,44 @@
     `;
   }
 
+  function renderDecisionDeck() {
+    const mode = getMode();
+    const data = rolePicks[mode] || rolePicks["warzone-ranked"];
+    const dashboard = document.querySelector(".weapon-dashboard");
+    const compare = document.querySelector("#weaponComparePanel");
+    if (!dashboard || !compare) return;
+
+    const oldDeck = dashboard.querySelector(".decision-deck");
+    if (oldDeck && oldDeck.dataset.mode !== mode) oldDeck.remove();
+    if (dashboard.querySelector(".decision-deck")) return;
+
+    const deck = document.createElement("section");
+    deck.className = "decision-deck";
+    deck.dataset.mode = mode;
+    deck.setAttribute("aria-label", "Meta Entscheidungshilfe");
+    deck.innerHTML = `
+      <div class="decision-head">
+        <span>Meta Entscheidung</span>
+        <strong>Was soll ich jetzt spielen?</strong>
+        <p>Kurzfassung fuer neue Besucher: sofort picken, Rolle verstehen, Update im Blick behalten.</p>
+      </div>
+      <div class="decision-cards">
+        ${data.decisions.map(([label, title, text]) => `
+          <article>
+            <span>${label}</span>
+            <strong>${title}</strong>
+            <p>${text}</p>
+          </article>
+        `).join("")}
+      </div>
+      <button class="decision-update" type="button" data-action-mode="updates">
+        <span>Naechster Check</span>
+        <strong>Season 4 Update beobachten</strong>
+      </button>
+    `;
+    compare.insertAdjacentElement("afterend", deck);
+  }
+
   function updateStaticCopy() {
     document.querySelectorAll(".timeline article").forEach((article) => {
       const title = article.querySelector("h3");
@@ -189,6 +237,7 @@
       renderProfessionalHero();
       renderProSnapshot();
       renderRolePicks();
+      renderDecisionDeck();
       updateStaticCopy();
       bindQuickActions();
     });
@@ -200,6 +249,8 @@
       button.addEventListener("click", () => {
         const panel = document.querySelector("#weaponComparePanel");
         if (panel) panel.dataset.rolePicks = "";
+        const deck = document.querySelector(".decision-deck");
+        if (deck) deck.remove();
         scheduleRender();
       });
     });
