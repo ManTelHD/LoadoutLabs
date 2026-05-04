@@ -53,10 +53,10 @@
         <strong>MK.78 + Kogot-7</strong>
         <p>Aktuelles Ranked-Pairing: Long Range sauber trennen, Close Range aggressiv spielen.</p>
       </article>
-      <article class="pro-hero-card">
+      <article class="pro-hero-card pro-hero-card-next">
         <span>Update Radar</span>
-        <strong>Season 03 Reloaded</strong>
-        <p>Patchnotes, Buffs, Nerfs und neue Picks kompakt einsortiert.</p>
+        <strong>Season 4 Update</strong>
+        <p>Naechster Fokus: Release-Termin, neue Waffen, Maps, Buffs und Nerfs sofort einordnen.</p>
       </article>
       <article class="pro-hero-card">
         <span>Demnaechst</span>
@@ -92,10 +92,22 @@
     `;
   }
 
+  function updateStaticCopy() {
+    document.querySelectorAll(".timeline article").forEach((article) => {
+      const title = article.querySelector("h3");
+      if (title?.textContent.trim() === "MW4 Status") {
+        title.textContent = "Season 4 Watch";
+        const text = article.querySelector("p");
+        if (text) text.textContent = "Naechstes grosses Update: Season 4. Loadout Lab trackt Termin, Waffen, Maps und Balance-Aenderungen.";
+      }
+    });
+  }
+
   function scheduleRender() {
     requestAnimationFrame(() => {
       renderProfessionalHero();
       renderRolePicks();
+      updateStaticCopy();
     });
   }
 
