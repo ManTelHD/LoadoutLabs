@@ -3,10 +3,14 @@ const path = require("node:path");
 
 const siteDir = path.join(__dirname, "New project 2");
 const indexPath = path.join(siteDir, "index.html");
-const marker = '<link rel="stylesheet" href="meta-overrides.css">';
+const styleMarker = '<link rel="stylesheet" href="meta-overrides.css">';
+const scriptMarker = '<script src="meta-overrides.js"></script>';
 
 let html = fs.readFileSync(indexPath, "utf8");
-if (!html.includes(marker)) {
-  html = html.replace("</head>", `    ${marker}\n  </head>`);
-  fs.writeFileSync(indexPath, html);
+if (!html.includes(styleMarker)) {
+  html = html.replace("</head>", `    ${styleMarker}\n  </head>`);
 }
+if (!html.includes(scriptMarker)) {
+  html = html.replace("</body>", `    ${scriptMarker}\n  </body>`);
+}
+fs.writeFileSync(indexPath, html);
