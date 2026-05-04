@@ -40,6 +40,33 @@
     if (description) description.textContent = data.description;
   }
 
+  function renderProfessionalHero() {
+    const section = document.querySelector("#loadouts");
+    const heading = section?.querySelector(".section-heading");
+    if (!section || !heading || section.querySelector(".pro-hero-panel")) return;
+
+    const panel = document.createElement("div");
+    panel.className = "pro-hero-panel";
+    panel.innerHTML = `
+      <article class="pro-hero-card pro-hero-card-primary">
+        <span>Live Meta</span>
+        <strong>MK.78 + Kogot-7</strong>
+        <p>Aktuelles Ranked-Pairing: Long Range sauber trennen, Close Range aggressiv spielen.</p>
+      </article>
+      <article class="pro-hero-card">
+        <span>Update Radar</span>
+        <strong>Season 03 Reloaded</strong>
+        <p>Patchnotes, Buffs, Nerfs und neue Picks kompakt einsortiert.</p>
+      </article>
+      <article class="pro-hero-card">
+        <span>Demnaechst</span>
+        <strong>Favoriten & Accounts</strong>
+        <p>Vorbereitet fuer gespeicherte Loadouts, wenn das Backend spaeter kommt.</p>
+      </article>
+    `;
+    heading.insertAdjacentElement("afterend", panel);
+  }
+
   function renderRolePicks() {
     const panel = document.querySelector("#weaponComparePanel");
     if (!panel || panel.dataset.rolePicks === "true") return;
@@ -66,7 +93,10 @@
   }
 
   function scheduleRender() {
-    requestAnimationFrame(renderRolePicks);
+    requestAnimationFrame(() => {
+      renderProfessionalHero();
+      renderRolePicks();
+    });
   }
 
   document.addEventListener("DOMContentLoaded", () => {
