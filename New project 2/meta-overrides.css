@@ -36,26 +36,50 @@
 }
 
 .primary-mode-switch {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-  max-width: none;
-  margin: 0.75rem 0 0.35rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(11rem, 1fr));
+  gap: 0.55rem;
+  max-width: min(43rem, 100%);
+  margin: 0.8rem 0 0.55rem;
 }
 
 .primary-mode-switch .mode-button {
-  flex: 0 0 auto;
-  min-height: 2.15rem;
-  border-color: transparent;
-  background: transparent;
-  color: var(--muted);
-  font-size: 0.82rem;
-  padding: 0.35rem 0.65rem;
+  min-height: 3rem;
+  border: 1px solid rgba(240, 173, 55, 0.28);
+  border-radius: 0.45rem;
+  background:
+    linear-gradient(135deg, rgba(240, 173, 55, 0.12), transparent 48%),
+    rgba(245, 242, 233, 0.045);
+  color: var(--text);
+  font-size: 0.92rem;
+  font-weight: 950;
+  padding: 0.65rem 0.9rem;
+  text-align: center;
+}
+
+.primary-mode-switch .mode-button::before {
+  display: block;
+  margin-bottom: 0.16rem;
+  color: var(--amber);
+  font-size: 0.66rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.primary-mode-switch .update-mode-button::before {
+  content: "News";
+}
+
+.primary-mode-switch .mw4-mode-button::before {
+  content: "Geruechte";
 }
 
 .primary-mode-switch .mode-button:hover,
 .primary-mode-switch .mode-button:focus-visible {
-  border-color: var(--line);
+  border-color: rgba(240, 173, 55, 0.48);
+  background:
+    linear-gradient(135deg, rgba(240, 173, 55, 0.18), rgba(95, 199, 200, 0.12)),
+    rgba(245, 242, 233, 0.06);
   color: var(--text);
 }
 
@@ -259,6 +283,7 @@
     font-size: clamp(2.05rem, 12vw, 3.2rem);
   }
 
+  .primary-mode-switch,
   .secondary-mode-switch {
     display: grid;
     grid-template-columns: 1fr;
