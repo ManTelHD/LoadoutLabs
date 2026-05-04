@@ -175,6 +175,36 @@ body {
   box-shadow: 0 0.9rem 2.4rem rgba(0, 0, 0, 0.18);
 }
 
+.secondary-mode-switch {
+  width: fit-content;
+  max-width: 100%;
+  border-color: rgba(245, 242, 233, 0.09);
+  background: rgba(245, 242, 233, 0.025);
+  box-shadow: none;
+}
+
+.secondary-mode-switch .mode-button {
+  min-width: 8.75rem;
+}
+
+.secondary-mode-switch .camo-mode-button {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--muted) !important;
+}
+
+.secondary-mode-switch .camo-mode-button:hover,
+.secondary-mode-switch .camo-mode-button:focus-visible {
+  background: rgba(95, 199, 200, 0.08) !important;
+  color: var(--text) !important;
+}
+
+.secondary-mode-switch .camo-mode-button.active {
+  background: linear-gradient(135deg, var(--amber), var(--cyan)) !important;
+  color: #101211 !important;
+}
+
 .weapon-compare-panel {
   border-color: rgba(95, 199, 200, 0.22);
   background:
@@ -340,6 +370,14 @@ body {
   .pro-hero-card,
   .pro-hero-card-primary {
     min-height: auto;
+  }
+
+  .secondary-mode-switch {
+    width: 100%;
+  }
+
+  .secondary-mode-switch .mode-button {
+    min-width: 0;
   }
 
   .snapshot-grid,
