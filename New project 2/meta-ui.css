@@ -1,0 +1,413 @@
+/* UI/UX polish: calmer hierarchy, stronger affordances, cleaner cards. */
+:root {
+  --ui-radius: 0.8rem;
+  --ui-radius-sm: 0.55rem;
+  --ui-surface: rgba(12, 15, 14, 0.72);
+  --ui-surface-soft: rgba(245, 242, 233, 0.045);
+  --ui-line: rgba(245, 242, 233, 0.105);
+}
+
+html {
+  scroll-padding-top: 5rem;
+}
+
+body {
+  text-rendering: geometricPrecision;
+}
+
+.site-header {
+  min-height: 4.25rem;
+  padding-block: 0.72rem;
+}
+
+.top-nav {
+  align-items: center;
+  gap: 0.42rem;
+}
+
+.top-nav a,
+.header-cta,
+.mode-button,
+.content-tab,
+.filter-button,
+.quick-action,
+.decision-update,
+.expand-button,
+.copy-button {
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease, color 160ms ease, box-shadow 160ms ease;
+}
+
+.top-nav a:hover,
+.header-cta:hover,
+.mode-button:hover,
+.content-tab:hover,
+.filter-button:hover,
+.quick-action:hover,
+.decision-update:hover,
+.expand-button:hover,
+.copy-button:hover {
+  transform: translateY(-0.06rem);
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid rgba(95, 199, 200, 0.85);
+  outline-offset: 3px;
+}
+
+.section,
+.intel-band,
+.updates {
+  padding-inline: clamp(1rem, 4.5vw, 5rem);
+}
+
+.tier-first {
+  padding-bottom: clamp(2.25rem, 5vw, 4.25rem);
+}
+
+.tier-first .section-heading {
+  gap: 0.5rem;
+}
+
+.tier-first .eyebrow {
+  width: fit-content;
+  border: 1px solid rgba(240, 173, 55, 0.24);
+  border-radius: 999px;
+  background: rgba(240, 173, 55, 0.075);
+  padding: 0.24rem 0.55rem;
+}
+
+.updated-note {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.045);
+}
+
+.pro-hero-panel,
+.trust-strip,
+.quick-actions,
+.pro-snapshot,
+.editorial-strip {
+  max-width: 82rem;
+}
+
+.pro-hero-panel {
+  gap: 0.95rem;
+}
+
+.pro-hero-card,
+.pro-snapshot,
+.editorial-strip div,
+.weapon-compare-panel,
+.decision-head,
+.decision-cards article,
+.decision-update,
+.growth-panel,
+.loadout-card,
+.intel-grid article,
+.timeline article {
+  border-radius: var(--ui-radius);
+  border-color: var(--ui-line);
+}
+
+.pro-hero-card {
+  position: relative;
+  overflow: hidden;
+  padding: 1.05rem;
+}
+
+.pro-hero-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), transparent 36%);
+}
+
+.pro-hero-card-next::after,
+.pro-hero-card-pro::after {
+  background: rgba(95, 199, 200, 0.16);
+}
+
+.pro-hero-card-pro::after {
+  background: rgba(240, 173, 55, 0.14);
+}
+
+.trust-strip {
+  gap: 0.55rem;
+}
+
+.trust-strip span {
+  min-height: 2.1rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.quick-actions {
+  margin-bottom: 1rem;
+}
+
+.quick-action {
+  border-color: rgba(245, 242, 233, 0.11);
+  background:
+    linear-gradient(135deg, rgba(245, 242, 233, 0.055), transparent 48%),
+    rgba(8, 10, 10, 0.54);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.035);
+}
+
+.quick-action.primary {
+  background:
+    linear-gradient(135deg, rgba(240, 173, 55, 0.19), rgba(95, 199, 200, 0.08)),
+    rgba(8, 10, 10, 0.62);
+}
+
+.primary-mode-switch,
+.secondary-mode-switch,
+.content-tabs {
+  margin-top: 0.75rem;
+}
+
+.primary-mode-switch .mode-button,
+.secondary-mode-switch,
+.content-tabs {
+  border-radius: var(--ui-radius);
+}
+
+.secondary-mode-switch,
+.content-tabs {
+  padding: 0.32rem;
+}
+
+.secondary-mode-switch .mode-button,
+.content-tab {
+  border-radius: 0.62rem;
+}
+
+.content-tabs {
+  border-color: rgba(245, 242, 233, 0.095);
+  background: rgba(245, 242, 233, 0.028);
+}
+
+.content-tab.active,
+.content-tab:hover,
+.content-tab:focus-visible {
+  box-shadow: 0 0.8rem 1.6rem rgba(240, 173, 55, 0.14);
+}
+
+.weapon-dashboard {
+  gap: 0.2rem;
+}
+
+.weapon-compare-panel,
+.decision-deck {
+  max-width: 100%;
+}
+
+.weapon-compare-panel {
+  padding: 0.92rem;
+}
+
+.weapon-compare-copy strong {
+  text-wrap: balance;
+}
+
+.role-pick-stats article,
+.decision-cards article,
+.snapshot-grid article,
+.growth-grid article,
+.editorial-strip div {
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.role-pick-stats article:hover,
+.decision-cards article:hover,
+.snapshot-grid article:hover,
+.growth-grid article:hover,
+.editorial-strip div:hover {
+  transform: translateY(-0.08rem);
+  border-color: rgba(95, 199, 200, 0.28);
+}
+
+.controls {
+  border: 1px solid rgba(245, 242, 233, 0.08);
+  border-radius: var(--ui-radius);
+  background: rgba(245, 242, 233, 0.025);
+  padding: 0.72rem;
+}
+
+.search-box,
+.select-box {
+  gap: 0.36rem;
+}
+
+.search-box input,
+.select-box select {
+  border-color: rgba(245, 242, 233, 0.12);
+  background: rgba(8, 10, 10, 0.68);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.035);
+}
+
+.toolbar {
+  gap: 0.48rem;
+}
+
+.filter-button {
+  min-height: 2.42rem;
+  border-radius: 999px;
+}
+
+.filter-button.active {
+  box-shadow: 0 0.75rem 1.6rem rgba(240, 173, 55, 0.12);
+}
+
+.result-count {
+  color: var(--muted);
+  font-weight: 850;
+}
+
+.loadout-grid {
+  gap: 1.08rem;
+}
+
+.loadout-card {
+  min-height: 18rem;
+  background:
+    linear-gradient(145deg, rgba(245, 242, 233, 0.055), transparent 42%),
+    rgba(8, 10, 10, 0.7);
+}
+
+.loadout-card:hover {
+  border-color: color-mix(in srgb, var(--tier-color, var(--amber)) 42%, rgba(245, 242, 233, 0.12));
+  box-shadow: 0 1.25rem 2.8rem rgba(0, 0, 0, 0.27), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.weapon-thumb {
+  border-radius: var(--ui-radius-sm);
+  background: rgba(245, 242, 233, 0.035);
+}
+
+.stat-strip span {
+  border-radius: var(--ui-radius-sm);
+  background: rgba(245, 242, 233, 0.04);
+}
+
+.tag-row span {
+  border-radius: 999px;
+}
+
+.expand-button,
+.copy-button {
+  border-radius: 0.55rem;
+}
+
+.camo-header,
+.camo-card,
+.map-panel,
+.map-board,
+.mode-info-hero,
+.mode-info-main,
+.mode-info-side,
+.updates-hero,
+.update-card,
+.official-note {
+  border-radius: var(--ui-radius);
+}
+
+.camo-filter .filter-button {
+  border-radius: 999px;
+}
+
+.camo-category-filter {
+  border-radius: var(--ui-radius);
+  background: rgba(245, 242, 233, 0.025);
+}
+
+@media (min-width: 1180px) {
+  .tier-first h1 {
+    max-width: 48rem;
+  }
+
+  .loadout-grid {
+    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+  }
+}
+
+@media (max-width: 980px) {
+  .controls {
+    padding: 0.65rem;
+  }
+
+  .primary-mode-switch,
+  .secondary-mode-switch,
+  .content-tabs {
+    width: 100%;
+  }
+}
+
+@media (max-width: 720px) {
+  .site-header {
+    gap: 0.75rem;
+  }
+
+  .top-nav {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .top-nav a {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .header-cta {
+    grid-column: 1 / -1;
+  }
+
+  .tier-first .eyebrow,
+  .updated-note {
+    font-size: 0.74rem;
+  }
+
+  .pro-hero-card,
+  .pro-snapshot,
+  .growth-panel,
+  .weapon-compare-panel,
+  .decision-head,
+  .decision-cards article,
+  .decision-update,
+  .controls,
+  .loadout-card {
+    border-radius: 0.68rem;
+  }
+
+  .primary-mode-switch .mode-button,
+  .secondary-mode-switch .mode-button,
+  .content-tab,
+  .quick-action {
+    min-height: 3.15rem;
+  }
+
+  .controls {
+    gap: 0.7rem;
+  }
+
+  .toolbar {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .toolbar .filter-button {
+    width: 100%;
+  }
+
+  .card-footer {
+    gap: 0.55rem;
+  }
+
+  .expand-button,
+  .copy-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
