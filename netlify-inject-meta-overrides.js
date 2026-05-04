@@ -11,6 +11,9 @@ if (!html.includes(styleMarker)) {
   html = html.replace("</head>", `    ${styleMarker}\n  </head>`);
 }
 if (!html.includes(scriptMarker)) {
-  html = html.replace("</body>", `    ${scriptMarker}\n  </body>`);
+  html = html.replace(
+    '    <script src="script.js"></script>',
+    `    <script src="script.js"></script>\n    ${scriptMarker}`,
+  );
 }
 fs.writeFileSync(indexPath, html);
