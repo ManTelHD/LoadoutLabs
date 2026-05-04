@@ -1,10 +1,80 @@
 /* Compact meta cards: make priority visible before details. */
+.section.tier-first {
+  padding-top: clamp(1.1rem, 2.4vw, 2rem);
+}
+
+.tier-first .section-heading {
+  max-width: 58rem;
+  margin-bottom: 0.65rem;
+}
+
+.tier-first h1 {
+  max-width: 48rem;
+  margin-bottom: 0.45rem;
+  font-size: clamp(2.35rem, 4.2vw, 4.15rem);
+}
+
+.tier-first .section-heading > p:not(.eyebrow):not(.updated-note),
+.today-strip,
+.meta-patch-summary {
+  display: none;
+}
+
+.updated-note {
+  margin-bottom: 0;
+}
+
+.primary-mode-switch,
+.secondary-mode-switch {
+  max-width: 44rem;
+  margin-top: 0.55rem;
+  margin-bottom: 0.45rem;
+}
+
+.primary-mode-switch .mode-button,
+.secondary-mode-switch .mode-button {
+  min-height: 2.55rem;
+}
+
+.content-tabs {
+  margin-top: 0.55rem;
+  margin-bottom: 0.45rem;
+}
+
+.weapon-dashboard {
+  display: flex;
+  flex-direction: column;
+}
+
+.weapon-compare-panel {
+  order: -2;
+  margin: 0.45rem 0 0.7rem;
+}
+
+.controls {
+  order: -1;
+  margin-top: 0.35rem;
+}
+
+.toolbar {
+  margin-top: 0.45rem;
+}
+
+.result-count {
+  margin: 0.5rem 0 0.65rem;
+  font-size: 0.9rem;
+}
+
 .loadout-grid {
   gap: 0.95rem;
 }
 
 .tier-group {
   gap: 0.65rem;
+}
+
+.tier-header {
+  padding-bottom: 0.55rem;
 }
 
 .tier-header h3 {
@@ -126,6 +196,15 @@
 }
 
 @media (max-width: 720px) {
+  .tier-first h1 {
+    font-size: clamp(2.05rem, 12vw, 3.2rem);
+  }
+
+  .primary-mode-switch,
+  .secondary-mode-switch {
+    max-width: none;
+  }
+
   .loadout-card::before {
     position: static;
     justify-self: start;
