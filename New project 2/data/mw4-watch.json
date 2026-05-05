@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-05T06:32:59.706Z",
+  "generatedAtLabel": "5. Mai 2026 um 08:32 MESZ",
+  "officialSources": [
+    { "name": "Call of Duty on X", "url": "https://x.com/CallofDuty", "status": "configured" },
+    { "name": "Infinity Ward on X", "url": "https://x.com/InfinityWard", "status": "configured" }
+  ],
+  "transcriptSources": [
+    { "name": "Tridzo YouTube", "url": "https://www.youtube.com/@Tridzoid/videos", "status": "latest-videos-detected", "videos": [] }
+  ],
+  "officialSummary": "MW4 bleibt nur offiziell, wenn Call of Duty oder Infinity Ward es bestaetigt. X-Posts sind als offizielle Quellen konfiguriert; ohne X-API werden keine Posts erfunden.",
+  "cards": [
+    { "label": "Offiziell", "title": "COD / Infinity Ward", "text": "Nur Posts von Call of Duty oder Infinity Ward zaehlen als Bestaetigung." },
+    { "label": "Geruecht", "title": "Tridzo Transkripte", "text": "Keine aktuellen Videos gefunden." },
+    { "label": "Regel", "title": "Strikte Trennung", "text": "Tridzo bleibt Geruecht/Kontext, ausser das Video zitiert eine offizielle Quelle." }
+  ],
+  "tips": [
+    "Call of Duty und Infinity Ward auf X sind offizielle Quellen.",
+    "Tridzo-Transkripte werden nur als Geruechte- und Kontextquelle verwendet.",
+    "Ohne offiziellen COD-/Infinity-Ward-Post wird MW4 nicht als bestaetigt angezeigt.",
+    "Wenn X API-Zugang ergaenzt wird, kann der Watcher echte Posts statt nur Quellenstatus pruefen."
+  ]
+}
