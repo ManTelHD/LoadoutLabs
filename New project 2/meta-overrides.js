@@ -1,325 +1,156 @@
 (function () {
-  const rolePicks = {
-    "warzone-ranked": {
-      heading: "Warzone Meta",
-      description: "Sofort sehen, was Pflichtpick ist und welche Waffe zu welcher Rolle passt.",
-      kicker: "Top Picks nach Rolle",
-      title: "Long Range und Close Range getrennt",
-      note: "MK.78 und Kogot-7 sind keine direkten Konkurrenten. Eine ist dein Long-Range-Pick, die andere dein Close-Range-Pairing.",
-      cards: [
-        ["Long Range", "MK.78", "Pflichtpick", "Alternative: DS20 Mirage"],
-        ["Close Range", "Kogot-7", "Pflichtpick", "Alternative: VST"],
-        ["Sniper", "Strider 300", "Situativ", "Pairing: Carbon 57"],
-        ["A-Tier", "MXR-17", "Spielbar", "Nicht absolute Meta"],
-      ],
-      decisions: [
-        ["Sicherer Start", "MK.78 + Kogot-7", "Beste Kombination, wenn du ohne langes Testen direkt ranked spielen willst."],
-        ["Long Range", "DS20 als Backup", "Nimm DS20 Mirage, wenn dir die MK.78 zu schwerfaellig wirkt."],
-        ["Nicht verwechseln", "MXR-17 ist A-Tier", "Spielbar, aber aktuell nicht als absolute Meta behandeln."],
-      ],
-    },
-    "bo7-ranked": {
-      heading: "Black Ops 7 Meta",
-      description: "Ranked-Picks nach Aufgabe: AR, SMG und Flex werden getrennt bewertet.",
-      kicker: "Top Picks nach Rolle",
-      title: "AR und SMG getrennt",
-      note: "Ranked-Picks werden nach Aufgabe bewertet: Anchor-AR, Entry-SMG und Flex-Waffen haben unterschiedliche Rollen.",
-      cards: [
-        ["Main AR", "M15 MOD 0", "Pflichtpick", "Anchor und Kontrolle"],
-        ["Main SMG", "Dravec 45", "Pflichtpick", "Entry und Tempo"],
-        ["Flex", "Peacekeeper MK1", "Sehr stark", "Hybrid-Rolle"],
-        ["AR Alternative", "MXR-17", "Sehr stark", "Stabiler Anchor"],
-      ],
-      decisions: [
-        ["Sicherer Start", "M15 + Dravec", "Stabile Standard-Kombi fuer Ranked: AR haelt Linien, SMG macht Tempo."],
-        ["Flex Pick", "Peacekeeper MK1", "Gut, wenn du zwischen Kontrolle und Entry wechseln musst."],
-        ["Alternative", "MXR-17", "Starker Anchor, aber nicht fuer jede Map der klare Pflichtpick."],
-      ],
-    },
+  const SOURCES = {
+    meta: "data/wzstats-meta.json",
+    mw4: "data/mw4-watch.json",
   };
 
-  function getMode() {
-    const activeMode = document.querySelector(".secondary-mode-switch .mode-button.active");
-    return activeMode?.dataset.mode || "warzone-ranked";
+  const state = { meta: null, mw4: null };
+
+  function escapeHtml(value) {
+    return String(value || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
   }
 
-  function ensureStylesheet(href) {
-    if (document.querySelector(`link[href="${href}"]`)) return;
-    const link = document.createElement("link");
-    link.rel = "stylesheet";
-    link.href = href;
-    document.head.appendChild(link);
+  async function fetchJson(url) {
+    const response = await fetch(`${url}?v=${Date.now()}`, { cache: "no-store" });
+    if (!response.ok) return null;
+    return response.json();
   }
 
-  function ensureNextStyles() {
-    ensureStylesheet("meta-next.css");
-    ensureStylesheet("meta-growth.css");
-    ensureStylesheet("meta-ui.css");
+  function currentMode() {
+    return document.querySelector(".secondary-mode-switch .mode-button.active")?.dataset.mode || "warzone-ranked";
   }
 
-  function applyHeading(data) {
-    const title = document.querySelector("#tierTitle");
-    const description = document.querySelector("#tierDescription");
-    if (title) title.textContent = data.heading;
-    if (description) description.textContent = data.description;
+  function activePanel() {
+    return document.querySelector(".tab-panel.active")?.dataset.panel || "weapons";
   }
 
-  function enhanceHeader() {
-    const header = document.querySelector(".site-header");
-    const nav = document.querySelector(".top-nav");
-    if (!header || !nav || header.querySelector(".header-cta")) return;
-
-    nav.querySelector('a[href="#loadouts"]')?.replaceChildren(document.createTextNode("Meta"));
-    nav.querySelector('a[href="#intel"]')?.replaceChildren(document.createTextNode("Analyse"));
-    nav.querySelector('a[href="#updates"]')?.replaceChildren(document.createTextNode("Season 4"));
-
-    const cta = document.createElement("a");
-    cta.className = "header-cta";
-    cta.href = "#loadouts";
-    cta.textContent = "Top Picks";
-    nav.appendChild(cta);
+  function getMetaList() {
+    if (!state.meta) return null;
+    return currentMode() === "bo7-ranked" ? state.meta.bo7Ranked : state.meta.warzoneRanked;
   }
 
-  function renderProfessionalHero() {
-    const section = document.querySelector("#loadouts");
-    const heading = section?.querySelector(".section-heading");
-    if (!section || !heading || section.querySelector(".pro-hero-panel")) return;
+  function renderMetaSummary() {
+    const summary = document.querySelector("#metaPatchSummary");
+    const data = getMetaList();
+    if (!summary || !data || activePanel() !== "weapons") return;
 
-    const panel = document.createElement("div");
-    panel.className = "pro-hero-panel";
-    panel.innerHTML = `
-      <article class="pro-hero-card pro-hero-card-primary">
-        <span>Live Meta</span>
-        <strong>MK.78 + Kogot-7</strong>
-        <p>Aktuelles Ranked-Pairing: Long Range sauber trennen, Close Range aggressiv spielen.</p>
-      </article>
-      <article class="pro-hero-card pro-hero-card-next">
-        <span>Update Radar</span>
-        <strong>Season 4 Update</strong>
-        <p>Naechster Fokus: Release-Termin, neue Waffen, Maps, Buffs und Nerfs sofort einordnen.</p>
-      </article>
-      <article class="pro-hero-card pro-hero-card-pro">
-        <span>Demnaechst</span>
-        <strong>Favoriten & Accounts</strong>
-        <p>Vorbereitet fuer gespeicherte Loadouts, wenn das Backend spaeter kommt.</p>
-      </article>
+    const top = data.items.slice(0, 4).map((item) => `${item.name} (${item.tier})`).join(", ");
+    const pickRateText = data.hasPickRates
+      ? "Pick-Rates stammen direkt von WZStats."
+      : "WZStats liefert aktuell keine Pick-Rate-Werte im oeffentlichen Datensatz; deshalb werden keine geratenen Pick-Rates angezeigt.";
+
+    summary.innerHTML = `
+      <span>WZStats Auto Update - ${escapeHtml(state.meta.generatedAtLabel)}</span>
+      <p><strong>${escapeHtml(data.title)}:</strong> ${escapeHtml(top)}. ${escapeHtml(pickRateText)}</p>
     `;
-    heading.insertAdjacentElement("afterend", panel);
-
-    const trust = document.createElement("div");
-    trust.className = "trust-strip";
-    trust.innerHTML = `
-      <span><strong>12</strong> Builds</span>
-      <span><strong>4</strong> Rollen</span>
-      <span><strong>WZStats</strong> geprueft</span>
-      <span><strong>Season 4</strong> Watchlist</span>
-    `;
-    panel.insertAdjacentElement("afterend", trust);
-
-    const actions = document.createElement("div");
-    actions.className = "quick-actions";
-    actions.innerHTML = `
-      <a class="quick-action primary" href="#loadoutGrid"><span>Start</span><strong>Meta Builds ansehen</strong></a>
-      <button class="quick-action" type="button" data-action-mode="updates"><span>Radar</span><strong>Season 4 verfolgen</strong></button>
-      <button class="quick-action" type="button" data-action-mode="camos"><span>Grind</span><strong>Tarnungen checken</strong></button>
-    `;
-    trust.insertAdjacentElement("afterend", actions);
   }
 
-  function renderProSnapshot() {
-    const section = document.querySelector("#loadouts");
-    const actions = section?.querySelector(".quick-actions");
-    if (!section || !actions || section.querySelector(".pro-snapshot")) return;
-
-    const snapshot = document.createElement("section");
-    snapshot.className = "pro-snapshot";
-    snapshot.setAttribute("aria-label", "Meta Snapshot");
-    snapshot.innerHTML = `
-      <div class="snapshot-main">
-        <span>Heute starten</span>
-        <strong>Erst Loadout waehlen, dann Rolle checken.</strong>
-        <p>Die Seite fuehrt neue Besucher direkt zu den wichtigsten Picks: Long Range, Close Range, Sniper und A-Tier sind getrennt, damit niemand falsche Waffen vergleicht.</p>
-      </div>
-      <div class="snapshot-grid">
-        <article><span>01</span><strong>Pflichtpick</strong><p>MK.78 und Kogot-7 klar sichtbar.</p></article>
-        <article><span>02</span><strong>Naechstes</strong><p>Season 4 Update bleibt im Radar.</p></article>
-        <article><span>03</span><strong>Grind</strong><p>Tarnungen als eigener Einstieg.</p></article>
-      </div>
-    `;
-    actions.insertAdjacentElement("afterend", snapshot);
-  }
-
-  function renderEditorialSignals() {
-    const snapshot = document.querySelector(".pro-snapshot");
-    const section = document.querySelector("#loadouts");
-    if (!snapshot || !section || section.querySelector(".editorial-strip")) return;
-
-    const strip = document.createElement("aside");
-    strip.className = "editorial-strip";
-    strip.setAttribute("aria-label", "Redaktionelle Hinweise");
-    strip.innerHTML = `
-      <div>
-        <span>Einordnung</span>
-        <strong>Keine Hype-Liste</strong>
-        <p>Loadout Lab trennt Picks nach Rolle, Patch-Status und Spielbarkeit.</p>
-      </div>
-      <div>
-        <span>Quelle</span>
-        <strong>Patchnotes + Stats</strong>
-        <p>Meta-Hinweise werden mit offiziellen Updates und WZStats abgeglichen.</p>
-      </div>
-      <div>
-        <span>Naechstes Ziel</span>
-        <strong>Season 4 Hub</strong>
-        <p>Release, neue Waffen und Nerfs sollen direkt als eigener Bereich landen.</p>
-      </div>
-    `;
-    snapshot.insertAdjacentElement("afterend", strip);
-  }
-
-  function renderRolePicks() {
+  function renderRolePanel() {
     const panel = document.querySelector("#weaponComparePanel");
-    if (!panel || panel.dataset.rolePicks === "true") return;
+    const data = getMetaList();
+    if (!panel || !data || activePanel() !== "weapons") return;
 
-    const data = rolePicks[getMode()] || rolePicks["warzone-ranked"];
-    applyHeading(data);
     panel.dataset.rolePicks = "true";
     panel.innerHTML = `
       <div class="weapon-compare-copy">
-        <span>${data.kicker}</span>
-        <strong>${data.title}</strong>
-        <p>${data.note}</p>
+        <span>Quelle: WZStats</span>
+        <strong>${escapeHtml(data.title)}</strong>
+        <p>${escapeHtml(data.sourceNote)}</p>
       </div>
       <div class="weapon-compare-stats role-pick-stats">
-        ${data.cards.map(([role, weapon, status, detail]) => `
+        ${data.items.slice(0, 4).map((item) => `
           <article>
-            <span>${role}</span>
-            <strong>${weapon}</strong>
-            <p>${status} · ${detail}</p>
+            <span>${escapeHtml(item.role || item.weaponClass || "Meta")}</span>
+            <strong>${escapeHtml(item.name)}</strong>
+            <p>${escapeHtml(item.tier)} - ${escapeHtml(item.rankLabel)}${item.pickRateLabel ? ` - ${escapeHtml(item.pickRateLabel)}` : ""}</p>
           </article>
         `).join("")}
       </div>
     `;
   }
 
-  function renderDecisionDeck() {
-    const mode = getMode();
-    const data = rolePicks[mode] || rolePicks["warzone-ranked"];
-    const dashboard = document.querySelector(".weapon-dashboard");
-    const compare = document.querySelector("#weaponComparePanel");
-    if (!dashboard || !compare) return;
+  function renderLoadoutCards() {
+    const grid = document.querySelector("#loadoutGrid");
+    const count = document.querySelector("#resultCount");
+    const data = getMetaList();
+    if (!grid || !data || activePanel() !== "weapons") return;
 
-    const oldDeck = dashboard.querySelector(".decision-deck");
-    if (oldDeck && oldDeck.dataset.mode !== mode) oldDeck.remove();
-    if (dashboard.querySelector(".decision-deck")) return;
-
-    const deck = document.createElement("section");
-    deck.className = "decision-deck";
-    deck.dataset.mode = mode;
-    deck.setAttribute("aria-label", "Meta Entscheidungshilfe");
-    deck.innerHTML = `
-      <div class="decision-head">
-        <span>Meta Entscheidung</span>
-        <strong>Was soll ich jetzt spielen?</strong>
-        <p>Kurzfassung fuer neue Besucher: sofort picken, Rolle verstehen, Update im Blick behalten.</p>
-      </div>
-      <div class="decision-cards">
-        ${data.decisions.map(([label, title, text]) => `
-          <article>
-            <span>${label}</span>
-            <strong>${title}</strong>
-            <p>${text}</p>
-          </article>
-        `).join("")}
-      </div>
-      <button class="decision-update" type="button" data-action-mode="updates">
-        <span>Naechster Check</span>
-        <strong>Season 4 Update beobachten</strong>
-      </button>
-    `;
-    compare.insertAdjacentElement("afterend", deck);
+    const cards = data.items.slice(0, 12);
+    if (count) count.textContent = `${cards.length} WZStats-Picks angezeigt`;
+    grid.innerHTML = cards.map((item) => `
+      <article class="loadout-card ${item.tier === "META" ? "tier-absolute-meta" : "tier-meta"}" data-loadout-card="${escapeHtml(item.name)}">
+        <div class="rank-badge">#${escapeHtml(item.position)}<span>${escapeHtml(item.tierLabel)}</span></div>
+        <div class="weapon-art"><img src="${escapeHtml(item.imageUrl)}" alt="${escapeHtml(item.name)}" loading="lazy"></div>
+        <div class="card-body">
+          <div class="card-title-row"><div><span class="mode-pill">${escapeHtml(item.weaponClass)}</span><h3 class="weapon-name">${escapeHtml(item.name)}</h3></div></div>
+          <div class="stat-row">
+            <span><strong>${escapeHtml(item.scoreLabel)}</strong> WZStats</span>
+            <span><strong>${escapeHtml(item.pickRateLabel || "n/a")}</strong> Pick-Rate</span>
+            <span><strong>${escapeHtml(item.role || "Meta")}</strong> Rolle</span>
+            <span><strong>${escapeHtml(item.sourceUpdatedLabel)}</strong> Stand</span>
+          </div>
+          <div class="tag-list"><span>WZStats</span><span>${escapeHtml(item.rankLabel)}</span><span>${escapeHtml(item.tierLabel)}</span></div>
+          <div class="details"><div><p class="role">${escapeHtml(item.description)}</p><ul>${item.attachments.map((attachment) => `<li>${escapeHtml(attachment)}</li>`).join("")}</ul></div></div>
+        </div>
+      </article>
+    `).join("");
   }
 
-  function renderGrowthPanel() {
-    const loadouts = document.querySelector("#loadouts");
-    const intel = document.querySelector("#intel");
-    if (!loadouts || loadouts.querySelector(".growth-panel")) return;
+  function renderMw4Watch() {
+    if (!state.mw4) return;
+    const infoTitle = document.querySelector("#modeInfoTitle");
+    const infoDescription = document.querySelector("#modeInfoDescription");
+    const infoKicker = document.querySelector("#modeInfoKicker");
+    const updateTime = document.querySelector("#modeInfoUpdateTime");
+    const updateSummary = document.querySelector("#modeInfoUpdateSummary");
+    const cards = document.querySelector("#modeInfoCards");
+    const tips = document.querySelector("#modeInfoTips");
 
-    const panel = document.createElement("section");
-    panel.className = "growth-panel";
-    panel.setAttribute("aria-label", "Loadout Lab Ausbau");
-    panel.innerHTML = `
-      <div class="growth-copy">
-        <span>Ausbau geplant</span>
-        <strong>Bereit fuer Community, Favoriten und Partner-Bereiche.</strong>
-        <p>Die Seite bleibt jetzt bewusst schnell und kostenlos. Spaeter koennen Accounts, gespeicherte Builds und Monetarisierung sauber als eigene Funktionen dazukommen.</p>
-      </div>
-      <div class="growth-grid">
-        <article><span>01</span><strong>Favoriten</strong><p>Builds merken, wenn ein Backend aktiv ist.</p></article>
-        <article><span>02</span><strong>Season Hub</strong><p>Season 4 als eigener Update-Einstieg.</p></article>
-        <article><span>03</span><strong>Partner</strong><p>Platz fuer faire Empfehlungen ohne die Meta zu stoeren.</p></article>
-      </div>
-    `;
+    const isMw4 = document.querySelector(".mw4-mode-button.active") || infoTitle?.textContent?.toLowerCase().includes("mw4");
+    if (!isMw4) return;
 
-    if (intel) loadouts.insertBefore(panel, intel);
-    else loadouts.appendChild(panel);
+    if (infoTitle) infoTitle.textContent = "MW4 Infos & Geruechte";
+    if (infoDescription) infoDescription.textContent = "Automatisch beobachtet: offizielle Call-of-Duty-/Infinity-Ward-Posts und aktuelle Tridzo-YouTube-Transkripte. Offizielles und Geruecht bleiben getrennt.";
+    if (infoKicker) infoKicker.textContent = "COD 2026 Watch";
+    if (updateTime) updateTime.textContent = state.mw4.generatedAtLabel;
+    if (updateSummary) updateSummary.textContent = state.mw4.officialSummary;
+
+    if (cards) {
+      cards.innerHTML = state.mw4.cards.map((card) => `<article><span>${escapeHtml(card.label)}</span><strong>${escapeHtml(card.title)}</strong><p>${escapeHtml(card.text)}</p></article>`).join("");
+    }
+
+    if (tips) {
+      tips.innerHTML = state.mw4.tips.map((tip) => `<li>${escapeHtml(tip)}</li>`).join("");
+    }
   }
 
-  function updateStaticCopy() {
-    document.querySelectorAll(".timeline article").forEach((article) => {
-      const title = article.querySelector("h3");
-      if (title?.textContent.trim() === "MW4 Status") {
-        title.textContent = "Season 4 Watch";
-        const text = article.querySelector("p");
-        if (text) text.textContent = "Naechstes grosses Update: Season 4. Loadout Lab trackt Termin, Waffen, Maps und Balance-Aenderungen.";
-      }
+  function renderAll() {
+    renderMetaSummary();
+    renderRolePanel();
+    renderLoadoutCards();
+    renderMw4Watch();
+  }
+
+  async function init() {
+    const [meta, mw4] = await Promise.all([
+      fetchJson(SOURCES.meta).catch(() => null),
+      fetchJson(SOURCES.mw4).catch(() => null),
+    ]);
+
+    state.meta = meta;
+    state.mw4 = mw4;
+    renderAll();
+
+    document.addEventListener("click", () => {
+      requestAnimationFrame(renderAll);
+      setTimeout(renderAll, 80);
     });
   }
 
-  function activateMode(mode) {
-    const button = document.querySelector(`[data-mode="${mode}"]`);
-    if (button) button.click();
-  }
-
-  function bindQuickActions() {
-    document.querySelectorAll("[data-action-mode]").forEach((button) => {
-      if (button.dataset.bound === "true") return;
-      button.dataset.bound = "true";
-      button.addEventListener("click", () => activateMode(button.dataset.actionMode));
-    });
-  }
-
-  function scheduleRender() {
-    requestAnimationFrame(() => {
-      ensureNextStyles();
-      enhanceHeader();
-      renderProfessionalHero();
-      renderProSnapshot();
-      renderEditorialSignals();
-      renderRolePicks();
-      renderDecisionDeck();
-      renderGrowthPanel();
-      updateStaticCopy();
-      bindQuickActions();
-    });
-  }
-
-  document.addEventListener("DOMContentLoaded", () => {
-    scheduleRender();
-    document.querySelectorAll(".mode-button, .filter-button, .content-tab").forEach((button) => {
-      button.addEventListener("click", () => {
-        const panel = document.querySelector("#weaponComparePanel");
-        if (panel) panel.dataset.rolePicks = "";
-        const deck = document.querySelector(".decision-deck");
-        if (deck) deck.remove();
-        scheduleRender();
-      });
-    });
-
-    const panel = document.querySelector("#weaponComparePanel");
-    if (!panel) return;
-    new MutationObserver(() => {
-      if (panel.dataset.rolePicks !== "true") scheduleRender();
-    }).observe(panel, { childList: true });
-  });
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
+  else init();
 }());
