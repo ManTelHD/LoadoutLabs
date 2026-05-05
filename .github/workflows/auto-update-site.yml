@@ -5,6 +5,7 @@ on:
     paths:
       - ".github/workflows/auto-update-site.yml"
       - "New project 2/tools/update-latest-info.mjs"
+      - "New project 2/meta-overrides.js"
   schedule:
     - cron: "17 */6 * * *"
   workflow_dispatch:
@@ -35,4 +36,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: auto update site info"
-          file_pattern: "New project 2/index.html New project 2/data/latest-updates.json"
+          file_pattern: "New project 2/index.html New project 2/data/latest-updates.json New project 2/data/wzstats-meta.json New project 2/data/cod-weapons.json New project 2/data/mw4-watch.json"
