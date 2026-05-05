@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-05T06:32:59.706Z",
+  "generatedAtLabel": "5. Mai 2026 um 08:32 MESZ",
+  "source": "WZStats",
+  "sourceUrl": "https://wzstats.gg/",
+  "publicEndpoint": "https://app.wzstats.gg/wz2/weapons/meta",
+  "pickRatePolicy": "Pick-Rates are only shown when WZStats exposes a current public value. No estimates are generated.",
+  "warzoneRanked": {
+    "key": "rankedResurgence",
+    "title": "Warzone Ranked / Ranked Resurgence Meta",
+    "source": "WZStats",
+    "sourceUrl": "https://app.wzstats.gg/wz2/weapons/meta",
+    "sourceUpdatedAt": "2026-05-04T20:21:45.062Z",
+    "sourceNote": "Tierlist und Raenge stammen ausschliesslich aus WZStats. Pick-Rates werden nur angezeigt, wenn WZStats einen oeffentlichen Wert liefert.",
+    "hasPickRates": false,
+    "items": [
+      { "id": "ds20-mirage", "name": "DS20 Mirage", "weaponClass": "Assault Rifle", "role": "Long Range", "tier": "META", "tierLabel": "Meta", "position": 1, "rankLabel": "META #1", "scoreLabel": "Meta", "pickRate": null, "pickRateLabel": "", "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#ds20-mirage", "sourceUpdatedAt": "2026-05-04T20:21:45.062Z", "sourceUpdatedLabel": "4. Mai 2026", "description": "DS20 Mirage wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als Meta gefuehrt.", "attachments": ["Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar", "Quelle: WZStats Tierlist", "Rolle: Long Range"] },
+      { "id": "kogot-7", "name": "Kogot-7", "weaponClass": "SMG", "role": "Close Range", "tier": "META", "tierLabel": "Meta", "position": 2, "rankLabel": "META #2", "scoreLabel": "Meta", "pickRate": null, "pickRateLabel": "", "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#kogot-7", "sourceUpdatedAt": "2026-05-04T20:21:45.062Z", "sourceUpdatedLabel": "4. Mai 2026", "description": "Kogot-7 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als Meta gefuehrt.", "attachments": ["Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar", "Quelle: WZStats Tierlist", "Rolle: Close Range"] },
+      { "id": "mk78", "name": "MK.78", "weaponClass": "LMG", "role": "Long Range", "tier": "META", "tierLabel": "Meta", "position": 3, "rankLabel": "META #3", "scoreLabel": "Meta", "pickRate": null, "pickRateLabel": "", "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#mk78", "sourceUpdatedAt": "2026-05-04T20:21:45.062Z", "sourceUpdatedLabel": "4. Mai 2026", "description": "MK.78 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als Meta gefuehrt.", "attachments": ["Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar", "Quelle: WZStats Tierlist", "Rolle: Long Range"] },
+      { "id": "vst", "name": "VST", "weaponClass": "SMG", "role": "Close Range", "tier": "META", "tierLabel": "Meta", "position": 4, "rankLabel": "META #4", "scoreLabel": "Meta", "pickRate": null, "pickRateLabel": "", "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#vst", "sourceUpdatedAt": "2026-05-04T20:21:45.062Z", "sourceUpdatedLabel": "4. Mai 2026", "description": "VST wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als Meta gefuehrt.", "attachments": ["Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar", "Quelle: WZStats Tierlist", "Rolle: Close Range"] },
+      { "id": "voyak-kt-3", "name": "Voyak KT-3", "weaponClass": "Assault Rifle", "role": "Long Range", "tier": "META", "tierLabel": "Meta", "position": 5, "rankLabel": "META #5", "scoreLabel": "Meta", "pickRate": null, "pickRateLabel": "", "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#voyak-kt-3", "sourceUpdatedAt": "2026-05-04T20:21:45.062Z", "sourceUpdatedLabel": "4. Mai 2026", "description": "Voyak KT-3 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als Meta gefuehrt.", "attachments": ["Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar", "Quelle: WZStats Tierlist", "Rolle: Long Range"] },
+      { "id": "carbon-57", "name": "Carbon 57", "weaponClass": "SMG", "role": "Close Range", "tier": "META", "tierLabel": "Meta", "position": 6, "rankLabel": "META #6", "scoreLabel": "Meta", "pickRate": null, "pickRateLabel": "", "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#carbon-57", "sourceUpdatedAt": "2026-05-04T20:21:45.062Z", "sourceUpdatedLabel": "4. Mai 2026", "description": "Carbon 57 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als Meta gefuehrt.", "attachments": ["Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar", "Quelle: WZStats Tierlist", "Rolle: Close Range"] },
+      { "id": "mxr-17", "name": "MXR-17", "weaponClass": "Assault Rifle", "role": "Long Range", "tier": "META", "tierLabel": "Meta", "position": 7, "rankLabel": "META #7", "scoreLabel": "Meta", "pickRate": null, "pickRateLabel": "", "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#mxr-17", "sourceUpdatedAt": "2026-05-04T20:21:45.062Z", "sourceUpdatedLabel": "4. Mai 2026", "description": "MXR-17 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als Meta gefuehrt.", "attachments": ["Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar", "Quelle: WZStats Tierlist", "Rolle: Long Range"] },
+      { "id": "dravec-45", "name": "Dravec 45", "weaponClass": "SMG", "role": "Close Range", "tier": "META", "tierLabel": "Meta", "position": 8, "rankLabel": "META #8", "scoreLabel": "Meta", "pickRate": null, "pickRateLabel": "", "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#dravec-45", "sourceUpdatedAt": "2026-05-04T20:21:45.062Z", "sourceUpdatedLabel": "4. Mai 2026", "description": "Dravec 45 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als Meta gefuehrt.", "attachments": ["Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar", "Quelle: WZStats Tierlist", "Rolle: Close Range"] }
+    ]
+  },
+  "bo7Ranked": {
+    "key": "bo7Ranked",
+    "title": "Black Ops 7 Ranked Meta",
+    "source": "WZStats",
+    "sourceUrl": "https://app.wzstats.gg/wz2/weapons/meta",
+    "sourceUpdatedAt": "2026-05-04T20:21:45.062Z",
+    "sourceNote": "Tierlist und Raenge stammen ausschliesslich aus WZStats. Pick-Rates werden nur angezeigt, wenn WZStats einen oeffentlichen Wert liefert.",
+    "hasPickRates": false,
+    "items": [
+      { "id": "m15-mod-0", "name": "M15 MOD 0", "weaponClass": "Assault Rifle", "role": "Long Range", "tier": "META", "tierLabel": "Meta", "position": 1, "rankLabel": "META #1", "scoreLabel": "Meta", "pickRate": null, "pickRateLabel": "", "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#m15-mod-0", "sourceUpdatedAt": "2026-05-04T20:21:45.062Z", "sourceUpdatedLabel": "4. Mai 2026", "description": "M15 MOD 0 wird von WZStats in Black Ops 7 Ranked Meta als Meta gefuehrt.", "attachments": ["Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar", "Quelle: WZStats Tierlist", "Rolle: Long Range"] },
+      { "id": "mpc-25", "name": "MPC-25", "weaponClass": "SMG", "role": "Close Range", "tier": "META", "tierLabel": "Meta", "position": 2, "rankLabel": "META #2", "scoreLabel": "Meta", "pickRate": null, "pickRateLabel": "", "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#mpc-25", "sourceUpdatedAt": "2026-05-04T20:21:45.062Z", "sourceUpdatedLabel": "4. Mai 2026", "description": "MPC-25 wird von WZStats in Black Ops 7 Ranked Meta als Meta gefuehrt.", "attachments": ["Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar", "Quelle: WZStats Tierlist", "Rolle: Close Range"] },
+      { "id": "vs-recon", "name": "VS Recon", "weaponClass": "Sniper Rifle", "role": "Sniper", "tier": "META", "tierLabel": "Meta", "position": 3, "rankLabel": "META #3", "scoreLabel": "Meta", "pickRate": null, "pickRateLabel": "", "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#vs-recon", "sourceUpdatedAt": "2026-05-04T20:21:45.062Z", "sourceUpdatedLabel": "4. Mai 2026", "description": "VS Recon wird von WZStats in Black Ops 7 Ranked Meta als Meta gefuehrt.", "attachments": ["Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar", "Quelle: WZStats Tierlist", "Rolle: Sniper"] }
+    ]
+  }
+}
