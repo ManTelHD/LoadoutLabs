@@ -1,6 +1,10 @@
 name: Auto update site
 
 on:
+  push:
+    paths:
+      - ".github/workflows/auto-update-site.yml"
+      - "New project 2/tools/update-latest-info.mjs"
   schedule:
     - cron: "17 */6 * * *"
   workflow_dispatch:
