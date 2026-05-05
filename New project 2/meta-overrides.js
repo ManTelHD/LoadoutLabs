@@ -7,7 +7,7 @@
 
   const verifiedImages = {
     "ds20-mirage": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-AR-DS20-MIRAGE.webp",
-    "kogot-7": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/weapons/BO7-WM-KOGOT-7-PRESTIGE.webp",
+    "kogot-7": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/weapons/BO7-WM-KOGOT-7.jpg",
     "mk78": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-LMG-MK-78.webp",
     "vst": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/weapons/BO7-S03-VST-MAIN.webp",
     "voyak-kt-3": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/weapons/BO7-S02-VOYAK-KT-3.webp",
@@ -88,7 +88,7 @@
     grid.innerHTML = cards.map((item) => {
       const imageUrl = weaponImage(item, imageMap);
       const image = imageUrl
-        ? `<div class="weapon-art" style="grid-column:1!important;width:76px!important;max-width:76px!important;height:52px!important;margin:4px 0 0!important;overflow:hidden!important;display:flex!important;align-items:center!important;justify-content:center!important;border:1px solid rgba(245,242,233,.12);border-radius:6px;background:rgba(245,242,233,.035);"><img src="${escapeHtml(imageUrl)}" alt="${escapeHtml(item.name)}" loading="lazy" style="display:block!important;width:100%!important;max-width:76px!important;height:100%!important;max-height:52px!important;object-fit:contain!important;" onerror="this.closest('.weapon-art').remove()"></div>`
+        ? `<div class="weapon-art" style="grid-column:1!important;width:160px!important;max-width:160px!important;height:90px!important;margin:4px 0 0!important;overflow:hidden!important;display:flex!important;align-items:center!important;justify-content:center!important;border:1px solid rgba(245,242,233,.12);border-radius:6px;background:rgba(245,242,233,.035);"><img src="${escapeHtml(imageUrl)}" alt="${escapeHtml(item.name)}" loading="lazy" style="display:block!important;width:100%!important;max-width:160px!important;height:100%!important;max-height:90px!important;object-fit:contain!important;" onerror="this.closest('.weapon-art').remove()"></div>`
         : "";
       return `<article class="loadout-card ${item.tier === "META" ? "tier-absolute-meta" : "tier-meta"}" data-loadout-card="${escapeHtml(item.name)}"><div class="rank-badge">#${escapeHtml(item.position)}<span>${escapeHtml(item.tierLabel)}</span></div>${image}<div class="card-body"><div class="card-title-row"><div><span class="mode-pill">${escapeHtml(item.weaponClass)}</span><h3 class="weapon-name">${escapeHtml(item.name)}</h3></div></div><div class="stat-row"><span><strong>${escapeHtml(item.scoreLabel)}</strong> WZStats</span><span><strong>${escapeHtml(item.pickRateLabel || "n/a")}</strong> Pick-Rate</span><span><strong>${escapeHtml(item.role || "Meta")}</strong> Rolle</span><span><strong>${escapeHtml(item.sourceUpdatedLabel)}</strong> Stand</span></div><div class="tag-list"><span>WZStats</span><span>${escapeHtml(item.rankLabel)}</span><span>${escapeHtml(item.tierLabel)}</span></div><div class="details"><div><p class="role">${escapeHtml(item.description)}</p><ul>${item.attachments.map((attachment) => `<li>${escapeHtml(attachment)}</li>`).join("")}</ul></div></div></div></article>`;
     }).join("");
