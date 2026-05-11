@@ -154,6 +154,41 @@
     document.head.append(style);
   }
 
+  function applyImageFallbacks(root = document) {
+    root.querySelectorAll?.('.camo-swatch img[src*="img.game8.co"]').forEach((image) => {
+      image.closest(".camo-swatch")?.classList.remove("has-image");
+      image.remove();
+    });
+
+    root.querySelectorAll?.(".weapon-thumb img").forEach((image) => {
+      if (image.dataset.fallbackBound) return;
+      image.dataset.fallbackBound = "true";
+      image.addEventListener("error", () => {
+        image.src = "assets/cod-loadout-hero.png";
+      }, { once: true });
+    });
+  }
+
+  function watchImageFallbacks() {
+    applyImageFallbacks();
+    document.addEventListener("error", (event) => {
+      const image = event.target;
+      if (!(image instanceof HTMLImageElement)) return;
+      if (image.src.includes("img.game8.co")) {
+        image.closest(".camo-swatch")?.classList.remove("has-image");
+        image.remove();
+      }
+    }, true);
+
+    new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        mutation.addedNodes.forEach((node) => {
+          if (node instanceof Element) applyImageFallbacks(node);
+        });
+      });
+    }).observe(document.body, { childList: true, subtree: true });
+  }
+
   function currentMode() {
     return document.querySelector(".secondary-mode-switch .mode-button.active")?.dataset.mode || "warzone-ranked";
   }
@@ -329,6 +364,7 @@
 
   async function init() {
     injectDetailLayoutCss();
+    watchImageFallbacks();
 
     const [meta, mw4, codWeapons] = await Promise.all([
       fetchJson(SOURCES.meta).catch(() => null),
