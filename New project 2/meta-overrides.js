@@ -25,6 +25,65 @@
     codWeapons: null,
   };
 
+  const verifiedBuilds = {
+    "ds20-mirage": {
+      role: "Gebuffte Long-Range-AR mit staerkerem Mid-/Minimum-Damage, besserem Headshot-Wert und mehr Bullet Velocity in BR/Resurgence.",
+      buildCode: "WZStats Loadout",
+      secondary: "Kogot-7",
+      attachments: ["Optic: EAM XL Reflex", "Muzzle: Monolithic Suppressor", "Barrel: 17.1\" Abdicator Barrel", "Magazine: Griffon Reserve Extended II", "Rear Grip: A1-C Control Grip"],
+      perks: ["Scavenger", "Quick Fix", "Survivor"],
+    },
+    "kogot-7": {
+      role: "Warzone-Meta-SMG mit sehr starker Mobility und schneller TTK.",
+      buildCode: "WZStats Loadout",
+      secondary: "DS20 Mirage",
+      attachments: ["Muzzle: Hawker Series 45", "Barrel: 8.5\" Targil Hock-XR Barrel", "Underbarrel: EAM Steady-90 Grip", "Magazine: Vex Expanse Mag", "Fire Mods: Buffer Spring"],
+      perks: ["Mountaineer", "Quick Fix", "Stim Shot"],
+    },
+    mk78: {
+      role: "WZStats #1 Langstrecke: sehr stabiles LMG mit starkem Damage-Profil und sauberem Recoil fuer Ranked-Resurgence.",
+      buildCode: "WZStats Loadout",
+      secondary: "Kogot-7",
+      attachments: ["Optic: Greaves AccuSpot 3x", "Barrel: 22\" Impulse HB-762 Barrel", "Underbarrel: Bowen Sentry Foregrip", "Rear Grip: Fleet-G2 Grip", "Fire Mods: Accelerated Recoil System"],
+      perks: ["Scavenger", "Quick Fix", "Survivor"],
+    },
+    vst: {
+      role: "Season-03-SMG mit hoher Mobility, gutem Handling und starkem Close-Range-Druck.",
+      buildCode: "S09-8B5QH-UQ31",
+      secondary: "MK35 ISR",
+      attachments: ["Muzzle: H-9mm Precision Comp", "Barrel: Longshot Vector Barrel", "Underbarrel: Zero Shift Handstop", "Magazine: Extended Mag II", "Fire Mods: MF 5.56 Defense Conversion"],
+      perks: ["Mountaineer", "Quick Fix", "Stim Shot"],
+    },
+    "carbon-57": {
+      role: "WZStats #3 Kurzstrecke: mobile SMG-Option mit starkem Handling und solidem TTK fuer aggressive Pushes.",
+      buildCode: "S05-6U1FK-1551",
+      secondary: "Maddox RFB",
+      attachments: ["Barrel: 14\" Rockleigh Barrel", "Underbarrel: Vitalize Handstop", "Magazine: Compact-246 Fast Mag", "Rear Grip: Bombus Quick Grip", "Fire Mods: Accelerated Recoil System"],
+      perks: ["Mountaineer", "Quick Fix", "Stim Shot"],
+    },
+    "mxr-17": {
+      role: "WZStats Long-Range-AR: spielbar und gebufft, aber aktuell nicht vor DS20 Mirage oder MK.78.",
+      buildCode: "WZStats Loadout",
+      secondary: "Kogot-7",
+      attachments: ["Optic: EAM XL Reflex", "Muzzle: Monolithic Suppressor", "Barrel: 17\" Greaves Scourge Barrel", "Magazine: Rhodes Drum Mag", "Stock: Winch Stock"],
+      perks: ["Scavenger", "Quick Fix", "Survivor"],
+    },
+    "mk35-isr": {
+      role: "Long Range AR fuer kontrollierte Warzone-Beams.",
+      buildCode: "A12-34FK5-DRNJU-11",
+      secondary: "Razor 9mm",
+      attachments: ["Optic: FANG HoverPoint ELO", "Muzzle: Monolithic Suppressor", "Barrel: 16.5\" Greaves Bellum Barrel", "Underbarrel: VAS Convergence Foregrip", "Magazine: Bowen Siren Drum"],
+      perks: ["Quick Fix", "Survivor", "Smoke Grenade"],
+    },
+    "ak-27": {
+      role: "BO7 AR fuer Spieler, die Recoil-Kontrolle und Range bevorzugen.",
+      buildCode: "A02-2JD6P-CPNP9-QY11",
+      secondary: "Kogot-7",
+      attachments: ["Muzzle: EMT3 Compensator", "Barrel: 18.2\" Vostok Extended Barrel", "Underbarrel: Ironhold Angled Grip", "Rear Grip: Garin Advanced Grip", "Fire Mods: 7.62 Soviet Overpressured"],
+      perks: ["Perk Greed", "Mute Field", "Dexterity"],
+    },
+  };
+
   const detailLayoutCss = `
     .loadout-card.expanded .card-details { margin-top: 0.8rem; }
     .loadout-card.expanded .attachment-columns {
@@ -101,6 +160,8 @@
   }
 
   function getStaticLoadout(item) {
+    const verified = verifiedBuilds[item.id] || verifiedBuilds[slug(item.name)];
+    if (verified) return verified;
     if (typeof loadouts === "undefined" || !Array.isArray(loadouts)) return null;
     const mode = currentMode();
     const itemSlug = slug(item.name);
