@@ -9,7 +9,7 @@
     "ds20-mirage": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-AR-DS20-MIRAGE.webp",
     "kogot-7": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/weapons/BO7-WM-KOGOT-7.jpg",
     "mk78": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-LMG-MK-78.webp",
-    "vst": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/weapons/BO7-S03-VST-MAIN.webp",
+    "vst": "https://imgs.callofduty.com/content/dam/atvi/callofduty/guides/games/blackops7/weapons-matrix/weapons/BO7-S03-VST-MAIN.webp",
     "voyak-kt-3": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/weapons/BO7-S02-VOYAK-KT-3.webp",
     "carbon-57": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-SMG-CARBON-57.webp",
     "mxr-17": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-AR-MXR-17.webp",
@@ -85,7 +85,9 @@
   };
 
   const detailLayoutCss = `
+    .loadout-card.expanded { align-items: start; }
     .loadout-card.expanded .card-details { margin-top: 0.8rem; }
+    .loadout-card.expanded .card-details > .attachment-columns { overflow: visible; }
     .loadout-card.expanded .attachment-columns {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -260,7 +262,6 @@
                   <li>Code: ${escapeHtml(buildCode)}</li>
                   ${secondary ? `<li>Pair: ${escapeHtml(secondary)}</li>` : ""}
                   ${perks.map((perk, index) => `<li>Extra ${index + 1}: ${escapeHtml(perk)}</li>`).join("")}
-                  <li>Quelle: WZStats Tierlist - ${escapeHtml(item.sourceUpdatedLabel)}</li>
                 </ul>
               </div>
             </div>
