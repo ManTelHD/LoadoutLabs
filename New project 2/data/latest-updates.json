@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-11T11:50:35.318Z",
-  "generatedAtLabel": "11. Mai 2026 um 13:50 MESZ",
+  "generatedAt": "2026-05-11T18:27:48.713Z",
+  "generatedAtLabel": "11. Mai 2026 um 20:27 MESZ",
   "sources": [
     {
       "id": "cod-patchnotes",
@@ -12,21 +12,32 @@
   "highlights": [
     {
       "label": "Aktuell",
-      "title": "Call of Duty: Black Ops 7 Season 03 Patch Notes",
-      "text": "1. Mai 2026: MULTIPLAYER Weapons Sniper Rifles This adjustment went live on May 30 with Season 03 Reloaded but was missed in the Patch Notes. We’re adding it here to ensure visibility. Sniper Rifle Adjustments Weapon Adjustments Weapon: Strider 300 Adjustments: Strider..."
+      "title": "Call of Duty: Warzone Season 03 Reloaded Patch Notes",
+      "text": "11. Mai 2026: We’re continuing to strengthen our anti-cheat systems to better protect players and ensure fair matches across all platforms. These changes do not apply until Season 04, at which point you can expect the following:"
     },
     {
       "label": "Geprueft",
       "title": "Automatisch aktualisiert",
-      "text": "Offizielle Quellen wurden am 11. Mai 2026 um 13:50 MESZ geprueft."
+      "text": "Offizielle Quellen wurden am 11. Mai 2026 um 20:27 MESZ geprueft."
     },
     {
       "label": "Weitere Updates",
-      "title": "Call of Duty: Warzone Season 03 Reloaded Patch Notes",
-      "text": "29. April 2026: We’re continuing to strengthen our anti-cheat systems to better protect players and ensure fair matches across all platforms. These changes do not apply until Season 04, at which point you can expect the following:"
+      "title": "Call of Duty: Black Ops 7 Season 03 Patch Notes",
+      "text": "1. Mai 2026: MULTIPLAYER Weapons Sniper Rifles This adjustment went live on May 30 with Season 03 Reloaded but was missed in the Patch Notes. We’re adding it here to ensure visibility. Sniper Rifle Adjustments Weapon Adjustments Weapon: Strider 300 Adjustments: Strider..."
     }
   ],
   "updates": [
+    {
+      "title": "Call of Duty: Warzone Season 03 Reloaded Patch Notes",
+      "category": "warzone",
+      "status": "Offiziell",
+      "source": "Call of Duty",
+      "date": "2026-05-11",
+      "dateLabel": "11. Mai 2026",
+      "url": "https://www.callofduty.com/patchnotes/2026/04/call-of-duty-bo7-warzone-season-03-reloaded-patch-notes",
+      "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/wz/s03r/BO7-S03R_PATCHNOTES-WZ.jpg",
+      "summary": "We’re continuing to strengthen our anti-cheat systems to better protect players and ensure fair matches across all platforms. These changes do not apply until Season 04, at which point you can expect the following:"
+    },
     {
       "title": "Call of Duty: Black Ops 7 Season 03 Patch Notes",
       "category": "multiplayer",
@@ -37,17 +48,6 @@
       "url": "https://www.callofduty.com/patchnotes/2026/04/call-of-duty-black-ops-7-season-03-patch-notes",
       "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/mp/season-03/BO7-S03_PATCHNOTES-BO7.jpg",
       "summary": "MULTIPLAYER Weapons Sniper Rifles This adjustment went live on May 30 with Season 03 Reloaded but was missed in the Patch Notes. We’re adding it here to ensure visibility. Sniper Rifle Adjustments Weapon Adjustments Weapon: Strider 300 Adjustments: Strider..."
-    },
-    {
-      "title": "Call of Duty: Warzone Season 03 Reloaded Patch Notes",
-      "category": "warzone",
-      "status": "Offiziell",
-      "source": "Call of Duty",
-      "date": "2026-04-29",
-      "dateLabel": "29. April 2026",
-      "url": "https://www.callofduty.com/patchnotes/2026/04/call-of-duty-bo7-warzone-season-03-reloaded-patch-notes",
-      "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/wz/s03r/BO7-S03R_PATCHNOTES-WZ.jpg",
-      "summary": "We’re continuing to strengthen our anti-cheat systems to better protect players and ensure fair matches across all platforms. These changes do not apply until Season 04, at which point you can expect the following:"
     },
     {
       "title": "Call of Duty: Warzone Season 03 Patch Notes",
