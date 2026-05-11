@@ -23,6 +23,11 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Sync latest main
+        run: git pull --ff-only origin main
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -46,5 +51,6 @@ jobs:
             echo "No site data changes to commit."
           else
             git commit -m "chore: auto update site info"
+            git pull --rebase origin main
             git push
           fi
