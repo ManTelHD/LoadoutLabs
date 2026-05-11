@@ -25,6 +25,24 @@
     codWeapons: null,
   };
 
+  const detailLayoutCss = `
+    .loadout-card.expanded .card-details { margin-top: 0.8rem; }
+    .loadout-card.expanded .attachment-columns {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: stretch;
+      gap: 0.75rem;
+    }
+    .loadout-card.expanded .attachment-list,
+    .loadout-card.expanded .perk-list {
+      height: 100%;
+      margin: 0.75rem 0 0;
+    }
+    @media (max-width: 720px) {
+      .loadout-card.expanded .attachment-columns { grid-template-columns: 1fr; }
+    }
+  `;
+
   function escapeHtml(value) {
     return String(value || "")
       .replace(/&/g, "&amp;")
@@ -47,6 +65,14 @@
     const response = await fetch(`${url}?v=${Date.now()}`, { cache: "no-store" });
     if (!response.ok) return null;
     return response.json();
+  }
+
+  function injectDetailLayoutCss() {
+    if (document.querySelector("#loadout-detail-layout-fix")) return;
+    const style = document.createElement("style");
+    style.id = "loadout-detail-layout-fix";
+    style.textContent = detailLayoutCss;
+    document.head.append(style);
   }
 
   function currentMode() {
@@ -72,6 +98,19 @@
 
   function weaponImage(item, imageMap) {
     return imageMap.get(slug(item.name)) || verifiedImages[item.id] || verifiedImages[slug(item.name)] || "";
+  }
+
+  function getStaticLoadout(item) {
+    if (typeof loadouts === "undefined" || !Array.isArray(loadouts)) return null;
+    const mode = currentMode();
+    const itemSlug = slug(item.name);
+    return loadouts.find((loadout) => loadout.mode === mode && slug(loadout.name) === itemSlug)
+      || loadouts.find((loadout) => slug(loadout.name) === itemSlug)
+      || null;
+  }
+
+  function hasRealAttachments(attachments = []) {
+    return attachments.some((attachment) => /^(optic|muzzle|barrel|underbarrel|magazine|stock|rear grip|fire mods):/i.test(attachment));
   }
 
   function renderMetaSummary() {
@@ -124,6 +163,12 @@
     const cards = data.items.slice(0, 12);
     if (count) count.textContent = `${cards.length} WZStats-Picks angezeigt`;
     grid.innerHTML = cards.map((item) => {
+      const staticLoadout = getStaticLoadout(item);
+      const attachments = staticLoadout?.attachments?.length ? staticLoadout.attachments : item.attachments;
+      const perks = staticLoadout?.perks?.length ? staticLoadout.perks : [];
+      const buildCode = staticLoadout?.buildCode || "WZStats Tierlist";
+      const secondary = staticLoadout?.secondary || "";
+      const role = staticLoadout?.role || item.description;
       const imageUrl = weaponImage(item, imageMap);
       const image = imageUrl
         ? `<div class="weapon-art" style="grid-column:1!important;width:160px!important;max-width:160px!important;height:90px!important;margin:4px 0 0!important;overflow:hidden!important;display:flex!important;align-items:center!important;justify-content:center!important;border:1px solid rgba(245,242,233,.12);border-radius:6px;background:rgba(245,242,233,.035);"><img src="${escapeHtml(imageUrl)}" alt="${escapeHtml(item.name)}" loading="lazy" style="display:block!important;width:100%!important;max-width:160px!important;height:100%!important;max-height:90px!important;object-fit:contain!important;" onerror="this.closest('.weapon-art').remove()"></div>`
@@ -145,13 +190,16 @@
             <div class="card-details">
               <div class="attachment-columns">
                 <div>
-                  <p class="role">${escapeHtml(item.description)}</p>
-                  <ul class="attachment-list">${item.attachments.map((attachment) => `<li>${escapeHtml(attachment)}</li>`).join("")}</ul>
+                  <p class="role">${escapeHtml(role)}</p>
+                  <ul class="attachment-list">
+                    ${hasRealAttachments(attachments) ? attachments.map((attachment) => `<li>${escapeHtml(attachment)}</li>`).join("") : `<li>Keine verifizierten Aufsaetze fuer diese Waffe hinterlegt.</li>`}
+                  </ul>
                 </div>
                 <ul class="perk-list">
-                  <li>Quelle: WZStats Tierlist</li>
-                  <li>Rolle: ${escapeHtml(item.role || "Meta")}</li>
-                  <li>Stand: ${escapeHtml(item.sourceUpdatedLabel)}</li>
+                  <li>Code: ${escapeHtml(buildCode)}</li>
+                  ${secondary ? `<li>Pair: ${escapeHtml(secondary)}</li>` : ""}
+                  ${perks.map((perk, index) => `<li>Extra ${index + 1}: ${escapeHtml(perk)}</li>`).join("")}
+                  <li>Quelle: WZStats Tierlist - ${escapeHtml(item.sourceUpdatedLabel)}</li>
                 </ul>
               </div>
             </div>
@@ -199,6 +247,8 @@
   }
 
   async function init() {
+    injectDetailLayoutCss();
+
     const [meta, mw4, codWeapons] = await Promise.all([
       fetchJson(SOURCES.meta).catch(() => null),
       fetchJson(SOURCES.mw4).catch(() => null),
