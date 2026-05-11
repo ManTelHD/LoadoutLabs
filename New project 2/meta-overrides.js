@@ -95,6 +95,9 @@
       overflow: visible;
       opacity: 1;
     }
+    .loadout-card.expanded .card-details > .role {
+      margin: 0 0 0.85rem;
+    }
     .loadout-card.expanded .card-details > .attachment-columns {
       min-height: max-content;
       overflow: visible;
@@ -266,9 +269,9 @@
             </div>
             <div class="tag-list"><span>WZStats</span><span>${escapeHtml(item.rankLabel)}</span><span>${escapeHtml(item.tierLabel)}</span></div>
             <div class="card-details">
+              <p class="role">${escapeHtml(role)}</p>
               <div class="attachment-columns">
                 <div>
-                  <p class="role">${escapeHtml(role)}</p>
                   <ul class="attachment-list">
                     ${hasRealAttachments(attachments) ? attachments.map((attachment) => `<li>${escapeHtml(attachment)}</li>`).join("") : `<li>Keine verifizierten Aufsaetze fuer diese Waffe hinterlegt.</li>`}
                   </ul>
