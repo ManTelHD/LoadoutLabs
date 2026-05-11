@@ -419,6 +419,39 @@
   background: rgba(3, 5, 4, 0.38);
 }
 
+.loadout-card.expanded .card-details {
+  display: block;
+  grid-template-rows: none;
+  min-height: max-content;
+  margin-top: 0.9rem;
+  overflow: visible;
+  opacity: 1;
+}
+
+.loadout-card.expanded .card-details > .role {
+  margin: 0 0 0.85rem;
+}
+
+.loadout-card.expanded .attachment-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 0.75rem;
+  min-height: max-content;
+  overflow: visible;
+}
+
+.loadout-card.expanded .attachment-list,
+.loadout-card.expanded .perk-list {
+  height: auto;
+  margin: 0.75rem 0 0;
+}
+
+.loadout-card.expanded .card-footer {
+  align-self: start;
+  margin-top: 1.1rem;
+}
+
 .stat-strip {
   margin: 0.55rem 0 0.25rem;
 }
@@ -511,6 +544,10 @@
   .card-top {
     padding-right: 0;
   }
+
+  .loadout-card.expanded .attachment-columns {
+    grid-template-columns: 1fr;
+  }
 }
 
 .loadout-card .weapon-art {
@@ -543,4 +580,224 @@
     max-width: 4.5rem !important;
     height: 3rem !important;
   }
+}
+
+/* Light theme inspired by ChatGPT's clean workspace. */
+:root {
+  color-scheme: light;
+  --bg: #ffffff;
+  --panel: #ffffff;
+  --panel-strong: #f7f7f8;
+  --text: #202123;
+  --muted: #5f6368;
+  --dim: #8e8ea0;
+  --line: #e5e5e5;
+  --olive: #10a37f;
+  --amber: #10a37f;
+  --cyan: #19c37d;
+  --red: #d93025;
+  --shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  background: #ffffff !important;
+  color: var(--text) !important;
+}
+
+.site-header {
+  background: rgba(255, 255, 255, 0.88) !important;
+  border-bottom-color: var(--line) !important;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+}
+
+.brand,
+.top-nav a,
+.weapon-name,
+.section-heading h1,
+.section-heading h2,
+.mode-info-hero h2,
+.camo-header h2,
+.updates-hero h2,
+.map-panel h2,
+.mode-info-side h3,
+.tier-header h3,
+.update-card h3,
+.timeline h3,
+.loadout-card strong,
+.pro-hero-card strong {
+  color: var(--text) !important;
+}
+
+.brand-mark,
+.secondary-mode-switch .mode-button.active,
+.content-tab.active,
+.filter-button.active,
+.quick-action.primary span {
+  background: #10a37f !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+.eyebrow,
+.tier-first .eyebrow,
+.mode-pill,
+.range,
+.pro-hero-card span,
+.primary-mode-switch .mode-button::before {
+  color: #10a37f !important;
+}
+
+.section,
+.loadout-section,
+.intel-band,
+.updates,
+.weapon-dashboard,
+.tab-panel,
+.mode-info-section,
+.maps-section,
+.updates-section,
+.camos-section {
+  background: #ffffff !important;
+}
+
+.updated-note,
+.status-panel,
+.pro-hero-card,
+.quick-action,
+.controls,
+.toolbar,
+.weapon-compare-panel,
+.map-panel,
+.map-board,
+.mode-info-main,
+.mode-info-side,
+.mode-update-box,
+.official-note,
+.update-mode-panel,
+.camo-header,
+.camo-summary,
+.camo-progress-strip article,
+.camo-card,
+.update-card,
+.timeline article,
+.loadout-card,
+.attachment-list,
+.perk-list,
+.stat-row span,
+.tag-list span,
+.trust-strip span,
+.weapon-art,
+.weapon-thumb {
+  border-color: var(--line) !important;
+  background: #ffffff !important;
+  color: var(--text) !important;
+  box-shadow: none !important;
+}
+
+.loadout-card {
+  border-left-color: #10a37f !important;
+  background: #ffffff !important;
+}
+
+.loadout-card::before,
+.rank-badge {
+  border-color: rgba(16, 163, 127, 0.28) !important;
+  background: #f7f7f8 !important;
+  color: #0f7f64 !important;
+}
+
+.attachment-list,
+.perk-list,
+.callout-list li,
+.mode-info-card-grid article,
+.update-priority-grid article,
+.intel-grid article,
+.role-pick-stats article,
+.mode-info-stat-grid article,
+.map-mode-grid article {
+  background: #f7f7f8 !important;
+  border-color: var(--line) !important;
+  color: var(--text) !important;
+  box-shadow: none !important;
+}
+
+.attachment-list li,
+.perk-list li,
+.callout-list li,
+.loadout-card p,
+.section-heading p,
+.mode-info-side,
+.update-card p,
+.timeline p,
+.pro-hero-card p,
+.top-nav a,
+.secondary-mode-switch .mode-button,
+.result-count,
+.updated-note {
+  color: var(--muted) !important;
+}
+
+.attachment-list li,
+.perk-list li {
+  color: var(--text) !important;
+}
+
+.attachment-list li::before,
+.perk-list li::before {
+  background: #10a37f !important;
+  box-shadow: 0 0 0 0.22rem rgba(16, 163, 127, 0.12) !important;
+}
+
+.mode-switch,
+.content-tabs,
+.camo-filter,
+.mode-info-tabs {
+  background: #f7f7f8 !important;
+  border-color: var(--line) !important;
+  box-shadow: none !important;
+}
+
+.primary-mode-switch .mode-button,
+.secondary-mode-switch .mode-button,
+.content-tab,
+.filter-button,
+.expand-button,
+.copy-button,
+.search-box input,
+.select-box select {
+  background: #ffffff !important;
+  border-color: var(--line) !important;
+  color: var(--text) !important;
+  box-shadow: none !important;
+}
+
+.primary-mode-switch .mode-button:hover,
+.primary-mode-switch .mode-button:focus-visible,
+.secondary-mode-switch .mode-button:hover,
+.secondary-mode-switch .mode-button:focus-visible,
+.content-tab:hover,
+.filter-button:hover,
+.expand-button:hover,
+.copy-button:hover,
+.top-nav a:hover,
+.top-nav a:focus-visible {
+  border-color: #10a37f !important;
+  background: #f7f7f8 !important;
+  color: var(--text) !important;
+}
+
+.search-box span,
+.select-box span,
+.tag,
+.status-pill,
+.mode-info-hero span,
+.map-board-header span,
+.camo-summary p {
+  color: var(--dim) !important;
+}
+
+.site-footer {
+  background: #f7f7f8 !important;
+  border-top-color: var(--line) !important;
+  color: var(--muted) !important;
 }
