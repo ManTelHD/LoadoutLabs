@@ -251,13 +251,13 @@
 .secondary-mode-switch {
   display: inline-flex;
   flex-wrap: wrap;
-  gap: 0;
+  gap: 0.35rem;
   max-width: none;
   margin: 0.15rem 0 0.6rem;
-  border: 1px solid rgba(245, 242, 233, 0.14);
-  border-radius: 999px;
-  background: rgba(245, 242, 233, 0.045);
-  padding: 0.25rem;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
 }
 
 .secondary-mode-switch .mode-button {
