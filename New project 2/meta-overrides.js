@@ -86,18 +86,33 @@
 
   const detailLayoutCss = `
     .loadout-card.expanded { align-items: start; }
-    .loadout-card.expanded .card-details { margin-top: 0.8rem; }
-    .loadout-card.expanded .card-details > .attachment-columns { overflow: visible; }
+    .loadout-card.expanded .card-body { overflow: visible; }
+    .loadout-card.expanded .card-details {
+      display: block;
+      grid-template-rows: none;
+      min-height: max-content;
+      margin-top: 0.9rem;
+      overflow: visible;
+      opacity: 1;
+    }
+    .loadout-card.expanded .card-details > .attachment-columns {
+      min-height: max-content;
+      overflow: visible;
+    }
     .loadout-card.expanded .attachment-columns {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      align-items: stretch;
+      align-items: start;
       gap: 0.75rem;
     }
     .loadout-card.expanded .attachment-list,
     .loadout-card.expanded .perk-list {
-      height: 100%;
+      height: auto;
       margin: 0.75rem 0 0;
+    }
+    .loadout-card.expanded .card-footer {
+      align-self: start;
+      margin-top: 1.1rem;
     }
     @media (max-width: 720px) {
       .loadout-card.expanded .attachment-columns { grid-template-columns: 1fr; }
