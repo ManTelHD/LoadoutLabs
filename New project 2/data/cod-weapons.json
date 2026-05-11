@@ -1,8 +1,331 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-05T06:32:59.706Z",
-  "generatedAtLabel": "5. Mai 2026 um 08:32 MESZ",
+  "generatedAt": "2026-05-11T07:15:30.402Z",
+  "generatedAtLabel": "11. Mai 2026 um 09:15 MESZ",
   "source": "Call of Duty Guides",
   "sourceUrl": "https://www.callofduty.com/guides/blackops7/weapons",
-  "weapons": []
+  "weapons": [
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/sniper-rifle/s03/strider-300",
+      "imageUrl": "https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/weapons/BO7-Weapons-Strider-300-Main.webp",
+      "imageAlt": "Image of the Strider 300 Sniper rifle in Call of Duty: Black Ops 7",
+      "weaponClass": "Sniper Rifle",
+      "name": "Strider 300"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/assault-rifle/s03/mk35-isr",
+      "imageUrl": "https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/weapons/BO7-S03-MK35-ISR-MAIN.webp",
+      "imageAlt": "Image of the MK35 ISR Assault Rifle in Call of Duty: Black Ops 7",
+      "weaponClass": "Assault Rifle",
+      "name": "MK35 ISR"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/smg/s03/vst",
+      "imageUrl": "https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/weapons/BO7-S03-VST-MAIN.webp",
+      "imageAlt": "Image of the VST Submachine Gun in Call of Duty: Black Ops 7",
+      "weaponClass": "SMG",
+      "name": "VST"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/assault-rifle/s02/voyak-kt-3",
+      "imageUrl": "https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/weapons/BO7-S02-VOYAK-KT-3.webp",
+      "imageAlt": "Image of the Voyak KT-3 Assault Rifle in Call of Duty: Black Ops 7",
+      "weaponClass": "Assault Rifle",
+      "name": "VOYAK KT-3"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/marksman-rifle/swordfish-a1",
+      "imageUrl": "https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/weapons/BO7-S02-SWORDFISH-A1.webp",
+      "imageAlt": "Image of the Swordfish A1 Marskman Rifle in Call of Duty: Black Ops 7",
+      "weaponClass": "Marksman Rifle",
+      "name": "SWORDFISH A1"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/special/gdl-havoc",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "Special",
+      "name": "GDL Havoc"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/shotgun/sg-12",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "Shotgun",
+      "name": "SG-12"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/assault-rifle/s02/egrt-17",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "Assault Rifle",
+      "name": "EGRT-17"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/smg/s02/rev-46",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "SMG",
+      "name": "REV-46"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/melee/s02/h311-saw",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "Melee",
+      "name": "H311-SAW"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/smg/sturmwolf-45",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "SMG",
+      "name": "Sturmwolf 45"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/sniper-rifle/hawker-hx",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "Sniper Rifle",
+      "name": "Hawker HX"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/lmg/sokol-545",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "LMG",
+      "name": "Sokol 545"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/special/nx-ravager",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "Sniper Rifle",
+      "name": "NX Ravager"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/assault-rifle/maddox-rfb",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "Assault Rifle",
+      "name": "MADDOX RFB"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/smg/kogot-7",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "SMG",
+      "name": "KOGOT-7"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/melee/ballistic-knife",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "Melee",
+      "name": "BALLISTIC KNIFE"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/assault-rifle/m15-mod-0",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "Assault Rifle",
+      "name": "M15 MOD 0"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/assault-rifle/mxr-17",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "Assault Rifle",
+      "name": "MXR-17"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/assault-rifle/peacekeeper-mk1",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "Assault Rifle",
+      "name": "PEACEKEEPER MK1"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/assault-rifle/x9-maverick",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "Assault Rifle",
+      "name": "X9 MAVERICK"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/assault-rifle/ds20-mirage",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "Assault Rifle",
+      "name": "DS20 MIRAGE"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/assault-rifle/ak-27",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "Assault Rifle",
+      "name": "AK-27"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/smg/ryden-45k",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "SMG",
+      "name": "RYDEN 45K"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/smg/dravec-45",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "SMG",
+      "name": "DRAVEC 45"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/smg/razor-9mm",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "SMG",
+      "name": "RAZOR 9MM"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/smg/carbon-57",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "SMG",
+      "name": "CARBON 57"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/smg/mpc-25",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "SMG",
+      "name": "MPC-25"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/smg/rk-9",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "SMG",
+      "name": "RK-9"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/shotgun/m10-breacher",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "Shotgun",
+      "name": "M10 BREACHER"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/shotgun/echo-12",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "Shotgun",
+      "name": "ECHO 12"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/shotgun/akita",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "Shotgun",
+      "name": "AKITA"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/lmg/mk-78",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "LMG",
+      "name": "MK.78"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/lmg/xm325",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "LMG",
+      "name": "XM325"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/marksman-rifle/m8a1",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "Marksman Rifle",
+      "name": "M8A1"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/marksman-rifle/warden-308",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "Marksman Rifle",
+      "name": "WARDEN 308"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/marksman-rifle/m34-novaline",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "Marksman Rifle",
+      "name": "M34 NOVALINE"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/sniper-rifle/vs-recon",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "Sniper Rifle",
+      "name": "VS RECON"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/sniper-rifle/xr-3-ion",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "Sniper Rifle",
+      "name": "XR-3 ION"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/pistol/jager-45",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "Pistol",
+      "name": "Jäger 45"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/pistol/coda-9",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "Pistol",
+      "name": "CODA 9"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/pistol/velox-5-7",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "Pistol",
+      "name": "VELOX 5.7"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/launcher/aarow-109",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "Launcher",
+      "name": "AAROW 109"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/launcher/arc-m1",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "Launcher",
+      "name": "A.R.C. M1"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/melee/knife",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "Melee",
+      "name": "KNIFE"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/melee/flatline-mk-ii",
+      "imageUrl": "",
+      "imageAlt": "",
+      "weaponClass": "Melee",
+      "name": "FLATLINE MK.II"
+    }
+  ]
 }
