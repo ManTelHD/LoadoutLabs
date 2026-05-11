@@ -250,6 +250,7 @@
       const buildCode = staticLoadout?.buildCode || "WZStats Tierlist";
       const secondary = staticLoadout?.secondary || "";
       const role = staticLoadout?.role || item.description;
+      const codeLabel = /^wzstats/i.test(buildCode) ? "" : `Code: ${escapeHtml(buildCode)}`;
       const imageUrl = weaponImage(item, imageMap);
       const image = imageUrl
         ? `<div class="weapon-art" style="grid-column:1!important;width:160px!important;max-width:160px!important;height:90px!important;margin:4px 0 0!important;overflow:hidden!important;display:flex!important;align-items:center!important;justify-content:center!important;border:1px solid rgba(245,242,233,.12);border-radius:6px;background:rgba(245,242,233,.035);"><img src="${escapeHtml(imageUrl)}" alt="${escapeHtml(item.name)}" loading="lazy" style="display:block!important;width:100%!important;max-width:160px!important;height:100%!important;max-height:90px!important;object-fit:contain!important;" onerror="this.closest('.weapon-art').remove()"></div>`
@@ -277,7 +278,7 @@
                   </ul>
                 </div>
                 <ul class="perk-list">
-                  <li>Code: ${escapeHtml(buildCode)}</li>
+                  ${codeLabel ? `<li>${codeLabel}</li>` : ""}
                   ${secondary ? `<li>Pair: ${escapeHtml(secondary)}</li>` : ""}
                   ${perks.map((perk, index) => `<li>Extra ${index + 1}: ${escapeHtml(perk)}</li>`).join("")}
                 </ul>
