@@ -42,7 +42,7 @@ jobs:
           node <<'NODE'
           const { readFileSync, writeFileSync } = require('node:fs');
           const path = 'New project 2/index.html';
-          const version = '20260511-detailfix4';
+          const version = '20260511-light1';
           let html = readFileSync(path, 'utf8');
           html = html
             .replace(/styles\.css(?:\?v=[^"]*)?/g, `styles.css?v=${version}`)
