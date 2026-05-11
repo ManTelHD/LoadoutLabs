@@ -37,6 +37,21 @@ jobs:
       - name: Update latest info
         run: node "New project 2/tools/update-latest-info.mjs"
 
+      - name: Bust site asset cache
+        run: |
+          node <<'NODE'
+          const { readFileSync, writeFileSync } = require('node:fs');
+          const path = 'New project 2/index.html';
+          const version = '20260511-detailfix';
+          let html = readFileSync(path, 'utf8');
+          html = html
+            .replace(/styles\.css(?:\?v=[^"]*)?/g, `styles.css?v=${version}`)
+            .replace(/meta-overrides\.css(?:\?v=[^"]*)?/g, `meta-overrides.css?v=${version}`)
+            .replace(/script\.js(?:\?v=[^"]*)?/g, `script.js?v=${version}`)
+            .replace(/meta-overrides\.js(?:\?v=[^"]*)?/g, `meta-overrides.js?v=${version}`);
+          writeFileSync(path, html, 'utf8');
+          NODE
+
       - name: Commit updated site files
         run: |
           git config user.name "github-actions[bot]"
