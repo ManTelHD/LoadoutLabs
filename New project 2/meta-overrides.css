@@ -801,3 +801,13 @@ body {
   border-top-color: var(--line) !important;
   color: var(--muted) !important;
 }
+
+.loadout-card .weapon-art,
+.weapon-thumb {
+  background: #f7f7f8 !important;
+}
+
+.loadout-card .weapon-art img,
+.weapon-thumb img {
+  filter: brightness(1.22) contrast(1.05) saturate(1.08);
+}
