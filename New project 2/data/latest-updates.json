@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-13T10:05:32.706Z",
-  "generatedAtLabel": "13. Mai 2026 um 12:05 MESZ",
+  "generatedAt": "2026-05-13T18:30:32.816Z",
+  "generatedAtLabel": "13. Mai 2026 um 20:30 MESZ",
   "sources": [
     {
       "id": "cod-patchnotes",
@@ -18,7 +18,7 @@
     {
       "label": "Geprueft",
       "title": "Automatisch aktualisiert",
-      "text": "Offizielle Quellen wurden am 13. Mai 2026 um 12:05 MESZ geprueft."
+      "text": "Offizielle Quellen wurden am 13. Mai 2026 um 20:30 MESZ geprueft."
     },
     {
       "label": "Weitere Updates",

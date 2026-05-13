@@ -1,10 +1,17 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-13T10:05:32.706Z",
-  "generatedAtLabel": "13. Mai 2026 um 12:05 MESZ",
+  "generatedAt": "2026-05-13T18:30:32.816Z",
+  "generatedAtLabel": "13. Mai 2026 um 20:30 MESZ",
   "source": "Call of Duty Guides",
   "sourceUrl": "https://www.callofduty.com/guides/blackops7/weapons",
   "weapons": [
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/pistol/s03/1911",
+      "imageUrl": "https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/weapons/BO7-Weapons-1911-Main.webp",
+      "imageAlt": "Image of the 1911 Pistol in Call of Duty: Black Ops 7",
+      "weaponClass": "Pistol",
+      "name": "1911"
+    },
     {
       "url": "https://www.callofduty.com/guides/blackops7/weapons/sniper-rifle/s03/strider-300",
       "imageUrl": "https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/weapons/BO7-Weapons-Strider-300-Main.webp",
