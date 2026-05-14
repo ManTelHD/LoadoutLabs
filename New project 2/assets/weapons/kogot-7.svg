@@ -4,23 +4,15 @@
       <stop offset="0" stop-color="#131f1f"/>
       <stop offset="1" stop-color="#080a0a"/>
     </linearGradient>
-    <linearGradient id="metal" x1="0" x2="1">
-      <stop offset="0" stop-color="#5fc7c8"/>
-      <stop offset=".55" stop-color="#f5f2e9"/>
-      <stop offset="1" stop-color="#f0ad37"/>
+    <linearGradient id="shade" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#080a0a" stop-opacity="0"/>
+      <stop offset="1" stop-color="#080a0a" stop-opacity="0.54"/>
     </linearGradient>
   </defs>
   <rect width="640" height="300" rx="22" fill="url(#bg)"/>
-  <rect x="58" y="210" width="520" height="2" fill="#5fc7c8" opacity=".18"/>
-  <g transform="translate(82 132)" fill="url(#metal)">
-    <rect x="108" y="17" width="220" height="34" rx="9"/>
-    <rect x="326" y="28" width="88" height="12" rx="4"/>
-    <rect x="54" y="29" width="64" height="19" rx="5"/>
-    <path d="M132 50h74l-10 70h-47z"/>
-    <path d="M232 50h50l18 70h-43z"/>
-    <path d="M50 44L9 82h68l34-38z"/>
-    <rect x="171" y="0" width="65" height="15" rx="6"/>
-  </g>
-  <text x="36" y="56" fill="#f5f2e9" font-family="Rajdhani, Arial" font-size="38" font-weight="700">KOGOT-7</text>
-  <text x="38" y="86" fill="#5fc7c8" font-family="Inter, Arial" font-size="15" font-weight="800">RANKED SMG</text>
+  <image href="https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/weapons/BO7-WM-KOGOT-7.jpg" x="0" y="0" width="640" height="300" preserveAspectRatio="xMidYMid slice"/>
+  <rect width="640" height="300" rx="22" fill="url(#shade)"/>
+  <rect x="24" y="222" width="215" height="54" rx="10" fill="#080a0a" fill-opacity="0.68"/>
+  <text x="36" y="252" fill="#f5f2e9" font-family="Rajdhani, Arial, sans-serif" font-size="34" font-weight="700">KOGOT-7</text>
+  <text x="38" y="271" fill="#5fc7c8" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800">RANKED SMG</text>
 </svg>
