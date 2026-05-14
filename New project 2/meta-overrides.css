@@ -1,13 +1,90 @@
-/* Product polish for Loadout Lab GitHub Pages. */
-.site-header {
-  min-height: 4rem;
+/* WZStats-inspired dark competition theme for Loadout Lab. */
+:root {
+  color-scheme: dark;
+  --bg: #07090d;
+  --panel: #10141b;
+  --panel-strong: #161c25;
+  --text: #f5f7fb;
+  --muted: #a8b0bd;
+  --dim: #697381;
+  --line: rgba(255, 255, 255, 0.1);
+  --olive: #b9ff3d;
+  --amber: #b9ff3d;
+  --cyan: #29e681;
+  --red: #ff4d5d;
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.42);
 }
 
+html,
+body {
+  background:
+    radial-gradient(circle at 16% 0%, rgba(185, 255, 61, 0.13), transparent 28rem),
+    linear-gradient(180deg, #0a0d12 0%, #07090d 44%, #05070a 100%) !important;
+  color: var(--text) !important;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.site-header {
+  min-height: 4rem;
+  background: rgba(7, 9, 13, 0.86) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.34) !important;
+  backdrop-filter: blur(18px);
+}
+
+.brand,
+.top-nav a,
+.weapon-name,
+.section-heading h1,
+.section-heading h2,
+.mode-info-hero h2,
+.camo-header h2,
+.updates-hero h2,
+.map-panel h2,
+.mode-info-side h3,
+.tier-header h3,
+.update-card h3,
+.timeline h3,
+.loadout-card strong,
+.pro-hero-card strong {
+  color: var(--text) !important;
+}
+
+.brand-mark,
+.secondary-mode-switch .mode-button.active,
+.content-tab.active,
+.filter-button.active,
+.quick-action.primary span,
 .header-cta {
-  border-color: rgba(240, 173, 55, 0.36) !important;
-  background: linear-gradient(135deg, var(--amber), var(--cyan));
-  color: #101211 !important;
-  font-weight: 950;
+  background: linear-gradient(135deg, var(--olive), var(--cyan)) !important;
+  color: #071008 !important;
+  box-shadow: 0 0 0 0.22rem rgba(185, 255, 61, 0.14) !important;
+}
+
+.eyebrow,
+.tier-first .eyebrow,
+.mode-pill,
+.range,
+.pro-hero-card span,
+.primary-mode-switch .mode-button::before,
+.result-count {
+  color: var(--olive) !important;
+}
+
+.section,
+.loadout-section,
+.intel-band,
+.updates,
+.weapon-dashboard,
+.tab-panel,
+.mode-info-section,
+.maps-section,
+.updates-section,
+.camos-section {
+  background: transparent !important;
 }
 
 .section.tier-first {
@@ -21,7 +98,6 @@
 
 .tier-first .eyebrow {
   margin-bottom: 0.45rem;
-  color: var(--amber);
   font-size: 0.78rem;
 }
 
@@ -37,15 +113,50 @@
   display: none;
 }
 
+.updated-note,
+.status-panel,
+.pro-hero-card,
+.quick-action,
+.controls,
+.toolbar,
+.weapon-compare-panel,
+.map-panel,
+.map-board,
+.mode-info-main,
+.mode-info-side,
+.mode-update-box,
+.official-note,
+.update-mode-panel,
+.camo-header,
+.camo-summary,
+.camo-progress-strip article,
+.camo-card,
+.update-card,
+.timeline article,
+.loadout-card,
+.attachment-list,
+.perk-list,
+.stat-row span,
+.tag-list span,
+.trust-strip span,
+.weapon-art,
+.weapon-thumb {
+  border-color: var(--line) !important;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.055), transparent 62%),
+    var(--panel) !important;
+  color: var(--text) !important;
+  box-shadow: var(--shadow) !important;
+}
+
 .updated-note {
   display: inline-flex;
   width: fit-content;
   min-height: 2rem;
   align-items: center;
   margin-bottom: 0;
-  border-color: rgba(95, 199, 200, 0.38);
-  background: rgba(95, 199, 200, 0.08);
   padding: 0.25rem 0.65rem;
+  color: var(--muted) !important;
   font-size: 0.8rem;
 }
 
@@ -57,81 +168,34 @@
   margin: 0.9rem 0 0.65rem;
 }
 
-.pro-hero-card {
-  border: 1px solid rgba(245, 242, 233, 0.13);
-  border-radius: 0.55rem;
-  background:
-    linear-gradient(135deg, rgba(245, 242, 233, 0.055), transparent 50%),
-    rgba(10, 13, 12, 0.82);
+.pro-hero-card,
+.quick-action {
+  border-radius: 0.5rem;
   padding: 0.85rem 0.95rem;
 }
 
-.pro-hero-card-primary {
-  border-color: rgba(240, 173, 55, 0.36);
+.pro-hero-card-primary,
+.quick-action.primary {
+  border-color: rgba(185, 255, 61, 0.36) !important;
   background:
-    linear-gradient(135deg, rgba(240, 173, 55, 0.16), rgba(95, 199, 200, 0.08)),
-    rgba(13, 17, 16, 0.9);
+    linear-gradient(135deg, rgba(185, 255, 61, 0.15), rgba(41, 230, 129, 0.08)),
+    #10141b !important;
 }
 
-.pro-hero-card-next {
-  position: relative;
-  border-color: rgba(95, 199, 200, 0.42);
-  background:
-    linear-gradient(135deg, rgba(95, 199, 200, 0.16), rgba(240, 173, 55, 0.08)),
-    rgba(13, 17, 16, 0.9);
-}
-
-.pro-hero-card-pro {
-  border-style: dashed;
-  border-color: rgba(245, 242, 233, 0.2);
-}
-
-.pro-hero-card-next::after,
-.pro-hero-card-pro::after {
-  position: absolute;
-  top: 0.7rem;
-  right: 0.75rem;
-  border-radius: 999px;
-  font-size: 0.62rem;
-  font-weight: 950;
-  padding: 0.22rem 0.5rem;
-  text-transform: uppercase;
-}
-
-.pro-hero-card-next::after {
-  content: "Naechstes Update";
-  background: rgba(95, 199, 200, 0.16);
-  color: var(--cyan);
-}
-
-.pro-hero-card-pro::after {
-  content: "Pro ready";
-  background: rgba(240, 173, 55, 0.14);
-  color: var(--amber);
-}
-
-.pro-hero-card span {
-  display: block;
-  margin-bottom: 0.3rem;
-  color: var(--amber);
-  font-size: 0.7rem;
-  font-weight: 950;
-  text-transform: uppercase;
-}
-
-.pro-hero-card strong {
-  display: block;
-  color: var(--text);
-  font-family: Rajdhani, Inter, sans-serif;
-  font-size: clamp(1.35rem, 2vw, 1.85rem);
-  line-height: 0.98;
-}
-
-.pro-hero-card p {
-  margin: 0.45rem 0 0;
-  color: var(--muted);
-  font-size: 0.92rem;
-  line-height: 1.45;
+.pro-hero-card p,
+.quick-action p,
+.attachment-list li,
+.perk-list li,
+.callout-list li,
+.loadout-card p,
+.section-heading p,
+.mode-info-side,
+.update-card p,
+.timeline p,
+.top-nav a,
+.secondary-mode-switch .mode-button,
+.updated-note {
+  color: var(--muted) !important;
 }
 
 .trust-strip,
@@ -142,64 +206,6 @@
   max-width: 76rem;
 }
 
-.trust-strip {
-  margin: 0 0 0.65rem;
-}
-
-.trust-strip span {
-  border: 1px solid rgba(245, 242, 233, 0.12);
-  border-radius: 999px;
-  background: rgba(245, 242, 233, 0.045);
-  color: var(--muted);
-  font-size: 0.78rem;
-  font-weight: 850;
-  padding: 0.35rem 0.6rem;
-}
-
-.trust-strip strong {
-  color: var(--text);
-}
-
-.quick-actions {
-  margin: 0 0 0.85rem;
-}
-
-.quick-action {
-  display: inline-flex;
-  min-height: 3rem;
-  align-items: center;
-  gap: 0.7rem;
-  border: 1px solid rgba(245, 242, 233, 0.13);
-  border-radius: 0.45rem;
-  background: rgba(245, 242, 233, 0.045);
-  color: var(--text);
-  cursor: pointer;
-  padding: 0.55rem 0.8rem;
-  text-align: left;
-}
-
-.quick-action.primary {
-  border-color: rgba(240, 173, 55, 0.38);
-  background: rgba(240, 173, 55, 0.11);
-}
-
-.quick-action span {
-  display: grid;
-  min-width: 2.25rem;
-  min-height: 2.25rem;
-  place-items: center;
-  border-radius: 0.32rem;
-  background: rgba(240, 173, 55, 0.16);
-  color: var(--amber);
-  font-size: 0.68rem;
-  font-weight: 950;
-  text-transform: uppercase;
-}
-
-.quick-action strong {
-  font-size: 0.9rem;
-}
-
 .primary-mode-switch {
   display: grid;
   grid-template-columns: repeat(2, minmax(11rem, 1fr));
@@ -208,15 +214,38 @@
   margin: 0.8rem 0 0.55rem;
 }
 
+.primary-mode-switch .mode-button,
+.secondary-mode-switch .mode-button,
+.content-tab,
+.filter-button,
+.expand-button,
+.copy-button,
+.search-box input,
+.select-box select {
+  background: #111720 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: var(--text) !important;
+  box-shadow: none !important;
+}
+
+.primary-mode-switch .mode-button:hover,
+.primary-mode-switch .mode-button:focus-visible,
+.secondary-mode-switch .mode-button:hover,
+.secondary-mode-switch .mode-button:focus-visible,
+.content-tab:hover,
+.filter-button:hover,
+.expand-button:hover,
+.copy-button:hover,
+.top-nav a:hover,
+.top-nav a:focus-visible {
+  border-color: rgba(185, 255, 61, 0.5) !important;
+  background: #17202b !important;
+  color: var(--text) !important;
+}
+
 .primary-mode-switch .mode-button {
   min-height: 3rem;
-  border: 1px solid rgba(240, 173, 55, 0.28);
   border-radius: 0.45rem;
-  background:
-    linear-gradient(135deg, rgba(240, 173, 55, 0.12), transparent 48%),
-    rgba(245, 242, 233, 0.045);
-  color: var(--text);
-  font-size: 0.92rem;
   font-weight: 950;
   padding: 0.65rem 0.9rem;
   text-align: center;
@@ -225,7 +254,6 @@
 .primary-mode-switch .mode-button::before {
   display: block;
   margin-bottom: 0.16rem;
-  color: var(--amber);
   font-size: 0.66rem;
   font-weight: 950;
   text-transform: uppercase;
@@ -239,15 +267,6 @@
   content: "Geruechte";
 }
 
-.primary-mode-switch .mode-button:hover,
-.primary-mode-switch .mode-button:focus-visible {
-  border-color: rgba(240, 173, 55, 0.48);
-  background:
-    linear-gradient(135deg, rgba(240, 173, 55, 0.18), rgba(95, 199, 200, 0.12)),
-    rgba(245, 242, 233, 0.06);
-  color: var(--text);
-}
-
 .secondary-mode-switch {
   display: inline-flex;
   flex-wrap: wrap;
@@ -256,25 +275,26 @@
   margin: 0.15rem 0 0.6rem;
   border: 0;
   border-radius: 0;
-  background: transparent;
+  background: transparent !important;
   padding: 0;
 }
 
 .secondary-mode-switch .mode-button {
   flex: 0 0 auto;
   min-height: 2.35rem;
-  border: 0;
   border-radius: 999px;
-  background: transparent;
-  color: var(--muted);
-  box-shadow: none;
+  color: var(--muted) !important;
   font-size: 0.86rem;
   padding: 0.45rem 0.9rem;
 }
 
-.secondary-mode-switch .mode-button.active {
-  background: linear-gradient(135deg, var(--amber), var(--cyan));
-  color: #111;
+.mode-switch,
+.content-tabs,
+.camo-filter,
+.mode-info-tabs {
+  background: #0a0f15 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03) !important;
 }
 
 .content-tabs {
@@ -331,64 +351,44 @@
 }
 
 .loadout-card {
-  border-left: 0.42rem solid var(--tier-color, var(--amber));
+  border-left: 0.42rem solid rgba(185, 255, 61, 0.72) !important;
   padding: 0.85rem;
 }
 
-.loadout-card::before {
-  position: absolute;
-  top: 0.82rem;
-  left: 0.85rem;
-  z-index: 2;
-  border: 1px solid color-mix(in srgb, var(--tier-color, var(--amber)) 45%, transparent);
-  border-radius: 999px;
-  background: rgba(3, 5, 4, 0.78);
-  color: var(--tier-color, var(--amber));
-  font-size: 0.72rem;
-  font-weight: 950;
-  padding: 0.24rem 0.55rem;
-  text-transform: uppercase;
+.loadout-card::before,
+.rank-badge {
+  border-color: rgba(185, 255, 61, 0.35) !important;
+  background: rgba(185, 255, 61, 0.1) !important;
+  color: var(--olive) !important;
 }
 
-.tier-absolute-meta .loadout-card::before {
-  content: "Absolute Meta - Pflichtpick";
-}
-
-.tier-meta .loadout-card::before {
-  content: "Sehr stark - Top Alternative";
-}
-
-.tier-contender .loadout-card::before {
-  content: "Situativ - spielbar";
-}
-
+.loadout-card .weapon-art,
 .weapon-thumb {
-  height: 6.4rem;
-  margin-top: 1.85rem;
+  background: #0a0f15 !important;
 }
 
-.weapon-art {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 0;
-  height: clamp(5rem, 10vw, 7.25rem);
-  margin-top: 1.5rem;
-  overflow: hidden;
+.loadout-card .weapon-art {
+  grid-column: 1 !important;
+  width: 5.4rem !important;
+  max-width: 5.4rem !important;
+  height: 3.65rem !important;
+  margin: 0.25rem 0 0 !important;
+  border-radius: 0.35rem;
+  overflow: hidden !important;
 }
 
-.weapon-art img {
-  display: block;
-  width: 100%;
-  max-width: 15rem;
-  height: 100%;
-  object-fit: contain;
+.loadout-card .weapon-art img,
+.weapon-thumb img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  filter: brightness(1.12) contrast(1.12) saturate(1.18);
 }
 
-.card-top {
-  align-items: flex-start;
-  margin-bottom: 0.55rem;
-  padding-right: 4.8rem;
+.loadout-card .card-body {
+  grid-column: 2 !important;
 }
 
 .weapon-name {
@@ -396,27 +396,35 @@
   font-size: clamp(1.65rem, 2.6vw, 2.15rem);
 }
 
+.attachment-list,
+.perk-list,
+.callout-list li,
+.mode-info-card-grid article,
+.update-priority-grid article,
+.intel-grid article,
+.role-pick-stats article,
+.mode-info-stat-grid article,
+.map-mode-grid article,
+.stat-row span,
+.tag-list span {
+  background: #0c1118 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  color: var(--text) !important;
+}
+
+.attachment-list li,
+.perk-list li {
+  color: var(--text) !important;
+}
+
+.attachment-list li::before,
+.perk-list li::before {
+  background: var(--olive) !important;
+  box-shadow: 0 0 0 0.22rem rgba(185, 255, 61, 0.12) !important;
+}
+
 .loadout-card:not(.expanded) .role {
   display: none;
-}
-
-.loadout-card:not(.expanded) .patch-impact {
-  display: inline-flex;
-  align-items: center;
-  width: auto;
-  margin-top: 0.15rem;
-  padding: 0;
-  border: 0;
-  background: transparent;
-}
-
-.loadout-card:not(.expanded) .patch-impact p {
-  display: none;
-}
-
-.loadout-card:not(.expanded) .patch-impact span {
-  border: 1px solid currentColor;
-  background: rgba(3, 5, 4, 0.38);
 }
 
 .loadout-card.expanded .card-details {
@@ -452,47 +460,94 @@
   margin-top: 1.1rem;
 }
 
-.stat-strip {
-  margin: 0.55rem 0 0.25rem;
+#loadoutGrid > .loadout-card:nth-child(-n + 2) {
+  border-left-width: 0.72rem !important;
+  border-left-color: var(--olive) !important;
+  outline: 1px solid rgba(185, 255, 61, 0.26);
+  background:
+    linear-gradient(135deg, rgba(185, 255, 61, 0.16), rgba(41, 230, 129, 0.06) 42%, transparent 72%),
+    #111720 !important;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.52), 0 0 0 1px rgba(185, 255, 61, 0.12) !important;
 }
 
-.stat-strip span {
-  padding: 0.48rem 0.55rem;
+#loadoutGrid > .loadout-card:nth-child(1) {
+  transform: translateY(-0.12rem);
 }
 
-.stat-strip i {
-  display: none;
+#loadoutGrid > .loadout-card:nth-child(2) {
+  border-left-color: var(--cyan) !important;
+  outline-color: rgba(41, 230, 129, 0.24);
 }
 
-.stat-strip strong {
-  font-size: 1.55rem;
+#loadoutGrid > .loadout-card:nth-child(-n + 2) .rank-badge {
+  min-width: 5.5rem;
+  min-height: 5.5rem;
+  padding: 0.65rem 0.8rem !important;
+  border: 2px solid rgba(185, 255, 61, 0.72) !important;
+  background: linear-gradient(135deg, var(--olive), var(--cyan)) !important;
+  color: #071008 !important;
+  font-size: 2.5rem !important;
+  line-height: 0.88;
+  box-shadow: 0 1rem 2rem rgba(185, 255, 61, 0.22) !important;
+}
+
+#loadoutGrid > .loadout-card:nth-child(-n + 2) .rank-badge span {
+  color: rgba(7, 16, 8, 0.82) !important;
+  font-size: 0.76rem !important;
+  letter-spacing: 0;
+}
+
+#loadoutGrid > .loadout-card:nth-child(1) .rank-badge::after,
+#loadoutGrid > .loadout-card:nth-child(2) .rank-badge::after {
+  display: block;
+  margin-top: 0.35rem;
+  border-radius: 999px;
+  background: rgba(7, 16, 8, 0.16);
+  padding: 0.18rem 0.38rem;
+  color: #071008;
+  font-size: 0.62rem;
+  font-weight: 950;
   line-height: 1;
 }
 
-.tag-row {
-  margin-top: 0.55rem;
+#loadoutGrid > .loadout-card:nth-child(1) .rank-badge::after {
+  content: "META #1";
 }
 
-.tag-row span {
-  font-size: 0.72rem;
-  padding: 0.2rem 0.45rem;
+#loadoutGrid > .loadout-card:nth-child(2) .rank-badge::after {
+  content: "META #2";
 }
 
-.tag-row span:nth-child(n + 4) {
-  display: none;
+#loadoutGrid > .loadout-card:nth-child(-n + 2) .weapon-name {
+  font-size: clamp(2rem, 3.2vw, 2.75rem) !important;
 }
 
-.card-footer {
-  padding-top: 0.62rem;
+#loadoutGrid > .loadout-card:nth-child(-n + 2) .weapon-art {
+  width: 7.25rem !important;
+  max-width: 7.25rem !important;
+  height: 4.85rem !important;
+  border-color: rgba(185, 255, 61, 0.24) !important;
+  background: rgba(7, 9, 13, 0.78) !important;
 }
 
-.expand-button {
-  min-height: 2.55rem;
-  padding-inline: 0.82rem;
+#loadoutGrid > .loadout-card:nth-child(-n + 2) .stat-row span {
+  background: rgba(7, 9, 13, 0.52) !important;
 }
 
-.copy-button {
-  min-height: 2.55rem;
+.search-box span,
+.select-box span,
+.tag,
+.status-pill,
+.mode-info-hero span,
+.map-board-header span,
+.camo-summary p {
+  color: var(--dim) !important;
+}
+
+.site-footer {
+  background: #07090d !important;
+  border-top-color: rgba(255, 255, 255, 0.08) !important;
+  color: var(--muted) !important;
 }
 
 @media (max-width: 980px) {
@@ -525,289 +580,29 @@
     grid-column: 1 / -1;
   }
 
-  .weapon-thumb {
-    width: 100%;
-    height: 8rem;
-    margin-top: 0;
-  }
-
-  .weapon-art {
-    width: 100%;
-    height: 7rem;
-    margin-top: 0;
-  }
-
-  .weapon-art img {
-    max-width: 13rem;
-  }
-
-  .card-top {
-    padding-right: 0;
-  }
-
-  .loadout-card.expanded .attachment-columns {
-    grid-template-columns: 1fr;
-  }
-}
-
-.loadout-card .weapon-art {
-  grid-column: 1 !important;
-  width: 4.75rem !important;
-  max-width: 4.75rem !important;
-  height: 3.25rem !important;
-  margin: 0.25rem 0 0 !important;
-  border: 1px solid rgba(245, 242, 233, 0.12);
-  border-radius: 0.35rem;
-  background: rgba(245, 242, 233, 0.035);
-  overflow: hidden !important;
-}
-
-.loadout-card .weapon-art img {
-  width: 100% !important;
-  max-width: 100% !important;
-  height: 100% !important;
-  max-height: 100% !important;
-  object-fit: contain !important;
-}
-
-.loadout-card .card-body {
-  grid-column: 2 !important;
-}
-
-@media (max-width: 720px) {
   .loadout-card .weapon-art {
     width: 4.5rem !important;
     max-width: 4.5rem !important;
     height: 3rem !important;
   }
-}
 
-/* Light theme inspired by ChatGPT's clean workspace. */
-:root {
-  color-scheme: light;
-  --bg: #ffffff;
-  --panel: #ffffff;
-  --panel-strong: #f7f7f8;
-  --text: #202123;
-  --muted: #5f6368;
-  --dim: #8e8ea0;
-  --line: #e5e5e5;
-  --olive: #10a37f;
-  --amber: #10a37f;
-  --cyan: #19c37d;
-  --red: #d93025;
-  --shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
-}
+  .loadout-card.expanded .attachment-columns {
+    grid-template-columns: 1fr;
+  }
 
-body {
-  background: #ffffff !important;
-  color: var(--text) !important;
-}
+  #loadoutGrid > .loadout-card:nth-child(-n + 2) {
+    border-left-width: 0.55rem !important;
+  }
 
-.site-header {
-  background: rgba(255, 255, 255, 0.88) !important;
-  border-bottom-color: var(--line) !important;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
-}
+  #loadoutGrid > .loadout-card:nth-child(-n + 2) .rank-badge {
+    min-width: 4.6rem;
+    min-height: 4.6rem;
+    font-size: 2rem !important;
+  }
 
-.brand,
-.top-nav a,
-.weapon-name,
-.section-heading h1,
-.section-heading h2,
-.mode-info-hero h2,
-.camo-header h2,
-.updates-hero h2,
-.map-panel h2,
-.mode-info-side h3,
-.tier-header h3,
-.update-card h3,
-.timeline h3,
-.loadout-card strong,
-.pro-hero-card strong {
-  color: var(--text) !important;
-}
-
-.brand-mark,
-.secondary-mode-switch .mode-button.active,
-.content-tab.active,
-.filter-button.active,
-.quick-action.primary span {
-  background: #10a37f !important;
-  color: #ffffff !important;
-  box-shadow: none !important;
-}
-
-.eyebrow,
-.tier-first .eyebrow,
-.mode-pill,
-.range,
-.pro-hero-card span,
-.primary-mode-switch .mode-button::before {
-  color: #10a37f !important;
-}
-
-.section,
-.loadout-section,
-.intel-band,
-.updates,
-.weapon-dashboard,
-.tab-panel,
-.mode-info-section,
-.maps-section,
-.updates-section,
-.camos-section {
-  background: #ffffff !important;
-}
-
-.updated-note,
-.status-panel,
-.pro-hero-card,
-.quick-action,
-.controls,
-.toolbar,
-.weapon-compare-panel,
-.map-panel,
-.map-board,
-.mode-info-main,
-.mode-info-side,
-.mode-update-box,
-.official-note,
-.update-mode-panel,
-.camo-header,
-.camo-summary,
-.camo-progress-strip article,
-.camo-card,
-.update-card,
-.timeline article,
-.loadout-card,
-.attachment-list,
-.perk-list,
-.stat-row span,
-.tag-list span,
-.trust-strip span,
-.weapon-art,
-.weapon-thumb {
-  border-color: var(--line) !important;
-  background: #ffffff !important;
-  color: var(--text) !important;
-  box-shadow: none !important;
-}
-
-.loadout-card {
-  border-left-color: #10a37f !important;
-  background: #ffffff !important;
-}
-
-.loadout-card::before,
-.rank-badge {
-  border-color: rgba(16, 163, 127, 0.28) !important;
-  background: #f7f7f8 !important;
-  color: #0f7f64 !important;
-}
-
-.attachment-list,
-.perk-list,
-.callout-list li,
-.mode-info-card-grid article,
-.update-priority-grid article,
-.intel-grid article,
-.role-pick-stats article,
-.mode-info-stat-grid article,
-.map-mode-grid article {
-  background: #f7f7f8 !important;
-  border-color: var(--line) !important;
-  color: var(--text) !important;
-  box-shadow: none !important;
-}
-
-.attachment-list li,
-.perk-list li,
-.callout-list li,
-.loadout-card p,
-.section-heading p,
-.mode-info-side,
-.update-card p,
-.timeline p,
-.pro-hero-card p,
-.top-nav a,
-.secondary-mode-switch .mode-button,
-.result-count,
-.updated-note {
-  color: var(--muted) !important;
-}
-
-.attachment-list li,
-.perk-list li {
-  color: var(--text) !important;
-}
-
-.attachment-list li::before,
-.perk-list li::before {
-  background: #10a37f !important;
-  box-shadow: 0 0 0 0.22rem rgba(16, 163, 127, 0.12) !important;
-}
-
-.mode-switch,
-.content-tabs,
-.camo-filter,
-.mode-info-tabs {
-  background: #f7f7f8 !important;
-  border-color: var(--line) !important;
-  box-shadow: none !important;
-}
-
-.primary-mode-switch .mode-button,
-.secondary-mode-switch .mode-button,
-.content-tab,
-.filter-button,
-.expand-button,
-.copy-button,
-.search-box input,
-.select-box select {
-  background: #ffffff !important;
-  border-color: var(--line) !important;
-  color: var(--text) !important;
-  box-shadow: none !important;
-}
-
-.primary-mode-switch .mode-button:hover,
-.primary-mode-switch .mode-button:focus-visible,
-.secondary-mode-switch .mode-button:hover,
-.secondary-mode-switch .mode-button:focus-visible,
-.content-tab:hover,
-.filter-button:hover,
-.expand-button:hover,
-.copy-button:hover,
-.top-nav a:hover,
-.top-nav a:focus-visible {
-  border-color: #10a37f !important;
-  background: #f7f7f8 !important;
-  color: var(--text) !important;
-}
-
-.search-box span,
-.select-box span,
-.tag,
-.status-pill,
-.mode-info-hero span,
-.map-board-header span,
-.camo-summary p {
-  color: var(--dim) !important;
-}
-
-.site-footer {
-  background: #f7f7f8 !important;
-  border-top-color: var(--line) !important;
-  color: var(--muted) !important;
-}
-
-.loadout-card .weapon-art,
-.weapon-thumb {
-  background: #f7f7f8 !important;
-}
-
-.loadout-card .weapon-art img,
-.weapon-thumb img {
-  filter: brightness(1.22) contrast(1.05) saturate(1.08);
+  #loadoutGrid > .loadout-card:nth-child(-n + 2) .weapon-art {
+    width: 5.8rem !important;
+    max-width: 5.8rem !important;
+    height: 3.85rem !important;
+  }
 }
