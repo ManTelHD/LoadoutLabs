@@ -81,7 +81,7 @@ body {
 .weapon-dashboard,
 .tab-panel,
 .mode-info-section,
-.maps-section,
+maps-section,
 .updates-section,
 .camos-section {
   background: transparent !important;
@@ -110,7 +110,8 @@ body {
 .tier-first .section-heading > p:not(.eyebrow):not(.updated-note),
 .today-strip,
 .meta-patch-summary,
-.update-priority-grid {
+.update-priority-grid,
+.weapon-compare-panel {
   display: none;
 }
 
