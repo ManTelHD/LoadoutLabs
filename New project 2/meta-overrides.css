@@ -395,8 +395,7 @@ body {
   background: #0a0f15 !important;
 }
 
-.camo-swatch,
-.camo-swatch.has-image {
+.camo-swatch {
   position: relative;
   min-height: 11rem;
   overflow: hidden;
@@ -523,7 +522,7 @@ body {
   margin-top: 1.1rem;
 }
 
-#loadoutGrid > .loadout-card:nth-child(-n + 2) {
+#loadoutGrid > .loadout-card:nth-child(-n + 3) {
   border-left-width: 0.72rem !important;
   border-left-color: var(--olive) !important;
   outline: 1px solid rgba(185, 255, 61, 0.26);
@@ -542,7 +541,7 @@ body {
   outline-color: rgba(41, 230, 129, 0.24);
 }
 
-#loadoutGrid > .loadout-card:nth-child(-n + 2) .rank-badge {
+#loadoutGrid > .loadout-card:nth-child(-n + 3) .rank-badge {
   min-width: 5.5rem;
   min-height: 5.5rem;
   padding: 0.65rem 0.8rem !important;
@@ -554,14 +553,15 @@ body {
   box-shadow: 0 1rem 2rem rgba(185, 255, 61, 0.22) !important;
 }
 
-#loadoutGrid > .loadout-card:nth-child(-n + 2) .rank-badge span {
+#loadoutGrid > .loadout-card:nth-child(-n + 3) .rank-badge span {
   color: rgba(7, 16, 8, 0.82) !important;
   font-size: 0.76rem !important;
   letter-spacing: 0;
 }
 
 #loadoutGrid > .loadout-card:nth-child(1) .rank-badge::after,
-#loadoutGrid > .loadout-card:nth-child(2) .rank-badge::after {
+#loadoutGrid > .loadout-card:nth-child(2) .rank-badge::after,
+#loadoutGrid > .loadout-card:nth-child(3) .rank-badge::after {
   display: block;
   margin-top: 0.35rem;
   border-radius: 999px;
@@ -581,11 +581,15 @@ body {
   content: "META #2";
 }
 
-#loadoutGrid > .loadout-card:nth-child(-n + 2) .weapon-name {
+#loadoutGrid > .loadout-card:nth-child(3) .rank-badge::after {
+  content: "META #3";
+}
+
+#loadoutGrid > .loadout-card:nth-child(-n + 3) .weapon-name {
   font-size: clamp(2rem, 3.2vw, 2.75rem) !important;
 }
 
-#loadoutGrid > .loadout-card:nth-child(-n + 2) .weapon-art {
+#loadoutGrid > .loadout-card:nth-child(-n + 3) .weapon-art {
   width: 7.25rem !important;
   max-width: 7.25rem !important;
   height: 4.85rem !important;
@@ -593,7 +597,7 @@ body {
   background: rgba(7, 9, 13, 0.78) !important;
 }
 
-#loadoutGrid > .loadout-card:nth-child(-n + 2) .stat-row span {
+#loadoutGrid > .loadout-card:nth-child(-n + 3) .stat-row span {
   background: rgba(7, 9, 13, 0.52) !important;
 }
 
@@ -653,17 +657,17 @@ body {
     grid-template-columns: 1fr;
   }
 
-  #loadoutGrid > .loadout-card:nth-child(-n + 2) {
+  #loadoutGrid > .loadout-card:nth-child(-n + 3) {
     border-left-width: 0.55rem !important;
   }
 
-  #loadoutGrid > .loadout-card:nth-child(-n + 2) .rank-badge {
+  #loadoutGrid > .loadout-card:nth-child(-n + 3) .rank-badge {
     min-width: 4.6rem;
     min-height: 4.6rem;
     font-size: 2rem !important;
   }
 
-  #loadoutGrid > .loadout-card:nth-child(-n + 2) .weapon-art {
+  #loadoutGrid > .loadout-card:nth-child(-n + 3) .weapon-art {
     width: 5.8rem !important;
     max-width: 5.8rem !important;
     height: 3.85rem !important;
