@@ -393,6 +393,41 @@ body {
   background: #0a0f15 !important;
 }
 
+.camo-swatch,
+.camo-swatch.has-image {
+  position: relative;
+  min-height: 11rem;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background: var(--camo-pattern) !important;
+}
+
+.camo-swatch::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.18), transparent 34%),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.08) 0 0.25rem, transparent 0.25rem 1rem);
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+.camo-swatch::after {
+  content: "";
+  position: absolute;
+  inset: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 0.4rem;
+  box-shadow: inset 0 0 2rem rgba(0, 0, 0, 0.28);
+  pointer-events: none;
+}
+
+.camo-swatch.has-image img,
+.camo-swatch img {
+  display: none !important;
+}
+
 .loadout-card .weapon-art {
   grid-column: 1 !important;
   width: 5.4rem !important;
