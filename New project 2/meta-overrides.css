@@ -451,7 +451,11 @@ body {
 }
 
 .loadout-card .rank-badge,
+#loadoutGrid .loadout-card .rank-badge,
 #loadoutGrid > .loadout-card .rank-badge {
+  position: absolute !important;
+  top: 1rem !important;
+  right: 1rem !important;
   display: grid !important;
   min-width: 5.35rem !important;
   min-height: 5.35rem !important;
@@ -468,6 +472,7 @@ body {
 }
 
 .loadout-card .rank-badge span,
+#loadoutGrid .loadout-card .rank-badge span,
 #loadoutGrid > .loadout-card .rank-badge span {
   display: block;
   margin-top: 0.32rem;
@@ -629,6 +634,8 @@ body {
   outline-color: rgba(41, 230, 129, 0.24);
 }
 
+.loadout-card .rank-badge::after,
+#loadoutGrid .loadout-card .rank-badge::after,
 #loadoutGrid > .loadout-card:nth-child(1) .rank-badge::after,
 #loadoutGrid > .loadout-card:nth-child(2) .rank-badge::after,
 #loadoutGrid > .loadout-card:nth-child(3) .rank-badge::after {
@@ -728,6 +735,7 @@ body {
   }
 
   .loadout-card .rank-badge,
+  #loadoutGrid .loadout-card .rank-badge,
   #loadoutGrid > .loadout-card:nth-child(-n + 3) .rank-badge {
     min-width: 4.8rem !important;
     min-height: 4.8rem !important;
