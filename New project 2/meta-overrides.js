@@ -7,7 +7,7 @@
 
   const verifiedImages = {
     "ds20-mirage": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-AR-DS20-MIRAGE.webp",
-    "kogot-7": "assets/weapons/kogot-7.svg",
+    "kogot-7": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/weapons/BO7-WM-KOGOT-7.jpg",
     "mk78": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-LMG-MK-78.webp",
     "vst": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/weapons/BO7-S03-VST-MAIN.webp",
     "voyak-kt-3": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/weapons/BO7-S02-VOYAK-KT-3.webp",
@@ -214,7 +214,7 @@
   }
 
   function weaponImage(item, imageMap) {
-    return imageMap.get(slug(item.name)) || verifiedImages[item.id] || verifiedImages[slug(item.name)] || "";
+    return verifiedImages[item.id] || verifiedImages[slug(item.name)] || imageMap.get(slug(item.name)) || "";
   }
 
   function getStaticLoadout(item) {
