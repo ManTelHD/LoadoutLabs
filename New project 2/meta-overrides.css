@@ -450,27 +450,29 @@ body {
   color: var(--olive) !important;
 }
 
+.loadout-card .rank-badge,
 #loadoutGrid > .loadout-card .rank-badge {
   display: grid !important;
-  min-width: 4.1rem;
-  min-height: 4.1rem;
+  min-width: 5.35rem !important;
+  min-height: 5.35rem !important;
   place-items: center;
-  padding: 0.55rem 0.62rem !important;
-  border: 2px solid rgba(185, 255, 61, 0.44) !important;
-  background: rgba(185, 255, 61, 0.12) !important;
-  color: var(--olive) !important;
-  font-size: 1.75rem !important;
+  padding: 0.62rem 0.76rem !important;
+  border: 2px solid rgba(185, 255, 61, 0.68) !important;
+  background: linear-gradient(135deg, var(--olive), var(--cyan)) !important;
+  color: #071008 !important;
+  font-size: 2.35rem !important;
   font-weight: 950 !important;
-  line-height: 0.9;
+  line-height: 0.86;
   text-align: center;
-  box-shadow: 0 0.75rem 1.6rem rgba(185, 255, 61, 0.12) !important;
+  box-shadow: 0 1rem 2rem rgba(185, 255, 61, 0.2) !important;
 }
 
+.loadout-card .rank-badge span,
 #loadoutGrid > .loadout-card .rank-badge span {
   display: block;
-  margin-top: 0.18rem;
-  color: var(--muted) !important;
-  font-size: 0.66rem !important;
+  margin-top: 0.32rem;
+  color: rgba(7, 16, 8, 0.82) !important;
+  font-size: 0.72rem !important;
   font-weight: 900;
   line-height: 1;
   letter-spacing: 0;
@@ -627,36 +629,10 @@ body {
   outline-color: rgba(41, 230, 129, 0.24);
 }
 
-#loadoutGrid > .loadout-card:nth-child(-n + 3) .rank-badge {
-  min-width: 5.5rem;
-  min-height: 5.5rem;
-  padding: 0.65rem 0.8rem !important;
-  border: 2px solid rgba(185, 255, 61, 0.72) !important;
-  background: linear-gradient(135deg, var(--olive), var(--cyan)) !important;
-  color: #071008 !important;
-  font-size: 2.5rem !important;
-  line-height: 0.88;
-  box-shadow: 0 1rem 2rem rgba(185, 255, 61, 0.22) !important;
-}
-
-#loadoutGrid > .loadout-card:nth-child(-n + 3) .rank-badge span {
-  color: rgba(7, 16, 8, 0.82) !important;
-  font-size: 0.76rem !important;
-  letter-spacing: 0;
-}
-
 #loadoutGrid > .loadout-card:nth-child(1) .rank-badge::after,
 #loadoutGrid > .loadout-card:nth-child(2) .rank-badge::after,
 #loadoutGrid > .loadout-card:nth-child(3) .rank-badge::after {
-  display: block;
-  margin-top: 0.35rem;
-  border-radius: 999px;
-  background: rgba(7, 16, 8, 0.16);
-  padding: 0.18rem 0.38rem;
-  color: #071008;
-  font-size: 0.62rem;
-  font-weight: 950;
-  line-height: 1;
+  display: none;
 }
 
 #loadoutGrid > .loadout-card:nth-child(1) .rank-badge::after {
@@ -751,10 +727,11 @@ body {
     border-left-width: 0.55rem !important;
   }
 
+  .loadout-card .rank-badge,
   #loadoutGrid > .loadout-card:nth-child(-n + 3) .rank-badge {
-    min-width: 4.6rem;
-    min-height: 4.6rem;
-    font-size: 2rem !important;
+    min-width: 4.8rem !important;
+    min-height: 4.8rem !important;
+    font-size: 2.08rem !important;
   }
 
   #loadoutGrid > .loadout-card:nth-child(-n + 3) .weapon-art {
