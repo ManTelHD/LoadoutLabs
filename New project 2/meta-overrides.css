@@ -362,6 +362,32 @@ body {
   color: var(--olive) !important;
 }
 
+#loadoutGrid > .loadout-card .rank-badge {
+  display: grid !important;
+  min-width: 4.1rem;
+  min-height: 4.1rem;
+  place-items: center;
+  padding: 0.55rem 0.62rem !important;
+  border: 2px solid rgba(185, 255, 61, 0.44) !important;
+  background: rgba(185, 255, 61, 0.12) !important;
+  color: var(--olive) !important;
+  font-size: 1.75rem !important;
+  font-weight: 950 !important;
+  line-height: 0.9;
+  text-align: center;
+  box-shadow: 0 0.75rem 1.6rem rgba(185, 255, 61, 0.12) !important;
+}
+
+#loadoutGrid > .loadout-card .rank-badge span {
+  display: block;
+  margin-top: 0.18rem;
+  color: var(--muted) !important;
+  font-size: 0.66rem !important;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
 .loadout-card .weapon-art,
 .weapon-thumb {
   background: #0a0f15 !important;
