@@ -109,7 +109,8 @@ body {
 
 .tier-first .section-heading > p:not(.eyebrow):not(.updated-note),
 .today-strip,
-.meta-patch-summary {
+.meta-patch-summary,
+.update-priority-grid {
   display: none;
 }
 
