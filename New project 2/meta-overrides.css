@@ -431,9 +431,9 @@ body {
 
 .loadout-card .weapon-art {
   grid-column: 1 !important;
-  width: 5.4rem !important;
-  max-width: 5.4rem !important;
-  height: 3.65rem !important;
+  width: 6.4rem !important;
+  max-width: 6.4rem !important;
+  height: 4.35rem !important;
   margin: 0.25rem 0 0 !important;
   border-radius: 0.35rem;
   overflow: hidden !important;
@@ -590,9 +590,9 @@ body {
 }
 
 #loadoutGrid > .loadout-card:nth-child(-n + 3) .weapon-art {
-  width: 7.25rem !important;
-  max-width: 7.25rem !important;
-  height: 4.85rem !important;
+  width: 8.4rem !important;
+  max-width: 8.4rem !important;
+  height: 5.55rem !important;
   border-color: rgba(185, 255, 61, 0.24) !important;
   background: rgba(7, 9, 13, 0.78) !important;
 }
@@ -648,9 +648,9 @@ body {
   }
 
   .loadout-card .weapon-art {
-    width: 4.5rem !important;
-    max-width: 4.5rem !important;
-    height: 3rem !important;
+    width: 5.35rem !important;
+    max-width: 5.35rem !important;
+    height: 3.55rem !important;
   }
 
   .loadout-card.expanded .attachment-columns {
@@ -668,8 +668,8 @@ body {
   }
 
   #loadoutGrid > .loadout-card:nth-child(-n + 3) .weapon-art {
-    width: 5.8rem !important;
-    max-width: 5.8rem !important;
-    height: 3.85rem !important;
+    width: 6.6rem !important;
+    max-width: 6.6rem !important;
+    height: 4.35rem !important;
   }
 }
