@@ -850,3 +850,29 @@ body .loadout-grid .loadout-card .weapon-art {
     linear-gradient(90deg, rgba(185, 255, 61, 0.2), rgba(41, 230, 129, 0.08) 42%, rgba(255, 255, 255, 0.03)),
     #111720;
 }
+
+body #loadoutGrid > .loadout-card.tier-absolute-meta {
+  border-left-width: 0.72rem !important;
+  border-left-color: var(--olive) !important;
+  outline: 1px solid rgba(185, 255, 61, 0.26);
+  background:
+    linear-gradient(135deg, rgba(185, 255, 61, 0.16), rgba(41, 230, 129, 0.06) 42%, transparent 72%),
+    #111720 !important;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.52), 0 0 0 1px rgba(185, 255, 61, 0.12) !important;
+}
+
+body #loadoutGrid > .loadout-card.tier-absolute-meta .weapon-name {
+  font-size: clamp(2rem, 3.2vw, 2.75rem) !important;
+}
+
+body #loadoutGrid > .loadout-card.tier-absolute-meta .weapon-art {
+  width: 8.4rem !important;
+  max-width: 8.4rem !important;
+  height: 5.55rem !important;
+  border-color: rgba(185, 255, 61, 0.24) !important;
+  background: rgba(7, 9, 13, 0.78) !important;
+}
+
+body #loadoutGrid > .loadout-card.tier-absolute-meta .stat-row span {
+  background: rgba(7, 9, 13, 0.52) !important;
+}
