@@ -120,7 +120,7 @@ body {
 .pro-hero-card,
 .quick-action,
 .controls,
-toolbar,
+.toolbar,
 .weapon-compare-panel,
 .map-panel,
 .map-board,
@@ -803,4 +803,50 @@ body .loadout-grid .loadout-card .weapon-art {
   width: 8.4rem !important;
   max-width: 8.4rem !important;
   height: 5.55rem !important;
+}
+
+.meta-tier-heading {
+  display: flex;
+  min-height: 2.9rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 1.25rem 0 0.25rem;
+  padding: 0.72rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 0.42rem solid rgba(185, 255, 61, 0.7);
+  border-radius: 0.35rem;
+  background:
+    linear-gradient(90deg, rgba(185, 255, 61, 0.12), rgba(41, 230, 129, 0.04) 34%, rgba(255, 255, 255, 0.025)),
+    #0d131c;
+  color: var(--text);
+  box-shadow: 0 1rem 2.1rem rgba(0, 0, 0, 0.28);
+}
+
+.meta-tier-heading:first-child {
+  margin-top: 0.45rem;
+}
+
+.meta-tier-heading span {
+  color: var(--olive);
+  font-size: clamp(1.05rem, 1.4vw, 1.35rem);
+  font-weight: 950;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.meta-tier-heading small {
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.meta-tier-heading.tier-heading-meta {
+  border-left-width: 0.72rem;
+  border-color: rgba(185, 255, 61, 0.3);
+  border-left-color: var(--olive);
+  background:
+    linear-gradient(90deg, rgba(185, 255, 61, 0.2), rgba(41, 230, 129, 0.08) 42%, rgba(255, 255, 255, 0.03)),
+    #111720;
 }
