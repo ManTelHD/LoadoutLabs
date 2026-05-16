@@ -120,7 +120,7 @@ body {
 .pro-hero-card,
 .quick-action,
 .controls,
-.toolbar,
+toolbar,
 .weapon-compare-panel,
 .map-panel,
 .map-board,
@@ -747,4 +747,60 @@ body {
     max-width: 6.6rem !important;
     height: 4.35rem !important;
   }
+}
+
+body #loadoutGrid .loadout-card .rank-badge,
+body .loadout-grid .loadout-card .rank-badge,
+body .tier-group .loadout-card .rank-badge {
+  position: absolute !important;
+  top: 1rem !important;
+  right: 1rem !important;
+  display: grid !important;
+  min-width: 5.35rem !important;
+  min-height: 5.35rem !important;
+  place-items: center !important;
+  padding: 0.62rem 0.76rem !important;
+  border: 2px solid rgba(185, 255, 61, 0.68) !important;
+  border-radius: 0.35rem !important;
+  background: linear-gradient(135deg, var(--olive), var(--cyan)) !important;
+  color: #071008 !important;
+  font-size: 2.35rem !important;
+  font-weight: 950 !important;
+  line-height: 0.86 !important;
+  text-align: center !important;
+  box-shadow: 0 1rem 2rem rgba(185, 255, 61, 0.2) !important;
+}
+
+body #loadoutGrid .loadout-card .rank-badge span,
+body .loadout-grid .loadout-card .rank-badge span,
+body .tier-group .loadout-card .rank-badge span {
+  display: block !important;
+  margin-top: 0.32rem !important;
+  border-left: 0 !important;
+  padding-left: 0 !important;
+  color: rgba(7, 16, 8, 0.82) !important;
+  font-size: 0.72rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0 !important;
+  line-height: 1 !important;
+}
+
+body #loadoutGrid .loadout-card .rank-badge::after,
+body .loadout-grid .loadout-card .rank-badge::after,
+body .tier-group .loadout-card .rank-badge::after {
+  content: none !important;
+  display: none !important;
+}
+
+body #loadoutGrid .loadout-card .stat-row,
+body .loadout-grid .loadout-card .stat-row {
+  gap: 0.45rem !important;
+  flex-wrap: wrap !important;
+}
+
+body #loadoutGrid .loadout-card .weapon-art,
+body .loadout-grid .loadout-card .weapon-art {
+  width: 8.4rem !important;
+  max-width: 8.4rem !important;
+  height: 5.55rem !important;
 }
