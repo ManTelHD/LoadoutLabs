@@ -109,6 +109,7 @@
 
     const map = imageMap();
     const cards = data.items.slice(0, 12);
+    const expandedCards = new Set([...grid.querySelectorAll(".loadout-card.expanded")].map((card) => card.dataset.loadoutCard));
     if (count) count.textContent = `${cards.length} Meta-Waffen angezeigt`;
     grid.innerHTML = cards.map((item) => {
       const loadout = staticLoadout(item);
@@ -125,8 +126,9 @@
         `<span><strong>${html(item.role || "Meta")}</strong> Rolle</span>`,
         `<span><strong>${html(item.sourceUpdatedLabel)}</strong> Stand</span>`,
       ].filter(Boolean).join("");
+      const isExpanded = expandedCards.has(item.name);
       return `
-        <article class="loadout-card ${item.tier === "META" ? "tier-absolute-meta" : "tier-meta"}" data-loadout-card="${html(item.name)}">
+        <article class="loadout-card ${item.tier === "META" ? "tier-absolute-meta" : "tier-meta"}${isExpanded ? " expanded" : ""}" data-loadout-card="${html(item.name)}">
           <div class="rank-badge">#${html(item.position)}<span>${html(item.tierLabel)}</span></div>
           ${image}
           <div class="card-body">
@@ -141,7 +143,7 @@
               </div>
             </div>
           </div>
-          <footer class="card-footer"><span class="range">${html(item.role || item.weaponClass)}</span><button class="expand-button" type="button" aria-expanded="false" aria-label="${html(item.name)} Aufsaetze anzeigen"><span>Details</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.4 8.6 12 13.2l4.6-4.6L18 10l-6 6-6-6 1.4-1.4Z"></path></svg></button></footer>
+          <footer class="card-footer"><span class="range">${html(item.role || item.weaponClass)}</span><button class="expand-button" type="button" aria-expanded="${isExpanded ? "true" : "false"}" aria-label="${html(item.name)} Aufsaetze ${isExpanded ? "ausblenden" : "anzeigen"}"><span>Details</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.4 8.6 12 13.2l4.6-4.6L18 10l-6 6-6-6 1.4-1.4Z"></path></svg></button></footer>
         </article>`;
     }).join("");
   }
@@ -173,7 +175,8 @@
     state.mw4 = mw4;
     state.codWeapons = codWeapons;
     renderAll();
-    document.addEventListener("click", () => {
+    document.addEventListener("click", (event) => {
+      if (event.target.closest("#loadoutGrid .loadout-card")) return;
       requestAnimationFrame(renderAll);
       setTimeout(renderAll, 80);
     });
