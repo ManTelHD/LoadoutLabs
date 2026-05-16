@@ -15,6 +15,23 @@
     "dravec-45": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-SMG-DRAVEC-45.webp",
     "m15-mod-0": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-AR-M15-MOD-0.webp",
     "mpc-25": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-SMG-MPC-25.webp",
+    "peacekeeper-mk1": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-AR-PEACEKEEPER-MK1.webp",
+    "ak-27": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-AR-AK-27.webp",
+    "ryden-45k": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-SMG-RYDEN-45K.webp",
+    "sturmwolf-45": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/weapons/COD-BO7-SMG-STURMWOLF-45.webp",
+    "maddox-rfb": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/weapons/COD-BO7-AR-MADDOX-RFB.webp",
+    "x9-maverick": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-AR-X9-MAVERICK.webp",
+  };
+
+  const localFallbackImages = {
+    "ak-27": "assets/weapons/ak-27.svg",
+    "carbon-57": "assets/weapons/carbon-57.svg",
+    "kogot-7": "assets/weapons/kogot-7.svg",
+    "maddox-rfb": "assets/weapons/maddox-rfb.svg",
+    "mk35-isr": "assets/weapons/mk35-isr.svg",
+    "mpc-25": "assets/weapons/mpc-25.svg",
+    "razor-9mm": "assets/weapons/razor-9mm.svg",
+    "strider-300": "assets/weapons/strider-300.svg",
   };
 
   const verifiedBuilds = {
@@ -70,8 +87,17 @@
     return map;
   }
 
+  function fallbackImage(item) {
+    const key = item.id || slug(item.name);
+    if (localFallbackImages[key]) return localFallbackImages[key];
+    const label = html(item.name || "Weapon");
+    const role = html(item.weaponClass || item.role || "Weapon");
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220"><defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#b9ff3d"/><stop offset="1" stop-color="#29e681"/></linearGradient></defs><rect width="420" height="220" rx="18" fill="#070b10"/><path d="M32 142h254l28-24h42l18 24h20v24H32z" fill="url(#g)" opacity=".92"/><path d="M78 111h176l20-24h76l-14 24h30v24H78z" fill="#151d27" stroke="#b9ff3d" stroke-width="4"/><circle cx="120" cy="166" r="10" fill="#070b10"/><circle cx="320" cy="166" r="10" fill="#070b10"/><text x="28" y="42" fill="#b9ff3d" font-family="Arial, sans-serif" font-size="22" font-weight="900">${label}</text><text x="28" y="68" fill="#a8b0bd" font-family="Arial, sans-serif" font-size="14" font-weight="700">${role}</text></svg>`;
+    return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+  }
+
   function weaponImage(item, map) {
-    return verifiedImages[item.id] || verifiedImages[slug(item.name)] || map.get(slug(item.name)) || "";
+    return verifiedImages[item.id] || verifiedImages[slug(item.name)] || map.get(slug(item.name)) || fallbackImage(item);
   }
 
   function staticLoadout(item) {
@@ -127,7 +153,8 @@
       const secondary = loadout?.secondary || "";
       const buildCode = loadout?.buildCode || "";
       const imageUrl = weaponImage(item, map);
-      const image = imageUrl ? `<div class="weapon-art"><img src="${html(imageUrl)}" alt="${html(item.name)}" loading="lazy" onerror="this.closest('.weapon-art').remove()"></div>` : "";
+      const fallbackUrl = fallbackImage(item);
+      const image = `<div class="weapon-art"><img src="${html(imageUrl)}" data-fallback="${html(fallbackUrl)}" alt="${html(item.name)}" loading="lazy" onerror="this.onerror=null;this.src=this.dataset.fallback"></div>`;
       const statItems = [
         `<span><strong>${html(item.scoreLabel)}</strong> Score</span>`,
         item.pickRateLabel ? `<span><strong>${html(item.pickRateLabel)}</strong> Pick-Rate</span>` : "",
