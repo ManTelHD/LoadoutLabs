@@ -81,6 +81,12 @@
     return window.loadouts.find((loadout) => slug(loadout.name) === slug(item.name)) || null;
   }
 
+  function tierHeading(item, groupSize) {
+    const title = item.tier === "META" ? "Absolute Meta" : `${item.tierLabel || `${item.tier}-Tier`} Waffen`;
+    const metaClass = item.tier === "META" ? " tier-heading-meta" : "";
+    return `<div class="meta-tier-heading${metaClass}" data-tier="${html(item.tier)}"><span>${html(title)}</span><small>${groupSize} Waffen</small></div>`;
+  }
+
   function renderMetaSummary() {
     const summary = document.querySelector("#metaPatchSummary");
     const data = getMetaList();
@@ -108,9 +114,11 @@
     if (!grid || !data || activePanel() !== "weapons") return;
 
     const map = imageMap();
-    const cards = data.items.slice(0, 12);
+    const cards = data.items;
     const expandedCards = new Set([...grid.querySelectorAll(".loadout-card.expanded")].map((card) => card.dataset.loadoutCard));
     if (count) count.textContent = `${cards.length} Meta-Waffen angezeigt`;
+    const groupSizes = cards.reduce((sizes, item) => sizes.set(item.tier, (sizes.get(item.tier) || 0) + 1), new Map());
+    let lastTier = "";
     grid.innerHTML = cards.map((item) => {
       const loadout = staticLoadout(item);
       const attachments = loadout?.attachments?.length ? loadout.attachments : item.attachments || [];
@@ -127,7 +135,10 @@
         `<span><strong>${html(item.sourceUpdatedLabel)}</strong> Stand</span>`,
       ].filter(Boolean).join("");
       const isExpanded = expandedCards.has(item.name);
+      const heading = item.tier !== lastTier ? tierHeading(item, groupSizes.get(item.tier) || 0) : "";
+      lastTier = item.tier;
       return `
+        ${heading}
         <article class="loadout-card ${item.tier === "META" ? "tier-absolute-meta" : "tier-meta"}${isExpanded ? " expanded" : ""}" data-loadout-card="${html(item.name)}">
           <div class="rank-badge">#${html(item.position)}<span>${html(item.tierLabel)}</span></div>
           ${image}
