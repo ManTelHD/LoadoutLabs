@@ -22,6 +22,9 @@
     "egrt-17": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/weapons/B07-SEASON-02-WEAPONS-EGRT-17-TOUT.webp",
     "rev-46": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/weapons/B07-SEASON-02-WEAPONS-REV-46-TOUT.webp",
     "razor-9mm": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-SMG-RAZOR-9MM.webp",
+    m8a1: "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-DMR-M8A1.webp",
+    "hawker-hx": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-SR-HAWKER-HX.webp",
+    "vs-recon": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-SR-VS-RECON.webp",
     "maddox-rfb": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/weapons/COD-BO7-AR-MADDOX-RFB.webp",
     "x9-maverick": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-AR-X9-MAVERICK.webp",
   };
