@@ -169,7 +169,51 @@
     });
   }
 
+  function injectWeaponArtStyle() {
+    if (document.querySelector("#weapon-art-zoom-fix")) return;
+    const style = document.createElement("style");
+    style.id = "weapon-art-zoom-fix";
+    style.textContent = `
+      body #loadoutGrid .loadout-card .weapon-art,
+      body .loadout-grid .loadout-card .weapon-art {
+        width: 10.25rem !important;
+        max-width: 10.25rem !important;
+        height: 6.15rem !important;
+        border-color: rgba(185, 255, 61, 0.16) !important;
+        background: linear-gradient(135deg, rgba(185, 255, 61, 0.09), rgba(41, 230, 129, 0.04)), rgba(8, 13, 19, 0.45) !important;
+      }
+
+      body #loadoutGrid .loadout-card .weapon-art img,
+      body .loadout-grid .loadout-card .weapon-art img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center center !important;
+        transform: scale(1.12);
+        filter: brightness(1.16) contrast(1.12) saturate(1.16);
+      }
+
+      body #loadoutGrid > .loadout-card.tier-absolute-meta .weapon-art {
+        width: 11.5rem !important;
+        max-width: 11.5rem !important;
+        height: 6.75rem !important;
+      }
+
+      @media (max-width: 720px) {
+        body #loadoutGrid .loadout-card .weapon-art,
+        body .loadout-grid .loadout-card .weapon-art,
+        body #loadoutGrid > .loadout-card.tier-absolute-meta .weapon-art {
+          width: 8.4rem !important;
+          max-width: 8.4rem !important;
+          height: 5.1rem !important;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
   function renderAll() {
+    injectWeaponArtStyle();
     renderMetaSummary();
     renderRolePanel();
     renderLoadoutCards();
