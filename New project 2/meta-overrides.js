@@ -7,7 +7,7 @@
 
   const verifiedImages = {
     "ds20-mirage": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-AR-DS20-MIRAGE.webp",
-    "kogot-7": "assets/weapons/kogot-7.svg",
+    "kogot-7": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/weapons/COD-BO7-SMG-KOGOT-7.webp",
     mk78: "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-LMG-MK-78.webp",
     vst: "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/weapons/BO7-S03-VST-MAIN.webp",
     "carbon-57": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-SMG-CARBON-57.webp",
@@ -20,21 +20,21 @@
   const verifiedBuilds = {
     "kogot-7": {
       role: "Warzone-Meta-SMG mit sehr starker Mobility und schneller TTK.",
-      buildCode: "WZStats Loadout",
+      buildCode: "",
       secondary: "DS20 Mirage",
       attachments: ["Muzzle: Hawker Series 45", "Barrel: 8.5\" Targil Hock-XR Barrel", "Underbarrel: EAM Steady-90 Grip", "Magazine: Vex Expanse Mag", "Fire Mods: Buffer Spring"],
       perks: ["Mountaineer", "Quick Fix", "Stim Shot"],
     },
     mk78: {
       role: "WZStats #1 Langstrecke: sehr stabiles LMG mit starkem Damage-Profil und sauberem Recoil fuer Ranked-Resurgence.",
-      buildCode: "WZStats Loadout",
+      buildCode: "",
       secondary: "Kogot-7",
       attachments: ["Optic: Greaves AccuSpot 3x", "Barrel: 22\" Impulse HB-762 Barrel", "Underbarrel: Bowen Sentry Foregrip", "Rear Grip: Fleet-G2 Grip", "Fire Mods: Accelerated Recoil System"],
       perks: ["Scavenger", "Quick Fix", "Survivor"],
     },
     "ds20-mirage": {
       role: "Gebuffte Long-Range-AR mit staerkerem Mid-/Minimum-Damage, besserem Headshot-Wert und mehr Bullet Velocity in BR/Resurgence.",
-      buildCode: "WZStats Loadout",
+      buildCode: "",
       secondary: "Kogot-7",
       attachments: ["Optic: EAM XL Reflex", "Muzzle: Monolithic Suppressor", "Barrel: 17.1\" Abdicator Barrel", "Magazine: Griffon Reserve Extended II", "Rear Grip: A1-C Control Grip"],
       perks: ["Scavenger", "Quick Fix", "Survivor"],
@@ -109,24 +109,30 @@
 
     const map = imageMap();
     const cards = data.items.slice(0, 12);
-    if (count) count.textContent = `${cards.length} WZStats-Picks angezeigt`;
+    if (count) count.textContent = `${cards.length} Meta-Waffen angezeigt`;
     grid.innerHTML = cards.map((item) => {
       const loadout = staticLoadout(item);
       const attachments = loadout?.attachments?.length ? loadout.attachments : item.attachments || [];
       const perks = loadout?.perks || [];
       const role = loadout?.role || item.description || "";
       const secondary = loadout?.secondary || "";
-      const buildCode = loadout?.buildCode || "WZStats Tierlist";
+      const buildCode = loadout?.buildCode || "";
       const imageUrl = weaponImage(item, map);
       const image = imageUrl ? `<div class="weapon-art"><img src="${html(imageUrl)}" alt="${html(item.name)}" loading="lazy" onerror="this.closest('.weapon-art').remove()"></div>` : "";
+      const statItems = [
+        `<span><strong>${html(item.scoreLabel)}</strong> Score</span>`,
+        item.pickRateLabel ? `<span><strong>${html(item.pickRateLabel)}</strong> Pick-Rate</span>` : "",
+        `<span><strong>${html(item.role || "Meta")}</strong> Rolle</span>`,
+        `<span><strong>${html(item.sourceUpdatedLabel)}</strong> Stand</span>`,
+      ].filter(Boolean).join("");
       return `
         <article class="loadout-card ${item.tier === "META" ? "tier-absolute-meta" : "tier-meta"}" data-loadout-card="${html(item.name)}">
           <div class="rank-badge">#${html(item.position)}<span>${html(item.tierLabel)}</span></div>
           ${image}
           <div class="card-body">
             <div class="card-title-row"><div><span class="mode-pill">${html(item.weaponClass)}</span><h3 class="weapon-name">${html(item.name)}</h3></div></div>
-            <div class="stat-row"><span><strong>${html(item.scoreLabel)}</strong> WZStats</span><span><strong>${html(item.pickRateLabel || "n/a")}</strong> Pick-Rate</span><span><strong>${html(item.role || "Meta")}</strong> Rolle</span><span><strong>${html(item.sourceUpdatedLabel)}</strong> Stand</span></div>
-            <div class="tag-list"><span>WZStats</span><span>${html(item.rankLabel)}</span><span>${html(item.tierLabel)}</span></div>
+            <div class="stat-row">${statItems}</div>
+            <div class="tag-list"><span>${html(item.rankLabel)}</span><span>${html(item.tierLabel)}</span></div>
             <div class="card-details">
               <p class="role">${html(role)}</p>
               <div class="attachment-columns">
@@ -146,7 +152,7 @@
       image.remove();
     });
     root.querySelectorAll?.('img[alt="Kogot-7"], img[src*="BO7-WM-KOGOT-7"], img[src*="COD-BO7-SMG-KOGOT-7"]').forEach((image) => {
-      image.src = "assets/weapons/kogot-7.svg";
+      image.src = "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/weapons/COD-BO7-SMG-KOGOT-7.webp";
     });
   }
 
