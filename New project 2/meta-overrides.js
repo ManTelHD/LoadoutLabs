@@ -139,8 +139,9 @@
 
   function tierHeading(item, groupSize) {
     const title = item.tier === "META" ? "Absolute Meta" : `${item.tierLabel || `${item.tier}-Tier`} Waffen`;
+    const tierKey = item.tier === "META" ? "meta" : slug(item.tier || "tier");
     const metaClass = item.tier === "META" ? " tier-heading-meta" : "";
-    return `<div class="meta-tier-heading${metaClass}" data-tier="${html(item.tier)}"><span>${html(title)}</span><small>${groupSize} Waffen</small></div>`;
+    return `<div class="meta-tier-heading${metaClass} tier-heading-${html(tierKey)}" data-tier="${html(item.tier)}"><span>${html(title)}</span><small>${groupSize} Waffen</small></div>`;
   }
 
   function renderMetaSummary() {
@@ -196,7 +197,7 @@
       lastTier = item.tier;
       return `
         ${heading}
-        <article class="loadout-card ${item.tier === "META" ? "tier-absolute-meta" : "tier-meta"}${isExpanded ? " expanded" : ""}" data-loadout-card="${html(item.name)}">
+        <article class="loadout-card ${item.tier === "META" ? "tier-absolute-meta" : "tier-meta"} tier-card-${html(item.tier === "META" ? "meta" : slug(item.tier || "tier"))}${isExpanded ? " expanded" : ""}" data-loadout-card="${html(item.name)}">
           <div class="rank-badge">#${html(item.position)}<span>${html(item.tierLabel)}</span></div>
           ${image}
           <div class="card-body">
@@ -254,6 +255,71 @@
         width: 11.5rem !important;
         max-width: 11.5rem !important;
         height: 6.75rem !important;
+      }
+
+      body .meta-tier-heading {
+        --tier-heading-color: #b9ff3d;
+        --tier-heading-rgb: 185, 255, 61;
+        border-color: rgba(var(--tier-heading-rgb), 0.24) !important;
+        border-left: 0.58rem solid var(--tier-heading-color) !important;
+        background: linear-gradient(90deg, rgba(var(--tier-heading-rgb), 0.2), rgba(var(--tier-heading-rgb), 0.08) 36%, rgba(255, 255, 255, 0.025)), #0d131c !important;
+        box-shadow: 0 1rem 2.1rem rgba(0, 0, 0, 0.28), inset 0 0 0 1px rgba(var(--tier-heading-rgb), 0.06) !important;
+      }
+
+      body .meta-tier-heading span {
+        color: var(--tier-heading-color) !important;
+        text-shadow: 0 0 1.25rem rgba(var(--tier-heading-rgb), 0.28) !important;
+      }
+
+      body .meta-tier-heading small {
+        color: color-mix(in srgb, var(--tier-heading-color) 34%, var(--muted)) !important;
+      }
+
+      body .meta-tier-heading.tier-heading-meta {
+        --tier-heading-color: #b9ff3d;
+        --tier-heading-rgb: 185, 255, 61;
+        border-left-width: 0.72rem !important;
+        background: linear-gradient(90deg, rgba(185, 255, 61, 0.26), rgba(41, 230, 129, 0.1) 42%, rgba(255, 255, 255, 0.03)), #111720 !important;
+      }
+
+      body .meta-tier-heading.tier-heading-a {
+        --tier-heading-color: #35d7ff;
+        --tier-heading-rgb: 53, 215, 255;
+        background: linear-gradient(90deg, rgba(53, 215, 255, 0.18), rgba(51, 116, 255, 0.07) 38%, rgba(255, 255, 255, 0.025)), #0d131c !important;
+      }
+
+      body .meta-tier-heading.tier-heading-b {
+        --tier-heading-color: #ffcf4a;
+        --tier-heading-rgb: 255, 207, 74;
+        background: linear-gradient(90deg, rgba(255, 207, 74, 0.17), rgba(255, 151, 58, 0.07) 38%, rgba(255, 255, 255, 0.022)), #0d131c !important;
+      }
+
+      body .meta-tier-heading.tier-heading-c {
+        --tier-heading-color: #b08cff;
+        --tier-heading-rgb: 176, 140, 255;
+        background: linear-gradient(90deg, rgba(176, 140, 255, 0.16), rgba(95, 114, 255, 0.06) 38%, rgba(255, 255, 255, 0.022)), #0d131c !important;
+      }
+
+      body .meta-tier-heading.tier-heading-d {
+        --tier-heading-color: #ff6f91;
+        --tier-heading-rgb: 255, 111, 145;
+        background: linear-gradient(90deg, rgba(255, 111, 145, 0.15), rgba(255, 83, 83, 0.055) 38%, rgba(255, 255, 255, 0.02)), #0d131c !important;
+      }
+
+      body #loadoutGrid > .loadout-card.tier-card-a {
+        border-left-color: rgba(53, 215, 255, 0.78) !important;
+      }
+
+      body #loadoutGrid > .loadout-card.tier-card-b {
+        border-left-color: rgba(255, 207, 74, 0.78) !important;
+      }
+
+      body #loadoutGrid > .loadout-card.tier-card-c {
+        border-left-color: rgba(176, 140, 255, 0.78) !important;
+      }
+
+      body #loadoutGrid > .loadout-card.tier-card-d {
+        border-left-color: rgba(255, 111, 145, 0.72) !important;
       }
 
       @media (max-width: 720px) {
