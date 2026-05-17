@@ -36,7 +36,7 @@
     "velox-57": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-PISTOL-VELOX-5-7.webp",
     "jager-45": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-PISTOL-JAGER-45.webp",
     "jäger-45": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-PISTOL-JAGER-45.webp",
-    "1911": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blog/body/bo7/season-03-announcement/BO7-SEASON-03-ANNOUNCEMENT-067.webp",
+    "1911": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blog/body/bo7/season-03-announcement/BO7-SEASON-03-ANNOUNCEMENT-069.webp",
     "arc-m1": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-LAU-ARC-M1.webp",
     "a-r-c-m1": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-LAU-ARC-M1.webp",
     "flatline-mkii": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-MELEE-FLATLINE-MK-II.webp",
