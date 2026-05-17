@@ -86,6 +86,13 @@
       attachments: ["Optic: EAM XL Reflex", "Muzzle: Monolithic Suppressor", "Barrel: 17.1\" Abdicator Barrel", "Magazine: Griffon Reserve Extended II", "Rear Grip: A1-C Control Grip"],
       perks: ["Scavenger", "Quick Fix", "Survivor"],
     },
+    "voyak-kt-3": {
+      role: "Meta-Long-Range-AR mit starkem Damage-Profil und kontrolliertem Rueckstoss fuer Ranked-Resurgence.",
+      buildCode: "",
+      secondary: "Kogot-7",
+      attachments: ["Optic: Redwell 30-S 2x", "Muzzle: Monolithic Suppressor", "Barrel: 17.6\" LTI Grav-4 Barrel", "Stock: V-Last Control Pad", "Magazine: SK-Garrison Drum"],
+      perks: ["Scavenger", "Quick Fix", "Survivor"],
+    },
   };
 
   const state = { meta: null, mw4: null, codWeapons: null, legacyLoadouts: [] };
