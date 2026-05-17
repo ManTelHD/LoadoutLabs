@@ -262,14 +262,14 @@
             <div class="card-title-row"><div><span class="mode-pill">${html(item.weaponClass)}</span><h3 class="weapon-name">${html(item.name)}</h3></div></div>
             <div class="stat-row">${statItems}</div>
             <div class="tag-list"><span>${html(item.rankLabel)}</span><span>${html(item.tierLabel)}</span></div>
-            <div class="card-details">
-              <p class="role">${html(role)}</p>
-              <div class="attachment-columns">
-                <ul class="attachment-list">${attachments.length ? attachments.map((attachment) => `<li>${html(attachment)}</li>`).join("") : "<li>Keine verifizierten Aufsaetze fuer diese Waffe hinterlegt.</li>"}</ul>
-                <ul class="perk-list">${/^wzstats/i.test(buildCode) ? "" : `<li>Code: ${html(buildCode)}</li>`}${secondary ? `<li>Pair: ${html(secondary)}</li>` : ""}${perks.map((perk, index) => `<li>Extra ${index + 1}: ${html(perk)}</li>`).join("")}</ul>
-              </div>
-            </div>
           </div>
+          <section class="card-details meta-card-details">
+            <p class="role">${html(role)}</p>
+            <div class="attachment-columns">
+              <div class="detail-panel"><span class="details-kicker">Aufsaetze</span><ul class="attachment-list">${attachments.length ? attachments.map((attachment) => `<li>${html(attachment)}</li>`).join("") : "<li>Keine verifizierten Aufsaetze fuer diese Waffe hinterlegt.</li>"}</ul></div>
+              <div class="detail-panel"><span class="details-kicker">Setup</span><ul class="perk-list">${/^wzstats/i.test(buildCode) || !buildCode ? "" : `<li>Code: ${html(buildCode)}</li>`}${secondary ? `<li>Pair: ${html(secondary)}</li>` : ""}${perks.map((perk, index) => `<li>Extra ${index + 1}: ${html(perk)}</li>`).join("")}${!buildCode && !secondary && !perks.length ? "<li>Quelle: WZStats Tierlist</li>" : ""}</ul></div>
+            </div>
+          </section>
           <footer class="card-footer"><span class="range">${html(item.role || item.weaponClass)}</span><button class="expand-button" type="button" aria-expanded="${isExpanded ? "true" : "false"}" aria-label="${html(item.name)} Aufsaetze ${isExpanded ? "ausblenden" : "anzeigen"}"><span>Details</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.4 8.6 12 13.2l4.6-4.6L18 10l-6 6-6-6 1.4-1.4Z"></path></svg></button></footer>
         </article>`;
     }).join("");
@@ -313,6 +313,38 @@
         width: 11.5rem !important;
         max-width: 11.5rem !important;
         height: 6.75rem !important;
+      }
+
+      body #loadoutGrid .loadout-card .meta-card-details {
+        grid-column: 1 / -1 !important;
+        width: 100% !important;
+        max-height: 0;
+        overflow: hidden;
+      }
+
+      body #loadoutGrid .loadout-card.expanded .meta-card-details {
+        display: block !important;
+        max-height: none;
+        padding-top: 0.2rem;
+        overflow: visible;
+      }
+
+      body #loadoutGrid .loadout-card.expanded .attachment-columns {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
+      }
+
+      body #loadoutGrid .detail-panel {
+        min-width: 0;
+      }
+
+      body #loadoutGrid .details-kicker {
+        display: block;
+        color: var(--olive);
+        font-size: 0.76rem;
+        font-weight: 950;
+        text-transform: uppercase;
       }
 
       body .meta-tier-heading {
