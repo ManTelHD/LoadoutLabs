@@ -88,13 +88,28 @@
     },
   };
 
-  const state = { meta: null, mw4: null, codWeapons: null };
+  const state = { meta: null, mw4: null, codWeapons: null, legacyLoadouts: [] };
   const html = (value) => String(value || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
   const slug = (value) => String(value || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/mk\./g, "mk").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
   const fetchJson = async (url) => {
     const response = await fetch(`${url}?v=${Date.now()}`, { cache: "no-store" });
     return response.ok ? response.json() : null;
   };
+
+  async function fetchLegacyLoadouts() {
+    if (Array.isArray(window.loadouts)) return window.loadouts;
+    try {
+      const response = await fetch(`script.js?v=${Date.now()}`, { cache: "no-store" });
+      if (!response.ok) return [];
+      const source = await response.text();
+      const match = source.match(/const loadouts\s*=\s*(\[[\s\S]*?\]);\s*(?:window\.loadouts\s*=|const modeConfig\s*=)/);
+      if (!match) return [];
+      const loadouts = new Function(`"use strict"; return ${match[1]};`)();
+      return Array.isArray(loadouts) ? loadouts : [];
+    } catch {
+      return [];
+    }
+  }
 
   function activePanel() {
     return document.querySelector(".tab-panel.active")?.dataset.panel || "weapons";
@@ -183,8 +198,15 @@
   function staticLoadout(item) {
     const key = item.id || slug(item.name);
     if (verifiedBuilds[key]) return verifiedBuilds[key];
-    if (!Array.isArray(window.loadouts)) return null;
-    return window.loadouts.find((loadout) => slug(loadout.name) === slug(item.name)) || null;
+    const loadouts = Array.isArray(window.loadouts) ? window.loadouts : state.legacyLoadouts;
+    if (!Array.isArray(loadouts)) return null;
+    return loadouts.find((loadout) => loadout.mode === currentMode() && slug(loadout.name) === slug(item.name)) ||
+      loadouts.find((loadout) => slug(loadout.name) === slug(item.name)) ||
+      null;
+  }
+
+  function isMetaInfoLine(value) {
+    return /^(pick-rate|quelle|rolle):/i.test(String(value || ""));
   }
 
   function tierHeading(item, groupSize) {
@@ -236,7 +258,9 @@
     let lastTier = "";
     grid.innerHTML = cards.map((item) => {
       const loadout = staticLoadout(item);
-      const attachments = loadout?.attachments?.length ? loadout.attachments : item.attachments || [];
+      const rawAttachments = loadout?.attachments?.length ? loadout.attachments : item.attachments || [];
+      const attachments = rawAttachments.filter((attachment) => !isMetaInfoLine(attachment));
+      const metaInfo = rawAttachments.filter(isMetaInfoLine);
       const perks = loadout?.perks || [];
       const role = loadout?.role || item.description || "";
       const secondary = loadout?.secondary || "";
@@ -266,8 +290,8 @@
           <section class="card-details meta-card-details">
             <p class="role">${html(role)}</p>
             <div class="attachment-columns">
-              <div class="detail-panel"><span class="details-kicker">Aufsaetze</span><ul class="attachment-list">${attachments.length ? attachments.map((attachment) => `<li>${html(attachment)}</li>`).join("") : "<li>Keine verifizierten Aufsaetze fuer diese Waffe hinterlegt.</li>"}</ul></div>
-              <div class="detail-panel"><span class="details-kicker">Setup</span><ul class="perk-list">${/^wzstats/i.test(buildCode) || !buildCode ? "" : `<li>Code: ${html(buildCode)}</li>`}${secondary ? `<li>Pair: ${html(secondary)}</li>` : ""}${perks.map((perk, index) => `<li>Extra ${index + 1}: ${html(perk)}</li>`).join("")}${!buildCode && !secondary && !perks.length ? "<li>Quelle: WZStats Tierlist</li>" : ""}</ul></div>
+              <div class="detail-panel"><span class="details-kicker">Aufsaetze</span><ul class="attachment-list">${attachments.length ? attachments.map((attachment) => `<li>${html(attachment)}</li>`).join("") : "<li>Keine geprueften Aufsaetze fuer diese Waffe hinterlegt.</li>"}</ul></div>
+              <div class="detail-panel"><span class="details-kicker">Setup</span><ul class="perk-list">${/^wzstats/i.test(buildCode) || !buildCode ? "" : `<li>Code: ${html(buildCode)}</li>`}${secondary ? `<li>Pair: ${html(secondary)}</li>` : ""}${perks.map((perk, index) => `<li>Extra ${index + 1}: ${html(perk)}</li>`).join("")}${metaInfo.map((line) => `<li>${html(line)}</li>`).join("")}${!buildCode && !secondary && !perks.length && !metaInfo.length ? "<li>Quelle: WZStats Tierlist</li>" : ""}</ul></div>
             </div>
           </section>
           <footer class="card-footer"><span class="range">${html(item.role || item.weaponClass)}</span><button class="expand-button" type="button" aria-expanded="${isExpanded ? "true" : "false"}" aria-label="${html(item.name)} Aufsaetze ${isExpanded ? "ausblenden" : "anzeigen"}"><span>Details</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.4 8.6 12 13.2l4.6-4.6L18 10l-6 6-6-6 1.4-1.4Z"></path></svg></button></footer>
@@ -441,14 +465,16 @@
   }
 
   async function init() {
-    const [meta, mw4, codWeapons] = await Promise.all([
+    const [meta, mw4, codWeapons, legacyLoadouts] = await Promise.all([
       fetchJson(SOURCES.meta).catch(() => null),
       fetchJson(SOURCES.mw4).catch(() => null),
       fetchJson(SOURCES.codWeapons).catch(() => null),
+      fetchLegacyLoadouts(),
     ]);
     state.meta = meta;
     state.mw4 = mw4;
     state.codWeapons = codWeapons;
+    state.legacyLoadouts = legacyLoadouts;
     renderAll();
     document.addEventListener("click", (event) => {
       if (event.target.closest("#loadoutGrid .loadout-card")) return;
