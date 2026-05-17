@@ -269,10 +269,10 @@
       const fallbackUrl = fallbackImage(item);
       const image = `<div class="weapon-art"><img src="${html(imageUrl)}" data-fallback="${html(fallbackUrl)}" alt="${html(item.name)}" loading="lazy" onerror="this.onerror=null;this.src=this.dataset.fallback"></div>`;
       const statItems = [
-        `<span><strong>${html(item.scoreLabel)}</strong> Score</span>`,
-        item.pickRateLabel ? `<span><strong>${html(item.pickRateLabel)}</strong> Pick-Rate</span>` : "",
-        `<span><strong>${html(item.role || "Meta")}</strong> Rolle</span>`,
-        `<span><strong>${html(item.sourceUpdatedLabel)}</strong> Stand</span>`,
+        `<span><em>Score</em><strong>${html(item.scoreLabel)}</strong></span>`,
+        item.pickRateLabel ? `<span><em>Pick</em><strong>${html(item.pickRateLabel)}</strong></span>` : "",
+        `<span><em>Rolle</em><strong>${html(item.role || "Meta")}</strong></span>`,
+        `<span><em>Stand</em><strong>${html(item.sourceUpdatedLabel)}</strong></span>`,
       ].filter(Boolean).join("");
       const isExpanded = expandedCards.has(item.name);
       const heading = item.tier !== lastTier ? tierHeading(item, groupSizes.get(item.tier) || 0) : "";
@@ -337,6 +337,45 @@
         width: 11.5rem !important;
         max-width: 11.5rem !important;
         height: 6.75rem !important;
+      }
+
+      body #loadoutGrid .loadout-card .stat-row {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        gap: 0.45rem !important;
+        margin-top: 0.38rem !important;
+      }
+
+      body #loadoutGrid .loadout-card .stat-row span {
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 0.32rem !important;
+        width: fit-content !important;
+        max-width: 100% !important;
+        min-height: 1.85rem !important;
+        border: 1px solid rgba(255, 255, 255, 0.09) !important;
+        border-radius: 999px !important;
+        background: rgba(8, 13, 19, 0.68) !important;
+        padding: 0.22rem 0.58rem !important;
+        color: var(--text) !important;
+        font-size: 0.83rem !important;
+        line-height: 1 !important;
+        white-space: nowrap !important;
+      }
+
+      body #loadoutGrid .loadout-card .stat-row em {
+        color: var(--muted) !important;
+        font-style: normal !important;
+        font-size: 0.68rem !important;
+        font-weight: 900 !important;
+        text-transform: uppercase !important;
+      }
+
+      body #loadoutGrid .loadout-card .stat-row strong {
+        color: var(--text) !important;
+        font-size: 0.9rem !important;
+        font-weight: 950 !important;
       }
 
       body #loadoutGrid .loadout-card .meta-card-details {
