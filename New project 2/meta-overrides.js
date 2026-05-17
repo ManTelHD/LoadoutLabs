@@ -104,9 +104,59 @@
     return document.querySelector(".secondary-mode-switch .mode-button.active")?.dataset.mode || "warzone-ranked";
   }
 
+  function activeFilter() {
+    return document.querySelector("#filterToolbar .filter-button.active")?.dataset.filter || "all";
+  }
+
+  function currentQuery() {
+    return document.querySelector("#weaponSearch")?.value?.trim().toLowerCase() || "";
+  }
+
+  function currentSort() {
+    return document.querySelector("#sortSelect")?.value || "score";
+  }
+
   function getMetaList() {
     if (!state.meta) return null;
     return currentMode() === "bo7-ranked" ? state.meta.bo7Ranked : state.meta.warzoneRanked;
+  }
+
+  function matchesMetaFilter(item) {
+    const filter = activeFilter();
+    if (filter === "all") return true;
+    const role = slug(item.role);
+    const weaponClass = slug(item.weaponClass);
+    if (filter === "long") return role === "long-range";
+    if (filter === "close") return role === "close-range";
+    if (filter === "sniper") return role === "sniper";
+    if (filter === "support") return role === "sniper-support";
+    if (filter === "ar") return weaponClass === "assault-rifle";
+    if (filter === "smg") return weaponClass === "smg";
+    if (filter === "flex") return role === "flex" || weaponClass === "marksman-rifle" || weaponClass === "pistol";
+    return role === slug(filter) || weaponClass === slug(filter);
+  }
+
+  function matchesMetaQuery(item) {
+    const query = currentQuery();
+    if (!query) return true;
+    return [
+      item.name,
+      item.weaponClass,
+      item.role,
+      item.tierLabel,
+      item.rankLabel,
+      item.scoreLabel,
+      ...(item.attachments || []),
+    ].join(" ").toLowerCase().includes(query);
+  }
+
+  function visibleMetaItems(data) {
+    const items = data.items.filter(matchesMetaFilter).filter(matchesMetaQuery);
+    const sort = currentSort();
+    if (sort === "name") return items.sort((a, b) => a.name.localeCompare(b.name));
+    if (sort === "range") return items.sort((a, b) => String(a.role).localeCompare(String(b.role)) || a.position - b.position);
+    if (sort === "pick") return items.sort((a, b) => (b.pickRate || 0) - (a.pickRate || 0) || a.position - b.position);
+    return items;
   }
 
   function imageMap() {
@@ -171,9 +221,17 @@
     if (!grid || !data || activePanel() !== "weapons") return;
 
     const map = imageMap();
-    const cards = data.items;
+    const cards = visibleMetaItems(data);
     const expandedCards = new Set([...grid.querySelectorAll(".loadout-card.expanded")].map((card) => card.dataset.loadoutCard));
-    if (count) count.textContent = `${cards.length} Meta-Waffen angezeigt`;
+    if (count) count.textContent = `${cards.length} von ${data.items.length} Meta-Waffen angezeigt`;
+    if (!cards.length) {
+      grid.innerHTML = `
+        <div class="empty-state">
+          <h3>Keine Meta-Waffe gefunden</h3>
+          <p>Versuch einen anderen Suchbegriff oder wechsel den Rollenfilter.</p>
+        </div>`;
+      return;
+    }
     const groupSizes = cards.reduce((sizes, item) => sizes.set(item.tier, (sizes.get(item.tier) || 0) + 1), new Map());
     let lastTier = "";
     grid.innerHTML = cards.map((item) => {
@@ -365,6 +423,8 @@
       requestAnimationFrame(renderAll);
       setTimeout(renderAll, 80);
     });
+    document.querySelector("#weaponSearch")?.addEventListener("input", () => requestAnimationFrame(renderAll));
+    document.querySelector("#sortSelect")?.addEventListener("change", () => requestAnimationFrame(renderAll));
     new MutationObserver(() => fixImages()).observe(document.body, { childList: true, subtree: true });
   }
 
