@@ -260,26 +260,33 @@
       body .meta-tier-heading {
         --tier-heading-color: #b9ff3d;
         --tier-heading-rgb: 185, 255, 61;
-        border-color: rgba(var(--tier-heading-rgb), 0.24) !important;
-        border-left: 0.58rem solid var(--tier-heading-color) !important;
-        background: linear-gradient(90deg, rgba(var(--tier-heading-rgb), 0.2), rgba(var(--tier-heading-rgb), 0.08) 36%, rgba(255, 255, 255, 0.025)), #0d131c !important;
-        box-shadow: 0 1rem 2.1rem rgba(0, 0, 0, 0.28), inset 0 0 0 1px rgba(var(--tier-heading-rgb), 0.06) !important;
+        min-height: 4.35rem !important;
+        padding: 1rem 1.35rem !important;
+        border-color: rgba(var(--tier-heading-rgb), 0.42) !important;
+        border-left: 1rem solid var(--tier-heading-color) !important;
+        background: linear-gradient(90deg, rgba(var(--tier-heading-rgb), 0.32), rgba(var(--tier-heading-rgb), 0.14) 34%, rgba(255, 255, 255, 0.04)), #0d131c !important;
+        box-shadow: 0 1rem 2.1rem rgba(0, 0, 0, 0.34), 0 0 2rem rgba(var(--tier-heading-rgb), 0.14), inset 0 0 0 1px rgba(var(--tier-heading-rgb), 0.14) !important;
       }
 
       body .meta-tier-heading span {
         color: var(--tier-heading-color) !important;
-        text-shadow: 0 0 1.25rem rgba(var(--tier-heading-rgb), 0.28) !important;
+        font-size: clamp(1.38rem, 1.75vw, 1.75rem) !important;
+        letter-spacing: 0 !important;
+        text-shadow: 0 0 1.25rem rgba(var(--tier-heading-rgb), 0.48), 0 0 0.35rem rgba(var(--tier-heading-rgb), 0.28) !important;
       }
 
       body .meta-tier-heading small {
-        color: color-mix(in srgb, var(--tier-heading-color) 34%, var(--muted)) !important;
+        color: color-mix(in srgb, var(--tier-heading-color) 56%, var(--muted)) !important;
+        font-size: 0.86rem !important;
       }
 
       body .meta-tier-heading.tier-heading-meta {
         --tier-heading-color: #b9ff3d;
         --tier-heading-rgb: 185, 255, 61;
-        border-left-width: 0.72rem !important;
-        background: linear-gradient(90deg, rgba(185, 255, 61, 0.26), rgba(41, 230, 129, 0.1) 42%, rgba(255, 255, 255, 0.03)), #111720 !important;
+        border-left-width: 1.25rem !important;
+        border-color: rgba(185, 255, 61, 0.58) !important;
+        background: linear-gradient(90deg, rgba(185, 255, 61, 0.42), rgba(41, 230, 129, 0.18) 42%, rgba(255, 255, 255, 0.045)), #111720 !important;
+        box-shadow: 0 1.15rem 2.4rem rgba(0, 0, 0, 0.38), 0 0 2.5rem rgba(185, 255, 61, 0.2), inset 0 0 0 1px rgba(185, 255, 61, 0.2) !important;
       }
 
       body .meta-tier-heading.tier-heading-a {
