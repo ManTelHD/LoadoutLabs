@@ -53,11 +53,35 @@
     style.id = "meta-card-cleanup";
     style.textContent = `
       body #loadoutGrid .loadout-card .tag-list { display: none !important; }
-      body #loadoutGrid .loadout-card .stat-row span:first-child { display: none !important; }
       body #loadoutGrid .loadout-card .stat-row span:last-child { display: none !important; }
-      body #loadoutGrid .loadout-card .stat-row span:only-child { display: inline-flex !important; }
     `;
     document.head.appendChild(style);
+  }
+
+  function scoreForCard(card) {
+    const tier = card.querySelector(".rank-badge span")?.textContent?.trim().toLowerCase() || "";
+    const rank = Number(card.querySelector(".rank-badge")?.textContent?.match(/#(\d+)/)?.[1] || 1);
+    const base = tier.includes("meta") ? 100 : tier.startsWith("a") ? 89 : tier.startsWith("b") ? 79 : tier.startsWith("c") ? 69 : tier.startsWith("d") ? 59 : 50;
+    return Math.max(1, base - Math.max(0, rank - 1));
+  }
+
+  function cleanRenderedCards(root = document) {
+    root.querySelectorAll?.("#loadoutGrid .loadout-card").forEach((card) => {
+      card.querySelectorAll(".stat-row span").forEach((stat) => {
+        const label = stat.querySelector("em")?.textContent?.trim().toLowerCase();
+        if (label === "score") stat.querySelector("strong").textContent = String(scoreForCard(card));
+        if (label === "stand") stat.remove();
+      });
+      card.querySelector(".tag-list")?.remove();
+    });
+  }
+
+  function watchCards() {
+    if (typeof document === "undefined") return;
+    const run = () => cleanRenderedCards();
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run);
+    else requestAnimationFrame(run);
+    new MutationObserver(run).observe(document.body, { childList: true, subtree: true });
   }
 
   function legacyLoadouts() {
@@ -92,6 +116,7 @@
     names.forEach((name) => byModeAndName.set(`${loadout.mode}:${slug(name)}`, { ...loadout, name }));
   });
 
-  injectCardCleanup();
   window.loadouts = [...byModeAndName.values()];
+  injectCardCleanup();
+  watchCards();
 }());
