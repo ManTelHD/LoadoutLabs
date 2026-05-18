@@ -52,8 +52,28 @@
     const style = document.createElement("style");
     style.id = "meta-card-cleanup";
     style.textContent = `
+      body .site-header,
+      body .section,
+      body .loadout-section,
+      body .intel-band,
+      body .updates,
+      body .site-footer {
+        padding-left: clamp(1.35rem, 5vw, 5.5rem) !important;
+        padding-right: clamp(1.35rem, 5vw, 5.5rem) !important;
+      }
       body #loadoutGrid .loadout-card .tag-list { display: none !important; }
       body #loadoutGrid .loadout-card .stat-row span:last-child { display: none !important; }
+      @media (max-width: 720px) {
+        body .site-header,
+        body .section,
+        body .loadout-section,
+        body .intel-band,
+        body .updates,
+        body .site-footer {
+          padding-left: 1rem !important;
+          padding-right: 1rem !important;
+        }
+      }
     `;
     document.head.appendChild(style);
   }
