@@ -69,7 +69,11 @@
     root.querySelectorAll?.("#loadoutGrid .loadout-card").forEach((card) => {
       card.querySelectorAll(".stat-row span").forEach((stat) => {
         const label = stat.querySelector("em")?.textContent?.trim().toLowerCase();
-        if (label === "score") stat.querySelector("strong").textContent = String(scoreForCard(card));
+        if (label === "score") {
+          const strong = stat.querySelector("strong");
+          const score = String(scoreForCard(card));
+          if (strong && strong.textContent !== score) strong.textContent = score;
+        }
         if (label === "stand") stat.remove();
       });
       card.querySelector(".tag-list")?.remove();
