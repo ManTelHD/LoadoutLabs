@@ -1,119 +1,112 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "generatedAt": "2026-05-18T07:01:00.000Z",
   "generatedAtLabel": "18. Mai 2026 um 09:01 MESZ",
+  "sourcePolicy": "Updates werden primaer aus den offiziellen X-Kanaelen @CODUpdates und @Treyarch eingeordnet. Call-of-Duty-Patchnotes bleiben als Detail-Link fuer laengere Notes erhalten.",
   "sources": [
+    {
+      "id": "codupdates-x",
+      "label": "Call of Duty Updates auf X",
+      "handle": "@CODUpdates",
+      "url": "https://x.com/CODUpdates",
+      "scope": "Live-Issues, Fixes, Patchnotes und laufende Call-of-Duty-Updates"
+    },
+    {
+      "id": "treyarch-x",
+      "label": "Treyarch auf X",
+      "handle": "@Treyarch",
+      "url": "https://x.com/Treyarch",
+      "scope": "Black-Ops-7-Multiplayer, Zombies, Ranked und Treyarch-Modi"
+    },
     {
       "id": "cod-patchnotes",
       "label": "Call of Duty Patch Notes",
-      "url": "https://www.callofduty.com/patchnotes"
+      "url": "https://www.callofduty.com/patchnotes",
+      "scope": "Ausfuehrliche offizielle Patchnotes als Detailquelle"
     }
   ],
   "highlights": [
     {
-      "label": "Aktuell",
-      "title": "Call of Duty: Warzone Season 03 Reloaded Patch Notes",
-      "text": "14. Mai 2026: Warzone aktualisiert Rejoin, Resurgence-Loot, Equipment-Drops, Self-Revives, EMP Grenade, Cluster Grenade, Sensor Dart und mehrere Killstreak-/Quality-of-Life-Punkte."
+      "label": "COD Updates auf X",
+      "title": "Warzone Season 03 Reloaded Live-Fixes",
+      "text": "@CODUpdates ist die offizielle Quelle fuer Live-Issues, Fixes und Patchnotes. Aktuell wichtig: Rejoin, Resurgence-Loot, Self-Revives, Equipment-Drops, EMP Grenade, Cluster Grenade und Sensor Dart."
+    },
+    {
+      "label": "Treyarch auf X",
+      "title": "Black Ops 7 / Zombies / Ranked",
+      "text": "@Treyarch wird fuer BO7-Multiplayer, Ranked, Zombies und Endgame eingeordnet. Aktuell wichtig: Ranked Forfeit, Dark-Ops-Tracking, Totenreich-Fortschritt, Wild Fire und Endgame-UI."
     },
     {
       "label": "Geprueft",
-      "title": "Offizielle Quellen geprueft",
-      "text": "Offizielle Call-of-Duty-Patchnotes wurden am 18. Mai 2026 um 09:01 MESZ geprueft."
-    },
-    {
-      "label": "Weitere Updates",
-      "title": "Call of Duty: Black Ops 7 Season 03 Patch Notes",
-      "text": "14. Mai 2026: Black Ops 7 behebt Ranked-Forfeit, Dark-Ops-Tracking, Safeguard-/Private-Match-UI, Totenreich-Fortschritt, Wild-Fire-Augments und Endgame-Popups."
+      "title": "Offizielle X-Quellen geprueft",
+      "text": "@CODUpdates und @Treyarch wurden am 18. Mai 2026 um 09:01 MESZ als primaere Update-Quellen hinterlegt."
     }
   ],
   "updates": [
     {
-      "title": "Call of Duty: Black Ops 7 Season 03 Patch Notes",
-      "category": "multiplayer",
-      "status": "Offiziell",
-      "source": "Call of Duty",
-      "date": "2026-05-14",
-      "dateLabel": "14. Mai 2026",
-      "url": "https://www.callofduty.com/patchnotes/2026/04/call-of-duty-black-ops-7-season-03-patch-notes",
-      "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/mp/season-03/BO7-S03_PATCHNOTES-BO7.jpg",
-      "summary": "Season 03 Reloaded fasst die neuesten BO7-Fixes zusammen: Ranked Forfeit ist wieder aktiv, mehrere UI-/Challenge-Probleme wurden behoben und Zombies sowie Endgame bekommen Stabilitaets- und Fortschrittsfixes."
-    },
-    {
-      "title": "Call of Duty: Warzone Season 03 Reloaded Patch Notes",
+      "title": "Warzone Live Update: Rejoin, Loot & Equipment",
       "category": "warzone",
-      "status": "Offiziell",
-      "source": "Call of Duty",
+      "status": "X / Offiziell",
+      "source": "Call of Duty Updates auf X",
+      "sourceHandle": "@CODUpdates",
+      "sourceUrl": "https://x.com/CODUpdates",
       "date": "2026-05-14",
       "dateLabel": "14. Mai 2026",
       "url": "https://www.callofduty.com/patchnotes/2026/04/call-of-duty-bo7-warzone-season-03-reloaded-patch-notes",
       "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/wz/s03r/BO7-S03R_PATCHNOTES-WZ.jpg",
-      "summary": "Warzone aktualisiert Rejoin bis in die letzten Matchphasen, vereinheitlicht Resurgence-Loot, reduziert Self-Revives und bringt EMP Grenade, Cluster Grenade sowie Sensor Dart in Battle Royale und Resurgence."
+      "summary": "Aus @CODUpdates/Warzone einordnen: Rejoin ist bis in spaete Matchphasen erweitert, Resurgence-Loot wurde angepasst, Self-Revives reduziert und EMP Grenade, Cluster Grenade sowie Sensor Dart wurden fuer Battle Royale und Resurgence aktualisiert."
     },
     {
-      "title": "Call of Duty: Warzone Season 03 Patch Notes",
+      "title": "Black Ops 7 Update: Ranked, Zombies & Endgame Fixes",
+      "category": "multiplayer",
+      "status": "X / Offiziell",
+      "source": "Treyarch auf X",
+      "sourceHandle": "@Treyarch",
+      "sourceUrl": "https://x.com/Treyarch",
+      "date": "2026-05-14",
+      "dateLabel": "14. Mai 2026",
+      "url": "https://www.callofduty.com/patchnotes/2026/04/call-of-duty-black-ops-7-season-03-patch-notes",
+      "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/mp/season-03/BO7-S03_PATCHNOTES-BO7.jpg",
+      "summary": "Aus @Treyarch/BO7 einordnen: Ranked Forfeit ist wieder aktiv, SR-Exploit-Vermeidung wurde adressiert, Dark-Ops-Tracking, Safeguard-/Private-Match-UI, Totenreich-Fortschritt, Wild Fire und Endgame-Popups wurden gefixt."
+    },
+    {
+      "title": "Warzone Season 03 Basisupdate",
       "category": "warzone",
-      "status": "Offiziell",
-      "source": "Call of Duty",
+      "status": "Patchnotes / Archiv",
+      "source": "Call of Duty Patch Notes",
+      "sourceHandle": "@CODUpdates",
+      "sourceUrl": "https://x.com/CODUpdates",
       "date": "2026-04-21",
       "dateLabel": "21. April 2026",
       "url": "https://www.callofduty.com/patchnotes/2026/04/call-of-duty-bo7-warzone-season-03-patch-notes",
       "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/wz/s03/BO7-S03_PATCHNOTES-WZ.jpg",
-      "summary": "Season 03 bringt Big-Map-Rotation, Ranked-Play-Kontext, neue Exotic-Weapon-Rotation und weitere Quality-of-Life-Aenderungen fuer Warzone."
+      "summary": "Archiv fuer Season 03: Big-Map-Rotation, Ranked-Play-Kontext, Exotic-Weapon-Rotation und weitere Warzone-Systemupdates. Fuer Live-Aenderungen wird @CODUpdates priorisiert."
     },
     {
-      "title": "Call of Duty: Black Ops 7 Season 02 Patch Notes",
+      "title": "Black Ops 7 Season 02 Archiv",
       "category": "multiplayer",
-      "status": "Offiziell",
-      "source": "Call of Duty",
+      "status": "Patchnotes / Archiv",
+      "source": "Treyarch auf X",
+      "sourceHandle": "@Treyarch",
+      "sourceUrl": "https://x.com/Treyarch",
       "date": "2026-03-26",
       "dateLabel": "26. März 2026",
       "url": "https://www.callofduty.com/patchnotes/2026/02/call-of-duty-black-ops-7-season-02-patch-notes",
       "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/mp/season-02/BO7-S02_PATCHNOTES-BO7.jpg",
-      "summary": "Season 02 bleibt als aelterer offizieller Patchnotes-Stand fuer Multiplayer, Zombies und Stabilitaetsfixes im Archiv sichtbar."
+      "summary": "Aelterer offizieller BO7-Stand fuer Multiplayer, Zombies und Stabilitaetsfixes. Fuer neue Treyarch-Meldungen wird @Treyarch priorisiert."
     },
     {
-      "title": "Call of Duty: Warzone Season 02 Reloaded Patch Notes",
+      "title": "Warzone Season 02 Reloaded Archiv",
       "category": "warzone",
-      "status": "Offiziell",
-      "source": "Call of Duty",
+      "status": "Patchnotes / Archiv",
+      "source": "Call of Duty Updates auf X",
+      "sourceHandle": "@CODUpdates",
+      "sourceUrl": "https://x.com/CODUpdates",
       "date": "2026-03-10",
       "dateLabel": "10. März 2026",
       "url": "https://www.callofduty.com/patchnotes/2026/03/call-of-duty-bo7-warzone-season-02-reloaded-patch-notes",
       "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/wz/s02r/BO7-S02R_PATCHNOTES-WZ.jpg",
-      "summary": "Season 02 Reloaded bleibt im Archiv: Warzone-Anpassungen an Bedienung, Loot, Modi und laufenden Playlist-/Gameplay-Fixes."
-    },
-    {
-      "title": "Call of Duty: Warzone Season 02 Patch Notes",
-      "category": "warzone",
-      "status": "Offiziell",
-      "source": "Call of Duty",
-      "date": "2026-03-03",
-      "dateLabel": "3. März 2026",
-      "url": "https://www.callofduty.com/patchnotes/2026/02/call-of-duty-bo7-warzone-season-02-patch-notes",
-      "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/wz/s02/wz_02_tout_patch_notes.jpg",
-      "summary": "Season 02 Archiv: Iron Gauntlet Beta, Battle-Royale-Anpassungen und weitere Warzone-Systemupdates."
-    },
-    {
-      "title": "Call of Duty: Black Ops 7 Season 01 Patch Notes",
-      "category": "multiplayer",
-      "status": "Offiziell",
-      "source": "Call of Duty",
-      "date": "2026-01-28",
-      "dateLabel": "28. Januar 2026",
-      "url": "https://www.callofduty.com/patchnotes/2025/12/call-of-duty-black-ops-7-season-01-patch-notes",
-      "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/mp/season-01/BO7-S01_PATCHNOTES-MP-ZM.jpg",
-      "summary": "Season 01 Archiv: fruehere Multiplayer-, Zombies- und Map-Fixes bleiben als Verlauf erhalten."
-    },
-    {
-      "title": "Call of Duty: Warzone Season 01 Reloaded Patch Notes",
-      "category": "warzone",
-      "status": "Offiziell",
-      "source": "Call of Duty",
-      "date": "2026-01-08",
-      "dateLabel": "8. Januar 2026",
-      "url": "https://www.callofduty.com/patchnotes/2026/01/call-of-duty-bo7-warzone-season-01-reloaded-patch-notes",
-      "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/wz/s01r/tout.png",
-      "summary": "Season 01 Reloaded Archiv: fruehere Warzone-Anpassungen, Balancepunkte und Systemfixes bleiben nachvollziehbar."
+      "summary": "Archiv fuer Warzone-Anpassungen an Bedienung, Loot, Modi und laufenden Playlist-/Gameplay-Fixes. Fuer neue Live-Fixes wird @CODUpdates priorisiert."
     }
   ]
 }
