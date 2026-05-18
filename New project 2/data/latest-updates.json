@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-17T21:10:30.294Z",
-  "generatedAtLabel": "17. Mai 2026 um 23:10 MESZ",
+  "generatedAt": "2026-05-18T07:01:00.000Z",
+  "generatedAtLabel": "18. Mai 2026 um 09:01 MESZ",
   "sources": [
     {
       "id": "cod-patchnotes",
@@ -12,18 +12,18 @@
   "highlights": [
     {
       "label": "Aktuell",
-      "title": "Call of Duty: Black Ops 7 Season 03 Patch Notes",
-      "text": "14. Mai 2026: MULTIPLAYER Weapons Sniper Rifles This adjustment went live on May 30 with Season 03 Reloaded but was missed in the Patch Notes. We’re adding it here to ensure visibility. Sniper Rifle Adjustments Weapon Adjustments Weapon: Strider 300 Adjustments: Strider..."
+      "title": "Call of Duty: Warzone Season 03 Reloaded Patch Notes",
+      "text": "14. Mai 2026: Warzone aktualisiert Rejoin, Resurgence-Loot, Equipment-Drops, Self-Revives, EMP Grenade, Cluster Grenade, Sensor Dart und mehrere Killstreak-/Quality-of-Life-Punkte."
     },
     {
       "label": "Geprueft",
-      "title": "Automatisch aktualisiert",
-      "text": "Offizielle Quellen wurden am 17. Mai 2026 um 23:10 MESZ geprueft."
+      "title": "Offizielle Quellen geprueft",
+      "text": "Offizielle Call-of-Duty-Patchnotes wurden am 18. Mai 2026 um 09:01 MESZ geprueft."
     },
     {
       "label": "Weitere Updates",
-      "title": "Call of Duty: Warzone Season 03 Reloaded Patch Notes",
-      "text": "14. Mai 2026: This update focuses on underutilized attachments, with adjustments aimed at increasing overall build diversity and encouraging players to explore new options."
+      "title": "Call of Duty: Black Ops 7 Season 03 Patch Notes",
+      "text": "14. Mai 2026: Black Ops 7 behebt Ranked-Forfeit, Dark-Ops-Tracking, Safeguard-/Private-Match-UI, Totenreich-Fortschritt, Wild-Fire-Augments und Endgame-Popups."
     }
   ],
   "updates": [
@@ -36,7 +36,7 @@
       "dateLabel": "14. Mai 2026",
       "url": "https://www.callofduty.com/patchnotes/2026/04/call-of-duty-black-ops-7-season-03-patch-notes",
       "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/mp/season-03/BO7-S03_PATCHNOTES-BO7.jpg",
-      "summary": "MULTIPLAYER Weapons Sniper Rifles This adjustment went live on May 30 with Season 03 Reloaded but was missed in the Patch Notes. We’re adding it here to ensure visibility. Sniper Rifle Adjustments Weapon Adjustments Weapon: Strider 300 Adjustments: Strider..."
+      "summary": "Season 03 Reloaded fasst die neuesten BO7-Fixes zusammen: Ranked Forfeit ist wieder aktiv, mehrere UI-/Challenge-Probleme wurden behoben und Zombies sowie Endgame bekommen Stabilitaets- und Fortschrittsfixes."
     },
     {
       "title": "Call of Duty: Warzone Season 03 Reloaded Patch Notes",
@@ -47,7 +47,7 @@
       "dateLabel": "14. Mai 2026",
       "url": "https://www.callofduty.com/patchnotes/2026/04/call-of-duty-bo7-warzone-season-03-reloaded-patch-notes",
       "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/wz/s03r/BO7-S03R_PATCHNOTES-WZ.jpg",
-      "summary": "This update focuses on underutilized attachments, with adjustments aimed at increasing overall build diversity and encouraging players to explore new options."
+      "summary": "Warzone aktualisiert Rejoin bis in die letzten Matchphasen, vereinheitlicht Resurgence-Loot, reduziert Self-Revives und bringt EMP Grenade, Cluster Grenade sowie Sensor Dart in Battle Royale und Resurgence."
     },
     {
       "title": "Call of Duty: Warzone Season 03 Patch Notes",
@@ -58,7 +58,7 @@
       "dateLabel": "21. April 2026",
       "url": "https://www.callofduty.com/patchnotes/2026/04/call-of-duty-bo7-warzone-season-03-patch-notes",
       "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/wz/s03/BO7-S03_PATCHNOTES-WZ.jpg",
-      "summary": "We’re refreshing the Exotic Weapon lineup in Black Ops Royale with 3 new additions to keep gameplay feeling dynamic and distinct. Additional Exotic Weapon updates are planned throughout the chapter."
+      "summary": "Season 03 bringt Big-Map-Rotation, Ranked-Play-Kontext, neue Exotic-Weapon-Rotation und weitere Quality-of-Life-Aenderungen fuer Warzone."
     },
     {
       "title": "Call of Duty: Black Ops 7 Season 02 Patch Notes",
@@ -69,7 +69,7 @@
       "dateLabel": "26. März 2026",
       "url": "https://www.callofduty.com/patchnotes/2026/02/call-of-duty-black-ops-7-season-02-patch-notes",
       "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/mp/season-02/BO7-S02_PATCHNOTES-BO7.jpg",
-      "summary": "Addressed an issue where the Mystery Box would appear broken following time travel after drawing all weapons."
+      "summary": "Season 02 bleibt als aelterer offizieller Patchnotes-Stand fuer Multiplayer, Zombies und Stabilitaetsfixes im Archiv sichtbar."
     },
     {
       "title": "Call of Duty: Warzone Season 02 Reloaded Patch Notes",
@@ -80,7 +80,7 @@
       "dateLabel": "10. März 2026",
       "url": "https://www.callofduty.com/patchnotes/2026/03/call-of-duty-bo7-warzone-season-02-reloaded-patch-notes",
       "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/wz/s02r/BO7-S02R_PATCHNOTES-WZ.jpg",
-      "summary": "The Emotes & Sprays selection wheel experience has been improved when using a mouse to select desired Emotes of Sprays."
+      "summary": "Season 02 Reloaded bleibt im Archiv: Warzone-Anpassungen an Bedienung, Loot, Modi und laufenden Playlist-/Gameplay-Fixes."
     },
     {
       "title": "Call of Duty: Warzone Season 02 Patch Notes",
@@ -91,7 +91,7 @@
       "dateLabel": "3. März 2026",
       "url": "https://www.callofduty.com/patchnotes/2026/02/call-of-duty-bo7-warzone-season-02-patch-notes",
       "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/wz/s02/wz_02_tout_patch_notes.jpg",
-      "summary": "Iron Gauntlet [Beta] is a new competitive mode in Call of Duty: #Warzone that introduces a more demanding take on Battle Royale built around decision-making and mechanical skill."
+      "summary": "Season 02 Archiv: Iron Gauntlet Beta, Battle-Royale-Anpassungen und weitere Warzone-Systemupdates."
     },
     {
       "title": "Call of Duty: Black Ops 7 Season 01 Patch Notes",
@@ -102,7 +102,7 @@
       "dateLabel": "28. Januar 2026",
       "url": "https://www.callofduty.com/patchnotes/2025/12/call-of-duty-black-ops-7-season-01-patch-notes",
       "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/mp/season-01/BO7-S01_PATCHNOTES-MP-ZM.jpg",
-      "summary": "Smoothed collision on some spots that lead to unintended sightlines for the following maps. (Added Jan. 15)"
+      "summary": "Season 01 Archiv: fruehere Multiplayer-, Zombies- und Map-Fixes bleiben als Verlauf erhalten."
     },
     {
       "title": "Call of Duty: Warzone Season 01 Reloaded Patch Notes",
@@ -113,7 +113,7 @@
       "dateLabel": "8. Januar 2026",
       "url": "https://www.callofduty.com/patchnotes/2026/01/call-of-duty-bo7-warzone-season-01-reloaded-patch-notes",
       "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/wz/s01r/tout.png",
-      "summary": "After dying with Power Armor the Fusion Core reduction penalty reduced from 80% to 50%."
+      "summary": "Season 01 Reloaded Archiv: fruehere Warzone-Anpassungen, Balancepunkte und Systemfixes bleiben nachvollziehbar."
     }
   ]
 }
