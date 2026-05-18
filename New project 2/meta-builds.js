@@ -84,6 +84,23 @@
     new MutationObserver(run).observe(document.body, { childList: true, subtree: true });
   }
 
+  function bindDetailsClick() {
+    if (typeof document === "undefined" || window.__metaDetailsClickBound) return;
+    window.__metaDetailsClickBound = true;
+    document.addEventListener("click", (event) => {
+      const button = event.target.closest?.("#loadoutGrid .expand-button");
+      if (!button) return;
+      const card = button.closest(".loadout-card");
+      if (!card) return;
+      event.preventDefault();
+      event.stopPropagation();
+      const shouldExpand = !card.classList.contains("expanded");
+      card.classList.toggle("expanded", shouldExpand);
+      button.setAttribute("aria-expanded", String(shouldExpand));
+      button.setAttribute("aria-label", shouldExpand ? "Aufsaetze ausblenden" : "Aufsaetze anzeigen");
+    }, true);
+  }
+
   function legacyLoadouts() {
     try {
       const request = new XMLHttpRequest();
@@ -119,4 +136,5 @@
   window.loadouts = [...byModeAndName.values()];
   injectCardCleanup();
   watchCards();
+  bindDetailsClick();
 }());
