@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-21T12:27:58.964Z",
-  "generatedAtLabel": "21. Mai 2026 um 14:27 MESZ",
+  "generatedAt": "2026-05-21T22:50:26.028Z",
+  "generatedAtLabel": "22. Mai 2026 um 00:50 MESZ",
   "sources": [
     {
       "id": "cod-patchnotes",
@@ -12,21 +12,32 @@
   "highlights": [
     {
       "label": "Aktuell",
-      "title": "Call of Duty: Black Ops 7 Season 03 Patch Notes",
-      "text": "14. Mai 2026: MULTIPLAYER Weapons Sniper Rifles This adjustment went live on May 30 with Season 03 Reloaded but was missed in the Patch Notes. We’re adding it here to ensure visibility. Sniper Rifle Adjustments Weapon Adjustments Weapon: Strider 300 Adjustments: Strider..."
+      "title": "Call of Duty: Warzone Season 03 Reloaded Patch Notes",
+      "text": "21. Mai 2026: This update focuses on underutilized attachments, with adjustments aimed at increasing overall build diversity and encouraging players to explore new options."
     },
     {
       "label": "Geprueft",
       "title": "Automatisch aktualisiert",
-      "text": "Offizielle Quellen wurden am 21. Mai 2026 um 14:27 MESZ geprueft."
+      "text": "Offizielle Quellen wurden am 22. Mai 2026 um 00:50 MESZ geprueft."
     },
     {
       "label": "Weitere Updates",
-      "title": "Call of Duty: Warzone Season 03 Reloaded Patch Notes",
-      "text": "14. Mai 2026: This update focuses on underutilized attachments, with adjustments aimed at increasing overall build diversity and encouraging players to explore new options."
+      "title": "Call of Duty: Black Ops 7 Season 03 Patch Notes",
+      "text": "14. Mai 2026: MULTIPLAYER Weapons Sniper Rifles This adjustment went live on May 30 with Season 03 Reloaded but was missed in the Patch Notes. We’re adding it here to ensure visibility. Sniper Rifle Adjustments Weapon Adjustments Weapon: Strider 300 Adjustments: Strider..."
     }
   ],
   "updates": [
+    {
+      "title": "Call of Duty: Warzone Season 03 Reloaded Patch Notes",
+      "category": "warzone",
+      "status": "Offiziell",
+      "source": "Call of Duty",
+      "date": "2026-05-21",
+      "dateLabel": "21. Mai 2026",
+      "url": "https://www.callofduty.com/patchnotes/2026/04/call-of-duty-bo7-warzone-season-03-reloaded-patch-notes",
+      "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/wz/s03r/BO7-S03R_PATCHNOTES-WZ.jpg",
+      "summary": "This update focuses on underutilized attachments, with adjustments aimed at increasing overall build diversity and encouraging players to explore new options."
+    },
     {
       "title": "Call of Duty: Black Ops 7 Season 03 Patch Notes",
       "category": "multiplayer",
@@ -37,17 +48,6 @@
       "url": "https://www.callofduty.com/patchnotes/2026/04/call-of-duty-black-ops-7-season-03-patch-notes",
       "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/mp/season-03/BO7-S03_PATCHNOTES-BO7.jpg",
       "summary": "MULTIPLAYER Weapons Sniper Rifles This adjustment went live on May 30 with Season 03 Reloaded but was missed in the Patch Notes. We’re adding it here to ensure visibility. Sniper Rifle Adjustments Weapon Adjustments Weapon: Strider 300 Adjustments: Strider..."
-    },
-    {
-      "title": "Call of Duty: Warzone Season 03 Reloaded Patch Notes",
-      "category": "warzone",
-      "status": "Offiziell",
-      "source": "Call of Duty",
-      "date": "2026-05-14",
-      "dateLabel": "14. Mai 2026",
-      "url": "https://www.callofduty.com/patchnotes/2026/04/call-of-duty-bo7-warzone-season-03-reloaded-patch-notes",
-      "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/wz/s03r/BO7-S03R_PATCHNOTES-WZ.jpg",
-      "summary": "This update focuses on underutilized attachments, with adjustments aimed at increasing overall build diversity and encouraging players to explore new options."
     },
     {
       "title": "Call of Duty: Warzone Season 03 Patch Notes",
