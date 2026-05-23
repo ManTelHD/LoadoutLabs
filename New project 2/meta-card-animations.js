@@ -14,6 +14,20 @@
         cursor: pointer;
         position: relative;
         overflow: hidden;
+        border-radius: 8px !important;
+        border-top: 1px solid rgba(var(--card-tier-rgb), 0.22) !important;
+        border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+        border-bottom: 1px solid rgba(var(--card-tier-rgb), 0.16) !important;
+        border-left-width: 0.56rem !important;
+        border-left-color: rgba(var(--card-tier-rgb), 0.86) !important;
+        background:
+          radial-gradient(circle at 13% 18%, rgba(var(--card-tier-rgb), 0.22), transparent 18rem),
+          linear-gradient(135deg, rgba(var(--card-tier-rgb), 0.13), rgba(14, 20, 24, 0.93) 34%, rgba(6, 9, 13, 0.98) 100%) !important;
+        box-shadow:
+          0 1.2rem 2.8rem rgba(0, 0, 0, 0.42),
+          inset 0 1px 0 rgba(255, 255, 255, 0.06),
+          inset 0 0 0 1px rgba(var(--card-tier-rgb), 0.06) !important;
+        isolation: isolate;
         transition:
           transform 220ms ease,
           border-color 220ms ease,
@@ -52,10 +66,31 @@
         --card-tier-text: #ffc4d1;
       }
 
+      body #loadoutGrid .loadout-card > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      body #loadoutGrid .loadout-card::before {
+        content: "" !important;
+        position: absolute !important;
+        inset: 0 !important;
+        z-index: 0 !important;
+        pointer-events: none !important;
+        border-radius: inherit !important;
+        background:
+          linear-gradient(100deg, rgba(255, 255, 255, 0.08), transparent 28%, rgba(var(--card-tier-rgb), 0.09) 55%, transparent 78%),
+          repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.025) 0 1px, transparent 1px 46px) !important;
+        opacity: 0.68 !important;
+        transform: none !important;
+        box-shadow: none !important;
+      }
+
       body #loadoutGrid .loadout-card::after {
         content: "";
         position: absolute;
         inset: 0;
+        z-index: 0;
         pointer-events: none;
         opacity: 0;
         background:
@@ -65,15 +100,116 @@
 
       body #loadoutGrid .loadout-card:hover {
         border-color: rgba(var(--card-tier-rgb), 0.52) !important;
-        transform: translateY(-0.08rem);
-        box-shadow: 0 1.35rem 3rem rgba(0, 0, 0, 0.44), 0 0 1.4rem rgba(var(--card-tier-rgb), 0.12) !important;
+        border-left-color: var(--card-tier-color) !important;
+        transform: translateY(-0.12rem);
+        box-shadow:
+          0 1.55rem 3.4rem rgba(0, 0, 0, 0.52),
+          0 0 1.65rem rgba(var(--card-tier-rgb), 0.16),
+          inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
       }
 
       body #loadoutGrid .loadout-card.expanded,
       body #loadoutGrid .loadout-card.expand-animating {
         z-index: 4;
         border-color: rgba(var(--card-tier-rgb), 0.68) !important;
-        box-shadow: 0 1.55rem 3.4rem rgba(0, 0, 0, 0.52), 0 0 2rem rgba(var(--card-tier-rgb), 0.2) !important;
+        border-left-color: var(--card-tier-color) !important;
+        box-shadow:
+          0 1.7rem 3.8rem rgba(0, 0, 0, 0.56),
+          0 0 2.2rem rgba(var(--card-tier-rgb), 0.23),
+          inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+      }
+
+      body #loadoutGrid .loadout-card .weapon-art {
+        border-radius: 7px !important;
+        border: 1px solid rgba(var(--card-tier-rgb), 0.34) !important;
+        background:
+          radial-gradient(circle at 48% 42%, rgba(var(--card-tier-rgb), 0.18), transparent 62%),
+          linear-gradient(145deg, rgba(255,255,255,0.055), rgba(0,0,0,0.26)),
+          #05080c !important;
+        box-shadow:
+          0 0.9rem 2rem rgba(0, 0, 0, 0.38) !important,
+          inset 0 0 0 1px rgba(255, 255, 255, 0.045) !important;
+      }
+
+      body #loadoutGrid .loadout-card .weapon-art img {
+        transform: scale(1.1) !important;
+        filter: brightness(1.16) contrast(1.12) saturate(1.12) drop-shadow(0 0.65rem 0.85rem rgba(0, 0, 0, 0.42)) !important;
+        transition: transform 240ms ease, filter 240ms ease !important;
+      }
+
+      body #loadoutGrid .loadout-card:hover .weapon-art img {
+        transform: scale(1.16) translateY(-0.05rem) !important;
+        filter: brightness(1.22) contrast(1.14) saturate(1.18) drop-shadow(0 0.8rem 1rem rgba(0, 0, 0, 0.48)) !important;
+      }
+
+      body #loadoutGrid .loadout-card .mode-pill {
+        border: 1px solid rgba(var(--card-tier-rgb), 0.36) !important;
+        background: rgba(var(--card-tier-rgb), 0.09) !important;
+        color: var(--card-tier-text) !important;
+        box-shadow: 0 0 0.8rem rgba(var(--card-tier-rgb), 0.08) !important;
+      }
+
+      body #loadoutGrid .loadout-card .weapon-name {
+        letter-spacing: 0 !important;
+        text-shadow: 0 0 1.1rem rgba(var(--card-tier-rgb), 0.14) !important;
+      }
+
+      body #loadoutGrid .loadout-card .rank-badge {
+        border-color: rgba(var(--card-tier-rgb), 0.72) !important;
+        background:
+          linear-gradient(145deg, rgba(255,255,255,0.2), transparent 32%),
+          linear-gradient(135deg, var(--card-tier-color), color-mix(in srgb, var(--card-tier-color) 62%, #050807)) !important;
+        color: #060807 !important;
+        box-shadow:
+          0 0.95rem 1.9rem rgba(0, 0, 0, 0.35),
+          0 0 1.5rem rgba(var(--card-tier-rgb), 0.28) !important;
+      }
+
+      body #loadoutGrid .loadout-card .rank-badge span {
+        color: rgba(5, 8, 7, 0.78) !important;
+      }
+
+      body #loadoutGrid .loadout-card .stat-row span,
+      body #loadoutGrid .loadout-card .tag-list span {
+        border-color: rgba(var(--card-tier-rgb), 0.18) !important;
+        background: rgba(6, 10, 14, 0.62) !important;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.045) !important;
+      }
+
+      body #loadoutGrid .loadout-card .stat-row span:first-child {
+        border-color: rgba(var(--card-tier-rgb), 0.52) !important;
+        background: linear-gradient(135deg, rgba(var(--card-tier-rgb), 0.18), rgba(6, 10, 14, 0.76)) !important;
+      }
+
+      body #loadoutGrid .loadout-card .stat-row span:first-child strong {
+        color: var(--card-tier-text) !important;
+      }
+
+      body #loadoutGrid .loadout-card .card-footer {
+        border-top: 1px solid rgba(var(--card-tier-rgb), 0.15) !important;
+        padding-top: 0.82rem !important;
+      }
+
+      body #loadoutGrid .loadout-card .range {
+        color: var(--card-tier-text) !important;
+        text-shadow: 0 0 0.8rem rgba(var(--card-tier-rgb), 0.12) !important;
+      }
+
+      body #loadoutGrid .loadout-card .detail-panel,
+      body #loadoutGrid .loadout-card .attachment-list,
+      body #loadoutGrid .loadout-card .perk-list {
+        border-color: rgba(var(--card-tier-rgb), 0.16) !important;
+        background:
+          linear-gradient(135deg, rgba(var(--card-tier-rgb), 0.08), rgba(6, 10, 14, 0.84)),
+          #090f14 !important;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.045) !important;
+      }
+
+      body #loadoutGrid .loadout-card .details-kicker,
+      body #loadoutGrid .loadout-card .attachment-list li::before,
+      body #loadoutGrid .loadout-card .perk-list li::before {
+        color: var(--card-tier-text) !important;
+        background: var(--card-tier-color) !important;
       }
 
       body #loadoutGrid .loadout-card.details-flash::after {
@@ -165,6 +301,7 @@
 
       @media (prefers-reduced-motion: reduce) {
         body #loadoutGrid .loadout-card,
+        body #loadoutGrid .loadout-card .weapon-art img,
         body #loadoutGrid .loadout-card .expand-button,
         body #loadoutGrid .loadout-card .expand-button svg,
         body #loadoutGrid .loadout-card.expanded .attachment-columns,
