@@ -46,6 +46,17 @@
         padding-right: var(--site-side-gap) !important;
       }
 
+      body #loadoutGrid .loadout-card {
+        --tier-card-color: #8f98a7;
+        --tier-card-rgb: 143, 152, 167;
+        border-color: rgba(var(--tier-card-rgb), 0.26) !important;
+        box-shadow:
+          inset 0.42rem 0 0 rgba(var(--tier-card-rgb), 0.92),
+          0 0 0 1px rgba(var(--tier-card-rgb), 0.08),
+          0 1.1rem 2.4rem rgba(0, 0, 0, 0.34),
+          0 0 2rem rgba(var(--tier-card-rgb), 0.14) !important;
+      }
+
       body #loadoutGrid .loadout-card .meta-score-pill {
         display: inline-grid !important;
         grid-template-columns: auto auto auto !important;
@@ -53,10 +64,10 @@
         width: fit-content !important;
         margin: 0.2rem 0 0.55rem !important;
         overflow: hidden !important;
-        border: 1px solid rgba(154, 255, 62, 0.82) !important;
+        border: 1px solid rgba(var(--tier-card-rgb), 0.82) !important;
         border-radius: 0.52rem !important;
-        background: linear-gradient(135deg, rgba(154, 255, 62, 0.24), rgba(23, 230, 96, 0.1)), rgba(7, 15, 9, 0.96) !important;
-        box-shadow: 0 0 0 1px rgba(154, 255, 62, 0.14), 0 0.85rem 1.7rem rgba(23, 230, 96, 0.2) !important;
+        background: linear-gradient(135deg, rgba(var(--tier-card-rgb), 0.24), rgba(var(--tier-card-rgb), 0.1)), rgba(7, 15, 9, 0.96) !important;
+        box-shadow: 0 0 0 1px rgba(var(--tier-card-rgb), 0.14), 0 0.85rem 1.7rem rgba(var(--tier-card-rgb), 0.18) !important;
       }
 
       body #loadoutGrid .loadout-card .meta-score-pill span {
@@ -64,8 +75,8 @@
         display: inline-grid !important;
         place-items: center !important;
         padding: 0.42rem 0.65rem !important;
-        background: rgba(154, 255, 62, 0.18) !important;
-        color: #9aff3e !important;
+        background: rgba(var(--tier-card-rgb), 0.18) !important;
+        color: var(--tier-card-color) !important;
         font-size: 0.72rem !important;
         font-weight: 950 !important;
         text-transform: uppercase !important;
@@ -82,47 +93,64 @@
 
       body #loadoutGrid .loadout-card .meta-score-pill em {
         padding: 0.22rem 0.75rem 0.22rem 0.08rem !important;
-        color: #9aff3e !important;
+        color: var(--tier-card-color) !important;
         font-size: 0.84rem !important;
         font-style: normal !important;
         font-weight: 950 !important;
       }
 
-      body #loadoutGrid .loadout-card {
-        --tier-card-color: #9aff3e;
-        --tier-card-rgb: 154, 255, 62;
-        border-color: rgba(var(--tier-card-rgb), 0.26) !important;
-        box-shadow:
-          inset 0.42rem 0 0 rgba(var(--tier-card-rgb), 0.92),
-          0 0 0 1px rgba(var(--tier-card-rgb), 0.08),
-          0 1.1rem 2.4rem rgba(0, 0, 0, 0.34),
-          0 0 2rem rgba(var(--tier-card-rgb), 0.14) !important;
-      }
-
-      body #loadoutGrid .meta-tier-heading.tier-heading-meta {
-        border-color: rgba(255, 211, 90, 0.42) !important;
-        border-left-color: #ffd35a !important;
+      body #loadoutGrid .meta-tier-heading.tier-heading-meta,
+      body #loadoutGrid .meta-tier-heading.tier-heading-a,
+      body #loadoutGrid .meta-tier-heading.tier-heading-b,
+      body #loadoutGrid .meta-tier-heading.tier-heading-c,
+      body #loadoutGrid .meta-tier-heading.tier-heading-d {
+        --heading-tier-color: #ffd35a;
+        --heading-tier-rgb: 255, 211, 90;
+        border-color: rgba(var(--heading-tier-rgb), 0.42) !important;
+        border-left-color: var(--heading-tier-color) !important;
         background:
-          linear-gradient(90deg, rgba(255, 211, 90, 0.28), rgba(255, 157, 58, 0.1) 42%, rgba(255, 255, 255, 0.03)),
+          linear-gradient(90deg, rgba(var(--heading-tier-rgb), 0.28), rgba(var(--heading-tier-rgb), 0.1) 42%, rgba(255, 255, 255, 0.03)),
           #13150f !important;
         box-shadow:
           0 1rem 2.1rem rgba(0, 0, 0, 0.3),
-          0 0 2rem rgba(255, 211, 90, 0.18) !important;
+          0 0 2rem rgba(var(--heading-tier-rgb), 0.18) !important;
+      }
+
+      body #loadoutGrid .meta-tier-heading.tier-heading-a {
+        --heading-tier-color: #b08cff;
+        --heading-tier-rgb: 176, 140, 255;
+      }
+
+      body #loadoutGrid .meta-tier-heading.tier-heading-b {
+        --heading-tier-color: #35d7ff;
+        --heading-tier-rgb: 53, 215, 255;
+      }
+
+      body #loadoutGrid .meta-tier-heading.tier-heading-c {
+        --heading-tier-color: #29e681;
+        --heading-tier-rgb: 41, 230, 129;
+      }
+
+      body #loadoutGrid .meta-tier-heading.tier-heading-d {
+        --heading-tier-color: #8f98a7;
+        --heading-tier-rgb: 143, 152, 167;
       }
 
       body #loadoutGrid .meta-tier-heading.tier-heading-meta span,
-      body #loadoutGrid .meta-tier-heading.tier-heading-meta small {
-        color: #ffd35a !important;
-        text-shadow: 0 0 1.1rem rgba(255, 211, 90, 0.35) !important;
+      body #loadoutGrid .meta-tier-heading.tier-heading-meta small,
+      body #loadoutGrid .meta-tier-heading.tier-heading-a span,
+      body #loadoutGrid .meta-tier-heading.tier-heading-a small,
+      body #loadoutGrid .meta-tier-heading.tier-heading-b span,
+      body #loadoutGrid .meta-tier-heading.tier-heading-b small,
+      body #loadoutGrid .meta-tier-heading.tier-heading-c span,
+      body #loadoutGrid .meta-tier-heading.tier-heading-c small,
+      body #loadoutGrid .meta-tier-heading.tier-heading-d span,
+      body #loadoutGrid .meta-tier-heading.tier-heading-d small {
+        color: var(--heading-tier-color) !important;
+        text-shadow: 0 0 1.1rem rgba(var(--heading-tier-rgb), 0.35) !important;
       }
 
       body #loadoutGrid .loadout-card.tier-card-meta,
-      body #loadoutGrid .loadout-card.tier-absolute-meta {
-        --tier-card-color: #d8ff55;
-        --tier-card-rgb: 216, 255, 85;
-        background: linear-gradient(135deg, rgba(216, 255, 85, 0.14), rgba(23, 230, 96, 0.05) 42%, rgba(255, 255, 255, 0.02)), #101820 !important;
-      }
-
       body #loadoutGrid .loadout-card.tier-absolute-meta,
       body #loadoutGrid > .loadout-card.tier-absolute-meta {
         --tier-card-color: #ffd35a;
@@ -140,27 +168,27 @@
       }
 
       body #loadoutGrid .loadout-card.tier-card-a {
+        --tier-card-color: #b08cff;
+        --tier-card-rgb: 176, 140, 255;
+        background: linear-gradient(135deg, rgba(176, 140, 255, 0.15), rgba(110, 83, 255, 0.06) 42%, rgba(255, 255, 255, 0.02)), #101820 !important;
+      }
+
+      body #loadoutGrid .loadout-card.tier-card-b {
         --tier-card-color: #35d7ff;
         --tier-card-rgb: 53, 215, 255;
         background: linear-gradient(135deg, rgba(53, 215, 255, 0.13), rgba(51, 116, 255, 0.05) 42%, rgba(255, 255, 255, 0.02)), #101820 !important;
       }
 
-      body #loadoutGrid .loadout-card.tier-card-b {
-        --tier-card-color: #ffcf4a;
-        --tier-card-rgb: 255, 207, 74;
-        background: linear-gradient(135deg, rgba(255, 207, 74, 0.13), rgba(255, 151, 58, 0.05) 42%, rgba(255, 255, 255, 0.02)), #101820 !important;
-      }
-
       body #loadoutGrid .loadout-card.tier-card-c {
-        --tier-card-color: #b08cff;
-        --tier-card-rgb: 176, 140, 255;
-        background: linear-gradient(135deg, rgba(176, 140, 255, 0.13), rgba(95, 114, 255, 0.05) 42%, rgba(255, 255, 255, 0.02)), #101820 !important;
+        --tier-card-color: #29e681;
+        --tier-card-rgb: 41, 230, 129;
+        background: linear-gradient(135deg, rgba(41, 230, 129, 0.13), rgba(90, 255, 105, 0.05) 42%, rgba(255, 255, 255, 0.02)), #101820 !important;
       }
 
       body #loadoutGrid .loadout-card.tier-card-d {
-        --tier-card-color: #ff6f91;
-        --tier-card-rgb: 255, 111, 145;
-        background: linear-gradient(135deg, rgba(255, 111, 145, 0.12), rgba(255, 83, 83, 0.045) 42%, rgba(255, 255, 255, 0.02)), #101820 !important;
+        --tier-card-color: #8f98a7;
+        --tier-card-rgb: 143, 152, 167;
+        background: linear-gradient(135deg, rgba(143, 152, 167, 0.13), rgba(99, 110, 125, 0.055) 42%, rgba(255, 255, 255, 0.02)), #101820 !important;
       }
 
       body #loadoutGrid .loadout-card .rank-badge {
