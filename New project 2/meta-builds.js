@@ -46,6 +46,18 @@
     const style = document.createElement("style");
     style.id = "final-ui-patch-style";
     style.textContent = `
+      body {
+        padding-left: clamp(1.5rem, 4.8vw, 5rem) !important;
+        padding-right: clamp(1.5rem, 4.8vw, 5rem) !important;
+        box-sizing: border-box !important;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+
       .primary-mode-switch {
         grid-template-columns: repeat(3, minmax(9rem, 1fr)) !important;
         max-width: min(48rem, 100%) !important;
@@ -113,6 +125,11 @@
       }
 
       @media (max-width: 720px) {
+        body {
+          padding-left: 1rem !important;
+          padding-right: 1rem !important;
+        }
+
         .primary-mode-switch,
         .secondary-mode-switch {
           grid-template-columns: 1fr !important;
