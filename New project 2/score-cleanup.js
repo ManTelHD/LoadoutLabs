@@ -101,9 +101,25 @@
 
       body #loadoutGrid .loadout-card.tier-card-meta,
       body #loadoutGrid .loadout-card.tier-absolute-meta {
-        --tier-card-color: #9aff3e;
-        --tier-card-rgb: 154, 255, 62;
-        background: linear-gradient(135deg, rgba(154, 255, 62, 0.12), rgba(23, 230, 96, 0.05) 42%, rgba(255, 255, 255, 0.02)), #101820 !important;
+        --tier-card-color: #d8ff55;
+        --tier-card-rgb: 216, 255, 85;
+        background: linear-gradient(135deg, rgba(216, 255, 85, 0.14), rgba(23, 230, 96, 0.05) 42%, rgba(255, 255, 255, 0.02)), #101820 !important;
+      }
+
+      body #loadoutGrid .loadout-card.tier-absolute-meta,
+      body #loadoutGrid > .loadout-card.tier-absolute-meta {
+        --tier-card-color: #ffd35a;
+        --tier-card-rgb: 255, 211, 90;
+        border-color: rgba(255, 211, 90, 0.42) !important;
+        outline-color: rgba(255, 211, 90, 0.3) !important;
+        background:
+          linear-gradient(135deg, rgba(255, 211, 90, 0.22), rgba(255, 157, 58, 0.09) 44%, rgba(255, 255, 255, 0.03)),
+          #13150f !important;
+        box-shadow:
+          inset 0.72rem 0 0 rgba(255, 211, 90, 0.96),
+          0 0 0 1px rgba(255, 211, 90, 0.16),
+          0 1.25rem 2.7rem rgba(0, 0, 0, 0.38),
+          0 0 2.35rem rgba(255, 211, 90, 0.22) !important;
       }
 
       body #loadoutGrid .loadout-card.tier-card-a {
@@ -134,6 +150,12 @@
         background: linear-gradient(135deg, var(--tier-card-color), color-mix(in srgb, var(--tier-card-color) 68%, #ffffff)) !important;
         color: #061008 !important;
         box-shadow: 0 0 1.4rem rgba(var(--tier-card-rgb), 0.34) !important;
+      }
+
+      body #loadoutGrid .loadout-card.tier-absolute-meta .rank-badge {
+        color: #1a1200 !important;
+        background: linear-gradient(135deg, #ffb82e, #ffe58d 58%, #ffcf4a) !important;
+        box-shadow: 0 0 1.8rem rgba(255, 211, 90, 0.46) !important;
       }
 
       body #loadoutGrid .loadout-card .tag-list,
