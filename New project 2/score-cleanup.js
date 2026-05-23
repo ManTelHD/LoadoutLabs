@@ -99,6 +99,23 @@
           0 0 2rem rgba(var(--tier-card-rgb), 0.14) !important;
       }
 
+      body #loadoutGrid .meta-tier-heading.tier-heading-meta {
+        border-color: rgba(255, 211, 90, 0.42) !important;
+        border-left-color: #ffd35a !important;
+        background:
+          linear-gradient(90deg, rgba(255, 211, 90, 0.28), rgba(255, 157, 58, 0.1) 42%, rgba(255, 255, 255, 0.03)),
+          #13150f !important;
+        box-shadow:
+          0 1rem 2.1rem rgba(0, 0, 0, 0.3),
+          0 0 2rem rgba(255, 211, 90, 0.18) !important;
+      }
+
+      body #loadoutGrid .meta-tier-heading.tier-heading-meta span,
+      body #loadoutGrid .meta-tier-heading.tier-heading-meta small {
+        color: #ffd35a !important;
+        text-shadow: 0 0 1.1rem rgba(255, 211, 90, 0.35) !important;
+      }
+
       body #loadoutGrid .loadout-card.tier-card-meta,
       body #loadoutGrid .loadout-card.tier-absolute-meta {
         --tier-card-color: #d8ff55;
