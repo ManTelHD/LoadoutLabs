@@ -118,6 +118,48 @@
         text-transform: uppercase !important;
       }
 
+      .card-score-pill {
+        display: inline-grid !important;
+        grid-template-columns: auto auto auto !important;
+        align-items: baseline !important;
+        width: fit-content !important;
+        margin: 0.05rem 0 0.8rem !important;
+        overflow: hidden !important;
+        border: 1px solid rgba(154, 255, 62, 0.75) !important;
+        border-radius: 0.5rem !important;
+        background: linear-gradient(135deg, rgba(154, 255, 62, 0.2), rgba(23, 230, 96, 0.08)), rgba(8, 16, 10, 0.94) !important;
+        box-shadow: 0 0 0 1px rgba(154, 255, 62, 0.12), 0 0.85rem 1.8rem rgba(23, 230, 96, 0.18) !important;
+      }
+
+      .card-score-pill span {
+        align-self: stretch !important;
+        display: inline-grid !important;
+        place-items: center !important;
+        padding: 0.42rem 0.65rem !important;
+        background: rgba(154, 255, 62, 0.16) !important;
+        color: #9aff3e !important;
+        font-size: 0.72rem !important;
+        font-weight: 950 !important;
+        text-transform: uppercase !important;
+      }
+
+      .card-score-pill strong {
+        padding: 0.24rem 0.14rem 0.24rem 0.65rem !important;
+        color: #ffffff !important;
+        font-family: Rajdhani, Inter, sans-serif !important;
+        font-size: clamp(1.7rem, 3vw, 2.45rem) !important;
+        font-weight: 950 !important;
+        line-height: 0.9 !important;
+      }
+
+      .card-score-pill em {
+        padding: 0.24rem 0.72rem 0.24rem 0.1rem !important;
+        color: #9aff3e !important;
+        font-size: 0.82rem !important;
+        font-style: normal !important;
+        font-weight: 950 !important;
+      }
+
       .update-mode-tabs,
       #updateModeTabs,
       #updateModePanel {
@@ -266,6 +308,34 @@
     });
   }
 
+  function patchScoreCards() {
+    document.querySelectorAll(".loadout-card").forEach((card) => {
+      const statStrip = card.querySelector(".stat-strip");
+      const scoreStat = [...card.querySelectorAll(".stat-strip > span")].find((item) => /\bScore\b/i.test(item.textContent || ""));
+      const scoreValue = scoreStat?.querySelector("strong")?.textContent?.trim();
+
+      if (scoreValue && !card.querySelector(".card-score-pill")) {
+        const pill = document.createElement("div");
+        pill.className = "card-score-pill";
+        pill.setAttribute("aria-label", `Score ${scoreValue} von 100`);
+        pill.innerHTML = `<span>Score</span><strong>${scoreValue}</strong><em>/100</em>`;
+        statStrip?.before(pill);
+      }
+
+      scoreStat?.remove();
+
+      const tagRow = card.querySelector(".tag-row");
+      tagRow?.querySelectorAll("span").forEach((tag) => {
+        const text = tag.textContent.trim();
+        if (/^(Absolute )?Meta$/i.test(text) || /^WZStats/i.test(text) || /Meta/i.test(text)) {
+          tag.remove();
+        }
+      });
+
+      if (tagRow && !tagRow.querySelector("span")) tagRow.remove();
+    });
+  }
+
   function patchExclusiveTabGlow() {
     if (document.documentElement.dataset.exclusiveTabGlow === "true") return;
     document.documentElement.dataset.exclusiveTabGlow = "true";
@@ -303,6 +373,7 @@
     patchTabs();
     patchMetaTabs();
     hideUpdateCategoryTabs();
+    patchScoreCards();
   }
 
   if (document.readyState === "loading") {
