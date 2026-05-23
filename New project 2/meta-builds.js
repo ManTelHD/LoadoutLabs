@@ -65,6 +65,23 @@
         text-transform: uppercase;
       }
 
+      .primary-mode-switch .mode-button.active,
+      .secondary-mode-switch .mode-button.active {
+        border-color: rgba(154, 255, 62, 0.88) !important;
+        background: linear-gradient(135deg, #9aff3e, #17e660) !important;
+        color: #071008 !important;
+        box-shadow:
+          0 0 0 0.22rem rgba(154, 255, 62, 0.2),
+          0 0 1.35rem rgba(154, 255, 62, 0.42),
+          0 0.85rem 1.8rem rgba(23, 230, 96, 0.2) !important;
+        text-shadow: none !important;
+      }
+
+      .primary-mode-switch .mode-button.active::before,
+      .secondary-mode-switch .mode-button.active::before {
+        color: #071008 !important;
+      }
+
       .secondary-mode-switch {
         display: grid !important;
         grid-template-columns: repeat(2, minmax(9rem, 1fr)) !important;
@@ -214,6 +231,15 @@
 
       activateModeInfoPanel();
       renderSeason4();
+    });
+
+    document.addEventListener("click", (event) => {
+      const button = event.target.closest(".secondary-mode-switch .mode-button");
+      if (!button) return;
+
+      document.querySelectorAll(".secondary-mode-switch .mode-button").forEach((item) => {
+        item.classList.toggle("active", item === button);
+      });
     });
   }
 
