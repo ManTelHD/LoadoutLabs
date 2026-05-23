@@ -155,7 +155,7 @@
 
     statRow.querySelectorAll("span").forEach((stat) => {
       const label = stat.querySelector("em")?.textContent?.trim() || "";
-      if (/^score$/i.test(label)) stat.remove();
+      if (/^(score|stand)$/i.test(label)) stat.remove();
     });
 
     if (!card.querySelector(".meta-score-pill")) {
