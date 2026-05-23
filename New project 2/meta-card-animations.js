@@ -10,7 +10,7 @@
       body #loadoutGrid .loadout-card {
         --card-tier-color: #d8b457;
         --card-tier-rgb: 216, 180, 87;
-        --card-tier-soft: rgba(var(--card-tier-rgb), 0.16);
+        --card-tier-text: #ffe7a3;
         cursor: pointer;
         position: relative;
         overflow: hidden;
@@ -25,26 +25,31 @@
       body #loadoutGrid .loadout-card.tier-card-meta {
         --card-tier-color: #d8b457;
         --card-tier-rgb: 216, 180, 87;
+        --card-tier-text: #ffe7a3;
       }
 
       body #loadoutGrid .loadout-card.tier-card-a {
         --card-tier-color: #35d7ff;
         --card-tier-rgb: 53, 215, 255;
+        --card-tier-text: #bdefff;
       }
 
       body #loadoutGrid .loadout-card.tier-card-b {
         --card-tier-color: #ffcf4a;
         --card-tier-rgb: 255, 207, 74;
+        --card-tier-text: #ffe69a;
       }
 
       body #loadoutGrid .loadout-card.tier-card-c {
         --card-tier-color: #b08cff;
         --card-tier-rgb: 176, 140, 255;
+        --card-tier-text: #d9c8ff;
       }
 
       body #loadoutGrid .loadout-card.tier-card-d {
         --card-tier-color: #ff6f91;
         --card-tier-rgb: 255, 111, 145;
+        --card-tier-text: #ffc4d1;
       }
 
       body #loadoutGrid .loadout-card::after {
@@ -113,15 +118,15 @@
       body #loadoutGrid .loadout-card .expand-button:hover,
       body #loadoutGrid .loadout-card.expanded .expand-button {
         border-color: rgba(var(--card-tier-rgb), 0.72) !important;
-        background: linear-gradient(135deg, rgba(var(--card-tier-rgb), 0.22), rgba(var(--card-tier-rgb), 0.09)), #111720 !important;
-        color: #fff !important;
+        background: linear-gradient(135deg, rgba(var(--card-tier-rgb), 0.2), rgba(var(--card-tier-rgb), 0.08)), #111720 !important;
+        color: var(--card-tier-text) !important;
         box-shadow: 0 0 1rem rgba(var(--card-tier-rgb), 0.18) !important;
         transform: translateY(-0.04rem);
       }
 
       body #loadoutGrid .loadout-card .expand-button:hover span,
       body #loadoutGrid .loadout-card.expanded .expand-button span {
-        color: color-mix(in srgb, var(--card-tier-color) 72%, #ffffff) !important;
+        color: var(--card-tier-text) !important;
       }
 
       body #loadoutGrid .loadout-card .expand-button:hover svg,
@@ -172,6 +177,24 @@
     document.head.appendChild(style);
   }
 
+  function applyTierPalette(card) {
+    if (!card) return;
+    const tierLabel = card.querySelector(".rank-badge span")?.textContent || "";
+    const tier = tierLabel.toLowerCase().replace(/[^a-z]/g, "");
+    const palettes = {
+      meta: ["#d8b457", "216, 180, 87", "#ffe7a3"],
+      atier: ["#35d7ff", "53, 215, 255", "#bdefff"],
+      btier: ["#ffcf4a", "255, 207, 74", "#ffe69a"],
+      ctier: ["#b08cff", "176, 140, 255", "#d9c8ff"],
+      dtier: ["#ff6f91", "255, 111, 145", "#ffc4d1"],
+    };
+    const palette = palettes[tier];
+    if (!palette) return;
+    card.style.setProperty("--card-tier-color", palette[0]);
+    card.style.setProperty("--card-tier-rgb", palette[1]);
+    card.style.setProperty("--card-tier-text", palette[2]);
+  }
+
   function setButtonState(card, open) {
     const button = card.querySelector(".expand-button");
     if (!button) return;
@@ -184,6 +207,7 @@
     const details = card.querySelector(".meta-card-details, .card-details");
     if (!details) return;
 
+    applyTierPalette(card);
     const duration = animationDuration();
     details.getAnimations?.().forEach((animation) => animation.cancel());
     card.classList.add("expand-animating", "details-flash");
@@ -265,11 +289,18 @@
     }, true);
   }
 
+  function primeRenderedCards() {
+    document.querySelectorAll("#loadoutGrid .loadout-card").forEach(applyTierPalette);
+  }
+
   function run() {
     injectAnimationStyles();
     bindCardClicks();
+    primeRenderedCards();
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run);
   else run();
+
+  new MutationObserver(primeRenderedCards).observe(document.documentElement, { childList: true, subtree: true });
 }());
