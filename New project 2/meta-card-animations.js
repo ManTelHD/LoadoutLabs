@@ -119,27 +119,40 @@
           inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
       }
 
-      body #loadoutGrid .loadout-card .weapon-art {
-        border-radius: 7px !important;
-        border: 1px solid rgba(var(--card-tier-rgb), 0.34) !important;
+      body #loadoutGrid .loadout-card .weapon-art,
+      body .loadout-grid .loadout-card .weapon-art,
+      body #loadoutGrid > .loadout-card.tier-absolute-meta .weapon-art {
+        width: clamp(12.8rem, 24vw, 18rem) !important;
+        max-width: clamp(12.8rem, 24vw, 18rem) !important;
+        height: clamp(7.4rem, 13vw, 10.2rem) !important;
+        border-radius: 8px !important;
+        border: 1px solid rgba(var(--card-tier-rgb), 0.4) !important;
+        overflow: hidden !important;
         background:
-          radial-gradient(circle at 48% 42%, rgba(var(--card-tier-rgb), 0.18), transparent 62%),
-          linear-gradient(145deg, rgba(255,255,255,0.055), rgba(0,0,0,0.26)),
+          radial-gradient(circle at 48% 42%, rgba(var(--card-tier-rgb), 0.22), transparent 62%),
+          linear-gradient(145deg, rgba(255,255,255,0.065), rgba(0,0,0,0.3)),
           #05080c !important;
         box-shadow:
-          0 0.9rem 2rem rgba(0, 0, 0, 0.38) !important,
-          inset 0 0 0 1px rgba(255, 255, 255, 0.045) !important;
+          0 1rem 2.2rem rgba(0, 0, 0, 0.42) !important,
+          0 0 1.4rem rgba(var(--card-tier-rgb), 0.1) !important,
+          inset 0 0 0 1px rgba(255, 255, 255, 0.05) !important;
       }
 
-      body #loadoutGrid .loadout-card .weapon-art img {
-        transform: scale(1.1) !important;
-        filter: brightness(1.16) contrast(1.12) saturate(1.12) drop-shadow(0 0.65rem 0.85rem rgba(0, 0, 0, 0.42)) !important;
-        transition: transform 240ms ease, filter 240ms ease !important;
+      body #loadoutGrid .loadout-card .weapon-art img,
+      body .loadout-grid .loadout-card .weapon-art img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center center !important;
+        transform: scale(1.2) !important;
+        filter: brightness(1.16) contrast(1.13) saturate(1.14) drop-shadow(0 0.7rem 0.9rem rgba(0, 0, 0, 0.45)) !important;
+        transition: transform 320ms cubic-bezier(.18,.86,.22,1), filter 240ms ease !important;
       }
 
+      body #loadoutGrid .loadout-card .weapon-art:hover img,
       body #loadoutGrid .loadout-card:hover .weapon-art img {
-        transform: scale(1.16) translateY(-0.05rem) !important;
-        filter: brightness(1.22) contrast(1.14) saturate(1.18) drop-shadow(0 0.8rem 1rem rgba(0, 0, 0, 0.48)) !important;
+        transform: scale(1.46) translateY(-0.1rem) !important;
+        filter: brightness(1.25) contrast(1.16) saturate(1.22) drop-shadow(0 0.95rem 1.15rem rgba(0, 0, 0, 0.52)) !important;
       }
 
       body #loadoutGrid .loadout-card .mode-pill {
@@ -299,6 +312,16 @@
       @keyframes meta-details-rise {
         0% { opacity: 0; transform: translateY(-0.55rem); }
         100% { opacity: 1; transform: translateY(0); }
+      }
+
+      @media (max-width: 720px) {
+        body #loadoutGrid .loadout-card .weapon-art,
+        body .loadout-grid .loadout-card .weapon-art,
+        body #loadoutGrid > .loadout-card.tier-absolute-meta .weapon-art {
+          width: min(100%, 14.8rem) !important;
+          max-width: min(100%, 14.8rem) !important;
+          height: 8.3rem !important;
+        }
       }
 
       @media (prefers-reduced-motion: reduce) {
