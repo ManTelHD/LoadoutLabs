@@ -136,7 +136,8 @@
         box-shadow: 0 0 1.4rem rgba(var(--tier-card-rgb), 0.34) !important;
       }
 
-      body #loadoutGrid .loadout-card .tag-list {
+      body #loadoutGrid .loadout-card .tag-list,
+      body #loadoutGrid .loadout-card .card-footer .range {
         display: none !important;
       }
 
@@ -168,6 +169,7 @@
     }
 
     card.querySelector(".tag-list")?.remove();
+    card.querySelector(".card-footer .range")?.remove();
   }
 
   function cleanCards() {
