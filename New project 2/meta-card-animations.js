@@ -8,6 +8,9 @@
     style.id = "meta-card-animation-style";
     style.textContent = `
       body #loadoutGrid .loadout-card {
+        --card-tier-color: #d8b457;
+        --card-tier-rgb: 216, 180, 87;
+        --card-tier-soft: rgba(var(--card-tier-rgb), 0.16);
         cursor: pointer;
         position: relative;
         overflow: hidden;
@@ -18,6 +21,32 @@
           background 260ms ease;
       }
 
+      body #loadoutGrid .loadout-card.tier-absolute-meta,
+      body #loadoutGrid .loadout-card.tier-card-meta {
+        --card-tier-color: #d8b457;
+        --card-tier-rgb: 216, 180, 87;
+      }
+
+      body #loadoutGrid .loadout-card.tier-card-a {
+        --card-tier-color: #35d7ff;
+        --card-tier-rgb: 53, 215, 255;
+      }
+
+      body #loadoutGrid .loadout-card.tier-card-b {
+        --card-tier-color: #ffcf4a;
+        --card-tier-rgb: 255, 207, 74;
+      }
+
+      body #loadoutGrid .loadout-card.tier-card-c {
+        --card-tier-color: #b08cff;
+        --card-tier-rgb: 176, 140, 255;
+      }
+
+      body #loadoutGrid .loadout-card.tier-card-d {
+        --card-tier-color: #ff6f91;
+        --card-tier-rgb: 255, 111, 145;
+      }
+
       body #loadoutGrid .loadout-card::after {
         content: "";
         position: absolute;
@@ -25,21 +54,21 @@
         pointer-events: none;
         opacity: 0;
         background:
-          linear-gradient(115deg, transparent 0%, rgba(185, 255, 61, 0.16) 36%, rgba(41, 230, 129, 0.12) 46%, transparent 58%);
+          linear-gradient(115deg, transparent 0%, rgba(var(--card-tier-rgb), 0.18) 36%, rgba(var(--card-tier-rgb), 0.12) 46%, transparent 58%);
         transform: translateX(-120%);
       }
 
       body #loadoutGrid .loadout-card:hover {
-        border-color: rgba(185, 255, 61, 0.5) !important;
+        border-color: rgba(var(--card-tier-rgb), 0.52) !important;
         transform: translateY(-0.08rem);
-        box-shadow: 0 1.35rem 3rem rgba(0, 0, 0, 0.44), 0 0 1.4rem rgba(185, 255, 61, 0.1) !important;
+        box-shadow: 0 1.35rem 3rem rgba(0, 0, 0, 0.44), 0 0 1.4rem rgba(var(--card-tier-rgb), 0.12) !important;
       }
 
       body #loadoutGrid .loadout-card.expanded,
       body #loadoutGrid .loadout-card.expand-animating {
         z-index: 4;
-        border-color: rgba(185, 255, 61, 0.66) !important;
-        box-shadow: 0 1.55rem 3.4rem rgba(0, 0, 0, 0.52), 0 0 2rem rgba(185, 255, 61, 0.18) !important;
+        border-color: rgba(var(--card-tier-rgb), 0.68) !important;
+        box-shadow: 0 1.55rem 3.4rem rgba(0, 0, 0, 0.52), 0 0 2rem rgba(var(--card-tier-rgb), 0.2) !important;
       }
 
       body #loadoutGrid .loadout-card.details-flash::after {
@@ -68,6 +97,7 @@
           transform 180ms ease,
           border-color 180ms ease,
           background 180ms ease,
+          color 180ms ease,
           box-shadow 220ms ease;
       }
 
@@ -82,10 +112,21 @@
 
       body #loadoutGrid .loadout-card .expand-button:hover,
       body #loadoutGrid .loadout-card.expanded .expand-button {
-        border-color: rgba(185, 255, 61, 0.65) !important;
-        background: linear-gradient(135deg, rgba(185, 255, 61, 0.18), rgba(41, 230, 129, 0.1)), #111720 !important;
-        box-shadow: 0 0 1rem rgba(185, 255, 61, 0.14) !important;
+        border-color: rgba(var(--card-tier-rgb), 0.72) !important;
+        background: linear-gradient(135deg, rgba(var(--card-tier-rgb), 0.22), rgba(var(--card-tier-rgb), 0.09)), #111720 !important;
+        color: #fff !important;
+        box-shadow: 0 0 1rem rgba(var(--card-tier-rgb), 0.18) !important;
         transform: translateY(-0.04rem);
+      }
+
+      body #loadoutGrid .loadout-card .expand-button:hover span,
+      body #loadoutGrid .loadout-card.expanded .expand-button span {
+        color: color-mix(in srgb, var(--card-tier-color) 72%, #ffffff) !important;
+      }
+
+      body #loadoutGrid .loadout-card .expand-button:hover svg,
+      body #loadoutGrid .loadout-card.expanded .expand-button svg {
+        fill: var(--card-tier-color) !important;
       }
 
       body #loadoutGrid .loadout-card.details-flash .expand-button::after {
@@ -93,7 +134,7 @@
       }
 
       body #loadoutGrid .loadout-card .expand-button svg {
-        transition: transform 260ms cubic-bezier(.2, .8, .2, 1);
+        transition: transform 260ms cubic-bezier(.2, .8, .2, 1), fill 180ms ease;
       }
 
       body #loadoutGrid .loadout-card.expanded .expand-button svg {
