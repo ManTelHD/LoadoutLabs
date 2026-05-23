@@ -195,6 +195,10 @@
         text-shadow: 0 0 0.8rem rgba(var(--card-tier-rgb), 0.12) !important;
       }
 
+      body #loadoutGrid .loadout-card .meta-card-details > .role {
+        display: none !important;
+      }
+
       body #loadoutGrid .loadout-card .detail-panel,
       body #loadoutGrid .loadout-card .attachment-list,
       body #loadoutGrid .loadout-card .perk-list {
@@ -221,13 +225,11 @@
         will-change: max-height, opacity, transform, filter;
       }
 
-      body #loadoutGrid .loadout-card .attachment-columns,
-      body #loadoutGrid .loadout-card .role {
+      body #loadoutGrid .loadout-card .attachment-columns {
         will-change: opacity, transform;
       }
 
-      body #loadoutGrid .loadout-card.expanded .attachment-columns,
-      body #loadoutGrid .loadout-card.expanded .role {
+      body #loadoutGrid .loadout-card.expanded .attachment-columns {
         animation: meta-details-rise 360ms ease both;
       }
 
@@ -304,8 +306,7 @@
         body #loadoutGrid .loadout-card .weapon-art img,
         body #loadoutGrid .loadout-card .expand-button,
         body #loadoutGrid .loadout-card .expand-button svg,
-        body #loadoutGrid .loadout-card.expanded .attachment-columns,
-        body #loadoutGrid .loadout-card.expanded .role {
+        body #loadoutGrid .loadout-card.expanded .attachment-columns {
           animation: none !important;
           transition: none !important;
         }
@@ -332,6 +333,10 @@
     card.style.setProperty("--card-tier-text", palette[2]);
   }
 
+  function removeMetaDescriptions(root = document) {
+    root.querySelectorAll?.("#loadoutGrid .loadout-card .meta-card-details > .role").forEach((element) => element.remove());
+  }
+
   function setButtonState(card, open) {
     const button = card.querySelector(".expand-button");
     if (!button) return;
@@ -344,6 +349,7 @@
     const details = card.querySelector(".meta-card-details, .card-details");
     if (!details) return;
 
+    removeMetaDescriptions(card);
     applyTierPalette(card);
     const duration = animationDuration();
     details.getAnimations?.().forEach((animation) => animation.cancel());
@@ -428,6 +434,7 @@
 
   function primeRenderedCards() {
     document.querySelectorAll("#loadoutGrid .loadout-card").forEach(applyTierPalette);
+    removeMetaDescriptions();
   }
 
   function run() {
