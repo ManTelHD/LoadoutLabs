@@ -9,7 +9,7 @@
       max-width: 16.25rem !important;
       min-width: 16.25rem !important;
       height: auto !important;
-      aspect-ratio: 2.35 / 1 !important;
+      aspect-ratio: 16 / 9 !important;
       overflow: hidden !important;
       position: relative !important;
       background: #05080c !important;
@@ -32,12 +32,12 @@
       max-width: 17.75rem !important;
       min-width: 17.75rem !important;
       height: auto !important;
-      aspect-ratio: 2.35 / 1 !important;
+      aspect-ratio: 16 / 9 !important;
     }
 
     body #loadoutGrid .loadout-card .card-body,
     body .loadout-grid .loadout-card .card-body {
-      margin-left: 0.8rem !important;
+      margin-left: 1rem !important;
       min-width: 0 !important;
     }
 
@@ -75,7 +75,7 @@
         width: min(100%, 15.5rem) !important;
         max-width: min(100%, 15.5rem) !important;
         min-width: 0 !important;
-        aspect-ratio: 2.35 / 1 !important;
+        aspect-ratio: 16 / 9 !important;
       }
 
       body #loadoutGrid > .loadout-card.tier-absolute-meta .weapon-art,
@@ -84,6 +84,7 @@
         width: min(100%, 16.25rem) !important;
         max-width: min(100%, 16.25rem) !important;
         min-width: 0 !important;
+        aspect-ratio: 16 / 9 !important;
       }
 
       body #loadoutGrid .loadout-card .card-body,
