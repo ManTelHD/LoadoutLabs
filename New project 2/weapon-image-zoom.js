@@ -33,7 +33,7 @@
       height: 100% !important;
       object-fit: contain !important;
       object-position: center center !important;
-      transform: scale(1.1) !important;
+      transform: scale(1) !important;
       transform-origin: center center !important;
       transition: transform 320ms cubic-bezier(.18,.86,.22,1), filter 260ms ease !important;
       will-change: transform, filter;
@@ -42,7 +42,7 @@
     body #loadoutGrid .loadout-card:hover .weapon-art img,
     body .loadout-grid .loadout-card:hover .weapon-art img,
     html body #loadoutGrid > .loadout-card:hover .weapon-art img {
-      transform: scale(1.26) translateY(-0.04rem) !important;
+      transform: scale(1.14) translateY(-0.03rem) !important;
       filter: brightness(1.18) contrast(1.14) saturate(1.2) !important;
     }
 
@@ -58,7 +58,7 @@
     body #loadoutGrid .loadout-card .weapon-art:hover img,
     body .loadout-grid .loadout-card .weapon-art:hover img,
     html body #loadoutGrid > .loadout-card .weapon-art:hover img {
-      transform: scale(1.42) translateY(-0.06rem) !important;
+      transform: scale(1.24) translateY(-0.04rem) !important;
       filter: brightness(1.28) contrast(1.18) saturate(1.28) !important;
     }
 
@@ -87,13 +87,13 @@
       body #loadoutGrid .loadout-card:hover .weapon-art img,
       body .loadout-grid .loadout-card:hover .weapon-art img,
       html body #loadoutGrid > .loadout-card:hover .weapon-art img {
-        transform: scale(1.18) !important;
+        transform: scale(1.08) !important;
       }
 
       body #loadoutGrid .loadout-card .weapon-art:hover img,
       body .loadout-grid .loadout-card .weapon-art:hover img,
       html body #loadoutGrid > .loadout-card .weapon-art:hover img {
-        transform: scale(1.28) !important;
+        transform: scale(1.16) !important;
       }
     }
   `;
