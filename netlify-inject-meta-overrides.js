@@ -5,7 +5,7 @@ const siteDir = path.join(__dirname, "New project 2");
 const indexPath = path.join(siteDir, "index.html");
 const styleMarker = '<link rel="stylesheet" href="meta-overrides.css">';
 const scriptMarker = '<script src="meta-overrides.js"></script>';
-const animationScriptMarker = '<script src="meta-card-animations.js?v=20260523-expand1"></script>';
+const animationScriptMarker = '<script src="meta-card-animations.js?v=20260523-expand2"></script>';
 const mw4ScriptMarker = '<script src="mw4-update.js?v=20260523-mw4-keyart"></script>';
 
 let html = fs.readFileSync(indexPath, "utf8");
