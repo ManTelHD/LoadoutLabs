@@ -65,9 +65,35 @@
         text-transform: uppercase;
       }
 
+      .secondary-mode-switch {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(9rem, 1fr)) !important;
+        gap: 0.5rem !important;
+        width: min(32rem, 100%) !important;
+        max-width: 100% !important;
+        margin: 0.35rem 0 0.7rem !important;
+        border: 0 !important;
+        background: transparent !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+      }
+
+      .secondary-mode-switch .mode-button {
+        min-height: 2.85rem !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-radius: 0.45rem !important;
+        background: #111720 !important;
+        color: var(--text) !important;
+        font-size: 0.98rem !important;
+        font-weight: 950 !important;
+        text-transform: uppercase !important;
+      }
+
       @media (max-width: 720px) {
-        .primary-mode-switch {
+        .primary-mode-switch,
+        .secondary-mode-switch {
           grid-template-columns: 1fr !important;
+          width: 100% !important;
         }
       }
     `;
@@ -89,6 +115,22 @@
       seasonButton.textContent = "Season 4";
       switcher.append(seasonButton);
     }
+  }
+
+  function patchMetaTabs() {
+    const switcher = document.querySelector(".secondary-mode-switch");
+    if (!switcher) return;
+
+    const warzone = switcher.querySelector('[data-mode="warzone-ranked"]');
+    const bo7 = switcher.querySelector('[data-mode="bo7-ranked"]');
+    if (warzone) warzone.textContent = "WZ META";
+    if (bo7) bo7.textContent = "BO7 META";
+
+    switcher.querySelectorAll(".mode-button").forEach((button) => {
+      const keep = button.dataset.mode === "warzone-ranked" || button.dataset.mode === "bo7-ranked";
+      button.hidden = !keep;
+      button.style.display = keep ? "" : "none";
+    });
   }
 
   function activateModeInfoPanel() {
@@ -165,6 +207,7 @@
   function patchAll() {
     injectStyle();
     patchTabs();
+    patchMetaTabs();
   }
 
   if (document.readyState === "loading") {
