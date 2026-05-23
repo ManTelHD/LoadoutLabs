@@ -4,7 +4,10 @@
   style.textContent = `
     body #loadoutGrid .loadout-card .weapon-art,
     body .loadout-grid .loadout-card .weapon-art,
-    html body #loadoutGrid > .loadout-card .weapon-art {
+    html body #loadoutGrid > .loadout-card .weapon-art,
+    body #loadoutGrid > .loadout-card.tier-absolute-meta .weapon-art,
+    body #loadoutGrid .loadout-card.tier-absolute-meta .weapon-art,
+    body .loadout-grid .loadout-card.tier-absolute-meta .weapon-art {
       width: 16.25rem !important;
       max-width: 16.25rem !important;
       min-width: 16.25rem !important;
@@ -25,16 +28,6 @@
       display: none !important;
     }
 
-    body #loadoutGrid > .loadout-card.tier-absolute-meta .weapon-art,
-    body #loadoutGrid .loadout-card.tier-absolute-meta .weapon-art,
-    body .loadout-grid .loadout-card.tier-absolute-meta .weapon-art {
-      width: 17.75rem !important;
-      max-width: 17.75rem !important;
-      min-width: 17.75rem !important;
-      height: auto !important;
-      aspect-ratio: 16 / 9 !important;
-    }
-
     body #loadoutGrid .loadout-card .card-body,
     body .loadout-grid .loadout-card .card-body {
       margin-left: 1rem !important;
@@ -43,7 +36,8 @@
 
     body #loadoutGrid .loadout-card .weapon-art img,
     body .loadout-grid .loadout-card .weapon-art img,
-    html body #loadoutGrid > .loadout-card .weapon-art img {
+    html body #loadoutGrid > .loadout-card .weapon-art img,
+    body #loadoutGrid .loadout-card.tier-absolute-meta .weapon-art img {
       position: relative !important;
       z-index: 1 !important;
       width: 100% !important;
@@ -71,18 +65,12 @@
 
     @media (max-width: 720px) {
       body #loadoutGrid .loadout-card .weapon-art,
-      body .loadout-grid .loadout-card .weapon-art {
-        width: min(100%, 15.5rem) !important;
-        max-width: min(100%, 15.5rem) !important;
-        min-width: 0 !important;
-        aspect-ratio: 16 / 9 !important;
-      }
-
+      body .loadout-grid .loadout-card .weapon-art,
       body #loadoutGrid > .loadout-card.tier-absolute-meta .weapon-art,
       body #loadoutGrid .loadout-card.tier-absolute-meta .weapon-art,
       body .loadout-grid .loadout-card.tier-absolute-meta .weapon-art {
-        width: min(100%, 16.25rem) !important;
-        max-width: min(100%, 16.25rem) !important;
+        width: min(100%, 15.5rem) !important;
+        max-width: min(100%, 15.5rem) !important;
         min-width: 0 !important;
         aspect-ratio: 16 / 9 !important;
       }
