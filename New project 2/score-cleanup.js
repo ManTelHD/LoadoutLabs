@@ -60,6 +60,58 @@
         font-style: normal !important;
         font-weight: 950 !important;
       }
+
+      body #loadoutGrid .loadout-card {
+        --tier-card-color: #9aff3e;
+        --tier-card-rgb: 154, 255, 62;
+        border-color: rgba(var(--tier-card-rgb), 0.26) !important;
+        box-shadow:
+          inset 0.42rem 0 0 rgba(var(--tier-card-rgb), 0.92),
+          0 0 0 1px rgba(var(--tier-card-rgb), 0.08),
+          0 1.1rem 2.4rem rgba(0, 0, 0, 0.34),
+          0 0 2rem rgba(var(--tier-card-rgb), 0.14) !important;
+      }
+
+      body #loadoutGrid .loadout-card.tier-card-meta,
+      body #loadoutGrid .loadout-card.tier-absolute-meta {
+        --tier-card-color: #9aff3e;
+        --tier-card-rgb: 154, 255, 62;
+        background: linear-gradient(135deg, rgba(154, 255, 62, 0.12), rgba(23, 230, 96, 0.05) 42%, rgba(255, 255, 255, 0.02)), #101820 !important;
+      }
+
+      body #loadoutGrid .loadout-card.tier-card-a {
+        --tier-card-color: #35d7ff;
+        --tier-card-rgb: 53, 215, 255;
+        background: linear-gradient(135deg, rgba(53, 215, 255, 0.13), rgba(51, 116, 255, 0.05) 42%, rgba(255, 255, 255, 0.02)), #101820 !important;
+      }
+
+      body #loadoutGrid .loadout-card.tier-card-b {
+        --tier-card-color: #ffcf4a;
+        --tier-card-rgb: 255, 207, 74;
+        background: linear-gradient(135deg, rgba(255, 207, 74, 0.13), rgba(255, 151, 58, 0.05) 42%, rgba(255, 255, 255, 0.02)), #101820 !important;
+      }
+
+      body #loadoutGrid .loadout-card.tier-card-c {
+        --tier-card-color: #b08cff;
+        --tier-card-rgb: 176, 140, 255;
+        background: linear-gradient(135deg, rgba(176, 140, 255, 0.13), rgba(95, 114, 255, 0.05) 42%, rgba(255, 255, 255, 0.02)), #101820 !important;
+      }
+
+      body #loadoutGrid .loadout-card.tier-card-d {
+        --tier-card-color: #ff6f91;
+        --tier-card-rgb: 255, 111, 145;
+        background: linear-gradient(135deg, rgba(255, 111, 145, 0.12), rgba(255, 83, 83, 0.045) 42%, rgba(255, 255, 255, 0.02)), #101820 !important;
+      }
+
+      body #loadoutGrid .loadout-card .rank-badge {
+        background: linear-gradient(135deg, var(--tier-card-color), color-mix(in srgb, var(--tier-card-color) 68%, #ffffff)) !important;
+        color: #061008 !important;
+        box-shadow: 0 0 1.4rem rgba(var(--tier-card-rgb), 0.34) !important;
+      }
+
+      body #loadoutGrid .loadout-card .tag-list {
+        display: none !important;
+      }
     `;
     document.head.append(style);
   }
@@ -82,12 +134,7 @@
       statRow.before(pill);
     }
 
-    const tagList = card.querySelector(".tag-list");
-    tagList?.querySelectorAll("span").forEach((tag) => {
-      const text = tag.textContent.trim();
-      if (/meta/i.test(text)) tag.remove();
-    });
-    if (tagList && !tagList.querySelector("span")) tagList.remove();
+    card.querySelector(".tag-list")?.remove();
   }
 
   function cleanCards() {
