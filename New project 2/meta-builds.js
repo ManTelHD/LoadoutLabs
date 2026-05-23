@@ -89,6 +89,12 @@
         text-transform: uppercase !important;
       }
 
+      .update-mode-tabs,
+      #updateModeTabs,
+      #updateModePanel {
+        display: none !important;
+      }
+
       @media (max-width: 720px) {
         .primary-mode-switch,
         .secondary-mode-switch {
@@ -130,6 +136,13 @@
       const keep = button.dataset.mode === "warzone-ranked" || button.dataset.mode === "bo7-ranked";
       button.hidden = !keep;
       button.style.display = keep ? "" : "none";
+    });
+  }
+
+  function hideUpdateCategoryTabs() {
+    document.querySelectorAll("#updateModeTabs, .update-mode-tabs, #updateModePanel").forEach((element) => {
+      element.hidden = true;
+      element.style.display = "none";
     });
   }
 
@@ -208,6 +221,7 @@
     injectStyle();
     patchTabs();
     patchMetaTabs();
+    hideUpdateCategoryTabs();
   }
 
   if (document.readyState === "loading") {
