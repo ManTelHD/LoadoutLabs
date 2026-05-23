@@ -336,6 +336,16 @@
     });
   }
 
+  function watchScoreCards() {
+    const grid = document.querySelector("#loadoutGrid");
+    if (!grid || grid.dataset.scoreCardsWatched === "true") return;
+    grid.dataset.scoreCardsWatched = "true";
+
+    const observer = new MutationObserver(() => patchScoreCards());
+    observer.observe(grid, { childList: true, subtree: true });
+    patchScoreCards();
+  }
+
   function patchExclusiveTabGlow() {
     if (document.documentElement.dataset.exclusiveTabGlow === "true") return;
     document.documentElement.dataset.exclusiveTabGlow = "true";
@@ -374,6 +384,7 @@
     patchMetaTabs();
     hideUpdateCategoryTabs();
     patchScoreCards();
+    watchScoreCards();
   }
 
   if (document.readyState === "loading") {
@@ -387,5 +398,7 @@
   setTimeout(patchAll, 100);
   setTimeout(patchAll, 500);
   setTimeout(patchAll, 1200);
+  setTimeout(patchAll, 2500);
   document.addEventListener("click", () => setTimeout(patchAll, 80));
+  document.addEventListener("input", () => setTimeout(patchAll, 80));
 }());
