@@ -7,7 +7,7 @@ const styleMarker = '<link rel="stylesheet" href="meta-overrides.css">';
 const scriptMarker = '<script src="meta-overrides.js"></script>';
 const animationScriptMarker = '<script src="meta-card-animations.js?v=20260523-card-clean1"></script>';
 const pickrateScriptMarker = '<script src="pickrate-bars.js?v=20260523-pickrate1"></script>';
-const weaponZoomScriptMarker = '<script src="weapon-image-zoom.js?v=20260523-weaponmatch-a-tier1"></script>';
+const weaponZoomScriptMarker = '<script src="weapon-image-zoom.js?v=20260523-weapon-a-tier-size1"></script>';
 const mw4ScriptMarker = '<script src="mw4-update.js?v=20260523-mw4-keyart"></script>';
 
 let html = fs.readFileSync(indexPath, "utf8");
