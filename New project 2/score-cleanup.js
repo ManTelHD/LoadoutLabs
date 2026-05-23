@@ -219,6 +219,104 @@
         box-shadow: 0 0 1.8rem rgba(255, 211, 90, 0.46) !important;
       }
 
+      html body #loadoutGrid .loadout-card {
+        min-height: 0 !important;
+        gap: 0.72rem !important;
+        padding: 0.62rem 0.8rem 0.66rem !important;
+      }
+
+      html body #loadoutGrid .loadout-card .weapon-art,
+      html body .loadout-grid .loadout-card .weapon-art {
+        width: 8.2rem !important;
+        max-width: 8.2rem !important;
+        height: 4.65rem !important;
+        margin-top: 0 !important;
+      }
+
+      html body #loadoutGrid > .loadout-card.tier-absolute-meta .weapon-art {
+        width: 8.8rem !important;
+        max-width: 8.8rem !important;
+        height: 4.95rem !important;
+      }
+
+      html body #loadoutGrid .loadout-card .card-body {
+        align-self: start !important;
+      }
+
+      html body #loadoutGrid .loadout-card .card-title-row {
+        margin-bottom: 0.25rem !important;
+      }
+
+      html body #loadoutGrid .loadout-card .mode-pill {
+        min-height: 1.45rem !important;
+        margin-bottom: 0.28rem !important;
+        padding: 0.12rem 0.52rem !important;
+        font-size: 0.7rem !important;
+      }
+
+      html body #loadoutGrid .loadout-card .weapon-name,
+      html body #loadoutGrid > .loadout-card.tier-absolute-meta .weapon-name {
+        margin-bottom: 0.12rem !important;
+        font-size: clamp(1.62rem, 2.35vw, 2.1rem) !important;
+        line-height: 0.96 !important;
+      }
+
+      html body #loadoutGrid .loadout-card .stat-row {
+        gap: 0.36rem !important;
+        margin-top: 0.16rem !important;
+      }
+
+      html body #loadoutGrid .loadout-card .meta-score-pill {
+        margin: 0.12rem 0 0.36rem !important;
+      }
+
+      html body #loadoutGrid .loadout-card .meta-score-pill span {
+        padding: 0.28rem 0.52rem !important;
+        font-size: 0.66rem !important;
+      }
+
+      html body #loadoutGrid .loadout-card .meta-score-pill strong {
+        padding: 0.14rem 0.1rem 0.14rem 0.52rem !important;
+        font-size: clamp(1.45rem, 2.45vw, 2.08rem) !important;
+      }
+
+      html body #loadoutGrid .loadout-card .meta-score-pill em {
+        padding: 0.14rem 0.58rem 0.14rem 0.06rem !important;
+        font-size: 0.72rem !important;
+      }
+
+      html body #loadoutGrid .loadout-card .rank-badge {
+        top: 0.72rem !important;
+        right: 0.72rem !important;
+        min-width: 4.35rem !important;
+        min-height: 4.35rem !important;
+        padding: 0.45rem 0.58rem !important;
+        font-size: 1.95rem !important;
+      }
+
+      html body #loadoutGrid .loadout-card .rank-badge span {
+        margin-top: 0.24rem !important;
+        font-size: 0.64rem !important;
+      }
+
+      html body #loadoutGrid .loadout-card .card-footer {
+        min-height: 0 !important;
+        margin-top: 0.42rem !important;
+        padding-top: 0.5rem !important;
+      }
+
+      html body #loadoutGrid .loadout-card .expand-button {
+        min-height: 2.55rem !important;
+        min-width: 7.75rem !important;
+        padding: 0.46rem 0.82rem !important;
+        font-size: 0.95rem !important;
+      }
+
+      html body #loadoutGrid .loadout-card .expand-button svg {
+        width: 1.22rem !important;
+        height: 1.22rem !important;
+      }
+
       body #loadoutGrid .loadout-card .expand-button {
         position: relative !important;
         isolation: isolate !important;
@@ -277,6 +375,14 @@
       @media (max-width: 720px) {
         :root {
           --site-side-gap: clamp(1.25rem, 5.5vw, 2rem);
+        }
+
+        html body #loadoutGrid .loadout-card .weapon-art,
+        html body .loadout-grid .loadout-card .weapon-art,
+        html body #loadoutGrid > .loadout-card.tier-absolute-meta .weapon-art {
+          width: 6.8rem !important;
+          max-width: 6.8rem !important;
+          height: 4.05rem !important;
         }
       }
     `;
