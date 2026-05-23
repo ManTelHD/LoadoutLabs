@@ -228,6 +228,9 @@
       document.querySelectorAll(".primary-mode-switch .mode-button").forEach((item) => {
         item.classList.toggle("active", item === button);
       });
+      document.querySelectorAll(".secondary-mode-switch .mode-button").forEach((item) => {
+        item.classList.remove("active");
+      });
 
       activateModeInfoPanel();
       renderSeason4();
@@ -240,6 +243,41 @@
       document.querySelectorAll(".secondary-mode-switch .mode-button").forEach((item) => {
         item.classList.toggle("active", item === button);
       });
+      document.querySelectorAll(".primary-mode-switch .mode-button").forEach((item) => {
+        item.classList.remove("active");
+      });
+    });
+  }
+
+  function patchExclusiveTabGlow() {
+    if (document.documentElement.dataset.exclusiveTabGlow === "true") return;
+    document.documentElement.dataset.exclusiveTabGlow = "true";
+
+    document.addEventListener("click", (event) => {
+      const primary = event.target.closest(".primary-mode-switch .mode-button");
+      const secondary = event.target.closest(".secondary-mode-switch .mode-button");
+
+      if (primary) {
+        setTimeout(() => {
+          document.querySelectorAll(".primary-mode-switch .mode-button").forEach((item) => {
+            item.classList.toggle("active", item === primary);
+          });
+          document.querySelectorAll(".secondary-mode-switch .mode-button").forEach((item) => {
+            item.classList.remove("active");
+          });
+        }, 0);
+      }
+
+      if (secondary) {
+        setTimeout(() => {
+          document.querySelectorAll(".secondary-mode-switch .mode-button").forEach((item) => {
+            item.classList.toggle("active", item === secondary);
+          });
+          document.querySelectorAll(".primary-mode-switch .mode-button").forEach((item) => {
+            item.classList.remove("active");
+          });
+        }, 0);
+      }
     });
   }
 
@@ -257,6 +295,7 @@
   }
 
   patchSeasonClick();
+  patchExclusiveTabGlow();
   setTimeout(patchAll, 100);
   setTimeout(patchAll, 500);
   setTimeout(patchAll, 1200);
