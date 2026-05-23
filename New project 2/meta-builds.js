@@ -1,164 +1,173 @@
 (function () {
-  const wzPerks = ["Scavenger", "Quick Fix", "Survivor"];
-  const closePerks = ["Mountaineer", "Quick Fix", "Stim Shot"];
-  const sniperPerks = ["Survivor", "Smoke Grenade", "Fast Hands"];
-  const bo7Perks = ["Dexterity", "Fast Hands", "Tac Mask"];
-  const noAttach = (slot) => [`Slot: ${slot}`, "Aufsaetze: nicht verfuegbar", "Empfehlung: Utility- oder Mobility-Setup spielen"];
+  const seasonCopy = {
+    title: "Season 4",
+    description: "Sammelpunkt fuer Season-4-News, Patchnotes, Meta-Aenderungen und neue Inhalte.",
+    kicker: "Season 4",
+    updateTime: "Season 4 Watchlist",
+    updateSummary: "Offizielle Patchnotes, neue Waffen, Maps, Events und Balance-Aenderungen werden hier gesammelt, sobald sie bestaetigt sind.",
+    stats: [
+      ["Status", "Watchlist"],
+      ["Fokus", "Patchnotes"],
+      ["Meta", "Balance"],
+      ["Content", "Waffen & Events"],
+    ],
+    cards: [
+      ["Patchnotes", "Sobald offizielle Season-4-Patchnotes erscheinen, landen die wichtigsten Balance-Aenderungen hier."],
+      ["Neue Inhalte", "Neue Waffen, Maps, Modi, Events und Rewards werden gesammelt, sobald sie bestaetigt sind."],
+      ["Meta-Ausblick", "Loadout-Aenderungen und wichtige Nerfs/Buffs werden fuer Warzone und Black Ops 7 getrennt eingeordnet."],
+      ["Regel", "Geruechte bleiben Kontext. Als Fakt zaehlen nur offizielle Call-of-Duty-Quellen."],
+    ],
+    tips: [
+      "Season 4 bekommt einen eigenen Schnellzugriff neben Updates und MW4.",
+      "Offizielle Patchnotes haben Vorrang vor Leaks oder Geruechten.",
+      "Meta-Aenderungen werden erst nach bestaetigten Zahlen als Empfehlung markiert.",
+      "Neue Waffen und Events werden hier sichtbar gebuendelt.",
+    ],
+  };
 
-  const rows = [
-    ["warzone-ranked", "Ryden 45K", ["Optic: Lethal Tools ELO", "Barrel: 12\" Vienna Barrel", "Magazine: Forward Breach Mag", "Rear Grip: Eruption Grip", "Stock: MFS Full Stock+"], "DS20 Mirage", "Close-Range-SMG mit Fokus auf Mobility und Handling.", closePerks],
-    ["warzone-ranked", "Sturmwolf 45", ["Optic: Lethal Tools ELO", "Muzzle: Hawker Series 45", "Barrel: Long Barrel", "Magazine: Extended Mag II", "Fire Mods: Buffer Spring"], "DS20 Mirage", "Close-Range-SMG fuer aggressive Pushes.", closePerks],
-    ["warzone-ranked", "Dravec 45", ["Muzzle: Compensator", "Barrel: Ranger Barrel", "Underbarrel: Lightweight Handstop", "Magazine: Fast Mag", "Stock: Raider Stock"], "DS20 Mirage", "Close-Range-SMG fuer schnelle Entries.", closePerks],
-    ["warzone-ranked", "EGRT-17", ["Optic: FANG HoverPoint ELO", "Muzzle: Monolithic Suppressor", "Barrel: Reinforced Barrel", "Underbarrel: VAS Convergence Foregrip", "Magazine: Extended Mag II"], "Kogot-7", "Long-Range-AR mit Recoil-Control.", wzPerks],
-    ["warzone-ranked", "REV-46", ["Optic: Lethal Tools ELO", "Muzzle: Hawker Series 45", "Barrel: Caudal Target Barrel", "Magazine: Komodo Drum Mag", "Fire Mods: Recoil Sync Unit"], "DS20 Mirage", "Close-Range-SMG mit sauberer Zielaufnahme.", closePerks],
-    ["warzone-ranked", "Maddox RFB", ["Optic: FANG HoverPoint ELO", "Muzzle: Monolithic Suppressor", "Barrel: Reinforced Long Barrel", "Underbarrel: VAS Convergence Foregrip", "Magazine: Extended Mag II"], "Kogot-7", "Long-Range-AR fuer kontrollierte Fights.", wzPerks],
-    ["warzone-ranked", "Peacekeeper Mk1", ["Muzzle: Ported Compensator", "Barrel: Balanced Barrel", "Underbarrel: Precision Foregrip", "Rear Grip: Quickdraw Grip", "Stock: Agile Stock"], "Kogot-7", "Long-Range-AR mit schnellem Handling.", wzPerks, ["Peacekeeper MK1"]],
-    ["warzone-ranked", "M15 MOD 0", ["Optic: Reflex ELO", "Muzzle: Compensator", "Barrel: Reinforced Long Barrel", "Underbarrel: Vertical Foregrip", "Rear Grip: Quickdraw Grip"], "Kogot-7", "Long-Range-AR mit starkem Allround-Profil.", wzPerks],
-    ["warzone-ranked", "X9 Maverick", ["Optic: FANG HoverPoint ELO", "Muzzle: Monolithic Suppressor", "Barrel: Long Barrel", "Underbarrel: Vertical Foregrip", "Magazine: Extended Mag II"], "Kogot-7", "Long-Range-AR mit ruhigem Rueckstoss.", wzPerks],
-    ["warzone-ranked", "M8A1", ["Muzzle: VAS 5.56 Suppressor", "Barrel: M8A1 Autostrike-X8 Conversion", "Stock: MFS Striker Tactical Stock", "Magazine: Redline Capacity Drum", "Rear Grip: K&S Raze Grip"], "Kogot-7", "Sniper-Support-Marksman-Build.", wzPerks],
-    ["warzone-ranked", "Hawker HX", ["Muzzle: Monolithic Suppressor", "Barrel: Reinforced Barrel", "Stock: Precision Stock", "Rear Grip: Quickdraw Grip", "Fire Mods: Overpressured"], "Ryden 45K", "Sniper-Build fuer schnelle Long-Range-Picks.", sniperPerks],
-    ["warzone-ranked", "VS Recon", ["Muzzle: Monolithic Suppressor", "Barrel: Reinforced Long Barrel", "Stock: Heavy Stock", "Rear Grip: Ergonomic Grip", "Fire Mods: Overpressured"], "Ryden 45K", "Sniper-Build mit Velocity-Fokus.", sniperPerks],
-    ["bo7-ranked", "VS Recon", ["Muzzle: Monolithic Suppressor", "Barrel: Reinforced Long Barrel", "Stock: Heavy Stock", "Rear Grip: Ergonomic Grip", "Fire Mods: Overpressured"], "Dravec 45", "Sniper-Build mit Velocity-Fokus.", bo7Perks],
-    ["warzone-ranked", "Swordfish A1", ["Optic: FANG HoverPoint ELO", "Muzzle: Monolithic Suppressor", "Barrel: Reinforced Barrel", "Underbarrel: Precision Foregrip", "Magazine: Extended Mag"], "Ryden 45K", "Marksman-Setup fuer Distanz.", sniperPerks],
-    ["warzone-ranked", "Sokol 545", ["Optic: Greaves AccuSpot 3x", "Muzzle: Monolithic Suppressor", "Barrel: Long Barrel", "Underbarrel: Bowen Sentry Foregrip", "Rear Grip: Control Grip"], "Kogot-7", "Long-Range-LMG mit Kontrolle.", wzPerks],
-    ["warzone-ranked", "RK-9", ["Optic: Lethal Tools ELO", "Muzzle: Hawker Series 45", "Barrel: Long Barrel", "Magazine: Extended Mag II", "Stock: Raider Stock"], "DS20 Mirage", "Close-Range-SMG fuer mobile Fights.", closePerks],
-    ["bo7-ranked", "MPC-25", ["Muzzle: K&S Compensator", "Barrel: 14.5\" VAS Ashe Barrel", "Underbarrel: Zero Shift Handstop", "Magazine: MPC Overload Drum", "Fire Mods: Recoil Sync Unit"], "M15 MOD 0", "Close-Range-SMG mit starkem Entry-Profil.", bo7Perks],
-    ["warzone-ranked", "XM325", ["Optic: Greaves AccuSpot 3x", "Muzzle: Monolithic Suppressor", "Barrel: Reinforced Long Barrel", "Underbarrel: Vertical Foregrip", "Magazine: Extended Mag"], "Kogot-7", "Long-Range-LMG als stabiler Beam.", wzPerks],
-    ["warzone-ranked", "XR-3 Ion", ["Muzzle: Monolithic Suppressor", "Barrel: Long Barrel", "Stock: Precision Stock", "Rear Grip: Quickdraw Grip", "Fire Mods: Overpressured"], "Ryden 45K", "Sniper-Build mit Handling-Fokus.", sniperPerks],
-    ["warzone-ranked", "Shadow SK", ["Muzzle: Monolithic Suppressor", "Barrel: Reinforced Barrel", "Stock: Heavy Stock", "Rear Grip: Ergonomic Grip", "Fire Mods: Overpressured"], "Ryden 45K", "Sniper-Build fuer kontrollierte Picks.", sniperPerks],
-    ["warzone-ranked", "M34 Novaline", ["Optic: FANG HoverPoint ELO", "Muzzle: Monolithic Suppressor", "Barrel: Reinforced Barrel", "Underbarrel: Precision Foregrip", "Rear Grip: Quickdraw Grip"], "Ryden 45K", "Marksman-Setup fuer Praezision.", sniperPerks],
-    ["warzone-ranked", "Warden 308", ["Optic: FANG HoverPoint ELO", "Muzzle: Monolithic Suppressor", "Barrel: Reinforced Barrel", "Underbarrel: Vertical Foregrip", "Magazine: Extended Mag"], "Ryden 45K", "Marksman-Build mit Lane-Kontrolle.", sniperPerks],
-    ["warzone-ranked", "1911", ["Muzzle: Suppressor", "Barrel: Long Barrel", "Magazine: Extended Mag", "Rear Grip: Quickdraw Grip", "Fire Mods: Rapid Fire"], "DS20 Mirage", "Close-Range-Pistol-Setup.", closePerks],
-    ["warzone-ranked", "CODA 9", ["Muzzle: Suppressor", "Barrel: Reinforced Barrel", "Magazine: Extended Mag", "Rear Grip: Quickdraw Grip", "Fire Mods: Rapid Fire"], "DS20 Mirage", "Close-Range-Pistol-Setup.", closePerks],
-    ["warzone-ranked", "Velox 5.7", ["Muzzle: Suppressor", "Barrel: Long Barrel", "Magazine: Extended Mag", "Rear Grip: Ergonomic Grip", "Fire Mods: Rapid Fire"], "DS20 Mirage", "Close-Range-Pistol-Setup.", closePerks],
-    ["warzone-ranked", "Jager 45", ["Muzzle: Suppressor", "Barrel: Reinforced Barrel", "Magazine: Extended Mag", "Rear Grip: Quickdraw Grip", "Fire Mods: Rapid Fire"], "DS20 Mirage", "Close-Range-Pistol-Setup.", closePerks, ["J\u00e4ger 45"]],
-    ["bo7-ranked", "Jager 45", ["Muzzle: Suppressor", "Barrel: Reinforced Barrel", "Magazine: Extended Mag", "Rear Grip: Quickdraw Grip", "Fire Mods: Rapid Fire"], "M15 MOD 0", "Close-Range-Pistol-Setup.", bo7Perks, ["J\u00e4ger 45"]],
-    ["warzone-ranked", "A.R.C. M1", noAttach("Launcher"), "Kogot-7", "Launcher: keine klassischen Waffenaufsaetze verfuegbar.", wzPerks],
-    ["warzone-ranked", "Flatline MK.II", noAttach("Melee"), "DS20 Mirage", "Melee: keine klassischen Waffenaufsaetze verfuegbar.", closePerks],
-    ["warzone-ranked", "AAROW 109", noAttach("Launcher"), "Kogot-7", "Launcher: keine klassischen Waffenaufsaetze verfuegbar.", wzPerks],
-    ["warzone-ranked", "KNIFE", noAttach("Melee"), "DS20 Mirage", "Melee: keine klassischen Waffenaufsaetze verfuegbar.", closePerks],
-    ["warzone-ranked", "Ballistic Knife", noAttach("Melee"), "DS20 Mirage", "Melee/Special: keine klassischen Waffenaufsaetze verfuegbar.", closePerks],
-    ["warzone-ranked", "NX Ravager", noAttach("Special"), "Kogot-7", "Special Weapon: keine klassischen Waffenaufsaetze verfuegbar.", wzPerks],
-    ["warzone-ranked", "H311-SAW", noAttach("Melee"), "DS20 Mirage", "Melee: keine klassischen Waffenaufsaetze verfuegbar.", closePerks],
-    ["warzone-ranked", "GDL Havoc", noAttach("Special"), "Kogot-7", "Special Weapon: keine klassischen Waffenaufsaetze verfuegbar.", wzPerks],
-    ["warzone-ranked", "Siren", noAttach("Special"), "Kogot-7", "Special Weapon: keine klassischen Waffenaufsaetze verfuegbar.", wzPerks],
-    ["warzone-ranked", "Katana", noAttach("Melee"), "DS20 Mirage", "Melee: keine klassischen Waffenaufsaetze verfuegbar.", closePerks],
-  ];
+  function escapeHtml(value) {
+    return String(value || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
 
-  const slug = (value) => String(value || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/mk\./g, "mk").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
-
-  function injectCardCleanup() {
-    if (typeof document === "undefined" || document.querySelector("#meta-card-cleanup")) return;
+  function injectStyle() {
+    if (document.querySelector("#final-ui-patch-style")) return;
     const style = document.createElement("style");
-    style.id = "meta-card-cleanup";
+    style.id = "final-ui-patch-style";
     style.textContent = `
-      body .site-header,
-      body .section,
-      body .loadout-section,
-      body .intel-band,
-      body .updates,
-      body .site-footer {
-        padding-left: clamp(1.35rem, 5vw, 5.5rem) !important;
-        padding-right: clamp(1.35rem, 5vw, 5.5rem) !important;
+      .primary-mode-switch {
+        grid-template-columns: repeat(3, minmax(9rem, 1fr)) !important;
+        max-width: min(48rem, 100%) !important;
       }
-      body #loadoutGrid .loadout-card .tag-list { display: none !important; }
-      body #loadoutGrid .loadout-card .stat-row span:last-child { display: none !important; }
+
+      .primary-mode-switch .mw4-mode-button::before {
+        content: "Geruechte" !important;
+      }
+
+      .primary-mode-switch .season-mode-button::before {
+        content: "Neu";
+        display: block;
+        margin-bottom: 0.16rem;
+        color: var(--amber);
+        font-size: 0.66rem;
+        font-weight: 950;
+        text-transform: uppercase;
+      }
+
       @media (max-width: 720px) {
-        body .site-header,
-        body .section,
-        body .loadout-section,
-        body .intel-band,
-        body .updates,
-        body .site-footer {
-          padding-left: 1rem !important;
-          padding-right: 1rem !important;
+        .primary-mode-switch {
+          grid-template-columns: 1fr !important;
         }
       }
     `;
-    document.head.appendChild(style);
+    document.head.append(style);
   }
 
-  function scoreForCard(card) {
-    const tier = card.querySelector(".rank-badge span")?.textContent?.trim().toLowerCase() || "";
-    const rank = Number(card.querySelector(".rank-badge")?.textContent?.match(/#(\d+)/)?.[1] || 1);
-    const base = tier.includes("meta") ? 100 : tier.startsWith("a") ? 89 : tier.startsWith("b") ? 79 : tier.startsWith("c") ? 69 : tier.startsWith("d") ? 59 : 50;
-    return Math.max(1, base - Math.max(0, rank - 1));
-  }
+  function patchTabs() {
+    const switcher = document.querySelector(".primary-mode-switch");
+    const mw4Button = switcher?.querySelector(".mw4-mode-button");
+    if (!switcher || !mw4Button) return;
 
-  function cleanRenderedCards(root = document) {
-    root.querySelectorAll?.("#loadoutGrid .loadout-card").forEach((card) => {
-      card.querySelectorAll(".stat-row span").forEach((stat) => {
-        const label = stat.querySelector("em")?.textContent?.trim().toLowerCase();
-        if (label === "score") {
-          const strong = stat.querySelector("strong");
-          const score = String(scoreForCard(card));
-          if (strong && strong.textContent !== score) strong.textContent = score;
-        }
-        if (label === "stand") stat.remove();
-      });
-      card.querySelector(".tag-list")?.remove();
-    });
-  }
+    mw4Button.textContent = "MW4";
 
-  function watchCards() {
-    if (typeof document === "undefined") return;
-    const run = () => cleanRenderedCards();
-    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run);
-    else requestAnimationFrame(run);
-    new MutationObserver(run).observe(document.body, { childList: true, subtree: true });
-  }
-
-  function bindDetailsClick() {
-    if (typeof document === "undefined" || window.__metaDetailsClickBound) return;
-    window.__metaDetailsClickBound = true;
-    document.addEventListener("click", (event) => {
-      const button = event.target.closest?.("#loadoutGrid .expand-button");
-      if (!button) return;
-      const card = button.closest(".loadout-card");
-      if (!card) return;
-      event.preventDefault();
-      event.stopPropagation();
-      const shouldExpand = !card.classList.contains("expanded");
-      card.classList.toggle("expanded", shouldExpand);
-      button.setAttribute("aria-expanded", String(shouldExpand));
-      button.setAttribute("aria-label", shouldExpand ? "Aufsaetze ausblenden" : "Aufsaetze anzeigen");
-    }, true);
-  }
-
-  function legacyLoadouts() {
-    try {
-      const request = new XMLHttpRequest();
-      request.open("GET", `script.js?v=${Date.now()}`, false);
-      request.send(null);
-      if (request.status < 200 || request.status >= 300) return [];
-      const match = request.responseText.match(/const loadouts\s*=\s*(\[[\s\S]*?\]);\s*(?:window\.loadouts\s*=|const modeConfig\s*=)/);
-      if (!match) return [];
-      const parsed = new Function(`"use strict"; return ${match[1]};`)();
-      return Array.isArray(parsed) ? parsed : [];
-    } catch {
-      return [];
+    if (!switcher.querySelector(".season-mode-button")) {
+      const seasonButton = document.createElement("button");
+      seasonButton.className = "mode-button season-mode-button";
+      seasonButton.dataset.mode = "season-4-info";
+      seasonButton.type = "button";
+      seasonButton.textContent = "Season 4";
+      switcher.append(seasonButton);
     }
   }
 
-  const extraLoadouts = rows.map(([mode, name, attachments, secondary, role, perks, aliases]) => ({
-    mode,
-    name,
-    aliases,
-    role,
-    secondary,
-    buildCode: "",
-    attachments,
-    perks,
-  }));
+  function activateModeInfoPanel() {
+    const contentTabs = document.querySelector("#contentTabs");
+    if (contentTabs) contentTabs.hidden = true;
 
-  const byModeAndName = new Map();
-  [...legacyLoadouts(), ...extraLoadouts].forEach((loadout) => {
-    const names = [loadout.name, ...(loadout.aliases || [])];
-    names.forEach((name) => byModeAndName.set(`${loadout.mode}:${slug(name)}`, { ...loadout, name }));
-  });
+    document.querySelectorAll(".tab-panel").forEach((panel) => {
+      const active = panel.dataset.panel === "mode-info";
+      panel.hidden = !active;
+      panel.classList.toggle("active", active);
+    });
+  }
 
-  window.loadouts = [...byModeAndName.values()];
-  injectCardCleanup();
-  watchCards();
-  bindDetailsClick();
+  function setText(id, value) {
+    const element = document.querySelector(`#${id}`);
+    if (element) element.textContent = value;
+  }
+
+  function renderSeason4() {
+    setText("tierTitle", seasonCopy.title);
+    setText("tierDescription", seasonCopy.description);
+    setText("modeInfoTitle", seasonCopy.title);
+    setText("modeInfoDescription", seasonCopy.description);
+    setText("modeInfoKicker", seasonCopy.kicker);
+    setText("modeInfoUpdateTime", seasonCopy.updateTime);
+    setText("modeInfoUpdateSummary", seasonCopy.updateSummary);
+
+    const image = document.querySelector("#modeInfoImage");
+    if (image) {
+      image.src = "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blog/body/bo7/bo7-s03-reloaded/BO7-S03-RELOADED-ANNOUNCEMENT-001.webp";
+      image.alt = "Call of Duty Season Watch";
+    }
+
+    const stats = document.querySelector("#modeInfoStats");
+    if (stats) {
+      stats.innerHTML = seasonCopy.stats
+        .map(([label, value]) => `<div><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong></div>`)
+        .join("");
+    }
+
+    const cards = document.querySelector("#modeInfoCards");
+    if (cards) {
+      cards.innerHTML = seasonCopy.cards
+        .map(([title, text]) => `<article><h3>${escapeHtml(title)}</h3><p>${escapeHtml(text)}</p></article>`)
+        .join("");
+    }
+
+    const tips = document.querySelector("#modeInfoTips");
+    if (tips) {
+      tips.innerHTML = seasonCopy.tips.map((tip) => `<li>${escapeHtml(tip)}</li>`).join("");
+    }
+
+    const gallery = document.querySelector("#modeInfoGallery");
+    if (gallery) gallery.innerHTML = "";
+  }
+
+  function patchSeasonClick() {
+    if (document.documentElement.dataset.seasonPatchReady === "true") return;
+    document.documentElement.dataset.seasonPatchReady = "true";
+
+    document.addEventListener("click", (event) => {
+      const button = event.target.closest(".season-mode-button");
+      if (!button) return;
+
+      document.querySelectorAll(".primary-mode-switch .mode-button").forEach((item) => {
+        item.classList.toggle("active", item === button);
+      });
+
+      activateModeInfoPanel();
+      renderSeason4();
+    });
+  }
+
+  function patchAll() {
+    injectStyle();
+    patchTabs();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", patchAll);
+  } else {
+    patchAll();
+  }
+
+  patchSeasonClick();
+  setTimeout(patchAll, 100);
+  setTimeout(patchAll, 500);
+  setTimeout(patchAll, 1200);
+  document.addEventListener("click", () => setTimeout(patchAll, 80));
 }());
