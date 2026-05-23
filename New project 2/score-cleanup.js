@@ -239,6 +239,63 @@
         height: 4.95rem !important;
       }
 
+      html body #loadoutGrid .loadout-card .weapon-art,
+      html body .loadout-grid .loadout-card .weapon-art {
+        position: relative !important;
+        isolation: isolate !important;
+        overflow: hidden !important;
+        border-radius: 0.36rem !important;
+        cursor: zoom-in !important;
+        transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease, filter 220ms ease !important;
+        transform-origin: center center !important;
+      }
+
+      html body #loadoutGrid .loadout-card .weapon-art img,
+      html body .loadout-grid .loadout-card .weapon-art img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        transform: scale(1) !important;
+        transform-origin: center center !important;
+        transition: transform 260ms cubic-bezier(0.2, 0.8, 0.2, 1), filter 260ms ease !important;
+        will-change: transform !important;
+      }
+
+      html body #loadoutGrid .loadout-card .weapon-art::after,
+      html body .loadout-grid .loadout-card .weapon-art::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        background: radial-gradient(circle at 50% 45%, rgba(255, 255, 255, 0.2), transparent 52%);
+        opacity: 0;
+        transition: opacity 220ms ease !important;
+      }
+
+      html body #loadoutGrid .loadout-card .weapon-art:hover,
+      html body .loadout-grid .loadout-card .weapon-art:hover {
+        z-index: 4 !important;
+        transform: scale(1.14) !important;
+        border-color: rgba(var(--tier-card-rgb), 0.86) !important;
+        box-shadow:
+          0 0 0 1px rgba(var(--tier-card-rgb), 0.62),
+          0 1.25rem 2.4rem rgba(0, 0, 0, 0.45),
+          0 0 2rem rgba(var(--tier-card-rgb), 0.28) !important;
+        filter: saturate(1.08) contrast(1.04) !important;
+      }
+
+      html body #loadoutGrid .loadout-card .weapon-art:hover img,
+      html body .loadout-grid .loadout-card .weapon-art:hover img {
+        transform: scale(1.28) !important;
+        filter: saturate(1.12) contrast(1.08) brightness(1.04) !important;
+      }
+
+      html body #loadoutGrid .loadout-card .weapon-art:hover::after,
+      html body .loadout-grid .loadout-card .weapon-art:hover::after {
+        opacity: 1;
+      }
+
       html body #loadoutGrid .loadout-card .card-body {
         align-self: start !important;
       }
