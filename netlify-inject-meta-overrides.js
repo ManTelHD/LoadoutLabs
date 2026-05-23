@@ -6,6 +6,7 @@ const indexPath = path.join(siteDir, "index.html");
 const styleMarker = '<link rel="stylesheet" href="meta-overrides.css">';
 const scriptMarker = '<script src="meta-overrides.js"></script>';
 const animationScriptMarker = '<script src="meta-card-animations.js?v=20260523-card-clean1"></script>';
+const pickrateScriptMarker = '<script src="pickrate-bars.js?v=20260523-pickrate1"></script>';
 const mw4ScriptMarker = '<script src="mw4-update.js?v=20260523-mw4-keyart"></script>';
 
 let html = fs.readFileSync(indexPath, "utf8");
@@ -21,6 +22,10 @@ if (!html.includes(scriptMarker)) {
 html = html.replace(/<script src="meta-card-animations\.js\?v=[^"]+"><\/script>/g, animationScriptMarker);
 if (!html.includes(animationScriptMarker)) {
   html = html.replace(/(<script src="meta-overrides\.js(?:\?v=[^"]+)?"><\/script>)/, `$1\n    ${animationScriptMarker}`);
+}
+html = html.replace(/<script src="pickrate-bars\.js\?v=[^"]+"><\/script>/g, pickrateScriptMarker);
+if (!html.includes(pickrateScriptMarker)) {
+  html = html.replace(/(<script src="meta-card-animations\.js(?:\?v=[^"]+)?"><\/script>)/, `$1\n    ${pickrateScriptMarker}`);
 }
 html = html.replace(/<script src="mw4-update\.js\?v=[^"]+"><\/script>/g, mw4ScriptMarker);
 if (!html.includes(mw4ScriptMarker)) {
