@@ -1,49 +1,65 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-05-23T15:49:51.313Z",
-  "generatedAtLabel": "23. Mai 2026 um 17:49 MESZ",
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-23T16:05:00.000Z",
+  "generatedAtLabel": "23. Mai 2026 um 18:05 MESZ",
   "officialSources": [
+    {
+      "name": "Infinity Ward on X",
+      "url": "https://x.com/InfinityWard/status/1925266490438402461",
+      "status": "official-modern-warfare-confirmation"
+    },
     {
       "name": "Call of Duty on X",
       "url": "https://x.com/CallofDuty",
-      "status": "configured"
+      "status": "official-franchise-source"
+    }
+  ],
+  "reportSources": [
+    {
+      "name": "Dexerto",
+      "url": "https://www.dexerto.com/call-of-duty/call-of-duty-2026-confirmed-to-be-new-modern-warfare-from-infinity-ward-3367127/",
+      "status": "reported-official-iw-confirmation"
     },
     {
-      "name": "Infinity Ward on X",
-      "url": "https://x.com/InfinityWard",
-      "status": "configured"
-    }
-  ],
-  "transcriptSources": [
+      "name": "TechRadar",
+      "url": "https://www.techradar.com/gaming/an-unrelenting-drive-to-make-the-best-entertainment-call-of-duty-studio-heads-outline-vision-for-immersive-new-modern-warfare-entry",
+      "status": "reported-official-iw-confirmation"
+    },
     {
-      "name": "Tridzo YouTube",
-      "url": "https://www.youtube.com/@Tridzoid/videos",
-      "status": "latest-videos-detected",
-      "videos": []
+      "name": "GamesRadar / official CoD statement recap",
+      "url": "https://www.gamesradar.com/games/call-of-duty/activision-kills-call-of-duty-rumor-next-game-will-not-be-on-ps4-ending-last-gen-support-nearly-6-years-after-ps5-and-xbox-series-x-launch/",
+      "status": "next-cod-not-developed-for-ps4"
     }
   ],
-  "officialSummary": "MW4 bleibt nur offiziell, wenn Call of Duty oder Infinity Ward es bestaetigt. X-Posts sind als offizielle Quellen konfiguriert; ohne X-API werden keine Posts erfunden.",
+  "officialSummary": "Infinity Ward hat am 21. Mai 2026 offiziell bestätigt, dass das Studio an einem neuen Modern Warfare arbeitet und es als „definitive Modern Warfare“ einordnet. Der finale Name MW4, ein Trailer, Release-Datum, Plattformliste, Kampagne, Multiplayer, DMZ und Warzone-Integration sind am 23. Mai 2026 noch nicht offiziell bestätigt.",
   "cards": [
     {
       "label": "Offiziell",
-      "title": "COD / Infinity Ward",
-      "text": "Nur Posts von Call of Duty oder Infinity Ward zaehlen als Bestaetigung."
+      "title": "Infinity Ward bestätigt neues Modern Warfare",
+      "text": "Infinity Ward spricht jetzt offiziell von einem neuen Modern-Warfare-Projekt und nennt es das „definitive Modern Warfare“."
     },
     {
-      "label": "Geruecht",
-      "title": "Tridzo Transkripte",
-      "text": "Keine aktuellen Videos gefunden."
+      "label": "Noch offen",
+      "title": "Name MW4 nicht final",
+      "text": "MW4 ist aktuell die wahrscheinliche Bezeichnung in Berichten und Leaks, aber Activision hat den finalen Produktnamen noch nicht veröffentlicht."
     },
     {
-      "label": "Regel",
-      "title": "Strikte Trennung",
-      "text": "Tridzo bleibt Geruecht/Kontext, ausser das Video zitiert eine offizielle Quelle."
+      "label": "Plattformen",
+      "title": "Nicht für PS4 entwickelt",
+      "text": "Activision hat Gerüchte über eine PS4-Version zurückgewiesen. Xbox One ist nicht separat genannt, wird aber in Berichten ebenfalls als unwahrscheinlich eingeordnet."
+    },
+    {
+      "label": "Gerücht",
+      "title": "Korea, Task Force 141, DMZ",
+      "text": "Leaks nennen Korea, Task Force 141/Makarov-Folgen und mögliche DMZ-Rückkehr. Diese Punkte bleiben unbestätigt und werden nicht als Fakt angezeigt."
     }
   ],
   "tips": [
-    "Call of Duty und Infinity Ward auf X sind offizielle Quellen.",
-    "Tridzo-Transkripte werden nur als Geruechte- und Kontextquelle verwendet.",
-    "Ohne offiziellen COD-/Infinity-Ward-Post wird MW4 nicht als bestaetigt angezeigt.",
-    "Wenn X API-Zugang ergaenzt wird, kann der Watcher echte Posts statt nur Quellenstatus pruefen."
-  ]
+    "Fakt: Infinity Ward arbeitet offiziell an einem neuen Modern Warfare.",
+    "Nicht als Fakt anzeigen: finaler Name MW4, Release-Datum, Trailer, Kampagne, DMZ, Multiplayer-Features und Warzone-Integration.",
+    "Reveal-Watch: neue Infos werden nach der offiziellen IW-Bestätigung in den kommenden Wochen erwartet, besonders rund um Juni-Showcases.",
+    "Plattform-Watch: Das nächste Call of Duty wird nicht für PS4 entwickelt.",
+    "Bilder: Bis offizielles MW4-Key-Art erscheint, nur neutrale Modern-Warfare-/Reveal-Stimmung statt MWIII/BO7-Screens verwenden."
+  ],
+  "imagePolicy": "Keine alten MWIII/BO7-Screens als MW4-Bilder ausgeben. Bis offizielles MW4-Key-Art erscheint, neutrale Reveal-/Modern-Warfare-Stimmung verwenden und klar als Platzhalter behandeln."
 }
