@@ -1,10 +1,10 @@
 (function () {
   const seasonCopy = {
     title: "Season 4",
-    description: "Alle aktuellen Infos, Erwartungen und Geruechte zu Black Ops 7 und Warzone Season 4: Start, Blogpost-Fenster, Content-Drop, Meta, Ranked, Zombies und Warzone-Ausblick.",
+    description: "Alle aktuellen Infos, Erwartungen und Gerüchte zu Black Ops 7 und Warzone Season 4: Start, Blogpost-Fenster, Content-Drop, Meta, Ranked, Zombies und Warzone-Ausblick.",
     kicker: "Season 4 Watch",
     updateTime: "Start erwartet: 4. Juni 2026 um 18:00 MESZ",
-    updateSummary: "Season 4 wird nach Battle-Pass-Timer und mehreren News-Berichten fuer Donnerstag, 4. Juni 2026 erwartet. Der uebliche COD-Rollout ist 9AM PT / 12PM ET, also 18:00 Uhr MESZ. Ein offizieller Season-4-Blogpost ist am 23. Mai 2026 noch nicht live; nach dem Muster von Season 03 und Season 03 Reloaded ist der grosse Blog realistisch etwa 7 bis 8 Tage vorher zu erwarten, also grob zwischen 27. und 29. Mai.",
+    updateSummary: "Season 4 wird nach Battle-Pass-Timer und mehreren News-Berichten für Donnerstag, 4. Juni 2026 erwartet. Der übliche COD-Rollout ist 9AM PT / 12PM ET, also 18:00 Uhr MESZ. Ein offizieller Season-4-Blogpost ist am 23. Mai 2026 noch nicht live; nach dem Muster von Season 03 und Season 03 Reloaded ist der große Blog realistisch etwa 7 bis 8 Tage vorher zu erwarten, also grob zwischen 27. und 29. Mai.",
     stats: [
       ["Start", "4. Juni 2026"],
       ["Uhrzeit", "18:00 MESZ"],
@@ -12,24 +12,24 @@
       ["Status", "Timer/News, nicht Reveal-Blog"],
     ],
     cards: [
-      ["Start & Download", "Season 4 soll am Donnerstag, 4. Juni 2026 starten. Erwartete Uhrzeit: 18:00 Uhr MESZ. News-Seiten nennen grob 20 bis 50 GB je nach Plattform; sicherheitshalber vorher Speicher frei machen und Season-3-Battle-Pass abschliessen."],
-      ["Wann kommt der Blogpost?", "Offiziell ist der Season-4-Blog noch nicht live. Season 03 wurde etwa 8 Tage vor Start gebloggt, Season 03 Reloaded etwa 7 Tage vor Start. Wenn Activision dem Muster folgt, ist der grosse Season-4-Blog realistisch zwischen 27. und 29. Mai 2026. Patchnotes kommen meistens kurz vor oder zum Launch."],
-      ["Battle Pass & Rewards", "Erwartet werden wieder ueber 100 Battle-Pass-Items: neue Waffen, Operator-Skins, Camos, Blueprints, XP-Token und woechentliche Challenges. Welche Waffen genau kommen, ist bis zum offiziellen Blog noch nicht bestaetigt."],
-      ["Multiplayer", "Zu erwarten sind neue 6v6-Maps, neue Modi oder Playlist-Rotationen und frische Events. Mehrere Berichte sprechen ausserdem von moeglichen Black-Ops-4-Remastern. Das bleibt Geruecht, bis Treyarch/Call of Duty die Map-Liste nennt."],
-      ["Warzone", "Warzone-Spieler achten vor allem auf Fortune's Keep: Berichte und Rumor-Roundups erwarten eine Rueckkehr oder einen Refresh in Season 4. Dazu passen neue POIs, Resurgence-Fokus, Ranked-Anpassungen und ein neues Loot-/Utility-Meta. Offiziell bestaetigt ist die genaue Warzone-Liste noch nicht."],
-      ["Zombies & Endgame", "Leaks deuten auf eine neue rundenbasierte Zombies-Map zur Midseason hin, also eher Season 4 Reloaded als Launch. Endgame duerfte neue Events, Challenges, Balancing und moegliche LTM-Rotationen bekommen. Alles bis zum Blog als Erwartung behandeln."],
-      ["Meta & Ranked", "Zum Season-Start sind Buffs und Nerfs sehr wahrscheinlich. Wichtig fuer Loadout Lab: neue Waffen koennen die Meta in der ersten Woche kippen, alte Top-Picks koennen durch Recoil-, Damage-Range- oder Attachment-Aenderungen fallen."],
-      ["MW4-Reveal-Geruecht", "Einige Warzone-Rumors spekulieren ueber Teaser, Easter Eggs oder ein Ingame-Event Richtung MW4. Das ist aktuell der weichste Teil der Geruechte. Als Fakt erst anzeigen, wenn Call of Duty, Activision oder Infinity Ward es offiziell posten."],
+      ["Start & Download", "Season 4 soll am Donnerstag, 4. Juni 2026 starten. Erwartete Uhrzeit: 18:00 Uhr MESZ. News-Seiten nennen grob 20 bis 50 GB je nach Plattform; sicherheitshalber vorher Speicher frei machen und Season-3-Battle-Pass abschließen."],
+      ["Wann kommt der Blogpost?", "Offiziell ist der Season-4-Blog noch nicht live. Season 03 wurde etwa 8 Tage vor Start gebloggt, Season 03 Reloaded etwa 7 Tage vor Start. Wenn Activision dem Muster folgt, ist der große Season-4-Blog realistisch zwischen 27. und 29. Mai 2026. Patchnotes kommen meistens kurz vor oder zum Launch."],
+      ["Battle Pass & Rewards", "Erwartet werden wieder über 100 Battle-Pass-Items: neue Waffen, Operator-Skins, Camos, Blueprints, XP-Token und wöchentliche Challenges. Welche Waffen genau kommen, ist bis zum offiziellen Blog noch nicht bestätigt."],
+      ["Multiplayer", "Zu erwarten sind neue 6v6-Maps, neue Modi oder Playlist-Rotationen und frische Events. Mehrere Berichte sprechen außerdem von möglichen Black-Ops-4-Remastern. Das bleibt Gerücht, bis Treyarch/Call of Duty die Map-Liste nennt."],
+      ["Warzone", "Warzone-Spieler achten vor allem auf Fortune's Keep: Berichte und Rumor-Roundups erwarten eine Rückkehr oder einen Refresh in Season 4. Dazu passen neue POIs, Resurgence-Fokus, Ranked-Anpassungen und ein neues Loot-/Utility-Meta. Offiziell bestätigt ist die genaue Warzone-Liste noch nicht."],
+      ["Zombies & Endgame", "Leaks deuten auf eine neue rundenbasierte Zombies-Map zur Midseason hin, also eher Season 4 Reloaded als Launch. Endgame dürfte neue Events, Challenges, Balancing und mögliche LTM-Rotationen bekommen. Alles bis zum Blog als Erwartung behandeln."],
+      ["Meta & Ranked", "Zum Season-Start sind Buffs und Nerfs sehr wahrscheinlich. Wichtig für Loadout Lab: neue Waffen können die Meta in der ersten Woche kippen, alte Top-Picks können durch Recoil-, Damage-Range- oder Attachment-Änderungen fallen."],
+      ["MW4-Reveal-Gerücht", "Einige Warzone-Rumors spekulieren über Teaser, Easter Eggs oder ein Ingame-Event Richtung MW4. Das ist aktuell der weichste Teil der Gerüchte. Als Fakt erst anzeigen, wenn Call of Duty, Activision oder Infinity Ward es offiziell posten."],
       ["Quellenlage", "Harte Basis: Season-3-Battle-Pass-Timer und mehrere News-Berichte nennen den 4. Juni. Offizieller Season-4-Reveal-Blog: noch ausstehend. Content-Details: teils erwartbares COD-Season-Muster, teils Leaks/Rumors."],
     ],
     tips: [
-      "Bis 4. Juni: Season-3-Battle-Pass, Events und wichtige Waffen-Level abschliessen.",
+      "Bis 4. Juni: Season-3-Battle-Pass, Events und wichtige Waffen-Level abschließen.",
       "Blogpost im Blick behalten: realistisch 27.-29. Mai 2026, falls Activision beim 7-8-Tage-Muster bleibt.",
       "Warzone-Fokus: Fortune's Keep/Resurgence, Ranked-Tweaks, neue POIs und Utility-Meta beobachten.",
-      "Multiplayer-Fokus: neue 6v6-Maps, BO4-Remaster-Geruechte, neue Modi und Ranked-Regeln pruefen.",
-      "Zombies-Fokus: Midseason/Reloaded fuer eine neue Round-Based-Map beobachten.",
+      "Multiplayer-Fokus: neue 6v6-Maps, BO4-Remaster-Gerüchte, neue Modi und Ranked-Regeln prüfen.",
+      "Zombies-Fokus: Midseason/Reloaded für eine neue Round-Based-Map beobachten.",
       "Meta-Fokus: neue Waffen nicht sofort als Meta markieren; erste Patchnotes und Live-Daten abwarten.",
-      "MW4-Teaser bleiben Geruecht, bis offizielle COD-/Infinity-Ward-Posts erscheinen.",
+      "MW4-Teaser bleiben Gerücht, bis offizielle COD-/Infinity-Ward-Posts erscheinen.",
     ],
   };
 
@@ -52,7 +52,7 @@
       }
 
       .primary-mode-switch .mw4-mode-button::before {
-        content: "Geruechte" !important;
+        content: "Gerüchte" !important;
       }
 
       .primary-mode-switch .season-mode-button::before {
