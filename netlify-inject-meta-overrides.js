@@ -5,7 +5,7 @@ const siteDir = path.join(__dirname, "New project 2");
 const indexPath = path.join(siteDir, "index.html");
 const styleMarker = '<link rel="stylesheet" href="meta-overrides.css">';
 const scriptMarker = '<script src="meta-overrides.js"></script>';
-const mw4ScriptMarker = '<script src="mw4-update.js?v=20260523-mw4"></script>';
+const mw4ScriptMarker = '<script src="mw4-update.js?v=20260523-mw4-visuals2"></script>';
 
 let html = fs.readFileSync(indexPath, "utf8");
 if (!html.includes(styleMarker)) {
@@ -17,6 +17,7 @@ if (!html.includes(scriptMarker)) {
     `    <script src="script.js"></script>\n    ${scriptMarker}`,
   );
 }
+html = html.replace(/<script src="mw4-update\.js\?v=[^"]+"><\/script>/g, mw4ScriptMarker);
 if (!html.includes(mw4ScriptMarker)) {
   html = html.replace("</body>", `    ${mw4ScriptMarker}\n  </body>`);
 }
