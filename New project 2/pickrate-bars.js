@@ -32,15 +32,35 @@
     return Math.max(0, Math.min(100, percent));
   }
 
-  function formatPercent(percent, fallbackLabel) {
-    if (fallbackLabel) return fallbackLabel;
-    if (percent === null) return "k. A.";
-    return `${percent < 10 ? percent.toFixed(1) : percent.toFixed(0)}%`;
+  function estimatePercent(item, list) {
+    const tier = String(item.tier || item.tierLabel || "").toUpperCase();
+    const tierItems = list.filter((entry) => String(entry.tier || entry.tierLabel || "").toUpperCase() === tier);
+    const tierIndex = Math.max(0, tierItems.findIndex((entry) => slug(entry.name) === slug(item.name)));
+    const denominator = Math.max(1, tierItems.length - 1);
+    const tierProgress = tierIndex / denominator;
+    const ranges = {
+      META: [8.4, 4.2],
+      A: [3.8, 1.9],
+      B: [1.8, 0.9],
+      C: [0.9, 0.45],
+      D: [0.45, 0.18],
+    };
+    const [max, min] = ranges[tier] || [0.7, 0.25];
+    const estimate = max - (max - min) * tierProgress;
+    return Math.max(0.1, Math.min(12, estimate));
+  }
+
+  function formatPercent(percent, estimated) {
+    const value = percent < 10 ? percent.toFixed(1) : percent.toFixed(0);
+    return estimated ? `~${value}%` : `${value}%`;
+  }
+
+  function metaList() {
+    return state.meta?.[activeModeKey()]?.items || [];
   }
 
   function metaItemsByName() {
-    const list = state.meta?.[activeModeKey()]?.items || [];
-    return new Map(list.map((item) => [slug(item.name), item]));
+    return new Map(metaList().map((item) => [slug(item.name), item]));
   }
 
   function injectStyles() {
@@ -83,6 +103,13 @@
         font-size: 0.78rem;
       }
 
+      body #loadoutGrid .pickrate-meter__hint {
+        margin-left: 0.3rem;
+        color: rgba(168, 176, 189, 0.78);
+        font-size: 0.58rem;
+        font-weight: 900;
+      }
+
       body #loadoutGrid .pickrate-meter__track {
         position: relative;
         grid-column: 1 / -1;
@@ -103,13 +130,8 @@
         transition: width 420ms cubic-bezier(.18,.86,.22,1);
       }
 
-      body #loadoutGrid .pickrate-meter.unavailable {
-        opacity: 0.72;
-      }
-
-      body #loadoutGrid .pickrate-meter.unavailable .pickrate-meter__fill {
-        width: 0% !important;
-        box-shadow: none;
+      body #loadoutGrid .pickrate-meter.estimated .pickrate-meter__fill {
+        opacity: 0.86;
       }
 
       @media (max-width: 720px) {
@@ -124,6 +146,7 @@
   function renderBars() {
     injectStyles();
     if (!state.meta) return;
+    const list = metaList();
     const items = metaItemsByName();
 
     document.querySelectorAll("#loadoutGrid .loadout-card").forEach((card) => {
@@ -133,14 +156,14 @@
       const statRow = card.querySelector(".stat-row");
       if (!cardBody || !statRow || !item) return;
 
-      const percent = normalizePercent(item.pickRate);
-      const label = formatPercent(percent, item.pickRateLabel);
-      const width = percent === null ? 0 : percent;
-      const unavailable = percent === null;
+      const publicPercent = normalizePercent(item.pickRate);
+      const estimated = publicPercent === null;
+      const percent = publicPercent ?? estimatePercent(item, list);
+      const label = item.pickRateLabel && !estimated ? item.pickRateLabel : formatPercent(percent, estimated);
       const existing = card.querySelector(".pickrate-meter");
       const html = `
-        <div class="pickrate-meter${unavailable ? " unavailable" : ""}" style="--pickrate-width: ${width.toFixed(2)}%">
-          <div class="pickrate-meter__label"><span>Pickrate</span><strong class="pickrate-meter__value">${escapeHtml(label)}</strong></div>
+        <div class="pickrate-meter${estimated ? " estimated" : ""}" style="--pickrate-width: ${percent.toFixed(2)}%">
+          <div class="pickrate-meter__label"><span>Pickrate${estimated ? " <small class=\"pickrate-meter__hint\">geschätzt</small>" : ""}</span><strong class="pickrate-meter__value">${escapeHtml(label)}</strong></div>
           <div class="pickrate-meter__track" aria-hidden="true"><span class="pickrate-meter__fill"></span></div>
         </div>`;
 
