@@ -1,139 +1,153 @@
 (function () {
-  function svgText(value) {
-    return String(value || "")
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;");
-  }
-
-  function makeMW4Visual(label, title, subtitle, accent, scene) {
-    const color = accent || "#d8b457";
-    const sceneName = scene || "intel";
-    const titleText = svgText(title);
-    const subtitleText = svgText(subtitle);
-    const labelText = svgText(label);
-    const sceneArt = {
-      intel: `
-        <g transform="translate(682 118) rotate(-4)">
-          <rect x="0" y="0" width="348" height="430" rx="18" fill="#10161b" stroke="${color}" stroke-opacity="0.38" stroke-width="2"/>
-          <rect x="28" y="34" width="164" height="18" rx="4" fill="${color}" opacity="0.68"/>
-          <rect x="28" y="82" width="288" height="2" fill="#ffffff" opacity="0.15"/>
-          <rect x="28" y="120" width="220" height="14" rx="3" fill="#dce5ee" opacity="0.22"/>
-          <rect x="28" y="151" width="278" height="14" rx="3" fill="#dce5ee" opacity="0.14"/>
-          <rect x="28" y="182" width="188" height="14" rx="3" fill="#dce5ee" opacity="0.18"/>
-          <g transform="translate(52 244)" fill="none" stroke="${color}" stroke-opacity="0.7">
-            <circle cx="96" cy="70" r="62" stroke-width="2"/>
-            <circle cx="96" cy="70" r="34" stroke-width="2" opacity="0.55"/>
-            <path d="M96 8 V132 M34 70 H158" stroke-width="1.5" opacity="0.45"/>
-            <path d="M96 70 L142 44" stroke-width="5" stroke-linecap="round" filter="url(#hotGlow)"/>
-          </g>
-          <path d="M248 22 L318 22 L318 92" fill="none" stroke="${color}" stroke-width="7" stroke-linecap="round" opacity="0.42"/>
-        </g>`,
-      map: `
-        <g transform="translate(635 110)">
-          <path d="M22 126 C74 62 134 70 190 100 C252 133 286 98 340 56 C392 16 450 44 493 95 C538 148 516 214 468 252 C414 296 356 260 302 296 C236 340 174 338 112 295 C52 254 -24 236 22 126 Z" fill="${color}" opacity="0.14"/>
-          <path d="M88 192 C166 136 235 216 324 152 C395 101 456 139 508 190" fill="none" stroke="#ffffff" stroke-opacity="0.2" stroke-width="3"/>
-          <path d="M60 286 C154 238 226 280 306 242 C392 201 436 230 516 256" fill="none" stroke="${color}" stroke-opacity="0.42" stroke-width="3"/>
-          <g stroke="${color}" stroke-width="2" fill="none" opacity="0.62">
-            <circle cx="336" cy="174" r="92"/>
-            <circle cx="336" cy="174" r="48" opacity="0.58"/>
-            <path d="M336 82 V266 M244 174 H428" opacity="0.42"/>
-          </g>
-          <g fill="${color}" filter="url(#hotGlow)">
-            <circle cx="336" cy="174" r="7"/>
-            <circle cx="158" cy="229" r="5" opacity="0.72"/>
-            <circle cx="454" cy="142" r="5" opacity="0.72"/>
-          </g>
-        </g>`,
-      signal: `
-        <g transform="translate(650 94)" fill="none" stroke="${color}">
-          <circle cx="230" cy="230" r="166" stroke-width="2" opacity="0.32"/>
-          <circle cx="230" cy="230" r="112" stroke-width="2" opacity="0.44"/>
-          <circle cx="230" cy="230" r="58" stroke-width="2" opacity="0.58"/>
-          <path d="M230 64 V396 M64 230 H396" stroke-width="1.5" opacity="0.24"/>
-          <path d="M230 230 L344 158" stroke-width="8" stroke-linecap="round" filter="url(#hotGlow)"/>
-          <path d="M96 362 L390 68" stroke="#ffffff" stroke-opacity="0.11" stroke-width="20"/>
-          <rect x="112" y="334" width="236" height="56" rx="8" fill="#06090d" stroke="${color}" stroke-opacity="0.48"/>
-          <path d="M145 362 H318" stroke="#ffffff" stroke-opacity="0.24" stroke-width="8" stroke-linecap="round"/>
-        </g>`,
-      classified: `
-        <g transform="translate(670 126)">
-          <rect x="0" y="0" width="418" height="286" rx="14" fill="#0c1116" stroke="${color}" stroke-opacity="0.34" stroke-width="2"/>
-          <path d="M34 66 H296" stroke="${color}" stroke-width="10" stroke-linecap="round" opacity="0.68"/>
-          <path d="M34 112 H356 M34 154 H258 M34 196 H326" stroke="#ffffff" stroke-width="13" stroke-linecap="round" opacity="0.12"/>
-          <g transform="translate(250 68) rotate(-14)">
-            <rect x="0" y="0" width="178" height="78" rx="8" fill="none" stroke="#ff6f8a" stroke-width="5" opacity="0.86"/>
-            <text x="25" y="50" fill="#ff8ea4" font-family="Arial Black, Arial, sans-serif" font-size="23">RUMOR</text>
-          </g>
-          <path d="M38 242 H378" stroke="${color}" stroke-width="2" stroke-dasharray="10 12" opacity="0.48"/>
-        </g>`,
-    }[sceneName];
-
+  function makeMW4KeyArt() {
     const svg = `
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="${labelText} ${titleText}">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="MW4 Korea key art">
         <defs>
-          <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
-            <stop offset="0" stop-color="#030405"/>
-            <stop offset="0.48" stop-color="#10171c"/>
-            <stop offset="1" stop-color="#030405"/>
+          <linearGradient id="sky" x1="0" x2="1" y1="0" y2="1">
+            <stop offset="0" stop-color="#050707"/>
+            <stop offset="0.45" stop-color="#121916"/>
+            <stop offset="1" stop-color="#020303"/>
           </linearGradient>
-          <radialGradient id="flare" cx="74%" cy="35%" r="52%">
-            <stop offset="0" stop-color="${color}" stop-opacity="0.34"/>
-            <stop offset="0.42" stop-color="${color}" stop-opacity="0.1"/>
-            <stop offset="1" stop-color="${color}" stop-opacity="0"/>
+          <radialGradient id="cityGlow" cx="62%" cy="52%" r="48%">
+            <stop offset="0" stop-color="#b8a15e" stop-opacity="0.44"/>
+            <stop offset="0.42" stop-color="#435643" stop-opacity="0.16"/>
+            <stop offset="1" stop-color="#000" stop-opacity="0"/>
           </radialGradient>
+          <radialGradient id="searchLight" cx="22%" cy="18%" r="38%">
+            <stop offset="0" stop-color="#dfe9ea" stop-opacity="0.32"/>
+            <stop offset="1" stop-color="#dfe9ea" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="wetRoad" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" stop-color="#101511"/>
+            <stop offset="1" stop-color="#030404"/>
+          </linearGradient>
+          <filter id="blur"><feGaussianBlur stdDeviation="10"/></filter>
           <filter id="grain">
-            <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/>
+            <feTurbulence type="fractalNoise" baseFrequency="0.72" numOctaves="4" stitchTiles="stitch"/>
             <feColorMatrix type="saturate" values="0"/>
-            <feComponentTransfer>
-              <feFuncA type="table" tableValues="0 0.18"/>
-            </feComponentTransfer>
+            <feComponentTransfer><feFuncA type="table" tableValues="0 0.2"/></feComponentTransfer>
           </filter>
-          <filter id="hotGlow" x="-60%" y="-60%" width="220%" height="220%">
-            <feGaussianBlur stdDeviation="8" result="blur"/>
+          <filter id="logoGlow" x="-35%" y="-45%" width="170%" height="190%">
+            <feGaussianBlur stdDeviation="5" result="blur"/>
             <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
           </filter>
-          <pattern id="microgrid" width="44" height="44" patternUnits="userSpaceOnUse">
-            <path d="M44 0H0V44" fill="none" stroke="#ffffff" stroke-opacity="0.045" stroke-width="1"/>
-          </pattern>
-          <clipPath id="slash"><path d="M0 0H1200V675H0Z M735 0H1200V675H560Z" fill-rule="evenodd"/></clipPath>
+          <clipPath id="haze"><rect width="1600" height="900" rx="0"/></clipPath>
         </defs>
-        <rect width="1200" height="675" fill="url(#bg)"/>
-        <rect width="1200" height="675" fill="url(#microgrid)"/>
-        <rect width="1200" height="675" fill="url(#flare)"/>
-        <rect width="1200" height="675" filter="url(#grain)" opacity="0.3"/>
-        <path d="M0 516 C150 442 284 494 428 448 C620 386 700 428 826 354 C962 276 1054 258 1200 310 V675 H0 Z" fill="${color}" opacity="0.07"/>
-        <path d="M740 0H1200V675H570Z" fill="#ffffff" opacity="0.035" clip-path="url(#slash)"/>
-        ${sceneArt}
-        <g transform="translate(78 92)">
-          <rect x="0" y="0" width="178" height="38" rx="7" fill="${color}" opacity="0.92"/>
-          <text x="18" y="26" fill="#050608" font-family="Arial Black, Arial, sans-serif" font-size="18">${labelText}</text>
-          <text x="0" y="142" fill="#fff7d7" font-family="Arial Black, Impact, sans-serif" font-size="74">${titleText}</text>
-          <text x="3" y="195" fill="#e5edf3" font-family="Arial, sans-serif" font-size="30" font-weight="700">${subtitleText}</text>
-          <path d="M0 248 H470" stroke="${color}" stroke-width="4" stroke-linecap="round" opacity="0.72" filter="url(#hotGlow)"/>
-          <text x="0" y="330" fill="#aeb8c2" font-family="Arial, sans-serif" font-size="23">LOADOUTLAB INTEL BOARD</text>
-          <text x="0" y="368" fill="#69737d" font-family="Arial, sans-serif" font-size="19">Statusgrafik bis offizielles MW4-Key-Art erscheint</text>
+
+        <rect width="1600" height="900" fill="url(#sky)"/>
+        <rect width="1600" height="900" fill="url(#cityGlow)"/>
+        <rect width="1600" height="900" fill="url(#searchLight)" opacity="0.72"/>
+
+        <g opacity="0.55" filter="url(#blur)">
+          <ellipse cx="775" cy="420" rx="760" ry="160" fill="#202820"/>
+          <ellipse cx="920" cy="520" rx="680" ry="180" fill="#050807"/>
         </g>
-        <rect x="22" y="22" width="1156" height="631" rx="8" fill="none" stroke="${color}" stroke-opacity="0.42" stroke-width="2"/>
-        <rect x="36" y="36" width="1128" height="603" rx="6" fill="none" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
+
+        <path d="M0 514 C174 448 290 472 438 434 C600 392 696 312 846 344 C994 376 1122 312 1600 390 V900 H0 Z" fill="#080b09" opacity="0.88"/>
+        <path d="M0 535 C168 486 312 508 448 463 C602 411 690 374 846 397 C990 418 1135 370 1600 430 V900 H0 Z" fill="#131912" opacity="0.72"/>
+
+        <g opacity="0.92">
+          <rect x="118" y="374" width="44" height="188" fill="#171f1b"/>
+          <rect x="182" y="330" width="54" height="230" fill="#101614"/>
+          <rect x="258" y="360" width="40" height="200" fill="#151c18"/>
+          <rect x="334" y="292" width="66" height="272" fill="#111816"/>
+          <rect x="438" y="342" width="50" height="222" fill="#111714"/>
+          <rect x="520" y="252" width="74" height="314" fill="#151d19"/>
+          <rect x="636" y="298" width="56" height="268" fill="#101614"/>
+          <rect x="736" y="218" width="70" height="348" fill="#18201c"/>
+          <rect x="846" y="274" width="52" height="292" fill="#121915"/>
+          <rect x="944" y="196" width="78" height="372" fill="#151d19"/>
+          <rect x="1064" y="284" width="52" height="282" fill="#111714"/>
+          <rect x="1160" y="226" width="82" height="340" fill="#17201b"/>
+          <rect x="1280" y="316" width="66" height="250" fill="#101614"/>
+          <rect x="1384" y="264" width="72" height="304" fill="#151d19"/>
+        </g>
+
+        <g fill="#c9d1c2" opacity="0.58">
+          <rect x="536" y="276" width="10" height="4"/><rect x="566" y="292" width="8" height="4"/><rect x="752" y="246" width="10" height="4"/>
+          <rect x="782" y="294" width="9" height="4"/><rect x="962" y="220" width="10" height="4"/><rect x="990" y="262" width="9" height="4"/>
+          <rect x="1182" y="252" width="10" height="4"/><rect x="1214" y="304" width="8" height="4"/><rect x="1408" y="296" width="9" height="4"/>
+          <rect x="212" y="362" width="8" height="4"/><rect x="356" y="326" width="9" height="4"/><rect x="462" y="382" width="8" height="4"/>
+        </g>
+
+        <g transform="translate(805 286)" opacity="0.94">
+          <path d="M0 140 H252 L218 160 H34 Z" fill="#0b0d0b"/>
+          <path d="M18 140 C34 98 58 72 126 20 C194 72 218 98 234 140 Z" fill="#181f18" stroke="#a58d51" stroke-opacity="0.62" stroke-width="3"/>
+          <path d="M52 118 H200 M72 92 H180 M94 66 H158" stroke="#c2aa68" stroke-opacity="0.58" stroke-width="4"/>
+          <path d="M126 18 V-52" stroke="#b8c0b0" stroke-opacity="0.54" stroke-width="3"/>
+        </g>
+
+        <g transform="translate(904 130)" opacity="0.9">
+          <path d="M54 0 L70 138 H38 Z" fill="#121715"/>
+          <circle cx="54" cy="28" r="18" fill="#151c19" stroke="#c0c6b6" stroke-opacity="0.38" stroke-width="3"/>
+          <path d="M54 -32 V12" stroke="#d2d8ce" stroke-opacity="0.48" stroke-width="3"/>
+          <circle cx="54" cy="-38" r="5" fill="#d1b86a" opacity="0.9"/>
+        </g>
+
+        <g opacity="0.85">
+          <path d="M0 675 C250 610 382 626 548 664 C746 710 916 674 1088 626 C1268 576 1410 590 1600 634 V900 H0 Z" fill="url(#wetRoad)"/>
+          <path d="M640 626 L420 900 M874 626 L1090 900" stroke="#2e352d" stroke-width="4" opacity="0.45"/>
+          <path d="M776 638 C742 710 706 802 678 900 M838 636 C870 722 904 808 928 900" stroke="#8f7b45" stroke-width="3" opacity="0.35"/>
+        </g>
+
+        <g opacity="0.62" filter="url(#blur)">
+          <ellipse cx="744" cy="748" rx="210" ry="36" fill="#d5c690" opacity="0.16"/>
+          <ellipse cx="1172" cy="748" rx="260" ry="40" fill="#e0dfd8" opacity="0.1"/>
+          <ellipse cx="410" cy="748" rx="240" ry="42" fill="#cad9cd" opacity="0.08"/>
+        </g>
+
+        <g fill="#030404" opacity="0.96">
+          <path d="M210 522 c38 0 70 38 70 88 v130 h-144 v-130 c0-50 32-88 74-88z"/>
+          <path d="M154 628 h122 l56 150 h-230z"/>
+          <path d="M186 512 c0-30 52-30 52 0 v30 h-52z"/>
+          <path d="M246 642 l178 44 -8 22 -184-26z"/>
+          <path d="M1180 548 c34 0 62 32 62 76 v116 h-126 v-116 c0-44 28-76 64-76z"/>
+          <path d="M1132 648 h122 l44 130 h-204z"/>
+          <path d="M1158 538 c0-26 46-26 46 0 v28 h-46z"/>
+          <path d="M1124 664 l-142 58 -10-22 138-74z"/>
+          <path d="M764 574 c28 0 50 27 50 64 v94 h-102 v-94 c0-37 22-64 52-64z" opacity="0.9"/>
+          <path d="M884 586 c24 0 44 24 44 56 v86 h-90 v-86 c0-32 20-56 46-56z" opacity="0.86"/>
+        </g>
+
+        <g transform="translate(68 108)" opacity="0.78">
+          <path d="M0 18 L138 0 L178 18 L136 32 L0 30 Z" fill="#030404"/>
+          <path d="M84 20 L110 92 H94 L62 22 Z" fill="#030404"/>
+          <path d="M-20 18 H48 M150 16 H226" stroke="#030404" stroke-width="8" stroke-linecap="round"/>
+          <path d="M66 92 L182 410" stroke="#e6eeee" stroke-opacity="0.18" stroke-width="24" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(1288 134) scale(.74)" opacity="0.62">
+          <path d="M0 18 L138 0 L178 18 L136 32 L0 30 Z" fill="#030404"/>
+          <path d="M84 20 L110 92 H94 L62 22 Z" fill="#030404"/>
+          <path d="M-20 18 H48 M150 16 H226" stroke="#030404" stroke-width="8" stroke-linecap="round"/>
+          <path d="M58 92 L-48 390" stroke="#e6eeee" stroke-opacity="0.13" stroke-width="24" stroke-linecap="round"/>
+        </g>
+
+        <g stroke="#cfd8d0" stroke-width="2" stroke-linecap="round" opacity="0.2">
+          <path d="M120 0 L104 900 M254 0 L222 900 M402 0 L360 900 M548 0 L494 900 M710 0 L654 900 M886 0 L822 900 M1034 0 L970 900 M1210 0 L1140 900 M1390 0 L1320 900"/>
+        </g>
+
+        <g transform="translate(1004 674)" filter="url(#logoGlow)">
+          <path d="M0 0 H72 L114 66 L156 0 H230 L230 112 H178 V45 L134 112 H94 L52 45 V112 H0 Z" fill="#f4f4f0"/>
+          <path d="M250 0 H310 L345 64 L382 0 H442 L377 112 H318 Z" fill="#f4f4f0"/>
+          <path d="M520 0 H582 V70 H620 V112 H582 V146 H530 V112 H438 V72 Z M530 70 V28 L484 70 Z" fill="#f4f4f0"/>
+          <path d="M0 128 H620" stroke="#9d8950" stroke-width="5" opacity="0.72"/>
+        </g>
+
+        <rect width="1600" height="900" fill="url(#cityGlow)" opacity="0.18"/>
+        <rect width="1600" height="900" filter="url(#grain)" opacity="0.26"/>
+        <rect x="0" y="0" width="1600" height="900" fill="none" stroke="#b9a15b" stroke-opacity="0.18" stroke-width="3"/>
       </svg>`;
     return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
   }
 
-  const mw4Visuals = {
-    hero: makeMW4Visual("OFFIZIELL", "MODERN WARFARE", "Infinity Ward bestätigt neues Projekt", "#d8b457", "intel"),
-    name: makeMW4Visual("NOCH OFFEN", "MW4", "Finaler Name noch nicht offiziell", "#d8b457", "classified"),
-    reveal: makeMW4Visual("REVEAL WATCH", "SOMMER 2026", "Trailer oder Blogpost erwartet", "#35d4ff", "signal"),
-    rumors: makeMW4Visual("GERÜCHTE", "KOREA / DMZ", "Leaks bleiben markiert", "#b98cff", "map"),
-  };
+  const mw4KeyArt = makeMW4KeyArt();
 
   const mw4Copy = {
     title: "MW4 Infos & Gerüchte",
     description: "Aktueller Stand zu Call of Duty 2026: Infinity Ward hat am 21. Mai 2026 offiziell bestätigt, dass das Studio am „definitive Modern Warfare“ arbeitet. Der Name MW4 ist noch nicht offiziell veröffentlicht, bleibt aber die wahrscheinlichste Bezeichnung in Berichten und Leaks.",
     kicker: "Call of Duty 2026",
-    imageUrl: mw4Visuals.hero,
-    imageAlt: "MW4 Watch Statusgrafik: Infinity Ward bestätigt ein neues Modern Warfare",
+    imageUrl: mw4KeyArt,
+    imageAlt: "Fan-made MW4 Key Art mit Korea-Vibe, Operatoren, Regen und MW4-Logo",
     updateTime: "Aktualisiert: 23. Mai 2026 um 18:05 MESZ",
     updateSummary: "Neu: Infinity Ward spricht jetzt offiziell von einem neuen Modern-Warfare-Projekt. Bestätigt sind Studio und Modern-Warfare-Richtung. Nicht bestätigt sind der finale Name MW4, Release-Datum, Trailer, Plattformliste, Kampagnen-Setting, Multiplayer-Features, DMZ und Warzone-Integration.",
     stats: [
@@ -152,18 +166,13 @@
       ["DMZ & Warzone", "DMZ wird in der Community stark erwartet, vor allem weil Infinity Ward zuletzt wieder mit MW-Themen verbunden wird. Eine Rückkehr von DMZ oder eine konkrete Warzone-Integration ist aktuell nicht bestätigt."],
       ["LoadoutLab Watchlist", "Sobald der Reveal kommt, müssen Name, Key-Art, Plattformen, Waffenliste, Movement, Gunsmith, Warzone-Anbindung und mögliche Beta-Termine sofort aktualisiert werden."],
     ],
-    images: [
-      ["Offiziell: Infinity Ward", mw4Visuals.hero],
-      ["Noch offen: Name MW4", mw4Visuals.name],
-      ["Reveal Watch", mw4Visuals.reveal],
-      ["Gerüchte: DMZ / Korea", mw4Visuals.rumors],
-    ],
+    images: [["MW4 Korea Key Art", mw4KeyArt]],
     tips: [
       "Fakt: Infinity Ward arbeitet offiziell an einem neuen Modern Warfare.",
       "Noch kein Fakt: finaler Name MW4, Release-Datum, Trailer, Kampagne, DMZ und Multiplayer-Details.",
       "Gerüchte zu Korea, Task Force 141 und Makarov bleiben als Leak markiert, bis Activision oder Infinity Ward sie bestätigt.",
-      "Die Bilder sind jetzt eigene MW4-Intel-Grafiken und keine zufälligen Stock-Fotos oder angeblichen Screenshots.",
-      "Sobald offizielles Key-Art oder ein Trailer erscheint, sollten die Statusgrafiken durch echte offizielle Assets ersetzt werden.",
+      "Das Bild ist ein fan-made MW4-Key-Art für LoadoutLab und kein offizielles Activision-Asset.",
+      "Sobald offizielles Key-Art oder ein Trailer erscheint, sollte das Fan-Art durch echte offizielle Assets ersetzt werden.",
     ],
   };
 
@@ -183,7 +192,6 @@
       .mw4-watch-panel {
         --mw4-gold: #d8b457;
         --mw4-gold-soft: rgba(216, 180, 87, 0.18);
-        --mw4-panel: rgba(9, 13, 17, 0.92);
       }
 
       .mw4-watch-panel .mode-info-hero {
@@ -202,11 +210,8 @@
         position: absolute;
         inset: 0;
         pointer-events: none;
-        background:
-          linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-          linear-gradient(0deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-        background-size: 42px 42px;
-        mask-image: linear-gradient(135deg, rgba(0, 0, 0, 0.58), transparent 74%);
+        background: linear-gradient(120deg, rgba(216, 180, 87, 0.12), transparent 34%, rgba(255,255,255,0.04));
+        opacity: 0.6;
       }
 
       .mw4-watch-panel #modeInfoKicker {
@@ -238,8 +243,7 @@
       }
 
       .mw4-watch-panel #modeInfoStats strong,
-      .mw4-watch-panel #modeInfoCards h3,
-      .mw4-watch-panel #modeInfoGallery figcaption {
+      .mw4-watch-panel #modeInfoCards h3 {
         color: #efd27c;
       }
 
@@ -247,16 +251,25 @@
         border-left: 4px solid var(--mw4-gold);
       }
 
+      .mw4-watch-panel #modeInfoGallery {
+        grid-template-columns: 1fr;
+      }
+
       .mw4-watch-panel #modeInfoGallery img {
         aspect-ratio: 16 / 9;
+        width: 100%;
         object-fit: cover;
-        filter: saturate(1.04) contrast(1.08);
+        filter: saturate(1.06) contrast(1.1);
         transition: transform 180ms ease, filter 180ms ease;
       }
 
+      .mw4-watch-panel #modeInfoGallery figcaption {
+        display: none;
+      }
+
       .mw4-watch-panel #modeInfoGallery figure:hover img {
-        transform: scale(1.025);
-        filter: saturate(1.12) contrast(1.12) brightness(1.04);
+        transform: scale(1.015);
+        filter: saturate(1.12) contrast(1.13) brightness(1.03);
       }
     `;
     document.head.appendChild(style);
