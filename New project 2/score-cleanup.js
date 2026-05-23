@@ -255,7 +255,8 @@
         width: 100% !important;
         height: 100% !important;
         object-fit: cover !important;
-        transform: scale(1) !important;
+        object-position: center center !important;
+        transform: scale(1.12) !important;
         transform-origin: center center !important;
         transition: transform 260ms cubic-bezier(0.2, 0.8, 0.2, 1), filter 260ms ease !important;
         will-change: transform !important;
@@ -274,25 +275,31 @@
       }
 
       html body #loadoutGrid .loadout-card .weapon-art:hover,
-      html body .loadout-grid .loadout-card .weapon-art:hover {
-        z-index: 4 !important;
-        transform: scale(1.14) !important;
-        border-color: rgba(var(--tier-card-rgb), 0.86) !important;
+      html body #loadoutGrid .loadout-card .weapon-art.zoom-active,
+      html body .loadout-grid .loadout-card .weapon-art:hover,
+      html body .loadout-grid .loadout-card .weapon-art.zoom-active {
+        z-index: 20 !important;
+        transform: scale(1.24) !important;
+        border-color: rgba(var(--tier-card-rgb), 0.9) !important;
         box-shadow:
-          0 0 0 1px rgba(var(--tier-card-rgb), 0.62),
-          0 1.25rem 2.4rem rgba(0, 0, 0, 0.45),
-          0 0 2rem rgba(var(--tier-card-rgb), 0.28) !important;
-        filter: saturate(1.08) contrast(1.04) !important;
+          0 0 0 1px rgba(var(--tier-card-rgb), 0.72),
+          0 1.35rem 2.65rem rgba(0, 0, 0, 0.52),
+          0 0 2.3rem rgba(var(--tier-card-rgb), 0.34) !important;
+        filter: saturate(1.12) contrast(1.06) !important;
       }
 
       html body #loadoutGrid .loadout-card .weapon-art:hover img,
-      html body .loadout-grid .loadout-card .weapon-art:hover img {
-        transform: scale(1.28) !important;
-        filter: saturate(1.12) contrast(1.08) brightness(1.04) !important;
+      html body #loadoutGrid .loadout-card .weapon-art.zoom-active img,
+      html body .loadout-grid .loadout-card .weapon-art:hover img,
+      html body .loadout-grid .loadout-card .weapon-art.zoom-active img {
+        transform: scale(1.42) !important;
+        filter: saturate(1.18) contrast(1.1) brightness(1.06) !important;
       }
 
       html body #loadoutGrid .loadout-card .weapon-art:hover::after,
-      html body .loadout-grid .loadout-card .weapon-art:hover::after {
+      html body #loadoutGrid .loadout-card .weapon-art.zoom-active::after,
+      html body .loadout-grid .loadout-card .weapon-art:hover::after,
+      html body .loadout-grid .loadout-card .weapon-art.zoom-active::after {
         opacity: 1;
       }
 
@@ -446,8 +453,20 @@
     document.head.append(style);
   }
 
+  function bindWeaponZoom(card) {
+    card.querySelectorAll(".weapon-art").forEach((art) => {
+      if (art.dataset.zoomBound === "true") return;
+      art.dataset.zoomBound = "true";
+      art.addEventListener("pointerenter", () => art.classList.add("zoom-active"));
+      art.addEventListener("pointerleave", () => art.classList.remove("zoom-active"));
+      art.addEventListener("focus", () => art.classList.add("zoom-active"));
+      art.addEventListener("blur", () => art.classList.remove("zoom-active"));
+    });
+  }
+
   function cleanCard(card) {
     const statRow = card.querySelector(".stat-row");
+    bindWeaponZoom(card);
     if (!statRow) return;
 
     statRow.querySelectorAll("span").forEach((stat) => {
