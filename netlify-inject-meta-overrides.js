@@ -9,21 +9,19 @@ const activeScripts = [
   "score-cleanup.js?v=20260523-score4",
   "card-toggle-performance.js?v=20260524-toggle-perf2",
   "pickrate-bars.js?v=20260523-pickrate1",
-  "weapon-image-zoom.js?v=20260524-weapon-zoom-smooth3",
+  "weapon-image-zoom.js?v=20260524-weapon-zoom-lite4",
   "mw4-update.js?v=20260523-mw4-keyart",
   "mw4-image-override.js?v=20260524-mw4-no-note1",
   "season4-polish.js?v=20260524-season4-stable1",
   "season4-click-rescue.js?v=20260524-season4-image1",
-  "absolute-meta-glow.js?v=20260524-premium-polish1",
   "hero-polish.js?v=20260524-header-refine1",
-  "premium-accents.js?v=20260524-premium-perf2",
   "site-interaction-rescue.js?v=20260524-interaction1",
   "script.js?v=20260512-official1",
   "meta-overrides.js?v=20260512-official1",
   "loadout-builds.js?v=20260524-complete-builds3",
   "attachment-levels.js?v=20260524-attachment-levels1",
   "umlaut-polish.js?v=20260524-umlauts6",
-  "loadout-details-polish.js?v=20260524-details-polish1",
+  "loadout-details-polish.js?v=20260524-details-lite2",
   "tier-class-polish.js?v=20260524-tier-class1",
 ];
 
@@ -35,6 +33,8 @@ const retiredScripts = [
   "tier-build-fixes",
   "tier-extras-fixes",
   "loadout-compare",
+  "absolute-meta-glow",
+  "premium-accents",
 ];
 
 for (const name of retiredScripts) {
