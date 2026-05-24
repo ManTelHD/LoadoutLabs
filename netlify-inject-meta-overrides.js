@@ -7,6 +7,7 @@ const styleMarker = '<link rel="stylesheet" href="meta-overrides.css">';
 const scriptMarker = '<script src="meta-overrides.js"></script>';
 const absoluteMetaGlowScriptMarker = '<script src="absolute-meta-glow.js?v=20260524-premium-polish1"></script>';
 const heroPolishScriptMarker = '<script src="hero-polish.js?v=20260524-header-refine1"></script>';
+const premiumAccentsScriptMarker = '<script src="premium-accents.js?v=20260524-premium-accents1"></script>';
 const animationScriptMarker = '<script src="meta-card-animations.js?v=20260523-card-clean1"></script>';
 const pickrateScriptMarker = '<script src="pickrate-bars.js?v=20260523-pickrate1"></script>';
 const weaponZoomScriptMarker = '<script src="weapon-image-zoom.js?v=20260524-weapon-text-offset1"></script>';
@@ -25,6 +26,7 @@ html = html.replace(/\n\s*<script src="season4-tab-fix\.js\?v=[^"]+"><\/script>/
 
 html = html.replace(/<script src="absolute-meta-glow\.js\?v=[^"]+"><\/script>/g, absoluteMetaGlowScriptMarker);
 html = html.replace(/<script src="hero-polish\.js\?v=[^"]+"><\/script>/g, heroPolishScriptMarker);
+html = html.replace(/<script src="premium-accents\.js\?v=[^"]+"><\/script>/g, premiumAccentsScriptMarker);
 html = html.replace(/<script src="season4-polish\.js\?v=[^"]+"><\/script>/g, season4ScriptMarker);
 html = html.replace(/<script src="season4-click-rescue\.js\?v=[^"]+"><\/script>/g, season4ClickRescueScriptMarker);
 html = html.replace(/<script src="site-interaction-rescue\.js\?v=[^"]+"><\/script>/g, siteInteractionRescueScriptMarker);
@@ -49,8 +51,11 @@ if (!html.includes(absoluteMetaGlowScriptMarker)) {
 if (!html.includes(heroPolishScriptMarker)) {
   html = html.replace(/(<script src="absolute-meta-glow\.js(?:\?v=[^"]+)?"><\/script>)/, `$1\n    ${heroPolishScriptMarker}`);
 }
+if (!html.includes(premiumAccentsScriptMarker)) {
+  html = html.replace(/(<script src="hero-polish\.js(?:\?v=[^"]+)?"><\/script>)/, `$1\n    ${premiumAccentsScriptMarker}`);
+}
 if (!html.includes(animationScriptMarker)) {
-  html = html.replace(/(<script src="hero-polish\.js(?:\?v=[^"]+)?"><\/script>|<script src="absolute-meta-glow\.js(?:\?v=[^"]+)?"><\/script>|<script src="meta-overrides\.js(?:\?v=[^"]+)?"><\/script>)/, `$1\n    ${animationScriptMarker}`);
+  html = html.replace(/(<script src="premium-accents\.js(?:\?v=[^"]+)?"><\/script>|<script src="hero-polish\.js(?:\?v=[^"]+)?"><\/script>|<script src="absolute-meta-glow\.js(?:\?v=[^"]+)?"><\/script>|<script src="meta-overrides\.js(?:\?v=[^"]+)?"><\/script>)/, `$1\n    ${animationScriptMarker}`);
 }
 if (!html.includes(pickrateScriptMarker)) {
   html = html.replace(/(<script src="meta-card-animations\.js(?:\?v=[^"]+)?"><\/script>)/, `$1\n    ${pickrateScriptMarker}`);
