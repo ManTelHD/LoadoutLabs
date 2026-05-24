@@ -15,7 +15,10 @@
       aspect-ratio: 16 / 9 !important;
       overflow: hidden !important;
       position: relative !important;
+      isolation: isolate !important;
+      contain: paint !important;
       background: #05080c !important;
+      transform: translateZ(0) !important;
     }
 
     body #loadoutGrid .loadout-card .weapon-art::before,
@@ -44,23 +47,40 @@
       height: 100% !important;
       object-fit: cover !important;
       object-position: center center !important;
-      transform: scale(1) !important;
+      transform: translate3d(0, 0, 0) scale(1) !important;
       transform-origin: center center !important;
-      transition: transform 260ms cubic-bezier(.18,.86,.22,1), filter 220ms ease !important;
-    }
-
-    body #loadoutGrid .loadout-card:hover .weapon-art img,
-    body .loadout-grid .loadout-card:hover .weapon-art img,
-    html body #loadoutGrid > .loadout-card:hover .weapon-art img {
-      transform: scale(1.06) !important;
-      filter: brightness(1.16) contrast(1.12) saturate(1.16) !important;
+      transition: transform 180ms cubic-bezier(.2,.8,.2,1) !important;
+      backface-visibility: hidden !important;
+      will-change: transform !important;
+      filter: brightness(1.1) contrast(1.08) saturate(1.1) !important;
     }
 
     body #loadoutGrid .loadout-card .weapon-art:hover img,
     body .loadout-grid .loadout-card .weapon-art:hover img,
     html body #loadoutGrid > .loadout-card .weapon-art:hover img {
-      transform: scale(1.12) !important;
-      filter: brightness(1.22) contrast(1.14) saturate(1.2) !important;
+      transform: translate3d(0, 0, 0) scale(1.11) !important;
+    }
+
+    body #loadoutGrid .loadout-card .weapon-art:active img,
+    body .loadout-grid .loadout-card .weapon-art:active img,
+    html body #loadoutGrid > .loadout-card .weapon-art:active img {
+      transform: translate3d(0, 0, 0) scale(1.07) !important;
+      transition-duration: 90ms !important;
+    }
+
+    @media (hover: none), (pointer: coarse) {
+      body #loadoutGrid .loadout-card .weapon-art img,
+      body .loadout-grid .loadout-card .weapon-art img,
+      html body #loadoutGrid > .loadout-card .weapon-art img {
+        transition: none !important;
+        will-change: auto !important;
+      }
+
+      body #loadoutGrid .loadout-card .weapon-art:hover img,
+      body .loadout-grid .loadout-card .weapon-art:hover img,
+      html body #loadoutGrid > .loadout-card .weapon-art:hover img {
+        transform: translate3d(0, 0, 0) scale(1) !important;
+      }
     }
 
     @media (max-width: 720px) {
