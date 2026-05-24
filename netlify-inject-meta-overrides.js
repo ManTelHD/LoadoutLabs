@@ -31,6 +31,7 @@ const activeScripts = [
   "script.js?v=20260512-official1",
   "meta-overrides.js?v=20260512-official1",
   "attachment-levels.js?v=20260524-attachment-levels1",
+  "tier-build-fixes.js?v=20260524-a-tier-builds1",
   "umlaut-polish.js?v=20260524-umlauts4",
 ];
 
