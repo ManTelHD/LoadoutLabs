@@ -72,7 +72,7 @@
 
   function cleanWeaponCards(root = document) {
     root.querySelectorAll?.("#loadoutGrid .perk-list li").forEach((item) => {
-      if (/^\s*Pair\s*:/i.test(item.textContent || "")) item.remove();
+      if (/^\s*(Pair|Quelle)\s*:/i.test(item.textContent || "")) item.remove();
     });
     root.querySelectorAll?.("#loadoutGrid .loadout-card > .role, #loadoutGrid .loadout-card .card-main > .role, #loadoutGrid .loadout-card .card-body > .role, #loadoutGrid .loadout-card .meta-card-details > .role, #loadoutGrid .loadout-card .card-details > .role").forEach((item) => item.remove());
   }
