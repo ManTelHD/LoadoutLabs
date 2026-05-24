@@ -223,16 +223,22 @@
     document.head.appendChild(style);
   }
 
-  function ensureSeason4Button() {
-    const switcher = document.querySelector(".primary-mode-switch");
-    if (!switcher || switcher.querySelector(".season4-mode-button, [data-mode='season4-info']")) return;
+  function getSeason4Button() {
+    const buttons = Array.from(document.querySelectorAll(".primary-mode-switch .mode-button, .primary-mode-switch button"));
+    return buttons.find((button) => {
+      const label = (button.textContent || "").replace(/\s+/g, " ").trim().toLowerCase();
+      const mode = String(button.dataset.mode || "").toLowerCase();
+      return mode === "season4-info" || label.includes("season 4");
+    });
+  }
 
-    const button = document.createElement("button");
-    button.className = "mode-button season4-mode-button";
+  function prepareSeason4Button() {
+    const button = getSeason4Button();
+    if (!button) return null;
+    button.classList.add("mode-button", "season-mode-button", "season4-mode-button");
     button.dataset.mode = "season4-info";
     button.type = "button";
-    button.textContent = "Season 4";
-    switcher.appendChild(button);
+    return button;
   }
 
   function activateSeason4Panel(button) {
@@ -298,14 +304,14 @@
   }
 
   function bindSeason4() {
-    ensureSeason4Button();
+    const button = prepareSeason4Button();
     injectSeason4Style();
+    if (!button || button.dataset.season4Bound === "true") return;
 
-    document.addEventListener("click", (event) => {
-      const button = event.target.closest(".season4-mode-button, [data-mode='season4-info']");
-      if (!button) return;
+    button.dataset.season4Bound = "true";
+    button.addEventListener("click", (event) => {
       event.preventDefault();
-      window.setTimeout(() => activateSeason4Panel(button), 0);
+      activateSeason4Panel(button);
     });
   }
 
@@ -316,5 +322,4 @@
   }
 
   window.setTimeout(bindSeason4, 300);
-  window.setTimeout(bindSeason4, 1000);
 })();
