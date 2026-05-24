@@ -13,6 +13,7 @@ const mw4ImageScriptMarker = '<script src="mw4-image-override.js?v=20260524-mw4-
 const season4PreserveScriptMarker = '<script src="season4-preserve.js?v=20260524-season4-preserve1"></script>';
 const season4ScriptMarker = '<script src="season4-polish.js?v=20260524-season4-polish1"></script>';
 const season4DedupeScriptMarker = '<script src="season4-dedupe.js?v=20260524-season4-dedupe2"></script>';
+const season4TabFixScriptMarker = '<script src="season4-tab-fix.js?v=20260524-season4-tab-fix1"></script>';
 
 let html = fs.readFileSync(indexPath, "utf8");
 if (!html.includes(styleMarker)) {
@@ -55,5 +56,9 @@ if (!html.includes(season4ScriptMarker)) {
 html = html.replace(/<script src="season4-dedupe\.js\?v=[^"]+"><\/script>/g, season4DedupeScriptMarker);
 if (!html.includes(season4DedupeScriptMarker)) {
   html = html.replace(/(<script src="season4-polish\.js(?:\?v=[^"]+)?"><\/script>)/, `$1\n    ${season4DedupeScriptMarker}`);
+}
+html = html.replace(/<script src="season4-tab-fix\.js\?v=[^"]+"><\/script>/g, season4TabFixScriptMarker);
+if (!html.includes(season4TabFixScriptMarker)) {
+  html = html.replace(/(<script src="meta-overrides\.js(?:\?v=[^"]+)?"><\/script>)/, `$1\n    ${season4TabFixScriptMarker}`);
 }
 fs.writeFileSync(indexPath, html);
