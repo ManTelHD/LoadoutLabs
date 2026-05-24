@@ -70,10 +70,11 @@
     }
   }
 
-  function removePairRows(root = document) {
+  function cleanWeaponCards(root = document) {
     root.querySelectorAll?.("#loadoutGrid .perk-list li").forEach((item) => {
       if (/^\s*Pair\s*:/i.test(item.textContent || "")) item.remove();
     });
+    root.querySelectorAll?.("#loadoutGrid .loadout-card > .role, #loadoutGrid .loadout-card .card-main > .role").forEach((item) => item.remove());
   }
 
   function injectStyle() {
@@ -84,6 +85,11 @@
       body .primary-mode-switch .mw4-mode-button::before {
         content: "Gerüchte" !important;
       }
+
+      body #loadoutGrid .loadout-card > .role,
+      body #loadoutGrid .loadout-card .card-main > .role {
+        display: none !important;
+      }
     `;
     document.head.appendChild(style);
   }
@@ -91,7 +97,7 @@
   function run() {
     injectStyle();
     walk(document.body);
-    removePairRows(document);
+    cleanWeaponCards(document);
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run, { once: true });
@@ -102,7 +108,7 @@
       mutation.addedNodes.forEach(walk);
       if (mutation.type === "characterData") normalizeNodeText(mutation.target);
     }
-    removePairRows(document);
+    cleanWeaponCards(document);
   }).observe(document.documentElement, { childList: true, subtree: true, characterData: true });
 
   window.setTimeout(run, 120);
