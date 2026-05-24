@@ -12,6 +12,7 @@ const mw4ScriptMarker = '<script src="mw4-update.js?v=20260523-mw4-keyart"></scr
 const mw4ImageScriptMarker = '<script src="mw4-image-override.js?v=20260524-mw4-no-note1"></script>';
 const season4ScriptMarker = '<script src="season4-polish.js?v=20260524-season4-stable1"></script>';
 const season4ClickRescueScriptMarker = '<script src="season4-click-rescue.js?v=20260524-season4-click1"></script>';
+const siteInteractionRescueScriptMarker = '<script src="site-interaction-rescue.js?v=20260524-interaction1"></script>';
 const season4Button = '          <button class="mode-button season-mode-button season4-mode-button" data-mode="season4-info" type="button"><span>NEU</span><strong>Season 4</strong></button>';
 
 let html = fs.readFileSync(indexPath, "utf8");
@@ -22,6 +23,7 @@ html = html.replace(/\n\s*<script src="season4-tab-fix\.js\?v=[^"]+"><\/script>/
 
 html = html.replace(/<script src="season4-polish\.js\?v=[^"]+"><\/script>/g, season4ScriptMarker);
 html = html.replace(/<script src="season4-click-rescue\.js\?v=[^"]+"><\/script>/g, season4ClickRescueScriptMarker);
+html = html.replace(/<script src="site-interaction-rescue\.js\?v=[^"]+"><\/script>/g, siteInteractionRescueScriptMarker);
 html = html.replace(/<script src="meta-card-animations\.js\?v=[^"]+"><\/script>/g, animationScriptMarker);
 html = html.replace(/<script src="pickrate-bars\.js\?v=[^"]+"><\/script>/g, pickrateScriptMarker);
 html = html.replace(/<script src="weapon-image-zoom\.js\?v=[^"]+"><\/script>/g, weaponZoomScriptMarker);
@@ -57,6 +59,9 @@ if (!html.includes(season4ScriptMarker)) {
 }
 if (!html.includes(season4ClickRescueScriptMarker)) {
   html = html.replace(/(<script src="script\.js(?:\?v=[^"]+)?"><\/script>)/, `${season4ClickRescueScriptMarker}\n    $1`);
+}
+if (!html.includes(siteInteractionRescueScriptMarker)) {
+  html = html.replace(/(<script src="meta-overrides\.js(?:\?v=[^"]+)?"><\/script>)/, `$1\n    ${siteInteractionRescueScriptMarker}`);
 }
 
 html = html.replace(/\n\s*<button class="[^"]*season[^>]*>.*?Season 4.*?<\/button>/gis, "");
