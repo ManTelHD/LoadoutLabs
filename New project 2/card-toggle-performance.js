@@ -1,6 +1,6 @@
 (function () {
   const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)");
-  const duration = () => (reduceMotion?.matches ? 0 : 190);
+  const duration = () => (reduceMotion?.matches ? 0 : 120);
 
   function injectStyle() {
     if (document.querySelector("#card-toggle-performance-style")) return;
@@ -15,7 +15,6 @@
 
       body #loadoutGrid .loadout-card .meta-card-details,
       body #loadoutGrid .loadout-card .card-details {
-        will-change: height, opacity, transform !important;
         contain: layout paint !important;
       }
 
@@ -64,21 +63,19 @@
       details.style.overflow = "hidden";
       details.style.height = "0px";
       details.style.opacity = "0";
-      details.style.transform = "translateY(-0.25rem)";
 
       requestAnimationFrame(() => {
         const targetHeight = `${details.scrollHeight}px`;
         const animation = details.animate(
           [
-            { height: "0px", opacity: 0, transform: "translateY(-0.25rem)" },
-            { height: targetHeight, opacity: 1, transform: "translateY(0)" },
+            { height: "0px", opacity: 0 },
+            { height: targetHeight, opacity: 1 },
           ],
           { duration: ms, easing: "cubic-bezier(.2,.8,.2,1)", fill: "both" },
         );
         animation.onfinish = () => {
           details.style.height = "auto";
           details.style.opacity = "1";
-          details.style.transform = "";
           details.style.overflow = "visible";
           card.classList.remove("expand-animating");
         };
@@ -90,21 +87,19 @@
     details.style.overflow = "hidden";
     details.style.height = startHeight;
     details.style.opacity = "1";
-    details.style.transform = "translateY(0)";
 
     requestAnimationFrame(() => {
       const animation = details.animate(
         [
-          { height: startHeight, opacity: 1, transform: "translateY(0)" },
-          { height: "0px", opacity: 0, transform: "translateY(-0.18rem)" },
+          { height: startHeight, opacity: 1 },
+          { height: "0px", opacity: 0 },
         ],
-        { duration: Math.max(130, ms - 30), easing: "cubic-bezier(.4,0,.2,1)", fill: "both" },
+        { duration: 95, easing: "cubic-bezier(.4,0,.2,1)", fill: "both" },
       );
       animation.onfinish = () => {
         card.classList.remove("expanded", "expand-animating");
         details.style.height = "0px";
         details.style.opacity = "0";
-        details.style.transform = "";
         details.style.overflow = "hidden";
       };
     });
