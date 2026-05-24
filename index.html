@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="loadoutlab-build" content="20260523-zoom-redeploy">
+    <meta name="loadoutlab-build" content="20260524-premium-polish">
     <title>Loadout Lab | COD Meta, Infos & Loadouts</title>
     <link rel="canonical" href="/LoadoutLabs/New%20project%202/">
     <style>
@@ -46,6 +46,115 @@
     <iframe src="New%20project%202/" title="Loadout Lab"></iframe>
     <a class="fallback" href="New%20project%202/">Direkt öffnen</a>
     <script>
+      const premiumPolishCss = `
+        html body {
+          background:
+            radial-gradient(circle at 18% -8%, rgba(255, 216, 106, 0.09), transparent 29rem),
+            radial-gradient(circle at 82% 4%, rgba(53, 215, 255, 0.07), transparent 26rem),
+            linear-gradient(180deg, #090c11 0%, #06080c 52%, #040609 100%) !important;
+        }
+
+        html body .site-header {
+          border-bottom-color: rgba(255, 255, 255, 0.09) !important;
+          background: rgba(7, 10, 14, 0.9) !important;
+          box-shadow: 0 1.1rem 2.4rem rgba(0, 0, 0, 0.34) !important;
+        }
+
+        html body .brand-mark {
+          background: linear-gradient(135deg, #ffd86a, #a6ff4d) !important;
+          color: #080b08 !important;
+          box-shadow: 0 0.55rem 1.35rem rgba(255, 216, 106, 0.18) !important;
+        }
+
+        html body .tier-first {
+          max-width: min(96rem, calc(100vw - clamp(2rem, 5vw, 6rem))) !important;
+          margin-inline: auto !important;
+        }
+
+        html body .primary-mode-switch .mode-button,
+        html body .secondary-mode-switch .mode-button,
+        html body .content-tab,
+        html body .filter-button,
+        html body .expand-button {
+          border-color: rgba(255, 255, 255, 0.12) !important;
+          background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), transparent 68%), #0d131b !important;
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04) !important;
+        }
+
+        html body .primary-mode-switch .mode-button:hover,
+        html body .secondary-mode-switch .mode-button:hover,
+        html body .content-tab:hover,
+        html body .filter-button:hover,
+        html body .expand-button:hover {
+          transform: translateY(-1px);
+          border-color: rgba(255, 216, 106, 0.42) !important;
+          background: linear-gradient(180deg, rgba(255, 216, 106, 0.08), transparent 68%), #111923 !important;
+          box-shadow: 0 0.7rem 1.4rem rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
+        }
+
+        html body #loadoutGrid > .loadout-card {
+          border-radius: 0.48rem !important;
+          border-top-color: rgba(255, 255, 255, 0.11) !important;
+          border-right-color: rgba(255, 255, 255, 0.1) !important;
+          border-bottom-color: rgba(255, 255, 255, 0.09) !important;
+          background:
+            linear-gradient(180deg, rgba(255, 255, 255, 0.045), transparent 42%),
+            linear-gradient(135deg, rgba(var(--tier-card-rgb, 185, 255, 61), 0.11), rgba(12, 17, 23, 0.94) 36%, rgba(8, 11, 15, 0.96)) !important;
+          box-shadow: 0 1.1rem 2.35rem rgba(0, 0, 0, 0.36), inset 0 1px 0 rgba(255, 255, 255, 0.035) !important;
+        }
+
+        html body #loadoutGrid > .loadout-card:hover {
+          transform: translateY(-2px);
+          border-top-color: rgba(var(--tier-card-rgb, 185, 255, 61), 0.24) !important;
+          box-shadow: 0 1.45rem 2.9rem rgba(0, 0, 0, 0.42), 0 0 1.3rem rgba(var(--tier-card-rgb, 185, 255, 61), 0.09), inset 0 1px 0 rgba(255, 255, 255, 0.045) !important;
+        }
+
+        html body .meta-tier-heading.tier-heading-meta {
+          position: relative !important;
+          overflow: hidden !important;
+          min-height: 4.75rem !important;
+          border-left-width: 1.15rem !important;
+          border-color: rgba(255, 216, 106, 0.52) !important;
+          border-left-color: #ffd86a !important;
+          background: linear-gradient(90deg, rgba(255, 216, 106, 0.32), rgba(91, 65, 18, 0.18) 38%, rgba(13, 17, 22, 0.94) 76%), #11100c !important;
+          box-shadow: 0 1rem 2.05rem rgba(0, 0, 0, 0.36), 0 0 1.5rem rgba(255, 216, 106, 0.13), inset 0 0 0 1px rgba(255, 236, 168, 0.16) !important;
+          animation: none !important;
+        }
+
+        html body .meta-tier-heading.tier-heading-meta::before,
+        html body .meta-tier-heading.tier-heading-meta::after {
+          animation: none !important;
+          pointer-events: none !important;
+        }
+
+        html body .meta-tier-heading.tier-heading-meta::before {
+          content: "" !important;
+          position: absolute !important;
+          inset: 0 !important;
+          background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 48%), radial-gradient(circle at 12% 50%, rgba(255, 239, 171, 0.22), transparent 18rem) !important;
+        }
+
+        html body .meta-tier-heading.tier-heading-meta span {
+          position: relative !important;
+          color: #ffe08a !important;
+          font-size: clamp(1.56rem, 1.95vw, 2rem) !important;
+          text-shadow: 0 0 0.8rem rgba(255, 216, 106, 0.28) !important;
+        }
+
+        html body .meta-tier-heading.tier-heading-meta small {
+          position: relative !important;
+          color: #f5d36f !important;
+          text-shadow: none !important;
+        }
+
+        html body #loadoutGrid > .loadout-card.tier-absolute-meta {
+          border-left-color: #ffd86a !important;
+          outline-color: rgba(255, 216, 106, 0.26) !important;
+          background: radial-gradient(circle at 12% 22%, rgba(255, 216, 106, 0.14), transparent 17rem), linear-gradient(135deg, rgba(255, 216, 106, 0.14), rgba(64, 49, 19, 0.18) 40%, rgba(11, 13, 16, 0.96) 74%), #11100c !important;
+          box-shadow: 0 1.25rem 2.6rem rgba(0, 0, 0, 0.42), 0 0 1.1rem rgba(255, 216, 106, 0.1), inset 0 0 0 1px rgba(255, 216, 106, 0.1) !important;
+        }
+      `;
+
       const weaponZoomCss = `
         html body #loadoutGrid .loadout-card .weapon-art,
         html body .loadout-grid .loadout-card .weapon-art {
@@ -88,20 +197,25 @@
         }
       `;
 
-      function applyWeaponZoom() {
+      function injectFrameStyle(id, css) {
         const frame = document.querySelector("iframe");
         const doc = frame?.contentDocument;
-        if (!doc || doc.querySelector("#homepage-weapon-zoom")) return;
+        if (!doc || doc.querySelector(`#${id}`)) return;
         const style = doc.createElement("style");
-        style.id = "homepage-weapon-zoom";
-        style.textContent = weaponZoomCss;
+        style.id = id;
+        style.textContent = css;
         doc.head.append(style);
       }
 
+      function applyFramePolish() {
+        injectFrameStyle("homepage-premium-polish", premiumPolishCss);
+        injectFrameStyle("homepage-weapon-zoom", weaponZoomCss);
+      }
+
       document.querySelector("iframe")?.addEventListener("load", () => {
-        applyWeaponZoom();
-        setTimeout(applyWeaponZoom, 300);
-        setTimeout(applyWeaponZoom, 1200);
+        applyFramePolish();
+        setTimeout(applyFramePolish, 300);
+        setTimeout(applyFramePolish, 1200);
       });
     </script>
   </body>
