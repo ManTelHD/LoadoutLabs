@@ -147,17 +147,7 @@
       }
 
       body .mw4-watch-panel .official-note {
-        margin-top: 1rem !important;
-        border-radius: 8px !important;
-        border: 1px solid rgba(var(--mw4-gold-rgb), 0.24) !important;
-        background:
-          linear-gradient(135deg, rgba(var(--mw4-gold-rgb), 0.1), rgba(9, 13, 16, 0.9)),
-          #090d11 !important;
-        color: rgba(255, 255, 255, 0.9) !important;
-      }
-
-      body .mw4-watch-panel .official-note strong {
-        color: #ffe6a0 !important;
+        display: none !important;
       }
 
       body .mw4-watch-panel #modeInfoGallery {
@@ -193,6 +183,11 @@
       gallery.hidden = true;
       gallery.style.display = "none";
     }
+
+    document.querySelectorAll(".mw4-watch-panel .official-note").forEach((note) => {
+      note.hidden = true;
+      note.style.display = "none";
+    });
   }
 
   function scheduleApply() {
