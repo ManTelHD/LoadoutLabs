@@ -40,7 +40,10 @@
     body #loadoutGrid .loadout-card .weapon-art img,
     body .loadout-grid .loadout-card .weapon-art img,
     html body #loadoutGrid > .loadout-card .weapon-art img,
-    body #loadoutGrid .loadout-card.tier-absolute-meta .weapon-art img {
+    body #loadoutGrid .loadout-card.tier-absolute-meta .weapon-art img,
+    body #loadoutGrid .loadout-card:hover .weapon-art:not(:hover) img,
+    body .loadout-grid .loadout-card:hover .weapon-art:not(:hover) img,
+    html body #loadoutGrid > .loadout-card:hover .weapon-art:not(:hover) img {
       position: relative !important;
       z-index: 1 !important;
       width: 100% !important;
@@ -57,7 +60,10 @@
 
     body #loadoutGrid .loadout-card .weapon-art:hover img,
     body .loadout-grid .loadout-card .weapon-art:hover img,
-    html body #loadoutGrid > .loadout-card .weapon-art:hover img {
+    html body #loadoutGrid > .loadout-card .weapon-art:hover img,
+    body #loadoutGrid .loadout-card:hover .weapon-art:hover img,
+    body .loadout-grid .loadout-card:hover .weapon-art:hover img,
+    html body #loadoutGrid > .loadout-card:hover .weapon-art:hover img {
       transform: translate3d(0, 0, 0) scale(1.11) !important;
     }
 
@@ -116,4 +122,5 @@
 
   window.setTimeout(inject, 400);
   window.setTimeout(inject, 1200);
+  window.setTimeout(inject, 2500);
 })();
