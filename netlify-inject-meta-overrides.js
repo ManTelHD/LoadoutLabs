@@ -1,20 +1,8 @@
-const fs = require("node:fs");
-const path = require("node:path");
+const fs = require("fs");
+const path = require("path");
 
-const siteDir = path.join(__dirname, "New project 2");
-const indexPath = path.join(siteDir, "index.html");
-
-const styleMarker = '<link rel="stylesheet" href="meta-overrides.css?v=20260512-official1">';
-const season4Button = '          <button class="mode-button season-mode-button season4-mode-button" data-mode="season4-info" type="button">Season 4</button>';
-
-const retiredScripts = [
-  "season4-preserve",
-  "season4-dedupe",
-  "season4-tab-fix",
-  "meta-card-animations",
-  "tier-build-fixes",
-  "tier-extras-fixes",
-];
+const htmlPath = path.join(__dirname, "New project 2", "index.html");
+let html = fs.readFileSync(htmlPath, "utf8");
 
 const activeScripts = [
   "meta-builds.js?v=20260523-score2",
@@ -32,31 +20,34 @@ const activeScripts = [
   "site-interaction-rescue.js?v=20260524-interaction1",
   "script.js?v=20260512-official1",
   "meta-overrides.js?v=20260512-official1",
-  "loadout-builds.js?v=20260524-complete-builds1",
+  "loadout-builds.js?v=20260524-complete-builds2",
   "attachment-levels.js?v=20260524-attachment-levels1",
   "umlaut-polish.js?v=20260524-umlauts6",
 ];
 
-const activeScriptNames = activeScripts.map((src) => src.split("?")[0].replace(/\.js$/, ""));
-const controlledScripts = [...new Set([...activeScriptNames, ...retiredScripts])];
+const retiredScripts = [
+  "season4-preserve",
+  "season4-dedupe",
+  "season4-tab-fix",
+  "meta-card-animations",
+  "tier-build-fixes",
+  "tier-extras-fixes",
+];
 
-let html = fs.readFileSync(indexPath, "utf8");
-
-html = html.replace(/\n\s*<link rel="stylesheet" href="meta-overrides\.css(?:\?v=[^"]+)?">/g, "");
-html = html.replace("</head>", `    ${styleMarker}\n  </head>`);
-
-for (const name of controlledScripts) {
-  const pattern = new RegExp(`\\n\\s*<script src="${name}\\.js(?:\\?v=[^"]+)?"><\\/script>`, "g");
-  html = html.replace(pattern, "");
+for (const name of retiredScripts) {
+  html = html.replace(new RegExp(`\\s*<script[^>]+src=["'][^"']*${name}[^"']*["'][^>]*><\\/script>`, "gi"), "");
 }
 
-html = html.replace(/\n\s*<button class="[^"]*season[^>]*>.*?Season 4.*?<\/button>/gis, "");
-html = html.replace(
-  /(<button class="mode-button mw4-mode-button" data-mode="mw4-info" type="button">.*?<\/button>)/s,
-  `$1\n${season4Button}`,
-);
+for (const src of activeScripts) {
+  const fileName = src.split("?")[0];
+  const scriptTag = `<script src="${src}" defer></script>`;
+  const pattern = new RegExp(`\\s*<script[^>]+src=["'][^"']*${fileName.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&")}[^"']*["'][^>]*><\\/script>`, "gi");
 
-const scriptBlock = activeScripts.map((src) => `    <script src="${src}"></script>`).join("\n");
-html = html.replace(/\n\s*<\/body>/, `\n${scriptBlock}\n  </body>`);
+  if (pattern.test(html)) {
+    html = html.replace(pattern, `\n    ${scriptTag}`);
+  } else {
+    html = html.replace(/\s*<\/body>/i, `\n    ${scriptTag}\n  </body>`);
+  }
+}
 
-fs.writeFileSync(indexPath, html);
+fs.writeFileSync(htmlPath, html);
