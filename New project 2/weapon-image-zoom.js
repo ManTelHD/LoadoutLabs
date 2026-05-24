@@ -30,7 +30,7 @@
 
     body #loadoutGrid .loadout-card .card-body,
     body .loadout-grid .loadout-card .card-body {
-      margin-left: 0 !important;
+      margin-left: 1.55rem !important;
       min-width: 0 !important;
     }
 
@@ -74,6 +74,11 @@
         min-width: 8.4rem !important;
         height: 4.73rem !important;
         aspect-ratio: 16 / 9 !important;
+      }
+
+      body #loadoutGrid .loadout-card .card-body,
+      body .loadout-grid .loadout-card .card-body {
+        margin-left: 0.85rem !important;
       }
     }
   `;
