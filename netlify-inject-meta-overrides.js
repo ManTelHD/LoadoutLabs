@@ -12,6 +12,8 @@ const retiredScripts = [
   "season4-dedupe",
   "season4-tab-fix",
   "meta-card-animations",
+  "tier-build-fixes",
+  "tier-extras-fixes",
 ];
 
 const activeScripts = [
@@ -30,8 +32,7 @@ const activeScripts = [
   "site-interaction-rescue.js?v=20260524-interaction1",
   "script.js?v=20260512-official1",
   "meta-overrides.js?v=20260512-official1",
-  "tier-build-fixes.js?v=20260524-all-tier-builds1",
-  "tier-extras-fixes.js?v=20260524-tier-extras1",
+  "loadout-builds.js?v=20260524-complete-builds1",
   "attachment-levels.js?v=20260524-attachment-levels1",
   "umlaut-polish.js?v=20260524-umlauts6",
 ];
