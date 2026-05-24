@@ -11,7 +11,7 @@ const weaponZoomScriptMarker = '<script src="weapon-image-zoom.js?v=20260524-wea
 const mw4ScriptMarker = '<script src="mw4-update.js?v=20260523-mw4-keyart"></script>';
 const mw4ImageScriptMarker = '<script src="mw4-image-override.js?v=20260524-mw4-no-note1"></script>';
 const season4ScriptMarker = '<script src="season4-polish.js?v=20260524-season4-stable1"></script>';
-const season4ClickRescueScriptMarker = '<script src="season4-click-rescue.js?v=20260524-season4-click1"></script>';
+const season4ClickRescueScriptMarker = '<script src="season4-click-rescue.js?v=20260524-season4-intel1"></script>';
 const siteInteractionRescueScriptMarker = '<script src="site-interaction-rescue.js?v=20260524-interaction1"></script>';
 const season4Button = '          <button class="mode-button season-mode-button season4-mode-button" data-mode="season4-info" type="button">Season 4</button>';
 
