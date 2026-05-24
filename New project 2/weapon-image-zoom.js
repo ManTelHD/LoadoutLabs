@@ -20,7 +20,6 @@
       isolation: isolate !important;
       contain: paint !important;
       background: #05080c !important;
-      transform: translateZ(0) !important;
     }
 
     body #loadoutGrid .loadout-card .weapon-art::before,
@@ -53,12 +52,12 @@
       height: 100% !important;
       object-fit: cover !important;
       object-position: center center !important;
-      transform: translate3d(0, 0, 0) scale(1.001) !important;
+      transform: scale(1) !important;
       transform-origin: center center !important;
-      transition: transform 230ms cubic-bezier(.16, 1, .3, 1) !important;
+      transition: transform 140ms ease-out !important;
       backface-visibility: hidden !important;
-      will-change: transform !important;
       filter: none !important;
+      will-change: auto !important;
     }
 
     body #loadoutGrid .loadout-card .weapon-art:hover img,
@@ -67,14 +66,7 @@
     body #loadoutGrid .loadout-card:hover .weapon-art:hover img,
     body .loadout-grid .loadout-card:hover .weapon-art:hover img,
     html body #loadoutGrid > .loadout-card:hover .weapon-art:hover img {
-      transform: translate3d(0, 0, 0) scale(1.085) !important;
-    }
-
-    body #loadoutGrid .loadout-card .weapon-art:active img,
-    body .loadout-grid .loadout-card .weapon-art:active img,
-    html body #loadoutGrid > .loadout-card .weapon-art:active img {
-      transform: translate3d(0, 0, 0) scale(1.055) !important;
-      transition-duration: 110ms !important;
+      transform: scale(1.055) !important;
     }
 
     @media (hover: none), (pointer: coarse) {
@@ -82,13 +74,7 @@
       body .loadout-grid .loadout-card .weapon-art img,
       html body #loadoutGrid > .loadout-card .weapon-art img {
         transition: none !important;
-        will-change: auto !important;
-      }
-
-      body #loadoutGrid .loadout-card .weapon-art:hover img,
-      body .loadout-grid .loadout-card .weapon-art:hover img,
-      html body #loadoutGrid > .loadout-card .weapon-art:hover img {
-        transform: translate3d(0, 0, 0) scale(1) !important;
+        transform: scale(1) !important;
       }
     }
 
