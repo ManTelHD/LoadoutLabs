@@ -70,6 +70,12 @@
     }
   }
 
+  function removePairRows(root = document) {
+    root.querySelectorAll?.("#loadoutGrid .perk-list li").forEach((item) => {
+      if (/^\s*Pair\s*:/i.test(item.textContent || "")) item.remove();
+    });
+  }
+
   function injectStyle() {
     if (document.querySelector("#umlaut-polish-style")) return;
     const style = document.createElement("style");
@@ -85,6 +91,7 @@
   function run() {
     injectStyle();
     walk(document.body);
+    removePairRows(document);
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run, { once: true });
@@ -95,6 +102,7 @@
       mutation.addedNodes.forEach(walk);
       if (mutation.type === "characterData") normalizeNodeText(mutation.target);
     }
+    removePairRows(document);
   }).observe(document.documentElement, { childList: true, subtree: true, characterData: true });
 
   window.setTimeout(run, 120);
