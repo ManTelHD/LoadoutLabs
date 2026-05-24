@@ -74,7 +74,7 @@
     root.querySelectorAll?.("#loadoutGrid .perk-list li").forEach((item) => {
       if (/^\s*Pair\s*:/i.test(item.textContent || "")) item.remove();
     });
-    root.querySelectorAll?.("#loadoutGrid .loadout-card > .role, #loadoutGrid .loadout-card .card-main > .role").forEach((item) => item.remove());
+    root.querySelectorAll?.("#loadoutGrid .loadout-card > .role, #loadoutGrid .loadout-card .card-main > .role, #loadoutGrid .loadout-card .card-body > .role, #loadoutGrid .loadout-card .meta-card-details > .role, #loadoutGrid .loadout-card .card-details > .role").forEach((item) => item.remove());
   }
 
   function injectStyle() {
@@ -87,7 +87,10 @@
       }
 
       body #loadoutGrid .loadout-card > .role,
-      body #loadoutGrid .loadout-card .card-main > .role {
+      body #loadoutGrid .loadout-card .card-main > .role,
+      body #loadoutGrid .loadout-card .card-body > .role,
+      body #loadoutGrid .loadout-card .meta-card-details > .role,
+      body #loadoutGrid .loadout-card .card-details > .role {
         display: none !important;
       }
     `;
