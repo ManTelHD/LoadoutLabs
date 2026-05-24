@@ -3,7 +3,16 @@
     if (!button) return false;
     const label = (button.textContent || "").replace(/\s+/g, " ").trim().toLowerCase();
     const mode = String(button.dataset.mode || "").toLowerCase();
-    return label === "season 4" || label.includes("season 4") || mode.includes("season4") || mode.includes("season-4");
+    return label.includes("season 4") || mode.includes("season4") || mode.includes("season-4") || mode === "season";
+  }
+
+  function scoreSeason4Button(button, index) {
+    let score = 0;
+    const mode = String(button.dataset.mode || "").toLowerCase();
+    if (button.classList.contains("season-mode-button")) score += 100;
+    if (mode === "season" || mode === "season4" || mode === "season-4") score += 80;
+    if (!button.classList.contains("season4-mode-button")) score += 40;
+    return score - index;
   }
 
   function normalizeSeason4Tabs() {
@@ -14,12 +23,14 @@
     const seasonButtons = buttons.filter(isSeason4Button);
     if (!seasonButtons.length) return;
 
-    const keep = seasonButtons.find((button) => !button.classList.contains("season4-mode-button")) || seasonButtons[0];
+    const keep = seasonButtons
+      .map((button, index) => ({ button, score: scoreSeason4Button(button, index) }))
+      .sort((a, b) => b.score - a.score)[0].button;
+
     keep.classList.add("season4-mode-button");
     keep.classList.add("mode-button");
     keep.dataset.mode = "season4-info";
     keep.type = "button";
-    keep.textContent = "Season 4";
 
     seasonButtons.forEach((button) => {
       if (button !== keep) button.remove();
