@@ -32,7 +32,7 @@ const activeScripts = [
   "meta-overrides.js?v=20260512-official1",
   "tier-build-fixes.js?v=20260524-all-tier-builds1",
   "attachment-levels.js?v=20260524-attachment-levels1",
-  "umlaut-polish.js?v=20260524-umlauts4",
+  "umlaut-polish.js?v=20260524-umlauts5",
 ];
 
 const activeScriptNames = activeScripts.map((src) => src.split("?")[0].replace(/\.js$/, ""));
