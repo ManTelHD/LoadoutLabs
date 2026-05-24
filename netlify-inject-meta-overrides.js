@@ -10,12 +10,22 @@ const pickrateScriptMarker = '<script src="pickrate-bars.js?v=20260523-pickrate1
 const weaponZoomScriptMarker = '<script src="weapon-image-zoom.js?v=20260524-weapon-text-offset1"></script>';
 const mw4ScriptMarker = '<script src="mw4-update.js?v=20260523-mw4-keyart"></script>';
 const mw4ImageScriptMarker = '<script src="mw4-image-override.js?v=20260524-mw4-no-note1"></script>';
-const season4PreserveScriptMarker = '<script src="season4-preserve.js?v=20260524-season4-preserve1"></script>';
-const season4ScriptMarker = '<script src="season4-polish.js?v=20260524-season4-polish1"></script>';
-const season4DedupeScriptMarker = '<script src="season4-dedupe.js?v=20260524-season4-dedupe2"></script>';
-const season4TabFixScriptMarker = '<script src="season4-tab-fix.js?v=20260524-season4-tab-fix1"></script>';
+const season4ScriptMarker = '<script src="season4-polish.js?v=20260524-season4-stable1"></script>';
+const season4Button = '          <button class="mode-button season-mode-button season4-mode-button" data-mode="season4-info" type="button"><span>NEU</span><strong>Season 4</strong></button>';
 
 let html = fs.readFileSync(indexPath, "utf8");
+
+html = html.replace(/\n\s*<script src="season4-preserve\.js\?v=[^"]+"><\/script>/g, "");
+html = html.replace(/\n\s*<script src="season4-dedupe\.js\?v=[^"]+"><\/script>/g, "");
+html = html.replace(/\n\s*<script src="season4-tab-fix\.js\?v=[^"]+"><\/script>/g, "");
+
+html = html.replace(/<script src="season4-polish\.js\?v=[^"]+"><\/script>/g, season4ScriptMarker);
+html = html.replace(/<script src="meta-card-animations\.js\?v=[^"]+"><\/script>/g, animationScriptMarker);
+html = html.replace(/<script src="pickrate-bars\.js\?v=[^"]+"><\/script>/g, pickrateScriptMarker);
+html = html.replace(/<script src="weapon-image-zoom\.js\?v=[^"]+"><\/script>/g, weaponZoomScriptMarker);
+html = html.replace(/<script src="mw4-update\.js\?v=[^"]+"><\/script>/g, mw4ScriptMarker);
+html = html.replace(/<script src="mw4-image-override\.js\?v=[^"]+"><\/script>/g, mw4ImageScriptMarker);
+
 if (!html.includes(styleMarker)) {
   html = html.replace("</head>", `    ${styleMarker}\n  </head>`);
 }
@@ -25,40 +35,29 @@ if (!html.includes(scriptMarker)) {
     `    <script src="script.js"></script>\n    ${scriptMarker}`,
   );
 }
-html = html.replace(/<script src="meta-card-animations\.js\?v=[^"]+"><\/script>/g, animationScriptMarker);
 if (!html.includes(animationScriptMarker)) {
   html = html.replace(/(<script src="meta-overrides\.js(?:\?v=[^"]+)?"><\/script>)/, `$1\n    ${animationScriptMarker}`);
 }
-html = html.replace(/<script src="pickrate-bars\.js\?v=[^"]+"><\/script>/g, pickrateScriptMarker);
 if (!html.includes(pickrateScriptMarker)) {
   html = html.replace(/(<script src="meta-card-animations\.js(?:\?v=[^"]+)?"><\/script>)/, `$1\n    ${pickrateScriptMarker}`);
 }
-html = html.replace(/<script src="weapon-image-zoom\.js\?v=[^"]+"><\/script>/g, weaponZoomScriptMarker);
 if (!html.includes(weaponZoomScriptMarker)) {
   html = html.replace(/(<script src="pickrate-bars\.js(?:\?v=[^"]+)?"><\/script>)/, `$1\n    ${weaponZoomScriptMarker}`);
 }
-html = html.replace(/<script src="mw4-update\.js\?v=[^"]+"><\/script>/g, mw4ScriptMarker);
 if (!html.includes(mw4ScriptMarker)) {
   html = html.replace("</body>", `    ${mw4ScriptMarker}\n  </body>`);
 }
-html = html.replace(/<script src="mw4-image-override\.js\?v=[^"]+"><\/script>/g, mw4ImageScriptMarker);
 if (!html.includes(mw4ImageScriptMarker)) {
   html = html.replace(/(<script src="mw4-update\.js(?:\?v=[^"]+)?"><\/script>)/, `$1\n    ${mw4ImageScriptMarker}`);
 }
-html = html.replace(/<script src="season4-preserve\.js\?v=[^"]+"><\/script>/g, season4PreserveScriptMarker);
-if (!html.includes(season4PreserveScriptMarker)) {
-  html = html.replace(/(<script src="mw4-image-override\.js(?:\?v=[^"]+)?"><\/script>)/, `$1\n    ${season4PreserveScriptMarker}`);
-}
-html = html.replace(/<script src="season4-polish\.js\?v=[^"]+"><\/script>/g, season4ScriptMarker);
 if (!html.includes(season4ScriptMarker)) {
-  html = html.replace(/(<script src="season4-preserve\.js(?:\?v=[^"]+)?"><\/script>)/, `$1\n    ${season4ScriptMarker}`);
+  html = html.replace(/(<script src="mw4-image-override\.js(?:\?v=[^"]+)?"><\/script>)/, `$1\n    ${season4ScriptMarker}`);
 }
-html = html.replace(/<script src="season4-dedupe\.js\?v=[^"]+"><\/script>/g, season4DedupeScriptMarker);
-if (!html.includes(season4DedupeScriptMarker)) {
-  html = html.replace(/(<script src="season4-polish\.js(?:\?v=[^"]+)?"><\/script>)/, `$1\n    ${season4DedupeScriptMarker}`);
-}
-html = html.replace(/<script src="season4-tab-fix\.js\?v=[^"]+"><\/script>/g, season4TabFixScriptMarker);
-if (!html.includes(season4TabFixScriptMarker)) {
-  html = html.replace(/(<script src="meta-overrides\.js(?:\?v=[^"]+)?"><\/script>)/, `$1\n    ${season4TabFixScriptMarker}`);
-}
+
+html = html.replace(/\n\s*<button class="[^"]*season[^>]*>.*?Season 4.*?<\/button>/gis, "");
+html = html.replace(
+  /(<button class="mode-button mw4-mode-button" data-mode="mw4-info" type="button">.*?<\/button>)/s,
+  `$1\n${season4Button}`,
+);
+
 fs.writeFileSync(indexPath, html);
