@@ -58,10 +58,10 @@
   };
 
   const slug = (value) => String(value || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/mk\./g, "mk").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
-  const placeholderPattern = /^\s*(Pair|Quelle|Rolle|Pick-Rate|Pick)\s*:/i;
+  const html = (value) => String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
-  function li(value) {
-    return `<li>${String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")}</li>`;
+  function itemsHtml(items) {
+    return items.map((item) => `<li>${html(item)}</li>`).join("");
   }
 
   function applyBuild(card) {
@@ -69,35 +69,45 @@
     const build = builds[key];
     if (!build) return;
 
+    const signature = `${build.code}|${build.attachments.join("|")}|${build.extras.join("|")}`;
+    if (card.dataset.completeBuildSignature === signature) return;
+
     const attachmentList = card.querySelector(".attachment-list");
     const perkList = card.querySelector(".perk-list");
 
-    if (attachmentList) {
-      attachmentList.innerHTML = build.attachments.map(li).join("");
+    if (attachmentList) attachmentList.innerHTML = itemsHtml(build.attachments);
+    if (perkList) {
+      perkList.innerHTML = itemsHtml([
+        `Code: ${build.code}`,
+        ...build.extras.map((extra, index) => `Extra ${index + 1}: ${extra}`),
+      ]);
     }
 
-    if (perkList) {
-      [...perkList.querySelectorAll("li")].forEach((item) => {
-        if (placeholderPattern.test(item.textContent || "")) item.remove();
-      });
-      perkList.innerHTML = [
-        li(`Code: ${build.code}`),
-        ...build.extras.map((extra, index) => li(`Extra ${index + 1}: ${extra}`)),
-      ].join("");
-    }
+    card.dataset.completeBuildSignature = signature;
   }
 
   function run() {
     document.querySelectorAll("#loadoutGrid .loadout-card").forEach(applyBuild);
   }
 
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run, { once: true });
-  else run();
+  function watchGrid() {
+    const grid = document.querySelector("#loadoutGrid");
+    if (!grid || grid.dataset.completeBuildsWatched === "true") return;
+    grid.dataset.completeBuildsWatched = "true";
+    new MutationObserver(() => window.requestAnimationFrame(run)).observe(grid, { childList: true });
+  }
 
-  new MutationObserver(run).observe(document.documentElement, { childList: true, subtree: true });
-  document.addEventListener("click", () => setTimeout(run, 80));
-  document.addEventListener("input", () => setTimeout(run, 80));
-  window.setTimeout(run, 120);
-  window.setTimeout(run, 600);
-  window.setTimeout(run, 1600);
+  function init() {
+    run();
+    watchGrid();
+  }
+
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, { once: true });
+  else init();
+
+  document.addEventListener("click", () => setTimeout(init, 80));
+  document.addEventListener("input", () => setTimeout(init, 80));
+  window.setTimeout(init, 120);
+  window.setTimeout(init, 600);
+  window.setTimeout(init, 1600);
 }());
