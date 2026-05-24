@@ -13,10 +13,12 @@
       mainImage.alt = imageAlt;
     }
 
-    document.querySelectorAll("#modeInfoGallery img").forEach((image) => {
-      image.src = imageUrl;
-      image.alt = imageAlt;
-    });
+    const gallery = document.querySelector("#modeInfoGallery");
+    if (gallery) {
+      gallery.innerHTML = "";
+      gallery.hidden = true;
+      gallery.style.display = "none";
+    }
   }
 
   function scheduleApply() {
