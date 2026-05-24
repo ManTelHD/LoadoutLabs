@@ -24,6 +24,7 @@ const activeScripts = [
   "attachment-levels.js?v=20260524-attachment-levels1",
   "umlaut-polish.js?v=20260524-umlauts6",
   "loadout-details-polish.js?v=20260524-details-polish1",
+  "loadout-compare.js?v=20260524-compare1",
 ];
 
 const retiredScripts = [
