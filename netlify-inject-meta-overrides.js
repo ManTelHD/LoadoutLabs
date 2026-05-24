@@ -12,7 +12,7 @@ const umlautPolishScriptMarker = '<script src="umlaut-polish.js?v=20260524-umlau
 const attachmentLevelsScriptMarker = '<script src="attachment-levels.js?v=20260524-attachment-levels1"></script>';
 const animationScriptMarker = '<script src="meta-card-animations.js?v=20260523-card-clean1"></script>';
 const pickrateScriptMarker = '<script src="pickrate-bars.js?v=20260523-pickrate1"></script>';
-const weaponZoomScriptMarker = '<script src="weapon-image-zoom.js?v=20260524-weapon-text-offset1"></script>';
+const weaponZoomScriptMarker = '<script src="weapon-image-zoom.js?v=20260524-weapon-zoom-smooth1"></script>';
 const mw4ScriptMarker = '<script src="mw4-update.js?v=20260523-mw4-keyart"></script>';
 const mw4ImageScriptMarker = '<script src="mw4-image-override.js?v=20260524-mw4-no-note1"></script>';
 const season4ScriptMarker = '<script src="season4-polish.js?v=20260524-season4-stable1"></script>';
