@@ -10,6 +10,7 @@ const pickrateScriptMarker = '<script src="pickrate-bars.js?v=20260523-pickrate1
 const weaponZoomScriptMarker = '<script src="weapon-image-zoom.js?v=20260524-weapon-text-offset1"></script>';
 const mw4ScriptMarker = '<script src="mw4-update.js?v=20260523-mw4-keyart"></script>';
 const mw4ImageScriptMarker = '<script src="mw4-image-override.js?v=20260524-mw4-no-note1"></script>';
+const season4ScriptMarker = '<script src="season4-polish.js?v=20260524-season4-polish1"></script>';
 
 let html = fs.readFileSync(indexPath, "utf8");
 if (!html.includes(styleMarker)) {
@@ -40,5 +41,9 @@ if (!html.includes(mw4ScriptMarker)) {
 html = html.replace(/<script src="mw4-image-override\.js\?v=[^"]+"><\/script>/g, mw4ImageScriptMarker);
 if (!html.includes(mw4ImageScriptMarker)) {
   html = html.replace(/(<script src="mw4-update\.js(?:\?v=[^"]+)?"><\/script>)/, `$1\n    ${mw4ImageScriptMarker}`);
+}
+html = html.replace(/<script src="season4-polish\.js\?v=[^"]+"><\/script>/g, season4ScriptMarker);
+if (!html.includes(season4ScriptMarker)) {
+  html = html.replace(/(<script src="mw4-image-override\.js(?:\?v=[^"]+)?"><\/script>)/, `$1\n    ${season4ScriptMarker}`);
 }
 fs.writeFileSync(indexPath, html);
