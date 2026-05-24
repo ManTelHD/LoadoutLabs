@@ -30,11 +30,7 @@
     const name = parts.join(":").trim() || withoutLevel;
     const slotKey = rawSlot.toLowerCase();
 
-    return {
-      slot: slotLabels[slotKey] || rawSlot,
-      name,
-      level,
-    };
+    return { slot: slotLabels[slotKey] || rawSlot, name, level };
   }
 
   function parsePerk(text) {
@@ -49,14 +45,9 @@
     const details = card.querySelector(".card-details, .meta-card-details");
     if (!details || details.dataset.polishedDetails === "true") return;
 
-    const attachments = [...details.querySelectorAll(".attachment-list li")]
-      .map((item) => parseAttachment(item.textContent))
-      .filter(Boolean);
-    const perkItems = [...details.querySelectorAll(".perk-list li")]
-      .map((item) => item.textContent || "");
-    const code = (perkItems.find((item) => /^\s*Code\s*:/i.test(item)) || "")
-      .replace(/^\s*Code\s*:\s*/i, "")
-      .trim();
+    const attachments = [...details.querySelectorAll(".attachment-list li")].map((item) => parseAttachment(item.textContent)).filter(Boolean);
+    const perkItems = [...details.querySelectorAll(".perk-list li")].map((item) => item.textContent || "");
+    const code = (perkItems.find((item) => /^\s*Code\s*:/i.test(item)) || "").replace(/^\s*Code\s*:\s*/i, "").trim();
     const perks = perkItems.map(parsePerk).filter(Boolean);
 
     if (!attachments.length && !perks.length && !code) return;
@@ -79,37 +70,27 @@
     details.innerHTML = `
       <div class="premium-details-grid">
         <section class="detail-panel attachments-panel" aria-label="Aufsätze">
-          <div class="detail-panel-title">
-            <span>Aufsätze</span>
-            <strong>${attachments.length || 0}/5</strong>
-          </div>
+          <div class="detail-panel-title"><span>Aufsätze</span><strong>${attachments.length || 0}/5</strong></div>
           <ul class="premium-attachment-list">${attachmentHtml}</ul>
         </section>
         <section class="detail-panel setup-panel" aria-label="Setup">
-          ${code ? `
-            <div class="build-code-box">
-              <span>Build Code</span>
-              <strong>${escapeHtml(code)}</strong>
-            </div>
-          ` : ""}
-          ${perks.length ? `
-            <div class="detail-panel-title compact-title">
-              <span>Extras</span>
-              <strong>${perks.length}</strong>
-            </div>
-            <ul class="premium-perk-list">${perkHtml}</ul>
-          ` : ""}
+          ${code ? `<div class="build-code-box"><span>Build Code</span><strong>${escapeHtml(code)}</strong></div>` : ""}
+          ${perks.length ? `<div class="detail-panel-title compact-title"><span>Extras</span><strong>${perks.length}</strong></div><ul class="premium-perk-list">${perkHtml}</ul>` : ""}
         </section>
       </div>
     `;
     details.dataset.polishedDetails = "true";
   }
 
+  let scheduled = false;
   function run() {
+    scheduled = false;
     document.querySelectorAll("#loadoutGrid .loadout-card").forEach(buildDetails);
   }
 
   function scheduleRun() {
+    if (scheduled) return;
+    scheduled = true;
     window.requestAnimationFrame(run);
   }
 
@@ -117,194 +98,33 @@
   style.id = "loadout-details-polish-style";
   style.textContent = `
     body #loadoutGrid .card-details,
-    body #loadoutGrid .meta-card-details {
-      padding-top: 0.85rem !important;
-    }
-
-    body #loadoutGrid .premium-details-grid {
-      display: grid !important;
-      grid-template-columns: minmax(0, 1.35fr) minmax(14rem, 0.85fr) !important;
-      gap: 0.85rem !important;
-      align-items: stretch !important;
-    }
-
-    body #loadoutGrid .detail-panel {
-      position: relative !important;
-      overflow: hidden !important;
-      border: 1px solid rgba(var(--tier-card-rgb, 185, 255, 61), 0.2) !important;
-      border-radius: 0.48rem !important;
-      background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.045), transparent 62%),
-        rgba(6, 9, 12, 0.48) !important;
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.035) !important;
-    }
-
-    body #loadoutGrid .detail-panel::before {
-      content: "" !important;
-      position: absolute !important;
-      inset: 0 auto 0 0 !important;
-      width: 0.18rem !important;
-      background: rgba(var(--tier-card-rgb, 185, 255, 61), 0.85) !important;
-      pointer-events: none !important;
-    }
-
-    body #loadoutGrid .detail-panel-title {
-      display: flex !important;
-      align-items: center !important;
-      justify-content: space-between !important;
-      gap: 0.8rem !important;
-      padding: 0.72rem 0.82rem 0.55rem 1rem !important;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-      color: rgba(255, 255, 255, 0.72) !important;
-      font-size: 0.72rem !important;
-      font-weight: 900 !important;
-      text-transform: uppercase !important;
-    }
-
-    body #loadoutGrid .detail-panel-title strong {
-      color: rgb(var(--tier-card-rgb, 185, 255, 61)) !important;
-      font-size: 0.78rem !important;
-    }
-
+    body #loadoutGrid .meta-card-details { padding-top: 0.85rem !important; }
+    body #loadoutGrid .premium-details-grid { display: grid !important; grid-template-columns: minmax(0, 1.35fr) minmax(14rem, 0.85fr) !important; gap: 0.85rem !important; align-items: stretch !important; }
+    body #loadoutGrid .detail-panel { position: relative !important; overflow: hidden !important; border: 1px solid rgba(var(--tier-card-rgb, 185, 255, 61), 0.2) !important; border-radius: 0.48rem !important; background: rgba(6, 9, 12, 0.48) !important; }
+    body #loadoutGrid .detail-panel::before { content: "" !important; position: absolute !important; inset: 0 auto 0 0 !important; width: 0.18rem !important; background: rgba(var(--tier-card-rgb, 185, 255, 61), 0.85) !important; pointer-events: none !important; }
+    body #loadoutGrid .detail-panel-title { display: flex !important; align-items: center !important; justify-content: space-between !important; gap: 0.8rem !important; padding: 0.72rem 0.82rem 0.55rem 1rem !important; border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important; color: rgba(255, 255, 255, 0.72) !important; font-size: 0.72rem !important; font-weight: 900 !important; text-transform: uppercase !important; }
+    body #loadoutGrid .detail-panel-title strong { color: rgb(var(--tier-card-rgb, 185, 255, 61)) !important; font-size: 0.78rem !important; }
     body #loadoutGrid .premium-attachment-list,
-    body #loadoutGrid .premium-perk-list {
-      display: grid !important;
-      gap: 0.42rem !important;
-      margin: 0 !important;
-      padding: 0.74rem !important;
-      list-style: none !important;
-    }
-
-    body #loadoutGrid .premium-attachment-list {
-      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    }
-
-    body #loadoutGrid .loadout-slot {
-      display: grid !important;
-      grid-template-columns: minmax(4.4rem, auto) minmax(0, 1fr) auto !important;
-      align-items: center !important;
-      gap: 0.55rem !important;
-      min-height: 2.45rem !important;
-      padding: 0.48rem 0.56rem !important;
-      border: 1px solid rgba(255, 255, 255, 0.075) !important;
-      border-radius: 0.38rem !important;
-      background: rgba(255, 255, 255, 0.035) !important;
-    }
-
-    body #loadoutGrid .slot-type {
-      color: rgb(var(--tier-card-rgb, 185, 255, 61)) !important;
-      font-size: 0.67rem !important;
-      font-weight: 900 !important;
-      text-transform: uppercase !important;
-    }
-
-    body #loadoutGrid .loadout-slot strong {
-      min-width: 0 !important;
-      color: #f7f9fc !important;
-      font-size: 0.86rem !important;
-      line-height: 1.12 !important;
-    }
-
-    body #loadoutGrid .loadout-slot em {
-      justify-self: end !important;
-      border: 1px solid rgba(var(--tier-card-rgb, 185, 255, 61), 0.28) !important;
-      border-radius: 999px !important;
-      padding: 0.16rem 0.42rem !important;
-      background: rgba(var(--tier-card-rgb, 185, 255, 61), 0.08) !important;
-      color: rgba(255, 255, 255, 0.8) !important;
-      font-size: 0.66rem !important;
-      font-style: normal !important;
-      font-weight: 800 !important;
-      white-space: nowrap !important;
-    }
-
-    body #loadoutGrid .setup-panel {
-      display: grid !important;
-      align-content: start !important;
-    }
-
-    body #loadoutGrid .build-code-box {
-      margin: 0.74rem 0.74rem 0 !important;
-      padding: 0.72rem !important;
-      border: 1px solid rgba(var(--tier-card-rgb, 185, 255, 61), 0.34) !important;
-      border-radius: 0.42rem !important;
-      background:
-        linear-gradient(135deg, rgba(var(--tier-card-rgb, 185, 255, 61), 0.16), transparent 64%),
-        rgba(0, 0, 0, 0.22) !important;
-    }
-
-    body #loadoutGrid .build-code-box span {
-      display: block !important;
-      margin-bottom: 0.24rem !important;
-      color: rgba(255, 255, 255, 0.62) !important;
-      font-size: 0.68rem !important;
-      font-weight: 900 !important;
-      text-transform: uppercase !important;
-    }
-
-    body #loadoutGrid .build-code-box strong {
-      display: block !important;
-      color: #fff !important;
-      font-family: Rajdhani, Inter, sans-serif !important;
-      font-size: 1.05rem !important;
-      line-height: 1.05 !important;
-      word-break: break-word !important;
-    }
-
-    body #loadoutGrid .compact-title {
-      margin-top: 0.2rem !important;
-      border-bottom: 0 !important;
-      padding-bottom: 0.2rem !important;
-    }
-
-    body #loadoutGrid .premium-perk-list {
-      padding-top: 0.25rem !important;
-    }
-
-    body #loadoutGrid .perk-chip {
-      display: grid !important;
-      grid-template-columns: 1.55rem minmax(0, 1fr) !important;
-      align-items: center !important;
-      gap: 0.48rem !important;
-      min-height: 2.2rem !important;
-      padding: 0.4rem 0.52rem !important;
-      border: 1px solid rgba(255, 255, 255, 0.075) !important;
-      border-radius: 0.38rem !important;
-      background: rgba(255, 255, 255, 0.035) !important;
-    }
-
-    body #loadoutGrid .perk-chip span {
-      display: grid !important;
-      width: 1.42rem !important;
-      height: 1.42rem !important;
-      place-items: center !important;
-      border-radius: 999px !important;
-      background: rgb(var(--tier-card-rgb, 185, 255, 61)) !important;
-      color: #060809 !important;
-      font-size: 0.76rem !important;
-      font-weight: 900 !important;
-    }
-
-    body #loadoutGrid .perk-chip strong {
-      color: #f7f9fc !important;
-      font-size: 0.86rem !important;
-      line-height: 1.12 !important;
-    }
-
+    body #loadoutGrid .premium-perk-list { display: grid !important; gap: 0.42rem !important; margin: 0 !important; padding: 0.74rem !important; list-style: none !important; }
+    body #loadoutGrid .premium-attachment-list { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+    body #loadoutGrid .loadout-slot { display: grid !important; grid-template-columns: minmax(4.4rem, auto) minmax(0, 1fr) auto !important; align-items: center !important; gap: 0.55rem !important; min-height: 2.45rem !important; padding: 0.48rem 0.56rem !important; border: 1px solid rgba(255, 255, 255, 0.075) !important; border-radius: 0.38rem !important; background: rgba(255, 255, 255, 0.035) !important; }
+    body #loadoutGrid .slot-type { color: rgb(var(--tier-card-rgb, 185, 255, 61)) !important; font-size: 0.67rem !important; font-weight: 900 !important; text-transform: uppercase !important; }
+    body #loadoutGrid .loadout-slot strong { min-width: 0 !important; color: #f7f9fc !important; font-size: 0.86rem !important; line-height: 1.12 !important; }
+    body #loadoutGrid .loadout-slot em { justify-self: end !important; border: 1px solid rgba(var(--tier-card-rgb, 185, 255, 61), 0.28) !important; border-radius: 999px !important; padding: 0.16rem 0.42rem !important; background: rgba(var(--tier-card-rgb, 185, 255, 61), 0.08) !important; color: rgba(255, 255, 255, 0.8) !important; font-size: 0.66rem !important; font-style: normal !important; font-weight: 800 !important; white-space: nowrap !important; }
+    body #loadoutGrid .setup-panel { display: grid !important; align-content: start !important; }
+    body #loadoutGrid .build-code-box { margin: 0.74rem 0.74rem 0 !important; padding: 0.72rem !important; border: 1px solid rgba(var(--tier-card-rgb, 185, 255, 61), 0.34) !important; border-radius: 0.42rem !important; background: rgba(0, 0, 0, 0.22) !important; }
+    body #loadoutGrid .build-code-box span { display: block !important; margin-bottom: 0.24rem !important; color: rgba(255, 255, 255, 0.62) !important; font-size: 0.68rem !important; font-weight: 900 !important; text-transform: uppercase !important; }
+    body #loadoutGrid .build-code-box strong { display: block !important; color: #fff !important; font-family: Rajdhani, Inter, sans-serif !important; font-size: 1.05rem !important; line-height: 1.05 !important; word-break: break-word !important; }
+    body #loadoutGrid .compact-title { margin-top: 0.2rem !important; border-bottom: 0 !important; padding-bottom: 0.2rem !important; }
+    body #loadoutGrid .premium-perk-list { padding-top: 0.25rem !important; }
+    body #loadoutGrid .perk-chip { display: grid !important; grid-template-columns: 1.55rem minmax(0, 1fr) !important; align-items: center !important; gap: 0.48rem !important; min-height: 2.2rem !important; padding: 0.4rem 0.52rem !important; border: 1px solid rgba(255, 255, 255, 0.075) !important; border-radius: 0.38rem !important; background: rgba(255, 255, 255, 0.035) !important; }
+    body #loadoutGrid .perk-chip span { display: grid !important; width: 1.42rem !important; height: 1.42rem !important; place-items: center !important; border-radius: 999px !important; background: rgb(var(--tier-card-rgb, 185, 255, 61)) !important; color: #060809 !important; font-size: 0.76rem !important; font-weight: 900 !important; }
+    body #loadoutGrid .perk-chip strong { color: #f7f9fc !important; font-size: 0.86rem !important; line-height: 1.12 !important; }
     @media (max-width: 980px) {
       body #loadoutGrid .premium-details-grid,
-      body #loadoutGrid .premium-attachment-list {
-        grid-template-columns: 1fr !important;
-      }
-
-      body #loadoutGrid .loadout-slot {
-        grid-template-columns: minmax(4rem, auto) minmax(0, 1fr) !important;
-      }
-
-      body #loadoutGrid .loadout-slot em {
-        grid-column: 2 !important;
-        justify-self: start !important;
-      }
+      body #loadoutGrid .premium-attachment-list { grid-template-columns: 1fr !important; }
+      body #loadoutGrid .loadout-slot { grid-template-columns: minmax(4rem, auto) minmax(0, 1fr) !important; }
+      body #loadoutGrid .loadout-slot em { grid-column: 2 !important; justify-self: start !important; }
     }
   `;
 
@@ -314,7 +134,6 @@
   else run();
 
   const grid = document.querySelector("#loadoutGrid");
-  if (grid) new MutationObserver(scheduleRun).observe(grid, { childList: true, subtree: true });
-  window.setTimeout(run, 160);
-  window.setTimeout(run, 900);
+  if (grid) new MutationObserver(scheduleRun).observe(grid, { childList: true });
+  window.setTimeout(run, 200);
 }());
