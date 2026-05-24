@@ -5,7 +5,9 @@
   style.id = "hero-polish-style";
   style.textContent = `
     body .tier-first {
+      max-width: min(98.5rem, calc(100vw - clamp(1rem, 2.4vw, 2.75rem))) !important;
       padding-top: clamp(1rem, 2vw, 1.65rem) !important;
+      margin-inline: auto !important;
     }
 
     body .tier-first .section-heading {
@@ -14,7 +16,7 @@
       grid-template-columns: minmax(0, 1fr) auto !important;
       align-items: end !important;
       gap: 0.85rem 1.25rem !important;
-      max-width: min(58rem, 100%) !important;
+      max-width: min(64rem, 100%) !important;
       margin: 0 0 0.85rem !important;
       padding: 1.1rem 1.25rem !important;
       border: 1px solid rgba(255, 255, 255, 0.1) !important;
@@ -81,7 +83,7 @@
 
     body .primary-mode-switch {
       grid-template-columns: repeat(3, minmax(10rem, 1fr)) !important;
-      max-width: min(58rem, 100%) !important;
+      max-width: min(64rem, 100%) !important;
       gap: 0.45rem !important;
       margin: 0 0 0.45rem !important;
       padding: 0.35rem !important;
@@ -117,7 +119,7 @@
     body .secondary-mode-switch {
       display: inline-grid !important;
       grid-template-columns: repeat(2, minmax(10rem, 1fr)) !important;
-      width: min(32rem, 100%) !important;
+      width: min(36rem, 100%) !important;
     }
 
     body .secondary-mode-switch .camo-mode-button {
@@ -142,6 +144,10 @@
     }
 
     @media (max-width: 820px) {
+      body .tier-first {
+        max-width: calc(100vw - 1rem) !important;
+      }
+
       body .tier-first .section-heading {
         grid-template-columns: 1fr !important;
         padding: 0.95rem !important;
