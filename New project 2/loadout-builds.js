@@ -86,28 +86,33 @@
     card.dataset.completeBuildSignature = signature;
   }
 
+  let scheduled = false;
   function run() {
+    scheduled = false;
     document.querySelectorAll("#loadoutGrid .loadout-card").forEach(applyBuild);
+  }
+
+  function scheduleRun() {
+    if (scheduled) return;
+    scheduled = true;
+    window.requestAnimationFrame(run);
   }
 
   function watchGrid() {
     const grid = document.querySelector("#loadoutGrid");
     if (!grid || grid.dataset.completeBuildsWatched === "true") return;
     grid.dataset.completeBuildsWatched = "true";
-    new MutationObserver(() => window.requestAnimationFrame(run)).observe(grid, { childList: true });
+    new MutationObserver(scheduleRun).observe(grid, { childList: true });
   }
 
   function init() {
-    run();
+    scheduleRun();
     watchGrid();
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, { once: true });
   else init();
 
-  document.addEventListener("click", () => setTimeout(init, 80));
-  document.addEventListener("input", () => setTimeout(init, 80));
   window.setTimeout(init, 120);
-  window.setTimeout(init, 600);
-  window.setTimeout(init, 1600);
+  window.setTimeout(init, 900);
 }());
