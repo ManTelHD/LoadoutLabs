@@ -1,5 +1,5 @@
 (function () {
-  const season4Image = "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/wz/s03r/BO7-S03R_PATCHNOTES-WZ.jpg";
+  const season4Image = "https://assets.games.gg/cod_warzone_fortunes_keep_map_easter_29200c5157.webp";
   const season4 = {
     title: "Season 4",
     description: "Aktueller Season-4-Überblick für Black Ops 7 und Warzone: Starttermin, Blogpost-Erwartung, bestätigte technische Änderungen und die wichtigsten Gerüchte zu Maps, Warzone, Zombies, Battle Pass und Meta.",
