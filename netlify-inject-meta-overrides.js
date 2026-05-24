@@ -9,6 +9,7 @@ const absoluteMetaGlowScriptMarker = '<script src="absolute-meta-glow.js?v=20260
 const heroPolishScriptMarker = '<script src="hero-polish.js?v=20260524-header-refine1"></script>';
 const premiumAccentsScriptMarker = '<script src="premium-accents.js?v=20260524-premium-accents1"></script>';
 const umlautPolishScriptMarker = '<script src="umlaut-polish.js?v=20260524-umlauts1"></script>';
+const attachmentLevelsScriptMarker = '<script src="attachment-levels.js?v=20260524-attachment-levels1"></script>';
 const animationScriptMarker = '<script src="meta-card-animations.js?v=20260523-card-clean1"></script>';
 const pickrateScriptMarker = '<script src="pickrate-bars.js?v=20260523-pickrate1"></script>';
 const weaponZoomScriptMarker = '<script src="weapon-image-zoom.js?v=20260524-weapon-text-offset1"></script>';
@@ -29,6 +30,7 @@ html = html.replace(/<script src="absolute-meta-glow\.js\?v=[^"]+"><\/script>/g,
 html = html.replace(/<script src="hero-polish\.js\?v=[^"]+"><\/script>/g, heroPolishScriptMarker);
 html = html.replace(/<script src="premium-accents\.js\?v=[^"]+"><\/script>/g, premiumAccentsScriptMarker);
 html = html.replace(/<script src="umlaut-polish\.js\?v=[^"]+"><\/script>/g, umlautPolishScriptMarker);
+html = html.replace(/<script src="attachment-levels\.js\?v=[^"]+"><\/script>/g, attachmentLevelsScriptMarker);
 html = html.replace(/<script src="season4-polish\.js\?v=[^"]+"><\/script>/g, season4ScriptMarker);
 html = html.replace(/<script src="season4-click-rescue\.js\?v=[^"]+"><\/script>/g, season4ClickRescueScriptMarker);
 html = html.replace(/<script src="site-interaction-rescue\.js\?v=[^"]+"><\/script>/g, siteInteractionRescueScriptMarker);
@@ -82,6 +84,9 @@ if (!html.includes(siteInteractionRescueScriptMarker)) {
 }
 if (!html.includes(umlautPolishScriptMarker)) {
   html = html.replace(/(<script src="meta-overrides\.js(?:\?v=[^"]+)?"><\/script>)/, `$1\n    ${umlautPolishScriptMarker}`);
+}
+if (!html.includes(attachmentLevelsScriptMarker)) {
+  html = html.replace(/(<script src="umlaut-polish\.js(?:\?v=[^"]+)?"><\/script>|<script src="meta-overrides\.js(?:\?v=[^"]+)?"><\/script>)/, `$1\n    ${attachmentLevelsScriptMarker}`);
 }
 
 html = html.replace(/\n\s*<button class="[^"]*season[^>]*>.*?Season 4.*?<\/button>/gis, "");
