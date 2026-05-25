@@ -22,6 +22,7 @@ const activeScripts = [
   "umlaut-polish.js?v=20260524-umlauts6",
   "loadout-details-polish.js?v=20260524-details-lite2",
   "tier-class-polish.js?v=20260524-tier-class1",
+  "weapon-image-static.js?v=20260525-static1",
 ];
 
 const retiredScripts = [
