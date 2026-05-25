@@ -9,7 +9,6 @@ const activeScripts = [
   "score-cleanup.js?v=20260523-score4",
   "card-toggle-performance.js?v=20260524-toggle-perf2",
   "pickrate-bars.js?v=20260523-pickrate1",
-  "weapon-image-zoom.js?v=20260524-weapon-zoom-lite4",
   "mw4-update.js?v=20260523-mw4-keyart",
   "mw4-image-override.js?v=20260524-mw4-no-note1",
   "season4-polish.js?v=20260524-season4-stable1",
@@ -35,6 +34,7 @@ const retiredScripts = [
   "loadout-compare",
   "absolute-meta-glow",
   "premium-accents",
+  "weapon-image-zoom",
 ];
 
 for (const name of retiredScripts) {
