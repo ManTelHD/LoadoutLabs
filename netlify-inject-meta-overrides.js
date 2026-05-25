@@ -23,7 +23,7 @@ const activeScripts = [
   "loadout-details-polish.js?v=20260524-details-lite2",
   "tier-class-polish.js?v=20260524-tier-class1",
   "weapon-image-static.js?v=20260525-static6",
-  "german-loadout-polish.js?v=20260525-de1",
+  "german-loadout-polish.js?v=20260525-de2",
 ];
 
 const retiredScripts = [
