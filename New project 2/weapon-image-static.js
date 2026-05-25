@@ -1,12 +1,40 @@
 (function () {
   const css = `
+    html body #loadoutGrid .loadout-card,
+    html body .loadout-grid .loadout-card {
+      grid-template-columns: 13rem minmax(0, 1fr) auto !important;
+      column-gap: 1.45rem !important;
+      align-items: start !important;
+    }
+
+    html body #loadoutGrid .loadout-card.tier-absolute-meta,
+    html body .loadout-grid .loadout-card.tier-absolute-meta {
+      grid-template-columns: 14.25rem minmax(0, 1fr) auto !important;
+      column-gap: 1.65rem !important;
+    }
+
     html body #loadoutGrid .loadout-card .weapon-art,
     html body .loadout-grid .loadout-card .weapon-art,
-    html body #loadoutGrid > .loadout-card .weapon-art,
-    html body #loadoutGrid > .loadout-card.tier-absolute-meta .weapon-art {
+    html body #loadoutGrid > .loadout-card .weapon-art {
+      width: 13rem !important;
+      max-width: 13rem !important;
+      height: 7.35rem !important;
       overflow: hidden !important;
       background: rgba(8, 13, 19, 0.72) !important;
       pointer-events: none !important;
+    }
+
+    html body #loadoutGrid > .loadout-card.tier-absolute-meta .weapon-art,
+    html body .loadout-grid > .loadout-card.tier-absolute-meta .weapon-art {
+      width: 14.25rem !important;
+      max-width: 14.25rem !important;
+      height: 8rem !important;
+    }
+
+    html body #loadoutGrid .loadout-card .card-body,
+    html body .loadout-grid .loadout-card .card-body {
+      padding-left: 0.15rem !important;
+      min-width: 0 !important;
     }
 
     html body #loadoutGrid .loadout-card .weapon-art img,
@@ -30,6 +58,24 @@
       animation: none !important;
       will-change: auto !important;
       filter: none !important;
+    }
+
+    @media (max-width: 720px) {
+      html body #loadoutGrid .loadout-card,
+      html body .loadout-grid .loadout-card,
+      html body #loadoutGrid .loadout-card.tier-absolute-meta,
+      html body .loadout-grid .loadout-card.tier-absolute-meta {
+        grid-template-columns: 9.3rem minmax(0, 1fr) !important;
+        column-gap: 0.95rem !important;
+      }
+
+      html body #loadoutGrid .loadout-card .weapon-art,
+      html body .loadout-grid .loadout-card .weapon-art,
+      html body #loadoutGrid > .loadout-card.tier-absolute-meta .weapon-art {
+        width: 9.3rem !important;
+        max-width: 9.3rem !important;
+        height: 5.35rem !important;
+      }
     }
   `;
 
