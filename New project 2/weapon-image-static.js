@@ -16,10 +16,7 @@
     html body #loadoutGrid .loadout-card:hover .weapon-art img,
     html body .loadout-grid .loadout-card:hover .weapon-art img,
     html body #loadoutGrid .loadout-card .weapon-art:hover img,
-    html body .loadout-grid .loadout-card .weapon-art:hover img,
-    html body #loadoutGrid > .loadout-card .weapon-art:hover img,
-    html body #loadoutGrid .loadout-card .weapon-art:active img,
-    html body .loadout-grid .loadout-card .weapon-art:active img {
+    html body .loadout-grid .loadout-card .weapon-art:hover img {
       display: block !important;
       width: 100% !important;
       height: 100% !important;
@@ -36,19 +33,21 @@
     }
   `;
 
+  let scheduled = false;
+
   function patchMetaZoomStyle() {
     const style = document.querySelector("#weapon-art-zoom-fix");
-    if (!style) return;
+    if (!style || style.dataset.noZoomPatched === "true") return;
 
     style.textContent = style.textContent
       .replace(/object-fit:\s*cover\s*!important;/g, "object-fit: contain !important;")
       .replace(/transform:\s*scale\([^;]+\);?/g, "transform: none !important;")
       .replace(/filter:\s*brightness\([^;]+\)\s*contrast\([^;]+\)\s*saturate\([^;]+\);?/g, "filter: none !important;");
+    style.dataset.noZoomPatched = "true";
   }
 
-  function install() {
-    patchMetaZoomStyle();
-    document.querySelector("#weapon-image-static-style")?.remove();
+  function installStyle() {
+    if (document.querySelector("#weapon-image-static-style")) return;
     const style = document.createElement("style");
     style.id = "weapon-image-static-style";
     style.textContent = css;
@@ -57,12 +56,8 @@
 
   function normalizeImages() {
     patchMetaZoomStyle();
+    installStyle();
     document.querySelectorAll("#loadoutGrid .weapon-art img, .loadout-grid .weapon-art img").forEach((image) => {
-      image.style.setProperty("display", "block", "important");
-      image.style.setProperty("width", "100%", "important");
-      image.style.setProperty("height", "100%", "important");
-      image.style.setProperty("max-width", "100%", "important");
-      image.style.setProperty("max-height", "100%", "important");
       image.style.setProperty("object-fit", "contain", "important");
       image.style.setProperty("object-position", "center center", "important");
       image.style.setProperty("transform", "none", "important");
@@ -72,41 +67,31 @@
       image.style.setProperty("will-change", "auto", "important");
       image.style.setProperty("filter", "none", "important");
     });
+    scheduled = false;
   }
 
-  function pinLast() {
-    install();
-    const staticStyle = document.querySelector("#weapon-image-static-style");
-    if (staticStyle) document.head.appendChild(staticStyle);
-    normalizeImages();
+  function scheduleNormalize() {
+    if (scheduled) return;
+    scheduled = true;
+    window.requestAnimationFrame(normalizeImages);
   }
 
   function watchGrid() {
     const grid = document.querySelector("#loadoutGrid");
     if (!grid || grid.dataset.staticWeaponImagesWatched === "true") return;
     grid.dataset.staticWeaponImagesWatched = "true";
-    new MutationObserver(() => window.requestAnimationFrame(normalizeImages)).observe(grid, { childList: true, subtree: true });
+    new MutationObserver(scheduleNormalize).observe(grid, { childList: true, subtree: true });
   }
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", () => {
-      pinLast();
-      watchGrid();
-    }, { once: true });
-  } else {
-    pinLast();
+  function init() {
+    normalizeImages();
     watchGrid();
+    [120, 350, 900, 1800].forEach((delay) => window.setTimeout(() => {
+      normalizeImages();
+      watchGrid();
+    }, delay));
   }
 
-  [40, 80, 160, 320, 650, 1100, 1800, 3200, 5200, 8000, 12000].forEach((delay) => window.setTimeout(pinLast, delay));
-  const interval = window.setInterval(pinLast, 250);
-  window.setTimeout(() => window.clearInterval(interval), 12000);
-
-  document.addEventListener("pointerover", (event) => {
-    if (event.target.closest?.(".weapon-art")) normalizeImages();
-  }, true);
-
-  new MutationObserver(() => window.requestAnimationFrame(pinLast)).observe(document.head, { childList: true, subtree: true });
-  window.setTimeout(watchGrid, 500);
-  window.setTimeout(watchGrid, 1500);
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, { once: true });
+  else init();
 }());
