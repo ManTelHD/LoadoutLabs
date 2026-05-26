@@ -1,29 +1,31 @@
 (function () {
-  const season4Image = "https://assets.games.gg/cod_warzone_fortunes_keep_map_easter_29200c5157.webp";
+  const trailerId = "lix6PNpWJsw";
+  const trailerUrl = `https://www.youtube-nocookie.com/embed/${trailerId}`;
+  const season4Image = `https://i.ytimg.com/vi/${trailerId}/maxresdefault.jpg`;
   const season4 = {
     title: "Season 4",
     description: "Aktueller Season-4-Überblick für Black Ops 7 und Warzone: bestätigter Start, offizieller Story-Cinematic-Trailer, bekannte PC-Sicherheitsänderung, Blogpost-Status und die wichtigsten offenen Punkte für Warzone, Multiplayer, Zombies, Battle Pass und Meta.",
     kicker: "BO7 & Warzone",
     updateTime: "Stand: 26. Mai 2026",
-    updateSummary: "Neu: Der offizielle Season-4-Story-Cinematic-Trailer ist draußen. Season 4 startet am Donnerstag, 4. Juni 2026. Die große Roadmap/der vollständige Call-of-Duty-Blogpost ist noch nicht live; der Season-04-Hub verweist aktuell noch nicht sauber auf den vollständigen Season-4-Overview.",
-    stats: [["Start", "4. Juni 2026"], ["Trailer", "Story Cinematic live"], ["Blogpost", "noch ausstehend"], ["Status", "Fakt + Watchlist"]],
+    updateSummary: "Neu: Der offizielle Season-4-Story-Cinematic-Trailer ist draußen und jetzt direkt eingebettet. Season 4 startet am Donnerstag, 4. Juni 2026. Die vollständige Roadmap/der große Call-of-Duty-Blogpost wird weiter überwacht.",
+    stats: [["Start", "4. Juni 2026"], ["Trailer", "eingebettet"], ["Blogpost", "noch ausstehend"], ["Status", "Fakt + Watchlist"]],
     cards: [
-      ["Neu: Story-Cinematic-Trailer", "Am 26. Mai ist der offizielle Season-4-Story-Cinematic-Trailer aufgetaucht. Inhaltlich dreht sich der Teaser um den Konflikt Karma gegen Dorne und einen Guild-killing virus, der kurz vor dem Einsatz steht. Das ist jetzt der wichtigste neue Season-4-Aufhänger."],
-      ["Start bestätigt", "Season 4 startet am Donnerstag, 4. Juni 2026. Erwartet wird der übliche Call-of-Duty-Rollout am Abend deutscher Zeit. Auf der Seite bleibt der Start deshalb nicht mehr als reines Gerücht, sondern als bestätigtes Startdatum geführt."],
-      ["Plattformen", "Der Trailer-/Release-Hinweis nennt PlayStation 4, PlayStation 5, Xbox One, Xbox Series X|S und PC via Steam. Das ist wichtig, weil damit Season 4 weiter auf Last-Gen-Konsolen auftaucht, während die MW4-Gerüchte bereits über einen möglichen Generationenwechsel sprechen."],
+      ["Story-Cinematic", "Der Trailer stellt Karma gegen Dorne in den Mittelpunkt. Der Guild-killing virus ist bereit zum Einsatz und bildet den zentralen Story-Aufhänger für Season 4."],
+      ["Start bestätigt", "Season 4 startet am Donnerstag, 4. Juni 2026. Erwartet wird der übliche Call-of-Duty-Rollout am Abend deutscher Zeit."],
+      ["Plattformen", "Der Trailer-/Release-Hinweis nennt PlayStation 4, PlayStation 5, Xbox One, Xbox Series X|S und PC via Steam."],
       ["Blogpost & Roadmap", "Der große offizielle Season-4-Overview-Blogpost ist Stand 26. Mai noch nicht sauber live. Sobald Activision die vollständige Roadmap veröffentlicht, müssen Waffen, Maps, Events, Battle Pass, Zombies und Warzone-Änderungen sofort gegen bestätigte Angaben ersetzt werden."],
       ["Offiziell: PC-Sicherheit", "Bereits in den offiziellen BO7-Season-03-Patchnotes wurde für Season 04 eine PC-Änderung angekündigt: Microsoft Azure Attestation wird für die meisten Playlists Pflicht. TPM und Secure Boot müssen aktiv sein, sonst kann Matchmaking eingeschränkt werden."],
       ["Warzone Watchlist", "Weiter beobachten: Playlist-Updates, Ranked-Anpassungen, Balance-Änderungen und mögliche Resurgence-/Map-Rotation. Fortune's Keep bleibt bis zur offiziellen Roadmap als Gerücht markiert."],
-      ["Multiplayer Watchlist", "Zu erwarten sind neue 6v6-Maps, Modi und Events. Berichte sprechen weiter über mögliche Remaster-Anleihen, aber ohne Roadmap bleiben konkrete Map-Namen unbestätigt."],
-      ["Zombies Watchlist", "Die Mid-Season bleibt für Zombies spannend. Aktuell wird weiterhin über eine neue round-based Map bzw. größere Story-Fortsetzung spekuliert. Nach dem Trailer ist die Story-Spannung höher, aber Features bleiben offen."],
-      ["Battle Pass & Waffen", "Neue Waffen, Operator, BlackCell, Blueprints und Event-Rewards sind praktisch sicher für einen Season-Start, aber konkrete Namen gehören erst nach offizieller Roadmap auf die Seite."],
+      ["Multiplayer Watchlist", "Zu erwarten sind neue 6v6-Maps, Modi und Events. Konkrete Map-Namen gehören erst nach der offiziellen Roadmap auf die Seite."],
+      ["Zombies Watchlist", "Die Mid-Season bleibt für Zombies spannend. Nach dem Trailer ist die Story-Spannung höher, aber Map-Name und Features bleiben offen."],
+      ["Battle Pass & Waffen", "Neue Waffen, Operator, BlackCell, Blueprints und Event-Rewards sind praktisch sicher für einen Season-Start, aber konkrete Namen werden erst nach offizieller Roadmap übernommen."],
       ["Meta-Auswirkung", "Zum Season-Start müssen WZ META und BO7 META neu geprüft werden: neue Waffen, Buffs/Nerfs, Attachments, Pickrates und Score-Werte können sich direkt am 4. Juni verschieben."],
     ],
     tips: [
-      "Neu und wichtig: offizieller Season-4-Story-Cinematic-Trailer mit Karma, Dorne und Guild-killing virus.",
+      "Neu und wichtig: offizieller Season-4-Story-Cinematic-Trailer ist direkt auf der Seite eingebettet.",
       "Bestätigt: Season 4 startet am 4. Juni 2026 für PlayStation, Xbox und PC.",
       "Noch offen: vollständige Roadmap, neue Waffen, Maps, Events, Battle Pass und Warzone-Playlistdetails.",
-      "Automatik repariert: GitHub Actions prüft Season-4-Quellen jetzt regelmäßig und deployed bei Änderungen automatisch.",
+      "Automatik repariert: GitHub Actions prüft Season-4-Quellen regelmäßig und deployed bei Änderungen automatisch.",
     ],
   };
 
@@ -35,7 +37,90 @@
       .replace(/"/g, "&quot;");
   }
 
+  function injectTrailerStyle() {
+    if (document.querySelector("#season4-trailer-embed-style")) return;
+    const style = document.createElement("style");
+    style.id = "season4-trailer-embed-style";
+    style.textContent = `
+      body .season4-watch-panel .season4-trailer-panel {
+        margin: 0 0 1rem !important;
+        overflow: hidden !important;
+        border: 1px solid rgba(185, 255, 61, 0.28) !important;
+        border-radius: 8px !important;
+        background: linear-gradient(145deg, rgba(185, 255, 61, 0.08), rgba(6, 9, 12, 0.96)) !important;
+        box-shadow: 0 1.1rem 2.4rem rgba(0, 0, 0, 0.32), 0 0 1.6rem rgba(185, 255, 61, 0.1) !important;
+      }
+
+      body .season4-watch-panel .season4-trailer-copy {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 1rem !important;
+        padding: 0.82rem 0.95rem !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+      }
+
+      body .season4-watch-panel .season4-trailer-copy span {
+        color: #b9ff3d !important;
+        font-size: 0.72rem !important;
+        font-weight: 950 !important;
+        text-transform: uppercase !important;
+      }
+
+      body .season4-watch-panel .season4-trailer-copy strong {
+        color: #f6ffe2 !important;
+        font-family: Rajdhani, Inter, sans-serif !important;
+        font-size: clamp(1.15rem, 1.6vw, 1.55rem) !important;
+        line-height: 1 !important;
+      }
+
+      body .season4-watch-panel .season4-trailer-frame {
+        position: relative !important;
+        width: 100% !important;
+        aspect-ratio: 16 / 9 !important;
+        background: #05070a !important;
+      }
+
+      body .season4-watch-panel .season4-trailer-frame iframe {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        border: 0 !important;
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
+  function renderTrailer() {
+    const body = document.querySelector(".season4-watch-panel .mode-info-body");
+    if (!body) return;
+    document.querySelector("#season4TrailerPanel")?.remove();
+    const trailer = document.createElement("section");
+    trailer.id = "season4TrailerPanel";
+    trailer.className = "season4-trailer-panel";
+    trailer.innerHTML = `
+      <div class="season4-trailer-copy">
+        <div><span>Offizieller Trailer</span><strong>Season 4 Story Cinematic</strong></div>
+        <span>26. Mai 2026</span>
+      </div>
+      <div class="season4-trailer-frame">
+        <iframe
+          src="${trailerUrl}"
+          title="Call of Duty: Black Ops 7 - Official Season 4 Story Cinematic Trailer"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>`;
+
+    const updateBox = body.querySelector(".mode-update-box");
+    if (updateBox) updateBox.insertAdjacentElement("afterend", trailer);
+    else body.prepend(trailer);
+  }
+
   function activateSeason4(button) {
+    injectTrailerStyle();
     document.querySelectorAll(".primary-mode-switch .mode-button").forEach((item) => item.classList.toggle("active", item === button));
     document.querySelectorAll(".secondary-mode-switch .mode-button").forEach((item) => item.classList.remove("active"));
 
@@ -70,11 +155,13 @@
     const image = document.querySelector("#modeInfoImage");
     if (image) {
       image.src = season4Image;
-      image.alt = "Season 4 Watchlist für Black Ops 7 und Warzone";
+      image.alt = "Offizielles Thumbnail zum Season 4 Story Cinematic Trailer";
     }
 
     const stats = document.querySelector("#modeInfoStats");
     if (stats) stats.innerHTML = season4.stats.map(([label, value]) => `<div><span>${html(label)}</span><strong>${html(value)}</strong></div>`).join("");
+
+    renderTrailer();
 
     const cards = document.querySelector("#modeInfoCards");
     if (cards) cards.innerHTML = season4.cards.map(([title, text]) => `<article><h3>${html(title)}</h3><p>${html(text)}</p></article>`).join("");
