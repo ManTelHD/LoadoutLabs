@@ -9,8 +9,8 @@ const markerPath = path.join(root, ".nojekyll");
 const sources = [
   "https://www.callofduty.com/season-04",
   "https://www.callofduty.com/blog",
+  "https://www.youtube.com/feeds/videos.xml?channel_id=UC9YydG57epLqxA9cTzZXSeQ",
   "https://www.gamespot.com/articles/cod-black-ops-7-and-warzone-season-4-release-date-and-details/",
-  "https://www.youtube.com/results?search_query=Call+of+Duty+Black+Ops+7+Official+Season+4+Story+Cinematic+Trailer",
 ];
 
 async function fetchText(url) {
@@ -54,13 +54,14 @@ function bumpInjector(version) {
 }
 
 async function main() {
-  const [seasonHub, blog, gamespot, youtube] = await Promise.all(sources.map(fetchText));
-  const combined = [seasonHub, blog, gamespot, youtube].join("\n");
+  const [seasonHub, blog, codYoutubeRss, gamespot] = await Promise.all(sources.map(fetchText));
+  const combined = [seasonHub, blog, codYoutubeRss, gamespot].join("\n");
   const officialHubLive = /Season\s*04|Season\s*4/i.test(seasonHub || "") && !/Season\s*03\s*Reloaded/i.test(seasonHub || "");
-  const trailerFound = /Official Season 4 Story Cinematic Trailer|Story Cinematic Trailer|Karma|Dorne|Guild-killing virus/i.test(combined);
+  const officialTrailerFound = /Season 04 Story Cinematic \| Call of Duty: Black Ops 7|1QZ7pMRBASs/i.test(codYoutubeRss || "");
+  const trailerFound = officialTrailerFound || /Official Season 4 Story Cinematic Trailer|Story Cinematic Trailer|Karma|Dorne|Guild-killing virus/i.test(combined);
 
   if (!officialHubLive) {
-    console.log(trailerFound ? "Trailer detected; official Season 04 hub still pending. Keeping current embedded trailer page." : "No official Season 04 hub detected yet.");
+    console.log(officialTrailerFound ? "Official Call of Duty YouTube trailer detected; keeping embedded official trailer page." : trailerFound ? "Trailer detected; official Season 04 hub still pending." : "No official Season 04 hub detected yet.");
     return;
   }
 
