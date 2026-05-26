@@ -1,0 +1,37 @@
+name: Auto update Season 4 watch
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: season4-auto-update
+  cancel-in-progress: true
+
+jobs:
+  update-season4:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update Season 4 watch data
+        run: node tools/update-season4-watch.js
+
+      - name: Commit changes
+        run: |
+          if git diff --quiet; then
+            echo "No Season 4 changes detected."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "New project 2/season4-click-rescue.js" netlify-inject-meta-overrides.js .nojekyll
+          git commit -m "Auto update Season 4 watch"
+          git push
