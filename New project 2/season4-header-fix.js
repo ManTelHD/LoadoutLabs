@@ -138,6 +138,15 @@
           <li>Leon Rook und Fortune's Keep wurden über offizielle @CallofDuty-X-Posts gezeigt.</li>
           <li>Fortune's Keep ist für Warzone am 4. Juni eingeordnet.</li>
         </ul>
+        <h4>Kommende Waffen</h4>
+        <p>Offiziell sind die Season-4-Waffen noch nicht vollständig benannt. In der Community ist aber vor allem die Rückkehr einer AN-94 im Gespräch, weil Leon Rook im Key-Art beziehungsweise Cinematic eine Waffe trägt, die stark an das bekannte Black-Ops-2-Sturmgewehr erinnert. Das ist aktuell der stärkste Hinweis, aber noch keine Bestätigung durch Activision.</p>
+        <ul>
+          <li>AN-94: wahrscheinlichster Community-Kandidat, vermutlich als Sturmgewehr für Battle Pass oder Event.</li>
+          <li>Battle Pass: erwartet werden wie üblich zwei bis drei neue Waffen zum Start, wahrscheinlich mit Fokus auf AR/SMG.</li>
+          <li>Events und Weekly Challenges: weitere Waffen oder Spezial-Freischaltungen könnten später in Season 4 folgen.</li>
+          <li>Datamining-Gerüchte nennen unter anderem Codenamen wie Albatross, Kiwi, Mammoth und Maru. Diese Namen sind nicht offiziell und können Platzhalter sein.</li>
+        </ul>
+        <p>Für die Meta heißt das: Falls die AN-94 wirklich kommt, muss sie direkt in WZ META und BO7 META getestet werden. Besonders wichtig werden Rückstoß, Burst-Verhalten, Reichweite, TTK und ob sie eher als Long-Range-AR oder als flexibles Mid-Range-Gewehr funktioniert.</p>
         <h4>Noch offen</h4>
         <p>Der vollständige Overview-Blogpost muss noch abgewartet werden. Erst daraus sollten finale Details zu neuen Waffen, Maps, Events, Battle Pass, Zombies-Inhalten, Playlist-Änderungen und Balance-Anpassungen übernommen werden.</p>
         <h4>Auswirkung auf die Meta</h4>
