@@ -4,6 +4,19 @@
     const style = document.createElement("style");
     style.id = "season4-header-fix-style";
     style.textContent = `
+      body .season4-watch-panel .mode-info-layout {
+        display: block !important;
+      }
+
+      body .season4-watch-panel .mode-info-main {
+        width: 100% !important;
+        max-width: none !important;
+      }
+
+      body .season4-watch-panel .mode-info-side {
+        display: none !important;
+      }
+
       body .season4-watch-panel .season4-keyart-heading {
         align-items: flex-start !important;
         justify-content: space-between !important;
@@ -55,8 +68,13 @@
     document.head.appendChild(style);
   }
 
-  function polishHeader() {
+  function polishSeason4() {
     installStyle();
+    const side = document.querySelector(".season4-watch-panel .mode-info-side");
+    if (side) {
+      side.hidden = true;
+      side.style.display = "none";
+    }
     const heading = document.querySelector(".season4-watch-panel .season4-keyart-heading");
     if (!heading) return;
     const label = heading.querySelector("div > span");
@@ -69,13 +87,13 @@
 
   document.addEventListener("click", (event) => {
     if (!event.target.closest(".season4-mode-button, [data-mode='season4-info']")) return;
-    window.setTimeout(polishHeader, 50);
-    window.setTimeout(polishHeader, 220);
+    window.setTimeout(polishSeason4, 50);
+    window.setTimeout(polishSeason4, 220);
   }, true);
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", () => window.setTimeout(polishHeader, 300), { once: true });
+    document.addEventListener("DOMContentLoaded", () => window.setTimeout(polishSeason4, 300), { once: true });
   } else {
-    window.setTimeout(polishHeader, 300);
+    window.setTimeout(polishSeason4, 300);
   }
 })();
