@@ -40,9 +40,7 @@
         padding: clamp(1.05rem, 1.8vw, 1.45rem) !important;
         border: 1px solid rgba(185, 255, 61, 0.22) !important;
         border-radius: 8px !important;
-        background:
-          radial-gradient(circle at 12% 0%, rgba(185, 255, 61, 0.1), transparent 18rem),
-          linear-gradient(145deg, rgba(12, 18, 16, 0.94), rgba(5, 8, 11, 0.96)) !important;
+        background: radial-gradient(circle at 12% 0%, rgba(185, 255, 61, 0.1), transparent 18rem), linear-gradient(145deg, rgba(12, 18, 16, 0.94), rgba(5, 8, 11, 0.96)) !important;
         color: rgba(232, 240, 226, 0.9) !important;
         box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 1rem 2rem rgba(0, 0, 0, 0.26) !important;
       }
@@ -177,9 +175,7 @@
     if (cards) {
       cards.hidden = true;
       cards.style.display = "none";
-      if (prose.parentElement !== body || prose.previousElementSibling !== cards) {
-        cards.insertAdjacentElement("afterend", prose);
-      }
+      if (prose.parentElement !== body || prose.previousElementSibling !== cards) cards.insertAdjacentElement("afterend", prose);
     } else if (prose.parentElement !== body) {
       body.appendChild(prose);
     }
@@ -192,20 +188,14 @@
     installStyle();
     if (!document.querySelector(".season4-watch-panel")) return false;
     const side = document.querySelector(".season4-watch-panel .mode-info-side");
-    if (side) {
-      side.hidden = true;
-      side.style.display = "none";
-    }
+    if (side && !side.hidden) side.hidden = true;
+    if (side && side.style.display !== "none") side.style.display = "none";
     const updateBox = document.querySelector(".season4-watch-panel .mode-update-box");
-    if (updateBox) {
-      updateBox.hidden = true;
-      updateBox.style.display = "none";
-    }
+    if (updateBox && !updateBox.hidden) updateBox.hidden = true;
+    if (updateBox && updateBox.style.display !== "none") updateBox.style.display = "none";
     const cards = document.querySelector(".season4-watch-panel #modeInfoCards");
-    if (cards) {
-      cards.hidden = true;
-      cards.style.display = "none";
-    }
+    if (cards && !cards.hidden) cards.hidden = true;
+    if (cards && cards.style.display !== "none") cards.style.display = "none";
     const heroText = document.querySelector(".season4-watch-panel .mode-info-hero > div");
     if (heroText && !heroText.querySelector(".season4-updated-pill")) {
       const pill = document.createElement("span");
@@ -217,11 +207,11 @@
     const heading = document.querySelector(".season4-watch-panel .season4-keyart-heading");
     if (heading) {
       const label = heading.querySelector("div > span");
-      if (label) label.textContent = "Offizielle Bilder";
+      if (label && label.textContent !== "Offizielle Bilder") label.textContent = "Offizielle Bilder";
       const title = heading.querySelector("strong");
-      if (title) title.textContent = "Season 04 X Key Art";
+      if (title && title.textContent !== "Season 04 X Key Art") title.textContent = "Season 04 X Key Art";
       const source = heading.querySelector(":scope > span:last-child");
-      if (source) source.textContent = "@CallofDuty";
+      if (source && source.textContent !== "@CallofDuty") source.textContent = "@CallofDuty";
     }
     return true;
   }
@@ -232,21 +222,18 @@
     window.setTimeout(polishSeason4, 500);
   }
 
-  document.addEventListener("click", schedulePolish, true);
-
-  const observer = new MutationObserver(() => {
-    if (document.querySelector(".season4-watch-panel")) polishSeason4();
-  });
-
   function start() {
     installStyle();
-    observer.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ["class", "hidden", "style"] });
     schedulePolish();
+    let tries = 0;
+    const timer = window.setInterval(() => {
+      tries += 1;
+      const done = polishSeason4();
+      if (done || tries >= 24) window.clearInterval(timer);
+    }, 250);
   }
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", start, { once: true });
-  } else {
-    start();
-  }
+  document.addEventListener("click", schedulePolish, true);
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start, { once: true });
+  else start();
 })();
