@@ -104,7 +104,7 @@
         min-height: clamp(17rem, 30vw, 28rem) !important;
         border: 1px solid rgba(255, 255, 255, 0.08) !important;
         border-radius: 8px !important;
-        background: #05070a !important;
+        background: radial-gradient(circle at 50% 50%, rgba(185, 255, 61, 0.08), #05070a 64%) !important;
       }
       body .season4-watch-panel .season4-keyart-card a {
         display: block !important;
@@ -118,8 +118,9 @@
         width: 100% !important;
         height: 100% !important;
         min-height: clamp(17rem, 30vw, 28rem) !important;
-        object-fit: cover !important;
+        object-fit: contain !important;
         object-position: center center !important;
+        background: #05070a !important;
       }
       body .season4-watch-panel .season4-keyart-card figcaption {
         position: absolute !important;
@@ -231,6 +232,9 @@
     if (image) {
       image.src = season4Image;
       image.alt = "Offizielle Call of Duty X-Key-Art zu Season 04 mit Leon Rook";
+      image.style.objectFit = "contain";
+      image.style.objectPosition = "center center";
+      image.style.backgroundColor = "#05070a";
     }
     const stats = document.querySelector("#modeInfoStats");
     if (stats) stats.innerHTML = season4.stats.map(([label, value]) => `<div><span>${html(label)}</span><strong>${html(value)}</strong></div>`).join("");
