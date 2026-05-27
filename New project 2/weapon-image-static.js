@@ -5,6 +5,8 @@
       grid-template-columns: 13rem minmax(0, 1fr) auto !important;
       column-gap: 1.45rem !important;
       align-items: start !important;
+      content-visibility: auto !important;
+      contain-intrinsic-size: 18rem !important;
     }
 
     html body #loadoutGrid .loadout-card.tier-absolute-meta,
@@ -22,6 +24,7 @@
       overflow: hidden !important;
       background: rgba(8, 13, 19, 0.72) !important;
       pointer-events: none !important;
+      contain: layout paint !important;
     }
 
     html body #loadoutGrid > .loadout-card.tier-absolute-meta .weapon-art,
@@ -67,6 +70,7 @@
       html body .loadout-grid .loadout-card.tier-absolute-meta {
         grid-template-columns: 9.3rem minmax(0, 1fr) !important;
         column-gap: 0.95rem !important;
+        contain-intrinsic-size: 16rem !important;
       }
 
       html body #loadoutGrid .loadout-card .weapon-art,
@@ -79,12 +83,9 @@
     }
   `;
 
-  let scheduled = false;
-
   function patchMetaZoomStyle() {
     const style = document.querySelector("#weapon-art-zoom-fix");
     if (!style || style.dataset.noZoomPatched === "true") return;
-
     style.textContent = style.textContent
       .replace(/object-fit:\s*cover\s*!important;/g, "object-fit: contain !important;")
       .replace(/transform:\s*scale\([^;]+\);?/g, "transform: none !important;")
@@ -100,42 +101,10 @@
     document.head.appendChild(style);
   }
 
-  function normalizeImages() {
-    patchMetaZoomStyle();
-    installStyle();
-    document.querySelectorAll("#loadoutGrid .weapon-art img, .loadout-grid .weapon-art img").forEach((image) => {
-      image.style.setProperty("object-fit", "contain", "important");
-      image.style.setProperty("object-position", "center center", "important");
-      image.style.setProperty("transform", "none", "important");
-      image.style.setProperty("scale", "1", "important");
-      image.style.setProperty("transition", "none", "important");
-      image.style.setProperty("animation", "none", "important");
-      image.style.setProperty("will-change", "auto", "important");
-      image.style.setProperty("filter", "none", "important");
-    });
-    scheduled = false;
-  }
-
-  function scheduleNormalize() {
-    if (scheduled) return;
-    scheduled = true;
-    window.requestAnimationFrame(normalizeImages);
-  }
-
-  function watchGrid() {
-    const grid = document.querySelector("#loadoutGrid");
-    if (!grid || grid.dataset.staticWeaponImagesWatched === "true") return;
-    grid.dataset.staticWeaponImagesWatched = "true";
-    new MutationObserver(scheduleNormalize).observe(grid, { childList: true, subtree: true });
-  }
-
   function init() {
-    normalizeImages();
-    watchGrid();
-    [120, 350, 900, 1800].forEach((delay) => window.setTimeout(() => {
-      normalizeImages();
-      watchGrid();
-    }, delay));
+    installStyle();
+    patchMetaZoomStyle();
+    window.setTimeout(patchMetaZoomStyle, 350);
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, { once: true });
