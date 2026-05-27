@@ -35,6 +35,7 @@
       }
 
       body .season4-watch-panel .season4-prose {
+        display: block !important;
         margin-top: 1rem !important;
         padding: clamp(1.05rem, 1.8vw, 1.45rem) !important;
         border: 1px solid rgba(185, 255, 61, 0.22) !important;
@@ -150,37 +151,46 @@
 
   function renderProse() {
     const body = document.querySelector(".season4-watch-panel .mode-info-body");
-    if (!body || body.querySelector(".season4-prose")) return;
+    if (!body) return false;
+    let prose = body.querySelector(".season4-prose");
+    if (!prose) {
+      prose = document.createElement("section");
+      prose.className = "season4-prose";
+      prose.innerHTML = `
+        <h3>Was zu Season 4 aktuell wichtig ist</h3>
+        <p>Season 4 ist inzwischen deutlich konkreter: Der offizielle Call-of-Duty-YouTube-Kanal hat den Story-Cinematic veröffentlicht, und die offiziellen @CallofDuty-X-Posts zeigen die aktuellen Key-Art-Motive zu Leon Rook und Fortune's Keep. Damit ist klar, dass der Season-4-Fokus auf Black Ops 7 und Warzone liegt und am 4. Juni 2026 sichtbar in Richtung neuer Inhalte wechselt.</p>
+        <p>Leon Rook wird offiziell als tödlich augmentierter Guild-Soldat geführt. Parallel wurde Fortune's Keep für den 4. Juni bestätigt, was die Warzone-Seite der Season besonders wichtig macht. Der große vollständige Season-4-Blogpost beziehungsweise die Roadmap ist weiterhin der Punkt, auf den dieser Bereich als nächstes reagieren muss.</p>
+        <h4>Bestätigt</h4>
+        <ul>
+          <li>Season 4 startet am Donnerstag, 4. Juni 2026.</li>
+          <li>Der Story-Cinematic stammt vom offiziellen Call-of-Duty-YouTube-Kanal.</li>
+          <li>Leon Rook und Fortune's Keep wurden über offizielle @CallofDuty-X-Posts gezeigt.</li>
+          <li>Fortune's Keep ist für Warzone am 4. Juni eingeordnet.</li>
+        </ul>
+        <h4>Noch offen</h4>
+        <p>Der vollständige Overview-Blogpost muss noch abgewartet werden. Erst daraus sollten finale Details zu neuen Waffen, Maps, Events, Battle Pass, Zombies-Inhalten, Playlist-Änderungen und Balance-Anpassungen übernommen werden.</p>
+        <h4>Auswirkung auf die Meta</h4>
+        <p>Zum Season-Start müssen WZ META und BO7 META neu geprüft werden. Neue Waffen, Buffs, Nerfs, Attachments und Pickrates können sich direkt am 4. Juni verschieben. Sobald die offizielle Roadmap live ist, sollte dieser Tab zuerst bei Waffen, Warzone-Änderungen und Balance-Punkten aktualisiert werden.</p>
+      `;
+    }
     const cards = body.querySelector("#modeInfoCards");
-    const prose = document.createElement("section");
-    prose.className = "season4-prose";
-    prose.innerHTML = `
-      <h3>Was zu Season 4 aktuell wichtig ist</h3>
-      <p>Season 4 ist inzwischen deutlich konkreter: Der offizielle Call-of-Duty-YouTube-Kanal hat den Story-Cinematic veröffentlicht, und die offiziellen @CallofDuty-X-Posts zeigen die aktuellen Key-Art-Motive zu Leon Rook und Fortune's Keep. Damit ist klar, dass der Season-4-Fokus auf Black Ops 7 und Warzone liegt und am 4. Juni 2026 sichtbar in Richtung neuer Inhalte wechselt.</p>
-      <p>Leon Rook wird offiziell als tödlich augmentierter Guild-Soldat geführt. Parallel wurde Fortune's Keep für den 4. Juni bestätigt, was die Warzone-Seite der Season besonders wichtig macht. Der große vollständige Season-4-Blogpost beziehungsweise die Roadmap ist weiterhin der Punkt, auf den dieser Bereich als nächstes reagieren muss.</p>
-      <h4>Bestätigt</h4>
-      <ul>
-        <li>Season 4 startet am Donnerstag, 4. Juni 2026.</li>
-        <li>Der Story-Cinematic stammt vom offiziellen Call-of-Duty-YouTube-Kanal.</li>
-        <li>Leon Rook und Fortune's Keep wurden über offizielle @CallofDuty-X-Posts gezeigt.</li>
-        <li>Fortune's Keep ist für Warzone am 4. Juni eingeordnet.</li>
-      </ul>
-      <h4>Noch offen</h4>
-      <p>Der vollständige Overview-Blogpost muss noch abgewartet werden. Erst daraus sollten finale Details zu neuen Waffen, Maps, Events, Battle Pass, Zombies-Inhalten, Playlist-Änderungen und Balance-Anpassungen übernommen werden.</p>
-      <h4>Auswirkung auf die Meta</h4>
-      <p>Zum Season-Start müssen WZ META und BO7 META neu geprüft werden. Neue Waffen, Buffs, Nerfs, Attachments und Pickrates können sich direkt am 4. Juni verschieben. Sobald die offizielle Roadmap live ist, sollte dieser Tab zuerst bei Waffen, Warzone-Änderungen und Balance-Punkten aktualisiert werden.</p>
-    `;
     if (cards) {
       cards.hidden = true;
       cards.style.display = "none";
-      cards.insertAdjacentElement("afterend", prose);
-    } else {
+      if (prose.parentElement !== body || prose.previousElementSibling !== cards) {
+        cards.insertAdjacentElement("afterend", prose);
+      }
+    } else if (prose.parentElement !== body) {
       body.appendChild(prose);
     }
+    prose.hidden = false;
+    prose.style.display = "block";
+    return true;
   }
 
   function polishSeason4() {
     installStyle();
+    if (!document.querySelector(".season4-watch-panel")) return false;
     const side = document.querySelector(".season4-watch-panel .mode-info-side");
     if (side) {
       side.hidden = true;
@@ -205,24 +215,38 @@
     }
     renderProse();
     const heading = document.querySelector(".season4-watch-panel .season4-keyart-heading");
-    if (!heading) return;
-    const label = heading.querySelector("div > span");
-    if (label) label.textContent = "Offizielle Bilder";
-    const title = heading.querySelector("strong");
-    if (title) title.textContent = "Season 04 X Key Art";
-    const source = heading.querySelector(":scope > span:last-child");
-    if (source) source.textContent = "@CallofDuty";
+    if (heading) {
+      const label = heading.querySelector("div > span");
+      if (label) label.textContent = "Offizielle Bilder";
+      const title = heading.querySelector("strong");
+      if (title) title.textContent = "Season 04 X Key Art";
+      const source = heading.querySelector(":scope > span:last-child");
+      if (source) source.textContent = "@CallofDuty";
+    }
+    return true;
   }
 
-  document.addEventListener("click", (event) => {
-    if (!event.target.closest(".season4-mode-button, [data-mode='season4-info']")) return;
-    window.setTimeout(polishSeason4, 50);
-    window.setTimeout(polishSeason4, 220);
-  }, true);
+  function schedulePolish() {
+    window.setTimeout(polishSeason4, 40);
+    window.setTimeout(polishSeason4, 180);
+    window.setTimeout(polishSeason4, 500);
+  }
+
+  document.addEventListener("click", schedulePolish, true);
+
+  const observer = new MutationObserver(() => {
+    if (document.querySelector(".season4-watch-panel")) polishSeason4();
+  });
+
+  function start() {
+    installStyle();
+    observer.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ["class", "hidden", "style"] });
+    schedulePolish();
+  }
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", () => window.setTimeout(polishSeason4, 300), { once: true });
+    document.addEventListener("DOMContentLoaded", start, { once: true });
   } else {
-    window.setTimeout(polishSeason4, 300);
+    start();
   }
 })();
