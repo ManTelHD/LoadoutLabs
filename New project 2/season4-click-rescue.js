@@ -1,37 +1,35 @@
 (function () {
   const trailerId = "1QZ7pMRBASs";
   const trailerUrl = `https://www.youtube-nocookie.com/embed/${trailerId}`;
-  const officialKeyArt = `https://i.ytimg.com/vi/${trailerId}/maxresdefault.jpg`;
-  const season4Image = officialKeyArt;
+  const leonRookKeyArt = "https://pbs.twimg.com/media/HJQpk08akAAMsi5.jpg?name=orig";
+  const fortunesKeepKeyArt = "https://pbs.twimg.com/media/HJQpqkhaIAA5s9k.jpg?name=orig";
+  const season4Image = leonRookKeyArt;
   const keyArt = [
-    ["Offizielle Key Art", officialKeyArt, "Offizielles Season-04-Story-Cinematic-Key-Art vom Call-of-Duty-YouTube-Kanal"],
-    ["Trailer Thumbnail", `https://i.ytimg.com/vi/${trailerId}/sddefault.jpg`, "Offizielles Season-04-Trailer-Thumbnail"],
-    ["COD Video Art", `https://i.ytimg.com/vi/${trailerId}/hqdefault.jpg`, "Offizielles YouTube-Vorschaubild vom Call-of-Duty-Kanal"],
+    ["Leon Rook", leonRookKeyArt, "Offizielle Call of Duty X-Key-Art zu Season 04 mit Leon Rook", "https://x.com/CallofDuty/status/2059318714919715033"],
+    ["Fortune's Keep", fortunesKeepKeyArt, "Offizielle Call of Duty X-Key-Art zu Fortune's Keep für Season 04", "https://x.com/CallofDuty/status/2059318720561139901"],
   ];
   const season4 = {
     title: "Season 4",
-    description: "Aktueller Season-4-Überblick für Black Ops 7 und Warzone: bestätigter Start, offizieller Call-of-Duty-Story-Cinematic-Trailer, offizielle Key Art, bekannte PC-Sicherheitsänderung, Blogpost-Status und die wichtigsten offenen Punkte für Warzone, Multiplayer, Zombies, Battle Pass und Meta.",
+    description: "Aktueller Season-4-Überblick für Black Ops 7 und Warzone: bestätigter Start, offizieller Call-of-Duty-Story-Cinematic-Trailer, offizielle X-Key-Art, bekannte PC-Sicherheitsänderung, Blogpost-Status und die wichtigsten offenen Punkte für Warzone, Multiplayer, Zombies, Battle Pass und Meta.",
     kicker: "BO7 & Warzone",
-    updateTime: "Stand: 26. Mai 2026",
-    updateSummary: "Neu: Der offizielle Call-of-Duty-YouTube-Trailer ist direkt eingebettet und die offiziellen Trailer-Key-Art-Bilder sind sichtbar. Season 4 startet am Donnerstag, 4. Juni 2026. Die vollständige Roadmap/der große Call-of-Duty-Blogpost wird weiter überwacht.",
-    stats: [["Start", "4. Juni 2026"], ["Trailer", "Call of Duty Kanal"], ["Key Art", "offiziell"], ["Blogpost", "noch ausstehend"]],
+    updateTime: "Stand: 27. Mai 2026",
+    updateSummary: "Neu: Die Season-4-Bilder stammen jetzt direkt aus den offiziellen @CallofDuty-X-Posts. Season 4 startet am Donnerstag, 4. Juni 2026. Die vollständige Roadmap/der große Call-of-Duty-Blogpost wird weiter überwacht.",
+    stats: [["Start", "4. Juni 2026"], ["Trailer", "Call of Duty Kanal"], ["Key Art", "@CallofDuty X"], ["Blogpost", "noch ausstehend"]],
     cards: [
-      ["Offizieller COD-Trailer", "Eingebettet ist jetzt das Video vom offiziellen Call-of-Duty-YouTube-Kanal: Season 04 Story Cinematic | Call of Duty: Black Ops 7."],
-      ["Offizielle Key Art", "Die sichtbaren Season-4-Bilder stammen aus den offiziellen YouTube-Assets des Call-of-Duty-Kanals zum Season-04-Story-Cinematic."],
-      ["Story-Cinematic", "Der Trailer stellt Karma gegen Dorne in den Mittelpunkt. Der Guild-killing virus ist bereit zum Einsatz und bildet den zentralen Story-Aufhänger für Season 4."],
+      ["Offizielle X-Key-Art", "Die sichtbaren Season-4-Bilder stammen jetzt aus den offiziellen @CallofDuty-X-Posts: Leon Rook und Fortune's Keep."],
+      ["Offizieller COD-Trailer", "Eingebettet ist weiterhin das Video vom offiziellen Call-of-Duty-YouTube-Kanal: Season 04 Story Cinematic | Call of Duty: Black Ops 7."],
+      ["Leon Rook", "Der offizielle X-Post nennt Leon Rook als tödlich augmentierten Guild-Soldaten, der am 4. Juni in Black Ops 7 und Warzone erscheint."],
+      ["Fortune's Keep", "Der zweite offizielle X-Post bestätigt Fortune's Keep für den 4. Juni. Damit ist die Warzone-Rückkehr nicht mehr nur Gerücht."],
       ["Start bestätigt", "Season 4 startet am Donnerstag, 4. Juni 2026. Erwartet wird der übliche Call-of-Duty-Rollout am Abend deutscher Zeit."],
-      ["Plattformen", "Der Trailer-/Release-Hinweis nennt PlayStation 4, PlayStation 5, Xbox One, Xbox Series X|S und PC via Steam."],
-      ["Blogpost & Roadmap", "Der große offizielle Season-4-Overview-Blogpost ist Stand 26. Mai noch nicht sauber live. Sobald Activision die vollständige Roadmap veröffentlicht, müssen Waffen, Maps, Events, Battle Pass, Zombies und Warzone-Änderungen sofort gegen bestätigte Angaben ersetzt werden."],
+      ["Blogpost & Roadmap", "Der große offizielle Season-4-Overview-Blogpost ist Stand 27. Mai noch nicht sauber live. Sobald Activision die vollständige Roadmap veröffentlicht, müssen Waffen, Maps, Events, Battle Pass, Zombies und Warzone-Änderungen sofort gegen bestätigte Angaben ersetzt werden."],
       ["Offiziell: PC-Sicherheit", "Bereits in den offiziellen BO7-Season-03-Patchnotes wurde für Season 04 eine PC-Änderung angekündigt: Microsoft Azure Attestation wird für die meisten Playlists Pflicht. TPM und Secure Boot müssen aktiv sein, sonst kann Matchmaking eingeschränkt werden."],
-      ["Warzone Watchlist", "Weiter beobachten: Playlist-Updates, Ranked-Anpassungen, Balance-Änderungen und mögliche Resurgence-/Map-Rotation. Fortune's Keep bleibt bis zur offiziellen Roadmap als Gerücht markiert."],
-      ["Zombies Watchlist", "Die Mid-Season bleibt für Zombies spannend. Nach dem Trailer ist die Story-Spannung höher, aber Map-Name und Features bleiben offen."],
       ["Meta-Auswirkung", "Zum Season-Start müssen WZ META und BO7 META neu geprüft werden: neue Waffen, Buffs/Nerfs, Attachments, Pickrates und Score-Werte können sich direkt am 4. Juni verschieben."],
     ],
     tips: [
-      "Jetzt korrekt: Trailer und Key Art stammen vom offiziellen Call-of-Duty-YouTube-Kanal.",
-      "Bestätigt: Season 4 startet am 4. Juni 2026 für PlayStation, Xbox und PC.",
-      "Noch offen: vollständige Roadmap, neue Waffen, Maps, Events, Battle Pass und Warzone-Playlistdetails.",
-      "Sobald offizielle Roadmap-Key-Art auf CallofDuty.com erscheint, ersetzt die Seite die Trailer-Key-Art durch diese Assets.",
+      "Jetzt korrekt: Key-Art-Bilder stammen aus den offiziellen @CallofDuty-X-Posts.",
+      "Bestätigt: Leon Rook erscheint am 4. Juni in Black Ops 7 und Warzone.",
+      "Bestätigt: Fortune's Keep kommt am 4. Juni zurück.",
+      "Noch offen: vollständige Roadmap, neue Waffen, weitere Maps, Events, Battle Pass und Playlistdetails.",
     ],
   };
 
@@ -96,31 +94,32 @@
       }
       body .season4-watch-panel .season4-keyart-grid {
         display: grid !important;
-        grid-template-columns: 1.35fr 0.85fr !important;
-        gap: 0.75rem !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 0.85rem !important;
         padding: 0.85rem !important;
       }
       body .season4-watch-panel .season4-keyart-card {
         position: relative !important;
         overflow: hidden !important;
-        min-height: 10rem !important;
+        min-height: clamp(17rem, 30vw, 28rem) !important;
         border: 1px solid rgba(255, 255, 255, 0.08) !important;
         border-radius: 8px !important;
         background: #05070a !important;
       }
-      body .season4-watch-panel .season4-keyart-card:first-child {
-        grid-row: span 2 !important;
+      body .season4-watch-panel .season4-keyart-card a {
+        display: block !important;
+        width: 100% !important;
+        height: 100% !important;
+        color: inherit !important;
+        text-decoration: none !important;
       }
       body .season4-watch-panel .season4-keyart-card img {
         display: block !important;
         width: 100% !important;
         height: 100% !important;
-        min-height: 10rem !important;
+        min-height: clamp(17rem, 30vw, 28rem) !important;
         object-fit: cover !important;
         object-position: center center !important;
-      }
-      body .season4-watch-panel .season4-keyart-card:first-child img {
-        min-height: 21rem !important;
       }
       body .season4-watch-panel .season4-keyart-card figcaption {
         position: absolute !important;
@@ -144,8 +143,6 @@
       }
       @media (max-width: 820px) {
         body .season4-watch-panel .season4-keyart-grid { grid-template-columns: 1fr !important; }
-        body .season4-watch-panel .season4-keyart-card:first-child { grid-row: auto !important; }
-        body .season4-watch-panel .season4-keyart-card:first-child img { min-height: 13rem !important; }
       }
     `;
     document.head.appendChild(style);
@@ -160,14 +157,16 @@
     panel.className = "season4-keyart-panel";
     panel.innerHTML = `
       <div class="season4-keyart-heading">
-        <div><span>Offizielle Bilder</span><strong>Season 04 Key Art</strong></div>
-        <span>Call of Duty</span>
+        <div><span>Offizielle Bilder</span><strong>Season 04 X Key Art</strong></div>
+        <span>@CallofDuty</span>
       </div>
       <div class="season4-keyart-grid">
-        ${keyArt.map(([label, src, alt]) => `
+        ${keyArt.map(([label, src, alt, source]) => `
           <figure class="season4-keyart-card">
-            <img src="${html(src)}" alt="${html(alt)}" loading="lazy">
-            <figcaption><strong>${html(label)}</strong><span>Offiziell</span></figcaption>
+            <a href="${html(source)}" target="_blank" rel="noreferrer">
+              <img src="${html(src)}" alt="${html(alt)}" loading="lazy">
+              <figcaption><strong>${html(label)}</strong><span>Offiziell</span></figcaption>
+            </a>
           </figure>`).join("")}
       </div>`;
     const trailer = document.querySelector("#season4TrailerPanel");
@@ -231,7 +230,7 @@
     const image = document.querySelector("#modeInfoImage");
     if (image) {
       image.src = season4Image;
-      image.alt = "Offizielles Thumbnail zum Season 04 Story Cinematic Trailer vom Call-of-Duty-Kanal";
+      image.alt = "Offizielle Call of Duty X-Key-Art zu Season 04 mit Leon Rook";
     }
     const stats = document.querySelector("#modeInfoStats");
     if (stats) stats.innerHTML = season4.stats.map(([label, value]) => `<div><span>${html(label)}</span><strong>${html(value)}</strong></div>`).join("");
