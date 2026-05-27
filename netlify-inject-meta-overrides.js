@@ -27,7 +27,8 @@ const activeScripts = [
   "german-loadout-polish.js?v=20260525-de2",
 ];
 
-const retiredScripts = [
+const scriptNames = [
+  ...activeScripts.map((src) => src.split("?")[0]),
   "season4-preserve",
   "season4-dedupe",
   "season4-tab-fix",
@@ -41,20 +42,15 @@ const retiredScripts = [
   "weapon-image-zoom",
 ];
 
-for (const name of retiredScripts) {
-  html = html.replace(new RegExp(`\\s*<script[^>]+src=["'][^"']*${name}[^"']*["'][^>]*><\\/script>`, "gi"), "");
+function escapeRegExp(value) {
+  return value.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&");
 }
 
-for (const src of activeScripts) {
-  const fileName = src.split("?")[0];
-  const scriptTag = `<script src="${src}" defer></script>`;
-  const pattern = new RegExp(`\\s*<script[^>]+src=["'][^"']*${fileName.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&")}[^"']*["'][^>]*><\\/script>`, "gi");
-
-  if (pattern.test(html)) {
-    html = html.replace(pattern, `\n    ${scriptTag}`);
-  } else {
-    html = html.replace(/\s*<\/body>/i, `\n    ${scriptTag}\n  </body>`);
-  }
+for (const name of scriptNames) {
+  html = html.replace(new RegExp(`\\s*<script[^>]+src=["'][^"']*${escapeRegExp(name)}[^"']*["'][^>]*><\\/script>`, "gi"), "");
 }
+
+const scriptBlock = activeScripts.map((src) => `    <script src="${src}" defer></script>`).join("\n");
+html = html.replace(/\s*<\/body>/i, `\n${scriptBlock}\n  </body>`);
 
 fs.writeFileSync(htmlPath, html);
