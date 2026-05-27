@@ -55,6 +55,15 @@
         background: linear-gradient(145deg, rgba(185, 255, 61, 0.08), rgba(6, 9, 12, 0.96)) !important;
         box-shadow: 0 1.1rem 2.4rem rgba(0, 0, 0, 0.32), 0 0 1.6rem rgba(185, 255, 61, 0.1) !important;
       }
+      body .season4-watch-panel #modeInfoImage {
+        width: 100% !important;
+        height: auto !important;
+        max-height: none !important;
+        aspect-ratio: auto !important;
+        object-fit: contain !important;
+        object-position: center center !important;
+        background: transparent !important;
+      }
       body .season4-watch-panel .season4-trailer-copy,
       body .season4-watch-panel .season4-keyart-heading {
         display: flex !important;
@@ -95,47 +104,45 @@
       body .season4-watch-panel .season4-keyart-grid {
         display: grid !important;
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        align-items: start !important;
         gap: 0.85rem !important;
         padding: 0.85rem !important;
       }
       body .season4-watch-panel .season4-keyart-card {
         position: relative !important;
         overflow: hidden !important;
-        min-height: clamp(17rem, 30vw, 28rem) !important;
+        min-height: 0 !important;
         border: 1px solid rgba(255, 255, 255, 0.08) !important;
         border-radius: 8px !important;
-        background: radial-gradient(circle at 50% 50%, rgba(185, 255, 61, 0.08), #05070a 64%) !important;
+        background: rgba(5, 7, 10, 0.72) !important;
       }
       body .season4-watch-panel .season4-keyart-card a {
         display: block !important;
         width: 100% !important;
-        height: 100% !important;
+        height: auto !important;
         color: inherit !important;
         text-decoration: none !important;
       }
       body .season4-watch-panel .season4-keyart-card img {
         display: block !important;
         width: 100% !important;
-        height: 100% !important;
-        min-height: clamp(17rem, 30vw, 28rem) !important;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        aspect-ratio: auto !important;
         object-fit: contain !important;
         object-position: center center !important;
-        background: #05070a !important;
+        background: transparent !important;
       }
       body .season4-watch-panel .season4-keyart-card figcaption {
-        position: absolute !important;
-        left: 0.75rem !important;
-        right: 0.75rem !important;
-        bottom: 0.75rem !important;
         display: flex !important;
         align-items: center !important;
         justify-content: space-between !important;
         gap: 0.75rem !important;
-        padding: 0.55rem 0.65rem !important;
-        border: 1px solid rgba(185, 255, 61, 0.22) !important;
-        border-radius: 8px !important;
-        background: rgba(3, 6, 8, 0.78) !important;
-        backdrop-filter: blur(8px) !important;
+        margin: 0 !important;
+        padding: 0.65rem 0.75rem !important;
+        border-top: 1px solid rgba(185, 255, 61, 0.22) !important;
+        background: rgba(3, 6, 8, 0.9) !important;
       }
       body .season4-watch-panel .season4-keyart-card strong {
         color: #f6ffe2 !important;
@@ -232,9 +239,13 @@
     if (image) {
       image.src = season4Image;
       image.alt = "Offizielle Call of Duty X-Key-Art zu Season 04 mit Leon Rook";
+      image.style.width = "100%";
+      image.style.height = "auto";
+      image.style.maxHeight = "none";
+      image.style.aspectRatio = "auto";
       image.style.objectFit = "contain";
       image.style.objectPosition = "center center";
-      image.style.backgroundColor = "#05070a";
+      image.style.background = "transparent";
     }
     const stats = document.querySelector("#modeInfoStats");
     if (stats) stats.innerHTML = season4.stats.map(([label, value]) => `<div><span>${html(label)}</span><strong>${html(value)}</strong></div>`).join("");
