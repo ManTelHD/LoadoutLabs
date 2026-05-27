@@ -11,6 +11,7 @@ const activeScripts = [
   "pickrate-bars.js?v=20260523-pickrate1",
   "mw4-update.js?v=20260527-mw4-prose1",
   "mw4-layout-cleanup.js?v=20260527-mw4-no-hero1",
+  "mw4-official-community.js?v=20260527-mw4-iw-community1",
   "mw4-image-override.js?v=20260524-mw4-no-note1",
   "season4-polish.js?v=20260524-season4-stable1",
   "season4-header-fix.js?v=20260527-s4-weapons-lite1",
