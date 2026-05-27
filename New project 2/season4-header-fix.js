@@ -14,7 +14,8 @@
       }
 
       body .season4-watch-panel .mode-info-side,
-      body .season4-watch-panel .mode-update-box {
+      body .season4-watch-panel .mode-update-box,
+      body .season4-watch-panel #modeInfoCards {
         display: none !important;
       }
 
@@ -31,6 +32,69 @@
         font-size: 0.72rem !important;
         font-weight: 800 !important;
         line-height: 1 !important;
+      }
+
+      body .season4-watch-panel .season4-prose {
+        margin-top: 1rem !important;
+        padding: clamp(1.05rem, 1.8vw, 1.45rem) !important;
+        border: 1px solid rgba(185, 255, 61, 0.22) !important;
+        border-radius: 8px !important;
+        background:
+          radial-gradient(circle at 12% 0%, rgba(185, 255, 61, 0.1), transparent 18rem),
+          linear-gradient(145deg, rgba(12, 18, 16, 0.94), rgba(5, 8, 11, 0.96)) !important;
+        color: rgba(232, 240, 226, 0.9) !important;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 1rem 2rem rgba(0, 0, 0, 0.26) !important;
+      }
+
+      body .season4-watch-panel .season4-prose h3 {
+        margin: 0 0 0.85rem !important;
+        color: #dfff91 !important;
+        font-family: Rajdhani, Inter, sans-serif !important;
+        font-size: clamp(1.55rem, 2.1vw, 2.1rem) !important;
+        line-height: 1 !important;
+      }
+
+      body .season4-watch-panel .season4-prose h4 {
+        margin: 1.15rem 0 0.45rem !important;
+        color: #f6ffe2 !important;
+        font-family: Rajdhani, Inter, sans-serif !important;
+        font-size: clamp(1.1rem, 1.35vw, 1.35rem) !important;
+        line-height: 1.05 !important;
+      }
+
+      body .season4-watch-panel .season4-prose p {
+        margin: 0 0 0.75rem !important;
+        max-width: 86ch !important;
+        color: rgba(232, 240, 226, 0.88) !important;
+        font-size: 1rem !important;
+        line-height: 1.62 !important;
+      }
+
+      body .season4-watch-panel .season4-prose ul {
+        display: grid !important;
+        gap: 0.45rem !important;
+        margin: 0.35rem 0 0.9rem !important;
+        padding: 0 !important;
+        list-style: none !important;
+      }
+
+      body .season4-watch-panel .season4-prose li {
+        position: relative !important;
+        padding-left: 1.1rem !important;
+        color: rgba(232, 240, 226, 0.9) !important;
+        line-height: 1.48 !important;
+      }
+
+      body .season4-watch-panel .season4-prose li::before {
+        content: "" !important;
+        position: absolute !important;
+        left: 0 !important;
+        top: 0.62em !important;
+        width: 0.38rem !important;
+        height: 0.38rem !important;
+        border-radius: 999px !important;
+        background: #b9ff3d !important;
+        box-shadow: 0 0 0.65rem rgba(185, 255, 61, 0.32) !important;
       }
 
       body .season4-watch-panel .season4-keyart-heading {
@@ -84,6 +148,37 @@
     document.head.appendChild(style);
   }
 
+  function renderProse() {
+    const body = document.querySelector(".season4-watch-panel .mode-info-body");
+    if (!body || body.querySelector(".season4-prose")) return;
+    const cards = body.querySelector("#modeInfoCards");
+    const prose = document.createElement("section");
+    prose.className = "season4-prose";
+    prose.innerHTML = `
+      <h3>Was zu Season 4 aktuell wichtig ist</h3>
+      <p>Season 4 ist inzwischen deutlich konkreter: Der offizielle Call-of-Duty-YouTube-Kanal hat den Story-Cinematic veröffentlicht, und die offiziellen @CallofDuty-X-Posts zeigen die aktuellen Key-Art-Motive zu Leon Rook und Fortune's Keep. Damit ist klar, dass der Season-4-Fokus auf Black Ops 7 und Warzone liegt und am 4. Juni 2026 sichtbar in Richtung neuer Inhalte wechselt.</p>
+      <p>Leon Rook wird offiziell als tödlich augmentierter Guild-Soldat geführt. Parallel wurde Fortune's Keep für den 4. Juni bestätigt, was die Warzone-Seite der Season besonders wichtig macht. Der große vollständige Season-4-Blogpost beziehungsweise die Roadmap ist weiterhin der Punkt, auf den dieser Bereich als nächstes reagieren muss.</p>
+      <h4>Bestätigt</h4>
+      <ul>
+        <li>Season 4 startet am Donnerstag, 4. Juni 2026.</li>
+        <li>Der Story-Cinematic stammt vom offiziellen Call-of-Duty-YouTube-Kanal.</li>
+        <li>Leon Rook und Fortune's Keep wurden über offizielle @CallofDuty-X-Posts gezeigt.</li>
+        <li>Fortune's Keep ist für Warzone am 4. Juni eingeordnet.</li>
+      </ul>
+      <h4>Noch offen</h4>
+      <p>Der vollständige Overview-Blogpost muss noch abgewartet werden. Erst daraus sollten finale Details zu neuen Waffen, Maps, Events, Battle Pass, Zombies-Inhalten, Playlist-Änderungen und Balance-Anpassungen übernommen werden.</p>
+      <h4>Auswirkung auf die Meta</h4>
+      <p>Zum Season-Start müssen WZ META und BO7 META neu geprüft werden. Neue Waffen, Buffs, Nerfs, Attachments und Pickrates können sich direkt am 4. Juni verschieben. Sobald die offizielle Roadmap live ist, sollte dieser Tab zuerst bei Waffen, Warzone-Änderungen und Balance-Punkten aktualisiert werden.</p>
+    `;
+    if (cards) {
+      cards.hidden = true;
+      cards.style.display = "none";
+      cards.insertAdjacentElement("afterend", prose);
+    } else {
+      body.appendChild(prose);
+    }
+  }
+
   function polishSeason4() {
     installStyle();
     const side = document.querySelector(".season4-watch-panel .mode-info-side");
@@ -96,6 +191,11 @@
       updateBox.hidden = true;
       updateBox.style.display = "none";
     }
+    const cards = document.querySelector(".season4-watch-panel #modeInfoCards");
+    if (cards) {
+      cards.hidden = true;
+      cards.style.display = "none";
+    }
     const heroText = document.querySelector(".season4-watch-panel .mode-info-hero > div");
     if (heroText && !heroText.querySelector(".season4-updated-pill")) {
       const pill = document.createElement("span");
@@ -103,6 +203,7 @@
       pill.textContent = "Aktualisiert: 27. Mai 2026";
       heroText.appendChild(pill);
     }
+    renderProse();
     const heading = document.querySelector(".season4-watch-panel .season4-keyart-heading");
     if (!heading) return;
     const label = heading.querySelector("div > span");
