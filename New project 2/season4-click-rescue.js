@@ -46,6 +46,9 @@
     const style = document.createElement("style");
     style.id = "season4-trailer-embed-style";
     style.textContent = `
+      body .season4-watch-panel #modeInfoTabs {
+        display: none !important;
+      }
       body .season4-watch-panel .season4-trailer-panel,
       body .season4-watch-panel .season4-keyart-panel {
         margin: 0 0 1rem !important;
@@ -214,6 +217,11 @@
     document.querySelectorAll(".secondary-mode-switch .mode-button").forEach((item) => item.classList.remove("active"));
     const contentTabs = document.querySelector("#contentTabs");
     if (contentTabs) contentTabs.hidden = true;
+    const modeInfoTabs = document.querySelector("#modeInfoTabs");
+    if (modeInfoTabs) {
+      modeInfoTabs.hidden = true;
+      modeInfoTabs.style.display = "none";
+    }
     document.querySelectorAll(".tab-panel").forEach((panel) => {
       const active = panel.dataset.panel === "mode-info";
       panel.hidden = !active;
