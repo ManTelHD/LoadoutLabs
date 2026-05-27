@@ -29,9 +29,9 @@
         padding: clamp(1.05rem, 1.8vw, 1.45rem) !important;
         border: 1px solid rgba(185, 255, 61, 0.22) !important;
         border-radius: 8px !important;
-        background: radial-gradient(circle at 12% 0%, rgba(185, 255, 61, 0.1), transparent 18rem), linear-gradient(145deg, rgba(12, 18, 16, 0.94), rgba(5, 8, 11, 0.96)) !important;
+        background: linear-gradient(145deg, rgba(12, 18, 16, 0.94), rgba(5, 8, 11, 0.96)) !important;
         color: rgba(232, 240, 226, 0.9) !important;
-        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 1rem 2rem rgba(0, 0, 0, 0.26) !important;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 0.7rem 1.5rem rgba(0, 0, 0, 0.22) !important;
       }
       body .season4-watch-panel .season4-prose h3 {
         margin: 0 0 0.85rem !important;
@@ -76,7 +76,6 @@
         height: 0.38rem !important;
         border-radius: 999px !important;
         background: #b9ff3d !important;
-        box-shadow: 0 0 0.65rem rgba(185, 255, 61, 0.32) !important;
       }
       body .season4-watch-panel .season4-keyart-heading {
         align-items: flex-start !important;
@@ -201,23 +200,14 @@
   function schedulePolish() {
     window.setTimeout(polishSeason4, 40);
     window.setTimeout(polishSeason4, 180);
-    window.setTimeout(polishSeason4, 500);
   }
 
   function start() {
     installStyle();
     schedulePolish();
-    let tries = 0;
-    const timer = window.setInterval(() => {
-      tries += 1;
-      const done = polishSeason4();
-      if (done || tries >= 24) window.clearInterval(timer);
-    }, 250);
   }
 
   document.addEventListener("pointerdown", schedulePolish, true);
-  document.addEventListener("mousedown", schedulePolish, true);
-  document.addEventListener("click", schedulePolish, true);
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start, { once: true });
   else start();
 })();
