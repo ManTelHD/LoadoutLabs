@@ -13,8 +13,24 @@
         max-width: none !important;
       }
 
-      body .season4-watch-panel .mode-info-side {
+      body .season4-watch-panel .mode-info-side,
+      body .season4-watch-panel .mode-update-box {
         display: none !important;
+      }
+
+      body .season4-watch-panel .season4-updated-pill {
+        display: inline-flex !important;
+        align-items: center !important;
+        width: max-content !important;
+        margin-top: 0.65rem !important;
+        padding: 0.3rem 0.55rem !important;
+        border: 1px solid rgba(185, 255, 61, 0.28) !important;
+        border-radius: 999px !important;
+        background: rgba(5, 8, 11, 0.72) !important;
+        color: rgba(246, 255, 226, 0.78) !important;
+        font-size: 0.72rem !important;
+        font-weight: 800 !important;
+        line-height: 1 !important;
       }
 
       body .season4-watch-panel .season4-keyart-heading {
@@ -74,6 +90,18 @@
     if (side) {
       side.hidden = true;
       side.style.display = "none";
+    }
+    const updateBox = document.querySelector(".season4-watch-panel .mode-update-box");
+    if (updateBox) {
+      updateBox.hidden = true;
+      updateBox.style.display = "none";
+    }
+    const heroText = document.querySelector(".season4-watch-panel .mode-info-hero > div");
+    if (heroText && !heroText.querySelector(".season4-updated-pill")) {
+      const pill = document.createElement("span");
+      pill.className = "season4-updated-pill";
+      pill.textContent = "Aktualisiert: 27. Mai 2026";
+      heroText.appendChild(pill);
     }
     const heading = document.querySelector(".season4-watch-panel .season4-keyart-heading");
     if (!heading) return;
