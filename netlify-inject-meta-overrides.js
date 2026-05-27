@@ -12,7 +12,7 @@ const activeScripts = [
   "mw4-update.js?v=20260523-mw4-keyart",
   "mw4-image-override.js?v=20260524-mw4-no-note1",
   "season4-polish.js?v=20260524-season4-stable1",
-  "season4-header-fix.js?v=20260527-s4-weapons1",
+  "season4-header-fix.js?v=20260527-s4-weapons-lite1",
   "season4-click-rescue.js?v=20260527-s4-no-mode-tabs1",
   "hero-polish.js?v=20260524-header-refine1",
   "site-interaction-rescue.js?v=20260524-interaction1",
@@ -23,7 +23,7 @@ const activeScripts = [
   "umlaut-polish.js?v=20260524-umlauts6",
   "loadout-details-polish.js?v=20260524-details-lite2",
   "tier-class-polish.js?v=20260524-tier-class1",
-  "weapon-image-static.js?v=20260525-static6",
+  "weapon-image-static.js?v=20260527-static-lite1",
   "german-loadout-polish.js?v=20260525-de2",
 ];
 
