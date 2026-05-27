@@ -4,21 +4,11 @@
     const style = document.createElement("style");
     style.id = "season4-header-fix-style";
     style.textContent = `
-      body .season4-watch-panel .mode-info-layout {
-        display: block !important;
-      }
-
-      body .season4-watch-panel .mode-info-main {
-        width: 100% !important;
-        max-width: none !important;
-      }
-
+      body .season4-watch-panel .mode-info-layout { display: block !important; }
+      body .season4-watch-panel .mode-info-main { width: 100% !important; max-width: none !important; }
       body .season4-watch-panel .mode-info-side,
       body .season4-watch-panel .mode-update-box,
-      body .season4-watch-panel #modeInfoCards {
-        display: none !important;
-      }
-
+      body .season4-watch-panel #modeInfoCards { display: none !important; }
       body .season4-watch-panel .season4-updated-pill {
         display: inline-flex !important;
         align-items: center !important;
@@ -33,7 +23,6 @@
         font-weight: 800 !important;
         line-height: 1 !important;
       }
-
       body .season4-watch-panel .season4-prose {
         display: block !important;
         margin-top: 1rem !important;
@@ -44,7 +33,6 @@
         color: rgba(232, 240, 226, 0.9) !important;
         box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 1rem 2rem rgba(0, 0, 0, 0.26) !important;
       }
-
       body .season4-watch-panel .season4-prose h3 {
         margin: 0 0 0.85rem !important;
         color: #dfff91 !important;
@@ -52,7 +40,6 @@
         font-size: clamp(1.55rem, 2.1vw, 2.1rem) !important;
         line-height: 1 !important;
       }
-
       body .season4-watch-panel .season4-prose h4 {
         margin: 1.15rem 0 0.45rem !important;
         color: #f6ffe2 !important;
@@ -60,7 +47,6 @@
         font-size: clamp(1.1rem, 1.35vw, 1.35rem) !important;
         line-height: 1.05 !important;
       }
-
       body .season4-watch-panel .season4-prose p {
         margin: 0 0 0.75rem !important;
         max-width: 86ch !important;
@@ -68,7 +54,6 @@
         font-size: 1rem !important;
         line-height: 1.62 !important;
       }
-
       body .season4-watch-panel .season4-prose ul {
         display: grid !important;
         gap: 0.45rem !important;
@@ -76,14 +61,12 @@
         padding: 0 !important;
         list-style: none !important;
       }
-
       body .season4-watch-panel .season4-prose li {
         position: relative !important;
         padding-left: 1.1rem !important;
         color: rgba(232, 240, 226, 0.9) !important;
         line-height: 1.48 !important;
       }
-
       body .season4-watch-panel .season4-prose li::before {
         content: "" !important;
         position: absolute !important;
@@ -95,7 +78,6 @@
         background: #b9ff3d !important;
         box-shadow: 0 0 0.65rem rgba(185, 255, 61, 0.32) !important;
       }
-
       body .season4-watch-panel .season4-keyart-heading {
         align-items: flex-start !important;
         justify-content: space-between !important;
@@ -103,24 +85,17 @@
         padding: 1.05rem 1.15rem 0.95rem !important;
         min-height: auto !important;
       }
-
       body .season4-watch-panel .season4-keyart-heading > div {
         display: grid !important;
         gap: 0.28rem !important;
         min-width: 0 !important;
       }
-
-      body .season4-watch-panel .season4-keyart-heading span {
-        white-space: nowrap !important;
-        line-height: 1 !important;
-      }
-
+      body .season4-watch-panel .season4-keyart-heading span { white-space: nowrap !important; line-height: 1 !important; }
       body .season4-watch-panel .season4-keyart-heading > div > span {
         display: block !important;
         font-size: 0.7rem !important;
         letter-spacing: 0 !important;
       }
-
       body .season4-watch-panel .season4-keyart-heading strong {
         display: block !important;
         font-size: clamp(1.45rem, 2.2vw, 2rem) !important;
@@ -128,14 +103,12 @@
         white-space: normal !important;
         overflow-wrap: anywhere !important;
       }
-
       body .season4-watch-panel .season4-keyart-heading > span:last-child {
         flex: 0 0 auto !important;
         align-self: flex-start !important;
         padding-top: 0.16rem !important;
         color: #b9ff3d !important;
       }
-
       @media (max-width: 640px) {
         body .season4-watch-panel .season4-keyart-heading {
           display: grid !important;
@@ -233,6 +206,8 @@
     }, 250);
   }
 
+  document.addEventListener("pointerdown", schedulePolish, true);
+  document.addEventListener("mousedown", schedulePolish, true);
   document.addEventListener("click", schedulePolish, true);
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start, { once: true });
   else start();
