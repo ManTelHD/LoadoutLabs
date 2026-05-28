@@ -1,7 +1,4 @@
 (function () {
-  const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)");
-  const duration = () => (reduceMotion?.matches ? 0 : 120);
-
   function injectStyle() {
     if (document.querySelector("#card-toggle-performance-style")) return;
     const style = document.createElement("style");
@@ -16,10 +13,12 @@
       body #loadoutGrid .loadout-card .meta-card-details,
       body #loadoutGrid .loadout-card .card-details {
         contain: layout paint !important;
+        transition: none !important;
+        animation: none !important;
       }
 
       body #loadoutGrid .loadout-card.expand-animating {
-        z-index: 3 !important;
+        z-index: auto !important;
       }
     `;
     document.head.append(style);
@@ -44,70 +43,19 @@
     if (!details) return;
 
     details.getAnimations?.().forEach((animation) => animation.cancel());
-    card.classList.remove("details-flash");
-    card.classList.add("expand-animating");
+    card.classList.remove("details-flash", "expand-animating");
+    card.classList.toggle("expanded", open);
     setButtonState(card, open);
 
-    const ms = duration();
-    if (!ms) {
-      card.classList.toggle("expanded", open);
-      details.style.height = open ? "auto" : "0px";
-      details.style.opacity = open ? "1" : "0";
-      card.classList.remove("expand-animating");
-      return;
-    }
-
-    if (open) {
-      card.classList.add("expanded");
-      details.style.display = "block";
-      details.style.overflow = "hidden";
-      details.style.height = "0px";
-      details.style.opacity = "0";
-
-      requestAnimationFrame(() => {
-        const targetHeight = `${details.scrollHeight}px`;
-        const animation = details.animate(
-          [
-            { height: "0px", opacity: 0 },
-            { height: targetHeight, opacity: 1 },
-          ],
-          { duration: ms, easing: "cubic-bezier(.2,.8,.2,1)", fill: "both" },
-        );
-        animation.onfinish = () => {
-          details.style.height = "auto";
-          details.style.opacity = "1";
-          details.style.overflow = "visible";
-          card.classList.remove("expand-animating");
-        };
-      });
-      return;
-    }
-
-    const startHeight = `${details.scrollHeight}px`;
-    details.style.overflow = "hidden";
-    details.style.height = startHeight;
-    details.style.opacity = "1";
-
-    requestAnimationFrame(() => {
-      const animation = details.animate(
-        [
-          { height: startHeight, opacity: 1 },
-          { height: "0px", opacity: 0 },
-        ],
-        { duration: 95, easing: "cubic-bezier(.4,0,.2,1)", fill: "both" },
-      );
-      animation.onfinish = () => {
-        card.classList.remove("expanded", "expand-animating");
-        details.style.height = "0px";
-        details.style.opacity = "0";
-        details.style.overflow = "hidden";
-      };
-    });
+    details.style.display = open ? "block" : "";
+    details.style.height = "";
+    details.style.opacity = "";
+    details.style.overflow = "";
   }
 
   function bind() {
-    if (document.documentElement.dataset.cardTogglePerformanceReady === "true") return;
-    document.documentElement.dataset.cardTogglePerformanceReady = "true";
+    if (document.documentElement.dataset.cardTogglePerformanceReady === "instant") return;
+    document.documentElement.dataset.cardTogglePerformanceReady = "instant";
     document.addEventListener("click", (event) => {
       const card = event.target.closest("#loadoutGrid .loadout-card");
       if (!card || ignoredClick(event, card)) return;
