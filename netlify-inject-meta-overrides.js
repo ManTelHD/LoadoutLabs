@@ -30,7 +30,7 @@ const activeScripts = [
   "weapon-image-static.js?v=20260527-static-lite1",
   "german-loadout-polish.js?v=20260525-de2",
   "extra-names-polish.js?v=20260528-extra-sets4",
-  "performance-design-polish.js?v=20260528-perf-design1",
+  "performance-design-polish.js?v=20260528-smooth1",
 ];
 
 const scriptNames = [
