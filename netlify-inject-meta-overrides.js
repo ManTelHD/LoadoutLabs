@@ -7,7 +7,7 @@ let html = fs.readFileSync(htmlPath, "utf8");
 const activeScripts = [
   "meta-builds.js?v=20260523-score2",
   "score-cleanup.js?v=20260523-score4",
-  "card-toggle-performance.js?v=20260524-toggle-perf2",
+  "card-toggle-performance.js?v=20260528-instant1",
   "pickrate-bars.js?v=20260523-pickrate1",
   "mw4-update.js?v=20260527-mw4-prose1",
   "mw4-layout-cleanup.js?v=20260527-mw4-no-hero1",
@@ -29,7 +29,7 @@ const activeScripts = [
   "tier-class-polish.js?v=20260524-tier-class1",
   "weapon-image-static.js?v=20260527-static-lite1",
   "german-loadout-polish.js?v=20260525-de2",
-  "extra-names-polish.js?v=20260528-extra-sets4",
+  "extra-names-polish.js?v=20260528-extra-lite1",
   "performance-design-polish.js?v=20260528-smooth1",
 ];
 
