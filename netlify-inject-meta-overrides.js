@@ -29,7 +29,7 @@ const activeScripts = [
   "tier-class-polish.js?v=20260524-tier-class1",
   "weapon-image-static.js?v=20260527-static-lite1",
   "german-loadout-polish.js?v=20260525-de2",
-  "extra-names-polish.js?v=20260528-extra-names1",
+  "extra-names-polish.js?v=20260528-extra-sets1",
 ];
 
 const scriptNames = [
