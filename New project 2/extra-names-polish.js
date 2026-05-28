@@ -161,37 +161,32 @@
   }
 
   let scheduled = false;
-  function schedulePolish() {
+  function schedulePolish(delay = 0) {
     if (scheduled) return;
     scheduled = true;
-    window.requestAnimationFrame(() => {
-      scheduled = false;
-      polishExtras();
-    });
+    window.setTimeout(() => {
+      window.requestAnimationFrame(() => {
+        scheduled = false;
+        polishExtras();
+      });
+    }, delay);
   }
 
   function watchGrid() {
     const grid = document.querySelector("#loadoutGrid");
-    if (!grid || grid.dataset.extraNamesPolishWatched === "true") return;
-    grid.dataset.extraNamesPolishWatched = "true";
-    new MutationObserver(schedulePolish).observe(grid, { childList: true, subtree: true });
+    if (!grid || grid.dataset.extraNamesPolishWatched === "lite") return;
+    grid.dataset.extraNamesPolishWatched = "lite";
+    new MutationObserver(() => schedulePolish(120)).observe(grid, { childList: true });
   }
 
   function init() {
     polishExtras();
     watchGrid();
-    [80, 180, 420, 900, 1800].forEach((delay) => window.setTimeout(() => {
+    window.setTimeout(() => {
       polishExtras();
       watchGrid();
-    }, delay));
+    }, 700);
   }
-
-  document.addEventListener("click", (event) => {
-    if (event.target.closest("#loadoutGrid, .mode-button, .content-tab, .filter-button")) {
-      window.setTimeout(polishExtras, 80);
-      window.setTimeout(polishExtras, 240);
-    }
-  }, true);
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, { once: true });
   else init();
