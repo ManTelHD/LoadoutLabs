@@ -7,13 +7,28 @@
     utility: ["Bergsteiger", "Sprinter", "Überlebender"],
   };
 
+  const closeRangeKeys = new Set([
+    "kogot-7", "carbon-57", "vst", "dravec-45", "ryden-45k", "sturmwolf-45",
+    "mpc-25", "rev-46", "razor-9mm", "rk-9", "1911", "coda-9", "velox-57", "jager-45",
+  ]);
+
+  const sniperKeys = new Set([
+    "m8a1", "hawker-hx", "vs-recon", "strider-300", "xr-3-ion", "shadow-sk", "m34-novaline",
+  ]);
+
+  const supportKeys = new Set(["mk35-isr-support"]);
+
+  const utilityKeys = new Set([
+    "arc-m1", "flatline-mkii", "aarow-109", "knife-bo7", "ballistic-knife",
+    "nx-ravager", "h311-saw", "gdl-havoc", "siren", "katana",
+  ]);
+
   const nameMap = new Map([
     ["Scavenger", "Plünderer"],
     ["Survivor", "Überlebender"],
     ["Mountaineer", "Bergsteiger"],
     ["Fast Hands", "Fingerfertigkeit"],
     ["Sleight of Hand", "Fingerfertigkeit"],
-    ["Sprinter", "Sprinter"],
     ["Alertness", "Wachsamkeit"],
     ["Resolute", "Entschlossen"],
     ["Tracker", "Fährtenleser"],
@@ -33,6 +48,16 @@
     "Rauchgranate",
   ];
 
+  function slug(value) {
+    return String(value || "")
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/mk\./g, "mk")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+  }
+
   function escapeRegExp(value) {
     return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   }
@@ -49,13 +74,22 @@
     return bannedExtras.some((term) => String(value || "").includes(term));
   }
 
+  function getCardKey(card) {
+    return slug(card?.dataset?.loadoutCard || card?.querySelector(".weapon-name")?.textContent || "");
+  }
+
   function getCardRole(card) {
-    const text = String(card?.innerText || "").toLowerCase();
-    const key = String(card?.dataset?.loadoutCard || "").toLowerCase();
-    if (text.includes("sniper-unterstützung") || text.includes("sniper support") || key.includes("support")) return "support";
+    const key = getCardKey(card);
+    if (supportKeys.has(key)) return "support";
+    if (sniperKeys.has(key)) return "sniper";
+    if (closeRangeKeys.has(key)) return "close";
+    if (utilityKeys.has(key)) return "utility";
+
+    const text = slug(card?.textContent || "");
+    if (text.includes("sniper-unterstutzung") || text.includes("sniper-support")) return "support";
     if (text.includes("sniper")) return "sniper";
-    if (text.includes("kurzstrecke") || text.includes("close range") || text.includes("0-")) return "close";
-    if (text.includes("werfer") || text.includes("nahkampf") || text.includes("keine waffenaufsätze")) return "utility";
+    if (text.includes("kurzstrecke") || text.includes("close-range")) return "close";
+    if (text.includes("werfer") || text.includes("nahkampf") || text.includes("keine-waffenaufsatze")) return "utility";
     return "long";
   }
 
@@ -63,12 +97,13 @@
     const list = card.querySelector(".perk-list");
     if (!list) return;
     const items = Array.from(list.querySelectorAll("li"));
-    if (!items.length) return;
     const codeItem = items.find((item) => /^(Code|Klassen-Code):/i.test(item.textContent.trim()));
-    const signature = `${role}|legacy|${extras.join("|")}|${codeItem?.textContent || ""}`;
+    const codeText = codeItem?.textContent.replace(/^Code:/i, "Klassen-Code:") || "";
+    const signature = `${role}|legacy|${extras.join("|")}|${codeText}`;
     if (list.dataset.extraNamesSignature === signature) return;
+
     const nextItems = [];
-    if (codeItem) nextItems.push(codeItem.textContent.replace(/^Code:/i, "Klassen-Code:"));
+    if (codeText) nextItems.push(codeText);
     extras.forEach((extra, index) => nextItems.push(`Extra ${index + 1}: ${extra}`));
     list.innerHTML = nextItems.map((item) => `<li>${item}</li>`).join("");
     list.dataset.extraNamesSignature = signature;
@@ -133,7 +168,7 @@
     const grid = document.querySelector("#loadoutGrid");
     if (!grid || grid.dataset.extraNamesPolishWatched === "true") return;
     grid.dataset.extraNamesPolishWatched = "true";
-    new MutationObserver(schedulePolish).observe(grid, { childList: true, subtree: true, characterData: true });
+    new MutationObserver(schedulePolish).observe(grid, { childList: true, subtree: true });
   }
 
   function init() {
