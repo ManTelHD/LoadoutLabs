@@ -59,23 +59,39 @@
     return "long";
   }
 
-  function rewritePerkList(card) {
+  function rewriteLegacyPerkList(card, extras, role) {
     const list = card.querySelector(".perk-list");
     if (!list) return;
     const items = Array.from(list.querySelectorAll("li"));
     if (!items.length) return;
-
     const codeItem = items.find((item) => /^(Code|Klassen-Code):/i.test(item.textContent.trim()));
-    const role = getCardRole(card);
-    const extras = roleExtraSets[role] || roleExtraSets.long;
-    const signature = `${role}|${extras.join("|")}|${codeItem?.textContent || ""}`;
+    const signature = `${role}|legacy|${extras.join("|")}|${codeItem?.textContent || ""}`;
     if (list.dataset.extraNamesSignature === signature) return;
-
     const nextItems = [];
     if (codeItem) nextItems.push(codeItem.textContent.replace(/^Code:/i, "Klassen-Code:"));
     extras.forEach((extra, index) => nextItems.push(`Extra ${index + 1}: ${extra}`));
     list.innerHTML = nextItems.map((item) => `<li>${item}</li>`).join("");
     list.dataset.extraNamesSignature = signature;
+  }
+
+  function rewritePremiumPerkList(card, extras, role) {
+    const list = card.querySelector(".premium-perk-list");
+    if (!list) return;
+    const signature = `${role}|premium|${extras.join("|")}`;
+    if (list.dataset.extraNamesSignature === signature) return;
+    list.innerHTML = extras.map((extra, index) => `
+      <li class="perk-chip">
+        <span>${index + 1}</span>
+        <strong>${extra}</strong>
+      </li>`).join("");
+    list.dataset.extraNamesSignature = signature;
+  }
+
+  function rewritePerkLists(card) {
+    const role = getCardRole(card);
+    const extras = roleExtraSets[role] || roleExtraSets.long;
+    rewriteLegacyPerkList(card, extras, role);
+    rewritePremiumPerkList(card, extras, role);
   }
 
   function polishNode(node) {
@@ -86,9 +102,10 @@
   }
 
   function polishExtras() {
-    document.querySelectorAll("#loadoutGrid .loadout-card").forEach(rewritePerkList);
+    document.querySelectorAll("#loadoutGrid .loadout-card").forEach(rewritePerkLists);
     document.querySelectorAll([
       "#loadoutGrid .perk-list li",
+      "#loadoutGrid .premium-perk-list li",
       "#loadoutGrid .perk-chip strong",
       "#loadoutGrid .loadout-perks li",
       "#loadoutGrid [data-extra]",
@@ -97,7 +114,7 @@
       polishNode(node);
       if (isBannedExtra(node.textContent)) {
         const card = node.closest(".loadout-card");
-        if (card) rewritePerkList(card);
+        if (card) rewritePerkLists(card);
       }
     });
   }
