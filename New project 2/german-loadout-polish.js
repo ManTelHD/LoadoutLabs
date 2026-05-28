@@ -2,17 +2,15 @@
   const directMap = new Map([
     ["BUILD CODE", "KLASSEN-CODE"],
     ["Build Code", "Klassen-Code"],
-    ["EXTRAS", "EXTRAS"],
     ["MOD", "FEUERMODIFIKATION"],
     ["GRIFF", "HINTERER GRIFF"],
     ["Grip", "Griff"],
     ["Scavenger", "Plünderer"],
-    ["Quick Fix", "Schnelle Heilung"],
-    ["Survivor", "Überlebenskünstler"],
+    ["Survivor", "Überlebender"],
     ["Mountaineer", "Bergsteiger"],
-    ["Stim Shot", "Stim-Injektion"],
-    ["Smoke Grenade", "Rauchgranate"],
-    ["Fast Hands", "Flinke Hände"],
+    ["Field Medic", "Feldsanitäter"],
+    ["Ghost", "Geist"],
+    ["Hunter", "Jäger"],
     ["Long Range", "Langstrecke"],
     ["Close Range", "Kurzstrecke"],
     ["Sniper Support", "Sniper-Unterstützung"],
@@ -36,7 +34,6 @@
     ["Stock", "Schaft"],
     ["Fire Mods", "Feuermodifikation"],
     ["Code", "Klassen-Code"],
-    ["Pair", "Zweitwaffe"],
   ]);
 
   const phraseMap = new Map([
@@ -83,9 +80,7 @@
 
   function replaceTerms(text, map) {
     let result = String(text || "");
-    for (const [from, to] of map) {
-      result = result.replace(new RegExp(`\\b${escapeRegExp(from)}\\b`, "g"), to);
-    }
+    for (const [from, to] of map) result = result.replace(new RegExp(`\\b${escapeRegExp(from)}\\b`, "g"), to);
     return result;
   }
 
@@ -94,11 +89,7 @@
       .replace(/Aufsaetze/g, "Aufsätze")
       .replace(/geprueft/g, "geprüft")
       .replace(/verfuegbar/g, "verfügbar");
-
-    for (const [from, to] of prefixMap) {
-      result = result.replace(new RegExp(`^${escapeRegExp(from)}:\\s*`, "i"), `${to}: `);
-    }
-
+    for (const [from, to] of prefixMap) result = result.replace(new RegExp(`^${escapeRegExp(from)}:\\s*`, "i"), `${to}: `);
     result = replaceTerms(result, directMap);
     result = replaceTerms(result, phraseMap);
     return result;
@@ -111,8 +102,8 @@
     if (next !== current) node.textContent = next;
   }
 
-  function polish() {
-    document.querySelectorAll([
+  function polish(root = document) {
+    root.querySelectorAll?.([
       "#loadoutGrid .attachment-list li",
       "#loadoutGrid .perk-list li",
       "#loadoutGrid .range",
@@ -132,35 +123,28 @@
   }
 
   let scheduled = false;
-  function schedulePolish() {
+  function schedulePolish(root = document) {
     if (scheduled) return;
     scheduled = true;
     window.requestAnimationFrame(() => {
       scheduled = false;
-      polish();
+      polish(root);
     });
   }
 
   function watch() {
     const grid = document.querySelector("#loadoutGrid");
-    if (grid && grid.dataset.germanPolishWatched !== "true") {
-      grid.dataset.germanPolishWatched = "true";
-      new MutationObserver(schedulePolish).observe(grid, { childList: true, subtree: true, characterData: true });
+    if (grid && grid.dataset.germanPolishWatched !== "lite") {
+      grid.dataset.germanPolishWatched = "lite";
+      new MutationObserver(() => schedulePolish(grid)).observe(grid, { childList: true });
     }
   }
 
   function init() {
     polish();
     watch();
-    [80, 180, 400, 900, 1800, 3200].forEach((delay) => window.setTimeout(() => {
-      polish();
-      watch();
-    }, delay));
+    window.setTimeout(() => { polish(); watch(); }, 700);
   }
-
-  document.addEventListener("click", (event) => {
-    if (event.target.closest("#loadoutGrid")) window.setTimeout(polish, 60);
-  }, true);
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, { once: true });
   else init();
