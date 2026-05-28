@@ -23,18 +23,18 @@ const activeScripts = [
   "script.js?v=20260512-official1",
   "meta-overrides.js?v=20260512-official1",
   "loadout-builds.js?v=20260524-complete-builds3",
-  "attachment-levels.js?v=20260524-attachment-levels1",
-  "umlaut-polish.js?v=20260524-umlauts6",
+  "umlaut-polish.js?v=20260528-umlaut-lite1",
   "loadout-details-polish.js?v=20260524-details-lite2",
   "tier-class-polish.js?v=20260524-tier-class1",
   "weapon-image-static.js?v=20260527-static-lite1",
-  "german-loadout-polish.js?v=20260525-de2",
+  "german-loadout-polish.js?v=20260528-de-lite1",
   "extra-names-polish.js?v=20260528-extra-lite1",
   "performance-design-polish.js?v=20260528-smooth1",
 ];
 
 const scriptNames = [
   ...activeScripts.map((src) => src.split("?")[0]),
+  "attachment-levels.js",
   "season4-preserve",
   "season4-dedupe",
   "season4-tab-fix",
