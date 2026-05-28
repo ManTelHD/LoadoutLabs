@@ -17,6 +17,7 @@ const activeScripts = [
   "season4-header-fix.js?v=20260527-s4-weapons-lite1",
   "season4-click-rescue.js?v=20260527-s4-no-mode-tabs1",
   "hero-polish.js?v=20260524-header-refine1",
+  "header-tabs-cleanup.js?v=20260528-tabs-order1",
   "site-interaction-rescue.js?v=20260524-interaction1",
   "script.js?v=20260512-official1",
   "meta-overrides.js?v=20260512-official1",
