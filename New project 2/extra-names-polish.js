@@ -1,9 +1,9 @@
 (function () {
   const roleExtraSets = {
-    long: ["Plünderer", "Überlebender", "Wachsamkeit"],
-    close: ["Bergsteiger", "Sprinter", "Entschlossen"],
-    sniper: ["Überlebender", "Fingerfertigkeit", "Wachsamkeit"],
-    support: ["Bergsteiger", "Fingerfertigkeit", "Überlebender"],
+    long: ["Plünderer", "Sprinter", "Geist"],
+    close: ["Bergsteiger", "Sprinter", "Jäger"],
+    sniper: ["Plünderer", "Sprinter", "Jäger"],
+    support: ["Feldsanitäter", "Sprinter", "Überlebender"],
     utility: ["Bergsteiger", "Sprinter", "Überlebender"],
   };
 
@@ -27,13 +27,19 @@
     ["Scavenger", "Plünderer"],
     ["Survivor", "Überlebender"],
     ["Mountaineer", "Bergsteiger"],
+    ["Field Medic", "Feldsanitäter"],
+    ["Ghost", "Geist"],
+    ["Hunter", "Jäger"],
+    ["Tempered", "Gehärtet"],
+    ["Sprinter", "Sprinter"],
+    ["Momentum", "Momentum"],
+    ["Berserker", "Berserker"],
+    ["Reactive Armor", "Reaktive Panzerung"],
+    ["Adaptive", "Adaptiv"],
+    ["Surveyor", "Kundschafter"],
+    ["Drill Instructor", "Ausbilder"],
     ["Fast Hands", "Fingerfertigkeit"],
     ["Sleight of Hand", "Fingerfertigkeit"],
-    ["Alertness", "Wachsamkeit"],
-    ["Resolute", "Entschlossen"],
-    ["Tracker", "Fährtenleser"],
-    ["Ghost", "Geist"],
-    ["Tempered", "Gehärtet"],
     ["Überlebenskünstler", "Überlebender"],
     ["Flinke Hände", "Fingerfertigkeit"],
   ]);
