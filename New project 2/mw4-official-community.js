@@ -110,41 +110,42 @@
     if (!prose) return false;
     prose.innerHTML = `
       <h3>Was zu MW4 aktuell wichtig ist</h3>
-      <p>Der MW4-Tab ist jetzt klar in zwei Ebenen getrennt: oben stehen der offizielle Call-of-Duty-Livestream und die offiziellen Aussagen von Infinity Ward und Call of Duty, darunter die Gerüchte und Community-Erwartungen. Offiziell bestätigt ist aktuell ein neues Modern-Warfare-Projekt von Infinity Ward. Der Name MW4 ist weiterhin nicht bestätigt, wird in der Community aber als naheliegender Arbeitstitel genutzt.</p>
+      <p>Infinity Ward arbeitet offiziell am nächsten Modern Warfare. Der Name MW4 ist noch nicht bestätigt, wird in der Community aber als naheliegender Titel für Call of Duty 2026 gehandelt. Aktuell gibt es noch keinen finalen Reveal-Trailer, kein Release-Datum und keine vollständige Roadmap.</p>
 
       <h4>Offizieller Livestream</h4>
-      <p>Eingebettet ist der aktuelle Livestream vom offiziellen Call-of-Duty-YouTube-Kanal. Wenn der Kanal gerade live ist, zeigt der Player den laufenden Stream. Falls YouTube keinen aktiven Stream ausliefert, bleibt der Player als offizieller Kanal-Embed bestehen und aktualisiert sich beim nächsten Live-Signal.</p>
+      <p>Der offizielle Call-of-Duty-YouTube-Kanal ist live. Falls dort neue Infos zu Call of Duty 2026, Infinity Ward oder dem nächsten Modern Warfare gezeigt werden, sind Trailer, Key-Art, Titel und Terminangaben besonders wichtig.</p>
 
       <h4>Offiziell von Infinity Ward</h4>
-      <p>Infinity Ward hat am 21. Mai 2026 auf X öffentlich bestätigt, dass das Studio am nächsten Modern Warfare arbeitet. Der zentrale Satz aus dem offiziellen Post: Das Team macht das „definitive Modern Warfare“. In den begleitenden Aussagen der Studio-Heads Mark Grigsby und Jack O'Hara wird das Projekt als neues Kapitel für Infinity Ward beschrieben, mit Fokus auf ein starkes, immersives Modern-Warfare-Erlebnis.</p>
+      <p>Infinity Ward hat am 21. Mai 2026 auf X öffentlich bestätigt, dass das Studio am nächsten Modern Warfare arbeitet. In den begleitenden Aussagen der Studio-Heads Mark Grigsby und Jack O'Hara wird das Projekt als neues Kapitel für Infinity Ward beschrieben. Besonders auffällig ist die Formulierung „definitive Modern Warfare“, die auf einen sehr zentralen, großen Modern-Warfare-Teil hindeutet.</p>
       <ul>
         <li>Infinity Ward arbeitet offiziell an einem neuen Modern Warfare.</li>
         <li>Mark Grigsby und Jack O'Hara treten als Studio-Heads sichtbar für das Projekt auf.</li>
         <li>Infinity Ward spricht von einem neuen Kapitel und vom „definitive Modern Warfare“.</li>
-        <li>Ein finaler Titel, Release-Datum, Multiplayer-Details und Warzone-Integration wurden noch nicht offiziell genannt.</li>
+        <li>Der finale Name MW4 ist noch nicht offiziell bestätigt.</li>
+        <li>Release-Datum, Multiplayer, Warzone-Anbindung, DMZ und Kampagne sind noch offen.</li>
       </ul>
 
       <h4>Offizielle Call-of-Duty-Lage</h4>
-      <p>Von offizieller Seite ist außerdem wichtig: Das nächste Call of Duty wird nicht für PS4 entwickelt. Damit verschiebt sich die Erwartung klar Richtung Current-Gen und PC. Das ist für MW4 relevant, weil Community und Presse deshalb mit größeren technischen und systemischen Änderungen rechnen.</p>
+      <p>Das nächste Call of Duty wird nicht für PS4 entwickelt. Damit rückt der Fokus klar auf Current-Gen und PC. Für MW4 ist das spannend, weil dadurch größere technische Sprünge bei Grafik, Audio, Animationen, KI, Maps und Systemen wahrscheinlicher werden.</p>
       <ul>
         <li>Keine PS4-Version für das nächste Call of Duty.</li>
-        <li>Current-Gen-Fokus macht größere Technik-, Grafik- und Systemänderungen wahrscheinlicher.</li>
-        <li>Noch offen bleiben Beta, Reveal-Trailer, offizieller Blogpost und Plattformdetails über PS5, Xbox Series X|S und PC hinaus.</li>
+        <li>Current-Gen-Fokus erhöht die Erwartungen an Technik und Präsentation.</li>
+        <li>PS5, Xbox Series X|S und PC gelten als sichere Plattformen, Details stehen aber noch aus.</li>
+        <li>Beta-Termine, Editions, Vorbesteller-Boni und offizieller Reveal-Zeitpunkt sind noch nicht bestätigt.</li>
       </ul>
 
       <h4>Gerüchte & Community-Talk</h4>
-      <p>Die Community nennt das Projekt aktuell meistens MW4 oder Modern Warfare 4. Mehrere Leak-Zusammenfassungen sprechen über ein Korea-Setting, Makarov-Bezüge, Task Force 141 und eine mögliche Rückkehr von DMZ. Diese Punkte sind nicht bestätigt und müssen auf der Website weiterhin als Gerücht behandelt werden.</p>
+      <p>In der Community wird aktuell viel über ein Korea-Setting, Task Force 141, Makarov-Folgen, eine mögliche DMZ-Rückkehr und ein geerdeteres Modern-Warfare-Gameplay gesprochen. Diese Punkte sind interessant, aber nicht bestätigt.</p>
       <ul>
         <li>Korea-Setting: häufiges Gerücht, aber keine offizielle Bestätigung.</li>
-        <li>Task Force 141 und Makarov: plausibel für Modern Warfare, aktuell Community-Spekulation.</li>
-        <li>DMZ-Rückkehr: starkes Community-Thema, aber offiziell offen.</li>
-        <li>Movement: viele erwarten eine geerdetere Modern-Warfare-Richtung statt Black-Ops-Tempo; belastbare Details fehlen.</li>
-        <li>Warzone: Integration wird erwartet, aber Zeitpunkt, Map, Waffenpool und Technik sind noch nicht bestätigt.</li>
+        <li>Task Force 141 und Makarov: passend für Modern Warfare, aktuell aber Community-Spekulation.</li>
+        <li>DMZ-Rückkehr: stark gewünscht und oft diskutiert, offiziell weiterhin offen.</li>
+        <li>Movement: viele erwarten weniger Black-Ops-Tempo und mehr Modern-Warfare-Gewicht.</li>
+        <li>Warzone: Integration wird erwartet, aber Map, Waffenpool, Zeitpunkt und Technik sind noch unklar.</li>
       </ul>
 
-      <h4>Einordnung für LoadoutLab</h4>
-      <p>Für die Seite bedeutet das: MW4 bleibt ein Watchlist-Tab. Sobald Infinity Ward oder Call of Duty den Reveal-Trailer, Key-Art, Blogpost oder Roadmap veröffentlichen, müssen Name, Bilder, Trailer, Release, Plattformen, Beta, Waffen, Perks, Gunsmith, Movement und Warzone-Anbindung sofort gegen offizielle Angaben ersetzt werden.</p>
-      <p>Bis dahin sollte hier bewusst mit klarer Sprache gearbeitet werden: „offiziell bestätigt“ nur bei Infinity-Ward- oder Call-of-Duty-Aussagen, „Gerücht“ bei Community-Leaks und „erwartet“ nur dort, wo es aus dem üblichen Call-of-Duty-Rollout abgeleitet ist.</p>
+      <h4>Worauf man jetzt achten sollte</h4>
+      <p>Die wichtigsten nächsten Signale sind ein offizieller Titel, Key-Art, ein Reveal-Trailer, erste Gameplay-Szenen, Plattformdetails, Beta-Infos und Aussagen zu Warzone oder DMZ. Sobald Infinity Ward oder Call of Duty dazu etwas zeigt, kann man besser einschätzen, ob MW4 eher ein klassisches Modern Warfare wird oder größere Systemänderungen mitbringt.</p>
     `;
     return true;
   }
