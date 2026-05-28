@@ -29,7 +29,7 @@ const activeScripts = [
   "tier-class-polish.js?v=20260524-tier-class1",
   "weapon-image-static.js?v=20260527-static-lite1",
   "german-loadout-polish.js?v=20260525-de2",
-  "extra-names-polish.js?v=20260528-extra-sets2",
+  "extra-names-polish.js?v=20260528-extra-sets3",
 ];
 
 const scriptNames = [
@@ -52,7 +52,7 @@ function escapeRegExp(value) {
 }
 
 for (const name of scriptNames) {
-  html = html.replace(new RegExp(`\\s*<script[^>]+src=["'][^"']*${escapeRegExp(name)}[^"']*["'][^>]*><\\/script>`, "gi"), "");
+  html = html.replace(new RegExp(`\s*<script[^>]+src=["'][^"']*${escapeRegExp(name)}[^"']*["'][^>]*><\/script>`, "gi"), "");
 }
 
 const scriptBlock = activeScripts.map((src) => `    <script src="${src}" defer></script>`).join("\n");
