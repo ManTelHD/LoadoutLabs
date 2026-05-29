@@ -6,6 +6,7 @@ let html = fs.readFileSync(htmlPath, "utf8");
 
 const activeScripts = [
   "script.js?v=20260512-official1",
+  "render-lite.js?v=20260529-lite1",
   "card-toggle-performance.js?v=20260528-instant1",
   "meta-fast.js?v=20260529-fast1",
   "mw4-official-community.js?v=20260529-mw4-official1",
