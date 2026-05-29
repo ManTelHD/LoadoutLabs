@@ -16,7 +16,7 @@ const activeScripts = [
   "site-header-polish.js?v=20260528-topbar1",
   "site-interaction-rescue.js?v=20260524-interaction1",
   "performance-design-polish.js?v=20260528-smooth1",
-  "meta-presentation.js?v=20260529-core2",
+  "meta-presentation.js?v=20260529-core3",
 ];
 
 const scriptNames = [
