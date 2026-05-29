@@ -11,16 +11,17 @@ const activeScripts = [
   "season4-polish.js?v=20260524-season4-stable1",
   "season4-header-fix.js?v=20260527-s4-weapons-lite1",
   "season4-click-rescue.js?v=20260527-s4-no-mode-tabs1",
-  "hero-polish.js?v=20260524-header-refine1",
-  "header-tabs-cleanup.js?v=20260528-tabs-order1",
-  "site-header-polish.js?v=20260528-topbar1",
-  "site-interaction-rescue.js?v=20260524-interaction1",
+  "site-ui.js?v=20260529-ui1",
   "performance-design-polish.js?v=20260529-media1",
   "meta-presentation.js?v=20260529-core3",
 ];
 
 const scriptNames = [
   ...activeScripts.map((src) => src.split("?")[0]),
+  "hero-polish.js",
+  "header-tabs-cleanup.js",
+  "site-header-polish.js",
+  "site-interaction-rescue.js",
   "render-lite.js",
   "card-toggle-performance.js",
   "meta-color-fix.js",
