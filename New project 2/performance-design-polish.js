@@ -125,6 +125,14 @@
       contain-intrinsic-size: auto !important;
     }
 
+    img {
+      overflow-clip-margin: content-box;
+    }
+
+    iframe[data-deferred-src] {
+      background: #05070a !important;
+    }
+
     #loadoutGrid .tier-header,
     .loadout-grid .tier-header {
       position: relative;
@@ -253,18 +261,56 @@
     style.textContent = css;
   }
 
-  function optimizeMedia() {
-    document.querySelectorAll("img").forEach((image, index) => {
-      if (index > 2) image.loading = "lazy";
-      image.decoding = "async";
-      image.style.transform = "none";
-      image.style.willChange = "auto";
-    });
+  function closestPanel(element) {
+    return element.closest(".tab-panel, .mode-info-section, .updates-section, .maps-section, .camos-section");
+  }
 
-    document.querySelectorAll("iframe").forEach((frame) => {
-      frame.loading = "lazy";
-      frame.style.contain = "layout paint";
-    });
+  function panelIsInactive(panel) {
+    return !!panel && (panel.hidden || panel.getAttribute("aria-hidden") === "true" || (panel.classList.contains("tab-panel") && !panel.classList.contains("active")));
+  }
+
+  function visibleSoon(element) {
+    const rect = element.getBoundingClientRect();
+    const height = window.innerHeight || document.documentElement.clientHeight || 900;
+    return rect.top < height + 280 && rect.bottom > -160;
+  }
+
+  function tuneImage(image, index) {
+    image.decoding = "async";
+    image.style.transform = "none";
+    image.style.willChange = "auto";
+
+    const inactive = panelIsInactive(closestPanel(image));
+    const priorityImage = !inactive && (index < 4 || visibleSoon(image));
+    image.loading = priorityImage ? "eager" : "lazy";
+    image.fetchPriority = priorityImage ? "high" : "low";
+
+    if (!image.getAttribute("width") && image.closest(".weapon-art")) image.setAttribute("width", "320");
+    if (!image.getAttribute("height") && image.closest(".weapon-art")) image.setAttribute("height", "180");
+  }
+
+  function deferInactiveIframe(frame) {
+    frame.loading = "lazy";
+    frame.style.contain = "layout paint";
+
+    const inactive = panelIsInactive(closestPanel(frame));
+    const src = frame.getAttribute("src");
+    const deferred = frame.dataset.deferredSrc;
+
+    if (inactive && src) {
+      frame.dataset.deferredSrc = src;
+      frame.removeAttribute("src");
+      return;
+    }
+
+    if (!inactive && !src && deferred) {
+      frame.setAttribute("src", deferred);
+    }
+  }
+
+  function optimizeMedia() {
+    document.querySelectorAll("img").forEach(tuneImage);
+    document.querySelectorAll("iframe").forEach(deferInactiveIframe);
 
     document.querySelectorAll("#weaponComparePanel, .weapon-compare-panel").forEach((panel) => {
       panel.hidden = true;
@@ -272,10 +318,40 @@
     });
   }
 
+  function scheduleMediaPass(delay = 0) {
+    window.setTimeout(() => {
+      const run = () => window.requestAnimationFrame(optimizeMedia);
+      if (delay > 120 && "requestIdleCallback" in window) window.requestIdleCallback(run, { timeout: 900 });
+      else run();
+    }, delay);
+  }
+
+  function bindMediaPasses() {
+    if (window.__loadoutLabMediaPerfReady) return;
+    window.__loadoutLabMediaPerfReady = true;
+
+    document.addEventListener("click", (event) => {
+      if (event.target.closest("button, a, [role='button'], .mode-button, .content-tab, .filter-button, .expand-button")) {
+        scheduleMediaPass(60);
+        scheduleMediaPass(280);
+        scheduleMediaPass(900);
+      }
+    }, true);
+
+    document.addEventListener("input", (event) => {
+      if (event.target.matches("input, select")) scheduleMediaPass(220);
+    });
+
+    window.addEventListener("loadoutlab:lite-render", () => scheduleMediaPass(180));
+  }
+
   function init() {
     installStyle();
+    bindMediaPasses();
     optimizeMedia();
-    window.setTimeout(optimizeMedia, 600);
+    scheduleMediaPass(250);
+    scheduleMediaPass(900);
+    scheduleMediaPass(1800);
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, { once: true });
