@@ -6,8 +6,6 @@ let html = fs.readFileSync(htmlPath, "utf8");
 
 const activeScripts = [
   "script.js?v=20260512-official1",
-  "render-lite.js?v=20260529-lite1",
-  "card-toggle-performance.js?v=20260528-instant1",
   "meta-fast.js?v=20260529-fast1",
   "mw4-official-community.js?v=20260529-mw4-official1",
   "season4-polish.js?v=20260524-season4-stable1",
@@ -18,11 +16,14 @@ const activeScripts = [
   "site-header-polish.js?v=20260528-topbar1",
   "site-interaction-rescue.js?v=20260524-interaction1",
   "performance-design-polish.js?v=20260528-smooth1",
-  "meta-color-fix.js?v=20260529-gold1",
+  "meta-presentation.js?v=20260529-core1",
 ];
 
 const scriptNames = [
   ...activeScripts.map((src) => src.split("?")[0]),
+  "render-lite.js",
+  "card-toggle-performance.js",
+  "meta-color-fix.js",
   "meta-builds.js",
   "score-cleanup.js",
   "pickrate-bars.js",
