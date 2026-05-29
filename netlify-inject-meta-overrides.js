@@ -11,8 +11,7 @@ const activeScripts = [
   "pickrate-bars.js?v=20260523-pickrate1",
   "mw4-update.js?v=20260527-mw4-prose1",
   "mw4-layout-cleanup.js?v=20260527-mw4-no-hero1",
-  "mw4-official-community.js?v=20260528-mw4-viewer1",
-  "mw4-image-override.js?v=20260524-mw4-no-note1",
+  "mw4-official-community.js?v=20260529-mw4-official1",
   "season4-polish.js?v=20260524-season4-stable1",
   "season4-header-fix.js?v=20260527-s4-weapons-lite1",
   "season4-click-rescue.js?v=20260527-s4-no-mode-tabs1",
@@ -34,6 +33,7 @@ const activeScripts = [
 
 const scriptNames = [
   ...activeScripts.map((src) => src.split("?")[0]),
+  "mw4-image-override.js",
   "attachment-levels.js",
   "season4-preserve",
   "season4-dedupe",
