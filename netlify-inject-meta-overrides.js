@@ -7,7 +7,7 @@ let html = fs.readFileSync(htmlPath, "utf8");
 const activeScripts = [
   "script.js?v=20260512-official1",
   "meta-fast.js?v=20260529-fast1",
-  "mw4-official-community.js?v=20260529-mw4-official1",
+  "mw4.js?v=20260529-mw4-clean1",
   "season4.js?v=20260529-season4-bundle1",
   "site-ui.js?v=20260529-ui1",
   "performance-design-polish.js?v=20260529-media1",
@@ -16,6 +16,7 @@ const activeScripts = [
 
 const scriptNames = [
   ...activeScripts.map((src) => src.split("?")[0]),
+  "mw4-official-community.js",
   "season4-polish.js",
   "season4-header-fix.js",
   "season4-click-rescue.js",
