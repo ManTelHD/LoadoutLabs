@@ -10,12 +10,13 @@ const activeScripts = [
   "mw4.js?v=20260529-mw4-clean1",
   "season4.js?v=20260529-season4-bundle1",
   "site-ui.js?v=20260529-ui1",
-  "performance-design-polish.js?v=20260529-media1",
-  "meta-presentation.js?v=20260529-core3",
+  "performance.js?v=20260529-perf-bundle1",
 ];
 
 const scriptNames = [
   ...activeScripts.map((src) => src.split("?")[0]),
+  "performance-design-polish.js",
+  "meta-presentation.js",
   "mw4-official-community.js",
   "season4-polish.js",
   "season4-header-fix.js",
