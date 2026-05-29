@@ -10,6 +10,11 @@
     }
 
     style.textContent = `
+      html body #weaponComparePanel,
+      html body .weapon-compare-panel {
+        display: none !important;
+      }
+
       html body #loadoutGrid .loadout-card.details-flash::after,
       html body #loadoutGrid .loadout-card.details-flash .expand-button::after,
       html body #loadoutGrid .loadout-card.expanded .attachment-columns,
@@ -106,6 +111,10 @@
     `;
   }
 
+  function stripLegacyBlocks() {
+    document.querySelectorAll("#weaponComparePanel, .weapon-compare-panel").forEach((element) => element.remove());
+  }
+
   function activePanel() {
     return document.querySelector(".tab-panel.active")?.dataset.panel || "weapons";
   }
@@ -120,6 +129,7 @@
     else if (panel === "camos") call("renderCamos");
     else if (panel === "mode-info") call("renderModeInfo");
     else if (panel === "updates") call("renderUpdateMode");
+    stripLegacyBlocks();
     window.dispatchEvent(new CustomEvent("loadoutlab:lite-render", { detail: { panel } }));
   }
 
@@ -142,7 +152,7 @@
     if (!button) return;
     button.setAttribute("aria-expanded", String(open));
     const label = button.querySelector("span");
-    if (label) label.textContent = open ? "Schließen" : "Details";
+    if (label) label.textContent = open ? "Schlie\u00dfen" : "Details";
   }
 
   function ignoredClick(event, card) {
@@ -192,6 +202,7 @@
     installStyle();
     patchRenderLoadouts();
     bindEvents();
+    stripLegacyBlocks();
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, { once: true });
