@@ -18,6 +18,7 @@ const activeScripts = [
   "site-header-polish.js?v=20260528-topbar1",
   "site-interaction-rescue.js?v=20260524-interaction1",
   "performance-design-polish.js?v=20260528-smooth1",
+  "meta-color-fix.js?v=20260529-gold1",
 ];
 
 const scriptNames = [
