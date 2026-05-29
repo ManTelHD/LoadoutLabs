@@ -29,6 +29,11 @@
         contain: layout paint !important;
       }
 
+      html body #loadoutGrid .loadout-card .meta-card-details[hidden],
+      html body #loadoutGrid .loadout-card .card-details[hidden] {
+        display: none !important;
+      }
+
       html body #loadoutGrid .loadout-card.expand-animating {
         z-index: auto !important;
       }
@@ -115,6 +120,50 @@
     document.querySelectorAll("#weaponComparePanel, .weapon-compare-panel").forEach((element) => element.remove());
   }
 
+  function hasDetailsContent(details) {
+    return !!details && !!details.querySelector(".premium-details-grid, .attachment-columns, .premium-attachment-list, .detail-panel");
+  }
+
+  function detailsTemplate(card) {
+    return [...card.children].find((child) => child.matches?.("template.meta-details-template"));
+  }
+
+  function parkDetails() {
+    let parked = 0;
+    document.querySelectorAll("#loadoutGrid .loadout-card:not(.expanded)").forEach((card) => {
+      const details = card.querySelector(".meta-card-details, .card-details");
+      if (!details || !hasDetailsContent(details)) return;
+      let template = detailsTemplate(card);
+      if (!template) {
+        template = document.createElement("template");
+        template.className = "meta-details-template";
+        details.after(template);
+      }
+      while (details.firstChild) template.content.append(details.firstChild);
+      details.hidden = true;
+      details.dataset.lazyDetails = "parked";
+      parked += 1;
+    });
+    window.__loadoutLabParkedDetails = parked;
+  }
+
+  function hydrateDetails(card) {
+    const details = card.querySelector(".meta-card-details, .card-details");
+    if (!details) return null;
+    const template = detailsTemplate(card);
+    if (template && !hasDetailsContent(details)) {
+      details.append(template.content);
+      template.remove();
+    }
+    details.hidden = false;
+    details.dataset.lazyDetails = "hydrated";
+    return details;
+  }
+
+  function scheduleDetailsParking(delay = 120) {
+    window.setTimeout(() => window.requestAnimationFrame(parkDetails), delay);
+  }
+
   function activePanel() {
     return document.querySelector(".tab-panel.active")?.dataset.panel || "weapons";
   }
@@ -130,6 +179,7 @@
     else if (panel === "mode-info") call("renderModeInfo");
     else if (panel === "updates") call("renderUpdateMode");
     stripLegacyBlocks();
+    scheduleDetailsParking(160);
     window.dispatchEvent(new CustomEvent("loadoutlab:lite-render", { detail: { panel } }));
   }
 
@@ -152,7 +202,7 @@
     if (!button) return;
     button.setAttribute("aria-expanded", String(open));
     const label = button.querySelector("span");
-    if (label) label.textContent = open ? "Schlie\u00dfen" : "Details";
+    if (label) label.textContent = open ? "Schließen" : "Details";
   }
 
   function ignoredClick(event, card) {
@@ -162,16 +212,18 @@
   }
 
   function toggleDetails(card, open) {
-    const details = card.querySelector(".meta-card-details, .card-details");
+    const details = open ? hydrateDetails(card) : card.querySelector(".meta-card-details, .card-details");
     if (!details) return;
     details.getAnimations?.().forEach((animation) => animation.cancel());
     card.classList.remove("details-flash", "expand-animating");
     card.classList.toggle("expanded", open);
     setButtonState(card, open);
+    details.hidden = !open;
     details.style.display = open ? "block" : "";
     details.style.height = "";
     details.style.opacity = "";
     details.style.overflow = "";
+    if (!open) scheduleDetailsParking(40);
   }
 
   function bindEvents() {
@@ -190,12 +242,22 @@
 
       if (event.target.closest(".content-tab, .primary-mode-switch .mode-button, .secondary-mode-switch .mode-button, #filterToolbar .filter-button")) {
         scheduleActiveRender();
+        scheduleDetailsParking(240);
       }
     }, true);
 
-    document.addEventListener("change", (event) => {
-      if (event.target.matches("#sortSelect")) scheduleActiveRender();
+    document.addEventListener("input", (event) => {
+      if (event.target.matches("#loadoutSearch, #weaponSearch")) scheduleDetailsParking(260);
     });
+
+    document.addEventListener("change", (event) => {
+      if (event.target.matches("#sortSelect")) {
+        scheduleActiveRender();
+        scheduleDetailsParking(180);
+      }
+    });
+
+    window.addEventListener("loadoutlab:lite-render", () => scheduleDetailsParking(120));
   }
 
   function init() {
@@ -203,6 +265,7 @@
     patchRenderLoadouts();
     bindEvents();
     stripLegacyBlocks();
+    scheduleDetailsParking(500);
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, { once: true });
@@ -210,4 +273,5 @@
 
   window.setTimeout(init, 120);
   window.setTimeout(init, 600);
+  window.setTimeout(scheduleDetailsParking, 1600);
 }());
