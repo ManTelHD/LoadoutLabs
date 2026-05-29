@@ -8,9 +8,7 @@ const activeScripts = [
   "script.js?v=20260512-official1",
   "meta-fast.js?v=20260529-fast1",
   "mw4-official-community.js?v=20260529-mw4-official1",
-  "season4-polish.js?v=20260524-season4-stable1",
-  "season4-header-fix.js?v=20260527-s4-weapons-lite1",
-  "season4-click-rescue.js?v=20260527-s4-no-mode-tabs1",
+  "season4.js?v=20260529-season4-bundle1",
   "site-ui.js?v=20260529-ui1",
   "performance-design-polish.js?v=20260529-media1",
   "meta-presentation.js?v=20260529-core3",
@@ -18,6 +16,9 @@ const activeScripts = [
 
 const scriptNames = [
   ...activeScripts.map((src) => src.split("?")[0]),
+  "season4-polish.js",
+  "season4-header-fix.js",
+  "season4-click-rescue.js",
   "hero-polish.js",
   "header-tabs-cleanup.js",
   "site-header-polish.js",
