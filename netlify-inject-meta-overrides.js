@@ -9,7 +9,7 @@ const activeScripts = [
   "meta-fast.js?v=20260529-fast1",
   "mw4.js?v=20260529-mw4-clean1",
   "season4.js?v=20260529-season4-bundle1",
-  "site-ui.js?v=20260529-ui1",
+  "site-ui.js?v=20260530-active-tabs1",
   "performance.js?v=20260529-perf-grid1",
 ];
 
