@@ -134,8 +134,30 @@
       opacity: 0.95 !important;
     }
 
+    body .primary-mode-switch .mode-button.active,
+    body .secondary-mode-switch .mode-button.active,
+    body .content-tab.active,
+    body .filter-button.active {
+      border-color: rgba(185, 255, 61, 0.92) !important;
+      background: linear-gradient(135deg, #b9ff3d 0%, #66f244 45%, #24e66f 100%) !important;
+      color: #051007 !important;
+      text-shadow: none !important;
+      box-shadow:
+        0 0 0 1px rgba(185, 255, 61, 0.24),
+        0 0.55rem 1.35rem rgba(42, 239, 111, 0.24),
+        inset 0 1px 0 rgba(255, 255, 255, 0.26) !important;
+    }
+
     body .primary-mode-switch .mode-button.active::before {
       color: #07100a !important;
+    }
+
+    body .primary-mode-switch .mode-button.active *,
+    body .secondary-mode-switch .mode-button.active *,
+    body .content-tab.active *,
+    body .filter-button.active * {
+      color: #051007 !important;
+      text-shadow: none !important;
     }
 
     body .secondary-mode-switch,
