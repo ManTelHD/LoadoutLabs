@@ -12,6 +12,7 @@ const activeScripts = [
   withVersion("script.js", "20260512-official1"),
   withVersion("meta-fast.js", "20260529-fast1"),
   withVersion("mw4.js", "20260529-mw4-clean1"),
+  withVersion("mw4-compact-tabs.js", "20260601-mw4-compact1"),
   withVersion("season4.js", "20260529-season4-bundle1"),
   withVersion("site-ui.js", "20260530-active-tabs1"),
   withVersion("subnav-cleanup.js", "20260601-clean-subnav1"),
