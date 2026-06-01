@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: site-content-writes
+  cancel-in-progress: false
+
 jobs:
   sync:
     runs-on: ubuntu-latest
@@ -17,19 +21,39 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          ref: main
+
+      - name: Sync latest main
+        run: git pull --ff-only origin main
 
       - name: Inject override assets
-        run: |
-          node netlify-inject-meta-overrides.js
+        run: node netlify-inject-meta-overrides.js
 
       - name: Commit synced page
+        shell: bash
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add "New project 2/index.html"
           if git diff --cached --quiet; then
             echo "No page sync needed."
-          else
-            git commit -m "Sync override assets into site HTML"
-            git push
+            exit 0
           fi
+
+          git commit -m "Sync override assets into site HTML"
+
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then
+              echo "Synced page pushed."
+              exit 0
+            fi
+
+            echo "Push failed; rebasing onto latest main before retry $attempt/3."
+            git fetch origin main
+            git rebase origin/main
+            sleep 5
+          done
+
+          echo "Failed to push synced page after 3 attempts."
+          exit 1

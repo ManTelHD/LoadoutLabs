@@ -4,14 +4,18 @@ const path = require("path");
 const htmlPath = path.join(__dirname, "New project 2", "index.html");
 let html = fs.readFileSync(htmlPath, "utf8");
 
+const buildVersion = process.env.SITE_ASSET_VERSION || process.env.COMMIT_REF || process.env.GITHUB_SHA || "";
+const versionSuffix = buildVersion.replace(/[^a-zA-Z0-9._-]/g, "").slice(0, 40);
+const withVersion = (file, fallbackVersion) => `${file}?v=${versionSuffix || fallbackVersion}`;
+
 const activeScripts = [
-  "script.js?v=20260512-official1",
-  "meta-fast.js?v=20260529-fast1",
-  "mw4.js?v=20260529-mw4-clean1",
-  "season4.js?v=20260529-season4-bundle1",
-  "site-ui.js?v=20260530-active-tabs1",
-  "subnav-cleanup.js?v=20260601-clean-subnav1",
-  "performance.js?v=20260529-perf-grid1",
+  withVersion("script.js", "20260512-official1"),
+  withVersion("meta-fast.js", "20260529-fast1"),
+  withVersion("mw4.js", "20260529-mw4-clean1"),
+  withVersion("season4.js", "20260529-season4-bundle1"),
+  withVersion("site-ui.js", "20260530-active-tabs1"),
+  withVersion("subnav-cleanup.js", "20260601-clean-subnav1"),
+  withVersion("performance.js", "20260529-perf-grid1"),
 ];
 
 const scriptNames = [
@@ -22,6 +26,17 @@ const scriptNames = [
   "season4-polish.js",
   "season4-header-fix.js",
   "season4-click-rescue.js",
+  "season4-preserve.js",
+  "season4-dedupe.js",
+  "season4-tab-fix.js",
+  "season4-x-keyart.js",
+  "meta-card-animations.js",
+  "tier-build-fixes.js",
+  "tier-extras-fixes.js",
+  "loadout-compare.js",
+  "absolute-meta-glow.js",
+  "premium-accents.js",
+  "weapon-image-zoom.js",
   "hero-polish.js",
   "header-tabs-cleanup.js",
   "site-header-polish.js",
@@ -44,17 +59,6 @@ const scriptNames = [
   "german-loadout-polish.js",
   "extra-names-polish.js",
   "attachment-levels.js",
-  "season4-preserve",
-  "season4-dedupe",
-  "season4-tab-fix",
-  "season4-x-keyart",
-  "meta-card-animations",
-  "tier-build-fixes",
-  "tier-extras-fixes",
-  "loadout-compare",
-  "absolute-meta-glow",
-  "premium-accents",
-  "weapon-image-zoom",
 ];
 
 function escapeRegExp(value) {
