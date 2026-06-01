@@ -10,6 +10,7 @@ const activeScripts = [
   "mw4.js?v=20260529-mw4-clean1",
   "season4.js?v=20260529-season4-bundle1",
   "site-ui.js?v=20260530-active-tabs1",
+  "subnav-cleanup.js?v=20260601-clean-subnav1",
   "performance.js?v=20260529-perf-grid1",
 ];
 
