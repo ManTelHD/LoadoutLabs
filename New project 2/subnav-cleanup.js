@@ -1,11 +1,10 @@
 (function () {
   const STYLE_ID = "subnav-cleanup-20260601";
-  const hiddenPrimaryModes = new Set(["mw4-info", "season4-info", "updates"]);
+  const metaPanels = new Set(["weapons", "maps"]);
 
   const css = `
     body .secondary-mode-switch[hidden],
-    body .content-tabs[hidden],
-    body .loadout-subnav-row:has(.secondary-mode-switch[hidden]) {
+    body .content-tabs[hidden] {
       display: none !important;
     }
 
@@ -29,6 +28,10 @@
 
     body .loadout-subnav-row .content-tabs {
       margin-bottom: 0 !important;
+    }
+
+    body .loadout-subnav-row .content-tabs[hidden] {
+      display: none !important;
     }
 
     @media (max-width: 820px) {
@@ -69,8 +72,8 @@
     if (contentTabs.parentElement !== row) row.appendChild(contentTabs);
   }
 
-  function activePrimaryMode() {
-    return document.querySelector(".primary-mode-switch .mode-button.active")?.dataset.mode || "";
+  function activePanel() {
+    return document.querySelector(".tab-panel.active")?.dataset.panel || "weapons";
   }
 
   function syncSubnavVisibility() {
@@ -78,10 +81,10 @@
 
     const secondary = document.querySelector(".secondary-mode-switch");
     const contentTabs = document.querySelector("#contentTabs");
-    const shouldShowMetaNav = !hiddenPrimaryModes.has(activePrimaryMode());
+    const shouldShowContentTabs = metaPanels.has(activePanel());
 
-    if (secondary) secondary.hidden = !shouldShowMetaNav;
-    if (contentTabs && !shouldShowMetaNav) contentTabs.hidden = true;
+    if (secondary) secondary.hidden = false;
+    if (contentTabs) contentTabs.hidden = !shouldShowContentTabs;
   }
 
   function scheduleSync() {
