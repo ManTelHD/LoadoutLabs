@@ -1,10 +1,24 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-01T20:52:27.441Z",
-  "generatedAtLabel": "1. Juni 2026 um 22:52 MESZ",
+  "generatedAt": "2026-06-02T20:02:48.827Z",
+  "generatedAtLabel": "2. Juni 2026 um 22:02 MESZ",
   "source": "Call of Duty Guides",
   "sourceUrl": "https://www.callofduty.com/guides/blackops7/weapons",
   "weapons": [
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/smg/s04/cbrs-3",
+      "imageUrl": "https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/weapons/BO7-SMG-CBRS-3-01.webp",
+      "imageAlt": "Image of the CBRS-3 SMG in Call of Duty: Black Ops 7",
+      "weaponClass": "SMG",
+      "name": "CBRS-3"
+    },
+    {
+      "url": "https://www.callofduty.com/guides/blackops7/weapons/marksman-rifle/KRS-762",
+      "imageUrl": "https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/weapons/BO7-DMR-KRS-762-01.webp",
+      "imageAlt": "Image of the KRS-7.62 Marksman Rifle in Call of Duty: Black Ops 7",
+      "weaponClass": "Marksman Rifle",
+      "name": "KRS-7.62"
+    },
     {
       "url": "https://www.callofduty.com/guides/blackops7/weapons/special/s03/siren",
       "imageUrl": "https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/weapons/BO7-Weapons-Siren.webp",
