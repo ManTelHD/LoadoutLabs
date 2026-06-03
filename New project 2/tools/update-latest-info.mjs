@@ -212,6 +212,14 @@ function extractRoadmapImage(html) {
   return "";
 }
 
+function resolveSeasonRoadmapImage(articleUrl, html) {
+  if (/call-of-duty-black-ops-7-warzone-season-04-announcement/i.test(articleUrl)) {
+    return "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blog/body/bo7/bo7-s04-announcement/BO7-SEASON-04-ANNOUNCEMENT-RM.webp";
+  }
+
+  return absoluteUrl(extractRoadmapImage(html) || extractMeta(html, "og:image"), articleUrl);
+}
+
 async function detectLatestXPost(handleUrl) {
   try {
     const html = await fetchText(handleUrl);
@@ -548,7 +556,7 @@ async function buildSeasonWatch(generatedAt, generatedAtLabel) {
   const launchWindow = extractSeasonLaunchInfo(articleText);
   const sections = extractSections(articleHtml).slice(0, 4);
   const xStatus = await detectLatestXPost(urls.codLiveSeasonsX);
-  const roadmapImage = absoluteUrl(extractRoadmapImage(articleHtml) || extractMeta(articleHtml, "og:image"), article.url);
+  const roadmapImage = resolveSeasonRoadmapImage(article.url, articleHtml);
 
   return {
     schemaVersion: 1,
