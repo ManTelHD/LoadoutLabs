@@ -184,6 +184,7 @@ function extractSections(html) {
     if (!heading || heading.length < 4) continue;
     if (/^image$|^play$|^get black ops/i.test(heading)) continue;
     if (/^content summary$/i.test(heading)) continue;
+    if (/^choose your region$/i.test(heading)) continue;
     if (!body || body.length < 60) continue;
 
     sections.push({
@@ -198,6 +199,17 @@ function extractSections(html) {
 function extractSeasonLaunchInfo(text) {
   const match = text.match(/Season 0?4 goes live on ([^.]+\.)/i);
   return match ? match[1].trim() : "";
+}
+
+function extractRoadmapImage(html) {
+  const roadmapSectionMatch = html.match(/Season 04 Roadmap[\s\S]{0,1200}?<img[^>]+src=["']([^"']+)["']/i);
+  if (roadmapSectionMatch) return decodeHtml(roadmapSectionMatch[1]);
+
+  if (/BO7-SEASON-04-ANNOUNCEMENT-RM\.webp/i.test(html)) {
+    return "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blog/body/bo7/bo7-s04-announcement/BO7-SEASON-04-ANNOUNCEMENT-RM.webp";
+  }
+
+  return "";
 }
 
 async function detectLatestXPost(handleUrl) {
@@ -536,6 +548,7 @@ async function buildSeasonWatch(generatedAt, generatedAtLabel) {
   const launchWindow = extractSeasonLaunchInfo(articleText);
   const sections = extractSections(articleHtml).slice(0, 4);
   const xStatus = await detectLatestXPost(urls.codLiveSeasonsX);
+  const roadmapImage = absoluteUrl(extractRoadmapImage(articleHtml) || extractMeta(articleHtml, "og:image"), article.url);
 
   return {
     schemaVersion: 1,
@@ -547,7 +560,7 @@ async function buildSeasonWatch(generatedAt, generatedAtLabel) {
       url: article.url,
       date: parsedDate.toISOString().slice(0, 10),
       dateLabel: formatDate(parsedDate),
-      imageUrl: extractMeta(articleHtml, "og:image"),
+      imageUrl: roadmapImage,
       summary: summary.length > 320 ? `${summary.slice(0, 317).trim()}...` : summary,
       launchWindow,
     },
@@ -597,12 +610,12 @@ async function buildSeasonWatch(generatedAt, generatedAtLabel) {
     tips: [
       "Season-04-Blogposts aus dem offiziellen Call-of-Duty-Blog haben Vorrang vor Drittquellen.",
       "CODLiveSeasons auf X ist als offizieller Season-, Event- und Live-Update-Kanal hinterlegt.",
+      "Das Roadmap-Bild aus dem offiziellen Blog wird als Hauptbild fuer den Season-4-Tab verwendet.",
       "Patchnotes und Live-Seasons werden getrennt beobachtet, damit Event- und Launch-Infos nicht uebersehen werden.",
       "Geruechte oder Creator-Zusammenfassungen werden nicht in den Season-4-Tab uebernommen.",
-      "Bei neuen offiziellen Posts wird zuerst der Featured Blogpost und danach die Kartenliste aktualisiert.",
     ],
     gallery: [
-      ["Season 04 Blog", extractMeta(articleHtml, "og:image") || "assets/cod-loadout-hero.png"],
+      ["Season 04 Roadmap", roadmapImage || "assets/cod-loadout-hero.png"],
     ],
     officialSummary: launchWindow
       ? `${title}. ${launchWindow}`
