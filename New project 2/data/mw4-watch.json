@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-02T20:02:48.827Z",
-  "generatedAtLabel": "2. Juni 2026 um 22:02 MESZ",
+  "generatedAt": "2026-06-03T06:08:31.559Z",
+  "generatedAtLabel": "3. Juni 2026 um 08:08 MESZ",
   "officialSources": [
     {
       "name": "Call of Duty on X",
@@ -11,7 +11,20 @@
     {
       "name": "Infinity Ward on X",
       "url": "https://x.com/InfinityWard",
-      "status": "configured"
+      "status": "latest-post-detected",
+      "latestPostUrl": "https://x.com/InfinityWard/status/2057491681331626388"
+    }
+  ],
+  "officialPosts": [
+    {
+      "title": "Infinity Ward teasert das naechste Studio-Spiel",
+      "source": "Infinity Ward on X",
+      "sourceUrl": "https://x.com/InfinityWard/status/2057491681331626388",
+      "contextUrl": "https://www.videogameschronicle.com/news/yes-we-are-making-the-definitive-modern-warfare-infinity-ward-teases-the-upcoming-call-of-duty/",
+      "date": "2026-05-21",
+      "dateLabel": "21. Mai 2026",
+      "status": "Offiziell",
+      "summary": "Infinity Ward schreibt, dass ein neues Kapitel fuer das Studio beginnt, das naechste Spiel aus diesem Ansatz entsteht und das Team stolz darauf ist, bald mehr zu teilen. Der Name MW4, Release-Datum und Feature-Liste bleiben bis zu einem Activision-/Call-of-Duty-Reveal weiterhin nicht final bestaetigt."
     }
   ],
   "transcriptSources": [
@@ -22,12 +35,12 @@
       "videos": []
     }
   ],
-  "officialSummary": "MW4 bleibt nur offiziell, wenn Call of Duty oder Infinity Ward es bestaetigt. X-Posts sind als offizielle Quellen konfiguriert; ohne X-API werden keine Posts erfunden.",
+  "officialSummary": "Infinity Ward hat am 21. Mai 2026 offiziell das naechste Studio-Spiel angeteasert und geschrieben, dass man bald mehr teilen will. Das ist ein offizieller MW-/COD-2026-Hinweis, aber noch kein finaler MW4-Name, kein Release-Datum und keine Feature-Liste.",
   "cards": [
     {
       "label": "Offiziell",
-      "title": "COD / Infinity Ward",
-      "text": "Nur Posts von Call of Duty oder Infinity Ward zaehlen als Bestaetigung."
+      "title": "Infinity Ward: 21. Mai 2026",
+      "text": "Infinity Ward schreibt, dass ein neues Kapitel fuer das Studio beginnt, das naechste Spiel aus diesem Ansatz entsteht und das Team stolz darauf ist, bald mehr zu teilen. Der Name MW4, Release-Datum und Feature-Liste bleiben bis zu einem Activision-/Call-of-Duty-Reveal weiterhin nicht final bestaetigt."
     },
     {
       "label": "Geruecht",
@@ -37,13 +50,14 @@
     {
       "label": "Regel",
       "title": "Strikte Trennung",
-      "text": "Tridzo bleibt Geruecht/Kontext, ausser das Video zitiert eine offizielle Quelle."
+      "text": "Der Infinity-Ward-Post zaehlt als offiziell. MW4-Name, Reveal-Termin, Story, Multiplayer und DMZ bleiben Geruecht, bis Activision oder Call of Duty sie bestaetigen."
     }
   ],
   "tips": [
     "Call of Duty und Infinity Ward auf X sind offizielle Quellen.",
+    "Neu seit 21. Mai 2026: Infinity Ward teasert das naechste Studio-Spiel und will bald mehr teilen.",
     "Tridzo-Transkripte werden nur als Geruechte- und Kontextquelle verwendet.",
-    "Ohne offiziellen COD-/Infinity-Ward-Post wird MW4 nicht als bestaetigt angezeigt.",
+    "MW4 als genauer Name, Release-Datum und Features werden erst nach einem offiziellen Reveal als Fakt angezeigt.",
     "Wenn X API-Zugang ergaenzt wird, kann der Watcher echte Posts statt nur Quellenstatus pruefen."
   ]
 }
