@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-06-03T08:00:00.000Z",
+  "generatedAtLabel": "3. Juni 2026 um 10:00 MESZ",
+  "season": "Season 04",
+  "featuredPost": {
+    "title": "Call of Duty: Black Ops 7 and Call of Duty: Warzone Season 04 Content Drop",
+    "url": "https://www.callofduty.com/blog/2026/06/call-of-duty-black-ops-7-warzone-season-04-content-drop",
+    "date": "2026-06-02",
+    "dateLabel": "2. Juni 2026",
+    "imageUrl": "assets/cod-loadout-hero.png",
+    "summary": "Der offizielle Season-04-Blog ist live. Er buendelt den Season-Launch, neue Inhalte fuer Black Ops 7 und Warzone, Events sowie die wichtigsten offiziellen Hinweise fuer den Start.",
+    "launchWindow": "Season 04 goes live on Thursday, June 4 at 9 AM PT."
+  },
+  "officialSources": [
+    {
+      "name": "Call of Duty Blog - Black Ops 7",
+      "url": "https://www.callofduty.com/blog/blackops7",
+      "status": "latest-article-detected",
+      "latestArticleUrl": "https://www.callofduty.com/blog/2026/06/call-of-duty-black-ops-7-warzone-season-04-content-drop"
+    },
+    {
+      "name": "Call of Duty Blog - Warzone",
+      "url": "https://www.callofduty.com/blog/warzone",
+      "status": "tracked"
+    },
+    {
+      "name": "CODLiveSeasons on X",
+      "url": "https://x.com/CODLiveSeasons",
+      "status": "configured"
+    }
+  ],
+  "stats": [
+    ["Status", "Offiziell live"],
+    ["Blogpost", "2. Juni 2026"],
+    ["Launch", "4. Juni 18:00 MESZ"],
+    ["Quellen", "Blog + CODLiveSeasons"]
+  ],
+  "cards": [
+    {
+      "label": "Blogpost",
+      "title": "Season 04 Content Drop",
+      "text": "Der offizielle Call-of-Duty-Blog fuer Season 04 ist erkannt und dient jetzt als Primaerquelle fuer den Season-4-Tab."
+    },
+    {
+      "label": "Launch",
+      "title": "4. Juni 2026, 18:00 MESZ",
+      "text": "Das offizielle Startfenster aus dem Blog ist hinterlegt, damit der Tab den Launch nicht mehr verpasst."
+    },
+    {
+      "label": "Offiziell",
+      "title": "Neue Waffen",
+      "text": "Im offiziellen Blog werden neue Season-04-Waffen und ihre Einordnung fuer Black Ops 7 und Warzone hervorgehoben."
+    },
+    {
+      "label": "Offiziell",
+      "title": "Events und Live Seasons",
+      "text": "Season- und Event-Updates werden kuenftig nicht nur aus Patchnotes, sondern auch aus dem offiziellen Live-Seasons-Kanal auf X beobachtet."
+    },
+    {
+      "label": "Offiziell",
+      "title": "Warzone Fokus",
+      "text": "Fortune's Keep, Playlist- und Event-Aenderungen sowie andere live relevante Warzone-Hinweise sollen ueber den Season-4-Tab sichtbar bleiben."
+    },
+    {
+      "label": "Regel",
+      "title": "Nur offizielle Quellen",
+      "text": "Der Tab uebernimmt nur offizielle Call-of-Duty-Blogposts und den offiziellen CODLiveSeasons-Kanal, keine Creator-Zusammenfassungen."
+    }
+  ],
+  "tips": [
+    "Der offizielle Season-04-Blog ist die Primaerquelle fuer den Tab.",
+    "CODLiveSeasons auf X ist als offizieller Season-, Event- und Live-Update-Kanal hinterlegt.",
+    "Patchnotes und Live-Seasons werden getrennt beobachtet, damit Event-Posts nicht uebersehen werden.",
+    "Geruechte oder Creator-Videos werden nicht in den Season-4-Tab uebernommen.",
+    "Bei neuen offiziellen Posts zuerst Featured Blogpost und Karten aktualisieren."
+  ],
+  "gallery": [
+    ["Season 04 Blog", "assets/cod-loadout-hero.png"]
+  ],
+  "officialSummary": "Season 04 Content Drop ist offiziell live im Blog. Start laut Blog: Donnerstag, 4. Juni, 9 AM PT. Der Tab beobachtet jetzt Call-of-Duty-Blogposts plus CODLiveSeasons auf X."
+}
