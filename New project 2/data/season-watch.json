@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-03T06:09:44.371Z",
-  "generatedAtLabel": "3. Juni 2026 um 08:09 MESZ",
+  "generatedAt": "2026-06-03T07:43:37.822Z",
+  "generatedAtLabel": "3. Juni 2026 um 09:43 MESZ",
   "season": "Season 04",
   "featuredPost": {
     "title": "Call of Duty: Black Ops 7 and Call of Duty: Warzone Season 04 Content Drop: Everything You Need to Know",
     "url": "https://www.callofduty.com/blog/2026/06/call-of-duty-black-ops-7-warzone-season-04-announcement",
     "date": "2026-06-02",
     "dateLabel": "2. Juni 2026",
-    "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blog/body/bo7/bo7-s04-announcement/BO7-SEASON-04-ANNOUNCEMENT-RM.webp",
-    "summary": "Operation Wall Breaker. Zombies Rogue Run. Fortune’s Keep Refresh. And plenty more. Season 04 is yours for the taking, delivering a colossal amount of content across all four modes. New maps, new modes, new weapons and events… Get all the details on the upcoming season here so you can get right to action when Season 04 launches on June 4.",
+    "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blog/body/bo7/bo7-s04-announcement/BO7-SEASON-04-ANNOUNCEMENT-TOUT.jpg",
+    "summary": "Operation Wall Breaker. Zombies Rogue Run. Fortune’s Keep Refresh. And plenty more. Season 04 is yours for the taking, delivering a colossal amount of content across all four modes. New maps, new modes, new weapons and events… Get all the details on the upcoming season here so you can get right to action when Season...",
     "launchWindow": "Thursday, June 4th at 9AM PT across all platforms."
   },
   "officialSources": [
@@ -31,16 +31,28 @@
     }
   ],
   "stats": [
-    ["Status", "Offiziell live"],
-    ["Blogpost", "2. Juni 2026"],
-    ["Launch", "Thursday, June 4th at 9AM PT across all platforms."],
-    ["Quellen", "Blog + CODLiveSeasons"]
+    [
+      "Status",
+      "Offiziell live"
+    ],
+    [
+      "Blogpost",
+      "2. Juni 2026"
+    ],
+    [
+      "Launch",
+      "Thursday, June 4th at 9AM PT across all platforms."
+    ],
+    [
+      "Quellen",
+      "Blog + CODLiveSeasons"
+    ]
   ],
   "cards": [
     {
       "label": "Blogpost",
       "title": "Call of Duty: Black Ops 7 and Call of Duty: Warzone Season 04 Content Drop: Everything You Need to Know",
-      "text": "Operation Wall Breaker. Zombies Rogue Run. Fortune’s Keep Refresh. And plenty more. Season 04 is yours for the taking, delivering a colossal amount of content across all four modes."
+      "text": "Operation Wall Breaker. Zombies Rogue Run. Fortune’s Keep Refresh. And plenty more. Season 04 is yours for the taking, delivering a colossal amount of content across all four modes. New maps, new modes, new weapons an..."
     },
     {
       "label": "Launch",
@@ -49,34 +61,37 @@
     },
     {
       "label": "Offiziell",
-      "title": "Season 04 Roadmap",
-      "text": "Die Roadmap stammt direkt aus dem offiziellen Season-04-Blogpost und ist jetzt das Hauptbild des Season-4-Tabs."
+      "title": "Choose your region",
+      "text": "Selected region - United States United States Selected region: United States Close Menu + United States United Kingdom English Canada Australia Francais Canada Français Deutschland Italia España México Brasil Россия A..."
     },
     {
       "label": "Offiziell",
       "title": "The Story So Far",
-      "text": "After David Mason is captured by The Guild and Specter Two goes on the offense with their own man on the inside, Karma's Guild-killing virus is finally ready to deploy... but Dorne has one last card to play."
+      "text": "After David Mason is captured by The Guild and Specter Two goes on the offense with their own man on the inside, Karma's Guild-killing virus is finally ready to deploy... but Dorne has one last card to play. A collisi..."
     },
     {
       "label": "Offiziell",
-      "title": "Neue Waffen und Inhalte",
-      "text": "Der Blog bestaetigt unter anderem KRS-7.62, CBRS-3 sowie weitere Season-04-Inhalte fuer Multiplayer, Zombies, Warzone und Events."
+      "title": "Season 04 Roadmap",
+      "text": "Across Call of Duty®: Black Ops 7 and Call of Duty: Warzone™ , Season 04 introduces another massive season of content. Take on Operation Wall Breaker in Endgame, deploy across five new and remastered Multiplayer Maps,..."
     },
     {
-      "label": "Regel",
-      "title": "Nur offizielle Quellen",
-      "text": "Der Tab uebernimmt nur offizielle Call-of-Duty-Blogposts und den offiziellen CODLiveSeasons-Kanal."
+      "label": "Offiziell",
+      "title": "FREE TO PLAY: ENDGAME CONTENT SUMMARY",
+      "text": "Expanded Operations: At the start of the season, The Guild strikes back in Operation Wall Breaker, introducing new challenges and rewards alongside the deadly Command Killer Glitch Fracture. In the Mid-Season, keep up..."
     }
   ],
   "tips": [
-    "Der offizielle Season-04-Blog ist die Primaerquelle fuer den Tab.",
-    "Das Roadmap-Bild aus dem offiziellen Blog ist jetzt das Hauptbild des Season-4-Tabs.",
+    "Season-04-Blogposts aus dem offiziellen Call-of-Duty-Blog haben Vorrang vor Drittquellen.",
     "CODLiveSeasons auf X ist als offizieller Season-, Event- und Live-Update-Kanal hinterlegt.",
-    "Patchnotes und Live-Seasons werden getrennt beobachtet, damit Event-Posts nicht uebersehen werden.",
-    "Geruechte oder Creator-Videos werden nicht in den Season-4-Tab uebernommen."
+    "Patchnotes und Live-Seasons werden getrennt beobachtet, damit Event- und Launch-Infos nicht uebersehen werden.",
+    "Geruechte oder Creator-Zusammenfassungen werden nicht in den Season-4-Tab uebernommen.",
+    "Bei neuen offiziellen Posts wird zuerst der Featured Blogpost und danach die Kartenliste aktualisiert."
   ],
   "gallery": [
-    ["Season 04 Roadmap", "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blog/body/bo7/bo7-s04-announcement/BO7-SEASON-04-ANNOUNCEMENT-RM.webp"]
+    [
+      "Season 04 Blog",
+      "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blog/body/bo7/bo7-s04-announcement/BO7-SEASON-04-ANNOUNCEMENT-TOUT.jpg"
+    ]
   ],
-  "officialSummary": "Der offizielle Season-04-Blog ist live. Das Roadmap-Bild aus dem Blog wird jetzt im Season-4-Tab verwendet. Launch: Thursday, June 4th at 9AM PT across all platforms."
+  "officialSummary": "Call of Duty: Black Ops 7 and Call of Duty: Warzone Season 04 Content Drop: Everything You Need to Know. Thursday, June 4th at 9AM PT across all platforms."
 }
