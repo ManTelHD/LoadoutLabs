@@ -5,16 +5,15 @@ on:
     paths:
       - ".github/workflows/auto-update-site.yml"
       - "New project 2/tools/update-latest-info.mjs"
+      - "New project 2/meta-fast.js"
+      - "New project 2/loadout-builds.js"
       - "New project 2/season4.js"
       - "New project 2/data/season-watch.json"
       - "New project 2/meta-overrides.css"
       - "New project 2/meta-overrides.js"
       - "netlify-inject-meta-overrides.js"
   schedule:
-    # 19:02 Europe/Berlin during daylight saving time (UTC+2)
-    - cron: "2 17 * * *"
-    # 19:02 Europe/Berlin during standard time (UTC+1)
-    - cron: "2 18 * * *"
+    - cron: "17 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -28,52 +27,43 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - name: Check Berlin update window
-        id: update-window
-        shell: bash
-        run: |
-          if [ "${{ github.event_name }}" != "schedule" ]; then
-            echo "run_update=true" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          berlin_offset="$(TZ=Europe/Berlin date +%z)"
-          schedule="${{ github.event.schedule }}"
-
-          if { [ "$schedule" = "2 17 * * *" ] && [ "$berlin_offset" = "+0200" ]; } || { [ "$schedule" = "2 18 * * *" ] && [ "$berlin_offset" = "+0100" ]; }; then
-            echo "run_update=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "run_update=false" >> "$GITHUB_OUTPUT"
-            echo "Skipping non-19:02 Europe/Berlin schedule ($schedule, offset $berlin_offset)."
-          fi
-
       - name: Check out repository
-        if: steps.update-window.outputs.run_update == 'true'
         uses: actions/checkout@v4
         with:
           ref: main
 
       - name: Sync latest main
-        if: steps.update-window.outputs.run_update == 'true'
         run: git pull --ff-only origin main
 
       - name: Set up Node
-        if: steps.update-window.outputs.run_update == 'true'
         uses: actions/setup-node@v4
         with:
           node-version: "22"
 
       - name: Update latest info
-        if: steps.update-window.outputs.run_update == 'true'
         run: node "New project 2/tools/update-latest-info.mjs"
 
       - name: Refresh site assets
-        if: steps.update-window.outputs.run_update == 'true'
         run: |
           SITE_ASSET_VERSION="auto-$(date -u +%Y%m%d%H%M%S)" node netlify-inject-meta-overrides.js
 
+      - name: Validate generated site data
+        shell: bash
+        run: |
+          set -euo pipefail
+          node <<'NODE'
+          const fs = require('node:fs');
+          const meta = JSON.parse(fs.readFileSync('New project 2/data/wzstats-meta.json', 'utf8'));
+          const html = fs.readFileSync('New project 2/index.html', 'utf8');
+          const warzoneItems = meta.warzoneRanked?.items || [];
+          if (!warzoneItems.length) throw new Error('No Warzone WZStats items were generated.');
+          if (!meta.generatedAt || !meta.generatedAtLabel) throw new Error('Generated timestamp is missing.');
+          if (!html.includes('window.__loadoutLabMetaVersion')) throw new Error('Live cache-bust patch is missing from index.html.');
+          if (!/meta-fast\.js\?v=auto-/.test(html)) throw new Error('meta-fast.js was not versioned with the current auto-update id.');
+          console.log(`Validated ${warzoneItems.length} Warzone meta items; #1 is ${warzoneItems[0].name}.`);
+          NODE
+
       - name: Commit updated site files
-        if: steps.update-window.outputs.run_update == 'true'
         shell: bash
         run: |
           set -euo pipefail
