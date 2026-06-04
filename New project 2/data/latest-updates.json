@@ -1,7 +1,7 @@
 {
-  "schemaVersion": 2,
-  "generatedAt": "2026-06-04T18:35:20.000Z",
-  "generatedAtLabel": "4. Juni 2026 um 20:35 MESZ",
+  "schemaVersion": 1,
+  "generatedAt": "2026-06-04T19:20:03.060Z",
+  "generatedAtLabel": "4. Juni 2026 um 21:20 MESZ",
   "sources": [
     {
       "id": "cod-patchnotes",
@@ -11,110 +11,109 @@
   ],
   "highlights": [
     {
-      "label": "Heute live",
-      "title": "Season 04 ist gestartet",
-      "text": "4. Juni 2026: Season 04 ist live. Black Ops 7 bringt Operation Wall Breaker, fuenf neue oder remasterte Multiplayer-Maps, Rogue Run in Zombies und ein Ranked-SR-Update."
-    },
-    {
-      "label": "Warzone",
-      "title": "Warzone Season 04 Patch Notes",
-      "text": "4. Juni 2026: Warzone Season 04 ist live. Wichtige Punkte sind aktive Anti-Cheat-Massnahmen, Ranked-/Resurgence-Kontext, Win-Streak-Rewards und neue Season-04-Inhalte."
+      "label": "Aktuell",
+      "title": "Call of Duty: Black Ops 7 Season 04 Patch Notes",
+      "text": "3. Juni 2026: Season 04 introduces another massive season of content. Take on Operation Wall Breaker in Endgame, deploy across five new and remastered Multiplayer Maps, fight off the horde in the new Rogue Run game mode in Zombies, and much more arriving tomorrow, June 4th!"
     },
     {
       "label": "Geprueft",
       "title": "Automatisch aktualisiert",
-      "text": "Offizielle Call-of-Duty-Quellen wurden am 4. Juni 2026 um 20:35 MESZ geprueft."
+      "text": "Offizielle Quellen wurden am 4. Juni 2026 um 21:20 MESZ geprueft."
+    },
+    {
+      "label": "Weitere Updates",
+      "title": "Call of Duty: Warzone Season 04 Patch Notes",
+      "text": "3. Juni 2026: With Season 04 now live, we’re building on our anti-cheat systems to better protect players and ensure fair matches across all platforms. The following security measures are now enabled and actively enforced in-game."
     }
   ],
   "updates": [
     {
       "title": "Call of Duty: Black Ops 7 Season 04 Patch Notes",
       "category": "multiplayer",
-      "status": "Offiziell - heute live",
+      "status": "Offiziell",
       "source": "Call of Duty",
       "date": "2026-06-03",
       "dateLabel": "3. Juni 2026",
       "url": "https://www.callofduty.com/patchnotes/2026/06/call-of-duty-black-ops-7-season-04-patch-notes",
       "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/mp/season-04/COD-BO7-S04-PATCH-NOTES-TOUT.jpg",
-      "summary": "Season 04 ist live: Operation Wall Breaker in Endgame, fuenf neue oder remasterte Multiplayer-Maps, Rogue Run in Zombies, neue Waffen, neue Attachments und ein transparenteres Ranked-SR-System."
+      "summary": "Season 04 introduces another massive season of content. Take on Operation Wall Breaker in Endgame, deploy across five new and remastered Multiplayer Maps, fight off the horde in the new Rogue Run game mode in Zombies, and much more arriving tomorrow, June 4th!"
     },
     {
       "title": "Call of Duty: Warzone Season 04 Patch Notes",
       "category": "warzone",
-      "status": "Offiziell - heute live",
+      "status": "Offiziell",
       "source": "Call of Duty",
       "date": "2026-06-03",
       "dateLabel": "3. Juni 2026",
       "url": "https://www.callofduty.com/patchnotes/2026/06/call-of-duty-bo7-warzone-season-04-patch-notes",
       "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/wz/s04/COD-WZ-S04-PATCH-NOTES-TOUT.jpg",
-      "summary": "Warzone Season 04 ist live. Die Patchnotes fokussieren aktive Anti-Cheat-Massnahmen, Ranked-/Resurgence-Anpassungen, Win-Streak-Rewards und neue Season-04-Systemupdates."
+      "summary": "With Season 04 now live, we’re building on our anti-cheat systems to better protect players and ensure fair matches across all platforms. The following security measures are now enabled and actively enforced in-game."
     },
     {
       "title": "Call of Duty: Black Ops 7 Season 03 Patch Notes",
       "category": "multiplayer",
-      "status": "Archiv",
+      "status": "Offiziell",
       "source": "Call of Duty",
       "date": "2026-05-22",
       "dateLabel": "22. Mai 2026",
       "url": "https://www.callofduty.com/patchnotes/2026/04/call-of-duty-black-ops-7-season-03-patch-notes",
       "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/mp/season-03/BO7-S03_PATCHNOTES-BO7.jpg",
-      "summary": "Season 03 bleibt als Archiv sichtbar: Multiplayer-, Zombies-, Ranked- und Endgame-Fixes aus dem Reloaded-Zeitraum, bereinigt fuer den Update-Verlauf."
+      "summary": "MULTIPLAYER Weapons Sniper Rifles This adjustment went live on May 30 with Season 03 Reloaded but was missed in the Patch Notes. We’re adding it here to ensure visibility. Sniper Rifle Adjustments Weapon Adjustments Weapon: Strider 300 Adjustments: Strider..."
     },
     {
       "title": "Call of Duty: Warzone Season 03 Reloaded Patch Notes",
       "category": "warzone",
-      "status": "Archiv",
+      "status": "Offiziell",
       "source": "Call of Duty",
       "date": "2026-05-21",
       "dateLabel": "21. Mai 2026",
       "url": "https://www.callofduty.com/patchnotes/2026/04/call-of-duty-bo7-warzone-season-03-reloaded-patch-notes",
       "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/wz/s03r/BO7-S03R_PATCHNOTES-WZ.jpg",
-      "summary": "Season 03 Reloaded bleibt als Archiv sichtbar: Attachment-Tuning, Build-Diversity, Loot-/Utility-Anpassungen und laufende Warzone-Fixes."
+      "summary": "This update focuses on underutilized attachments, with adjustments aimed at increasing overall build diversity and encouraging players to explore new options."
     },
     {
       "title": "Call of Duty: Warzone Season 03 Patch Notes",
       "category": "warzone",
-      "status": "Archiv",
+      "status": "Offiziell",
       "source": "Call of Duty",
       "date": "2026-04-21",
       "dateLabel": "21. April 2026",
       "url": "https://www.callofduty.com/patchnotes/2026/04/call-of-duty-bo7-warzone-season-03-patch-notes",
       "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/wz/s03/BO7-S03_PATCHNOTES-WZ.jpg",
-      "summary": "Season 03 Archiv: Big-Map-Rotation, Ranked-Play-Kontext, Exotic-Weapon-Rotation und weitere Warzone-Systemupdates."
+      "summary": "We’re refreshing the Exotic Weapon lineup in Black Ops Royale with 3 new additions to keep gameplay feeling dynamic and distinct. Additional Exotic Weapon updates are planned throughout the chapter."
     },
     {
       "title": "Call of Duty: Black Ops 7 Season 02 Patch Notes",
       "category": "multiplayer",
-      "status": "Archiv",
+      "status": "Offiziell",
       "source": "Call of Duty",
       "date": "2026-03-26",
       "dateLabel": "26. März 2026",
       "url": "https://www.callofduty.com/patchnotes/2026/02/call-of-duty-black-ops-7-season-02-patch-notes",
       "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/mp/season-02/BO7-S02_PATCHNOTES-BO7.jpg",
-      "summary": "Season 02 Archiv: aeltere Multiplayer-, Zombies- und Stabilitaetsfixes bleiben nachvollziehbar."
+      "summary": "Addressed an issue where the Mystery Box would appear broken following time travel after drawing all weapons."
     },
     {
       "title": "Call of Duty: Warzone Season 02 Reloaded Patch Notes",
       "category": "warzone",
-      "status": "Archiv",
+      "status": "Offiziell",
       "source": "Call of Duty",
       "date": "2026-03-10",
       "dateLabel": "10. März 2026",
       "url": "https://www.callofduty.com/patchnotes/2026/03/call-of-duty-bo7-warzone-season-02-reloaded-patch-notes",
       "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/wz/s02r/BO7-S02R_PATCHNOTES-WZ.jpg",
-      "summary": "Season 02 Reloaded Archiv: Warzone-Anpassungen an Bedienung, Loot, Modi und laufenden Gameplay-Fixes."
+      "summary": "The Emotes & Sprays selection wheel experience has been improved when using a mouse to select desired Emotes of Sprays."
     },
     {
       "title": "Call of Duty: Warzone Season 02 Patch Notes",
       "category": "warzone",
-      "status": "Archiv",
+      "status": "Offiziell",
       "source": "Call of Duty",
       "date": "2026-03-03",
       "dateLabel": "3. März 2026",
       "url": "https://www.callofduty.com/patchnotes/2026/02/call-of-duty-bo7-warzone-season-02-patch-notes",
       "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/wz/s02/wz_02_tout_patch_notes.jpg",
-      "summary": "Season 02 Archiv: Iron Gauntlet Beta, Battle-Royale-Anpassungen und weitere Warzone-Systemupdates."
+      "summary": "Iron Gauntlet [Beta] is a new competitive mode in Call of Duty: #Warzone that introduces a more demanding take on Battle Royale built around decision-making and mechanical skill."
     }
-  ],
-  "sourcePolicy": "Die Website laedt diese Datei beim Seitenaufruf mit cache: no-store, damit der sichtbare Updates-Bereich nicht am statischen HTML haengen bleibt."
+  ]
 }
