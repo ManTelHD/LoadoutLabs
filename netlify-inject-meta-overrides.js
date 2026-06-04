@@ -6,6 +6,7 @@ let html = fs.readFileSync(htmlPath, "utf8");
 
 const buildVersion = process.env.SITE_ASSET_VERSION || process.env.COMMIT_REF || process.env.GITHUB_SHA || "";
 const versionSuffix = buildVersion.replace(/[^a-zA-Z0-9._-]/g, "").slice(0, 40);
+const runtimeVersion = versionSuffix || "site-live";
 const withVersion = (file, fallbackVersion) => `${file}?v=${versionSuffix || fallbackVersion}`;
 
 const activeScripts = [
@@ -71,7 +72,26 @@ for (const name of scriptNames) {
   html = html.replace(new RegExp(`\s*<script[^>]+src=["'][^"']*${escapeRegExp(name)}[^"']*["'][^>]*><\/script>`, "gi"), "");
 }
 
+html = html.replace(/\s*<script>\s*window\.__loadoutLabMetaVersion[\s\S]*?<\/script>/gi, "");
+
+const cachePatch = `    <script>
+      window.__loadoutLabMetaVersion = ${JSON.stringify(runtimeVersion)};
+      (function () {
+        const originalFetch = window.fetch ? window.fetch.bind(window) : null;
+        if (!originalFetch) return;
+        window.fetch = function (input, init) {
+          const requestUrl = typeof input === "string" ? input : input && input.url;
+          if (requestUrl && (/data\/wzstats-meta\.json|data\/cod-weapons\.json|loadout-builds\.js/).test(requestUrl)) {
+            const nextUrl = new URL(requestUrl, window.location.href);
+            nextUrl.searchParams.set("fresh", window.__loadoutLabMetaVersion);
+            nextUrl.searchParams.set("t", String(Date.now()));
+            return originalFetch(nextUrl.toString(), Object.assign({}, init, { cache: "no-store" }));
+          }
+          return originalFetch(input, init);
+        };
+      }());
+    </script>`;
 const scriptBlock = activeScripts.map((src) => `    <script src="${src}" defer></script>`).join("\n");
-html = html.replace(/\s*<\/body>/i, `\n${scriptBlock}\n  </body>`);
+html = html.replace(/\s*<\/body>/i, `\n${cachePatch}\n${scriptBlock}\n  </body>`);
 
 fs.writeFileSync(htmlPath, html);
