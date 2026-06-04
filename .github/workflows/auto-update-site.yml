@@ -13,6 +13,7 @@ on:
       - "New project 2/meta-overrides.js"
       - "netlify-inject-meta-overrides.js"
   schedule:
+    # WZStats can update after the evening check, so keep the site fresh hourly.
     - cron: "17 * * * *"
   workflow_dispatch:
 
