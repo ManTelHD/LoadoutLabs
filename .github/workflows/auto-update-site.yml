@@ -44,6 +44,41 @@ jobs:
       - name: Update latest info
         run: node "New project 2/tools/update-latest-info.mjs"
 
+      - name: Normalize WZStats ranks and scores
+        shell: bash
+        run: |
+          set -euo pipefail
+          node <<'NODE'
+          const fs = require('node:fs');
+          const file = 'New project 2/data/wzstats-meta.json';
+          const data = JSON.parse(fs.readFileSync(file, 'utf8'));
+
+          function scoreFor(tier, position) {
+            if (tier === 'META') return Math.max(94, 101 - position);
+            if (tier === 'A') return Math.max(82, 92 - position);
+            if (tier === 'B') return Math.max(72, 82 - position);
+            if (tier === 'C') return Math.max(62, 72 - position);
+            if (tier === 'D') return Math.max(52, 62 - position);
+            return Math.max(50, 90 - position);
+          }
+
+          function normalizeList(list) {
+            if (!list?.items?.length) return;
+            list.items.forEach((item, index) => {
+              const position = index + 1;
+              const tier = item.tier || 'META';
+              item.position = position;
+              item.rankLabel = `${tier} #${position}`;
+              item.score = scoreFor(tier, position);
+              item.scoreLabel = String(item.score);
+            });
+          }
+
+          normalizeList(data.warzoneRanked);
+          normalizeList(data.bo7Ranked);
+          fs.writeFileSync(file, `${JSON.stringify(data, null, 2)}\n`);
+          NODE
+
       - name: Refresh site assets
         run: |
           SITE_ASSET_VERSION="auto-$(date -u +%Y%m%d%H%M%S)" node netlify-inject-meta-overrides.js
@@ -61,6 +96,13 @@ jobs:
           if (!meta.generatedAt || !meta.generatedAtLabel) throw new Error('Generated timestamp is missing.');
           if (!html.includes('window.__loadoutLabMetaVersion')) throw new Error('Live cache-bust patch is missing from index.html.');
           if (!/meta-fast\.js\?v=auto-/.test(html)) throw new Error('meta-fast.js was not versioned with the current auto-update id.');
+          warzoneItems.forEach((item, index) => {
+            const expected = index + 1;
+            if (item.position !== expected) throw new Error(`${item.name} has position ${item.position}, expected ${expected}.`);
+            if (!Number.isFinite(Number(item.score))) throw new Error(`${item.name} is missing a numeric score.`);
+          });
+          const firstAIndex = warzoneItems.findIndex((item) => item.tier === 'A');
+          if (firstAIndex !== -1 && warzoneItems[firstAIndex].position !== firstAIndex + 1) throw new Error('A-Tier numbering restarted instead of continuing globally.');
           console.log(`Validated ${warzoneItems.length} Warzone meta items; #1 is ${warzoneItems[0].name}.`);
           NODE
 
