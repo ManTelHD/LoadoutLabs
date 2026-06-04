@@ -2,10 +2,12 @@
   const STYLE_ID = "site-ui-20260529-style";
   const tabOrder = ["mw4-info", "season4-info", "updates"];
   const tabLabels = {
-    "mw4-info": { text: "MW4", kicker: "Gerüchte" },
+    "mw4-info": { text: "MW4", kicker: "Geruechte" },
     "season4-info": { text: "Season 4", kicker: "Neu" },
     updates: { text: "Updates", kicker: "News" },
   };
+  let latestUpdates = null;
+  let latestUpdatesPromise = null;
 
   const css = `
     body .tier-first {
@@ -404,10 +406,102 @@
     document.body?.classList.add("site-interaction-ready");
   }
 
+  function escapeHtml(value) {
+    return String(value ?? "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  function updateCardHtml(update, index) {
+    const status = index < 2 ? "Offiziell - neu" : update.status || "Offiziell";
+    const title = escapeHtml(update.title);
+    return `
+      <a class="update-card official" href="${escapeHtml(update.url)}" target="_blank" rel="noreferrer">
+        <img src="${escapeHtml(update.imageUrl || "assets/cod-loadout-hero.png")}" alt="${title}" loading="lazy">
+        <div class="update-card-content">
+          <span class="status-pill">${escapeHtml(status)}</span>
+          <time datetime="${escapeHtml(update.date)}">${escapeHtml(update.dateLabel || update.date)}</time>
+          <h3>${title}</h3>
+          <div class="update-detail">
+            <p>${escapeHtml(update.summary)}</p>
+            <strong>Offizielle Quelle oeffnen</strong>
+          </div>
+        </div>
+      </a>`;
+  }
+
+  function renderLatestUpdates(data) {
+    if (!data || !Array.isArray(data.updates)) return;
+    const stamp = data.generatedAtLabel || "";
+    const highlights = Array.isArray(data.highlights) ? data.highlights : [];
+
+    document.querySelectorAll(".updated-note").forEach((note) => {
+      note.textContent = stamp ? `Aktualisiert: ${stamp}` : note.textContent;
+    });
+
+    document.querySelectorAll(".updates-hero span").forEach((span) => {
+      if (/stand:/i.test(span.textContent || "")) span.textContent = stamp ? `Stand: ${stamp}` : span.textContent;
+    });
+
+    const priority = document.querySelector(".update-priority-grid");
+    if (priority && highlights.length) {
+      priority.innerHTML = highlights.slice(0, 3).map((item) => `
+        <article>
+          <span>${escapeHtml(item.label)}</span>
+          <strong>${escapeHtml(item.title)}</strong>
+          <p>${escapeHtml(item.text)}</p>
+        </article>`).join("");
+    }
+
+    const board = document.querySelector(".update-board");
+    if (board) {
+      board.innerHTML = data.updates.map(updateCardHtml).join("");
+    }
+
+    const timeline = document.querySelector(".timeline");
+    if (timeline) {
+      timeline.innerHTML = data.updates.slice(0, 4).map((update) => `
+        <article>
+          <time datetime="${escapeHtml(update.date)}">${escapeHtml(update.dateLabel || update.date)}</time>
+          <h3>${escapeHtml(update.title)}</h3>
+          <p>${escapeHtml(update.summary)}</p>
+        </article>`).join("");
+    }
+  }
+
+  function loadLatestUpdates() {
+    if (latestUpdates) {
+      renderLatestUpdates(latestUpdates);
+      return latestUpdates;
+    }
+    if (latestUpdatesPromise) return latestUpdatesPromise;
+
+    latestUpdatesPromise = fetch(`data/latest-updates.json?v=${Date.now()}`, { cache: "no-store" })
+      .then((response) => {
+        if (!response.ok) throw new Error(`Updates HTTP ${response.status}`);
+        return response.json();
+      })
+      .then((data) => {
+        latestUpdates = data;
+        renderLatestUpdates(data);
+        return data;
+      })
+      .catch((error) => {
+        latestUpdatesPromise = null;
+        console.warn("Loadout Lab updates konnten nicht aktualisiert werden", error);
+        return null;
+      });
+    return latestUpdatesPromise;
+  }
+
   function refreshUi() {
     installStyle();
     reorderPrimaryTabs();
     clearStuckLoaders();
+    if (latestUpdates) renderLatestUpdates(latestUpdates);
+    else loadLatestUpdates();
   }
 
   function bindEvents() {
@@ -420,6 +514,7 @@
     bindEvents();
     refreshUi();
     window.setTimeout(refreshUi, 300);
+    window.setTimeout(loadLatestUpdates, 900);
     window.setTimeout(clearStuckLoaders, 500);
     window.setTimeout(clearStuckLoaders, 1500);
     window.setTimeout(clearStuckLoaders, 3500);
