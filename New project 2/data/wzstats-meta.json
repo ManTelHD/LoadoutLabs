@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-04T19:31:15.935Z",
-  "generatedAtLabel": "4. Juni 2026 um 21:31 MESZ",
+  "generatedAt": "2026-06-04T19:36:35.957Z",
+  "generatedAtLabel": "4. Juni 2026 um 21:36 MESZ",
   "source": "WZStats",
   "sourceUrl": "https://wzstats.gg/",
   "publicEndpoint": "https://app.wzstats.gg/wz2/weapons/meta",
@@ -24,7 +24,7 @@
         "tierLabel": "Meta",
         "position": 1,
         "rankLabel": "META #1",
-        "scoreLabel": "Meta",
+        "scoreLabel": "100",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#ds20-mirage",
@@ -35,7 +35,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Long Range"
-        ]
+        ],
+        "score": 100
       },
       {
         "id": "carbon-57",
@@ -46,7 +47,7 @@
         "tierLabel": "Meta",
         "position": 2,
         "rankLabel": "META #2",
-        "scoreLabel": "Meta",
+        "scoreLabel": "99",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#carbon-57",
@@ -57,7 +58,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ]
+        ],
+        "score": 99
       },
       {
         "id": "mxr-17",
@@ -68,7 +70,7 @@
         "tierLabel": "Meta",
         "position": 3,
         "rankLabel": "META #3",
-        "scoreLabel": "Meta",
+        "scoreLabel": "98",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#mxr-17",
@@ -79,7 +81,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Long Range"
-        ]
+        ],
+        "score": 98
       },
       {
         "id": "dravec-45",
@@ -90,7 +93,7 @@
         "tierLabel": "Meta",
         "position": 4,
         "rankLabel": "META #4",
-        "scoreLabel": "Meta",
+        "scoreLabel": "97",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#dravec-45",
@@ -101,7 +104,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ]
+        ],
+        "score": 97
       },
       {
         "id": "ak-27",
@@ -112,7 +116,7 @@
         "tierLabel": "Meta",
         "position": 5,
         "rankLabel": "META #5",
-        "scoreLabel": "Meta",
+        "scoreLabel": "96",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#ak-27",
@@ -123,7 +127,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Long Range"
-        ]
+        ],
+        "score": 96
       },
       {
         "id": "kogot-7",
@@ -134,7 +139,7 @@
         "tierLabel": "Meta",
         "position": 6,
         "rankLabel": "META #6",
-        "scoreLabel": "Meta",
+        "scoreLabel": "95",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#kogot-7",
@@ -145,7 +150,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ]
+        ],
+        "score": 95
       },
       {
         "id": "voyak-kt-3",
@@ -154,9 +160,9 @@
         "role": "Long Range",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 1,
-        "rankLabel": "A #1",
-        "scoreLabel": "A-Tier",
+        "position": 7,
+        "rankLabel": "A #7",
+        "scoreLabel": "85",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#voyak-kt-3",
@@ -167,7 +173,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Long Range"
-        ]
+        ],
+        "score": 85
       },
       {
         "id": "vst",
@@ -176,9 +183,9 @@
         "role": "Close Range",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 2,
-        "rankLabel": "A #2",
-        "scoreLabel": "A-Tier",
+        "position": 8,
+        "rankLabel": "A #8",
+        "scoreLabel": "84",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#vst",
@@ -189,7 +196,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ]
+        ],
+        "score": 84
       },
       {
         "id": "mk35-isr",
@@ -198,9 +206,9 @@
         "role": "Long Range",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 3,
-        "rankLabel": "A #3",
-        "scoreLabel": "A-Tier",
+        "position": 9,
+        "rankLabel": "A #9",
+        "scoreLabel": "83",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#mk35-isr",
@@ -211,7 +219,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Long Range"
-        ]
+        ],
+        "score": 83
       },
       {
         "id": "peacekeeper-mk1",
@@ -220,9 +229,9 @@
         "role": "Long Range",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 4,
-        "rankLabel": "A #4",
-        "scoreLabel": "A-Tier",
+        "position": 10,
+        "rankLabel": "A #10",
+        "scoreLabel": "82",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#peacekeeper-mk1",
@@ -233,7 +242,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Long Range"
-        ]
+        ],
+        "score": 82
       },
       {
         "id": "ryden-45k",
@@ -242,9 +252,9 @@
         "role": "Close Range",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 5,
-        "rankLabel": "A #5",
-        "scoreLabel": "A-Tier",
+        "position": 11,
+        "rankLabel": "A #11",
+        "scoreLabel": "82",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#ryden-45k",
@@ -255,7 +265,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ]
+        ],
+        "score": 82
       },
       {
         "id": "sturmwolf-45",
@@ -264,9 +275,9 @@
         "role": "Close Range",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 6,
-        "rankLabel": "A #6",
-        "scoreLabel": "A-Tier",
+        "position": 12,
+        "rankLabel": "A #12",
+        "scoreLabel": "82",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#sturmwolf-45",
@@ -277,7 +288,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ]
+        ],
+        "score": 82
       },
       {
         "id": "mk78",
@@ -286,9 +298,9 @@
         "role": "Long Range",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 7,
-        "rankLabel": "A #7",
-        "scoreLabel": "A-Tier",
+        "position": 13,
+        "rankLabel": "A #13",
+        "scoreLabel": "82",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#mk78",
@@ -299,7 +311,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Long Range"
-        ]
+        ],
+        "score": 82
       },
       {
         "id": "egrt-17",
@@ -308,9 +321,9 @@
         "role": "Long Range",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 8,
-        "rankLabel": "A #8",
-        "scoreLabel": "A-Tier",
+        "position": 14,
+        "rankLabel": "A #14",
+        "scoreLabel": "82",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#egrt-17",
@@ -321,7 +334,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Long Range"
-        ]
+        ],
+        "score": 82
       },
       {
         "id": "mpc-25",
@@ -330,9 +344,9 @@
         "role": "Close Range",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 9,
-        "rankLabel": "A #9",
-        "scoreLabel": "A-Tier",
+        "position": 15,
+        "rankLabel": "A #15",
+        "scoreLabel": "82",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#mpc-25",
@@ -343,7 +357,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ]
+        ],
+        "score": 82
       },
       {
         "id": "m15-mod-0",
@@ -352,9 +367,9 @@
         "role": "Long Range",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 10,
-        "rankLabel": "A #10",
-        "scoreLabel": "A-Tier",
+        "position": 16,
+        "rankLabel": "A #16",
+        "scoreLabel": "82",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#m15-mod-0",
@@ -365,7 +380,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Long Range"
-        ]
+        ],
+        "score": 82
       },
       {
         "id": "rev-46",
@@ -374,9 +390,9 @@
         "role": "Close Range",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 11,
-        "rankLabel": "A #11",
-        "scoreLabel": "A-Tier",
+        "position": 17,
+        "rankLabel": "A #17",
+        "scoreLabel": "82",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#rev-46",
@@ -387,7 +403,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ]
+        ],
+        "score": 82
       },
       {
         "id": "razor-9mm",
@@ -396,9 +413,9 @@
         "role": "Close Range",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 12,
-        "rankLabel": "A #12",
-        "scoreLabel": "A-Tier",
+        "position": 18,
+        "rankLabel": "A #18",
+        "scoreLabel": "82",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#razor-9mm",
@@ -409,7 +426,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ]
+        ],
+        "score": 82
       },
       {
         "id": "maddox-rfb",
@@ -418,9 +436,9 @@
         "role": "Long Range",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 13,
-        "rankLabel": "A #13",
-        "scoreLabel": "A-Tier",
+        "position": 19,
+        "rankLabel": "A #19",
+        "scoreLabel": "82",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#maddox-rfb",
@@ -431,7 +449,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Long Range"
-        ]
+        ],
+        "score": 82
       },
       {
         "id": "x9-maverick",
@@ -440,9 +459,9 @@
         "role": "Long Range",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 14,
-        "rankLabel": "A #14",
-        "scoreLabel": "A-Tier",
+        "position": 20,
+        "rankLabel": "A #20",
+        "scoreLabel": "82",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#x9-maverick",
@@ -453,7 +472,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Long Range"
-        ]
+        ],
+        "score": 82
       },
       {
         "id": "m8a1",
@@ -462,9 +482,9 @@
         "role": "Sniper",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 15,
-        "rankLabel": "A #15",
-        "scoreLabel": "A-Tier",
+        "position": 21,
+        "rankLabel": "A #21",
+        "scoreLabel": "82",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#m8a1",
@@ -475,7 +495,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Sniper"
-        ]
+        ],
+        "score": 82
       },
       {
         "id": "hawker-hx",
@@ -484,9 +505,9 @@
         "role": "Sniper",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 16,
-        "rankLabel": "A #16",
-        "scoreLabel": "A-Tier",
+        "position": 22,
+        "rankLabel": "A #22",
+        "scoreLabel": "82",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#hawker-hx",
@@ -497,7 +518,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Sniper"
-        ]
+        ],
+        "score": 82
       },
       {
         "id": "vs-recon",
@@ -506,9 +528,9 @@
         "role": "Sniper",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 17,
-        "rankLabel": "A #17",
-        "scoreLabel": "A-Tier",
+        "position": 23,
+        "rankLabel": "A #23",
+        "scoreLabel": "82",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#vs-recon",
@@ -519,7 +541,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Sniper"
-        ]
+        ],
+        "score": 82
       },
       {
         "id": "strider-300",
@@ -528,9 +551,9 @@
         "role": "Sniper",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 18,
-        "rankLabel": "A #18",
-        "scoreLabel": "A-Tier",
+        "position": 24,
+        "rankLabel": "A #24",
+        "scoreLabel": "82",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#strider-300",
@@ -541,7 +564,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Sniper"
-        ]
+        ],
+        "score": 82
       },
       {
         "id": "swordfish-a1",
@@ -550,9 +574,9 @@
         "role": "Sniper",
         "tier": "B",
         "tierLabel": "B-Tier",
-        "position": 1,
-        "rankLabel": "B #1",
-        "scoreLabel": "B-Tier",
+        "position": 25,
+        "rankLabel": "B #25",
+        "scoreLabel": "72",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#swordfish-a1",
@@ -563,7 +587,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Sniper"
-        ]
+        ],
+        "score": 72
       },
       {
         "id": "sokol-545",
@@ -572,9 +597,9 @@
         "role": "Long Range",
         "tier": "B",
         "tierLabel": "B-Tier",
-        "position": 2,
-        "rankLabel": "B #2",
-        "scoreLabel": "B-Tier",
+        "position": 26,
+        "rankLabel": "B #26",
+        "scoreLabel": "72",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#sokol-545",
@@ -585,7 +610,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Long Range"
-        ]
+        ],
+        "score": 72
       },
       {
         "id": "rk-9",
@@ -594,9 +620,9 @@
         "role": "Close Range",
         "tier": "B",
         "tierLabel": "B-Tier",
-        "position": 3,
-        "rankLabel": "B #3",
-        "scoreLabel": "B-Tier",
+        "position": 27,
+        "rankLabel": "B #27",
+        "scoreLabel": "72",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#rk-9",
@@ -607,7 +633,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ]
+        ],
+        "score": 72
       },
       {
         "id": "xm325",
@@ -616,9 +643,9 @@
         "role": "Long Range",
         "tier": "B",
         "tierLabel": "B-Tier",
-        "position": 4,
-        "rankLabel": "B #4",
-        "scoreLabel": "B-Tier",
+        "position": 28,
+        "rankLabel": "B #28",
+        "scoreLabel": "72",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#xm325",
@@ -629,7 +656,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Long Range"
-        ]
+        ],
+        "score": 72
       },
       {
         "id": "xr-3-ion",
@@ -638,9 +666,9 @@
         "role": "Sniper",
         "tier": "B",
         "tierLabel": "B-Tier",
-        "position": 5,
-        "rankLabel": "B #5",
-        "scoreLabel": "B-Tier",
+        "position": 29,
+        "rankLabel": "B #29",
+        "scoreLabel": "72",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#xr-3-ion",
@@ -651,7 +679,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Sniper"
-        ]
+        ],
+        "score": 72
       },
       {
         "id": "shadow-sk",
@@ -660,9 +689,9 @@
         "role": "Sniper",
         "tier": "C",
         "tierLabel": "C-Tier",
-        "position": 1,
-        "rankLabel": "C #1",
-        "scoreLabel": "C-Tier",
+        "position": 30,
+        "rankLabel": "C #30",
+        "scoreLabel": "62",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#shadow-sk",
@@ -673,7 +702,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Sniper"
-        ]
+        ],
+        "score": 62
       },
       {
         "id": "m34-novaline",
@@ -682,9 +712,9 @@
         "role": "Sniper",
         "tier": "C",
         "tierLabel": "C-Tier",
-        "position": 2,
-        "rankLabel": "C #2",
-        "scoreLabel": "C-Tier",
+        "position": 31,
+        "rankLabel": "C #31",
+        "scoreLabel": "62",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#m34-novaline",
@@ -695,7 +725,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Sniper"
-        ]
+        ],
+        "score": 62
       },
       {
         "id": "warden-308",
@@ -704,9 +735,9 @@
         "role": "Sniper",
         "tier": "C",
         "tierLabel": "C-Tier",
-        "position": 3,
-        "rankLabel": "C #3",
-        "scoreLabel": "C-Tier",
+        "position": 32,
+        "rankLabel": "C #32",
+        "scoreLabel": "62",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#warden-308",
@@ -717,7 +748,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Sniper"
-        ]
+        ],
+        "score": 62
       },
       {
         "id": "1911",
@@ -726,9 +758,9 @@
         "role": "Close Range",
         "tier": "C",
         "tierLabel": "C-Tier",
-        "position": 4,
-        "rankLabel": "C #4",
-        "scoreLabel": "C-Tier",
+        "position": 33,
+        "rankLabel": "C #33",
+        "scoreLabel": "62",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#1911",
@@ -739,7 +771,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ]
+        ],
+        "score": 62
       },
       {
         "id": "coda-9",
@@ -748,9 +781,9 @@
         "role": "Close Range",
         "tier": "C",
         "tierLabel": "C-Tier",
-        "position": 5,
-        "rankLabel": "C #5",
-        "scoreLabel": "C-Tier",
+        "position": 34,
+        "rankLabel": "C #34",
+        "scoreLabel": "62",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#coda-9",
@@ -761,7 +794,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ]
+        ],
+        "score": 62
       },
       {
         "id": "velox-57",
@@ -770,9 +804,9 @@
         "role": "Close Range",
         "tier": "C",
         "tierLabel": "C-Tier",
-        "position": 6,
-        "rankLabel": "C #6",
-        "scoreLabel": "C-Tier",
+        "position": 35,
+        "rankLabel": "C #35",
+        "scoreLabel": "62",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#velox-57",
@@ -783,7 +817,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ]
+        ],
+        "score": 62
       },
       {
         "id": "jäger-45",
@@ -792,9 +827,9 @@
         "role": "Close Range",
         "tier": "C",
         "tierLabel": "C-Tier",
-        "position": 7,
-        "rankLabel": "C #7",
-        "scoreLabel": "C-Tier",
+        "position": 36,
+        "rankLabel": "C #36",
+        "scoreLabel": "62",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#j%C3%A4ger-45",
@@ -805,7 +840,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ]
+        ],
+        "score": 62
       },
       {
         "id": "arc-m1",
@@ -814,9 +850,9 @@
         "role": "Launcher",
         "tier": "D",
         "tierLabel": "D-Tier",
-        "position": 1,
-        "rankLabel": "D #1",
-        "scoreLabel": "D-Tier",
+        "position": 37,
+        "rankLabel": "D #37",
+        "scoreLabel": "52",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#arc-m1",
@@ -827,7 +863,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Launcher"
-        ]
+        ],
+        "score": 52
       },
       {
         "id": "flatline-mkii",
@@ -836,9 +873,9 @@
         "role": "Melee",
         "tier": "D",
         "tierLabel": "D-Tier",
-        "position": 2,
-        "rankLabel": "D #2",
-        "scoreLabel": "D-Tier",
+        "position": 38,
+        "rankLabel": "D #38",
+        "scoreLabel": "52",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#flatline-mkii",
@@ -849,7 +886,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Melee"
-        ]
+        ],
+        "score": 52
       },
       {
         "id": "aarow-109",
@@ -858,9 +896,9 @@
         "role": "Launcher",
         "tier": "D",
         "tierLabel": "D-Tier",
-        "position": 3,
-        "rankLabel": "D #3",
-        "scoreLabel": "D-Tier",
+        "position": 39,
+        "rankLabel": "D #39",
+        "scoreLabel": "52",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#aarow-109",
@@ -871,7 +909,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Launcher"
-        ]
+        ],
+        "score": 52
       },
       {
         "id": "knife-bo7",
@@ -880,9 +919,9 @@
         "role": "Melee",
         "tier": "D",
         "tierLabel": "D-Tier",
-        "position": 4,
-        "rankLabel": "D #4",
-        "scoreLabel": "D-Tier",
+        "position": 40,
+        "rankLabel": "D #40",
+        "scoreLabel": "52",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#knife-bo7",
@@ -893,7 +932,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Melee"
-        ]
+        ],
+        "score": 52
       },
       {
         "id": "ballistic-knife",
@@ -902,9 +942,9 @@
         "role": "Melee",
         "tier": "D",
         "tierLabel": "D-Tier",
-        "position": 5,
-        "rankLabel": "D #5",
-        "scoreLabel": "D-Tier",
+        "position": 41,
+        "rankLabel": "D #41",
+        "scoreLabel": "52",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#ballistic-knife",
@@ -915,7 +955,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Melee"
-        ]
+        ],
+        "score": 52
       },
       {
         "id": "nx-ravager",
@@ -924,9 +965,9 @@
         "role": "Special",
         "tier": "D",
         "tierLabel": "D-Tier",
-        "position": 6,
-        "rankLabel": "D #6",
-        "scoreLabel": "D-Tier",
+        "position": 42,
+        "rankLabel": "D #42",
+        "scoreLabel": "52",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#nx-ravager",
@@ -937,7 +978,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Special"
-        ]
+        ],
+        "score": 52
       },
       {
         "id": "h311-saw",
@@ -946,9 +988,9 @@
         "role": "Melee",
         "tier": "D",
         "tierLabel": "D-Tier",
-        "position": 7,
-        "rankLabel": "D #7",
-        "scoreLabel": "D-Tier",
+        "position": 43,
+        "rankLabel": "D #43",
+        "scoreLabel": "52",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#h311-saw",
@@ -959,7 +1001,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Melee"
-        ]
+        ],
+        "score": 52
       },
       {
         "id": "gdl-havoc",
@@ -968,9 +1011,9 @@
         "role": "Special",
         "tier": "D",
         "tierLabel": "D-Tier",
-        "position": 8,
-        "rankLabel": "D #8",
-        "scoreLabel": "D-Tier",
+        "position": 44,
+        "rankLabel": "D #44",
+        "scoreLabel": "52",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#gdl-havoc",
@@ -981,7 +1024,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Special"
-        ]
+        ],
+        "score": 52
       },
       {
         "id": "siren",
@@ -990,9 +1034,9 @@
         "role": "Special",
         "tier": "D",
         "tierLabel": "D-Tier",
-        "position": 9,
-        "rankLabel": "D #9",
-        "scoreLabel": "D-Tier",
+        "position": 45,
+        "rankLabel": "D #45",
+        "scoreLabel": "52",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#siren",
@@ -1003,7 +1047,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Special"
-        ]
+        ],
+        "score": 52
       },
       {
         "id": "katana",
@@ -1012,9 +1057,9 @@
         "role": "Melee",
         "tier": "D",
         "tierLabel": "D-Tier",
-        "position": 10,
-        "rankLabel": "D #10",
-        "scoreLabel": "D-Tier",
+        "position": 46,
+        "rankLabel": "D #46",
+        "scoreLabel": "52",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#katana",
@@ -1025,7 +1070,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Melee"
-        ]
+        ],
+        "score": 52
       },
       {
         "id": "cbrs-3",
@@ -1034,9 +1080,9 @@
         "role": "Close Range",
         "tier": "D",
         "tierLabel": "D-Tier",
-        "position": 11,
-        "rankLabel": "D #11",
-        "scoreLabel": "D-Tier",
+        "position": 47,
+        "rankLabel": "D #47",
+        "scoreLabel": "52",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#cbrs-3",
@@ -1047,7 +1093,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ]
+        ],
+        "score": 52
       },
       {
         "id": "krs-762",
@@ -1056,9 +1103,9 @@
         "role": "Sniper",
         "tier": "D",
         "tierLabel": "D-Tier",
-        "position": 12,
-        "rankLabel": "D #12",
-        "scoreLabel": "D-Tier",
+        "position": 48,
+        "rankLabel": "D #48",
+        "scoreLabel": "52",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#krs-762",
@@ -1069,7 +1116,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Sniper"
-        ]
+        ],
+        "score": 52
       }
     ]
   },
@@ -1091,7 +1139,7 @@
         "tierLabel": "Meta",
         "position": 1,
         "rankLabel": "META #1",
-        "scoreLabel": "Meta",
+        "scoreLabel": "100",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#m15-mod-0",
@@ -1102,7 +1150,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Long Range"
-        ]
+        ],
+        "score": 100
       },
       {
         "id": "mpc-25",
@@ -1113,7 +1162,7 @@
         "tierLabel": "Meta",
         "position": 2,
         "rankLabel": "META #2",
-        "scoreLabel": "Meta",
+        "scoreLabel": "99",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#mpc-25",
@@ -1124,7 +1173,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ]
+        ],
+        "score": 99
       },
       {
         "id": "dravec-45",
@@ -1135,7 +1185,7 @@
         "tierLabel": "Meta",
         "position": 3,
         "rankLabel": "META #3",
-        "scoreLabel": "Meta",
+        "scoreLabel": "98",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#dravec-45",
@@ -1146,7 +1196,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ]
+        ],
+        "score": 98
       },
       {
         "id": "vs-recon",
@@ -1157,7 +1208,7 @@
         "tierLabel": "Meta",
         "position": 4,
         "rankLabel": "META #4",
-        "scoreLabel": "Meta",
+        "scoreLabel": "97",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#vs-recon",
@@ -1168,7 +1219,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Sniper"
-        ]
+        ],
+        "score": 97
       },
       {
         "id": "jäger-45",
@@ -1179,7 +1231,7 @@
         "tierLabel": "Meta",
         "position": 5,
         "rankLabel": "META #5",
-        "scoreLabel": "Meta",
+        "scoreLabel": "96",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#j%C3%A4ger-45",
@@ -1190,7 +1242,8 @@
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ]
+        ],
+        "score": 96
       }
     ]
   }
