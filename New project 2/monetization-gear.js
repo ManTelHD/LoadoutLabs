@@ -10,6 +10,12 @@
     .partner-card small{color:var(--dim);font-weight:800;line-height:1.45}
     .partner-note{margin:.85rem 0 0;color:var(--dim);font-size:.95rem;line-height:1.6}
     .partner-note strong{color:var(--amber)}
+    .tier-first .section-heading,.tier-first .primary-mode-switch,.tier-first .loadout-subnav-row{width:100%!important;max-width:none!important}
+    .tier-first .section-heading{display:grid!important;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:1rem;margin-bottom:.75rem!important}
+    .tier-first .section-heading h1{max-width:none!important}
+    .tier-first .updated-note{justify-self:end;margin:0!important;white-space:nowrap}
+    .tier-first .primary-mode-switch{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+    .tier-first .loadout-subnav-row{grid-template-columns:minmax(0,1fr) auto!important}
     .meta-ad-layout{display:grid;grid-template-columns:minmax(8.5rem,12rem) minmax(0,1fr) minmax(8.5rem,12rem);gap:1rem;align-items:start;width:100%;margin-top:.7rem}
     .meta-ad-layout>.weapon-dashboard{grid-column:2;min-width:0}
     .meta-side-ad{position:sticky;top:5rem;overflow:hidden;display:grid;align-content:space-between;gap:.85rem;min-height:clamp(24rem,58vh,42rem);border:1px solid rgba(240,173,55,.42);border-radius:.65rem;background:linear-gradient(160deg,rgba(240,173,55,.18),transparent 38%),rgba(10,13,12,.96);box-shadow:0 18px 48px rgba(0,0,0,.24);padding:.85rem;text-decoration:none}
@@ -25,7 +31,7 @@
     @media(max-width:1040px){.support-section .partner-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media(max-width:1180px){.meta-ad-layout{grid-template-columns:minmax(7rem,9rem) minmax(0,1fr) minmax(7rem,9rem);gap:.75rem}.meta-side-ad{min-height:22rem;padding:.7rem}.meta-side-ad strong{font-size:1.2rem}}
     @media(max-width:920px){.meta-ad-layout{grid-template-columns:1fr 1fr}.meta-ad-layout>.weapon-dashboard{grid-column:1/-1;order:2}.meta-side-ad{position:relative;top:auto;min-height:auto}.meta-side-ad.left,.meta-side-ad.right{grid-column:auto;order:1}}
-    @media(max-width:720px){.support-section .partner-grid,.meta-ad-layout{grid-template-columns:1fr}.meta-side-ad.left,.meta-side-ad.right{grid-column:1}.meta-ad-layout>.weapon-dashboard{grid-column:1}}
+    @media(max-width:720px){.tier-first .section-heading{grid-template-columns:1fr}.tier-first .updated-note{justify-self:start;white-space:normal}.support-section .partner-grid,.meta-ad-layout{grid-template-columns:1fr}.meta-side-ad.left,.meta-side-ad.right{grid-column:1}.meta-ad-layout>.weapon-dashboard{grid-column:1}}
   `;
 
   const sideAds = `
