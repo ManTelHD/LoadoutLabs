@@ -175,11 +175,21 @@
 
     syncTierVisibility(grid);
     updateCount(visible, total);
+    window.__loadoutFilterFixLast = { filter, visible, total, at: Date.now() };
+  }
+
+  function safeApply() {
+    try {
+      applyFilter();
+    } catch (error) {
+      window.__loadoutFilterFixError = String(error && (error.stack || error.message) || error);
+      console.warn("Loadout Filter konnte nicht angewendet werden", error);
+    }
   }
 
   function schedule(delay = 80) {
     window.clearTimeout(state.timer);
-    state.timer = window.setTimeout(applyFilter, delay);
+    state.timer = window.setTimeout(safeApply, delay);
   }
 
   function handleFilterClick(event) {
@@ -190,30 +200,34 @@
     document.querySelectorAll("#filterToolbar .filter-button").forEach((item) => {
       item.classList.toggle("active", item === button);
     });
+    safeApply();
+    queueMicrotask(safeApply);
+    requestAnimationFrame(safeApply);
     schedule(20);
-    window.setTimeout(applyFilter, 140);
-    window.setTimeout(applyFilter, 340);
+    window.setTimeout(safeApply, 140);
+    window.setTimeout(safeApply, 340);
   }
 
   function bindEvents() {
     if (window.__loadoutFilterFixReady) return;
     window.__loadoutFilterFixReady = true;
+    window.__loadoutFilterFixApply = safeApply;
 
     window.addEventListener("click", handleFilterClick, true);
     document.addEventListener("click", handleFilterClick, true);
 
     document.addEventListener("input", (event) => {
-      if (event.target.closest("#loadoutSearch")) window.setTimeout(applyFilter, 120);
+      if (event.target.closest("#loadoutSearch")) window.setTimeout(safeApply, 120);
     }, true);
 
     document.addEventListener("change", (event) => {
-      if (event.target.closest("#sortSelect")) window.setTimeout(applyFilter, 120);
+      if (event.target.closest("#sortSelect")) window.setTimeout(safeApply, 120);
     }, true);
 
     document.addEventListener("click", (event) => {
       if (event.target.closest(".secondary-mode-switch .mode-button, .content-tab[data-tab='weapons'], [data-language]")) {
-        window.setTimeout(applyFilter, 180);
-        window.setTimeout(applyFilter, 480);
+        window.setTimeout(safeApply, 180);
+        window.setTimeout(safeApply, 480);
       }
     }, true);
 
@@ -233,8 +247,8 @@
     bindEvents();
     try { await loadMeta(); } catch (error) { console.warn("Loadout filter meta konnte nicht geladen werden", error); }
     schedule(180);
-    window.setTimeout(applyFilter, 700);
-    window.setTimeout(applyFilter, 1600);
+    window.setTimeout(safeApply, 700);
+    window.setTimeout(safeApply, 1600);
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, { once: true });
