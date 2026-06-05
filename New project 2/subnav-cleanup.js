@@ -8,7 +8,7 @@
       display: none !important;
     }
 
-    body .loadout-subnav-row {
+    html body .loadout-subnav-row {
       display: grid !important;
       grid-template-columns: minmax(0, 1fr) auto !important;
       align-items: stretch !important;
@@ -18,8 +18,8 @@
       margin: 0.15rem 0 0.75rem !important;
     }
 
-    body .loadout-subnav-row .secondary-mode-switch,
-    body .loadout-subnav-row .content-tabs {
+    html body .loadout-subnav-row .secondary-mode-switch,
+    html body .loadout-subnav-row .content-tabs {
       display: grid !important;
       align-items: stretch !important;
       gap: 0.45rem !important;
@@ -31,7 +31,7 @@
       padding: 0.25rem !important;
     }
 
-    body .loadout-subnav-row .secondary-mode-switch {
+    html body .loadout-subnav-row .secondary-mode-switch {
       grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
       width: 100% !important;
       max-width: none !important;
@@ -40,14 +40,14 @@
       margin-bottom: 0 !important;
     }
 
-    body .loadout-subnav-row .content-tabs {
+    html body .loadout-subnav-row .content-tabs {
       grid-template-columns: repeat(2, minmax(5rem, 1fr)) !important;
       min-width: 14rem !important;
       margin-bottom: 0 !important;
     }
 
-    body .loadout-subnav-row .secondary-mode-switch .mode-button,
-    body .loadout-subnav-row .content-tab {
+    html body .loadout-subnav-row .secondary-mode-switch .mode-button,
+    html body .loadout-subnav-row .content-tab {
       min-height: 2.85rem !important;
       border: 1px solid rgba(245, 242, 233, 0.12) !important;
       border-radius: 0.38rem !important;
@@ -57,33 +57,33 @@
       font-weight: 950 !important;
     }
 
-    body .loadout-subnav-row .secondary-mode-switch .mode-button.active,
-    body .loadout-subnav-row .content-tab.active {
+    html body .loadout-subnav-row .secondary-mode-switch .mode-button.active,
+    html body .loadout-subnav-row .content-tab.active {
       border-color: transparent !important;
       background: linear-gradient(135deg, var(--amber), var(--cyan)) !important;
       color: #10130e !important;
     }
 
-    body .loadout-subnav-row .secondary-mode-switch .mode-button:hover,
-    body .loadout-subnav-row .secondary-mode-switch .mode-button:focus-visible,
-    body .loadout-subnav-row .content-tab:hover,
-    body .loadout-subnav-row .content-tab:focus-visible {
+    html body .loadout-subnav-row .secondary-mode-switch .mode-button:hover,
+    html body .loadout-subnav-row .secondary-mode-switch .mode-button:focus-visible,
+    html body .loadout-subnav-row .content-tab:hover,
+    html body .loadout-subnav-row .content-tab:focus-visible {
       border-color: rgba(240, 173, 55, 0.42) !important;
       color: var(--text) !important;
     }
 
-    body .loadout-subnav-row .content-tabs[hidden] {
+    html body .loadout-subnav-row .content-tabs[hidden] {
       display: none !important;
     }
 
     @media (max-width: 820px) {
-      body .loadout-subnav-row {
+      html body .loadout-subnav-row {
         grid-template-columns: 1fr !important;
         width: 100% !important;
       }
 
-      body .loadout-subnav-row .secondary-mode-switch,
-      body .loadout-subnav-row .content-tabs {
+      html body .loadout-subnav-row .secondary-mode-switch,
+      html body .loadout-subnav-row .content-tabs {
         grid-template-columns: 1fr !important;
         width: 100% !important;
         min-width: 0 !important;
@@ -96,8 +96,8 @@
     if (!style) {
       style = document.createElement("style");
       style.id = STYLE_ID;
-      document.head.append(style);
     }
+    document.head.append(style);
     style.textContent = css;
   }
 
@@ -122,6 +122,7 @@
   }
 
   function syncSubnavVisibility() {
+    installStyle();
     groupLoadoutNav();
 
     const secondary = document.querySelector(".secondary-mode-switch");
@@ -144,6 +145,8 @@
     window.addEventListener("loadoutlab:lite-render", scheduleSync);
     window.setTimeout(syncSubnavVisibility, 250);
     window.setTimeout(syncSubnavVisibility, 900);
+    window.setTimeout(syncSubnavVisibility, 2000);
+    window.setTimeout(syncSubnavVisibility, 4000);
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, { once: true });
@@ -162,5 +165,5 @@
 
   loadScript("loadout-lab-monetization-live", "monetization-live.js?v=20260605-base");
   loadScript("loadout-lab-monetization-gear", "monetization-gear.js?v=20260605-sideads-align");
-  loadScript("loadout-lab-meta-button-shape", "meta-button-shape.js?v=20260605-rectmeta");
+  loadScript("loadout-lab-meta-button-shape", "meta-button-shape.js?v=20260605-rectmeta2");
 }());
