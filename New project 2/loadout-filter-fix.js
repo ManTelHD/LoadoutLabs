@@ -1,7 +1,7 @@
 (function () {
   const STYLE_ID = "loadout-filter-fix-style";
   const HIDDEN_CLASS = "filter-hidden";
-  const state = { meta: null, timer: 0 };
+  const state = { meta: null, timer: 0, reinforce: 0 };
 
   const labels = {
     de: { of: "von", shown: "Meta-Waffen angezeigt" },
@@ -193,6 +193,15 @@
     }
   }
 
+  function reinforce(duration = 2200) {
+    window.clearInterval(state.reinforce);
+    const end = Date.now() + duration;
+    state.reinforce = window.setInterval(() => {
+      safeApply();
+      if (Date.now() >= end) window.clearInterval(state.reinforce);
+    }, 80);
+  }
+
   function schedule(delay = 80) {
     window.clearTimeout(state.timer);
     state.timer = window.setTimeout(safeApply, delay);
@@ -210,7 +219,7 @@
     queueMicrotask(safeApply);
     requestAnimationFrame(safeApply);
     schedule(20);
-    [140, 340, 700, 1100, 1700].forEach((delay) => window.setTimeout(safeApply, delay));
+    reinforce();
   }
 
   function bindEvents() {
@@ -222,11 +231,11 @@
     document.addEventListener("click", handleFilterClick, true);
 
     document.addEventListener("input", (event) => {
-      if (event.target.closest("#loadoutSearch")) window.setTimeout(safeApply, 120);
+      if (event.target.closest("#loadoutSearch")) { window.setTimeout(safeApply, 120); reinforce(1200); }
     }, true);
 
     document.addEventListener("change", (event) => {
-      if (event.target.closest("#sortSelect")) window.setTimeout(safeApply, 120);
+      if (event.target.closest("#sortSelect")) { window.setTimeout(safeApply, 120); reinforce(1200); }
     }, true);
 
     document.addEventListener("click", (event) => {
