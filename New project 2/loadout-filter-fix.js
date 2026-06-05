@@ -59,6 +59,36 @@
     return active?.dataset.smartFilter || "all";
   }
 
+  function rankFromCard(card) {
+    const ownText = card.querySelector(".rank-badge")?.childNodes?.[0]?.textContent || card.querySelector(".rank-badge")?.textContent || "";
+    return Number((ownText.match(/\d+/) || [])[0]) || 9999;
+  }
+
+  function tierFromCard(card) {
+    const badge = text(card.querySelector(".rank-badge span")?.textContent || "");
+    const classes = text(card.className);
+    if (badge.includes("a-tier") || classes.includes("tier-card-a")) return "A";
+    if (badge.includes("b-tier") || classes.includes("tier-card-b")) return "B";
+    if (badge.includes("c-tier") || classes.includes("tier-card-c")) return "C";
+    if (badge.includes("d-tier") || classes.includes("tier-card-d")) return "D";
+    if (badge.includes("meta") || badge.includes("legendaer") || badge.includes("legendary") || classes.includes("tier-card-meta")) return "META";
+    return "";
+  }
+
+  function roleFromCard(card) {
+    return card.querySelector(".stat-row strong")?.textContent || cardRoleFallback(card);
+  }
+
+  function domItem(card) {
+    return {
+      position: rankFromCard(card),
+      tier: tierFromCard(card),
+      role: roleFromCard(card),
+      weaponClass: card.querySelector(".mode-pill")?.textContent || "",
+      attachments: card.querySelectorAll(".loadout-slot:not(.placeholder-slot), .attachment-list li").length ? ["dom"] : [],
+    };
+  }
+
   function hasVerifiedAttachments(item, card) {
     if (Array.isArray(item?.attachments) && item.attachments.length) return true;
     const content = text(card?.textContent);
@@ -126,15 +156,17 @@
 
   function applyFilter() {
     const grid = document.getElementById("loadoutGrid");
-    const list = currentList();
-    if (!grid || !list?.items?.length) return;
+    if (!grid) return;
 
+    const cards = [...grid.querySelectorAll(".loadout-card")];
+    const list = currentList();
     const filter = activeFilter();
     const byName = itemMap(list);
+    const total = list?.items?.length || cards.length;
     let visible = 0;
 
-    grid.querySelectorAll(".loadout-card").forEach((card) => {
-      const item = byName.get(card.dataset.loadoutCard || "");
+    cards.forEach((card) => {
+      const item = byName.get(card.dataset.loadoutCard || "") || domItem(card);
       const show = matchesFilter(filter, item, card);
       card.hidden = !show;
       card.style.display = show ? "" : "none";
@@ -142,7 +174,7 @@
     });
 
     syncTierVisibility(grid);
-    updateCount(visible, list.items.length);
+    updateCount(visible, total);
   }
 
   function schedule(delay = 80) {
