@@ -29,6 +29,15 @@
       body #loadoutGrid .meta-tier-heading.${HIDDEN_CLASS} {
         display: none !important;
       }
+
+      body #resultCount[data-filter-count] {
+        font-size: 0 !important;
+      }
+
+      body #resultCount[data-filter-count]::after {
+        content: attr(data-filter-count);
+        font-size: 0.95rem !important;
+      }
     `;
   }
 
@@ -156,7 +165,9 @@
     const count = document.getElementById("resultCount");
     if (!count) return;
     const copy = labels[lang()] || labels.de;
-    count.textContent = `${visible} ${copy.of} ${total} ${copy.shown}`;
+    const value = `${visible} ${copy.of} ${total} ${copy.shown}`;
+    count.dataset.filterCount = value;
+    count.textContent = value;
   }
 
   function applyFilter() {
