@@ -18,6 +18,7 @@ const activeScripts = [
   withVersion("site-ui.js", "20260530-active-tabs1"),
   withVersion("loadout-lab-upgrades.js", "20260605-upgrades1"),
   withVersion("loadout-details-upgrades.js", "20260605-details1"),
+  withVersion("loadout-filter-fix.js", "20260605-filters1"),
   withVersion("subnav-cleanup.js", "20260601-clean-subnav1"),
   withVersion("performance.js", "20260529-perf-grid1"),
 ];
