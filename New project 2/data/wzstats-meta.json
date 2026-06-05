@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-05T20:13:04.292Z",
-  "generatedAtLabel": "5. Juni 2026 um 22:13 MESZ",
+  "generatedAt": "2026-06-05T21:44:18.116Z",
+  "generatedAtLabel": "5. Juni 2026 um 23:44 MESZ",
   "source": "WZStats",
   "sourceUrl": "https://wzstats.gg/",
   "publicEndpoint": "https://app.wzstats.gg/wz2/weapons/meta",
@@ -11,7 +11,7 @@
     "title": "Warzone Ranked / Ranked Resurgence Meta",
     "source": "WZStats",
     "sourceUrl": "https://app.wzstats.gg/wz2/weapons/meta",
-    "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+    "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
     "sourceNote": "Tierlist und Raenge stammen ausschliesslich aus WZStats. Pick-Rates werden nur angezeigt, wenn WZStats einen oeffentlichen Wert liefert.",
     "hasPickRates": false,
     "items": [
@@ -28,7 +28,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#ds20-mirage",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "DS20 Mirage wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als Meta gefuehrt.",
         "attachments": [
@@ -51,7 +51,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#carbon-57",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "Carbon 57 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als Meta gefuehrt.",
         "attachments": [
@@ -74,7 +74,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#mxr-17",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "MXR-17 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als Meta gefuehrt.",
         "attachments": [
@@ -97,7 +97,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#dravec-45",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "Dravec 45 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als Meta gefuehrt.",
         "attachments": [
@@ -120,7 +120,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#ak-27",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "AK-27 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als Meta gefuehrt.",
         "attachments": [
@@ -143,7 +143,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#kogot-7",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "Kogot-7 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als Meta gefuehrt.",
         "attachments": [
@@ -166,7 +166,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#voyak-kt-3",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "Voyak KT-3 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
@@ -189,7 +189,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#cbrs-3",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "CBRS-3 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
@@ -212,7 +212,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#mk35-isr",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "MK35 ISR wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
@@ -235,7 +235,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#vst",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "VST wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
@@ -258,7 +258,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#peacekeeper-mk1",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "Peacekeeper Mk1 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
@@ -281,7 +281,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#ryden-45k",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "Ryden 45K wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
@@ -304,7 +304,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#mpc-25",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "MPC-25 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
@@ -327,7 +327,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#sturmwolf-45",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "Sturmwolf 45 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
@@ -350,7 +350,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#rev-46",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "REV-46 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
@@ -373,7 +373,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#mk78",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "MK.78 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
@@ -396,7 +396,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#egrt-17",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "EGRT-17 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
@@ -419,7 +419,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#m15-mod-0",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "M15 MOD 0 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
@@ -442,7 +442,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#razor-9mm",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "Razor 9mm wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
@@ -465,7 +465,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#maddox-rfb",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "Maddox RFB wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
@@ -488,7 +488,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#x9-maverick",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "X9 Maverick wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
@@ -511,7 +511,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#m8a1",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "M8A1 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
@@ -534,7 +534,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#hawker-hx",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "Hawker HX wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
@@ -557,7 +557,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#vs-recon",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "VS Recon wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
@@ -580,7 +580,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#strider-300",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "Strider 300 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
@@ -603,7 +603,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#swordfish-a1",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "Swordfish A1 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als B-Tier gefuehrt.",
         "attachments": [
@@ -626,7 +626,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#sokol-545",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "Sokol 545 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als B-Tier gefuehrt.",
         "attachments": [
@@ -649,7 +649,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#rk-9",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "RK-9 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als B-Tier gefuehrt.",
         "attachments": [
@@ -672,7 +672,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#xm325",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "XM325 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als B-Tier gefuehrt.",
         "attachments": [
@@ -695,7 +695,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#xr-3-ion",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "XR-3 Ion wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als B-Tier gefuehrt.",
         "attachments": [
@@ -718,7 +718,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#krs-762",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "KRS-7.62 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als B-Tier gefuehrt.",
         "attachments": [
@@ -741,7 +741,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#shadow-sk",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "Shadow SK wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als C-Tier gefuehrt.",
         "attachments": [
@@ -764,7 +764,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#m34-novaline",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "M34 Novaline wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als C-Tier gefuehrt.",
         "attachments": [
@@ -787,7 +787,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#warden-308",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "Warden 308 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als C-Tier gefuehrt.",
         "attachments": [
@@ -810,7 +810,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#1911",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "1911 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als C-Tier gefuehrt.",
         "attachments": [
@@ -833,7 +833,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#coda-9",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "CODA 9 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als C-Tier gefuehrt.",
         "attachments": [
@@ -856,7 +856,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#velox-57",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "Velox 5.7 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als C-Tier gefuehrt.",
         "attachments": [
@@ -879,7 +879,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#j%C3%A4ger-45",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "Jäger 45 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als C-Tier gefuehrt.",
         "attachments": [
@@ -902,7 +902,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#arc-m1",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "A.R.C. M1 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
         "attachments": [
@@ -925,7 +925,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#flatline-mkii",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "Flatline MK.II wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
         "attachments": [
@@ -948,7 +948,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#aarow-109",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "AAROW 109 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
         "attachments": [
@@ -971,7 +971,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#knife-bo7",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "KNIFE wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
         "attachments": [
@@ -994,7 +994,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#ballistic-knife",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "Ballistic Knife wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
         "attachments": [
@@ -1017,7 +1017,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#nx-ravager",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "NX Ravager wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
         "attachments": [
@@ -1040,7 +1040,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#h311-saw",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "H311-SAW wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
         "attachments": [
@@ -1063,7 +1063,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#gdl-havoc",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "GDL Havoc wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
         "attachments": [
@@ -1086,7 +1086,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#siren",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "Siren wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
         "attachments": [
@@ -1109,13 +1109,36 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#katana",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "Katana wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Melee"
+        ],
+        "score": 52
+      },
+      {
+        "id": "grimhawk",
+        "name": "GRIMHAWK",
+        "weaponClass": "Special",
+        "role": "Special",
+        "tier": "D",
+        "tierLabel": "D-Tier",
+        "position": 49,
+        "rankLabel": "D #49",
+        "scoreLabel": "52",
+        "pickRate": null,
+        "pickRateLabel": "",
+        "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#grimhawk",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
+        "sourceUpdatedLabel": "5. Juni 2026",
+        "description": "GRIMHAWK wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
+        "attachments": [
+          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
+          "Quelle: WZStats Tierlist",
+          "Rolle: Special"
         ],
         "score": 52
       }
@@ -1126,7 +1149,7 @@
     "title": "Black Ops 7 Ranked Meta",
     "source": "WZStats",
     "sourceUrl": "https://app.wzstats.gg/wz2/weapons/meta",
-    "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+    "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
     "sourceNote": "Tierlist und Raenge stammen ausschliesslich aus WZStats. Pick-Rates werden nur angezeigt, wenn WZStats einen oeffentlichen Wert liefert.",
     "hasPickRates": false,
     "items": [
@@ -1143,7 +1166,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#m15-mod-0",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "M15 MOD 0 wird von WZStats in Black Ops 7 Ranked Meta als Meta gefuehrt.",
         "attachments": [
@@ -1166,7 +1189,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#mpc-25",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "MPC-25 wird von WZStats in Black Ops 7 Ranked Meta als Meta gefuehrt.",
         "attachments": [
@@ -1189,7 +1212,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#dravec-45",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "Dravec 45 wird von WZStats in Black Ops 7 Ranked Meta als Meta gefuehrt.",
         "attachments": [
@@ -1212,7 +1235,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#vs-recon",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "VS Recon wird von WZStats in Black Ops 7 Ranked Meta als Meta gefuehrt.",
         "attachments": [
@@ -1235,7 +1258,7 @@
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#j%C3%A4ger-45",
-        "sourceUpdatedAt": "2026-06-05T19:04:20.779Z",
+        "sourceUpdatedAt": "2026-06-05T21:25:37.148Z",
         "sourceUpdatedLabel": "5. Juni 2026",
         "description": "Jäger 45 wird von WZStats in Black Ops 7 Ranked Meta als Meta gefuehrt.",
         "attachments": [
