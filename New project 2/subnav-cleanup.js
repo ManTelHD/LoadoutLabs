@@ -106,11 +106,15 @@
 }());
 
 (function () {
-  const SCRIPT_ID = "loadout-lab-monetization-live";
-  if (document.getElementById(SCRIPT_ID)) return;
-  const script = document.createElement("script");
-  script.id = SCRIPT_ID;
-  script.src = "monetization-live.js?v=20260605-base";
-  script.defer = true;
-  document.head.append(script);
+  function loadScript(id, src) {
+    if (document.getElementById(id)) return;
+    const script = document.createElement("script");
+    script.id = id;
+    script.src = src;
+    script.defer = true;
+    document.head.append(script);
+  }
+
+  loadScript("loadout-lab-monetization-live", "monetization-live.js?v=20260605-base");
+  loadScript("loadout-lab-monetization-gear", "monetization-gear.js?v=20260605-gear");
 }());
