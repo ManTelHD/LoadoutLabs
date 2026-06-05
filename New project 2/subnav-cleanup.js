@@ -116,5 +116,5 @@
   }
 
   loadScript("loadout-lab-monetization-live", "monetization-live.js?v=20260605-base");
-  loadScript("loadout-lab-monetization-gear", "monetization-gear.js?v=20260605-gear");
+  loadScript("loadout-lab-monetization-gear", "monetization-gear.js?v=20260605-topads");
 }());
