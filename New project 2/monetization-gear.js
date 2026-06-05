@@ -2,14 +2,39 @@
   const STYLE_ID = "loadout-lab-partner-gear-style";
   const SECTION_SELECTOR = "#monetarisierung";
   const NOTE_ID = "partnerPlaceholderNote";
+  const TOP_AD_ID = "topAdSlots";
 
   const css = `
     .support-section .partner-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
     .partner-card small{color:var(--dim);font-weight:800;line-height:1.45}
     .partner-note{margin:.85rem 0 0;color:var(--dim);font-size:.95rem;line-height:1.6}
     .partner-note strong{color:var(--amber)}
+    .top-ad-slots{display:grid;grid-template-columns:minmax(0,18rem) minmax(0,1fr) minmax(0,18rem);gap:1rem;align-items:stretch;width:min(100% - 2rem,96rem);margin:.75rem auto 1rem}
+    .top-ad-card{position:relative;overflow:hidden;display:grid;gap:.35rem;min-height:7.25rem;border:1px solid rgba(240,173,55,.42);border-radius:.6rem;background:linear-gradient(135deg,rgba(240,173,55,.16),transparent 42%),rgba(10,13,12,.96);box-shadow:0 18px 48px rgba(0,0,0,.22);padding:.8rem;text-decoration:none}
+    .top-ad-card:before{content:"";position:absolute;inset:0;border-top:.22rem solid rgba(240,173,55,.86);pointer-events:none}
+    .top-ad-card span{width:fit-content;border:1px solid rgba(240,173,55,.34);border-radius:999px;color:var(--amber);font-size:.7rem;font-weight:950;letter-spacing:.04em;padding:.2rem .52rem;text-transform:uppercase}
+    .top-ad-card strong{color:var(--text);font-family:Rajdhani,Inter,sans-serif;font-size:clamp(1.15rem,2vw,1.45rem);line-height:1}
+    .top-ad-card small{color:var(--muted);font-weight:800;line-height:1.35}
+    .top-ad-card.right{grid-column:3}
+    .top-ad-card.left{grid-column:1}
     @media(max-width:1040px){.support-section .partner-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media(max-width:720px){.support-section .partner-grid{grid-template-columns:1fr}}
+    @media(max-width:1040px){.top-ad-slots{grid-template-columns:repeat(2,minmax(0,1fr));width:min(100% - 1rem,46rem)}.top-ad-card.left,.top-ad-card.right{grid-column:auto}}
+    @media(max-width:720px){.support-section .partner-grid,.top-ad-slots{grid-template-columns:1fr}.top-ad-slots{margin-top:.5rem}.top-ad-card{min-height:auto}}
+  `;
+
+  const topAds = `
+    <section id="topAdSlots" class="top-ad-slots" aria-label="Obere Anzeigenplaetze">
+      <a class="top-ad-card left" href="https://www.amazon.de/s?k=gaming+headset+warzone" target="_blank" rel="sponsored noreferrer" data-top-ad-slot="left">
+        <span>Anzeige links</span>
+        <strong>Audio-Setup fuer Ranked</strong>
+        <small>Platzhalter fuer Partnerlink oder Sponsorbanner.</small>
+      </a>
+      <a class="top-ad-card right" href="werbung.html" rel="nofollow" data-top-ad-slot="right">
+        <span>Anzeige rechts</span>
+        <strong>Sponsorplatz frei</strong>
+        <small>Direkter Werbeplatz fuer Gear, Coaching oder Creator-Angebote.</small>
+      </a>
+    </section>
   `;
 
   const cards = `
@@ -67,6 +92,27 @@
     style.textContent = css;
   }
 
+  function addTopAdSlots() {
+    if (document.getElementById(TOP_AD_ID)) return true;
+
+    const target =
+      document.querySelector(".commercial-disclosure") ||
+      document.querySelector(".today-strip") ||
+      document.querySelector(".hero") ||
+      document.querySelector("main") ||
+      document.body.firstElementChild;
+
+    if (!target) return false;
+
+    if (target.matches && target.matches(".commercial-disclosure,.today-strip,.hero")) {
+      target.insertAdjacentHTML("beforebegin", topAds);
+    } else {
+      target.insertAdjacentHTML("afterbegin", topAds);
+    }
+
+    return true;
+  }
+
   function enhancePartnerSection() {
     const section = document.querySelector(SECTION_SELECTOR);
     if (!section) return false;
@@ -96,7 +142,9 @@
     installStyle();
     let attempts = 0;
     const tick = () => {
-      if (enhancePartnerSection() || attempts >= 30) return;
+      const hasTopAds = addTopAdSlots();
+      const hasPartnerSection = enhancePartnerSection();
+      if ((hasTopAds && hasPartnerSection) || attempts >= 30) return;
       attempts += 1;
       window.setTimeout(tick, 150);
     };
