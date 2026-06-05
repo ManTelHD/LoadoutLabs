@@ -1,5 +1,6 @@
 (function () {
   const STYLE_ID = "loadout-filter-fix-style";
+  const HIDDEN_CLASS = "filter-hidden";
   const state = { meta: null, timer: 0 };
 
   const labels = {
@@ -16,17 +17,19 @@
   }
 
   function installStyle() {
-    if (document.getElementById(STYLE_ID)) return;
-    const style = document.createElement("style");
-    style.id = STYLE_ID;
+    let style = document.getElementById(STYLE_ID);
+    if (!style) {
+      style = document.createElement("style");
+      style.id = STYLE_ID;
+      document.head.append(style);
+    }
     style.textContent = `
-      body #loadoutGrid .loadout-card[hidden],
-      body #loadoutGrid .tier-group[hidden],
-      body #loadoutGrid .meta-tier-heading[hidden] {
+      body #loadoutGrid .loadout-card.${HIDDEN_CLASS},
+      body #loadoutGrid .tier-group.${HIDDEN_CLASS},
+      body #loadoutGrid .meta-tier-heading.${HIDDEN_CLASS} {
         display: none !important;
       }
     `;
-    document.head.append(style);
   }
 
   function versionedUrl(path) {
@@ -75,6 +78,12 @@
     return "";
   }
 
+  function cardRoleFallback(card) {
+    const content = text(card?.textContent);
+    const match = content.match(/rolle\s*(long range|close range|langstrecke|kurzstrecke|sniper|scharfschuetze|scharfschutze)/);
+    return match ? match[1] : "";
+  }
+
   function roleFromCard(card) {
     return card.querySelector(".stat-row strong")?.textContent || cardRoleFallback(card);
   }
@@ -94,12 +103,6 @@
     const content = text(card?.textContent);
     if (content.includes("keine gepr") || content.includes("no verified")) return false;
     return (card?.querySelectorAll(".loadout-slot:not(.placeholder-slot), .attachment-list li") || []).length > 0;
-  }
-
-  function cardRoleFallback(card) {
-    const content = text(card?.textContent);
-    const match = content.match(/rolle\s*(long range|close range|langstrecke|kurzstrecke|sniper|scharfschuetze|scharfschutze)/);
-    return match ? match[1] : "";
   }
 
   function roleBucket(item, card) {
@@ -125,25 +128,27 @@
     return true;
   }
 
+  function isCardVisible(card) {
+    return !card.classList.contains(HIDDEN_CLASS);
+  }
+
   function syncTierVisibility(grid) {
     grid.querySelectorAll(".tier-group").forEach((group) => {
-      const hasVisible = [...group.querySelectorAll(".loadout-card")].some((card) => !card.hidden && card.style.display !== "none");
-      group.hidden = !hasVisible;
-      group.style.display = hasVisible ? "" : "none";
+      const hasVisible = [...group.querySelectorAll(".loadout-card")].some(isCardVisible);
+      group.classList.toggle(HIDDEN_CLASS, !hasVisible);
     });
 
     grid.querySelectorAll(".meta-tier-heading").forEach((heading) => {
       let hasVisible = false;
       let node = heading.nextElementSibling;
       while (node && !node.classList.contains("meta-tier-heading")) {
-        if (node.classList.contains("loadout-card") && !node.hidden && node.style.display !== "none") {
+        if (node.classList.contains("loadout-card") && isCardVisible(node)) {
           hasVisible = true;
           break;
         }
         node = node.nextElementSibling;
       }
-      heading.hidden = !hasVisible;
-      heading.style.display = hasVisible ? "" : "none";
+      heading.classList.toggle(HIDDEN_CLASS, !hasVisible);
     });
   }
 
@@ -168,8 +173,9 @@
     cards.forEach((card) => {
       const item = byName.get(card.dataset.loadoutCard || "") || domItem(card);
       const show = matchesFilter(filter, item, card);
-      card.hidden = !show;
-      card.style.display = show ? "" : "none";
+      card.classList.toggle(HIDDEN_CLASS, !show);
+      card.hidden = false;
+      card.style.display = "";
       if (show) visible += 1;
     });
 
@@ -204,8 +210,7 @@
     queueMicrotask(safeApply);
     requestAnimationFrame(safeApply);
     schedule(20);
-    window.setTimeout(safeApply, 140);
-    window.setTimeout(safeApply, 340);
+    [140, 340, 700, 1100, 1700].forEach((delay) => window.setTimeout(safeApply, delay));
   }
 
   function bindEvents() {
