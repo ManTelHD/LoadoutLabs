@@ -66,28 +66,30 @@
     return (card?.querySelectorAll(".loadout-slot:not(.placeholder-slot), .attachment-list li") || []).length > 0;
   }
 
+  function cardRoleFallback(card) {
+    const content = text(card?.textContent);
+    const match = content.match(/rolle\s*(long range|close range|langstrecke|kurzstrecke|sniper|scharfschuetze|scharfschutze)/);
+    return match ? match[1] : "";
+  }
+
   function roleBucket(item, card) {
-    return text([
-      item?.role,
-      item?.roleLabel,
-      item?.category,
-      item?.rangeLabel,
-      item?.weaponClass,
-      card?.dataset?.role,
-      card?.textContent,
-    ].filter(Boolean).join(" "));
+    const direct = [item?.role, item?.roleLabel, item?.category, item?.rangeLabel, card?.dataset?.role]
+      .filter(Boolean)
+      .join(" ");
+    return text(direct || cardRoleFallback(card));
   }
 
   function matchesFilter(filter, item, card) {
     if (!item) return true;
     const role = roleBucket(item, card);
+    const weaponClass = text(item.weaponClass);
     if (filter === "top10") return Number(item.position) <= 10;
     if (filter === "meta") return item.tier === "META";
     if (filter === "a") return item.tier === "A";
     if (filter === "b") return item.tier === "B";
-    if (filter === "long") return /long range|langstrecke|long/.test(role);
-    if (filter === "close") return /close range|kurzstrecke|close/.test(role);
-    if (filter === "sniper") return /sniper|scharfsch|marksman/.test(role);
+    if (filter === "long") return role.includes("long range") || role.includes("langstrecke");
+    if (filter === "close") return role.includes("close range") || role.includes("kurzstrecke");
+    if (filter === "sniper") return /sniper|scharfsch|marksman/.test(role) || /sniper|marksman/.test(weaponClass);
     if (filter === "hasBuild") return hasVerifiedAttachments(item, card);
     if (filter === "noBuild") return !hasVerifiedAttachments(item, card);
     return true;
