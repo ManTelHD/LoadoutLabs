@@ -150,22 +150,25 @@
     state.timer = window.setTimeout(applyFilter, delay);
   }
 
+  function handleFilterClick(event) {
+    const button = event.target.closest("#filterToolbar .filter-button[data-smart-filter]");
+    if (!button) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    document.querySelectorAll("#filterToolbar .filter-button").forEach((item) => {
+      item.classList.toggle("active", item === button);
+    });
+    schedule(20);
+    window.setTimeout(applyFilter, 140);
+    window.setTimeout(applyFilter, 340);
+  }
+
   function bindEvents() {
     if (window.__loadoutFilterFixReady) return;
     window.__loadoutFilterFixReady = true;
 
-    document.addEventListener("click", (event) => {
-      const button = event.target.closest("#filterToolbar .filter-button[data-smart-filter]");
-      if (!button) return;
-      event.preventDefault();
-      event.stopImmediatePropagation();
-      document.querySelectorAll("#filterToolbar .filter-button").forEach((item) => {
-        item.classList.toggle("active", item === button);
-      });
-      schedule(20);
-      window.setTimeout(applyFilter, 140);
-      window.setTimeout(applyFilter, 340);
-    }, true);
+    window.addEventListener("click", handleFilterClick, true);
+    document.addEventListener("click", handleFilterClick, true);
 
     document.addEventListener("input", (event) => {
       if (event.target.closest("#loadoutSearch")) window.setTimeout(applyFilter, 120);
