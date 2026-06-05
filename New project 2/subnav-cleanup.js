@@ -117,4 +117,5 @@
 
   loadScript("loadout-lab-monetization-live", "monetization-live.js?v=20260605-base");
   loadScript("loadout-lab-monetization-gear", "monetization-gear.js?v=20260605-sideads-align");
+  loadScript("loadout-lab-meta-button-shape", "meta-button-shape.js?v=20260605-rectmeta");
 }());
