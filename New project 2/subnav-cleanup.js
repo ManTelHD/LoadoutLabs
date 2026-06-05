@@ -104,3 +104,13 @@
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, { once: true });
   else init();
 }());
+
+(function () {
+  const SCRIPT_ID = "loadout-lab-monetization-live";
+  if (document.getElementById(SCRIPT_ID)) return;
+  const script = document.createElement("script");
+  script.id = SCRIPT_ID;
+  script.src = "monetization-live.js?v=20260605-base";
+  script.defer = true;
+  document.head.append(script);
+}());
