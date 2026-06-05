@@ -16,6 +16,7 @@ const activeScripts = [
   withVersion("mw4-no-tabs.js", "20260601-mw4-notabs1"),
   withVersion("season4.js", "20260529-season4-bundle1"),
   withVersion("site-ui.js", "20260530-active-tabs1"),
+  withVersion("loadout-lab-upgrades.js", "20260605-upgrades1"),
   withVersion("subnav-cleanup.js", "20260601-clean-subnav1"),
   withVersion("performance.js", "20260529-perf-grid1"),
 ];
