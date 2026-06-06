@@ -5,8 +5,15 @@ on:
     paths:
       - ".github/workflows/auto-update-site.yml"
       - "New project 2/tools/update-latest-info.mjs"
+      - "New project 2/tools/validate-generated-site.mjs"
       - "New project 2/meta-fast.js"
       - "New project 2/loadout-builds.js"
+      - "New project 2/loadout-build-supplements.js"
+      - "New project 2/loadout-filter-fix.js"
+      - "New project 2/loadout-card-finalizer.js"
+      - "New project 2/loadout-image-fix.js"
+      - "New project 2/loadout-mobile-details-polish.js"
+      - "New project 2/loadout-mobile-filter-close.js"
       - "New project 2/season4.js"
       - "New project 2/data/season-watch.json"
       - "New project 2/meta-overrides.css"
@@ -83,28 +90,8 @@ jobs:
         run: |
           SITE_ASSET_VERSION="auto-$(date -u +%Y%m%d%H%M%S)" node netlify-inject-meta-overrides.js
 
-      - name: Validate generated site data
-        shell: bash
-        run: |
-          set -euo pipefail
-          node <<'NODE'
-          const fs = require('node:fs');
-          const meta = JSON.parse(fs.readFileSync('New project 2/data/wzstats-meta.json', 'utf8'));
-          const html = fs.readFileSync('New project 2/index.html', 'utf8');
-          const warzoneItems = meta.warzoneRanked?.items || [];
-          if (!warzoneItems.length) throw new Error('No Warzone WZStats items were generated.');
-          if (!meta.generatedAt || !meta.generatedAtLabel) throw new Error('Generated timestamp is missing.');
-          if (!html.includes('window.__loadoutLabMetaVersion')) throw new Error('Live cache-bust patch is missing from index.html.');
-          if (!/meta-fast\.js\?v=auto-/.test(html)) throw new Error('meta-fast.js was not versioned with the current auto-update id.');
-          warzoneItems.forEach((item, index) => {
-            const expected = index + 1;
-            if (item.position !== expected) throw new Error(`${item.name} has position ${item.position}, expected ${expected}.`);
-            if (!Number.isFinite(Number(item.score))) throw new Error(`${item.name} is missing a numeric score.`);
-          });
-          const firstAIndex = warzoneItems.findIndex((item) => item.tier === 'A');
-          if (firstAIndex !== -1 && warzoneItems[firstAIndex].position !== firstAIndex + 1) throw new Error('A-Tier numbering restarted instead of continuing globally.');
-          console.log(`Validated ${warzoneItems.length} Warzone meta items; #1 is ${warzoneItems[0].name}.`);
-          NODE
+      - name: Validate generated site
+        run: node "New project 2/tools/validate-generated-site.mjs"
 
       - name: Commit updated site files
         shell: bash
