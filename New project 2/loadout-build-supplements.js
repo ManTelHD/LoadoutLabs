@@ -113,9 +113,6 @@
     const build = supplementalBuilds[key];
     if (!build) return;
 
-    const signature = `supplement:${build.code}|${build.attachments.join("|")}|${build.extras.join("|")}`;
-    if (card.dataset.supplementalBuildSignature === signature) return;
-
     const premiumAttachments = card.querySelector(".premium-attachment-list");
     const premiumPerks = card.querySelector(".premium-perk-list");
     const legacyAttachments = card.querySelector(".attachment-list");
@@ -134,7 +131,7 @@
 
     ensureBuildCode(card, build);
     updatePanelCounters(card, build);
-    card.dataset.supplementalBuildSignature = signature;
+    card.dataset.supplementalBuildSignature = `supplement:${build.code}|${build.attachments.join("|")}|${build.extras.join("|")}`;
   }
 
   let scheduled = false;
