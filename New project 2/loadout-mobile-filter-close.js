@@ -27,7 +27,7 @@
   }
 
   function clearToolbarState(toolbar) {
-    ["max-height", "margin-top", "opacity", "pointer-events", "overflow"].forEach((name) => {
+    ["display", "height", "max-height", "margin-top", "opacity", "overflow", "pointer-events", "visibility"].forEach((name) => {
       toolbar.style.removeProperty(name);
     });
   }
@@ -41,11 +41,14 @@
     }
 
     const open = Boolean(shell?.classList.contains("filters-open"));
+    setImportant(toolbar, "display", open ? "grid" : "none");
+    setImportant(toolbar, "height", open ? "auto" : "0");
     setImportant(toolbar, "max-height", open ? "32rem" : "0");
     setImportant(toolbar, "margin-top", open ? "0.5rem" : "0");
     setImportant(toolbar, "opacity", open ? "1" : "0");
-    setImportant(toolbar, "pointer-events", open ? "auto" : "none");
     setImportant(toolbar, "overflow", "hidden");
+    setImportant(toolbar, "pointer-events", open ? "auto" : "none");
+    setImportant(toolbar, "visibility", open ? "visible" : "hidden");
   }
 
   function syncToggle() {
