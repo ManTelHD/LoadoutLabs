@@ -34,14 +34,56 @@
     }
 
     body .site-header {
+      display: grid !important;
+      grid-template-columns: auto minmax(0, 1fr) auto !important;
+      align-items: center !important;
+      gap: 0.55rem !important;
+      min-height: 0 !important;
+      padding: 0.55rem clamp(0.72rem, 2vw, 1rem) !important;
       background: #05080b !important;
       box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.08) !important;
       backdrop-filter: none !important;
     }
 
+    body .site-header .brand {
+      min-width: 0 !important;
+    }
+
     body .top-nav {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(4.8rem, 1fr)) !important;
+      align-items: center !important;
+      justify-self: center !important;
+      width: min(31rem, 100%) !important;
+      min-width: 0 !important;
+      min-height: 0 !important;
+      gap: 0.2rem !important;
+      padding: 0.18rem !important;
       border-radius: 0.62rem !important;
       background: #090f16 !important;
+    }
+
+    body .site-header .top-nav a {
+      min-width: 0 !important;
+      min-height: 2rem !important;
+      padding: 0.42rem 0.52rem !important;
+      text-align: center !important;
+      white-space: nowrap !important;
+    }
+
+    body .site-header .site-actions {
+      justify-self: end !important;
+      width: auto !important;
+      min-width: 0 !important;
+    }
+
+    body .site-header .language-switch {
+      width: auto !important;
+      min-width: 0 !important;
+    }
+
+    body #autoUpdateStatus {
+      display: none !important;
     }
 
     body .tier-first .section-heading.minimal-hero {
@@ -136,6 +178,11 @@
       gap: 0.32rem !important;
     }
 
+    body .minimal-control-panel .minimal-control-group[hidden],
+    body .minimal-control-panel [hidden] {
+      display: none !important;
+    }
+
     body .minimal-control-label {
       color: #788393 !important;
       font-size: 0.66rem !important;
@@ -182,6 +229,7 @@
 
     body .minimal-control-panel .mode-button,
     body .minimal-control-panel .content-tab {
+      display: inline-flex !important;
       min-width: 0 !important;
       min-height: 2.45rem !important;
       align-items: center !important;
@@ -222,14 +270,60 @@
     }
 
     @media (max-width: 620px) {
+      body .site-header {
+        grid-template-columns: minmax(0, 1fr) auto !important;
+        gap: 0.42rem !important;
+        padding: 0.5rem 0.65rem !important;
+      }
+
+      body .site-header .brand {
+        grid-column: 1 !important;
+      }
+
+      body .site-header .site-actions {
+        grid-column: 2 !important;
+      }
+
+      body .site-header .top-nav {
+        grid-column: 1 / -1 !important;
+        grid-row: 2 !important;
+        width: 100% !important;
+      }
+
+      body .site-header .top-nav a {
+        min-height: 1.95rem !important;
+        padding: 0.38rem 0.28rem !important;
+        font-size: 0.78rem !important;
+      }
+
+      body .minimal-control-panel {
+        gap: 0.45rem !important;
+        margin-bottom: 0.55rem !important;
+        padding: 0.5rem !important;
+      }
+
       body .minimal-control-panel .primary-mode-switch,
-      body .minimal-control-panel .secondary-mode-switch,
+      body .minimal-control-panel .secondary-mode-switch {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      }
+
       body .minimal-control-panel .content-tabs {
-        grid-template-columns: 1fr !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      }
+
+      body .minimal-control-panel .mode-button,
+      body .minimal-control-panel .content-tab {
+        min-height: 2.12rem !important;
+        padding: 0.42rem 0.22rem !important;
+        font-size: 0.78rem !important;
+      }
+
+      body .tier-first .minimal-hero .updated-note {
+        display: none !important;
       }
 
       body .tier-first .minimal-hero h1 {
-        font-size: clamp(2rem, 12vw, 2.75rem) !important;
+        font-size: clamp(1.65rem, 8vw, 2.35rem) !important;
       }
     }
   `;
@@ -277,7 +371,7 @@
     const section = document.querySelector(".tier-first");
     if (!section) return;
 
-    section.querySelectorAll(".today-strip, .commercial-disclosure, .ad-disclosure, .affiliate-disclosure").forEach((element) => element.remove());
+    section.querySelectorAll(".today-strip, #autoUpdateStatus, .commercial-disclosure, .ad-disclosure, .affiliate-disclosure").forEach((element) => element.remove());
 
     const heading = section.querySelector(".section-heading");
     if (heading) {
