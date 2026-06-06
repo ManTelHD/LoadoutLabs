@@ -243,12 +243,12 @@ for (const file of activeScripts) {
 }
 
 for (const [file, source, checks] of [
-  ["meta-fast.js", metaFast, ["expand-button", "card-details", "attachment-list", "perk-list", "loadout-builds.js"]],
+  ["meta-fast.js", metaFast, ["expand-button", "card-details", "premium-attachment-list", "premium-perk-list", "loadout-builds.js"]],
   ["loadout-filter-fix.js", filterFix, ["data-smart-filter", "__loadoutFilterFixApply", "long", "close", "sniper"]],
   ["loadout-card-finalizer.js", cardFinalizer, ["setExpanded", "expand-button", "aria-expanded"]],
   ["loadout-mobile-details-polish.js", mobileDetails, ["mobile-filter-toggle", "details-polished-panel", "detail-source-row"]],
   ["loadout-mobile-filter-close.js", mobileClose, ["display", "grid", "none", "setProperty"]],
-  ["loadout-build-supplements.js", supplementalBuildScript, ["supplementalBuilds", "cbrs-3", "krs-762", "grimhawk"]],
+  ["loadout-build-supplements.js", supplementalBuildScript, ["supplementalBuilds", "cbrs-3", "krs-762", "krs-7-62", "grimhawk", "premium-attachment-list", "premium-perk-list", "build-code-box"]],
 ]) {
   for (const needle of checks) {
     assert(source.includes(needle), `${file} is missing expected UI/build marker ${needle}.`);
