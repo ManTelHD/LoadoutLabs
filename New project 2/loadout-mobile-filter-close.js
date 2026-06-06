@@ -22,24 +22,30 @@
     return match ? `${match[1]}/${match[2]}` : "";
   }
 
+  function setImportant(node, name, value) {
+    node.style.setProperty(name, value, "important");
+  }
+
+  function clearToolbarState(toolbar) {
+    ["max-height", "margin-top", "opacity", "pointer-events", "overflow"].forEach((name) => {
+      toolbar.style.removeProperty(name);
+    });
+  }
+
   function setToolbarState(shell, toolbar) {
     if (!toolbar) return;
 
     if (!isMobile()) {
-      toolbar.style.removeProperty("max-height");
-      toolbar.style.removeProperty("margin-top");
-      toolbar.style.removeProperty("opacity");
-      toolbar.style.removeProperty("pointer-events");
-      toolbar.style.removeProperty("overflow");
+      clearToolbarState(toolbar);
       return;
     }
 
     const open = Boolean(shell?.classList.contains("filters-open"));
-    toolbar.style.maxHeight = open ? "32rem" : "0";
-    toolbar.style.marginTop = open ? "0.5rem" : "0";
-    toolbar.style.opacity = open ? "1" : "0";
-    toolbar.style.pointerEvents = open ? "auto" : "none";
-    toolbar.style.overflow = "hidden";
+    setImportant(toolbar, "max-height", open ? "32rem" : "0");
+    setImportant(toolbar, "margin-top", open ? "0.5rem" : "0");
+    setImportant(toolbar, "opacity", open ? "1" : "0");
+    setImportant(toolbar, "pointer-events", open ? "auto" : "none");
+    setImportant(toolbar, "overflow", "hidden");
   }
 
   function syncToggle() {
@@ -85,7 +91,7 @@
     document.addEventListener("click", schedule, true);
 
     watchNode(document.querySelector(".mobile-filter-shell"), { attributes: true, attributeFilter: ["class"] });
-    watchNode(document.getElementById("filterToolbar"), { subtree: true, attributes: true, attributeFilter: ["class", "style"] });
+    watchNode(document.getElementById("filterToolbar"), { subtree: true, attributes: true, attributeFilter: ["class"] });
     watchNode(document.getElementById("resultCount"), { attributes: true, childList: true, subtree: true });
 
     window.__loadoutMobileFilterCloseReady = true;
