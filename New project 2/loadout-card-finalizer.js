@@ -132,6 +132,7 @@
     @media (max-width: 760px) {
       body #loadoutGrid .loadout-card {
         grid-template-columns: minmax(0, 1fr) !important;
+        grid-template-rows: auto auto auto auto !important;
         min-height: 0 !important;
         padding: 0.95rem !important;
       }
@@ -140,16 +141,26 @@
       body .loadout-grid .loadout-card .weapon-art,
       body #loadoutGrid > .loadout-card.tier-absolute-meta .weapon-art {
         grid-column: 1 !important;
+        grid-row: 1 !important;
         width: 100% !important;
         height: 8.2rem !important;
         padding-right: 5.25rem !important;
       }
 
-      body #loadoutGrid .loadout-card .card-body,
+      body #loadoutGrid .loadout-card .card-body {
+        grid-column: 1 !important;
+        grid-row: 2 !important;
+      }
+
       body #loadoutGrid .loadout-card .card-details,
-      body #loadoutGrid .loadout-card .meta-card-details,
+      body #loadoutGrid .loadout-card .meta-card-details {
+        grid-column: 1 !important;
+        grid-row: 3 !important;
+      }
+
       body #loadoutGrid .loadout-card .card-footer {
         grid-column: 1 !important;
+        grid-row: 4 !important;
       }
 
       body #loadoutGrid .loadout-card .rank-badge,
