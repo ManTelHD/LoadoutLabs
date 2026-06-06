@@ -1,6 +1,23 @@
 (function () {
   const STYLE_ID = "subnav-cleanup-20260601";
   const css = `
+    body .tier-first > .primary-mode-switch,
+    body .tier-first > .secondary-mode-switch,
+    body .tier-first > .content-tabs {
+      position: absolute !important;
+      left: -9999px !important;
+      top: auto !important;
+      width: 1px !important;
+      height: 1px !important;
+      overflow: hidden !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+
+    body .tier-first > .loadout-subnav-row {
+      display: none !important;
+    }
+
     body .minimal-control-panel .loadout-subnav-row {
       display: contents !important;
       margin: 0 !important;
@@ -31,6 +48,11 @@
       align-items: center !important;
       justify-content: center !important;
       white-space: nowrap !important;
+    }
+
+    body.ll-top-switching .minimal-control-panel {
+      overflow: hidden !important;
+      contain: layout paint !important;
     }
 
     @media (max-width: 620px) {
@@ -71,8 +93,14 @@
     unwrapSubnavRows();
   }
 
+  function markSwitching() {
+    document.body?.classList.add("ll-top-switching");
+    window.setTimeout(() => document.body?.classList.remove("ll-top-switching"), 180);
+  }
+
   function scheduleRefresh() {
-    [0, 80, 220, 520, 1100, 1800, 2800, 3800].forEach((delay) => {
+    markSwitching();
+    [0, 16, 60, 140, 320, 760, 1400, 2400].forEach((delay) => {
       window.setTimeout(refresh, delay);
     });
   }
@@ -80,7 +108,14 @@
   function init() {
     refresh();
     scheduleRefresh();
-    document.addEventListener("click", scheduleRefresh, true);
+    ["pointerdown", "touchstart", "keydown", "click"].forEach((eventName) => {
+      document.addEventListener(eventName, (event) => {
+        if (eventName === "keydown" && !["Enter", " "].includes(event.key)) return;
+        if (event.target?.closest?.(".minimal-control-panel, .primary-mode-switch, .secondary-mode-switch, .content-tabs")) {
+          scheduleRefresh();
+        }
+      }, true);
+    });
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, { once: true });
