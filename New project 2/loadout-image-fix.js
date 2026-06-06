@@ -178,6 +178,15 @@
       gap: 0.32rem !important;
     }
 
+    body .minimal-control-panel .loadout-subnav-row {
+      display: contents !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: 0 !important;
+      background: transparent !important;
+      box-shadow: none !important;
+    }
+
     body .minimal-control-panel .minimal-control-group[hidden],
     body .minimal-control-panel [hidden] {
       display: none !important;
@@ -336,6 +345,7 @@
       document.head.append(style);
     }
     style.textContent = minimalTopCss;
+    document.head.append(style);
   }
 
   function setButtonLabel(selector, label) {
@@ -431,7 +441,14 @@
     );
 
     document.querySelectorAll(".loadout-subnav-row").forEach((row) => {
-      if (!row.querySelector(".secondary-mode-switch, #contentTabs")) row.remove();
+      const parent = row.parentElement;
+      const wrappedSecondary = row.querySelector(".secondary-mode-switch");
+      const wrappedTabs = row.querySelector("#contentTabs");
+      if (parent) {
+        if (wrappedSecondary) parent.insertBefore(wrappedSecondary, row);
+        if (wrappedTabs) parent.insertBefore(wrappedTabs, row);
+      }
+      row.remove();
     });
   }
 
@@ -441,6 +458,9 @@
     document.addEventListener("click", () => {
       window.setTimeout(applyMinimalTop, 40);
       window.setTimeout(applyMinimalTop, 180);
+      window.setTimeout(applyMinimalTop, 450);
+      window.setTimeout(applyMinimalTop, 900);
+      window.setTimeout(applyMinimalTop, 1600);
     }, true);
     window.setTimeout(applyMinimalTop, 250);
     window.setTimeout(applyMinimalTop, 1000);
