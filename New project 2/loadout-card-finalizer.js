@@ -133,7 +133,12 @@
       body #loadoutGrid .loadout-card {
         grid-template-columns: minmax(0, 1fr) !important;
         grid-template-rows: auto auto auto auto !important;
-        min-height: 0 !important;
+        height: auto !important;
+        block-size: auto !important;
+        min-height: max-content !important;
+        max-height: none !important;
+        aspect-ratio: auto !important;
+        overflow: hidden !important;
         padding: 0.95rem !important;
       }
 
