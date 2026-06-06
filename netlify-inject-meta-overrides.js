@@ -24,6 +24,7 @@ const activeScripts = [
   withVersion("loadout-card-polish.js", "20260606-card-polish3"),
   withVersion("loadout-card-finalizer.js", "20260606-card-finalizer1"),
   withVersion("loadout-image-fix.js", "20260606-image-fix1"),
+  withVersion("loadout-mobile-details-polish.js", "20260606-mobile-details1"),
 ];
 
 const scriptNames = [
