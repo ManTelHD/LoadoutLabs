@@ -21,7 +21,7 @@ const activeScripts = [
   withVersion("loadout-filter-fix.js", "20260605-filter-count2"),
   withVersion("subnav-cleanup.js", "20260601-clean-subnav1"),
   withVersion("performance.js", "20260529-perf-grid1"),
-  withVersion("loadout-card-polish.js", "20260606-card-polish2"),
+  withVersion("loadout-card-polish.js", "20260606-card-polish3"),
 ];
 
 const scriptNames = [
@@ -85,7 +85,12 @@ const cachePatch = `    <script>
         if (!originalFetch) return;
         window.fetch = function (input, init) {
           const requestUrl = typeof input === "string" ? input : input && input.url;
-          if (requestUrl && (/data\/wzstats-meta\.json|data\/cod-weapons\.json|loadout-builds\.js/).test(requestUrl)) {
+          const shouldRefresh = requestUrl && (
+            requestUrl.includes("data/wzstats-meta.json") ||
+            requestUrl.includes("data/cod-weapons.json") ||
+            requestUrl.includes("loadout-builds.js")
+          );
+          if (shouldRefresh) {
             const nextUrl = new URL(requestUrl, window.location.href);
             nextUrl.searchParams.set("fresh", window.__loadoutLabMetaVersion);
             nextUrl.searchParams.set("t", String(Date.now()));
