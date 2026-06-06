@@ -22,6 +22,7 @@ const activeScripts = [
   withVersion("subnav-cleanup.js", "20260601-clean-subnav1"),
   withVersion("performance.js", "20260529-perf-grid1"),
   withVersion("loadout-card-polish.js", "20260606-card-polish3"),
+  withVersion("loadout-card-finalizer.js", "20260606-card-finalizer1"),
 ];
 
 const scriptNames = [
