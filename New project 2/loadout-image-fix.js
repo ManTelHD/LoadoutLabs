@@ -311,9 +311,9 @@
     setButtonLabel('.content-tabs .content-tab[data-tab="weapons"]', "Waffen");
     setButtonLabel('.content-tabs .content-tab[data-tab="maps"]', "Maps");
 
-    const primarySwitch = section.querySelector(".primary-mode-switch");
-    const secondarySwitch = section.querySelector(".secondary-mode-switch");
-    const contentTabs = section.querySelector("#contentTabs");
+    const primarySwitch = document.querySelector(".primary-mode-switch");
+    const secondarySwitch = document.querySelector(".secondary-mode-switch");
+    const contentTabs = document.querySelector("#contentTabs");
     if (!primarySwitch && !secondarySwitch && !contentTabs) return;
 
     let panel = Array.from(section.children).find((child) => child.classList?.contains("minimal-control-panel"));
@@ -335,14 +335,23 @@
         createControlGroup("Ansicht", contentTabs, "compact"),
       ].filter(Boolean)
     );
+
+    document.querySelectorAll(".loadout-subnav-row").forEach((row) => {
+      if (!row.querySelector(".secondary-mode-switch, #contentTabs")) row.remove();
+    });
   }
 
   function init() {
     applyMinimalTop();
     applyImageFixes();
-    document.addEventListener("click", () => window.setTimeout(applyMinimalTop, 40), true);
+    document.addEventListener("click", () => {
+      window.setTimeout(applyMinimalTop, 40);
+      window.setTimeout(applyMinimalTop, 180);
+    }, true);
     window.setTimeout(applyMinimalTop, 250);
     window.setTimeout(applyMinimalTop, 1000);
+    window.setTimeout(applyMinimalTop, 2500);
+    window.setTimeout(applyMinimalTop, 5000);
     window.setTimeout(applyImageFixes, 250);
     window.setTimeout(applyImageFixes, 1000);
     const grid = document.getElementById("loadoutGrid");
