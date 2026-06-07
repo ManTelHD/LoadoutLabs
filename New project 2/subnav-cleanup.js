@@ -1,5 +1,6 @@
 (function () {
   const STYLE_ID = "subnav-cleanup-20260601";
+  let switchToken = 0;
   const css = `
     body .tier-first > .primary-mode-switch,
     body .tier-first > .secondary-mode-switch,
@@ -51,8 +52,18 @@
     }
 
     body.ll-top-switching .minimal-control-panel {
+      height: var(--ll-top-panel-height, auto) !important;
+      min-height: var(--ll-top-panel-height, auto) !important;
       overflow: hidden !important;
       contain: layout paint !important;
+      transition: none !important;
+    }
+
+    body.ll-top-switching .minimal-control-panel *,
+    body.ll-top-switching .minimal-hero,
+    body.ll-top-switching .tier-first > .tab-panel {
+      transition: none !important;
+      animation: none !important;
     }
 
     body .weapon-art,
@@ -127,14 +138,31 @@
     unwrapSubnavRows();
   }
 
+  function getClosestTopControl(target) {
+    const element = target?.nodeType === Node.ELEMENT_NODE ? target : target?.parentElement;
+    return element?.closest?.(".minimal-control-panel, .primary-mode-switch, .secondary-mode-switch, .content-tabs");
+  }
+
   function markSwitching() {
+    const token = ++switchToken;
+    const panel = document.querySelector(".minimal-control-panel");
+    if (panel) {
+      const height = Math.ceil(panel.getBoundingClientRect().height);
+      document.documentElement.style.setProperty("--ll-top-panel-height", `${height}px`);
+    }
     document.body?.classList.add("ll-top-switching");
-    window.setTimeout(() => document.body?.classList.remove("ll-top-switching"), 180);
+    window.setTimeout(() => {
+      if (token !== switchToken) return;
+      document.body?.classList.remove("ll-top-switching");
+      document.documentElement.style.removeProperty("--ll-top-panel-height");
+    }, 220);
   }
 
   function scheduleRefresh() {
     markSwitching();
-    [0, 16, 60, 140, 320, 760, 1400, 2400].forEach((delay) => {
+    refresh();
+    if (window.requestAnimationFrame) window.requestAnimationFrame(refresh);
+    [16, 60, 140, 320, 760, 1400, 2400].forEach((delay) => {
       window.setTimeout(refresh, delay);
     });
   }
@@ -142,12 +170,10 @@
   function init() {
     refresh();
     scheduleRefresh();
-    ["pointerdown", "touchstart", "keydown", "click"].forEach((eventName) => {
+    ["pointerdown", "mousedown", "touchstart", "keydown", "click"].forEach((eventName) => {
       document.addEventListener(eventName, (event) => {
         if (eventName === "keydown" && !["Enter", " "].includes(event.key)) return;
-        if (event.target?.closest?.(".minimal-control-panel, .primary-mode-switch, .secondary-mode-switch, .content-tabs")) {
-          scheduleRefresh();
-        }
+        if (getClosestTopControl(event.target)) scheduleRefresh();
       }, true);
     });
   }
