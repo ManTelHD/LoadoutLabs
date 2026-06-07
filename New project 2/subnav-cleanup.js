@@ -58,7 +58,11 @@
     body .weapon-art,
     body .weapon-thumb,
     body .camo-swatch,
-    body .mode-image-gallery figure {
+    body .mode-image-gallery figure,
+    body #loadoutGrid .weapon-art,
+    body #loadoutGrid .loadout-card .weapon-art,
+    body .loadout-grid .loadout-card .weapon-art,
+    body #loadoutGrid > .loadout-card.tier-absolute-meta .weapon-art {
       border: 0 !important;
       background: transparent !important;
       box-shadow: none !important;
@@ -70,7 +74,10 @@
     body .ranked-map-card img,
     body .camo-swatch img,
     body .weapon-art img,
-    body .weapon-thumb img {
+    body .weapon-thumb img,
+    body #loadoutGrid .weapon-art img,
+    body #loadoutGrid .loadout-card .weapon-art img,
+    body .loadout-grid .loadout-card .weapon-art img {
       border: 0 !important;
       outline: 0 !important;
       background: transparent !important;
