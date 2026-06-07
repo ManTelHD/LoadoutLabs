@@ -148,6 +148,32 @@
     return element?.closest?.(".minimal-control-panel, .primary-mode-switch, .secondary-mode-switch, .content-tabs");
   }
 
+  function setButtonLabel(selector, label) {
+    const button = document.querySelector(selector);
+    if (button && button.textContent !== label) button.textContent = label;
+  }
+
+  function normalizeTopButtons() {
+    const primarySwitch = document.querySelector(".primary-mode-switch");
+    if (primarySwitch) {
+      ["updates", "mw4-info", "season4-info"].forEach((mode) => {
+        const button = primarySwitch.querySelector(`.mode-button[data-mode="${mode}"]`);
+        if (button && button.parentElement === primarySwitch && button !== primarySwitch.lastElementChild) {
+          primarySwitch.append(button);
+        }
+      });
+    }
+
+    setButtonLabel('.primary-mode-switch .mode-button[data-mode="updates"]', "Updates");
+    setButtonLabel('.primary-mode-switch .mode-button[data-mode="mw4-info"]', "MW4");
+    setButtonLabel('.primary-mode-switch .mode-button[data-mode="season4-info"]', "Season 4");
+    setButtonLabel('.secondary-mode-switch .mode-button[data-mode="warzone-ranked"]', "Warzone");
+    setButtonLabel('.secondary-mode-switch .mode-button[data-mode="bo7-ranked"]', "BO7");
+    setButtonLabel('.secondary-mode-switch .mode-button[data-mode="camos"]', "Camos");
+    setButtonLabel('.content-tabs .content-tab[data-tab="weapons"]', "Waffen");
+    setButtonLabel('.content-tabs .content-tab[data-tab="maps"]', "Maps");
+  }
+
   function ensureControlGroup(panel, key, label, element, className = "") {
     if (!panel || !element) return null;
     let group = panel.querySelector(`.minimal-control-group[data-control-group="${key}"]`);
@@ -189,6 +215,7 @@
     const section = document.querySelector(".tier-first");
     if (!section) return;
 
+    normalizeTopButtons();
     const primarySwitch = document.querySelector(".primary-mode-switch");
     const secondarySwitch = document.querySelector(".secondary-mode-switch");
     const contentTabs = document.querySelector("#contentTabs");
