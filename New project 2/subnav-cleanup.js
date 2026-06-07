@@ -55,6 +55,33 @@
       contain: layout paint !important;
     }
 
+    body .weapon-art,
+    body .weapon-thumb,
+    body .camo-swatch,
+    body .mode-image-gallery figure {
+      border: 0 !important;
+      background: transparent !important;
+      box-shadow: none !important;
+    }
+
+    body .mode-info-main > img,
+    body .mode-image-gallery img,
+    body .update-card img,
+    body .ranked-map-card img,
+    body .camo-swatch img,
+    body .weapon-art img,
+    body .weapon-thumb img {
+      border: 0 !important;
+      outline: 0 !important;
+      background: transparent !important;
+      box-shadow: none !important;
+    }
+
+    body .mode-info-main > img,
+    body .update-card img {
+      border-bottom: 0 !important;
+    }
+
     @media (max-width: 620px) {
       body .minimal-control-panel .secondary-mode-switch,
       body .minimal-control-panel .minimal-control-group .secondary-mode-switch,
