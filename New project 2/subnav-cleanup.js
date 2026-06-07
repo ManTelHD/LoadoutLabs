@@ -1,5 +1,6 @@
 (function () {
   const STYLE_ID = "subnav-cleanup-20260601";
+  const MINIMAL_REFRESH_DELAYS = new Set([40, 180, 250, 450, 900, 1000, 1600, 2500, 5000]);
   let switchToken = 0;
   const css = `
     body .tier-first > .primary-mode-switch,
@@ -26,6 +27,10 @@
       border: 0 !important;
       background: transparent !important;
       box-shadow: none !important;
+    }
+
+    body .minimal-control-panel .minimal-control-group:has(> [hidden]) {
+      display: none !important;
     }
 
     body .minimal-control-panel .secondary-mode-switch,
@@ -139,8 +144,88 @@
   }
 
   function getClosestTopControl(target) {
-    const element = target?.nodeType === Node.ELEMENT_NODE ? target : target?.parentElement;
+    const element = target?.nodeType === 1 ? target : target?.parentElement;
     return element?.closest?.(".minimal-control-panel, .primary-mode-switch, .secondary-mode-switch, .content-tabs");
+  }
+
+  function ensureControlGroup(panel, key, label, element, className = "") {
+    if (!panel || !element) return null;
+    let group = panel.querySelector(`.minimal-control-group[data-control-group="${key}"]`);
+    if (!group) {
+      group = document.createElement("div");
+      group.className = "minimal-control-group";
+      group.dataset.controlGroup = key;
+    }
+
+    group.classList.toggle("compact", className === "compact");
+    group.hidden = Boolean(element.hidden);
+
+    let groupLabel = Array.from(group.children).find((child) => child.classList?.contains("minimal-control-label"));
+    if (!groupLabel) {
+      groupLabel = document.createElement("span");
+      groupLabel.className = "minimal-control-label";
+      group.prepend(groupLabel);
+    }
+    groupLabel.textContent = label;
+
+    if (element.parentElement !== group) group.append(element);
+    return group;
+  }
+
+  function syncControlGroups(panel, groups) {
+    const ordered = groups.filter(Boolean);
+    ordered.forEach((group, index) => {
+      if (group.parentElement !== panel) panel.append(group);
+      const current = Array.from(panel.children).filter((child) => child.classList?.contains("minimal-control-group"))[index];
+      if (current !== group) panel.insertBefore(group, current || null);
+    });
+
+    panel.querySelectorAll(".minimal-control-group").forEach((group) => {
+      if (!ordered.includes(group)) group.remove();
+    });
+  }
+
+  function syncMinimalPanel() {
+    const section = document.querySelector(".tier-first");
+    if (!section) return;
+
+    const primarySwitch = document.querySelector(".primary-mode-switch");
+    const secondarySwitch = document.querySelector(".secondary-mode-switch");
+    const contentTabs = document.querySelector("#contentTabs");
+    if (!primarySwitch && !secondarySwitch && !contentTabs) return;
+
+    let panel = Array.from(section.children).find((child) => child.classList?.contains("minimal-control-panel"));
+    if (!panel) {
+      panel = document.createElement("div");
+      panel.className = "minimal-control-panel";
+      panel.setAttribute("aria-label", "Schnellauswahl");
+      const heading = section.querySelector(".section-heading");
+      const anchor = primarySwitch || secondarySwitch || contentTabs || section.querySelector(".controls");
+      if (anchor?.parentElement === section) section.insertBefore(panel, anchor);
+      else if (heading) heading.after(panel);
+      else section.prepend(panel);
+    }
+
+    syncControlGroups(panel, [
+      ensureControlGroup(panel, "info", "Info", primarySwitch),
+      ensureControlGroup(panel, "meta", "Meta", secondarySwitch),
+      ensureControlGroup(panel, "view", "Ansicht", contentTabs, "compact"),
+    ]);
+  }
+
+  function patchMinimalRefreshTimers() {
+    if (window.__loadoutLabStableMinimalTimeoutPatch) return;
+    const nativeSetTimeout = window.setTimeout.bind(window);
+    window.__loadoutLabStableMinimalTimeoutPatch = true;
+    window.setTimeout = function stableMinimalSetTimeout(handler, delay, ...args) {
+      if (typeof handler === "function" && handler.name === "applyMinimalTop" && MINIMAL_REFRESH_DELAYS.has(Number(delay))) {
+        return nativeSetTimeout(() => {
+          refresh();
+          syncMinimalPanel();
+        }, Math.min(Number(delay) || 0, 24));
+      }
+      return nativeSetTimeout(handler, delay, ...args);
+    };
   }
 
   function markSwitching() {
@@ -161,14 +246,23 @@
   function scheduleRefresh() {
     markSwitching();
     refresh();
-    if (window.requestAnimationFrame) window.requestAnimationFrame(refresh);
+    syncMinimalPanel();
+    if (window.requestAnimationFrame) window.requestAnimationFrame(() => {
+      refresh();
+      syncMinimalPanel();
+    });
     [16, 60, 140, 320, 760, 1400, 2400].forEach((delay) => {
-      window.setTimeout(refresh, delay);
+      window.setTimeout(() => {
+        refresh();
+        syncMinimalPanel();
+      }, delay);
     });
   }
 
   function init() {
+    patchMinimalRefreshTimers();
     refresh();
+    syncMinimalPanel();
     scheduleRefresh();
     ["pointerdown", "mousedown", "touchstart", "keydown", "click"].forEach((eventName) => {
       document.addEventListener(eventName, (event) => {
