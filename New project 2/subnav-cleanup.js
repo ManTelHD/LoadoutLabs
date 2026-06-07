@@ -153,17 +153,21 @@
     if (button && button.textContent !== label) button.textContent = label;
   }
 
-  function normalizeTopButtons() {
-    const primarySwitch = document.querySelector(".primary-mode-switch");
-    if (primarySwitch) {
-      ["updates", "mw4-info", "season4-info"].forEach((mode) => {
-        const button = primarySwitch.querySelector(`.mode-button[data-mode="${mode}"]`);
-        if (button && button.parentElement === primarySwitch && button !== primarySwitch.lastElementChild) {
-          primarySwitch.append(button);
-        }
-      });
-    }
+  function orderButtons(switcher, modes) {
+    if (!switcher) return;
+    const buttons = modes
+      .map((mode) => switcher.querySelector(`.mode-button[data-mode="${mode}"]`))
+      .filter(Boolean);
 
+    buttons.forEach((button, index) => {
+      const visibleButtons = Array.from(switcher.children).filter((child) => child.classList?.contains("mode-button"));
+      const current = visibleButtons[index];
+      if (current !== button) switcher.insertBefore(button, current || null);
+    });
+  }
+
+  function normalizeTopButtons() {
+    orderButtons(document.querySelector(".primary-mode-switch"), ["updates", "mw4-info", "season4-info"]);
     setButtonLabel('.primary-mode-switch .mode-button[data-mode="updates"]', "Updates");
     setButtonLabel('.primary-mode-switch .mode-button[data-mode="mw4-info"]', "MW4");
     setButtonLabel('.primary-mode-switch .mode-button[data-mode="season4-info"]', "Season 4");
