@@ -59,6 +59,20 @@ jobs:
           writeFileSync(scriptPath, source);
           NODE
 
+      - name: Bump GitHub Pages asset version
+        working-directory: New project 2
+        run: |
+          node <<'NODE'
+          const { readFileSync, writeFileSync } = require('node:fs');
+          const indexPath = 'index.html';
+          let html = readFileSync(indexPath, 'utf8');
+          const stamp = new Date().toISOString().replace(/\D/g, '').slice(0, 12);
+          const version = `auto-${stamp}`;
+          html = html.replace(/window\.__loadoutLabMetaVersion = "auto-\d+"/, `window.__loadoutLabMetaVersion = "${version}"`);
+          html = html.replace(/\?v=auto-\d+/g, `?v=${version}`);
+          writeFileSync(indexPath, html);
+          NODE
+
       - name: Commit refreshed meta data
         run: |
           if [[ -z "$(git status --porcelain)" ]]; then
