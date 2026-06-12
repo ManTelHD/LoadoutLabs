@@ -66,6 +66,10 @@ jobs:
           const { readFileSync, writeFileSync } = require('node:fs');
           const indexPath = 'index.html';
           let html = readFileSync(indexPath, 'utf8');
+          const stripCopy = 'DS20 Mirage ist laut WZStats aktuell #1, gefolgt von Carbon 57, AK-27, Dravec 45, MXR-17 und VST. A-Tier startet bei Voyak KT-3.';
+          const intelCopy = 'WZStats fuehrt DS20 Mirage als #1. Carbon 57, AK-27, Dravec 45, MXR-17 und VST komplettieren die Absolute Meta; A-Tier startet bei Voyak KT-3.';
+          html = html.replace(/DS20 Mirage ist laut WZStats aktuell #1, gefolgt von Carbon 57, MXR-17, Dravec 45, AK-27 und Kogot-7\. A-Tier startet jetzt fortlaufend bei #7\./g, stripCopy);
+          html = html.replace(/WZStats f.{1,12}hrt DS20 Mirage als #1\. Carbon 57, MXR-17, Dravec 45, AK-27 und Kogot-7 komplettieren die Absolute Meta; A-Tier startet fortlaufend ab #7\./g, intelCopy);
           const stamp = new Date().toISOString().replace(/\D/g, '').slice(0, 12);
           const version = `auto-${stamp}`;
           html = html.replace(/window\.__loadoutLabMetaVersion = "auto-\d+"/, `window.__loadoutLabMetaVersion = "${version}"`);
