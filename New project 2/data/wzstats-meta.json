@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-10T14:29:37.939Z",
-  "generatedAtLabel": "10. Juni 2026 um 16:29 MESZ",
+  "generatedAt": "2026-06-12T07:52:08.939Z",
+  "generatedAtLabel": "12. Juni 2026 um 09:52 MESZ",
   "source": "WZStats",
   "sourceUrl": "https://wzstats.gg/",
   "publicEndpoint": "https://app.wzstats.gg/wz2/weapons/meta",
@@ -11,7 +11,7 @@
     "title": "Warzone Ranked / Ranked Resurgence Meta",
     "source": "WZStats",
     "sourceUrl": "https://app.wzstats.gg/wz2/weapons/meta",
-    "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
+    "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
     "sourceNote": "Tierlist und Raenge stammen ausschliesslich aus WZStats. Pick-Rates werden nur angezeigt, wenn WZStats einen oeffentlichen Wert liefert.",
     "hasPickRates": false,
     "items": [
@@ -24,19 +24,18 @@
         "tierLabel": "Meta",
         "position": 1,
         "rankLabel": "META #1",
-        "scoreLabel": "100",
+        "scoreLabel": "Meta",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#ds20-mirage",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "DS20 Mirage wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als Meta gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Long Range"
-        ],
-        "score": 100
+        ]
       },
       {
         "id": "carbon-57",
@@ -47,19 +46,18 @@
         "tierLabel": "Meta",
         "position": 2,
         "rankLabel": "META #2",
-        "scoreLabel": "99",
+        "scoreLabel": "Meta",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#carbon-57",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "Carbon 57 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als Meta gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ],
-        "score": 99
+        ]
       },
       {
         "id": "ak-27",
@@ -70,19 +68,18 @@
         "tierLabel": "Meta",
         "position": 3,
         "rankLabel": "META #3",
-        "scoreLabel": "98",
+        "scoreLabel": "Meta",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#ak-27",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "AK-27 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als Meta gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Long Range"
-        ],
-        "score": 98
+        ]
       },
       {
         "id": "dravec-45",
@@ -93,19 +90,18 @@
         "tierLabel": "Meta",
         "position": 4,
         "rankLabel": "META #4",
-        "scoreLabel": "97",
+        "scoreLabel": "Meta",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#dravec-45",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "Dravec 45 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als Meta gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ],
-        "score": 97
+        ]
       },
       {
         "id": "mxr-17",
@@ -116,19 +112,18 @@
         "tierLabel": "Meta",
         "position": 5,
         "rankLabel": "META #5",
-        "scoreLabel": "96",
+        "scoreLabel": "Meta",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#mxr-17",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "MXR-17 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als Meta gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Long Range"
-        ],
-        "score": 96
+        ]
       },
       {
         "id": "vst",
@@ -139,19 +134,18 @@
         "tierLabel": "Meta",
         "position": 6,
         "rankLabel": "META #6",
-        "scoreLabel": "95",
+        "scoreLabel": "Meta",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#vst",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "VST wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als Meta gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ],
-        "score": 95
+        ]
       },
       {
         "id": "voyak-kt-3",
@@ -160,21 +154,20 @@
         "role": "Long Range",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 7,
-        "rankLabel": "A #7",
-        "scoreLabel": "85",
+        "position": 1,
+        "rankLabel": "A #1",
+        "scoreLabel": "A-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#voyak-kt-3",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "Voyak KT-3 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Long Range"
-        ],
-        "score": 85
+        ]
       },
       {
         "id": "kogot-7",
@@ -183,21 +176,20 @@
         "role": "Close Range",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 8,
-        "rankLabel": "A #8",
-        "scoreLabel": "84",
+        "position": 2,
+        "rankLabel": "A #2",
+        "scoreLabel": "A-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#kogot-7",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "Kogot-7 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ],
-        "score": 84
+        ]
       },
       {
         "id": "mk35-isr",
@@ -206,21 +198,20 @@
         "role": "Long Range",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 9,
-        "rankLabel": "A #9",
-        "scoreLabel": "83",
+        "position": 3,
+        "rankLabel": "A #3",
+        "scoreLabel": "A-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#mk35-isr",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "MK35 ISR wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Long Range"
-        ],
-        "score": 83
+        ]
       },
       {
         "id": "cbrs-3",
@@ -229,21 +220,20 @@
         "role": "Close Range",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 10,
-        "rankLabel": "A #10",
-        "scoreLabel": "82",
+        "position": 4,
+        "rankLabel": "A #4",
+        "scoreLabel": "A-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#cbrs-3",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "CBRS-3 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ],
-        "score": 82
+        ]
       },
       {
         "id": "peacekeeper-mk1",
@@ -252,21 +242,20 @@
         "role": "Long Range",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 11,
-        "rankLabel": "A #11",
-        "scoreLabel": "82",
+        "position": 5,
+        "rankLabel": "A #5",
+        "scoreLabel": "A-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#peacekeeper-mk1",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "Peacekeeper Mk1 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Long Range"
-        ],
-        "score": 82
+        ]
       },
       {
         "id": "ryden-45k",
@@ -275,21 +264,20 @@
         "role": "Close Range",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 12,
-        "rankLabel": "A #12",
-        "scoreLabel": "82",
+        "position": 6,
+        "rankLabel": "A #6",
+        "scoreLabel": "A-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#ryden-45k",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "Ryden 45K wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ],
-        "score": 82
+        ]
       },
       {
         "id": "mpc-25",
@@ -298,21 +286,20 @@
         "role": "Close Range",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 13,
-        "rankLabel": "A #13",
-        "scoreLabel": "82",
+        "position": 7,
+        "rankLabel": "A #7",
+        "scoreLabel": "A-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#mpc-25",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "MPC-25 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ],
-        "score": 82
+        ]
       },
       {
         "id": "egrt-17",
@@ -321,21 +308,20 @@
         "role": "Long Range",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 14,
-        "rankLabel": "A #14",
-        "scoreLabel": "82",
+        "position": 8,
+        "rankLabel": "A #8",
+        "scoreLabel": "A-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#egrt-17",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "EGRT-17 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Long Range"
-        ],
-        "score": 82
+        ]
       },
       {
         "id": "sturmwolf-45",
@@ -344,21 +330,20 @@
         "role": "Close Range",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 15,
-        "rankLabel": "A #15",
-        "scoreLabel": "82",
+        "position": 9,
+        "rankLabel": "A #9",
+        "scoreLabel": "A-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#sturmwolf-45",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "Sturmwolf 45 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ],
-        "score": 82
+        ]
       },
       {
         "id": "m15-mod-0",
@@ -367,21 +352,20 @@
         "role": "Long Range",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 16,
-        "rankLabel": "A #16",
-        "scoreLabel": "82",
+        "position": 10,
+        "rankLabel": "A #10",
+        "scoreLabel": "A-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#m15-mod-0",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "M15 MOD 0 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Long Range"
-        ],
-        "score": 82
+        ]
       },
       {
         "id": "rev-46",
@@ -390,21 +374,20 @@
         "role": "Close Range",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 17,
-        "rankLabel": "A #17",
-        "scoreLabel": "82",
+        "position": 11,
+        "rankLabel": "A #11",
+        "scoreLabel": "A-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#rev-46",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "REV-46 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ],
-        "score": 82
+        ]
       },
       {
         "id": "x9-maverick",
@@ -413,21 +396,42 @@
         "role": "Long Range",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 18,
-        "rankLabel": "A #18",
-        "scoreLabel": "82",
+        "position": 12,
+        "rankLabel": "A #12",
+        "scoreLabel": "A-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#x9-maverick",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "X9 Maverick wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Long Range"
-        ],
-        "score": 82
+        ]
+      },
+      {
+        "id": "vx-compact",
+        "name": "VX Compact",
+        "weaponClass": "Assault Rifle",
+        "role": "Long Range",
+        "tier": "A",
+        "tierLabel": "A-Tier",
+        "position": 13,
+        "rankLabel": "A #13",
+        "scoreLabel": "A-Tier",
+        "pickRate": null,
+        "pickRateLabel": "",
+        "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#vx-compact",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
+        "description": "VX Compact wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
+        "attachments": [
+          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
+          "Quelle: WZStats Tierlist",
+          "Rolle: Long Range"
+        ]
       },
       {
         "id": "maddox-rfb",
@@ -436,21 +440,20 @@
         "role": "Long Range",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 19,
-        "rankLabel": "A #19",
-        "scoreLabel": "82",
+        "position": 14,
+        "rankLabel": "A #14",
+        "scoreLabel": "A-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#maddox-rfb",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "Maddox RFB wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Long Range"
-        ],
-        "score": 82
+        ]
       },
       {
         "id": "razor-9mm",
@@ -459,21 +462,20 @@
         "role": "Close Range",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 20,
-        "rankLabel": "A #20",
-        "scoreLabel": "82",
+        "position": 15,
+        "rankLabel": "A #15",
+        "scoreLabel": "A-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#razor-9mm",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "Razor 9mm wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ],
-        "score": 82
+        ]
       },
       {
         "id": "m8a1",
@@ -482,21 +484,20 @@
         "role": "Sniper",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 21,
-        "rankLabel": "A #21",
-        "scoreLabel": "82",
+        "position": 16,
+        "rankLabel": "A #16",
+        "scoreLabel": "A-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#m8a1",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "M8A1 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Sniper"
-        ],
-        "score": 82
+        ]
       },
       {
         "id": "hawker-hx",
@@ -505,21 +506,20 @@
         "role": "Sniper",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 22,
-        "rankLabel": "A #22",
-        "scoreLabel": "82",
+        "position": 17,
+        "rankLabel": "A #17",
+        "scoreLabel": "A-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#hawker-hx",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "Hawker HX wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Sniper"
-        ],
-        "score": 82
+        ]
       },
       {
         "id": "vs-recon",
@@ -528,21 +528,20 @@
         "role": "Sniper",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 23,
-        "rankLabel": "A #23",
-        "scoreLabel": "82",
+        "position": 18,
+        "rankLabel": "A #18",
+        "scoreLabel": "A-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#vs-recon",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "VS Recon wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Sniper"
-        ],
-        "score": 82
+        ]
       },
       {
         "id": "strider-300",
@@ -551,21 +550,20 @@
         "role": "Sniper",
         "tier": "A",
         "tierLabel": "A-Tier",
-        "position": 24,
-        "rankLabel": "A #24",
-        "scoreLabel": "82",
+        "position": 19,
+        "rankLabel": "A #19",
+        "scoreLabel": "A-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#strider-300",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "Strider 300 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Sniper"
-        ],
-        "score": 82
+        ]
       },
       {
         "id": "sokol-545",
@@ -574,21 +572,20 @@
         "role": "Long Range",
         "tier": "B",
         "tierLabel": "B-Tier",
-        "position": 25,
-        "rankLabel": "B #25",
-        "scoreLabel": "72",
+        "position": 1,
+        "rankLabel": "B #1",
+        "scoreLabel": "B-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#sokol-545",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "Sokol 545 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als B-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Long Range"
-        ],
-        "score": 72
+        ]
       },
       {
         "id": "mk78",
@@ -597,21 +594,20 @@
         "role": "Long Range",
         "tier": "B",
         "tierLabel": "B-Tier",
-        "position": 26,
-        "rankLabel": "B #26",
-        "scoreLabel": "72",
+        "position": 2,
+        "rankLabel": "B #2",
+        "scoreLabel": "B-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#mk78",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "MK.78 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als B-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Long Range"
-        ],
-        "score": 72
+        ]
       },
       {
         "id": "swordfish-a1",
@@ -620,21 +616,20 @@
         "role": "Sniper",
         "tier": "B",
         "tierLabel": "B-Tier",
-        "position": 27,
-        "rankLabel": "B #27",
-        "scoreLabel": "72",
+        "position": 3,
+        "rankLabel": "B #3",
+        "scoreLabel": "B-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#swordfish-a1",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "Swordfish A1 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als B-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Sniper"
-        ],
-        "score": 72
+        ]
       },
       {
         "id": "rk-9",
@@ -643,21 +638,20 @@
         "role": "Close Range",
         "tier": "B",
         "tierLabel": "B-Tier",
-        "position": 28,
-        "rankLabel": "B #28",
-        "scoreLabel": "72",
+        "position": 4,
+        "rankLabel": "B #4",
+        "scoreLabel": "B-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#rk-9",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "RK-9 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als B-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ],
-        "score": 72
+        ]
       },
       {
         "id": "xm325",
@@ -666,21 +660,20 @@
         "role": "Long Range",
         "tier": "B",
         "tierLabel": "B-Tier",
-        "position": 29,
-        "rankLabel": "B #29",
-        "scoreLabel": "72",
+        "position": 5,
+        "rankLabel": "B #5",
+        "scoreLabel": "B-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#xm325",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "XM325 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als B-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Long Range"
-        ],
-        "score": 72
+        ]
       },
       {
         "id": "xr-3-ion",
@@ -689,21 +682,20 @@
         "role": "Sniper",
         "tier": "B",
         "tierLabel": "B-Tier",
-        "position": 30,
-        "rankLabel": "B #30",
-        "scoreLabel": "72",
+        "position": 6,
+        "rankLabel": "B #6",
+        "scoreLabel": "B-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#xr-3-ion",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "XR-3 Ion wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als B-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Sniper"
-        ],
-        "score": 72
+        ]
       },
       {
         "id": "krs-762",
@@ -712,21 +704,20 @@
         "role": "Sniper",
         "tier": "B",
         "tierLabel": "B-Tier",
-        "position": 31,
-        "rankLabel": "B #31",
-        "scoreLabel": "72",
+        "position": 7,
+        "rankLabel": "B #7",
+        "scoreLabel": "B-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#krs-762",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "KRS-7.62 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als B-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Sniper"
-        ],
-        "score": 72
+        ]
       },
       {
         "id": "shadow-sk",
@@ -735,21 +726,20 @@
         "role": "Sniper",
         "tier": "C",
         "tierLabel": "C-Tier",
-        "position": 32,
-        "rankLabel": "C #32",
-        "scoreLabel": "62",
+        "position": 1,
+        "rankLabel": "C #1",
+        "scoreLabel": "C-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#shadow-sk",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "Shadow SK wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als C-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Sniper"
-        ],
-        "score": 62
+        ]
       },
       {
         "id": "m34-novaline",
@@ -758,21 +748,20 @@
         "role": "Sniper",
         "tier": "C",
         "tierLabel": "C-Tier",
-        "position": 33,
-        "rankLabel": "C #33",
-        "scoreLabel": "62",
+        "position": 2,
+        "rankLabel": "C #2",
+        "scoreLabel": "C-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#m34-novaline",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "M34 Novaline wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als C-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Sniper"
-        ],
-        "score": 62
+        ]
       },
       {
         "id": "warden-308",
@@ -781,21 +770,20 @@
         "role": "Sniper",
         "tier": "C",
         "tierLabel": "C-Tier",
-        "position": 34,
-        "rankLabel": "C #34",
-        "scoreLabel": "62",
+        "position": 3,
+        "rankLabel": "C #3",
+        "scoreLabel": "C-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#warden-308",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "Warden 308 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als C-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Sniper"
-        ],
-        "score": 62
+        ]
       },
       {
         "id": "1911",
@@ -804,21 +792,20 @@
         "role": "Close Range",
         "tier": "C",
         "tierLabel": "C-Tier",
-        "position": 35,
-        "rankLabel": "C #35",
-        "scoreLabel": "62",
+        "position": 4,
+        "rankLabel": "C #4",
+        "scoreLabel": "C-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#1911",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "1911 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als C-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ],
-        "score": 62
+        ]
       },
       {
         "id": "coda-9",
@@ -827,21 +814,20 @@
         "role": "Close Range",
         "tier": "C",
         "tierLabel": "C-Tier",
-        "position": 36,
-        "rankLabel": "C #36",
-        "scoreLabel": "62",
+        "position": 5,
+        "rankLabel": "C #5",
+        "scoreLabel": "C-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#coda-9",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "CODA 9 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als C-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ],
-        "score": 62
+        ]
       },
       {
         "id": "velox-57",
@@ -850,21 +836,20 @@
         "role": "Close Range",
         "tier": "C",
         "tierLabel": "C-Tier",
-        "position": 37,
-        "rankLabel": "C #37",
-        "scoreLabel": "62",
+        "position": 6,
+        "rankLabel": "C #6",
+        "scoreLabel": "C-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#velox-57",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "Velox 5.7 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als C-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ],
-        "score": 62
+        ]
       },
       {
         "id": "jäger-45",
@@ -873,21 +858,20 @@
         "role": "Close Range",
         "tier": "C",
         "tierLabel": "C-Tier",
-        "position": 38,
-        "rankLabel": "C #38",
-        "scoreLabel": "62",
+        "position": 7,
+        "rankLabel": "C #7",
+        "scoreLabel": "C-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#j%C3%A4ger-45",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "Jäger 45 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als C-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ],
-        "score": 62
+        ]
       },
       {
         "id": "arc-m1",
@@ -896,21 +880,20 @@
         "role": "Launcher",
         "tier": "D",
         "tierLabel": "D-Tier",
-        "position": 39,
-        "rankLabel": "D #39",
-        "scoreLabel": "52",
+        "position": 1,
+        "rankLabel": "D #1",
+        "scoreLabel": "D-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#arc-m1",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "A.R.C. M1 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Launcher"
-        ],
-        "score": 52
+        ]
       },
       {
         "id": "flatline-mkii",
@@ -919,21 +902,20 @@
         "role": "Melee",
         "tier": "D",
         "tierLabel": "D-Tier",
-        "position": 40,
-        "rankLabel": "D #40",
-        "scoreLabel": "52",
+        "position": 2,
+        "rankLabel": "D #2",
+        "scoreLabel": "D-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#flatline-mkii",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "Flatline MK.II wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Melee"
-        ],
-        "score": 52
+        ]
       },
       {
         "id": "aarow-109",
@@ -942,21 +924,20 @@
         "role": "Launcher",
         "tier": "D",
         "tierLabel": "D-Tier",
-        "position": 41,
-        "rankLabel": "D #41",
-        "scoreLabel": "52",
+        "position": 3,
+        "rankLabel": "D #3",
+        "scoreLabel": "D-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#aarow-109",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "AAROW 109 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Launcher"
-        ],
-        "score": 52
+        ]
       },
       {
         "id": "knife-bo7",
@@ -965,21 +946,20 @@
         "role": "Melee",
         "tier": "D",
         "tierLabel": "D-Tier",
-        "position": 42,
-        "rankLabel": "D #42",
-        "scoreLabel": "52",
+        "position": 4,
+        "rankLabel": "D #4",
+        "scoreLabel": "D-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#knife-bo7",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "KNIFE wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Melee"
-        ],
-        "score": 52
+        ]
       },
       {
         "id": "ballistic-knife",
@@ -988,21 +968,20 @@
         "role": "Melee",
         "tier": "D",
         "tierLabel": "D-Tier",
-        "position": 43,
-        "rankLabel": "D #43",
-        "scoreLabel": "52",
+        "position": 5,
+        "rankLabel": "D #5",
+        "scoreLabel": "D-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#ballistic-knife",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "Ballistic Knife wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Melee"
-        ],
-        "score": 52
+        ]
       },
       {
         "id": "nx-ravager",
@@ -1011,21 +990,20 @@
         "role": "Special",
         "tier": "D",
         "tierLabel": "D-Tier",
-        "position": 44,
-        "rankLabel": "D #44",
-        "scoreLabel": "52",
+        "position": 6,
+        "rankLabel": "D #6",
+        "scoreLabel": "D-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#nx-ravager",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "NX Ravager wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Special"
-        ],
-        "score": 52
+        ]
       },
       {
         "id": "h311-saw",
@@ -1034,21 +1012,20 @@
         "role": "Melee",
         "tier": "D",
         "tierLabel": "D-Tier",
-        "position": 45,
-        "rankLabel": "D #45",
-        "scoreLabel": "52",
+        "position": 7,
+        "rankLabel": "D #7",
+        "scoreLabel": "D-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#h311-saw",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "H311-SAW wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Melee"
-        ],
-        "score": 52
+        ]
       },
       {
         "id": "gdl-havoc",
@@ -1057,21 +1034,20 @@
         "role": "Special",
         "tier": "D",
         "tierLabel": "D-Tier",
-        "position": 46,
-        "rankLabel": "D #46",
-        "scoreLabel": "52",
+        "position": 8,
+        "rankLabel": "D #8",
+        "scoreLabel": "D-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#gdl-havoc",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "GDL Havoc wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Special"
-        ],
-        "score": 52
+        ]
       },
       {
         "id": "siren",
@@ -1080,21 +1056,20 @@
         "role": "Special",
         "tier": "D",
         "tierLabel": "D-Tier",
-        "position": 47,
-        "rankLabel": "D #47",
-        "scoreLabel": "52",
+        "position": 9,
+        "rankLabel": "D #9",
+        "scoreLabel": "D-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#siren",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "Siren wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Special"
-        ],
-        "score": 52
+        ]
       },
       {
         "id": "katana",
@@ -1103,21 +1078,20 @@
         "role": "Melee",
         "tier": "D",
         "tierLabel": "D-Tier",
-        "position": 48,
-        "rankLabel": "D #48",
-        "scoreLabel": "52",
+        "position": 10,
+        "rankLabel": "D #10",
+        "scoreLabel": "D-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#katana",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "Katana wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Melee"
-        ],
-        "score": 52
+        ]
       },
       {
         "id": "grimhawk",
@@ -1126,21 +1100,20 @@
         "role": "Special",
         "tier": "D",
         "tierLabel": "D-Tier",
-        "position": 49,
-        "rankLabel": "D #49",
-        "scoreLabel": "52",
+        "position": 11,
+        "rankLabel": "D #11",
+        "scoreLabel": "D-Tier",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#grimhawk",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "GRIMHAWK wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Special"
-        ],
-        "score": 52
+        ]
       }
     ]
   },
@@ -1149,7 +1122,7 @@
     "title": "Black Ops 7 Ranked Meta",
     "source": "WZStats",
     "sourceUrl": "https://app.wzstats.gg/wz2/weapons/meta",
-    "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
+    "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
     "sourceNote": "Tierlist und Raenge stammen ausschliesslich aus WZStats. Pick-Rates werden nur angezeigt, wenn WZStats einen oeffentlichen Wert liefert.",
     "hasPickRates": false,
     "items": [
@@ -1162,19 +1135,18 @@
         "tierLabel": "Meta",
         "position": 1,
         "rankLabel": "META #1",
-        "scoreLabel": "100",
+        "scoreLabel": "Meta",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#m15-mod-0",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "M15 MOD 0 wird von WZStats in Black Ops 7 Ranked Meta als Meta gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Long Range"
-        ],
-        "score": 100
+        ]
       },
       {
         "id": "mpc-25",
@@ -1185,19 +1157,18 @@
         "tierLabel": "Meta",
         "position": 2,
         "rankLabel": "META #2",
-        "scoreLabel": "99",
+        "scoreLabel": "Meta",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#mpc-25",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "MPC-25 wird von WZStats in Black Ops 7 Ranked Meta als Meta gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ],
-        "score": 99
+        ]
       },
       {
         "id": "dravec-45",
@@ -1208,19 +1179,18 @@
         "tierLabel": "Meta",
         "position": 3,
         "rankLabel": "META #3",
-        "scoreLabel": "98",
+        "scoreLabel": "Meta",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#dravec-45",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "Dravec 45 wird von WZStats in Black Ops 7 Ranked Meta als Meta gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ],
-        "score": 98
+        ]
       },
       {
         "id": "vs-recon",
@@ -1231,19 +1201,18 @@
         "tierLabel": "Meta",
         "position": 4,
         "rankLabel": "META #4",
-        "scoreLabel": "97",
+        "scoreLabel": "Meta",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#vs-recon",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "VS Recon wird von WZStats in Black Ops 7 Ranked Meta als Meta gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Sniper"
-        ],
-        "score": 97
+        ]
       },
       {
         "id": "jäger-45",
@@ -1254,19 +1223,18 @@
         "tierLabel": "Meta",
         "position": 5,
         "rankLabel": "META #5",
-        "scoreLabel": "96",
+        "scoreLabel": "Meta",
         "pickRate": null,
         "pickRateLabel": "",
         "imageUrl": "https://wzstats.gg/assets/images/weapon-placeholder.png#j%C3%A4ger-45",
-        "sourceUpdatedAt": "2026-06-08T14:17:16.085Z",
-        "sourceUpdatedLabel": "8. Juni 2026",
+        "sourceUpdatedAt": "2026-06-12T01:02:52.935Z",
+        "sourceUpdatedLabel": "12. Juni 2026",
         "description": "Jäger 45 wird von WZStats in Black Ops 7 Ranked Meta als Meta gefuehrt.",
         "attachments": [
           "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
           "Quelle: WZStats Tierlist",
           "Rolle: Close Range"
-        ],
-        "score": 96
+        ]
       }
     ]
   }

@@ -931,7 +931,7 @@ const modeInfoData = {
       ["Patch Notes vom 29. April", "Warzone bekommt ein Personal-Best-System für Damage, Kills und E/D. Ranked Play erhält die Warzone Ranked Series mit 50-Spieler-Leaderboards, Emblem- und Weapon-Camo-Rewards."],
       ["Loot & Economy", "Spikes kommen exklusiv an Buy Stations, während Spikes, Hades LMG-SMG Conversion Kit und XR-3 Ion Sniper Rifle in Ranked eingeschränkt werden. Supply Boxes sollen weniger doppelte Equipment-Typen droppen."],
       ["Equipment & Meta", "Frag Grenade wird durch Cluster Grenade ersetzt, Shock Stick durch EMP Grenade und Pinpoint Grenade durch Sensor Dart. Smoke Screen wird stärker, Precision-Airstrike-Warnungen erscheinen früher."],
-      ["Waffen-Balance", "WZStats führt MK.78 als #1 Langstrecke, Kogot-7 als #1 Kurzstrecke, DS20 Mirage als #2 Langstrecke und VST als #2 Kurzstrecke. MXR-17 wurde zwar gebufft, steht aktuell aber nur im A-Tier #8 Langstrecke."],
+      ["Waffen-Balance", "WZStats führt DS20 Mirage, Carbon 57, AK-27, Dravec 45, MXR-17 und VST als aktuelle Warzone-Meta. BO7 Ranked führt M15 MOD 0, MPC-25, Dravec 45, VS Recon und Jäger 45."],
     ],
     images: [
       ["Hot Pursuit", "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blog/body/bo7/bo7-s03-reloaded/BO7-S03-RELOADED-ANNOUNCEMENT-028.webp"],
@@ -1150,14 +1150,14 @@ function renderMode() {
 function getMetaPatchSummary(mode) {
   if (mode === "warzone-ranked") {
     return `
-      <span>Meta Update · 3. Mai 2026</span>
-      <p><strong>WZStats live geprüft:</strong> MK.78 ist #1 Langstrecke, Kogot-7 ist #1 Kurzstrecke, DS20 Mirage ist #2 Langstrecke und VST ist #2 Kurzstrecke. <strong>Korrektur:</strong> MXR-17 ist aktuell A-Tier #8 Langstrecke, nicht Top-Meta.</p>
+      <span>Meta Update · 12. Juni 2026</span>
+      <p><strong>WZStats live geprüft:</strong> DS20 Mirage ist #1, Carbon 57 #2, AK-27 #3, Dravec 45 #4, MXR-17 #5 und VST #6 in der aktuellen Warzone-Meta.</p>
     `;
   }
 
   return `
-    <span>Meta Update · 3. Mai 2026</span>
-    <p><strong>Buff:</strong> MXR-17 bekommt bessere Damage-Werte und bleibt als Anchor-AR interessanter. <strong>Nerf außerhalb der Liste:</strong> 1911 verliert deutlich Reichweite. <strong>Attachment-Buff:</strong> X9 Maverick Javelin Assembly bekommt bessere Projectile-Werte. <strong>Neu:</strong> Siren, Katana und mehrere Weekly-Challenge-Aufsätze sind für Reloaded relevant.</p>
+    <span>Meta Update · 12. Juni 2026</span>
+    <p><strong>BO7 Ranked:</strong> M15 MOD 0, MPC-25, Dravec 45, VS Recon und Jäger 45 bilden die aktuellen Top-Empfehlungen.</p>
   `;
 }
 
@@ -1479,7 +1479,7 @@ function renderLoadouts() {
               <span class="tier-kicker">${items.length} Builds</span>
               <h3>${group}</h3>
             </div>
-            <span>Updated 3. Mai 2026</span>
+            <span>Updated 12. Juni 2026</span>
           </div>
           <div class="weapon-list">
             ${items.map(renderCard).join("")}
