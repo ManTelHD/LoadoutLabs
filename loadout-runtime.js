@@ -7018,8 +7018,8 @@
   let dialog = null;
 
   const copy = {
-    de: { selected: "ausgewählt", empty: "Keine Waffen ausgewählt", clear: "Leeren", compare: "Vergleichen", direct: "Direktvergleich", close: "Vergleich schließen", gap: "Score-Abstand", points: "Punkte", point: "Punkt", rank: "Rang", score: "Score", tier: "Tier", role: "Rolle", versus: "vs." },
-    en: { selected: "selected", empty: "No weapons selected", clear: "Clear", compare: "Compare", direct: "Direct comparison", close: "Close comparison", gap: "Score gap", points: "points", point: "point", rank: "Rank", score: "Score", tier: "Tier", role: "Role", versus: "vs." },
+    de: { selected: "ausgewählt", empty: "Keine Waffen ausgewählt", clear: "Leeren", compare: "Vergleichen", direct: "Direktvergleich", close: "Vergleich schließen", gap: "Score-Abstand", points: "Punkte", point: "Punkt", rank: "Rang", score: "Score", tier: "Tier", role: "Rolle", versus: "vs.", winner: "Besserer Score", tie: "Gleichstand", same: "gleich", different: "anders", attachments: "Aufsätze" },
+    en: { selected: "selected", empty: "No weapons selected", clear: "Clear", compare: "Compare", direct: "Direct comparison", close: "Close comparison", gap: "Score gap", points: "points", point: "point", rank: "Rank", score: "Score", tier: "Tier", role: "Role", versus: "vs.", winner: "Higher score", tie: "Tie", same: "same", different: "different", attachments: "Attachments" },
   };
 
   function language() {
@@ -7079,21 +7079,41 @@
     });
   }
 
-  function comparisonColumn(item) {
+  function normalizeAttachment(value) {
+    return String(value || "")
+      .toLowerCase()
+      .replace(/\([^)]*\)/g, "")
+      .replace(/^[^:]+:\s*/, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function attachmentRows(item, sharedAttachments) {
+    const text = labels();
+    return item.attachments.map((attachment) => {
+      const state = sharedAttachments.has(normalizeAttachment(attachment)) ? "same" : "different";
+      return `<li data-attachment-state="${state}"><span>${state === "same" ? text.same : text.different}</span><strong>${html(attachment)}</strong></li>`;
+    }).join("");
+  }
+
+  function comparisonColumn(item, context) {
     const text = labels();
     const fallback = fallbackImage(item);
-    const attachments = item.attachments.map((attachment) => `<li>${html(attachment)}</li>`).join("");
+    const score = Number(item.score || 0);
+    const scoreState = context.tie ? "tie" : score === context.highScore ? "winner" : "lower";
+    const attachments = attachmentRows(item, context.sharedAttachments);
     return `
-      <section class="weapon-compare-column">
+      <section class="weapon-compare-column" data-score-state="${scoreState}">
         <img src="${html(item.imageUrl)}" alt="${html(item.name)}"${fallback ? ` data-fallback="${html(fallback)}" onerror="this.onerror=null;this.src=this.dataset.fallback"` : ""} loading="lazy" decoding="async">
-        <span>${html(localClass(item.weaponClass))}</span>
+        <div class="compare-title-row"><span>${html(localClass(item.weaponClass))}</span>${scoreState === "winner" ? `<em>${text.winner}</em>` : scoreState === "tie" ? `<em>${text.tie}</em>` : ""}</div>
         <h3>${html(item.name)}</h3>
         <dl>
           <div><dt>${text.rank}</dt><dd>#${html(item.position)}</dd></div>
-          <div><dt>${text.score}</dt><dd>${html(item.score)}/100</dd></div>
+          <div data-stat-state="${scoreState}"><dt>${text.score}</dt><dd>${html(item.score)}/100</dd></div>
           <div><dt>${text.tier}</dt><dd>${html(item.tierLabel)}</dd></div>
           <div><dt>${text.role}</dt><dd>${html(localRole(item.role))}</dd></div>
         </dl>
+        <div class="compare-attachment-title">${text.attachments}</div>
         <ol>${attachments}</ol>
       </section>`;
   }
@@ -7114,11 +7134,16 @@
       dialog.addEventListener("close", () => document.body.classList.remove("weapon-compare-open"));
     }
     const difference = Math.abs(Number(items[0].score) - Number(items[1].score));
+    const highScore = Math.max(Number(items[0].score || 0), Number(items[1].score || 0));
+    const tie = Number(items[0].score || 0) === Number(items[1].score || 0);
+    const firstAttachments = new Set(items[0].attachments.map(normalizeAttachment));
+    const sharedAttachments = new Set(items[1].attachments.map(normalizeAttachment).filter((attachment) => firstAttachments.has(attachment)));
+    const context = { highScore, tie, sharedAttachments };
     dialog.innerHTML = `
       <div class="weapon-compare-shell">
         <header><div><span>${text.direct}</span><h2 id="weaponCompareTitle">${html(items[0].name)} ${text.versus} ${html(items[1].name)}</h2></div><button type="button" data-compare-close aria-label="${text.close}">×</button></header>
         <p class="weapon-compare-summary">${text.gap}: <strong>${difference} ${difference === 1 ? text.point : text.points}</strong></p>
-        <div class="weapon-compare-columns">${items.map(comparisonColumn).join("")}</div>
+        <div class="weapon-compare-columns">${items.map((item) => comparisonColumn(item, context)).join("")}</div>
       </div>`;
     document.body.classList.add("weapon-compare-open");
     if (!dialog.open) dialog.showModal();
