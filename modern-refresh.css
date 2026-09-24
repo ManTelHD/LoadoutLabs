@@ -1528,6 +1528,29 @@ body .image-audit-card[data-image-state="error"] .image-state {
   body #loadoutGrid .card-footer { flex-wrap: wrap; }
   body #loadoutGrid .weapon-compare-check { min-height: 2.45rem; }
 
+  body #loadoutGrid .premium-details-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  body #loadoutGrid .loadout-slot {
+    grid-template-columns: 1fr auto !important;
+    gap: 0.38rem 0.5rem !important;
+  }
+
+  body #loadoutGrid .loadout-slot .slot-type {
+    min-width: 0 !important;
+  }
+
+  body #loadoutGrid .loadout-slot strong {
+    grid-column: 1 / -1 !important;
+  }
+
+  body #loadoutGrid .loadout-slot em {
+    grid-row: 1 !important;
+    grid-column: 2 !important;
+    justify-self: end !important;
+  }
+
   body .weapon-compare-tray-v2 {
     right: 0.4rem;
     bottom: 0.4rem;
@@ -1795,6 +1818,138 @@ body #loadoutGrid .loadout-slot,
 body #loadoutGrid .perk-chip,
 body #loadoutGrid .build-code-box {
   border-radius: 0.4rem !important;
+}
+
+body #loadoutGrid .meta-card-details {
+  margin-top: 0.2rem !important;
+}
+
+body #loadoutGrid .premium-details-grid {
+  grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.85fr) !important;
+  gap: 0.9rem !important;
+  align-items: stretch !important;
+}
+
+body #loadoutGrid .detail-panel {
+  display: grid !important;
+  align-content: start !important;
+  border-color: rgba(var(--tier-card-rgb), 0.26) !important;
+  background:
+    linear-gradient(180deg, rgba(var(--tier-card-rgb), 0.055), transparent 5rem),
+    rgba(7, 10, 14, 0.62) !important;
+}
+
+body #loadoutGrid .detail-panel-title {
+  min-height: 3.05rem !important;
+  padding: 0.72rem 0.86rem !important;
+  background: rgba(255, 255, 255, 0.018) !important;
+}
+
+body #loadoutGrid .detail-panel-title span {
+  color: #edf3fb !important;
+  font-size: 0.78rem !important;
+  letter-spacing: 0.02em !important;
+}
+
+body #loadoutGrid .detail-panel-title strong {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 2.4rem !important;
+  min-height: 1.45rem !important;
+  padding: 0.16rem 0.46rem !important;
+  border: 1px solid rgba(var(--tier-card-rgb), 0.38) !important;
+  border-radius: 999px !important;
+  background: rgba(var(--tier-card-rgb), 0.08) !important;
+  color: var(--tier-card-color) !important;
+  font-size: 0.72rem !important;
+  line-height: 1 !important;
+}
+
+body #loadoutGrid .premium-attachment-list {
+  grid-template-columns: 1fr !important;
+  gap: 0.46rem !important;
+  padding: 0.72rem !important;
+}
+
+body #loadoutGrid .loadout-slot {
+  grid-template-columns: minmax(5.6rem, auto) minmax(0, 1fr) auto !important;
+  min-height: 2.7rem !important;
+  padding: 0.48rem 0.58rem !important;
+  border-color: rgba(255, 255, 255, 0.075) !important;
+  background: rgba(255, 255, 255, 0.032) !important;
+}
+
+body #loadoutGrid .loadout-slot .slot-type {
+  width: fit-content !important;
+  min-width: 4.7rem !important;
+  padding: 0.18rem 0.4rem !important;
+  border-radius: 999px !important;
+  background: rgba(var(--tier-card-rgb), 0.09) !important;
+  color: var(--tier-card-color) !important;
+  font-size: 0.66rem !important;
+  text-align: center !important;
+}
+
+body #loadoutGrid .loadout-slot strong {
+  font-size: 0.94rem !important;
+}
+
+body #loadoutGrid .loadout-slot em {
+  background: rgba(0, 0, 0, 0.18) !important;
+}
+
+body #loadoutGrid .setup-panel {
+  gap: 0 !important;
+}
+
+body #loadoutGrid .build-code-box {
+  display: grid !important;
+  gap: 0.25rem !important;
+  margin: 0.72rem 0.72rem 0 !important;
+  padding: 0.78rem !important;
+  border-color: rgba(var(--tier-card-rgb), 0.36) !important;
+  background:
+    linear-gradient(135deg, rgba(var(--tier-card-rgb), 0.12), rgba(255, 255, 255, 0.025)),
+    rgba(0, 0, 0, 0.2) !important;
+}
+
+body #loadoutGrid .build-code-box span {
+  color: #8d98a7 !important;
+  font-size: 0.64rem !important;
+}
+
+body #loadoutGrid .build-code-box strong {
+  color: #f8fbff !important;
+  font-size: 1.08rem !important;
+  letter-spacing: 0.02em !important;
+}
+
+body #loadoutGrid .setup-panel .detail-panel-title {
+  margin-top: 0.64rem !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+body #loadoutGrid .premium-perk-list {
+  gap: 0.46rem !important;
+  padding: 0.72rem !important;
+}
+
+body #loadoutGrid .perk-chip {
+  min-height: 2.55rem !important;
+  padding: 0.5rem 0.6rem !important;
+  border-color: rgba(255, 255, 255, 0.075) !important;
+  background: rgba(255, 255, 255, 0.032) !important;
+}
+
+body #loadoutGrid .perk-chip span {
+  width: 1.55rem !important;
+  height: 1.55rem !important;
+  box-shadow: 0 0 0.8rem rgba(var(--tier-card-rgb), 0.18) !important;
+}
+
+body #loadoutGrid .perk-chip strong {
+  font-size: 0.92rem !important;
 }
 
 body .updates-section,
