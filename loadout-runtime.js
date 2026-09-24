@@ -171,6 +171,12 @@
     },
   ];
 
+  const groups = [
+    { id: "overview", label: "Übersicht", sectionIds: ["overview", "latest"] },
+    { id: "gameplay", label: "Gameplay", sectionIds: ["campaign", "multiplayer", "dmz"] },
+    { id: "launch", label: "Launch", sectionIds: ["warzone", "editions"] },
+  ];
+
   let activeMw4Tab = "overview";
 
   function html(value) {
@@ -302,18 +308,18 @@
       body .mw4-tabs {
         display: flex !important;
         flex-wrap: wrap !important;
-        gap: 0.42rem !important;
+        gap: 0.34rem !important;
         padding: 0.25rem !important;
         border: 1px solid rgba(255, 255, 255, 0.09) !important;
-        border-radius: 999px !important;
+        border-radius: 0.5rem !important;
         background: rgba(5, 8, 11, 0.78) !important;
       }
 
       body .mw4-tab {
         min-height: 2.05rem !important;
-        padding: 0.38rem 0.72rem !important;
+        padding: 0.38rem 0.82rem !important;
         border: 1px solid transparent !important;
-        border-radius: 999px !important;
+        border-radius: 0.34rem !important;
         background: transparent !important;
         color: rgba(238, 232, 214, 0.78) !important;
         font-weight: 900 !important;
@@ -335,8 +341,14 @@
 
       body .mw4-panel.active {
         display: grid !important;
+        gap: 0.78rem !important;
+        align-items: start !important;
+      }
+
+      body .mw4-section-card {
+        display: grid !important;
         grid-template-columns: minmax(0, 1.08fr) minmax(17rem, 0.92fr) !important;
-        gap: 1rem !important;
+        gap: 0.78rem !important;
         align-items: start !important;
       }
 
@@ -444,7 +456,7 @@
           grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
         }
 
-        body .mw4-panel.active,
+        body .mw4-section-card,
         body .mw4-mini-grid {
           grid-template-columns: 1fr !important;
         }
@@ -510,10 +522,10 @@
     }
   }
 
-  function renderSection(section) {
+  function renderSectionCard(section) {
     const isOverview = section.id === "overview";
     return `
-      <section class="mw4-panel${section.id === activeMw4Tab ? " active" : ""}" data-mw4-panel="${html(section.id)}">
+      <section class="mw4-section-card">
         <article class="mw4-official-card">
           <span class="mw4-kicker">${html(section.eyebrow)}</span>
           <h3>${html(section.title)}</h3>
@@ -524,6 +536,15 @@
           ${isOverview ? `<div class="mw4-video-frame"><iframe src="https://www.youtube-nocookie.com/embed/${revealTrailerId}" title="Call of Duty: Modern Warfare 4 Reveal Trailer" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>` : ""}
           <div class="mw4-mini-grid">${section.cards.map(([label, value]) => `<div class="mw4-mini-card"><span>${html(label)}</span><strong>${html(value)}</strong></div>`).join("")}</div>
         </aside>
+      </section>
+    `;
+  }
+
+  function renderGroup(group) {
+    const groupSections = group.sectionIds.map((id) => sections.find((section) => section.id === id)).filter(Boolean);
+    return `
+      <section class="mw4-panel${group.id === activeMw4Tab ? " active" : ""}" data-mw4-panel="${html(group.id)}">
+        ${groupSections.map(renderSectionCard).join("")}
       </section>
     `;
   }
@@ -539,10 +560,10 @@
       <div class="mw4-topline">
         <span class="mw4-updated-pill">${html(facts.updateTime)}</span>
         <nav class="mw4-tabs" aria-label="MW4-Unterbereiche">
-          ${sections.map((section) => `<button class="mw4-tab${section.id === activeMw4Tab ? " active" : ""}" data-mw4-tab="${html(section.id)}" type="button">${html(section.label)}</button>`).join("")}
+          ${groups.map((group) => `<button class="mw4-tab${group.id === activeMw4Tab ? " active" : ""}" data-mw4-tab="${html(group.id)}" type="button">${html(group.label)}</button>`).join("")}
         </nav>
       </div>
-      ${sections.map(renderSection).join("")}
+      ${groups.map(renderGroup).join("")}
       <section class="mw4-official-card">
         <h3>Offizielle Bilder</h3>
         <p>Die Galerie nutzt offizielles Reveal-Material; sie ist keine separate Gameplay-Bestätigung über die oben gelisteten Fakten hinaus.</p>
@@ -666,8 +687,14 @@
 
       body .mw4-watch-panel .mw4-panel.active {
         display: grid !important;
+        gap: 0.78rem !important;
+        align-items: start !important;
+      }
+
+      body .mw4-watch-panel .mw4-section-card {
+        display: grid !important;
         grid-template-columns: minmax(0, 1.08fr) minmax(17rem, 0.92fr) !important;
-        gap: 1rem !important;
+        gap: 0.78rem !important;
         align-items: start !important;
       }
 
@@ -681,7 +708,7 @@
       }
 
       @media (max-width: 1040px) {
-        body .mw4-watch-panel .mw4-panel.active {
+        body .mw4-watch-panel .mw4-section-card {
           grid-template-columns: 1fr !important;
         }
       }
