@@ -31,9 +31,9 @@ body .site-header {
   top: 0;
   z-index: 1000;
   width: min(100% - 2rem, 96rem) !important;
-  min-height: 4.5rem !important;
+  min-height: 3.7rem !important;
   margin: 0 auto !important;
-  padding: 0.65rem 0 !important;
+  padding: 0.46rem 0 !important;
   border: 0 !important;
   border-bottom: 1px solid var(--ll-line) !important;
   border-radius: 0 !important;
@@ -53,8 +53,8 @@ body .site-header .brand {
 
 body .site-header .brand-mark {
   display: grid !important;
-  width: 2.35rem !important;
-  height: 2.35rem !important;
+  width: 2.15rem !important;
+  height: 2.15rem !important;
   place-items: center;
   border: 1px solid rgba(var(--ll-accent-rgb), 0.55) !important;
   border-radius: 0.38rem !important;
@@ -64,11 +64,7 @@ body .site-header .brand-mark {
 }
 
 body .top-nav {
-  gap: 0.2rem !important;
-  padding: 0.25rem !important;
-  border: 1px solid rgba(255, 255, 255, 0.07) !important;
-  border-radius: 0.5rem !important;
-  background: rgba(255, 255, 255, 0.025) !important;
+  display: none !important;
 }
 
 body .top-nav a {
@@ -94,15 +90,15 @@ body .language-switch {
 }
 
 body .language-switch {
-  padding: 0.22rem !important;
+  padding: 0.18rem !important;
   border: 1px solid var(--ll-line) !important;
   border-radius: 0.45rem !important;
   background: rgba(255, 255, 255, 0.025) !important;
 }
 
 body .language-switch button {
-  min-width: 2.25rem !important;
-  min-height: 2rem !important;
+  min-width: 2.08rem !important;
+  min-height: 1.85rem !important;
   border: 0 !important;
   border-radius: 0.3rem !important;
   background: transparent !important;
@@ -2276,24 +2272,12 @@ body .site-footer {
   }
 
   body .site-header {
-    min-height: 4rem !important;
-    flex-wrap: wrap;
+    min-height: 3.55rem !important;
+    flex-wrap: nowrap;
   }
 
   body .site-header .brand > span:last-child {
-    display: none;
-  }
-
-  body .top-nav {
-    order: 3;
-    width: 100%;
-    margin-top: 0.35rem;
-    overflow-x: auto;
-  }
-
-  body .top-nav a {
-    flex: 1 0 auto;
-    text-align: center;
+    display: inline;
   }
 
   body .site-health-bar {
@@ -2434,5 +2418,16 @@ body .site-footer {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+body .site-header .top-nav {
+  display: none !important;
+}
+
+@media (max-width: 760px) {
+  body .site-header {
+    min-height: 3.55rem !important;
+    flex-wrap: nowrap !important;
   }
 }
