@@ -7147,18 +7147,48 @@
     syncTray();
   }
 
+  function handleCompareClick(event) {
+    const label = event.target.closest(".weapon-compare-check");
+    if (!label) return;
+    const input = label.querySelector("input");
+    if (!input) return;
+    event.preventDefault();
+    event.stopPropagation();
+    if (input.disabled && !input.checked) return;
+    toggle(input.value, !input.checked);
+  }
+
+  function bindCheck(label, item) {
+    if (!label || label.dataset.compareBound === "true") return;
+    label.dataset.compareBound = "true";
+    const input = label.querySelector("input");
+    if (!input) return;
+    input.addEventListener("change", (event) => toggle(item.id, event.target.checked));
+    label.addEventListener("pointerdown", (event) => {
+      if (event.target === input) return;
+      event.preventDefault();
+      event.stopPropagation();
+      if (input.disabled && !input.checked) return;
+      toggle(item.id, !input.checked);
+    });
+  }
+
   function installChecks() {
     const byName = new Map(registry.weapons.map((item) => [item.name.toLowerCase(), item]));
     document.querySelectorAll("#loadoutGrid .loadout-card").forEach((card) => {
-      if (card.querySelector(".weapon-compare-check")) return;
       const name = (card.dataset.loadoutCard || card.querySelector(".weapon-name")?.textContent || "").trim().toLowerCase();
       const item = byName.get(name);
       const footer = card.querySelector(".card-footer");
       if (!item || !footer) return;
+      const existing = card.querySelector(".weapon-compare-check");
+      if (existing) {
+        bindCheck(existing, item);
+        return;
+      }
       const label = document.createElement("label");
       label.className = "weapon-compare-check";
       label.innerHTML = `<input type="checkbox" value="${html(item.id)}"><span>${labels().compare}</span>`;
-      label.querySelector("input").addEventListener("change", (event) => toggle(item.id, event.target.checked));
+      bindCheck(label, item);
       footer.append(label);
     });
     syncTray();
@@ -7174,6 +7204,7 @@
     .then((data) => {
       registry = data;
       buildTray();
+      document.addEventListener("click", handleCompareClick, true);
       installChecks();
       const grid = document.querySelector("#loadoutGrid");
       if (grid) new MutationObserver(installChecks).observe(grid, { childList: true });
