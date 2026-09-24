@@ -25,54 +25,75 @@
 
   const facts = {
     title: "MW4",
-    description: "Call of Duty: Modern Warfare 4 ist offiziell: Release am 23. Oktober 2026. Aktuell sind Intel-Hub, Campaign-Trailer, Story-Recap, Open-Beta-Infos, Multiplayer-Deep-Dive, DMZ und Warzone-Anbindung offiziell dokumentiert.",
+    description: "Call of Duty: Modern Warfare 4 ist offiziell: Release am 23. Oktober 2026, Campaign Early Access ab 16. Oktober. Der MW4-Tab fokussiert jetzt Launch-Daten, Season-1-Anbindung, Warzone-Start und die bisher offiziell bestätigten Season-1-Infos.",
     updateTime: "Aktualisiert: 24. September 2026",
-    updateSummary: "Neu: Tokyo-Games-Show Campaign Trailer, Story-Recap, Open-Beta-/Patch-Notes und aktuelle Multiplayer-Infos sind eingepflegt.",
+    updateSummary: "Neu: Launch-Übersicht, Season-1-Status und Warzone-Anbindung sind prominenter einsortiert.",
     stats: [
       ["Release", "23. Okt. 2026"],
       ["Early Access", "Kampagne ab 16. Okt."],
-      ["Studio", "Infinity Ward"],
-      ["Aktuell", "TGS Trailer + Beta"],
-      ["Modi", "Kampagne, MP, DMZ"],
-      ["Warzone", "ab Season 1"],
+      ["Season 1", "Datum noch offen"],
+      ["Warzone", "Start mit Season 1"],
+      ["Plattformen", "PS5, Xbox, PC, Switch 2"],
+      ["Quelle", "Call of Duty Blog"],
     ],
   };
 
   const sections = [
     {
+      id: "launch",
+      label: "Launch",
+      eyebrow: "Offizieller Launch-Fahrplan",
+      title: "Wann startet Modern Warfare 4?",
+      text: "Modern Warfare 4 erscheint offiziell am Freitag, 23. Oktober 2026. Wer digital vorbestellt, bekommt Campaign Early Access ab Freitag, 16. Oktober 2026. Ein konkreter globaler Uhrzeit-Plan wurde von Call of Duty noch nicht final veröffentlicht.",
+      bullets: [
+        "Release: Freitag, 23. Oktober 2026.",
+        "Campaign Early Access: Freitag, 16. Oktober 2026 fuer digitale Vorbesteller.",
+        "Studio: Infinity Ward fuehrt die Entwicklung.",
+        "Plattformen: PlayStation 5, Xbox Series X|S, PC und Nintendo Switch 2.",
+        "Globale Unlock-Zeiten sind noch nicht offiziell final bestaetigt.",
+      ],
+      cards: [
+        ["Campaign Early Access", "16. Oktober 2026"],
+        ["Full Launch", "23. Oktober 2026"],
+        ["Unlock-Zeit", "noch offen"],
+      ],
+    },
+    {
+      id: "season1",
+      label: "Season 1",
+      eyebrow: "Season-1-Status",
+      title: "Wann beginnt Season 1?",
+      text: "Season 1 ist offiziell als gemeinsame Content-Phase fuer Modern Warfare 4 und Warzone eingeordnet. Ein exaktes Startdatum wurde in den offiziellen Call-of-Duty-Quellen aber noch nicht final genannt.",
+      bullets: [
+        "Season-1-Start: offiziell noch offen; Call of Duty hat noch kein fixes Datum genannt.",
+        "Warzone bekommt MW4-Inhalte und Progression mit Season 1.",
+        "Die Signature Weapon Collection ist in MW4 zum Launch verfuegbar und in Warzone ab Season 01.",
+        "Battle Pass, BlackCell und Tier Skips werden nutzbar, sobald der Season-01-Battle-Pass im Spiel verfuegbar ist.",
+        "Warzone auf PS4 und Xbox One endet mit dem Start von MW4 Season 1.",
+        "Der Tab markiert das Season-1-Datum bewusst als offen, bis Call of Duty es offiziell bestaetigt.",
+      ],
+      cards: [
+        ["Season-1-Start", "offiziell noch offen"],
+        ["Warzone-Integration", "ab Season 1"],
+        ["Last-Gen Warzone", "endet mit Season 1"],
+      ],
+    },
+    {
       id: "overview",
       label: "Übersicht",
       eyebrow: "Offiziell bestätigt",
-      title: "Modern Warfare 4 ist kein Gerücht mehr",
-      text: "Activision und Infinity Ward haben MW4 am 28. Mai 2026 offiziell vorgestellt. Der Shooter erscheint am Freitag, 23. Oktober 2026, für PS5, Xbox Series X|S, PC und Nintendo Switch 2.",
+      title: "Was ist bis zum Launch wichtig?",
+      text: "Activision und Infinity Ward haben MW4 offiziell vorgestellt. Der aktuelle Stand buendelt Launch, Campaign Early Access, Multiplayer, DMZ, Warzone-Anbindung und September-Updates aus offiziellen Quellen.",
       bullets: [
         "Der offizielle Forward Operating Blog wurde zuletzt am 9. September 2026 aktualisiert.",
         "Der Tokyo-Games-Show Campaign Trailer und der Story-Recap sind neue September-Quellen.",
         "Open Beta, Maps/Modes, Waffen, Progression und Beta Patch Notes sind offiziell dokumentiert.",
-        "Warzone bindet MW4-Inhalte und Progression ab Season 1 ein; ältere Konsolen laufen aus.",
+        "Warzone bindet MW4-Inhalte und Progression ab Season 1 ein.",
       ],
       cards: [
         ["Neuester Hub-Stand", "9. September"],
-        ["Campaign Early Access", "16. Oktober"],
-        ["Launch", "23. Oktober"],
-      ],
-    },
-    {
-      id: "latest",
-      label: "Neu",
-      eyebrow: "September Intel",
-      title: "Campaign-Trailer, Story-Recap und Beta-Stand",
-      text: "Seit dem Reveal sind mehrere offizielle MW4-Updates dazugekommen: Der Intel-Hub wurde am 9. September ergänzt, am 16. September folgte der Story-Recap und am 17. September der Tokyo-Games-Show Campaign Trailer.",
-      bullets: [
-        "Der Story-Recap bereitet auf Campaign Early Access am 16. Oktober vor.",
-        "Der TGS-Trailer ist offizielles Kampagnenmaterial und ersetzt die alte reine Reveal-Einordnung.",
-        "Die Beta Patch Notes vom 1. September ergänzen den Open-Beta-Stand nach dem Beta-Wochenende.",
-        "Der Tab trennt jetzt Release-Fakten, Beta-Infos und weiterhin kommende Launch-Details sauberer.",
-      ],
-      cards: [
+        ["Story-Recap", "16. September"],
         ["TGS Trailer", "17. September"],
-        ["Story so far", "16. September"],
-        ["Beta Patch Notes", "1. September"],
       ],
     },
     {
@@ -135,8 +156,8 @@
       id: "warzone",
       label: "Warzone & Plattformen",
       eyebrow: "Season-1-Anbindung",
-      title: "MW4 zieht Warzone in die Current-Gen-Phase",
-      text: "Modern Warfare 4 startet am 23. Oktober; kurz danach beginnt Season 1 als gemeinsame Content-Phase für MW4 und Warzone. Ab dann werden MW4-Inhalte und Progression mit Warzone verbunden.",
+      title: "Warzone wird mit Season 1 umgestellt",
+      text: "Modern Warfare 4 startet am 23. Oktober. Die Warzone-Anbindung ist fuer Season 1 bestaetigt: Ab dann werden MW4-Inhalte und Progression mit Warzone verbunden.",
       bullets: [
         "Warzone auf PS4 und Xbox One ist ab MW4 Season 1 nicht mehr spielbar.",
         "Neue Downloads für Warzone auf PS4/Xbox One enden am 4. Juni; der Ingame-Store dort wird am 25. Juni entfernt.",
@@ -172,12 +193,12 @@
   ];
 
   const groups = [
-    { id: "overview", label: "Übersicht", sectionIds: ["overview", "latest"] },
+    { id: "launch", label: "Launch", sectionIds: ["launch", "season1", "warzone"] },
     { id: "gameplay", label: "Gameplay", sectionIds: ["campaign", "multiplayer", "dmz"] },
-    { id: "launch", label: "Launch", sectionIds: ["warzone", "editions"] },
+    { id: "more", label: "Extras", sectionIds: ["overview", "editions"] },
   ];
 
-  let activeMw4Tab = "overview";
+  let activeMw4Tab = "launch";
 
   function html(value) {
     return String(value || "")
