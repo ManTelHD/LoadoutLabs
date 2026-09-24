@@ -187,12 +187,12 @@ body .support-button:focus-visible {
 }
 
 body .section.loadout-section {
-  padding-top: clamp(2.4rem, 5vw, 4.8rem) !important;
+  padding-top: clamp(1.8rem, 4vw, 3.4rem) !important;
 }
 
 body .section-heading {
-  max-width: 58rem !important;
-  margin-bottom: 1.7rem !important;
+  max-width: 64rem !important;
+  margin-bottom: 1rem !important;
 }
 
 body .section-heading .eyebrow {
@@ -203,11 +203,11 @@ body .section-heading .eyebrow {
 }
 
 body .section-heading h1 {
-  max-width: 16ch;
+  max-width: 18ch;
   margin: 0 !important;
   color: #fff !important;
-  font-size: clamp(2.45rem, 6vw, 5rem) !important;
-  line-height: 0.92 !important;
+  font-size: clamp(2.35rem, 5vw, 4.4rem) !important;
+  line-height: 0.96 !important;
   letter-spacing: 0 !important;
 }
 
@@ -223,13 +223,14 @@ body .updated-note {
   display: inline-flex !important;
   align-items: center;
   gap: 0.45rem;
-  margin-top: 1rem !important;
-  padding: 0.42rem 0.7rem !important;
-  border: 1px solid rgba(var(--ll-accent-rgb), 0.22) !important;
-  border-radius: 0.35rem !important;
-  background: rgba(var(--ll-accent-rgb), 0.055) !important;
-  color: #c9d1db !important;
-  font-size: 0.78rem !important;
+  margin-top: 0.55rem !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: #8f9bab !important;
+  font-size: 0.76rem !important;
+  font-weight: 800 !important;
 }
 
 body .updated-note::before {
@@ -246,7 +247,7 @@ body .site-health-bar {
   align-items: stretch;
   justify-content: flex-start;
   gap: 0.55rem;
-  margin: -0.4rem 0 0.85rem !important;
+  margin: -0.2rem 0 0.75rem !important;
   padding: 0 !important;
 }
 
@@ -275,12 +276,12 @@ body .site-health-bar .health-summary {
 
 body .site-health-bar .public-health-summary {
   display: inline-grid;
-  min-height: 2.15rem;
-  padding: 0.38rem 0.64rem;
-  border-color: rgba(var(--ll-accent-rgb), 0.18);
+  min-height: 1.85rem;
+  padding: 0.28rem 0.52rem;
+  border-color: rgba(var(--ll-accent-rgb), 0.14);
   border-radius: 999px;
-  background: rgba(16, 21, 28, 0.58);
-  opacity: 0.82;
+  background: rgba(16, 21, 28, 0.42);
+  opacity: 0.72;
 }
 
 body .site-health-bar .public-health-summary strong {
@@ -1692,27 +1693,36 @@ body .today-strip {
 body .primary-mode-switch,
 body .secondary-mode-switch,
 body .content-tabs {
-  width: fit-content !important;
+  width: 100% !important;
   max-width: 100%;
-  margin: 0 0 0.6rem !important;
-  padding: 0.28rem !important;
-  gap: 0.25rem !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  gap: 0.38rem !important;
   overflow-x: auto;
-  border: 1px solid var(--ll-line) !important;
-  border-radius: 0.55rem !important;
-  background: rgba(16, 21, 28, 0.86) !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
   scrollbar-width: none;
+}
+
+body .primary-mode-switch {
+  margin-top: 0.95rem !important;
+}
+
+body .secondary-mode-switch,
+body .content-tabs {
+  margin-top: 0.42rem !important;
 }
 
 body .mode-button,
 body .content-tab {
-  min-height: 2.55rem !important;
-  padding: 0.58rem 0.92rem !important;
-  border: 0 !important;
+  min-height: 2.28rem !important;
+  padding: 0.45rem 0.74rem !important;
+  border: 1px solid rgba(255, 255, 255, 0.075) !important;
   border-radius: 0.36rem !important;
-  background: transparent !important;
+  background: rgba(16, 21, 28, 0.72) !important;
   color: var(--ll-muted) !important;
-  font-size: 0.82rem !important;
+  font-size: 0.75rem !important;
   font-weight: 750 !important;
   white-space: nowrap;
 }
@@ -1725,22 +1735,24 @@ body .content-tab:hover {
 body .mode-button.active,
 body .content-tab.active {
   background: var(--ll-accent) !important;
+  border-color: var(--ll-accent) !important;
   color: #091006 !important;
-  box-shadow: 0 0 1.2rem rgba(var(--ll-accent-rgb), 0.14) !important;
+  box-shadow: none !important;
 }
 
 body .weapon-dashboard {
-  margin-top: 1.25rem !important;
+  margin-top: 1.15rem !important;
 }
 
 body .controls {
   display: grid !important;
   grid-template-columns: minmax(0, 1fr) minmax(13rem, 18rem) !important;
-  gap: 0.75rem !important;
-  margin: 0 0 0.75rem !important;
-  padding: 0 !important;
-  border: 0 !important;
-  background: transparent !important;
+  gap: 0.68rem !important;
+  margin: 0 0 0.65rem !important;
+  padding: 0.72rem !important;
+  border: 1px solid rgba(255, 255, 255, 0.075) !important;
+  border-radius: 0.55rem !important;
+  background: rgba(16, 21, 28, 0.5) !important;
 }
 
 body .search-box,
@@ -1755,11 +1767,11 @@ body .select-box {
 
 body .search-box input,
 body .select-box select {
-  min-height: 3.25rem !important;
+  min-height: 2.82rem !important;
   border: 1px solid var(--ll-line) !important;
   border-radius: 0.48rem !important;
   outline: 0;
-  background: var(--ll-surface) !important;
+  background: rgba(7, 10, 14, 0.72) !important;
   color: #fff !important;
   box-shadow: none !important;
 }
@@ -1772,9 +1784,9 @@ body .select-box select:focus {
 
 body #filterToolbar.toolbar {
   display: flex !important;
-  gap: 0.45rem !important;
-  margin: 0 0 0.65rem !important;
-  padding: 0 !important;
+  gap: 0.35rem !important;
+  margin: 0 0 0.55rem !important;
+  padding: 0 0.08rem !important;
   overflow-x: auto;
   background: transparent !important;
   scrollbar-width: none;
@@ -1782,13 +1794,13 @@ body #filterToolbar.toolbar {
 
 body #filterToolbar .filter-button {
   flex: 0 0 auto;
-  min-height: 2.45rem !important;
-  padding: 0.5rem 0.85rem !important;
+  min-height: 2.18rem !important;
+  padding: 0.42rem 0.68rem !important;
   border: 1px solid var(--ll-line) !important;
-  border-radius: 0.42rem !important;
-  background: var(--ll-surface) !important;
+  border-radius: 999px !important;
+  background: rgba(16, 21, 28, 0.7) !important;
   color: #c5ced8 !important;
-  font-size: 0.78rem !important;
+  font-size: 0.72rem !important;
   font-weight: 750 !important;
 }
 
@@ -1799,16 +1811,16 @@ body #filterToolbar .filter-button:hover {
 
 body #filterToolbar .filter-button.active {
   border-color: var(--ll-accent) !important;
-  background: rgba(var(--ll-accent-rgb), 0.13) !important;
-  color: var(--ll-accent) !important;
+  background: var(--ll-accent) !important;
+  color: #091006 !important;
   box-shadow: none !important;
 }
 
 body .result-count {
-  margin: 0.85rem 0 !important;
-  color: #8f9bab !important;
-  font-size: 0.78rem !important;
-  font-weight: 700 !important;
+  margin: 0.62rem 0 0.72rem !important;
+  color: var(--ll-accent) !important;
+  font-size: 0.75rem !important;
+  font-weight: 850 !important;
 }
 
 body #loadoutGrid .meta-tier-heading {
@@ -2310,11 +2322,56 @@ body .site-footer {
   }
 
   body .section-heading h1 {
-    font-size: clamp(2.35rem, 13vw, 3.7rem) !important;
+    font-size: clamp(2.1rem, 11vw, 3.25rem) !important;
   }
 
   body .controls {
     grid-template-columns: 1fr !important;
+    gap: 0.45rem !important;
+    padding: 0.5rem !important;
+  }
+
+  body .primary-mode-switch,
+  body .secondary-mode-switch,
+  body .content-tabs {
+    gap: 0.3rem !important;
+  }
+
+  body .mode-button,
+  body .content-tab {
+    min-height: 2rem !important;
+    padding: 0.36rem 0.56rem !important;
+    font-size: 0.68rem !important;
+  }
+
+  body .site-health-bar {
+    margin-bottom: 0.42rem !important;
+  }
+
+  body .site-health-bar .public-health-summary {
+    min-height: 1.65rem !important;
+    padding: 0.22rem 0.46rem !important;
+  }
+
+  body .search-box,
+  body .select-box {
+    gap: 0.24rem !important;
+    font-size: 0.6rem !important;
+  }
+
+  body .search-box input,
+  body .select-box select {
+    min-height: 2.42rem !important;
+  }
+
+  body #filterToolbar .filter-button {
+    min-height: 1.95rem !important;
+    padding: 0.32rem 0.54rem !important;
+    font-size: 0.66rem !important;
+  }
+
+  body .result-count {
+    margin: 0.48rem 0 0.55rem !important;
   }
 
   body #loadoutGrid .meta-tier-heading {
