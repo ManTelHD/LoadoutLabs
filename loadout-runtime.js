@@ -1688,15 +1688,10 @@
       emptyText: "Versuch einen anderen Suchbegriff oder wechsel den Filter.",
       filters: {
         all: "Alle",
-        top10: "Top 10",
         meta: "Absolute Meta",
         a: "A-Tier",
-        b: "B-Tier",
         long: "Long Range",
         close: "Close Range",
-        sniper: "Sniper",
-        hasBuild: "Mit Aufsaetzen",
-        noBuild: "Ohne Aufsaetze",
       },
     },
     en: {
@@ -1741,30 +1736,20 @@
       emptyText: "Try another search term or switch filters.",
       filters: {
         all: "All",
-        top10: "Top 10",
         meta: "Absolute Meta",
         a: "A-Tier",
-        b: "B-Tier",
         long: "Long Range",
         close: "Close Range",
-        sniper: "Sniper",
-        hasBuild: "With Attachments",
-        noBuild: "No Attachments",
       },
     },
   };
 
   const filterConfig = [
     { key: "all", native: "all", accent: "neutral" },
-    { key: "top10", native: "all", accent: "gold" },
     { key: "meta", native: "all", accent: "gold" },
     { key: "a", native: "all", accent: "violet" },
-    { key: "b", native: "all", accent: "blue" },
     { key: "long", native: "long", accent: "neutral" },
     { key: "close", native: "close", accent: "neutral" },
-    { key: "sniper", native: "sniper", accent: "neutral" },
-    { key: "hasBuild", native: "all", accent: "green" },
-    { key: "noBuild", native: "all", accent: "muted" },
   ];
 
   const css = `
