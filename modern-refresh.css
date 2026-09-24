@@ -120,6 +120,72 @@ body .site-footer {
   margin-inline: auto !important;
 }
 
+body .support-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: min(100% - 2rem, 96rem);
+  margin: clamp(2rem, 4vw, 3.2rem) auto 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(255, 211, 90, 0.34);
+  border-radius: 0.55rem;
+  background:
+    linear-gradient(135deg, rgba(255, 211, 90, 0.14), rgba(var(--ll-accent-rgb), 0.045)),
+    rgba(16, 21, 28, 0.76);
+  box-shadow: 0 1rem 2.4rem rgba(0, 0, 0, 0.18);
+}
+
+body .support-strip span {
+  display: inline-flex;
+  margin-bottom: 0.26rem;
+  color: #ffd35a;
+  font-size: 0.7rem;
+  font-weight: 950;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+body .support-strip strong {
+  display: block;
+  color: #f7f9fc;
+  font-family: Rajdhani, Inter, sans-serif;
+  font-size: clamp(1.1rem, 2vw, 1.55rem);
+  font-weight: 900;
+  line-height: 1;
+}
+
+body .support-strip p {
+  max-width: 55rem;
+  margin: 0.35rem 0 0;
+  color: #aeb9c6;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+body .support-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  flex: 0 0 auto;
+  padding: 0.72rem 1rem;
+  border: 1px solid rgba(255, 211, 90, 0.58);
+  border-radius: 0.42rem;
+  background: #ffd35a;
+  color: #151006 !important;
+  font-size: 0.82rem;
+  font-weight: 950;
+  text-transform: uppercase;
+  box-shadow: 0 0 1.1rem rgba(255, 211, 90, 0.16);
+}
+
+body .support-button:hover,
+body .support-button:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 0 1.45rem rgba(255, 211, 90, 0.26);
+}
+
 body .section.loadout-section {
   padding-top: clamp(2.4rem, 5vw, 4.8rem) !important;
 }
@@ -1974,6 +2040,17 @@ body .site-footer {
   body .site-health-bar .image-audit-button,
   body .site-health-bar .build-audit-button {
     width: 100% !important;
+  }
+
+  body .support-strip {
+    width: min(100% - 1rem, 96rem);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0.82rem;
+  }
+
+  body .support-button {
+    width: 100%;
   }
 
   body .section-heading h1 {
