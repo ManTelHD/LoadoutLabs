@@ -1559,9 +1559,9 @@
     if (priority && highlights.length) {
       priority.innerHTML = highlights.slice(0, 3).map((item) => `
         <article>
-          <span>${escapeHtml(item.label)}</span>
+          <span>${escapeHtml(String(item.label || "").replace(/Geprueft|Geprüft|Quellen/gi, "Live"))}</span>
           <strong>${escapeHtml(item.title)}</strong>
-          <p>${escapeHtml(item.text)}</p>
+          <p>${escapeHtml(String(item.text || "").replace(/Offizielle Quellen wurden am (.*?) geprueft\\.?/i, "Aktualisiert am $1.").replace(/Offizielle Quellen wurden am (.*?) geprüft\\.?/i, "Aktualisiert am $1."))}</p>
         </article>`).join("");
     }
 
