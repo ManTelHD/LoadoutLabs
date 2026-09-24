@@ -25,7 +25,7 @@
 
   const facts = {
     title: "MW4",
-    description: "Call of Duty: Modern Warfare 4 ist offiziell: Release am 23. Oktober 2026, Campaign Early Access ab 16. Oktober. Der MW4-Tab fokussiert jetzt Launch-Daten, Season-1-Anbindung, Warzone-Start und die bisher offiziell bestätigten Season-1-Infos.",
+    description: "Call of Duty: Modern Warfare 4: Release am 23. Oktober 2026, Campaign Early Access ab 16. Oktober. Der MW4-Tab fokussiert jetzt Launch-Daten, Season-1-Anbindung, Warzone-Start und die wichtigsten Season-1-Infos.",
     updateTime: "Aktualisiert: 24. September 2026",
     updateSummary: "Neu: Launch-Übersicht, Season-1-Status und Warzone-Anbindung sind prominenter einsortiert.",
     stats: [
@@ -34,7 +34,7 @@
       ["Season 1", "Datum noch offen"],
       ["Warzone", "Start mit Season 1"],
       ["Plattformen", "PS5, Xbox, PC, Switch 2"],
-      ["Quelle", "Call of Duty Blog"],
+      ["Fokus", "Launch & Season 1"],
     ],
   };
 
@@ -42,7 +42,7 @@
     {
       id: "launch",
       label: "Launch",
-      eyebrow: "Offizieller Launch-Fahrplan",
+      eyebrow: "Launch-Fahrplan",
       title: "Wann startet Modern Warfare 4?",
       text: "Modern Warfare 4 erscheint offiziell am Freitag, 23. Oktober 2026. Wer digital vorbestellt, bekommt Campaign Early Access ab Freitag, 16. Oktober 2026. Ein konkreter globaler Uhrzeit-Plan wurde von Call of Duty noch nicht final veröffentlicht.",
       bullets: [
@@ -63,14 +63,14 @@
       label: "Season 1",
       eyebrow: "Season-1-Status",
       title: "Wann beginnt Season 1?",
-      text: "Season 1 ist offiziell als gemeinsame Content-Phase fuer Modern Warfare 4 und Warzone eingeordnet. Ein exaktes Startdatum wurde in den offiziellen Call-of-Duty-Quellen aber noch nicht final genannt.",
+      text: "Season 1 ist als gemeinsame Content-Phase fuer Modern Warfare 4 und Warzone eingeordnet. Ein exaktes Startdatum ist aber noch nicht final genannt.",
       bullets: [
         "Season-1-Start: offiziell noch offen; Call of Duty hat noch kein fixes Datum genannt.",
         "Warzone bekommt MW4-Inhalte und Progression mit Season 1.",
         "Die Signature Weapon Collection ist in MW4 zum Launch verfuegbar und in Warzone ab Season 01.",
         "Battle Pass, BlackCell und Tier Skips werden nutzbar, sobald der Season-01-Battle-Pass im Spiel verfuegbar ist.",
         "Warzone auf PS4 und Xbox One endet mit dem Start von MW4 Season 1.",
-        "Der Tab markiert das Season-1-Datum bewusst als offen, bis Call of Duty es offiziell bestaetigt.",
+        "Das Season-1-Datum bleibt hier offen, bis ein fixes Datum da ist.",
       ],
       cards: [
         ["Season-1-Start", "offiziell noch offen"],
@@ -81,13 +81,13 @@
     {
       id: "overview",
       label: "Übersicht",
-      eyebrow: "Offiziell bestätigt",
+      eyebrow: "Kurzüberblick",
       title: "Was ist bis zum Launch wichtig?",
-      text: "Activision und Infinity Ward haben MW4 offiziell vorgestellt. Der aktuelle Stand buendelt Launch, Campaign Early Access, Multiplayer, DMZ, Warzone-Anbindung und September-Updates aus offiziellen Quellen.",
+      text: "Der aktuelle Stand buendelt Launch, Campaign Early Access, Multiplayer, DMZ, Warzone-Anbindung und die wichtigsten September-Updates.",
       bullets: [
-        "Der offizielle Forward Operating Blog wurde zuletzt am 9. September 2026 aktualisiert.",
-        "Der Tokyo-Games-Show Campaign Trailer und der Story-Recap sind neue September-Quellen.",
-        "Open Beta, Maps/Modes, Waffen, Progression und Beta Patch Notes sind offiziell dokumentiert.",
+        "Der MW4-Info-Hub wurde zuletzt am 9. September 2026 aktualisiert.",
+        "Der Tokyo-Games-Show Campaign Trailer und der Story-Recap sind wichtige September-Updates.",
+        "Open Beta, Maps/Modes, Waffen, Progression und Beta Patch Notes sind bereits eingeordnet.",
         "Warzone bindet MW4-Inhalte und Progression ab Season 1 ein.",
       ],
       cards: [
@@ -264,6 +264,10 @@
 
       body .mw4-watch-panel .mode-info-body {
         padding: clamp(1rem, 1.8vw, 1.55rem) !important;
+      }
+
+      body .mw4-watch-panel .mw4-updated-pill {
+        display: none !important;
       }
 
       body .mw4-watch-panel #modeInfoStats {
@@ -586,13 +590,8 @@
       </div>
       ${groups.map(renderGroup).join("")}
       <section class="mw4-official-card">
-        <h3>Offizielle Bilder</h3>
-        <p>Die Galerie nutzt offizielles Reveal-Material; sie ist keine separate Gameplay-Bestätigung über die oben gelisteten Fakten hinaus.</p>
+        <h3>Bilder</h3>
         <div class="mw4-gallery">${officialImages.map((src, index) => `<img src="${src}" alt="Modern Warfare 4 offizielles Reveal-Bild ${index + 1}" loading="lazy" decoding="async">`).join("")}</div>
-      </section>
-      <section class="mw4-official-card mw4-source-list">
-        <h3>Quellen</h3>
-        <ul>${sources.map(([label, href]) => `<li><a href="${href}" target="_blank" rel="noreferrer">${html(label)}</a></li>`).join("")}</ul>
       </section>
     `;
 
@@ -1507,10 +1506,9 @@
   }
 
   function updateCardHtml(update, index) {
-    const status = index < 2 ? "Neu" : update.status || "Offiziell";
+    const status = index < 2 ? "Neu" : "Update";
     const title = escapeHtml(update.title);
     const category = categoryLabel(update.category);
-    const source = sourceLabel(update);
     return `
       <a class="update-card official" href="${escapeHtml(update.url)}" target="_blank" rel="noreferrer" data-update-category="${escapeHtml(update.category || "update")}">
         <img src="${escapeHtml(update.imageUrl || "assets/cod-loadout-hero.png")}" alt="${title}" loading="lazy">
@@ -1523,7 +1521,7 @@
           <h3>${title}</h3>
           <div class="update-detail">
             <p>${escapeHtml(update.summary)}</p>
-            <strong>${escapeHtml(source)} öffnen</strong>
+            <strong>Mehr lesen</strong>
           </div>
         </div>
       </a>`;
@@ -1552,11 +1550,9 @@
     }
     const strip = hero?.querySelector(".update-sync-strip");
     if (strip) {
-      const sourceCount = new Set(data.updates.map((update) => update.source || "Call of Duty")).size;
       strip.innerHTML = `
         <span><strong>${escapeHtml(data.updates.length)}</strong> Updates</span>
-        <span><strong>${escapeHtml(String(sourceCount))}</strong> Quellen</span>
-        <span><strong>${stamp ? escapeHtml(stamp) : "gerade"}</strong> geprüft</span>`;
+        <span><strong>${stamp ? escapeHtml(stamp) : "Heute"}</strong></span>`;
     }
 
     const priority = document.querySelector(".update-priority-grid");
@@ -6355,15 +6351,13 @@
     document.documentElement.classList.toggle("loadout-debug-mode", debug);
     bar.setAttribute("aria-label", en ? "Meta data status" : "Status der Meta-Daten");
     if (!debug) {
-      bar.innerHTML = `
-      <div class="health-summary public-health-summary">
-        <strong>${bar.dataset.state === "healthy" ? (en ? "Meta checked" : "Meta geprüft") : (en ? "Meta status" : "Meta-Status")}</strong>
-        <span>${en ? "Updated" : "Aktualisiert"}: ${checkedAt(data.generatedAt)}</span>
-      </div>`;
+      bar.hidden = true;
+      bar.innerHTML = "";
       notifyRendered();
       return;
     }
 
+    bar.hidden = false;
     bar.innerHTML = `
       <div class="health-summary">
         <strong>${bar.dataset.state === "healthy" ? (en ? "All checks passed" : "Alles geprüft") : (en ? "Checks need attention" : "Prüfung braucht Aufmerksamkeit")}</strong>
