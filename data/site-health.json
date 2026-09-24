@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-24T06:33:19.993Z",
+  "generatedAtLabel": "24. September 2026 um 08:33 MESZ",
+  "totalWeapons": 59,
+  "completeWeapons": 59,
+  "approvedImages": 59,
+  "completeBuilds": 59,
+  "imagesApproved": true,
+  "buildsComplete": true,
+  "sourcesVerified": true,
+  "sourceFailures": [],
+  "sources": [
+    "WZStats",
+    "Call of Duty Waffenübersicht",
+    "Call of Duty Updates",
+    "MW4 Watch",
+    "Season Watch"
+  ]
+}

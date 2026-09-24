@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-24T06:33:19.993Z",
+  "generatedAtLabel": "24. September 2026 um 08:33 MESZ",
+  "season": "Season 06",
+  "featuredPost": {
+    "title": "Call of Duty: Black Ops 7 and Call of Duty: Warzone Season 06 Content Drop: The Haunting",
+    "url": "https://www.callofduty.com/blog/2026/09/call-of-duty-black-ops-7-warzone-season-6-the-haunting-announcement",
+    "date": "2026-09-08",
+    "dateLabel": "8. September 2026",
+    "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blog/body/bo7/season-06/BO7-SEASON-06-ANNOUNCEMENT-TOUT-1.jpg",
+    "summary": "The Haunting returns! Drop into Giant Infected on Haunted Hollow and arm yourself against the darkness with the DOOM Event Pass. Play new and rethemed Multiplayer Maps, a new Survival map and an expanded Rogue Run in Zombies, and the Forbidden Summoning Event in Endgame. Earn new Weapons and more across Weekly Chall...",
+    "launchWindow": ""
+  },
+  "officialSources": [
+    {
+      "name": "Call of Duty Blog - Black Ops 7",
+      "url": "https://www.callofduty.com/blog/blackops7",
+      "status": "latest-article-detected",
+      "latestArticleUrl": "https://www.callofduty.com/blog/2026/09/call-of-duty-black-ops-7-warzone-season-6-the-haunting-announcement"
+    },
+    {
+      "name": "Call of Duty Blog - Warzone",
+      "url": "https://www.callofduty.com/blog/warzone",
+      "status": "tracked"
+    },
+    {
+      "name": "CODLiveSeasons on X",
+      "url": "https://x.com/CODLiveSeasons",
+      "status": "configured"
+    }
+  ],
+  "stats": [
+    [
+      "Status",
+      "Offiziell live"
+    ],
+    [
+      "Blogpost",
+      "8. September 2026"
+    ],
+    [
+      "Launch",
+      "Offiziell angekuendigt"
+    ],
+    [
+      "Quellen",
+      "Blog + CODLiveSeasons"
+    ]
+  ],
+  "cards": [
+    {
+      "label": "Blogpost",
+      "title": "Call of Duty: Black Ops 7 and Call of Duty: Warzone Season 06 Content Drop: The Haunting",
+      "text": "The Haunting returns! Drop into Giant Infected on Haunted Hollow and arm yourself against the darkness with the DOOM Event Pass. Play new and rethemed Multiplayer Maps, a new Survival map and an expanded Rogue Run in..."
+    },
+    {
+      "label": "Launch",
+      "title": "Season 06 Zeitfenster",
+      "text": "Der offizielle Blog ist gefunden; das Startfenster konnte aus dem HTML nicht separat gelesen werden."
+    },
+    {
+      "label": "Offiziell",
+      "title": "The Haunting",
+      "text": "The Haunting returns and there’s nowhere to hide! Season 06 is brimming with evil as fright-filled maps and modes arrive as part of a colossal update that will satisfy your sweet tooth to Halloween and beyond."
+    },
+    {
+      "label": "Offiziell",
+      "title": "Season 06 Roadmap",
+      "text": "Across Call of Duty® Black Ops 7 and Call of Duty®: Warzone™ , Season 06 amps up the scares with Haunted Hollow, where cosmic horrors and a Ghost Train infiltrate the small-town Resurgence map. In Multiplayer, rack up..."
+    },
+    {
+      "label": "Offiziell",
+      "title": "ENDGAME CONTENT SUMMARY",
+      "text": "Night Falls on Avalon: The Haunting brings nightfall to Endgame’s Avalon, changing up the gameplay experience as Operators take on Activities and Assignments after dark. New World Event: A new guest has arrived with T..."
+    },
+    {
+      "label": "Offiziell",
+      "title": "Avalon Night (Launch)",
+      "text": "In Endgame, night descends on Avalon, plunging Operators into an eerie landscape where Fears, Guild opponents, and other obstacles seek to eliminate squads under the cover of night."
+    }
+  ],
+  "tips": [
+    "Season 06-Blogposts aus dem offiziellen Call-of-Duty-Blog haben Vorrang vor Drittquellen.",
+    "CODLiveSeasons auf X ist als offizieller Season-, Event- und Live-Update-Kanal hinterlegt.",
+    "Das Roadmap-Bild aus dem offiziellen Blog wird als Hauptbild fuer den Season 06-Tab verwendet.",
+    "Patchnotes und Live-Seasons werden getrennt beobachtet, damit Event- und Launch-Infos nicht uebersehen werden.",
+    "Geruechte oder Creator-Zusammenfassungen werden nicht in den Season 06-Tab uebernommen."
+  ],
+  "gallery": [
+    [
+      "Season 06 Roadmap",
+      "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blog/body/bo7/season-06/BO7-SEASON-06-ANNOUNCEMENT-TOUT-1.jpg"
+    ]
+  ],
+  "officialSummary": "Call of Duty: Black Ops 7 and Call of Duty: Warzone Season 06 Content Drop: The Haunting. Der offizielle Season 06-Blog wurde erkannt und fuer den Season-Tab uebernommen."
+}

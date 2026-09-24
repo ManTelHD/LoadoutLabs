@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" role="img" aria-label="Razor 9mm weapon card">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#1a1e22"/>
+      <stop offset="1" stop-color="#090a0a"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" x2="1">
+      <stop offset="0" stop-color="#f5f2e9"/>
+      <stop offset=".55" stop-color="#5fc7c8"/>
+      <stop offset="1" stop-color="#6f7774"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="300" rx="22" fill="url(#bg)"/>
+  <circle cx="535" cy="86" r="120" fill="#5fc7c8" opacity=".08"/>
+  <g transform="translate(76 130)" fill="url(#metal)">
+    <rect x="120" y="18" width="230" height="35" rx="10"/>
+    <rect x="350" y="28" width="86" height="12" rx="4"/>
+    <rect x="72" y="28" width="60" height="20" rx="5"/>
+    <path d="M135 52h76l-12 66h-48z"/>
+    <path d="M236 52h54l23 76h-48z"/>
+    <path d="M64 44l-42 34h68l32-34z"/>
+    <rect x="182" y="0" width="74" height="17" rx="7"/>
+  </g>
+  <text x="36" y="56" fill="#f5f2e9" font-family="Rajdhani, Arial" font-size="38" font-weight="700">RAZOR 9MM</text>
+  <text x="38" y="86" fill="#5fc7c8" font-family="Inter, Arial" font-size="15" font-weight="800">CLOSE RANGE SMG</text>
+</svg>

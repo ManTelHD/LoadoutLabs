@@ -1,0 +1,878 @@
+/* WZStats-inspired dark competition theme for Loadout Lab. */
+:root {
+  color-scheme: dark;
+  --bg: #07090d;
+  --panel: #10141b;
+  --panel-strong: #161c25;
+  --text: #f5f7fb;
+  --muted: #a8b0bd;
+  --dim: #697381;
+  --line: rgba(255, 255, 255, 0.1);
+  --olive: #b9ff3d;
+  --amber: #b9ff3d;
+  --cyan: #29e681;
+  --red: #ff4d5d;
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.42);
+}
+
+html,
+body {
+  background:
+    radial-gradient(circle at 16% 0%, rgba(185, 255, 61, 0.13), transparent 28rem),
+    linear-gradient(180deg, #0a0d12 0%, #07090d 44%, #05070a 100%) !important;
+  color: var(--text) !important;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.site-header {
+  min-height: 4rem;
+  background: rgba(7, 9, 13, 0.86) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.34) !important;
+  backdrop-filter: blur(18px);
+}
+
+.brand,
+.top-nav a,
+.weapon-name,
+.section-heading h1,
+.section-heading h2,
+.mode-info-hero h2,
+.camo-header h2,
+.updates-hero h2,
+.map-panel h2,
+.mode-info-side h3,
+.tier-header h3,
+.update-card h3,
+.timeline h3,
+.loadout-card strong,
+.pro-hero-card strong {
+  color: var(--text) !important;
+}
+
+.brand-mark,
+.secondary-mode-switch .mode-button.active,
+.content-tab.active,
+.filter-button.active,
+.quick-action.primary span,
+.header-cta {
+  background: linear-gradient(135deg, var(--olive), var(--cyan)) !important;
+  color: #071008 !important;
+  box-shadow: 0 0 0 0.22rem rgba(185, 255, 61, 0.14) !important;
+}
+
+.eyebrow,
+.tier-first .eyebrow,
+.mode-pill,
+.range,
+.pro-hero-card span,
+.primary-mode-switch .mode-button::before,
+.result-count {
+  color: var(--olive) !important;
+}
+
+.section,
+.loadout-section,
+.intel-band,
+.updates,
+.weapon-dashboard,
+.tab-panel,
+.mode-info-section,
+.maps-section,
+.updates-section,
+.camos-section {
+  background: transparent !important;
+}
+
+.section.tier-first {
+  padding-top: clamp(1.25rem, 2.5vw, 2.25rem);
+}
+
+.tier-first .section-heading {
+  max-width: 50rem;
+  margin-bottom: 0.75rem;
+}
+
+.tier-first .eyebrow {
+  margin-bottom: 0.45rem;
+  font-size: 0.78rem;
+}
+
+.tier-first h1 {
+  max-width: 42rem;
+  margin-bottom: 0.45rem;
+  font-size: clamp(2.5rem, 4.2vw, 4.35rem);
+}
+
+.tier-first .section-heading > p:not(.eyebrow):not(.updated-note),
+.today-strip,
+.meta-patch-summary,
+.update-priority-grid,
+.weapon-compare-panel {
+  display: none;
+}
+
+.updated-note,
+.status-panel,
+.pro-hero-card,
+.quick-action,
+.controls,
+.toolbar,
+.weapon-compare-panel,
+.map-panel,
+.map-board,
+.mode-info-main,
+.mode-info-side,
+.mode-update-box,
+.official-note,
+.update-mode-panel,
+.camo-header,
+.camo-summary,
+.camo-progress-strip article,
+.camo-card,
+.update-card,
+.timeline article,
+.loadout-card,
+.attachment-list,
+.perk-list,
+.stat-row span,
+.tag-list span,
+.trust-strip span,
+.weapon-art,
+.weapon-thumb {
+  border-color: var(--line) !important;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.055), transparent 62%),
+    var(--panel) !important;
+  color: var(--text) !important;
+  box-shadow: var(--shadow) !important;
+}
+
+.updated-note {
+  display: inline-flex;
+  width: fit-content;
+  min-height: 1.85rem;
+  align-items: center;
+  margin-bottom: 0;
+  padding: 0.22rem 0.62rem;
+  border-radius: 999px;
+  background: #0d131c !important;
+  color: var(--muted) !important;
+  font-size: 0.78rem;
+  box-shadow: none !important;
+}
+
+.pro-hero-panel {
+  display: grid;
+  grid-template-columns: minmax(18rem, 1.2fr) repeat(2, minmax(13rem, 0.72fr));
+  gap: 0.75rem;
+  max-width: 76rem;
+  margin: 0.9rem 0 0.65rem;
+}
+
+.pro-hero-card,
+.quick-action {
+  border-radius: 0.5rem;
+  padding: 0.85rem 0.95rem;
+}
+
+.pro-hero-card-primary,
+.quick-action.primary {
+  border-color: rgba(185, 255, 61, 0.36) !important;
+  background:
+    linear-gradient(135deg, rgba(185, 255, 61, 0.15), rgba(41, 230, 129, 0.08)),
+    #10141b !important;
+}
+
+.pro-hero-card p,
+.quick-action p,
+.attachment-list li,
+.perk-list li,
+.callout-list li,
+.loadout-card p,
+.section-heading p,
+.mode-info-side,
+.update-card p,
+.timeline p,
+.top-nav a,
+.secondary-mode-switch .mode-button,
+.updated-note {
+  color: var(--muted) !important;
+}
+
+.trust-strip,
+.quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  max-width: 76rem;
+}
+
+.primary-mode-switch {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(11rem, 1fr));
+  gap: 0.5rem;
+  max-width: min(43rem, 100%);
+  margin: 0.65rem 0 0.42rem;
+  border: 0 !important;
+  background: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+.primary-mode-switch .mode-button,
+.secondary-mode-switch .mode-button,
+.content-tab,
+.filter-button,
+.expand-button,
+.copy-button,
+.search-box input,
+.select-box select {
+  background: #111720 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: var(--text) !important;
+  box-shadow: none !important;
+}
+
+.primary-mode-switch .mode-button:hover,
+.primary-mode-switch .mode-button:focus-visible,
+.secondary-mode-switch .mode-button:hover,
+.secondary-mode-switch .mode-button:focus-visible,
+.content-tab:hover,
+.filter-button:hover,
+.expand-button:hover,
+.copy-button:hover,
+.top-nav a:hover,
+.top-nav a:focus-visible {
+  border-color: rgba(185, 255, 61, 0.5) !important;
+  background: #17202b !important;
+  color: var(--text) !important;
+}
+
+.primary-mode-switch .mode-button {
+  min-height: 3.15rem;
+  border-radius: 0.38rem;
+  font-weight: 950;
+  padding: 0.58rem 0.9rem;
+  text-align: center;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent 70%),
+    #0d131c !important;
+  border-color: rgba(255, 255, 255, 0.11) !important;
+}
+
+.primary-mode-switch .mode-button::before {
+  display: block;
+  margin-bottom: 0.1rem;
+  font-size: 0.62rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.primary-mode-switch .update-mode-button::before {
+  content: "News";
+}
+
+.primary-mode-switch .mw4-mode-button::before {
+  content: "Geruechte";
+}
+
+.secondary-mode-switch {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.28rem;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0.05rem 0 0.58rem;
+  border-radius: 999px;
+  padding: 0.18rem;
+  background: #080d13 !important;
+}
+
+.secondary-mode-switch .mode-button {
+  flex: 0 0 auto;
+  min-height: 2.15rem;
+  border-radius: 999px;
+  color: var(--muted) !important;
+  font-size: 0.84rem;
+  padding: 0.38rem 0.88rem;
+  border-color: transparent !important;
+  background: transparent !important;
+}
+
+.mode-switch,
+.content-tabs,
+.camo-filter,
+.mode-info-tabs {
+  background: #0a0f15 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03) !important;
+}
+
+.content-tabs {
+  display: inline-flex;
+  width: auto;
+  margin-top: 0;
+  margin-bottom: 0.58rem;
+  border-radius: 999px;
+  padding: 0.18rem;
+  background: #080d13 !important;
+}
+
+.content-tab {
+  min-height: 2.15rem;
+  border-radius: 999px;
+  padding: 0.36rem 0.9rem;
+  border-color: transparent !important;
+  background: transparent !important;
+}
+
+.weapon-dashboard {
+  display: flex;
+  flex-direction: column;
+}
+
+.weapon-compare-panel {
+  order: -2;
+  margin: 0.45rem 0 0.7rem;
+}
+
+.controls {
+  order: -1;
+  display: grid;
+  grid-template-columns: minmax(16rem, 1fr) minmax(11rem, 16rem);
+  align-items: end;
+  gap: 0.75rem;
+  margin: 0.45rem 0 0.55rem;
+  border: 0 !important;
+  background: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+.toolbar {
+  gap: 0.45rem;
+  margin: 0.1rem 0 0.65rem;
+  border: 0 !important;
+  background: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+.search-box,
+.select-box {
+  gap: 0.42rem;
+  color: var(--dim) !important;
+  font-size: 0.72rem !important;
+  font-weight: 950 !important;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.search-box span,
+.select-box span {
+  padding-left: 0.05rem;
+  color: #7b8798 !important;
+}
+
+.search-box input,
+.select-box select {
+  min-height: 3.05rem;
+  border-radius: 0.32rem !important;
+  background: #0d131c !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: var(--text) !important;
+  font-size: 0.98rem !important;
+  font-weight: 850 !important;
+  padding: 0.72rem 0.8rem !important;
+}
+
+.search-box input::placeholder {
+  color: #7a8492 !important;
+  opacity: 1;
+}
+
+.search-box input:focus,
+.select-box select:focus {
+  border-color: rgba(185, 255, 61, 0.62) !important;
+  box-shadow: 0 0 0 0.2rem rgba(185, 255, 61, 0.12) !important;
+}
+
+.toolbar .filter-button {
+  min-height: 2.45rem;
+  border-radius: 999px;
+  background: #0d131c !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  padding: 0.48rem 0.95rem;
+  font-size: 0.92rem;
+}
+
+.toolbar .filter-button.active {
+  border-color: rgba(185, 255, 61, 0.68) !important;
+  background: linear-gradient(135deg, var(--olive), var(--cyan)) !important;
+  color: #071008 !important;
+  box-shadow: 0 0.7rem 1.4rem rgba(185, 255, 61, 0.16) !important;
+}
+
+.result-count {
+  margin: 0.5rem 0 0.65rem;
+  font-size: 0.9rem;
+}
+
+.loadout-grid {
+  gap: 0.95rem;
+}
+
+.tier-group {
+  gap: 0.65rem;
+}
+
+.tier-header {
+  padding-bottom: 0.55rem;
+}
+
+.tier-header h3 {
+  font-size: clamp(1.9rem, 3vw, 2.65rem);
+}
+
+.loadout-card {
+  border-left: 0.42rem solid rgba(185, 255, 61, 0.72) !important;
+  padding: 0.85rem;
+}
+
+.loadout-card::before,
+.rank-badge {
+  border-color: rgba(185, 255, 61, 0.35) !important;
+  background: rgba(185, 255, 61, 0.1) !important;
+  color: var(--olive) !important;
+}
+
+.loadout-card .rank-badge,
+#loadoutGrid .loadout-card .rank-badge,
+#loadoutGrid > .loadout-card .rank-badge {
+  position: absolute !important;
+  top: 1rem !important;
+  right: 1rem !important;
+  display: grid !important;
+  min-width: 5.35rem !important;
+  min-height: 5.35rem !important;
+  place-items: center;
+  padding: 0.62rem 0.76rem !important;
+  border: 2px solid rgba(185, 255, 61, 0.68) !important;
+  background: linear-gradient(135deg, var(--olive), var(--cyan)) !important;
+  color: #071008 !important;
+  font-size: 2.35rem !important;
+  font-weight: 950 !important;
+  line-height: 0.86;
+  text-align: center;
+  box-shadow: 0 1rem 2rem rgba(185, 255, 61, 0.2) !important;
+}
+
+.loadout-card .rank-badge span,
+#loadoutGrid .loadout-card .rank-badge span,
+#loadoutGrid > .loadout-card .rank-badge span {
+  display: block;
+  margin-top: 0.32rem;
+  color: rgba(7, 16, 8, 0.82) !important;
+  font-size: 0.72rem !important;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.loadout-card .weapon-art,
+.weapon-thumb {
+  background: #0a0f15 !important;
+}
+
+.camo-swatch {
+  position: relative;
+  min-height: 11rem;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background: var(--camo-pattern) !important;
+}
+
+.camo-swatch::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.18), transparent 34%),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.08) 0 0.25rem, transparent 0.25rem 1rem);
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+.camo-swatch::after {
+  content: "";
+  position: absolute;
+  inset: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 0.4rem;
+  box-shadow: inset 0 0 2rem rgba(0, 0, 0, 0.28);
+  pointer-events: none;
+}
+
+.camo-swatch.has-image img,
+.camo-swatch img {
+  display: none !important;
+}
+
+.loadout-card .weapon-art {
+  grid-column: 1 !important;
+  width: 6.4rem !important;
+  max-width: 6.4rem !important;
+  height: 4.35rem !important;
+  margin: 0.25rem 0 0 !important;
+  border-radius: 0.35rem;
+  overflow: hidden !important;
+}
+
+.loadout-card .weapon-art img,
+.weapon-thumb img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  filter: brightness(1.12) contrast(1.12) saturate(1.18);
+}
+
+.loadout-card .card-body {
+  grid-column: 2 !important;
+}
+
+.weapon-name {
+  margin-bottom: 0;
+  font-size: clamp(1.65rem, 2.6vw, 2.15rem);
+}
+
+.attachment-list,
+.perk-list,
+.callout-list li,
+.mode-info-card-grid article,
+.update-priority-grid article,
+.intel-grid article,
+.role-pick-stats article,
+.mode-info-stat-grid article,
+.map-mode-grid article,
+.stat-row span,
+.tag-list span {
+  background: #0c1118 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  color: var(--text) !important;
+}
+
+.attachment-list li,
+.perk-list li {
+  color: var(--text) !important;
+}
+
+.attachment-list li::before,
+.perk-list li::before {
+  background: var(--olive) !important;
+  box-shadow: 0 0 0 0.22rem rgba(185, 255, 61, 0.12) !important;
+}
+
+.loadout-card:not(.expanded) .role {
+  display: none;
+}
+
+.loadout-card.expanded .card-details {
+  display: block;
+  grid-template-rows: none;
+  min-height: max-content;
+  margin-top: 0.9rem;
+  overflow: visible;
+  opacity: 1;
+}
+
+.loadout-card.expanded .card-details > .role {
+  margin: 0 0 0.85rem;
+}
+
+.loadout-card.expanded .attachment-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 0.75rem;
+  min-height: max-content;
+  overflow: visible;
+}
+
+.loadout-card.expanded .attachment-list,
+.loadout-card.expanded .perk-list {
+  height: auto;
+  margin: 0.75rem 0 0;
+}
+
+.loadout-card.expanded .card-footer {
+  align-self: start;
+  margin-top: 1.1rem;
+}
+
+#loadoutGrid > .loadout-card:nth-child(-n + 3) {
+  border-left-width: 0.72rem !important;
+  border-left-color: var(--olive) !important;
+  outline: 1px solid rgba(185, 255, 61, 0.26);
+  background:
+    linear-gradient(135deg, rgba(185, 255, 61, 0.16), rgba(41, 230, 129, 0.06) 42%, transparent 72%),
+    #111720 !important;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.52), 0 0 0 1px rgba(185, 255, 61, 0.12) !important;
+}
+
+#loadoutGrid > .loadout-card:nth-child(1) {
+  transform: translateY(-0.12rem);
+}
+
+#loadoutGrid > .loadout-card:nth-child(2) {
+  border-left-color: var(--cyan) !important;
+  outline-color: rgba(41, 230, 129, 0.24);
+}
+
+.loadout-card .rank-badge::after,
+#loadoutGrid .loadout-card .rank-badge::after,
+#loadoutGrid > .loadout-card:nth-child(1) .rank-badge::after,
+#loadoutGrid > .loadout-card:nth-child(2) .rank-badge::after,
+#loadoutGrid > .loadout-card:nth-child(3) .rank-badge::after {
+  display: none;
+}
+
+#loadoutGrid > .loadout-card:nth-child(1) .rank-badge::after {
+  content: "META #1";
+}
+
+#loadoutGrid > .loadout-card:nth-child(2) .rank-badge::after {
+  content: "META #2";
+}
+
+#loadoutGrid > .loadout-card:nth-child(3) .rank-badge::after {
+  content: "META #3";
+}
+
+#loadoutGrid > .loadout-card:nth-child(-n + 3) .weapon-name {
+  font-size: clamp(2rem, 3.2vw, 2.75rem) !important;
+}
+
+#loadoutGrid > .loadout-card:nth-child(-n + 3) .weapon-art {
+  width: 8.4rem !important;
+  max-width: 8.4rem !important;
+  height: 5.55rem !important;
+  border-color: rgba(185, 255, 61, 0.24) !important;
+  background: rgba(7, 9, 13, 0.78) !important;
+}
+
+#loadoutGrid > .loadout-card:nth-child(-n + 3) .stat-row span {
+  background: rgba(7, 9, 13, 0.52) !important;
+}
+
+.search-box span,
+.select-box span,
+.tag,
+.status-pill,
+.mode-info-hero span,
+.map-board-header span,
+.camo-summary p {
+  color: var(--dim) !important;
+}
+
+.site-footer {
+  background: #07090d !important;
+  border-top-color: rgba(255, 255, 255, 0.08) !important;
+  color: var(--muted) !important;
+}
+
+@media (max-width: 980px) {
+  .pro-hero-panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .tier-first h1 {
+    font-size: clamp(2.05rem, 12vw, 3.2rem);
+  }
+
+  .primary-mode-switch,
+  .secondary-mode-switch,
+  .quick-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    border-radius: 0.65rem;
+  }
+
+  .content-tabs {
+    width: 100%;
+  }
+
+  .controls {
+    grid-template-columns: 1fr;
+  }
+
+  .loadout-card::before {
+    position: static;
+    justify-self: start;
+    grid-column: 1 / -1;
+  }
+
+  .loadout-card .weapon-art {
+    width: 5.35rem !important;
+    max-width: 5.35rem !important;
+    height: 3.55rem !important;
+  }
+
+  .loadout-card.expanded .attachment-columns {
+    grid-template-columns: 1fr;
+  }
+
+  #loadoutGrid > .loadout-card:nth-child(-n + 3) {
+    border-left-width: 0.55rem !important;
+  }
+
+  .loadout-card .rank-badge,
+  #loadoutGrid .loadout-card .rank-badge,
+  #loadoutGrid > .loadout-card:nth-child(-n + 3) .rank-badge {
+    min-width: 4.8rem !important;
+    min-height: 4.8rem !important;
+    font-size: 2.08rem !important;
+  }
+
+  #loadoutGrid > .loadout-card:nth-child(-n + 3) .weapon-art {
+    width: 6.6rem !important;
+    max-width: 6.6rem !important;
+    height: 4.35rem !important;
+  }
+}
+
+body #loadoutGrid .loadout-card .rank-badge,
+body .loadout-grid .loadout-card .rank-badge,
+body .tier-group .loadout-card .rank-badge {
+  position: absolute !important;
+  top: 1rem !important;
+  right: 1rem !important;
+  display: grid !important;
+  min-width: 5.35rem !important;
+  min-height: 5.35rem !important;
+  place-items: center !important;
+  padding: 0.62rem 0.76rem !important;
+  border: 2px solid rgba(185, 255, 61, 0.68) !important;
+  border-radius: 0.35rem !important;
+  background: linear-gradient(135deg, var(--olive), var(--cyan)) !important;
+  color: #071008 !important;
+  font-size: 2.35rem !important;
+  font-weight: 950 !important;
+  line-height: 0.86 !important;
+  text-align: center !important;
+  box-shadow: 0 1rem 2rem rgba(185, 255, 61, 0.2) !important;
+}
+
+body #loadoutGrid .loadout-card .rank-badge span,
+body .loadout-grid .loadout-card .rank-badge span,
+body .tier-group .loadout-card .rank-badge span {
+  display: block !important;
+  margin-top: 0.32rem !important;
+  border-left: 0 !important;
+  padding-left: 0 !important;
+  color: rgba(7, 16, 8, 0.82) !important;
+  font-size: 0.72rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0 !important;
+  line-height: 1 !important;
+}
+
+body #loadoutGrid .loadout-card .rank-badge::after,
+body .loadout-grid .loadout-card .rank-badge::after,
+body .tier-group .loadout-card .rank-badge::after {
+  content: none !important;
+  display: none !important;
+}
+
+body #loadoutGrid .loadout-card .stat-row,
+body .loadout-grid .loadout-card .stat-row {
+  gap: 0.45rem !important;
+  flex-wrap: wrap !important;
+}
+
+body #loadoutGrid .loadout-card .weapon-art,
+body .loadout-grid .loadout-card .weapon-art {
+  width: 8.4rem !important;
+  max-width: 8.4rem !important;
+  height: 5.55rem !important;
+}
+
+.meta-tier-heading {
+  display: flex;
+  min-height: 2.9rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 1.25rem 0 0.25rem;
+  padding: 0.72rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 0.42rem solid rgba(185, 255, 61, 0.7);
+  border-radius: 0.35rem;
+  background:
+    linear-gradient(90deg, rgba(185, 255, 61, 0.12), rgba(41, 230, 129, 0.04) 34%, rgba(255, 255, 255, 0.025)),
+    #0d131c;
+  color: var(--text);
+  box-shadow: 0 1rem 2.1rem rgba(0, 0, 0, 0.28);
+}
+
+.meta-tier-heading:first-child {
+  margin-top: 0.45rem;
+}
+
+.meta-tier-heading span {
+  color: var(--olive);
+  font-size: clamp(1.05rem, 1.4vw, 1.35rem);
+  font-weight: 950;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.meta-tier-heading small {
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.meta-tier-heading.tier-heading-meta {
+  border-left-width: 0.72rem;
+  border-color: rgba(185, 255, 61, 0.3);
+  border-left-color: var(--olive);
+  background:
+    linear-gradient(90deg, rgba(185, 255, 61, 0.2), rgba(41, 230, 129, 0.08) 42%, rgba(255, 255, 255, 0.03)),
+    #111720;
+}
+
+body #loadoutGrid > .loadout-card.tier-absolute-meta {
+  border-left-width: 0.72rem !important;
+  border-left-color: var(--olive) !important;
+  outline: 1px solid rgba(185, 255, 61, 0.26);
+  background:
+    linear-gradient(135deg, rgba(185, 255, 61, 0.16), rgba(41, 230, 129, 0.06) 42%, transparent 72%),
+    #111720 !important;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.52), 0 0 0 1px rgba(185, 255, 61, 0.12) !important;
+}
+
+body #loadoutGrid > .loadout-card.tier-absolute-meta .weapon-name {
+  font-size: clamp(2rem, 3.2vw, 2.75rem) !important;
+}
+
+body #loadoutGrid > .loadout-card.tier-absolute-meta .weapon-art {
+  width: 8.4rem !important;
+  max-width: 8.4rem !important;
+  height: 5.55rem !important;
+  border-color: rgba(185, 255, 61, 0.24) !important;
+  background: rgba(7, 9, 13, 0.78) !important;
+}
+
+body #loadoutGrid > .loadout-card.tier-absolute-meta .stat-row span {
+  background: rgba(7, 9, 13, 0.52) !important;
+}

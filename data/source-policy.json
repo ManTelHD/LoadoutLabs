@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-05-05",
+  "rules": {
+    "metaTierlist": {
+      "allowedSources": [
+        {
+          "name": "WZStats",
+          "url": "https://wzstats.gg/",
+          "purpose": "Warzone Meta Tierlist, tiers, ranks, loadouts and role grouping"
+        }
+      ],
+      "blockedSources": ["WZHUB", "Warzone Meta Loadout", "manual estimates", "mixed community roundups"],
+      "policy": "Meta Tierlist data must only come from wzstats.gg. If WZStats is unavailable or data cannot be parsed safely, keep the previous values and mark the source check as failed instead of guessing."
+    },
+    "pickRates": {
+      "allowedSources": [
+        {
+          "name": "WZStats",
+          "url": "https://wzstats.gg/",
+          "purpose": "Pick-rate values and WZStats ranking labels"
+        }
+      ],
+      "blockedSources": ["manual estimates", "social posts", "YouTube opinions", "non-WZStats meta pages"],
+      "policy": "Pick-rates must only be displayed when WZStats exposes a current value. If no current WZStats value is available, hide the pick-rate or keep the last verified WZStats value with a timestamp."
+    },
+    "officialUpdates": {
+      "allowedSources": [
+        {
+          "name": "Call of Duty Patch Notes",
+          "url": "https://www.callofduty.com/patchnotes",
+          "purpose": "Official patch notes, balance changes, dates and update cards"
+        },
+        {
+          "name": "Call of Duty Black Ops 7 Guides",
+          "url": "https://www.callofduty.com/guides/blackops7",
+          "purpose": "Official weapons, classes, maps, mode and guide data"
+        }
+      ],
+      "policy": "Official update sections should prefer Call of Duty-owned pages. Official facts override rumors."
+    },
+    "mw4Rumors": {
+      "allowedSources": [
+        {
+          "name": "Call of Duty on X",
+          "url": "https://x.com/CallofDuty",
+          "purpose": "Official Call of Duty statements, reveals and denials"
+        },
+        {
+          "name": "Infinity Ward on X",
+          "url": "https://x.com/InfinityWard",
+          "purpose": "Official Infinity Ward statements, reveals and denials"
+        },
+        {
+          "name": "Tridzo YouTube",
+          "url": "https://www.youtube.com/@Tridzoid",
+          "purpose": "Latest video transcripts for rumor tracking and community context"
+        }
+      ],
+      "policy": "MW4 content must separate official confirmation from rumor. Call of Duty and Infinity Ward posts are official. Tridzo transcripts are rumor/context unless they quote an official source. Never present transcript claims as confirmed without an official COD or Infinity Ward source."
+    }
+  }
+}

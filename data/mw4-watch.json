@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-24T06:33:19.993Z",
+  "generatedAtLabel": "24. September 2026 um 08:33 MESZ",
+  "officialSources": [
+    {
+      "name": "Call of Duty on X",
+      "url": "https://x.com/CallofDuty",
+      "status": "configured"
+    },
+    {
+      "name": "Infinity Ward on X",
+      "url": "https://x.com/InfinityWard",
+      "status": "latest-post-detected",
+      "latestPostUrl": "https://x.com/InfinityWard/status/2057491681331626388"
+    }
+  ],
+  "officialPosts": [
+    {
+      "title": "Modern Warfare 4: Latest Official Intel Hub",
+      "source": "Call of Duty",
+      "sourceUrl": "https://www.callofduty.com/blog/2026/05/modernwarfare4-fob",
+      "contextUrl": "https://www.callofduty.com/blog/2026/05/modernwarfare4-fob",
+      "date": "2026-09-09",
+      "dateLabel": "9. September 2026",
+      "status": "Offiziell",
+      "summary": "Der offizielle Modern Warfare 4 Forward Operating Blog buendelt aktuelle MW4-News, Trailer, Kampagnen-, Multiplayer-, DMZ- und Beta-Intel. Der Hub wurde am 9. September 2026 aktualisiert."
+    },
+    {
+      "title": "Modern Warfare 4: Tokyo Games Show Campaign Trailer",
+      "source": "Call of Duty",
+      "sourceUrl": "https://www.callofduty.com/blog/2026/09/call-of-duty-modern-warfare-4-tokyo-games-show-campaign-trailer",
+      "contextUrl": "https://www.callofduty.com/blog/2026/09/call-of-duty-modern-warfare-4-tokyo-games-show-campaign-trailer",
+      "date": "2026-09-17",
+      "dateLabel": "17. September 2026",
+      "status": "Offiziell",
+      "summary": "Call of Duty hat den Modern Warfare 4 Campaign Trailer zur Tokyo Games Show veroeffentlicht. Der Tab fuehrt ihn als neuesten offiziellen Kampagnen-Fixpunkt."
+    },
+    {
+      "title": "Modern Warfare 4 Beta Patch Notes",
+      "source": "Call of Duty",
+      "sourceUrl": "https://www.callofduty.com/patchnotes/2026/08/call-of-duty-modern-warfare-4-beta-patch-notes",
+      "contextUrl": "https://www.callofduty.com/patchnotes/2026/08/call-of-duty-modern-warfare-4-beta-patch-notes",
+      "date": "2026-09-01",
+      "dateLabel": "1. September 2026",
+      "status": "Offiziell",
+      "summary": "Die offiziellen Beta Patch Notes ergaenzen den aktuellen Beta-Stand inklusive Campaign-Mission, Multiplayer- und Open-Beta-Kontext."
+    }
+  ],
+  "transcriptSources": [
+    {
+      "name": "Tridzo YouTube",
+      "url": "https://www.youtube.com/@Tridzoid/videos",
+      "status": "latest-videos-detected",
+      "videos": []
+    }
+  ],
+  "officialSummary": "Modern Warfare 4 ist offiziell angekuendigt. Aktueller Stand: Release am 23. Oktober 2026, Campaign Early Access ab 16. Oktober, offizieller Intel-Hub zuletzt am 9. September, Story-Recap am 16. September, TGS Campaign Trailer am 17. September und Beta Patch Notes vom 1. September.",
+  "cards": [
+    {
+      "label": "Offiziell",
+      "title": "Intel-Hub: 9. September",
+      "text": "Der offizielle Modern Warfare 4 Forward Operating Blog buendelt aktuelle MW4-News, Trailer, Kampagnen-, Multiplayer-, DMZ- und Beta-Intel. Der Hub wurde am 9. September 2026 aktualisiert."
+    },
+    {
+      "label": "Neu",
+      "title": "TGS Campaign Trailer: 17. September",
+      "text": "Call of Duty hat den Modern Warfare 4 Campaign Trailer zur Tokyo Games Show veroeffentlicht. Der Tab fuehrt ihn als neuesten offiziellen Kampagnen-Fixpunkt."
+    },
+    {
+      "label": "Beta",
+      "title": "Patch Notes: 1. September",
+      "text": "Die offiziellen Beta Patch Notes ergaenzen den aktuellen Beta-Stand inklusive Campaign-Mission, Multiplayer- und Open-Beta-Kontext."
+    }
+  ],
+  "tips": [
+    "Modern Warfare 4 ist offiziell angekuendigt und erscheint am 23. Oktober 2026.",
+    "Campaign Early Access beginnt offiziell am 16. Oktober 2026.",
+    "Der offizielle Intel-Hub sammelt Trailer, Kampagne, Multiplayer, DMZ, Beta und Warzone-Kontext.",
+    "Neuere September-Quellen: Story-Recap und Tokyo-Games-Show Campaign Trailer.",
+    "Geruechte werden im MW4-Tab nicht mehr als Hauptstand verwendet, solange offizielle Call-of-Duty-Quellen vorliegen."
+  ]
+}

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" role="img" aria-label="AK-27 weapon card">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#211b17"/>
+      <stop offset="1" stop-color="#090a0a"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" x2="1">
+      <stop offset="0" stop-color="#f0ad37"/>
+      <stop offset=".5" stop-color="#6e7973"/>
+      <stop offset="1" stop-color="#f5f2e9"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="300" rx="22" fill="url(#bg)"/>
+  <path d="M470 0 L640 0 L640 300 L390 300Z" fill="#f0ad37" opacity=".06"/>
+  <g transform="translate(64 126)" fill="url(#metal)">
+    <rect x="98" y="18" width="290" height="33" rx="9"/>
+    <rect x="386" y="29" width="104" height="11" rx="4"/>
+    <rect x="36" y="30" width="74" height="18" rx="5"/>
+    <path d="M116 50h104l-18 58h-70z"/>
+    <path d="M252 50h50l25 77h-51z"/>
+    <path d="M36 45L0 90h74l39-45z"/>
+    <rect x="176" y="0" width="76" height="16" rx="6"/>
+  </g>
+  <text x="36" y="56" fill="#f5f2e9" font-family="Rajdhani, Arial" font-size="38" font-weight="700">AK-27</text>
+  <text x="38" y="86" fill="#f0ad37" font-family="Inter, Arial" font-size="15" font-weight="800">BO7 AR</text>
+</svg>
