@@ -2885,12 +2885,12 @@
   }
 
   function itemMap(list) {
-    return new Map((list?.items || []).map((item) => [item.name, item]));
+    return new Map((list?.items || []).map((item) => [text(item.name), item]));
   }
 
   function activeFilter() {
     const active = document.querySelector("#filterToolbar .filter-button.active[data-smart-filter]");
-    if (active?.dataset.smartFilter && active.dataset.smartFilter !== "all") state.filter = active.dataset.smartFilter;
+    if (active?.dataset.smartFilter) state.filter = active.dataset.smartFilter;
     return state.filter;
   }
 
@@ -3006,7 +3006,7 @@
     let visible = 0;
 
     cards.forEach((card) => {
-      const item = byName.get(card.dataset.loadoutCard || "") || domItem(card);
+      const item = byName.get(text(card.dataset.loadoutCard || "")) || domItem(card);
       const searchable = text([
         card.dataset.loadoutCard,
         item.weaponClass,
