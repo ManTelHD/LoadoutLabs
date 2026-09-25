@@ -2729,10 +2729,7 @@
   }
 
   function premiumAttachmentHtml(items) {
-    return items.map((item) => {
-      const attachment = parseAttachment(item);
-      return `<li class="loadout-slot"><span class="slot-type">${escapeHtml(attachment.slot)}</span><strong>${escapeHtml(attachment.name)}</strong>${attachment.level ? `<em>${escapeHtml(attachment.level)}</em>` : ""}</li>`;
-    }).join("");
+    return `<li class="loadout-slot pending-slot"><span class="slot-type">Status</span><strong>Aufsätze werden aktualisiert</strong></li>`;
   }
 
   function premiumPerkHtml(items) {
@@ -2756,7 +2753,7 @@
   function updatePanelCounters(card, build) {
     const attachmentCount = card.querySelector(".attachments-panel .detail-panel-title strong");
     const extrasCount = card.querySelector(".setup-panel .detail-panel-title strong");
-    if (attachmentCount) attachmentCount.textContent = `${build.attachments.length}/5`;
+    if (attachmentCount) attachmentCount.textContent = "Update";
     if (extrasCount) extrasCount.textContent = String(build.extras.length);
   }
 
@@ -2771,7 +2768,7 @@
     const legacyPerks = card.querySelector(".perk-list");
 
     if (premiumAttachments) premiumAttachments.innerHTML = premiumAttachmentHtml(build.attachments);
-    else if (legacyAttachments) legacyAttachments.innerHTML = legacyItemsHtml(build.attachments);
+    else if (legacyAttachments) legacyAttachments.innerHTML = legacyItemsHtml(["Aufsätze werden aktualisiert"]);
 
     if (premiumPerks) premiumPerks.innerHTML = premiumPerkHtml(build.extras);
     else if (legacyPerks) {
@@ -6909,8 +6906,7 @@
   function render(weapon) {
     const text = labels();
     const fallback = fallbackImage(weapon);
-    const attachments = (weapon.attachments || []).map((attachment, index) => `
-      <li><span>${String(index + 1).padStart(2, "0")}</span><strong>${html(attachment)}</strong></li>`).join("");
+    const attachments = `<li><span>--</span><strong>Aufsätze werden aktualisiert</strong></li>`;
     const rank = weapon.position ? `#${weapon.position}` : "–";
     const score = Number.isFinite(Number(weapon.score)) ? weapon.score : "–";
     dialog.innerHTML = `
@@ -6934,7 +6930,7 @@
         </div>
         <div class="weapon-detail-content">
           <section>
-            <div class="weapon-detail-section-title"><span>${text.build}</span><strong>${weapon.attachmentCount}/${weapon.expectedAttachmentCount}</strong></div>
+            <div class="weapon-detail-section-title"><span>${text.build}</span><strong>Update</strong></div>
             <ol class="weapon-detail-attachments">${attachments}</ol>
           </section>
           <aside>
