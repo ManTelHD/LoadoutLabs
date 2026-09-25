@@ -2555,36 +2555,6 @@
   const registryBuilds = new Map();
 
   const supplementalBuilds = {
-    vmp: {
-      code: "LL-VMP-META",
-      attachments: ["Mündung: Compensator", "Lauf: Long Barrel", "Unterlauf: Lightweight Handstop", "Magazin: Extended Mag II", "Hinterer Griff: Ergonomic Grip"],
-      extras: [...closeRangeExtras],
-    },
-    "tr51-para": {
-      code: "LL-TR51-META",
-      attachments: ["Mündung: Compensator", "Lauf: Reinforced Barrel", "Unterlauf: Vertical Foregrip", "Magazin: Extended Mag II", "Optik: Reflex Sight"],
-      extras: [...longRangeExtras],
-    },
-    fg42: {
-      code: "LL-FG42-A9",
-      attachments: ["Mündung: Compensator", "Lauf: Long Barrel", "Unterlauf: Vertical Foregrip", "Magazin: Extended Mag II", "Optik: 2x Scope"],
-      extras: [...longRangeExtras],
-    },
-    "an-94": {
-      code: "LL-AN94-A14",
-      attachments: ["Mündung: Compensator", "Lauf: Long Barrel", "Unterlauf: Stabilizer Foregrip", "Magazin: Extended Mag II", "Optik: Reflex Sight"],
-      extras: [...longRangeExtras],
-    },
-    gremlin: {
-      code: "LL-GREMLIN-A25",
-      attachments: ["Mündung: Compensator", "Lauf: Reinforced Barrel", "Unterlauf: Lightweight Handstop", "Magazin: Extended Mag II", "Hinterer Griff: Quickdraw Grip"],
-      extras: [...closeRangeExtras],
-    },
-    mammoth: {
-      code: "LL-MAMMOTH-C45",
-      attachments: ["Mündung: Compensator", "Lauf: Long Barrel", "Unterlauf: Vertical Foregrip", "Magazin: Fast Mag", "Optik: 2x Scope"],
-      extras: [...longRangeExtras],
-    },
     "executioner-s-duet": {
       code: "LL-EXECUTIONER-D57",
       attachments: ["Keine Waffenaufsätze verfügbar"],
@@ -2599,28 +2569,6 @@
       code: "LL-ROC20-D59",
       attachments: ["Keine Waffenaufsätze verfügbar"],
       extras: [...utilityExtras],
-    },
-    "vx-compact": {
-      code: "LL-VXCOMPACT-A13",
-      attachments: [
-        "Mündung: LTI Stentorian Brake",
-        "Lauf: Long Barrel",
-        "Unterlauf: Stabilizer Foregrip",
-        "Magazin: Extended Mag II",
-        "Hinterer Griff: Ergonomic Grip",
-      ],
-      extras: [...longRangeExtras],
-    },
-    "cbrs-3": {
-      code: "LL-CBRS3-A10",
-      extras: closeRangeExtras,
-      attachments: [
-        "Muzzle: Compensator (Stufe 4)",
-        "Barrel: Long Barrel (Stufe 12)",
-        "Underbarrel: Lightweight Handstop (Stufe 3)",
-        "Magazine: Extended Mag II (Stufe 28)",
-        "Rear Grip: Quickdraw Grip (Stufe 9)",
-      ],
     },
     "krs-762": {
       code: "LL-KRS762-B7",
