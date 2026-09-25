@@ -2547,10 +2547,11 @@
 /* source: loadout-build-supplements.js */
 (function () {
   const REGISTRY_URL = "data/weapon-registry.json";
-  const longRangeExtras = ["Scavenger", "Quick Fix", "Survivor"];
-  const closeRangeExtras = ["Mountaineer", "Quick Fix", "Stim Shot"];
-  const sniperExtras = ["Survivor", "Smoke Grenade", "Fast Hands"];
-  const utilityExtras = ["Mountaineer", "Quick Fix", "Survivor"];
+  const metaExtras = ["Scavenger", "Sprinter", "Ghost"];
+  const longRangeExtras = ["Scavenger", "Sprinter", "Ghost"];
+  const closeRangeExtras = ["Scavenger", "Sprinter", "Ghost"];
+  const sniperExtras = ["Scavenger", "Sprinter", "Ghost"];
+  const utilityExtras = ["Scavenger", "Sprinter", "Ghost"];
   const registryBuilds = new Map();
 
   const supplementalBuilds = {
@@ -2661,10 +2662,7 @@
   }
 
   function extrasFor(item) {
-    if (/sniper/i.test(item.role || "") || /sniper|marksman/i.test(item.weaponClass || "")) return [...sniperExtras];
-    if (/close/i.test(item.role || "")) return [...closeRangeExtras];
-    if (/long/i.test(item.role || "")) return [...longRangeExtras];
-    return [...utilityExtras];
+    return [...metaExtras];
   }
 
   function loadRegistry() {
@@ -2695,6 +2693,7 @@
 
   const extraLabels = new Map([
     ["Scavenger", "Plünderer"],
+    ["Ghost", "Geist"],
     ["Quick Fix", "Schnelle Heilung"],
     ["Survivor", "Überlebender"],
     ["Smoke Grenade", "Rauchgranate"],
@@ -2705,6 +2704,7 @@
     ["Tac Mask", "Taktikmaske"],
     ["Flak Jacket", "Splitterschutz"],
     ["Lightweight", "Leichtgewicht"],
+    ["Sprinter", "Sprinter"],
   ]);
 
   function displayExtra(value) {

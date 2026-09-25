@@ -6,16 +6,18 @@
     builds: "loadout-builds.js?v=20260524-complete-builds3",
   };
 
+  const metaExtras = ["Scavenger", "Sprinter", "Ghost"];
   const roleExtraSets = {
-    long: ["Scavenger", "Quick Fix", "Survivor"],
-    close: ["Mountaineer", "Quick Fix", "Stim Shot"],
-    sniper: ["Survivor", "Smoke Grenade", "Fast Hands"],
-    support: ["Survivor", "Smoke Grenade", "Fast Hands"],
-    utility: ["Mountaineer", "Quick Fix", "Survivor"],
+    long: metaExtras,
+    close: metaExtras,
+    sniper: metaExtras,
+    support: metaExtras,
+    utility: metaExtras,
   };
 
   const extraLabels = new Map([
     ["Scavenger", "Plünderer"],
+    ["Ghost", "Geist"],
     ["Quick Fix", "Schnelle Heilung"],
     ["Survivor", "Überlebender"],
     ["Smoke Grenade", "Rauchgranate"],
@@ -26,6 +28,7 @@
     ["Tac Mask", "Taktikmaske"],
     ["Flak Jacket", "Splitterschutz"],
     ["Lightweight", "Leichtgewicht"],
+    ["Sprinter", "Sprinter"],
   ]);
 
   const classLabels = new Map([

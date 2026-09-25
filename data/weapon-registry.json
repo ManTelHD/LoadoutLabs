@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-24T15:20:52.745Z",
+  "generatedAt": "2026-09-25T07:48:38.715Z",
   "source": "Loadout Lab validated weapon registry",
   "weapons": [
     {
@@ -26,7 +26,7 @@
       "tierLabel": "Meta",
       "position": 1,
       "score": 100,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "vmp",
@@ -51,7 +51,7 @@
       "tierLabel": "Meta",
       "position": 2,
       "score": 99,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "ds20-mirage",
@@ -76,7 +76,7 @@
       "tierLabel": "Meta",
       "position": 3,
       "score": 98,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "mpc-25",
@@ -99,9 +99,9 @@
       "role": "Close Range",
       "tier": "META",
       "tierLabel": "Meta",
-      "position": 2,
-      "score": 99,
-      "sourceUpdatedLabel": "23. September 2026"
+      "position": 3,
+      "score": 98,
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "tr51-para",
@@ -126,7 +126,7 @@
       "tierLabel": "Meta",
       "position": 5,
       "score": 96,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "rev-46",
@@ -151,7 +151,7 @@
       "tierLabel": "Meta",
       "position": 6,
       "score": 95,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "mk35-isr",
@@ -176,7 +176,7 @@
       "tierLabel": "Meta",
       "position": 7,
       "score": 94,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "ryden-45k",
@@ -201,7 +201,7 @@
       "tierLabel": "Meta",
       "position": 8,
       "score": 94,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "fg42",
@@ -226,7 +226,7 @@
       "tierLabel": "A-Tier",
       "position": 9,
       "score": 83,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "sturmwolf-45",
@@ -251,7 +251,7 @@
       "tierLabel": "A-Tier",
       "position": 10,
       "score": 82,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "m15-mod-0",
@@ -276,7 +276,7 @@
       "tierLabel": "Meta",
       "position": 1,
       "score": 100,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "vst",
@@ -301,7 +301,7 @@
       "tierLabel": "A-Tier",
       "position": 12,
       "score": 82,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "ak-27",
@@ -326,7 +326,7 @@
       "tierLabel": "A-Tier",
       "position": 13,
       "score": 82,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "an-94",
@@ -351,7 +351,7 @@
       "tierLabel": "A-Tier",
       "position": 14,
       "score": 82,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "vx-compact",
@@ -376,7 +376,7 @@
       "tierLabel": "A-Tier",
       "position": 15,
       "score": 82,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "cbrs-3",
@@ -401,7 +401,7 @@
       "tierLabel": "A-Tier",
       "position": 16,
       "score": 82,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "peacekeeper-mk1",
@@ -426,7 +426,7 @@
       "tierLabel": "A-Tier",
       "position": 17,
       "score": 82,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "egrt-17",
@@ -451,7 +451,7 @@
       "tierLabel": "A-Tier",
       "position": 18,
       "score": 82,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "mxr-17",
@@ -476,7 +476,7 @@
       "tierLabel": "A-Tier",
       "position": 19,
       "score": 82,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "kogot-7",
@@ -501,7 +501,7 @@
       "tierLabel": "A-Tier",
       "position": 20,
       "score": 82,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "maddox-rfb",
@@ -526,7 +526,7 @@
       "tierLabel": "A-Tier",
       "position": 21,
       "score": 82,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "x9-maverick",
@@ -551,7 +551,7 @@
       "tierLabel": "A-Tier",
       "position": 22,
       "score": 82,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "carbon-57",
@@ -576,7 +576,7 @@
       "tierLabel": "A-Tier",
       "position": 23,
       "score": 82,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "dravec-45",
@@ -599,9 +599,9 @@
       "role": "Close Range",
       "tier": "META",
       "tierLabel": "Meta",
-      "position": 3,
-      "score": 98,
-      "sourceUpdatedLabel": "23. September 2026"
+      "position": 4,
+      "score": 97,
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "gremlin",
@@ -626,7 +626,7 @@
       "tierLabel": "A-Tier",
       "position": 25,
       "score": 82,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "razor-9mm",
@@ -651,7 +651,7 @@
       "tierLabel": "A-Tier",
       "position": 26,
       "score": 82,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "m8a1",
@@ -676,7 +676,7 @@
       "tierLabel": "A-Tier",
       "position": 27,
       "score": 82,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "hawker-hx",
@@ -701,7 +701,7 @@
       "tierLabel": "A-Tier",
       "position": 28,
       "score": 82,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "vs-recon",
@@ -724,9 +724,9 @@
       "role": "Sniper",
       "tier": "META",
       "tierLabel": "Meta",
-      "position": 4,
-      "score": 97,
-      "sourceUpdatedLabel": "23. September 2026"
+      "position": 5,
+      "score": 96,
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "strider-300",
@@ -751,7 +751,7 @@
       "tierLabel": "A-Tier",
       "position": 30,
       "score": 82,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "sokol-545",
@@ -776,7 +776,7 @@
       "tierLabel": "B-Tier",
       "position": 31,
       "score": 72,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "mk78",
@@ -801,7 +801,7 @@
       "tierLabel": "B-Tier",
       "position": 32,
       "score": 72,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "swordfish-a1",
@@ -826,7 +826,7 @@
       "tierLabel": "B-Tier",
       "position": 33,
       "score": 72,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "rk-9",
@@ -851,7 +851,7 @@
       "tierLabel": "B-Tier",
       "position": 34,
       "score": 72,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "xm325",
@@ -876,7 +876,7 @@
       "tierLabel": "B-Tier",
       "position": 35,
       "score": 72,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "xr-3-ion",
@@ -901,7 +901,7 @@
       "tierLabel": "B-Tier",
       "position": 36,
       "score": 72,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "krs-762",
@@ -926,7 +926,7 @@
       "tierLabel": "B-Tier",
       "position": 37,
       "score": 72,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "velox-57",
@@ -951,7 +951,7 @@
       "tierLabel": "B-Tier",
       "position": 38,
       "score": 72,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "m34-novaline",
@@ -976,7 +976,7 @@
       "tierLabel": "C-Tier",
       "position": 39,
       "score": 62,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "shadow-sk",
@@ -1001,7 +1001,7 @@
       "tierLabel": "C-Tier",
       "position": 40,
       "score": 62,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "warden-308",
@@ -1026,7 +1026,7 @@
       "tierLabel": "C-Tier",
       "position": 41,
       "score": 62,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "1911",
@@ -1051,7 +1051,7 @@
       "tierLabel": "C-Tier",
       "position": 42,
       "score": 62,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "coda-9",
@@ -1076,7 +1076,7 @@
       "tierLabel": "C-Tier",
       "position": 43,
       "score": 62,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "jäger-45",
@@ -1099,9 +1099,9 @@
       "role": "Close Range",
       "tier": "META",
       "tierLabel": "Meta",
-      "position": 5,
-      "score": 96,
-      "sourceUpdatedLabel": "23. September 2026"
+      "position": 6,
+      "score": 95,
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "mammoth",
@@ -1126,7 +1126,7 @@
       "tierLabel": "C-Tier",
       "position": 45,
       "score": 62,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "arc-m1",
@@ -1147,7 +1147,7 @@
       "tierLabel": "D-Tier",
       "position": 46,
       "score": 52,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "flatline-mkii",
@@ -1168,7 +1168,7 @@
       "tierLabel": "D-Tier",
       "position": 47,
       "score": 52,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "aarow-109",
@@ -1189,7 +1189,7 @@
       "tierLabel": "D-Tier",
       "position": 48,
       "score": 52,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "knife-bo7",
@@ -1210,7 +1210,7 @@
       "tierLabel": "D-Tier",
       "position": 49,
       "score": 52,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "ballistic-knife",
@@ -1231,7 +1231,7 @@
       "tierLabel": "D-Tier",
       "position": 50,
       "score": 52,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "nx-ravager",
@@ -1252,7 +1252,7 @@
       "tierLabel": "D-Tier",
       "position": 51,
       "score": 52,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "h311-saw",
@@ -1273,7 +1273,7 @@
       "tierLabel": "D-Tier",
       "position": 52,
       "score": 52,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "gdl-havoc",
@@ -1294,7 +1294,7 @@
       "tierLabel": "D-Tier",
       "position": 53,
       "score": 52,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "siren",
@@ -1315,7 +1315,7 @@
       "tierLabel": "D-Tier",
       "position": 54,
       "score": 52,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "katana",
@@ -1336,7 +1336,7 @@
       "tierLabel": "D-Tier",
       "position": 55,
       "score": 52,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "grimhawk",
@@ -1357,7 +1357,7 @@
       "tierLabel": "D-Tier",
       "position": 56,
       "score": 52,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "executioner's-duet",
@@ -1378,7 +1378,7 @@
       "tierLabel": "D-Tier",
       "position": 57,
       "score": 52,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "mace",
@@ -1399,7 +1399,7 @@
       "tierLabel": "D-Tier",
       "position": 58,
       "score": 52,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     },
     {
       "id": "roc-20mm",
@@ -1420,7 +1420,7 @@
       "tierLabel": "D-Tier",
       "position": 59,
       "score": 52,
-      "sourceUpdatedLabel": "23. September 2026"
+      "sourceUpdatedLabel": "25. September 2026"
     }
   ]
 }

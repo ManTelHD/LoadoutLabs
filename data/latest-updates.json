@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-24T15:20:52.745Z",
-  "generatedAtLabel": "24. September 2026 um 17:20 MESZ",
+  "generatedAt": "2026-09-25T07:48:38.715Z",
+  "generatedAtLabel": "25. September 2026 um 09:48 MESZ",
   "sources": [
     {
       "id": "cod-patchnotes",
@@ -13,12 +13,12 @@
     {
       "label": "Aktuell",
       "title": "Call of Duty: Warzone Season 06 Patch Notes",
-      "text": "16. September 2026: Something evil has taken hold of Haven’s Hollow, twisting familiar locations into haunting new discoveries. Uncover sinister changes throughout the town, from the entangled River Boat to the raging fire at the Lumbermill and the Mansion gravity vortex. Cosm..."
+      "text": "24. September 2026: Players will no longer drop $500 on death if they have no cash when eliminated by self-inflicted damage."
     },
     {
       "label": "Live",
       "title": "Neue Meldungen",
-      "text": "Aktualisiert am 24. September 2026 um 17:20 MESZ."
+      "text": "Aktualisiert am 25. September 2026 um 09:48 MESZ."
     },
     {
       "label": "Weitere Updates",
@@ -32,11 +32,11 @@
       "category": "warzone",
       "status": "Offiziell",
       "source": "Call of Duty",
-      "date": "2026-09-16",
-      "dateLabel": "16. September 2026",
+      "date": "2026-09-24",
+      "dateLabel": "24. September 2026",
       "url": "https://www.callofduty.com/patchnotes/2026/09/call-of-duty-bo7-warzone-season-06-patch-notes",
       "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/bo7/wz/s06/WZ-SEASON-06-PATCH-NOTES.jpg",
-      "summary": "Something evil has taken hold of Haven’s Hollow, twisting familiar locations into haunting new discoveries. Uncover sinister changes throughout the town, from the entangled River Boat to the raging fire at the Lumbermill and the Mansion gravity vortex. Cosm..."
+      "summary": "Players will no longer drop $500 on death if they have no cash when eliminated by self-inflicted damage."
     },
     {
       "title": "Call of Duty: Modern Warfare 4 Beta Patch Notes",
