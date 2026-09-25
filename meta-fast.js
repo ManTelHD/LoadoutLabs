@@ -3,6 +3,7 @@
   const DATA_URLS = {
     meta: `data/wzstats-meta.json?v=${VERSION}`,
     weapons: `data/cod-weapons.json?v=${VERSION}`,
+    registry: `data/weapon-registry.json?v=${VERSION}`,
     builds: "loadout-builds.js?v=20260524-complete-builds3",
   };
 
@@ -157,7 +158,7 @@
     "katana": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/weapons/BO7-Weapons-Katana-Main.webp",
   };
 
-  const state = { meta: null, weapons: null, builds: {}, renderQueued: false };
+  const state = { meta: null, weapons: null, builds: {}, registryBuilds: {}, renderQueued: false };
 
   function html(value) {
     return String(value || "")
@@ -233,6 +234,52 @@
     } catch {
       return {};
     }
+  }
+
+  function buildRegistryMap(registry) {
+    const map = {};
+    for (const weapon of registry?.weapons || []) {
+      const key = weapon.id || slug(weapon.name);
+      const attachments = Array.isArray(weapon.attachments) ? weapon.attachments : [];
+      if (!key || !attachments.length) continue;
+      map[key] = {
+        code: weapon.buildCode || "",
+        extras: metaExtras,
+        attachments,
+      };
+    }
+    return map;
+  }
+
+  function cleanAttachments(items) {
+    return (Array.isArray(items) ? items : [])
+      .map((value) => String(value || "").trim())
+      .filter((value) => value && !/^(Pick-Rate|Quelle|Rolle):/i.test(value));
+  }
+
+  function isPendingAttachments(items) {
+    return !items.length || items.some((value) => /Aufsätze werden aktualisiert/i.test(value));
+  }
+
+  function buildForItem(item) {
+    const key = item.id || slug(item.name);
+    const legacy = state.builds[key] || state.builds[slug(item.name)] || {};
+    const registry = state.registryBuilds[key] || state.registryBuilds[slug(item.name)] || {};
+    const itemAttachments = cleanAttachments(item.attachments);
+    if (!isPendingAttachments(itemAttachments)) {
+      return {
+        code: item.buildCode || registry.code || legacy.code || "",
+        extras: registry.extras || legacy.extras || metaExtras,
+        attachments: itemAttachments,
+      };
+    }
+    if (!isPendingAttachments(cleanAttachments(registry.attachments))) return registry;
+    if (!isPendingAttachments(cleanAttachments(legacy.attachments))) return legacy;
+    return {
+      code: item.buildCode || registry.code || legacy.code || "",
+      extras: registry.extras || legacy.extras || metaExtras,
+      attachments: itemAttachments,
+    };
   }
 
   function buildImageMap() {
@@ -388,8 +435,7 @@
   }
 
   function renderCard(item, imageMap, expandedCards) {
-    const key = item.id || slug(item.name);
-    const build = state.builds[key] || state.builds[slug(item.name)] || {};
+    const build = buildForItem(item);
     const score = scoreFor(item);
     const tierKey = item.tier === "META" ? "meta" : slug(item.tier || "tier");
     const expanded = expandedCards.has(item.name);
@@ -519,13 +565,15 @@
 
   async function init() {
     installStyle();
-    const [meta, weapons, builds] = await Promise.all([
+    const [meta, weapons, registry, builds] = await Promise.all([
       fetchJson(DATA_URLS.meta).catch(() => null),
       fetchJson(DATA_URLS.weapons).catch(() => null),
+      fetchJson(DATA_URLS.registry).catch(() => null),
       fetchBuilds(),
     ]);
     state.meta = meta;
     state.weapons = weapons;
+    state.registryBuilds = buildRegistryMap(registry);
     state.builds = builds || {};
     bindEvents();
     scheduleRender(0);
