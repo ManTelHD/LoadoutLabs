@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-25T08:32:34.798Z",
-  "generatedAtLabel": "25. September 2026 um 10:32 MESZ",
+  "generatedAt": "2026-09-25T08:59:59.988Z",
+  "generatedAtLabel": "25. September 2026 um 10:59 MESZ",
   "source": "WZStats",
   "sourceUrl": "https://wzstats.gg/",
   "publicEndpoint": "https://app.wzstats.gg/wz2/weapons/meta",
@@ -84,11 +84,11 @@
         "expectedAttachmentCount": 5,
         "buildCode": "",
         "attachments": [
-          "Optic: REFLEX 06",
-          "Muzzle: COMPENSATOR",
-          "Barrel: DAMAGE BARREL",
-          "Magazine: 50 Round Extended Mag",
-          "Rear Grip: QUICKDRAW GRIP"
+          "Optic: EAM XL REFLEX",
+          "Muzzle: EMT3 COMPENSATOR",
+          "Barrel: 17.1\" ABDICATOR BARREL",
+          "Magazine: BARRAGE EXTENDED MAG",
+          "Rear Grip: GRANULATED FAST GRIP"
         ]
       },
       {
@@ -112,11 +112,11 @@
         "expectedAttachmentCount": 5,
         "buildCode": "",
         "attachments": [
-          "Muzzle: COMPENSATOR",
-          "Underbarrel: MOBILE RECOIL FOREGRIP",
-          "Magazine: 50 Round Extended Mag",
-          "Rear Grip: MOBILE QUICKDRAW GRIP",
-          "Stock: ADS MOVEMENT STOCK"
+          "Muzzle: EMT3 COMPENSATOR",
+          "Underbarrel: EAM STEADY-90 GRIP",
+          "Magazine: BARRAGE EXTENDED MAG",
+          "Rear Grip: REDWELL GORGON GRIP",
+          "Stock: SWIFTLINE STOCK"
         ]
       },
       {
@@ -212,11 +212,11 @@
         "expectedAttachmentCount": 5,
         "buildCode": "",
         "attachments": [
-          "Muzzle: COMPENSATOR",
-          "Barrel: LONG BARREL",
-          "Underbarrel: RECOIL CONTROL FOREGRIP",
-          "Magazine: 50 Round Extended Mag",
-          "Stock: ADS MOVEMENT STOCK"
+          "Muzzle: EMT3 COMPENSATOR",
+          "Barrel: 18.5\" CALLISTO BARREL",
+          "Underbarrel: LATERAL PRECISION GRIP",
+          "Magazine: BARRAGE EXTENDED MAG",
+          "Stock: SWIFTLINE STOCK"
         ]
       },
       {
@@ -288,11 +288,11 @@
         "expectedAttachmentCount": 5,
         "buildCode": "",
         "attachments": [
-          "Optic: 3X OPTIC",
-          "Muzzle: MONOLITHIC SUPPRESSOR",
-          "Barrel: DAMAGE BARREL",
-          "Magazine: 60 ROUND EXTENDED MAG",
-          "Stock: CONTROL STOCK"
+          "Optic: EAM XL REFLEX",
+          "Barrel: 17.1\" ABDICATOR BARREL",
+          "Underbarrel: LATERAL PRECISION GRIP",
+          "Magazine: MANDIBLE EXTENDED MAG",
+          "Fire Mods: BUFFER SPRING"
         ]
       },
       {
@@ -336,11 +336,15 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "AK-27 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
-        "attachmentCount": 0,
+        "attachmentCount": 5,
         "expectedAttachmentCount": 5,
         "buildCode": "",
         "attachments": [
-          "Aufsätze werden aktualisiert"
+          "Optic: EAM XL REFLEX",
+          "Barrel: 17.1\" ABDICATOR BARREL",
+          "Underbarrel: LATERAL PRECISION GRIP",
+          "Magazine: BARRAGE EXTENDED MAG",
+          "Fire Mods: BUFFER SPRING"
         ]
       },
       {
@@ -436,11 +440,11 @@
         "expectedAttachmentCount": 5,
         "buildCode": "",
         "attachments": [
-          "Optic: REFLEX 06",
-          "Muzzle: COMPENSATOR",
-          "Barrel: DAMAGE BARREL",
-          "Magazine: 50 Round Extended Mag",
-          "Stock: MOBILE FLINCH STOCK"
+          "Optic: EAM XL REFLEX",
+          "Muzzle: EMT3 COMPENSATOR",
+          "Barrel: 17.1\" ABDICATOR BARREL",
+          "Magazine: BARRAGE EXTENDED MAG",
+          "Stock: DEFIANT-45 SKELETAL STOCK"
         ]
       },
       {
@@ -488,11 +492,11 @@
         "expectedAttachmentCount": 5,
         "buildCode": "",
         "attachments": [
-          "Optic: REFLEX 06",
-          "Muzzle: COMPENSATOR",
-          "Barrel: DAMAGE BARREL",
-          "Magazine: 40 ROUND EXTENDED MAG",
-          "Rear Grip: ACCURACY GRIP"
+          "Muzzle: MONOLITHIC SUPPRESSOR",
+          "Barrel: 17.1\" ABDICATOR BARREL",
+          "Magazine: SUSTAIN-25 EXTENDED MAG",
+          "Stock: BOWEN LINCHPIN STOCK",
+          "Fire Mods: BUFFER SPRING"
         ]
       },
       {
@@ -512,11 +516,15 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "KOGOT-7 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
-        "attachmentCount": 0,
+        "attachmentCount": 5,
         "expectedAttachmentCount": 5,
         "buildCode": "",
         "attachments": [
-          "Aufsätze werden aktualisiert"
+          "Muzzle: EMT3 COMPENSATOR",
+          "Barrel: 15.3\" Weaver-2R Barrel",
+          "Underbarrel: LATERAL PRECISION GRIP",
+          "Magazine: BARRAGE EXTENDED MAG",
+          "Fire Mods: BUFFER SPRING"
         ]
       },
       {
@@ -540,11 +548,11 @@
         "expectedAttachmentCount": 5,
         "buildCode": "",
         "attachments": [
-          "Optic: 3X OPTIC",
-          "Muzzle: MONOLITHIC SUPPRESSOR",
-          "Barrel: DAMAGE BARREL",
-          "Magazine: 60 ROUND EXTENDED MAG",
-          "Stock: CONTROL STOCK"
+          "Optic: EAM XL REFLEX",
+          "Barrel: 17.1\" ABDICATOR BARREL",
+          "Underbarrel: LATERAL PRECISION GRIP",
+          "Magazine: MANDIBLE EXTENDED MAG",
+          "Fire Mods: 9MM PARABELLUM OVERPRESSURED"
         ]
       },
       {
@@ -564,11 +572,15 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "X9 MAVERICK wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
-        "attachmentCount": 0,
+        "attachmentCount": 5,
         "expectedAttachmentCount": 5,
         "buildCode": "",
         "attachments": [
-          "Aufsätze werden aktualisiert"
+          "Optic: EAM XL REFLEX",
+          "Muzzle: MONOLITHIC SUPPRESSOR",
+          "Barrel: 16\" OS-DENSITY BARREL",
+          "Rear Grip: KINETIX-MK 1 GRIP",
+          "Fire Mods: BOLT CARRIER GROUP"
         ]
       },
       {
@@ -592,11 +604,11 @@
         "expectedAttachmentCount": 5,
         "buildCode": "",
         "attachments": [
-          "Barrel: LONG BARREL",
-          "Underbarrel: STEADY SWAY HANDSTOP",
-          "Magazine: 75 ROUND EXTENDED MAG",
-          "Rear Grip: MOBILE QUICKDRAW GRIP",
-          "Stock: ADS MOVEMENT STOCK"
+          "Muzzle: EMT3 COMPENSATOR",
+          "Barrel: 18.5\" CALLISTO BARREL",
+          "Magazine: BOWEN SIDELINE EXTENDED",
+          "Rear Grip: REDWELL GORGON GRIP",
+          "Fire Mods: BUFFER SPRING"
         ]
       },
       {
@@ -620,11 +632,11 @@
         "expectedAttachmentCount": 5,
         "buildCode": "",
         "attachments": [
-          "Muzzle: SUPPRESSOR",
-          "Barrel: Short Barrel",
-          "Magazine: 48 ROUND EXTENDED MAG",
-          "Rear Grip: MOBILE QUICKDRAW GRIP",
-          "Stock: ADS MOVEMENT STOCK"
+          "Muzzle: SWF TISHINA-11",
+          "Barrel: 15.3\" Weaver-2R Barrel",
+          "Magazine: DORADO EXTENDED MAG",
+          "Rear Grip: REDWELL GORGON GRIP",
+          "Stock: SWIFTLINE STOCK"
         ]
       },
       {
@@ -692,11 +704,15 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "M8A1 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
-        "attachmentCount": 0,
+        "attachmentCount": 5,
         "expectedAttachmentCount": 5,
         "buildCode": "",
         "attachments": [
-          "Aufsätze werden aktualisiert"
+          "Optic: GREAVES ACCUSPOT 3X",
+          "Barrel: 17.1\" ABDICATOR BARREL",
+          "Magazine: REDLINE CAPACITY DRUM",
+          "Rear Grip: KINETIX-MK 1 GRIP",
+          "Fire Mods: 9MM PARABELLUM OVERPRESSURED"
         ]
       },
       {
@@ -716,11 +732,15 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "HAWKER HX wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
-        "attachmentCount": 0,
+        "attachmentCount": 5,
         "expectedAttachmentCount": 5,
         "buildCode": "",
         "attachments": [
-          "Aufsätze werden aktualisiert"
+          "Muzzle: MONOLITHIC SUPPRESSOR",
+          "Barrel: 17\" B1-HYBRID BARREL",
+          "Rear Grip: GRANULATED FAST GRIP",
+          "Fire Mods: 9MM PARABELLUM OVERPRESSURED",
+          "Laser: 1MW PULSE LASER"
         ]
       },
       {
@@ -740,11 +760,15 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "VS RECON wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
-        "attachmentCount": 0,
+        "attachmentCount": 5,
         "expectedAttachmentCount": 5,
         "buildCode": "",
         "attachments": [
-          "Aufsätze werden aktualisiert"
+          "Muzzle: MONOLITHIC SUPPRESSOR",
+          "Barrel: 5.1\" TESSELLATE BARREL",
+          "Underbarrel: ZERO-S HANDGUARD",
+          "Rear Grip: GRANULATED FAST GRIP",
+          "Fire Mods: 9MM PARABELLUM OVERPRESSURED"
         ]
       },
       {
@@ -788,11 +812,15 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "SOKOL 545 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als B-Tier gefuehrt.",
-        "attachmentCount": 0,
+        "attachmentCount": 5,
         "expectedAttachmentCount": 5,
         "buildCode": "",
         "attachments": [
-          "Aufsätze werden aktualisiert"
+          "Optic: GREAVES ACCUSPOT 3X",
+          "Muzzle: MONOLITHIC SUPPRESSOR",
+          "Barrel: 17.1\" ABDICATOR BARREL",
+          "Stock: BOWEN LINCHPIN STOCK",
+          "Fire Mods: BUFFER SPRING"
         ]
       },
       {
@@ -812,11 +840,15 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "MK.78 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als B-Tier gefuehrt.",
-        "attachmentCount": 0,
+        "attachmentCount": 5,
         "expectedAttachmentCount": 5,
         "buildCode": "",
         "attachments": [
-          "Aufsätze werden aktualisiert"
+          "Optic: LETHAL TOOLS ELO",
+          "Barrel: 17.1\" ABDICATOR BARREL",
+          "Underbarrel: LATERAL PRECISION GRIP",
+          "Rear Grip: KINETIX-MK 1 GRIP",
+          "Fire Mods: BUFFER SPRING"
         ]
       },
       {
@@ -864,11 +896,11 @@
         "expectedAttachmentCount": 5,
         "buildCode": "",
         "attachments": [
-          "Muzzle: SUPPRESSOR",
-          "Barrel: LONG BARREL",
-          "Magazine: 55 ROUND EXTENDED MAG",
-          "Rear Grip: ACCURACY GRIP",
-          "Stock: ADS MOVEMENT STOCK"
+          "Muzzle: SWF TISHINA-11",
+          "Barrel: 18.5\" CALLISTO BARREL",
+          "Magazine: FUEL CELL-X3 MAG",
+          "Rear Grip: KINETIX-MK 1 GRIP",
+          "Stock: SWIFTLINE STOCK"
         ]
       },
       {
@@ -892,11 +924,11 @@
         "expectedAttachmentCount": 5,
         "buildCode": "",
         "attachments": [
-          "Optic: MINI REFLEX 03",
+          "Optic: LETHAL TOOLS ELO",
           "Muzzle: MONOLITHIC SUPPRESSOR",
-          "Barrel: BULLET VELOCITY BARREL",
-          "Underbarrel: STEADY SWAY HANDSTOP",
-          "Magazine: 85 ROUND EXTENDED MAG"
+          "Barrel: 5.1\" TESSELLATE BARREL",
+          "Underbarrel: ZERO SHIFT HANDSTOP",
+          "Magazine: ENFORCER EXTENDED BELT"
         ]
       },
       {
@@ -916,11 +948,15 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "XR-3 ION wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als B-Tier gefuehrt.",
-        "attachmentCount": 0,
+        "attachmentCount": 5,
         "expectedAttachmentCount": 5,
         "buildCode": "",
         "attachments": [
-          "Aufsätze werden aktualisiert"
+          "Optic: GREAVES ACCUSPOT 3X",
+          "Muzzle: SWF TISHINA-11",
+          "Barrel: 5.1\" TESSELLATE BARREL",
+          "Underbarrel: ZERO-S HANDGUARD",
+          "Fire Mods: 9MM PARABELLUM OVERPRESSURED"
         ]
       },
       {
@@ -969,10 +1005,10 @@
         "buildCode": "",
         "attachments": [
           "Muzzle: MONOLITHIC SUPPRESSOR",
-          "Barrel: LONG BARREL",
-          "Magazine: 24 ROUND EXTENDED MAG",
-          "Rear Grip: QUICKDRAW GRIP",
-          "Laser: STABLE RANGE LASER"
+          "Barrel: 18.5\" CALLISTO BARREL",
+          "Magazine: DRACO RESERVE EXTENDED II",
+          "Rear Grip: GRANULATED FAST GRIP",
+          "Laser: 3MW MOTION STRIKE LASER"
         ]
       },
       {
@@ -996,11 +1032,11 @@
         "expectedAttachmentCount": 5,
         "buildCode": "",
         "attachments": [
-          "Optic: 3X OPTIC",
+          "Optic: GREAVES ACCUSPOT 3X",
           "Muzzle: MONOLITHIC SUPPRESSOR",
-          "Barrel: BULLET VELOCITY BARREL",
-          "Magazine: 30 Round Extended Mag",
-          "Rear Grip: QUICKDRAW GRIP"
+          "Barrel: 5.1\" TESSELLATE BARREL",
+          "Magazine: VAULT EXTENDED MAG",
+          "Rear Grip: GRANULATED FAST GRIP"
         ]
       },
       {
@@ -1020,11 +1056,15 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "SHADOW SK wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als C-Tier gefuehrt.",
-        "attachmentCount": 0,
+        "attachmentCount": 5,
         "expectedAttachmentCount": 5,
         "buildCode": "",
         "attachments": [
-          "Aufsätze werden aktualisiert"
+          "Muzzle: MONOLITHIC SUPPRESSOR",
+          "Barrel: 5.1\" TESSELLATE BARREL",
+          "Rear Grip: GRANULATED FAST GRIP",
+          "Fire Mods: 9MM PARABELLUM OVERPRESSURED",
+          "Comb: E-FIRM RISER"
         ]
       },
       {
@@ -1048,11 +1088,11 @@
         "expectedAttachmentCount": 5,
         "buildCode": "",
         "attachments": [
-          "Optic: 3X OPTIC",
+          "Optic: GREAVES ACCUSPOT 3X",
           "Muzzle: MONOLITHIC SUPPRESSOR",
-          "Barrel: BULLET VELOCITY BARREL",
-          "Rear Grip: ACCURACY GRIP",
-          "Comb: STEADY SWAY RISER"
+          "Barrel: 5.1\" TESSELLATE BARREL",
+          "Rear Grip: KINETIX-MK 1 GRIP",
+          "Comb: E-FIRM RISER"
         ]
       },
       {
@@ -1101,10 +1141,10 @@
         "buildCode": "",
         "attachments": [
           "Muzzle: MONOLITHIC SUPPRESSOR",
-          "Barrel: LONG BARREL",
-          "Magazine: 25 ROUND EXTENDED MAG",
-          "Rear Grip: QUICKDRAW GRIP",
-          "Laser: STABLE RANGE LASER"
+          "Barrel: 18.5\" CALLISTO BARREL",
+          "Magazine: HELLGATE STICK MAG",
+          "Rear Grip: GRANULATED FAST GRIP",
+          "Laser: 3MW MOTION STRIKE LASER"
         ]
       },
       {
@@ -1128,11 +1168,11 @@
         "expectedAttachmentCount": 5,
         "buildCode": "",
         "attachments": [
-          "Optic: REFLEX 01",
-          "Muzzle: SUPPRESSOR",
-          "Barrel: LONG BARREL",
-          "Magazine: 15 ROUND EXTENDED MAG",
-          "Rear Grip: MOBILE QUICKDRAW GRIP"
+          "Optic: VAS LED",
+          "Muzzle: SWF TISHINA-11",
+          "Barrel: 18.5\" CALLISTO BARREL",
+          "Magazine: RIGEL EXTENDED II",
+          "Rear Grip: REDWELL GORGON GRIP"
         ]
       },
       {
@@ -1527,11 +1567,11 @@
         "expectedAttachmentCount": 5,
         "buildCode": "",
         "attachments": [
-          "Optic: 3X OPTIC",
-          "Muzzle: MONOLITHIC SUPPRESSOR",
-          "Barrel: DAMAGE BARREL",
-          "Magazine: 60 ROUND EXTENDED MAG",
-          "Stock: CONTROL STOCK"
+          "Optic: EAM XL REFLEX",
+          "Barrel: 17.1\" ABDICATOR BARREL",
+          "Underbarrel: LATERAL PRECISION GRIP",
+          "Magazine: MANDIBLE EXTENDED MAG",
+          "Fire Mods: BUFFER SPRING"
         ]
       },
       {
@@ -1579,11 +1619,11 @@
         "expectedAttachmentCount": 5,
         "buildCode": "",
         "attachments": [
-          "Muzzle: COMPENSATOR",
-          "Underbarrel: MOBILE RECOIL FOREGRIP",
-          "Magazine: 50 Round Extended Mag",
-          "Rear Grip: MOBILE QUICKDRAW GRIP",
-          "Stock: ADS MOVEMENT STOCK"
+          "Muzzle: EMT3 COMPENSATOR",
+          "Underbarrel: EAM STEADY-90 GRIP",
+          "Magazine: BARRAGE EXTENDED MAG",
+          "Rear Grip: REDWELL GORGON GRIP",
+          "Stock: SWIFTLINE STOCK"
         ]
       },
       {
@@ -1607,11 +1647,11 @@
         "expectedAttachmentCount": 5,
         "buildCode": "",
         "attachments": [
-          "Muzzle: SUPPRESSOR",
-          "Barrel: Short Barrel",
-          "Magazine: 48 ROUND EXTENDED MAG",
-          "Rear Grip: MOBILE QUICKDRAW GRIP",
-          "Stock: ADS MOVEMENT STOCK"
+          "Muzzle: SWF TISHINA-11",
+          "Barrel: 15.3\" Weaver-2R Barrel",
+          "Magazine: DORADO EXTENDED MAG",
+          "Rear Grip: REDWELL GORGON GRIP",
+          "Stock: SWIFTLINE STOCK"
         ]
       },
       {
@@ -1631,11 +1671,15 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "VS RECON wird von WZStats in Black Ops 7 Ranked Meta als Meta gefuehrt.",
-        "attachmentCount": 0,
+        "attachmentCount": 5,
         "expectedAttachmentCount": 5,
         "buildCode": "",
         "attachments": [
-          "Aufsätze werden aktualisiert"
+          "Muzzle: MONOLITHIC SUPPRESSOR",
+          "Barrel: 5.1\" TESSELLATE BARREL",
+          "Underbarrel: ZERO-S HANDGUARD",
+          "Rear Grip: GRANULATED FAST GRIP",
+          "Fire Mods: 9MM PARABELLUM OVERPRESSURED"
         ]
       },
       {
@@ -1659,11 +1703,11 @@
         "expectedAttachmentCount": 5,
         "buildCode": "",
         "attachments": [
-          "Optic: REFLEX 01",
-          "Muzzle: SUPPRESSOR",
-          "Barrel: LONG BARREL",
-          "Magazine: 15 ROUND EXTENDED MAG",
-          "Rear Grip: MOBILE QUICKDRAW GRIP"
+          "Optic: VAS LED",
+          "Muzzle: SWF TISHINA-11",
+          "Barrel: 18.5\" CALLISTO BARREL",
+          "Magazine: RIGEL EXTENDED II",
+          "Rear Grip: REDWELL GORGON GRIP"
         ]
       }
     ]

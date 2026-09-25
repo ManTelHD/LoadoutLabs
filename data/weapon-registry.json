@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-25T08:32:34.798Z",
+  "generatedAt": "2026-09-25T08:59:59.988Z",
   "source": "Loadout Lab validated weapon registry",
   "weapons": [
     {
@@ -57,11 +57,11 @@
       "attachmentCount": 5,
       "expectedAttachmentCount": 5,
       "attachments": [
-        "Optic: REFLEX 06",
-        "Muzzle: COMPENSATOR",
-        "Barrel: DAMAGE BARREL",
-        "Magazine: 50 Round Extended Mag",
-        "Rear Grip: QUICKDRAW GRIP"
+        "Optic: EAM XL REFLEX",
+        "Muzzle: EMT3 COMPENSATOR",
+        "Barrel: 17.1\" ABDICATOR BARREL",
+        "Magazine: BARRAGE EXTENDED MAG",
+        "Rear Grip: GRANULATED FAST GRIP"
       ],
       "buildCode": "",
       "weaponClass": "Assault Rifle",
@@ -82,11 +82,11 @@
       "attachmentCount": 5,
       "expectedAttachmentCount": 5,
       "attachments": [
-        "Muzzle: COMPENSATOR",
-        "Underbarrel: MOBILE RECOIL FOREGRIP",
-        "Magazine: 50 Round Extended Mag",
-        "Rear Grip: MOBILE QUICKDRAW GRIP",
-        "Stock: ADS MOVEMENT STOCK"
+        "Muzzle: EMT3 COMPENSATOR",
+        "Underbarrel: EAM STEADY-90 GRIP",
+        "Magazine: BARRAGE EXTENDED MAG",
+        "Rear Grip: REDWELL GORGON GRIP",
+        "Stock: SWIFTLINE STOCK"
       ],
       "buildCode": "",
       "weaponClass": "Smg",
@@ -176,11 +176,11 @@
       "attachmentCount": 5,
       "expectedAttachmentCount": 5,
       "attachments": [
-        "Muzzle: COMPENSATOR",
-        "Barrel: LONG BARREL",
-        "Underbarrel: RECOIL CONTROL FOREGRIP",
-        "Magazine: 50 Round Extended Mag",
-        "Stock: ADS MOVEMENT STOCK"
+        "Muzzle: EMT3 COMPENSATOR",
+        "Barrel: 18.5\" CALLISTO BARREL",
+        "Underbarrel: LATERAL PRECISION GRIP",
+        "Magazine: BARRAGE EXTENDED MAG",
+        "Stock: SWIFTLINE STOCK"
       ],
       "buildCode": "",
       "weaponClass": "Smg",
@@ -245,11 +245,11 @@
       "attachmentCount": 5,
       "expectedAttachmentCount": 5,
       "attachments": [
-        "Optic: 3X OPTIC",
-        "Muzzle: MONOLITHIC SUPPRESSOR",
-        "Barrel: DAMAGE BARREL",
-        "Magazine: 60 ROUND EXTENDED MAG",
-        "Stock: CONTROL STOCK"
+        "Optic: EAM XL REFLEX",
+        "Barrel: 17.1\" ABDICATOR BARREL",
+        "Underbarrel: LATERAL PRECISION GRIP",
+        "Magazine: MANDIBLE EXTENDED MAG",
+        "Fire Mods: BUFFER SPRING"
       ],
       "buildCode": "",
       "weaponClass": "Assault Rifle",
@@ -291,17 +291,17 @@
       "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-AR-AK-27.webp",
       "imageSource": "Call of Duty Waffenübersicht",
       "imageApproved": true,
-      "buildComplete": true,
+      "buildComplete": false,
       "attachmentCount": 5,
       "expectedAttachmentCount": 5,
       "attachments": [
-        "Muzzle: EMT3 Compensator (Stufe 3)",
-        "Barrel: 18.2\" Vostok Extended Barrel (Stufe 27)",
-        "Underbarrel: Ironhold Angled Grip (Stufe 10)",
-        "Rear Grip: Garin Advanced Grip (Stufe 39)",
-        "Fire Mods: 7.62 Soviet Overpressured (Stufe 18)"
+        "Optic: EAM XL REFLEX",
+        "Barrel: 17.1\" ABDICATOR BARREL",
+        "Underbarrel: LATERAL PRECISION GRIP",
+        "Magazine: BARRAGE EXTENDED MAG",
+        "Fire Mods: BUFFER SPRING"
       ],
-      "buildCode": "LL-AK27-A3",
+      "buildCode": "",
       "weaponClass": "Assault Rifle",
       "role": "Long Range",
       "tier": "A",
@@ -377,11 +377,11 @@
       "attachmentCount": 5,
       "expectedAttachmentCount": 5,
       "attachments": [
-        "Optic: REFLEX 06",
-        "Muzzle: COMPENSATOR",
-        "Barrel: DAMAGE BARREL",
-        "Magazine: 50 Round Extended Mag",
-        "Stock: MOBILE FLINCH STOCK"
+        "Optic: EAM XL REFLEX",
+        "Muzzle: EMT3 COMPENSATOR",
+        "Barrel: 17.1\" ABDICATOR BARREL",
+        "Magazine: BARRAGE EXTENDED MAG",
+        "Stock: DEFIANT-45 SKELETAL STOCK"
       ],
       "buildCode": "",
       "weaponClass": "Assault Rifle",
@@ -427,11 +427,11 @@
       "attachmentCount": 5,
       "expectedAttachmentCount": 5,
       "attachments": [
-        "Optic: REFLEX 06",
-        "Muzzle: COMPENSATOR",
-        "Barrel: DAMAGE BARREL",
-        "Magazine: 40 ROUND EXTENDED MAG",
-        "Rear Grip: ACCURACY GRIP"
+        "Muzzle: MONOLITHIC SUPPRESSOR",
+        "Barrel: 17.1\" ABDICATOR BARREL",
+        "Magazine: SUSTAIN-25 EXTENDED MAG",
+        "Stock: BOWEN LINCHPIN STOCK",
+        "Fire Mods: BUFFER SPRING"
       ],
       "buildCode": "",
       "weaponClass": "Assault Rifle",
@@ -448,17 +448,17 @@
       "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/weapons/COD-BO7-SMG-KOGOT-7.webp",
       "imageSource": "Call of Duty Waffenübersicht",
       "imageApproved": true,
-      "buildComplete": true,
+      "buildComplete": false,
       "attachmentCount": 5,
       "expectedAttachmentCount": 5,
       "attachments": [
-        "Muzzle: Hawker Series 45 (Stufe 18)",
-        "Barrel: 8.5\" Targil Hock-XR Barrel (Stufe 7)",
-        "Underbarrel: EAM Steady-90 Grip (Stufe 31)",
-        "Magazine: Vex Expanse Mag (Stufe 32)",
-        "Fire Mods: Buffer Spring (Stufe 28)"
+        "Muzzle: EMT3 COMPENSATOR",
+        "Barrel: 15.3\" Weaver-2R Barrel",
+        "Underbarrel: LATERAL PRECISION GRIP",
+        "Magazine: BARRAGE EXTENDED MAG",
+        "Fire Mods: BUFFER SPRING"
       ],
-      "buildCode": "LL-KOGOT7-META",
+      "buildCode": "",
       "weaponClass": "Smg",
       "role": "Close Range",
       "tier": "A",
@@ -477,11 +477,11 @@
       "attachmentCount": 5,
       "expectedAttachmentCount": 5,
       "attachments": [
-        "Optic: 3X OPTIC",
-        "Muzzle: MONOLITHIC SUPPRESSOR",
-        "Barrel: DAMAGE BARREL",
-        "Magazine: 60 ROUND EXTENDED MAG",
-        "Stock: CONTROL STOCK"
+        "Optic: EAM XL REFLEX",
+        "Barrel: 17.1\" ABDICATOR BARREL",
+        "Underbarrel: LATERAL PRECISION GRIP",
+        "Magazine: MANDIBLE EXTENDED MAG",
+        "Fire Mods: 9MM PARABELLUM OVERPRESSURED"
       ],
       "buildCode": "",
       "weaponClass": "Assault Rifle",
@@ -498,17 +498,17 @@
       "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-AR-X9-MAVERICK.webp",
       "imageSource": "Call of Duty Waffenübersicht",
       "imageApproved": true,
-      "buildComplete": true,
+      "buildComplete": false,
       "attachmentCount": 5,
       "expectedAttachmentCount": 5,
       "attachments": [
-        "Optic: Reflex ELO (Stufe 1)",
-        "Muzzle: Monolithic Suppressor (Stufe 28)",
-        "Barrel: Long Barrel (Stufe 12)",
-        "Underbarrel: Vertical Foregrip (Stufe 28)",
-        "Magazine: Extended Mag II (Stufe 30)"
+        "Optic: EAM XL REFLEX",
+        "Muzzle: MONOLITHIC SUPPRESSOR",
+        "Barrel: 16\" OS-DENSITY BARREL",
+        "Rear Grip: KINETIX-MK 1 GRIP",
+        "Fire Mods: BOLT CARRIER GROUP"
       ],
-      "buildCode": "LL-X9MAVERICK-A12",
+      "buildCode": "",
       "weaponClass": "Assault Rifle",
       "role": "Long Range",
       "tier": "A",
@@ -527,11 +527,11 @@
       "attachmentCount": 5,
       "expectedAttachmentCount": 5,
       "attachments": [
-        "Barrel: LONG BARREL",
-        "Underbarrel: STEADY SWAY HANDSTOP",
-        "Magazine: 75 ROUND EXTENDED MAG",
-        "Rear Grip: MOBILE QUICKDRAW GRIP",
-        "Stock: ADS MOVEMENT STOCK"
+        "Muzzle: EMT3 COMPENSATOR",
+        "Barrel: 18.5\" CALLISTO BARREL",
+        "Magazine: BOWEN SIDELINE EXTENDED",
+        "Rear Grip: REDWELL GORGON GRIP",
+        "Fire Mods: BUFFER SPRING"
       ],
       "buildCode": "",
       "weaponClass": "Smg",
@@ -552,11 +552,11 @@
       "attachmentCount": 5,
       "expectedAttachmentCount": 5,
       "attachments": [
-        "Muzzle: SUPPRESSOR",
-        "Barrel: Short Barrel",
-        "Magazine: 48 ROUND EXTENDED MAG",
-        "Rear Grip: MOBILE QUICKDRAW GRIP",
-        "Stock: ADS MOVEMENT STOCK"
+        "Muzzle: SWF TISHINA-11",
+        "Barrel: 15.3\" Weaver-2R Barrel",
+        "Magazine: DORADO EXTENDED MAG",
+        "Rear Grip: REDWELL GORGON GRIP",
+        "Stock: SWIFTLINE STOCK"
       ],
       "buildCode": "",
       "weaponClass": "Smg",
@@ -617,17 +617,17 @@
       "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-DMR-M8A1.webp",
       "imageSource": "Call of Duty Waffenübersicht",
       "imageApproved": true,
-      "buildComplete": true,
+      "buildComplete": false,
       "attachmentCount": 5,
       "expectedAttachmentCount": 5,
       "attachments": [
-        "Optic: Variable Zoom Scope (Stufe 8)",
-        "Muzzle: Suppressor (Stufe 9)",
-        "Barrel: Marksman Barrel (Stufe 18)",
-        "Magazine: Fast Mag (Prestige)",
-        "Fire Mods: Overpressured (Stufe 24)"
+        "Optic: GREAVES ACCUSPOT 3X",
+        "Barrel: 17.1\" ABDICATOR BARREL",
+        "Magazine: REDLINE CAPACITY DRUM",
+        "Rear Grip: KINETIX-MK 1 GRIP",
+        "Fire Mods: 9MM PARABELLUM OVERPRESSURED"
       ],
-      "buildCode": "LL-M8A1-A13",
+      "buildCode": "",
       "weaponClass": "Marksman Rifle",
       "role": "Sniper",
       "tier": "A",
@@ -642,17 +642,17 @@
       "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-SR-HAWKER-HX.webp",
       "imageSource": "Call of Duty Waffenübersicht",
       "imageApproved": true,
-      "buildComplete": true,
+      "buildComplete": false,
       "attachmentCount": 5,
       "expectedAttachmentCount": 5,
       "attachments": [
-        "Muzzle: Suppressor (Stufe 9)",
-        "Barrel: Reinforced Barrel (Stufe 14)",
-        "Magazine: Fast Mag (Prestige)",
-        "Rear Grip: Quickdraw Grip (Stufe 9)",
-        "Fire Mods: High Velocity (Stufe 24)"
+        "Muzzle: MONOLITHIC SUPPRESSOR",
+        "Barrel: 17\" B1-HYBRID BARREL",
+        "Rear Grip: GRANULATED FAST GRIP",
+        "Fire Mods: 9MM PARABELLUM OVERPRESSURED",
+        "Laser: 1MW PULSE LASER"
       ],
-      "buildCode": "LL-HAWKERHX-A14",
+      "buildCode": "",
       "weaponClass": "Sniper Rifle",
       "role": "Sniper",
       "tier": "A",
@@ -667,17 +667,17 @@
       "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-SR-VS-RECON.webp",
       "imageSource": "Call of Duty Waffenübersicht",
       "imageApproved": true,
-      "buildComplete": true,
+      "buildComplete": false,
       "attachmentCount": 5,
       "expectedAttachmentCount": 5,
       "attachments": [
-        "Muzzle: Suppressor (Stufe 9)",
-        "Barrel: Long Barrel (Stufe 12)",
-        "Magazine: Fast Mag (Prestige)",
-        "Rear Grip: Ergonomic Grip (Stufe 19)",
-        "Fire Mods: High Velocity (Stufe 24)"
+        "Muzzle: MONOLITHIC SUPPRESSOR",
+        "Barrel: 5.1\" TESSELLATE BARREL",
+        "Underbarrel: ZERO-S HANDGUARD",
+        "Rear Grip: GRANULATED FAST GRIP",
+        "Fire Mods: 9MM PARABELLUM OVERPRESSURED"
       ],
-      "buildCode": "LL-VSRECON-A15",
+      "buildCode": "",
       "weaponClass": "Sniper Rifle",
       "role": "Sniper",
       "tier": "META",
@@ -717,17 +717,17 @@
       "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-LMG-SOKOL-545.webp",
       "imageSource": "Call of Duty Waffenübersicht",
       "imageApproved": true,
-      "buildComplete": true,
+      "buildComplete": false,
       "attachmentCount": 5,
       "expectedAttachmentCount": 5,
       "attachments": [
-        "Optic: Greaves AccuSpot 3x (Stufe 22)",
-        "Muzzle: Monolithic Suppressor (Stufe 28)",
-        "Barrel: Reinforced Barrel (Stufe 14)",
-        "Underbarrel: Bowen Sentry Foregrip (Stufe 24)",
-        "Magazine: Extended Mag II (Stufe 30)"
+        "Optic: GREAVES ACCUSPOT 3X",
+        "Muzzle: MONOLITHIC SUPPRESSOR",
+        "Barrel: 17.1\" ABDICATOR BARREL",
+        "Stock: BOWEN LINCHPIN STOCK",
+        "Fire Mods: BUFFER SPRING"
       ],
-      "buildCode": "LL-SOKOL545-B2",
+      "buildCode": "",
       "weaponClass": "Lmg",
       "role": "Long Range",
       "tier": "B",
@@ -742,17 +742,17 @@
       "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-LMG-MK-78.webp",
       "imageSource": "Call of Duty Waffenübersicht",
       "imageApproved": true,
-      "buildComplete": true,
+      "buildComplete": false,
       "attachmentCount": 5,
       "expectedAttachmentCount": 5,
       "attachments": [
-        "Optic: Greaves AccuSpot 3x (Stufe 22)",
-        "Barrel: 22\" Impulse HB-762 Barrel (Stufe 36)",
-        "Underbarrel: Bowen Sentry Foregrip (Stufe 24)",
-        "Rear Grip: Fleet-G2 Grip (Stufe 39)",
-        "Fire Mods: Accelerated Recoil System (Stufe 34)"
+        "Optic: LETHAL TOOLS ELO",
+        "Barrel: 17.1\" ABDICATOR BARREL",
+        "Underbarrel: LATERAL PRECISION GRIP",
+        "Rear Grip: KINETIX-MK 1 GRIP",
+        "Fire Mods: BUFFER SPRING"
       ],
-      "buildCode": "LL-MK78-META",
+      "buildCode": "",
       "weaponClass": "Lmg",
       "role": "Long Range",
       "tier": "B",
@@ -796,11 +796,11 @@
       "attachmentCount": 5,
       "expectedAttachmentCount": 5,
       "attachments": [
-        "Muzzle: SUPPRESSOR",
-        "Barrel: LONG BARREL",
-        "Magazine: 55 ROUND EXTENDED MAG",
-        "Rear Grip: ACCURACY GRIP",
-        "Stock: ADS MOVEMENT STOCK"
+        "Muzzle: SWF TISHINA-11",
+        "Barrel: 18.5\" CALLISTO BARREL",
+        "Magazine: FUEL CELL-X3 MAG",
+        "Rear Grip: KINETIX-MK 1 GRIP",
+        "Stock: SWIFTLINE STOCK"
       ],
       "buildCode": "",
       "weaponClass": "Smg",
@@ -821,11 +821,11 @@
       "attachmentCount": 5,
       "expectedAttachmentCount": 5,
       "attachments": [
-        "Optic: MINI REFLEX 03",
+        "Optic: LETHAL TOOLS ELO",
         "Muzzle: MONOLITHIC SUPPRESSOR",
-        "Barrel: BULLET VELOCITY BARREL",
-        "Underbarrel: STEADY SWAY HANDSTOP",
-        "Magazine: 85 ROUND EXTENDED MAG"
+        "Barrel: 5.1\" TESSELLATE BARREL",
+        "Underbarrel: ZERO SHIFT HANDSTOP",
+        "Magazine: ENFORCER EXTENDED BELT"
       ],
       "buildCode": "",
       "weaponClass": "Lmg",
@@ -842,17 +842,17 @@
       "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-SR-XR-3-ION.webp",
       "imageSource": "Call of Duty Waffenübersicht",
       "imageApproved": true,
-      "buildComplete": true,
+      "buildComplete": false,
       "attachmentCount": 5,
       "expectedAttachmentCount": 5,
       "attachments": [
-        "Muzzle: Suppressor (Stufe 9)",
-        "Barrel: Long Barrel (Stufe 12)",
-        "Magazine: Fast Mag (Prestige)",
-        "Rear Grip: Quickdraw Grip (Stufe 9)",
-        "Fire Mods: High Velocity (Stufe 24)"
+        "Optic: GREAVES ACCUSPOT 3X",
+        "Muzzle: SWF TISHINA-11",
+        "Barrel: 5.1\" TESSELLATE BARREL",
+        "Underbarrel: ZERO-S HANDGUARD",
+        "Fire Mods: 9MM PARABELLUM OVERPRESSURED"
       ],
-      "buildCode": "LL-XR3ION-B5",
+      "buildCode": "",
       "weaponClass": "Sniper Rifle",
       "role": "Sniper",
       "tier": "B",
@@ -897,10 +897,10 @@
       "expectedAttachmentCount": 5,
       "attachments": [
         "Muzzle: MONOLITHIC SUPPRESSOR",
-        "Barrel: LONG BARREL",
-        "Magazine: 24 ROUND EXTENDED MAG",
-        "Rear Grip: QUICKDRAW GRIP",
-        "Laser: STABLE RANGE LASER"
+        "Barrel: 18.5\" CALLISTO BARREL",
+        "Magazine: DRACO RESERVE EXTENDED II",
+        "Rear Grip: GRANULATED FAST GRIP",
+        "Laser: 3MW MOTION STRIKE LASER"
       ],
       "buildCode": "",
       "weaponClass": "Pistol",
@@ -921,11 +921,11 @@
       "attachmentCount": 5,
       "expectedAttachmentCount": 5,
       "attachments": [
-        "Optic: 3X OPTIC",
+        "Optic: GREAVES ACCUSPOT 3X",
         "Muzzle: MONOLITHIC SUPPRESSOR",
-        "Barrel: BULLET VELOCITY BARREL",
-        "Magazine: 30 Round Extended Mag",
-        "Rear Grip: QUICKDRAW GRIP"
+        "Barrel: 5.1\" TESSELLATE BARREL",
+        "Magazine: VAULT EXTENDED MAG",
+        "Rear Grip: GRANULATED FAST GRIP"
       ],
       "buildCode": "",
       "weaponClass": "Marksman Rifle",
@@ -942,17 +942,17 @@
       "imageUrl": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops7/weapons-matrix/navigation/COD-BO7-SR-SHADOW-SK.webp",
       "imageSource": "Call of Duty Waffenübersicht",
       "imageApproved": true,
-      "buildComplete": true,
+      "buildComplete": false,
       "attachmentCount": 5,
       "expectedAttachmentCount": 5,
       "attachments": [
-        "Muzzle: Suppressor (Stufe 9)",
-        "Barrel: Long Barrel (Stufe 12)",
-        "Magazine: Fast Mag (Prestige)",
-        "Rear Grip: Quickdraw Grip (Stufe 9)",
-        "Fire Mods: High Velocity (Stufe 24)"
+        "Muzzle: MONOLITHIC SUPPRESSOR",
+        "Barrel: 5.1\" TESSELLATE BARREL",
+        "Rear Grip: GRANULATED FAST GRIP",
+        "Fire Mods: 9MM PARABELLUM OVERPRESSURED",
+        "Comb: E-FIRM RISER"
       ],
-      "buildCode": "LL-SHADOWSK-C1",
+      "buildCode": "",
       "weaponClass": "Sniper Rifle",
       "role": "Sniper",
       "tier": "C",
@@ -971,11 +971,11 @@
       "attachmentCount": 5,
       "expectedAttachmentCount": 5,
       "attachments": [
-        "Optic: 3X OPTIC",
+        "Optic: GREAVES ACCUSPOT 3X",
         "Muzzle: MONOLITHIC SUPPRESSOR",
-        "Barrel: BULLET VELOCITY BARREL",
-        "Rear Grip: ACCURACY GRIP",
-        "Comb: STEADY SWAY RISER"
+        "Barrel: 5.1\" TESSELLATE BARREL",
+        "Rear Grip: KINETIX-MK 1 GRIP",
+        "Comb: E-FIRM RISER"
       ],
       "buildCode": "",
       "weaponClass": "Marksman Rifle",
@@ -1022,10 +1022,10 @@
       "expectedAttachmentCount": 5,
       "attachments": [
         "Muzzle: MONOLITHIC SUPPRESSOR",
-        "Barrel: LONG BARREL",
-        "Magazine: 25 ROUND EXTENDED MAG",
-        "Rear Grip: QUICKDRAW GRIP",
-        "Laser: STABLE RANGE LASER"
+        "Barrel: 18.5\" CALLISTO BARREL",
+        "Magazine: HELLGATE STICK MAG",
+        "Rear Grip: GRANULATED FAST GRIP",
+        "Laser: 3MW MOTION STRIKE LASER"
       ],
       "buildCode": "",
       "weaponClass": "Pistol",
@@ -1046,11 +1046,11 @@
       "attachmentCount": 5,
       "expectedAttachmentCount": 5,
       "attachments": [
-        "Optic: REFLEX 01",
-        "Muzzle: SUPPRESSOR",
-        "Barrel: LONG BARREL",
-        "Magazine: 15 ROUND EXTENDED MAG",
-        "Rear Grip: MOBILE QUICKDRAW GRIP"
+        "Optic: VAS LED",
+        "Muzzle: SWF TISHINA-11",
+        "Barrel: 18.5\" CALLISTO BARREL",
+        "Magazine: RIGEL EXTENDED II",
+        "Rear Grip: REDWELL GORGON GRIP"
       ],
       "buildCode": "",
       "weaponClass": "Pistol",
