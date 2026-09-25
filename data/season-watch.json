@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-25T07:59:14.771Z",
-  "generatedAtLabel": "25. September 2026 um 09:59 MESZ",
+  "generatedAt": "2026-09-25T08:09:30.848Z",
+  "generatedAtLabel": "25. September 2026 um 10:09 MESZ",
   "season": "Season 06",
   "featuredPost": {
     "title": "Call of Duty: Black Ops 7 and Call of Duty: Warzone Season 06 Content Drop: The Haunting",
@@ -27,7 +27,8 @@
     {
       "name": "CODLiveSeasons on X",
       "url": "https://x.com/CODLiveSeasons",
-      "status": "configured"
+      "status": "latest-post-detected",
+      "latestPostUrl": "https://x.com/CODLiveSeasons/status/2097339182473793641"
     }
   ],
   "stats": [

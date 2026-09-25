@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-25T07:59:14.771Z",
-  "generatedAtLabel": "25. September 2026 um 09:59 MESZ",
+  "generatedAt": "2026-09-25T08:09:30.848Z",
+  "generatedAtLabel": "25. September 2026 um 10:09 MESZ",
   "source": "WZStats",
   "sourceUrl": "https://wzstats.gg/",
   "publicEndpoint": "https://app.wzstats.gg/wz2/weapons/meta",
@@ -32,10 +32,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "VOYAK KT-3 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als Meta gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Long Range"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -55,10 +56,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "VMP wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als Meta gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Close Range"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -78,10 +80,15 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "DS20 MIRAGE wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als Meta gefuehrt.",
+        "attachmentCount": 5,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Long Range"
+          "Optic: REFLEX 06",
+          "Muzzle: COMPENSATOR",
+          "Barrel: DAMAGE BARREL",
+          "Magazine: 50 Round Extended Mag",
+          "Rear Grip: QUICKDRAW GRIP"
         ]
       },
       {
@@ -101,10 +108,15 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "MPC-25 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als Meta gefuehrt.",
+        "attachmentCount": 5,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Close Range"
+          "Muzzle: COMPENSATOR",
+          "Underbarrel: MOBILE RECOIL FOREGRIP",
+          "Magazine: 50 Round Extended Mag",
+          "Rear Grip: MOBILE QUICKDRAW GRIP",
+          "Stock: ADS MOVEMENT STOCK"
         ]
       },
       {
@@ -124,10 +136,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "TR51 PARA wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als Meta gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Long Range"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -147,10 +160,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "REV-46 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als Meta gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Close Range"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -170,10 +184,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "MK35 ISR wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als Meta gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Long Range"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -193,10 +208,15 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "RYDEN 45K wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als Meta gefuehrt.",
+        "attachmentCount": 5,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Close Range"
+          "Muzzle: COMPENSATOR",
+          "Barrel: LONG BARREL",
+          "Underbarrel: RECOIL CONTROL FOREGRIP",
+          "Magazine: 50 Round Extended Mag",
+          "Stock: ADS MOVEMENT STOCK"
         ]
       },
       {
@@ -216,10 +236,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "FG42 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Long Range"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -239,10 +260,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "STURMWOLF 45 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Close Range"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -262,10 +284,15 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "M15 MOD 0 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
+        "attachmentCount": 5,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Long Range"
+          "Optic: 3X OPTIC",
+          "Muzzle: MONOLITHIC SUPPRESSOR",
+          "Barrel: DAMAGE BARREL",
+          "Magazine: 60 ROUND EXTENDED MAG",
+          "Stock: CONTROL STOCK"
         ]
       },
       {
@@ -285,10 +312,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "VST wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Close Range"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -308,10 +336,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "AK-27 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Long Range"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -331,10 +360,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "AN-94 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Long Range"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -354,10 +384,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "VX COMPACT wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Long Range"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -377,10 +408,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "CBRS-3 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Close Range"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -400,10 +432,15 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "PEACEKEEPER MK1 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
+        "attachmentCount": 5,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Long Range"
+          "Optic: REFLEX 06",
+          "Muzzle: COMPENSATOR",
+          "Barrel: DAMAGE BARREL",
+          "Magazine: 50 Round Extended Mag",
+          "Stock: MOBILE FLINCH STOCK"
         ]
       },
       {
@@ -423,10 +460,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "EGRT-17 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Long Range"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -446,10 +484,15 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "MXR-17 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
+        "attachmentCount": 5,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Long Range"
+          "Optic: REFLEX 06",
+          "Muzzle: COMPENSATOR",
+          "Barrel: DAMAGE BARREL",
+          "Magazine: 40 ROUND EXTENDED MAG",
+          "Rear Grip: ACCURACY GRIP"
         ]
       },
       {
@@ -469,10 +512,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "KOGOT-7 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Close Range"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -492,10 +536,15 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "MADDOX RFB wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
+        "attachmentCount": 5,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Long Range"
+          "Optic: 3X OPTIC",
+          "Muzzle: MONOLITHIC SUPPRESSOR",
+          "Barrel: DAMAGE BARREL",
+          "Magazine: 60 ROUND EXTENDED MAG",
+          "Stock: CONTROL STOCK"
         ]
       },
       {
@@ -515,10 +564,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "X9 MAVERICK wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Long Range"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -538,10 +588,15 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "CARBON 57 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
+        "attachmentCount": 5,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Close Range"
+          "Barrel: LONG BARREL",
+          "Underbarrel: STEADY SWAY HANDSTOP",
+          "Magazine: 75 ROUND EXTENDED MAG",
+          "Rear Grip: MOBILE QUICKDRAW GRIP",
+          "Stock: ADS MOVEMENT STOCK"
         ]
       },
       {
@@ -561,10 +616,15 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "DRAVEC 45 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
+        "attachmentCount": 5,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Close Range"
+          "Muzzle: SUPPRESSOR",
+          "Barrel: Short Barrel",
+          "Magazine: 48 ROUND EXTENDED MAG",
+          "Rear Grip: MOBILE QUICKDRAW GRIP",
+          "Stock: ADS MOVEMENT STOCK"
         ]
       },
       {
@@ -584,10 +644,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "GREMLIN wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Close Range"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -607,10 +668,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "RAZOR 9MM wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Close Range"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -630,10 +692,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "M8A1 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Sniper"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -653,10 +716,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "HAWKER HX wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Sniper"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -676,10 +740,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "VS RECON wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Sniper"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -699,10 +764,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "STRIDER 300 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als A-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Sniper"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -722,10 +788,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "SOKOL 545 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als B-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Long Range"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -745,10 +812,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "MK.78 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als B-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Long Range"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -768,10 +836,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "SWORDFISH A1 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als B-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Sniper"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -791,10 +860,15 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "RK-9 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als B-Tier gefuehrt.",
+        "attachmentCount": 5,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Close Range"
+          "Muzzle: SUPPRESSOR",
+          "Barrel: LONG BARREL",
+          "Magazine: 55 ROUND EXTENDED MAG",
+          "Rear Grip: ACCURACY GRIP",
+          "Stock: ADS MOVEMENT STOCK"
         ]
       },
       {
@@ -814,10 +888,15 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "XM325 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als B-Tier gefuehrt.",
+        "attachmentCount": 5,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Long Range"
+          "Optic: MINI REFLEX 03",
+          "Muzzle: MONOLITHIC SUPPRESSOR",
+          "Barrel: BULLET VELOCITY BARREL",
+          "Underbarrel: STEADY SWAY HANDSTOP",
+          "Magazine: 85 ROUND EXTENDED MAG"
         ]
       },
       {
@@ -837,10 +916,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "XR-3 ION wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als B-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Sniper"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -860,10 +940,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "KRS-7.62 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als B-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Sniper"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -883,10 +964,15 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "VELOX 5.7 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als B-Tier gefuehrt.",
+        "attachmentCount": 5,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Close Range"
+          "Muzzle: MONOLITHIC SUPPRESSOR",
+          "Barrel: LONG BARREL",
+          "Magazine: 24 ROUND EXTENDED MAG",
+          "Rear Grip: QUICKDRAW GRIP",
+          "Laser: STABLE RANGE LASER"
         ]
       },
       {
@@ -906,10 +992,15 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "M34 NOVALINE wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als C-Tier gefuehrt.",
+        "attachmentCount": 5,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Sniper"
+          "Optic: 3X OPTIC",
+          "Muzzle: MONOLITHIC SUPPRESSOR",
+          "Barrel: BULLET VELOCITY BARREL",
+          "Magazine: 30 Round Extended Mag",
+          "Rear Grip: QUICKDRAW GRIP"
         ]
       },
       {
@@ -929,10 +1020,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "SHADOW SK wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als C-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Sniper"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -952,10 +1044,15 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "WARDEN 308 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als C-Tier gefuehrt.",
+        "attachmentCount": 5,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Sniper"
+          "Optic: 3X OPTIC",
+          "Muzzle: MONOLITHIC SUPPRESSOR",
+          "Barrel: BULLET VELOCITY BARREL",
+          "Rear Grip: ACCURACY GRIP",
+          "Comb: STEADY SWAY RISER"
         ]
       },
       {
@@ -975,10 +1072,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "1911 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als C-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Close Range"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -998,10 +1096,15 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "CODA 9 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als C-Tier gefuehrt.",
+        "attachmentCount": 5,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Close Range"
+          "Muzzle: MONOLITHIC SUPPRESSOR",
+          "Barrel: LONG BARREL",
+          "Magazine: 25 ROUND EXTENDED MAG",
+          "Rear Grip: QUICKDRAW GRIP",
+          "Laser: STABLE RANGE LASER"
         ]
       },
       {
@@ -1021,10 +1124,15 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "JÄGER 45 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als C-Tier gefuehrt.",
+        "attachmentCount": 5,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Close Range"
+          "Optic: REFLEX 01",
+          "Muzzle: SUPPRESSOR",
+          "Barrel: LONG BARREL",
+          "Magazine: 15 ROUND EXTENDED MAG",
+          "Rear Grip: MOBILE QUICKDRAW GRIP"
         ]
       },
       {
@@ -1044,10 +1152,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "MAMMOTH wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als C-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Long Range"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -1067,10 +1176,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "A.R.C. M1 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Launcher"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -1090,10 +1200,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "FLATLINE MK.II wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Melee"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -1113,10 +1224,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "AAROW 109 wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Launcher"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -1136,10 +1248,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "KNIFE wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Melee"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -1159,10 +1272,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "BALLISTIC KNIFE wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Melee"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -1182,10 +1296,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "NX RAVAGER wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Launcher"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -1205,10 +1320,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "H311-SAW wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Melee"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -1228,10 +1344,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "GDL HAVOC wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Launcher"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -1251,10 +1368,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "SIREN wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Launcher"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -1274,10 +1392,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "KATANA wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Melee"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -1297,10 +1416,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "GRIMHAWK wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Launcher"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -1320,10 +1440,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "EXECUTIONER'S DUET wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Melee"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -1343,10 +1464,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "MACE wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Melee"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -1366,10 +1488,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "ROC 20MM wird von WZStats in Warzone Ranked / Ranked Resurgence Meta als D-Tier gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Launcher"
+          "Aufsätze werden aktualisiert"
         ]
       }
     ]
@@ -1400,10 +1523,15 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "M15 MOD 0 wird von WZStats in Black Ops 7 Ranked Meta als Meta gefuehrt.",
+        "attachmentCount": 5,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Long Range"
+          "Optic: 3X OPTIC",
+          "Muzzle: MONOLITHIC SUPPRESSOR",
+          "Barrel: DAMAGE BARREL",
+          "Magazine: 60 ROUND EXTENDED MAG",
+          "Stock: CONTROL STOCK"
         ]
       },
       {
@@ -1423,10 +1551,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "VMP wird von WZStats in Black Ops 7 Ranked Meta als Meta gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Close Range"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -1446,10 +1575,15 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "MPC-25 wird von WZStats in Black Ops 7 Ranked Meta als Meta gefuehrt.",
+        "attachmentCount": 5,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Close Range"
+          "Muzzle: COMPENSATOR",
+          "Underbarrel: MOBILE RECOIL FOREGRIP",
+          "Magazine: 50 Round Extended Mag",
+          "Rear Grip: MOBILE QUICKDRAW GRIP",
+          "Stock: ADS MOVEMENT STOCK"
         ]
       },
       {
@@ -1469,10 +1603,15 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "DRAVEC 45 wird von WZStats in Black Ops 7 Ranked Meta als Meta gefuehrt.",
+        "attachmentCount": 5,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Close Range"
+          "Muzzle: SUPPRESSOR",
+          "Barrel: Short Barrel",
+          "Magazine: 48 ROUND EXTENDED MAG",
+          "Rear Grip: MOBILE QUICKDRAW GRIP",
+          "Stock: ADS MOVEMENT STOCK"
         ]
       },
       {
@@ -1492,10 +1631,11 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "VS RECON wird von WZStats in Black Ops 7 Ranked Meta als Meta gefuehrt.",
+        "attachmentCount": 0,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Sniper"
+          "Aufsätze werden aktualisiert"
         ]
       },
       {
@@ -1515,10 +1655,15 @@
         "sourceUpdatedAt": "2026-09-25T07:51:05.777Z",
         "sourceUpdatedLabel": "25. September 2026",
         "description": "JÄGER 45 wird von WZStats in Black Ops 7 Ranked Meta als Meta gefuehrt.",
+        "attachmentCount": 5,
+        "expectedAttachmentCount": 5,
+        "buildCode": "",
         "attachments": [
-          "Pick-Rate: kein oeffentlicher WZStats-Wert verfuegbar",
-          "Quelle: WZStats Tierlist",
-          "Rolle: Close Range"
+          "Optic: REFLEX 01",
+          "Muzzle: SUPPRESSOR",
+          "Barrel: LONG BARREL",
+          "Magazine: 15 ROUND EXTENDED MAG",
+          "Rear Grip: MOBILE QUICKDRAW GRIP"
         ]
       }
     ]

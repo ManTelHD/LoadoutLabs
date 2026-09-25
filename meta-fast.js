@@ -348,13 +348,23 @@
   function renderDetails(item, build) {
     const extras = (Array.isArray(build.extras) && build.extras.length ? build.extras : roleExtraSets[roleKey(item)]) || roleExtraSets.long;
     const code = build.code && !/^wzstats/i.test(build.code) ? build.code : "";
-
-    const attachmentHtml = `
+    const rawAttachments = (Array.isArray(build.attachments) ? build.attachments : [])
+      .map((value) => String(value || "").trim())
+      .filter((value) => value && !/^(Pick-Rate|Quelle|Rolle):/i.test(value));
+    const hasPendingAttachments = rawAttachments.length === 0 || rawAttachments.some((value) => /Aufsätze werden aktualisiert/i.test(value));
+    const attachments = hasPendingAttachments ? [] : rawAttachments.map(parseAttachment);
+    const attachmentHtml = hasPendingAttachments ? `
       <li class="loadout-slot pending-slot">
         <span class="slot-type">Status</span>
         <strong>Aufsätze werden aktualisiert</strong>
       </li>
-    `;
+    ` : attachments.map((attachment) => `
+      <li class="loadout-slot">
+        <span class="slot-type">${html(attachment.slot)}</span>
+        <strong>${html(attachment.name)}</strong>
+        ${attachment.level ? `<em>${html(attachment.level)}</em>` : ""}
+      </li>
+    `).join("");
 
     const perkHtml = extras.map((extra, index) => `
       <li class="perk-chip"><span>${index + 1}</span><strong>${html(displayExtra(extra))}</strong></li>
@@ -364,7 +374,7 @@
       <section class="card-details meta-card-details">
         <div class="premium-details-grid">
           <section class="detail-panel attachments-panel" aria-label="Aufsätze">
-            <div class="detail-panel-title"><span>Aufsätze</span><strong>Update</strong></div>
+            <div class="detail-panel-title"><span>Aufsätze</span><strong>${hasPendingAttachments ? "Update" : `${attachments.length}/5`}</strong></div>
             <ul class="premium-attachment-list">${attachmentHtml}</ul>
           </section>
           <section class="detail-panel setup-panel" aria-label="Setup">

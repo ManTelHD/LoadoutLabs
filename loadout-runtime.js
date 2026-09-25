@@ -2728,8 +2728,25 @@
     return items.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
   }
 
+  function cleanAttachments(items) {
+    return (Array.isArray(items) ? items : [])
+      .map((item) => String(item || "").trim())
+      .filter((item) => item && !/^(Pick-Rate|Quelle|Rolle):/i.test(item));
+  }
+
+  function hasPendingAttachments(items) {
+    return !items.length || items.some((item) => /Aufsätze werden aktualisiert/i.test(item));
+  }
+
   function premiumAttachmentHtml(items) {
-    return `<li class="loadout-slot pending-slot"><span class="slot-type">Status</span><strong>Aufsätze werden aktualisiert</strong></li>`;
+    const cleanItems = cleanAttachments(items);
+    if (hasPendingAttachments(cleanItems)) {
+      return `<li class="loadout-slot pending-slot"><span class="slot-type">Status</span><strong>Aufsätze werden aktualisiert</strong></li>`;
+    }
+    return cleanItems.map((item) => {
+      const attachment = parseAttachment(item);
+      return `<li class="loadout-slot"><span class="slot-type">${escapeHtml(attachment.slot)}</span><strong>${escapeHtml(attachment.name)}</strong>${attachment.level ? `<em>${escapeHtml(attachment.level)}</em>` : ""}</li>`;
+    }).join("");
   }
 
   function premiumPerkHtml(items) {
@@ -2753,7 +2770,8 @@
   function updatePanelCounters(card, build) {
     const attachmentCount = card.querySelector(".attachments-panel .detail-panel-title strong");
     const extrasCount = card.querySelector(".setup-panel .detail-panel-title strong");
-    if (attachmentCount) attachmentCount.textContent = "Update";
+    const attachments = cleanAttachments(build.attachments);
+    if (attachmentCount) attachmentCount.textContent = hasPendingAttachments(attachments) ? "Update" : `${attachments.length}/5`;
     if (extrasCount) extrasCount.textContent = String(build.extras.length);
   }
 
@@ -2767,8 +2785,9 @@
     const legacyAttachments = card.querySelector(".attachment-list");
     const legacyPerks = card.querySelector(".perk-list");
 
-    if (premiumAttachments) premiumAttachments.innerHTML = premiumAttachmentHtml(build.attachments);
-    else if (legacyAttachments) legacyAttachments.innerHTML = legacyItemsHtml(["Aufsätze werden aktualisiert"]);
+    const attachments = cleanAttachments(build.attachments);
+    if (premiumAttachments) premiumAttachments.innerHTML = premiumAttachmentHtml(attachments);
+    else if (legacyAttachments) legacyAttachments.innerHTML = legacyItemsHtml(hasPendingAttachments(attachments) ? ["Aufsätze werden aktualisiert"] : attachments);
 
     if (premiumPerks) premiumPerks.innerHTML = premiumPerkHtml(build.extras);
     else if (legacyPerks) {
@@ -6906,7 +6925,18 @@
   function render(weapon) {
     const text = labels();
     const fallback = fallbackImage(weapon);
-    const attachments = `<li><span>--</span><strong>Aufsätze werden aktualisiert</strong></li>`;
+    const rawAttachments = (Array.isArray(weapon.attachments) ? weapon.attachments : [])
+      .map((value) => String(value || "").trim())
+      .filter((value) => value && !/^(Pick-Rate|Quelle|Rolle):/i.test(value));
+    const hasPendingAttachments = rawAttachments.length === 0 || rawAttachments.some((value) => /Aufsätze werden aktualisiert/i.test(value));
+    const attachments = hasPendingAttachments
+      ? `<li><span>--</span><strong>Aufsätze werden aktualisiert</strong></li>`
+      : rawAttachments.map((value) => {
+          const parts = value.split(":");
+          const slot = parts.length > 1 ? parts.shift().trim() : "Aufsatz";
+          const name = parts.join(":").trim() || value;
+          return `<li><span>${html(slot)}</span><strong>${html(name)}</strong></li>`;
+        }).join("");
     const rank = weapon.position ? `#${weapon.position}` : "–";
     const score = Number.isFinite(Number(weapon.score)) ? weapon.score : "–";
     dialog.innerHTML = `
@@ -6930,7 +6960,7 @@
         </div>
         <div class="weapon-detail-content">
           <section>
-            <div class="weapon-detail-section-title"><span>${text.build}</span><strong>Update</strong></div>
+            <div class="weapon-detail-section-title"><span>${text.build}</span><strong>${hasPendingAttachments ? "Update" : `${rawAttachments.length}/${weapon.expectedAttachmentCount || 5}`}</strong></div>
             <ol class="weapon-detail-attachments">${attachments}</ol>
           </section>
           <aside>
