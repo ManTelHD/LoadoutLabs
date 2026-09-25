@@ -2547,11 +2547,11 @@
 /* source: loadout-build-supplements.js */
 (function () {
   const REGISTRY_URL = "data/weapon-registry.json";
-  const metaExtras = ["Scavenger", "Sprinter", "Ghost"];
-  const longRangeExtras = ["Scavenger", "Sprinter", "Ghost"];
-  const closeRangeExtras = ["Scavenger", "Sprinter", "Ghost"];
-  const sniperExtras = ["Scavenger", "Sprinter", "Ghost"];
-  const utilityExtras = ["Scavenger", "Sprinter", "Ghost"];
+  const metaExtras = ["Drill Instructor", "Sprinter", "Tempered"];
+  const longRangeExtras = ["Drill Instructor", "Sprinter", "Tempered"];
+  const closeRangeExtras = ["Drill Instructor", "Sprinter", "Tempered"];
+  const sniperExtras = ["Drill Instructor", "Sprinter", "Tempered"];
+  const utilityExtras = ["Drill Instructor", "Sprinter", "Tempered"];
   const registryBuilds = new Map();
 
   const supplementalBuilds = {
@@ -2694,6 +2694,8 @@
   const extraLabels = new Map([
     ["Scavenger", "Plünderer"],
     ["Ghost", "Geist"],
+    ["Drill Instructor", "Ausbilder"],
+    ["Tempered", "Gehärtet"],
     ["Quick Fix", "Schnelle Heilung"],
     ["Survivor", "Überlebender"],
     ["Smoke Grenade", "Rauchgranate"],

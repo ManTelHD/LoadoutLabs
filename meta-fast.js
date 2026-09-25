@@ -6,7 +6,7 @@
     builds: "loadout-builds.js?v=20260524-complete-builds3",
   };
 
-  const metaExtras = ["Scavenger", "Sprinter", "Ghost"];
+  const metaExtras = ["Drill Instructor", "Sprinter", "Tempered"];
   const roleExtraSets = {
     long: metaExtras,
     close: metaExtras,
@@ -18,6 +18,8 @@
   const extraLabels = new Map([
     ["Scavenger", "Plünderer"],
     ["Ghost", "Geist"],
+    ["Drill Instructor", "Ausbilder"],
+    ["Tempered", "Gehärtet"],
     ["Quick Fix", "Schnelle Heilung"],
     ["Survivor", "Überlebender"],
     ["Smoke Grenade", "Rauchgranate"],
