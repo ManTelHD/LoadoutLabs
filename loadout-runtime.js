@@ -2553,6 +2553,7 @@
   const sniperExtras = ["Drill Instructor", "Sprinter", "Tempered"];
   const utilityExtras = ["Drill Instructor", "Sprinter", "Tempered"];
   const registryBuilds = new Map();
+  let registryReady = false;
 
   const supplementalBuilds = {
     "executioner-s-duet": {
@@ -2628,6 +2629,7 @@
           extras: extrasFor(item),
         });
       });
+      registryReady = true;
       scheduleRun();
     }).catch(() => {});
   }
@@ -2724,6 +2726,7 @@
   }
 
   function applyBuild(card) {
+    if (!registryReady) return;
     const key = slug(card.dataset.loadoutCard || card.querySelector(".weapon-name")?.textContent);
     const build = registryBuilds.get(key) || supplementalBuilds[key];
     if (!build) return;
